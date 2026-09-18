@@ -1,46 +1,41 @@
 # Ironclad A20 training status
 
-Scope: Ironclad, Ascension 20, natural start through the Heart, including three keys, two Act 3 bosses, and Act 4. Prismatic Shard is excluded. Combat uses MCTS; a neural policy controls out-of-combat decisions.
+Updated 2026-09-19. Scope: Ironclad, Ascension 20, natural start through the Heart, including three keys, two Act 3 bosses, and Act 4. Prismatic Shard is excluded. Combat uses MCTS; a neural policy controls out-of-combat decisions.
 
-The latest frozen simulator evaluation E61 scored 121/1024 Heart wins (11.8164%) on a second independent seed set. This is a simulator result, not an original-game win rate. E62 replayed those 121 saved winning routes in the original game and found a first divergence on each route; execution stopped at that point, so those replays do not establish original-game wins or losses.
+The current engine is the E66 rule/RNG repair. Under that engine, the existing E61-selected policy completed E67 with **255/2,560 Heart wins (9.9609%)** and zero execution faults. The preassigned roles contain 156/1,536 fit wins, 46/512 label-holdout wins, and 53/512 development wins. All 2,560 terminal states/RNG, 347,087 outside-NN choices, and fresh replans of all 255 winners passed verification. Nine Act-3-without-Heart endings remain failures. This is the repaired-engine source baseline, not a new trained model result.
 
-E64 repairs four additional differences found in E63: Necronomicon autoplay, zero-damage Thorns, acquisition-ordered card-use relic hooks, and the 999 player-block cap. A fixed 39-case original-game fixture improved from 28 matches/11 mismatches to 39 matches. The full local CTest suite passed 150 checks. The portable patch build passed five native cases and the 39-case replay test. These checks do not close E62's remaining rule/RNG discrepancies or the original-game full-run parity gap. Exhaust-animation cost reset timing remains an explicit diagnostic.
+The user authorized publishing the work and pursuing a 50% win-rate target. Acceptance means at least 512 Heart wins on 1,024 seed families outside all training, tuning, and model selection, with a frozen model/runtime, confidence interval, explicit execution failures, and full replay verification. E67's assigned families are development material and cannot serve as that final test. Original-game parity and simulator win rate remain separate claims.
 
-The user authorized the next phase on 2026-09-18: publish the current work and pursue a 50% win-rate target. Acceptance means at least 512 Heart wins on 1024 fresh seed families that were never used for training, tuning, or model selection, with a frozen model/runtime, confidence interval, explicit execution failures, and full replay verification. Development experiments must use separate seed families and fixed budgets. Original-game parity and simulator win rate remain separate claims.
+## Current experiments
 
-E66 closed the confirmed training-relevant E62 rule/RNG discrepancies and froze the repaired engine. E67 is collecting new labels and a development baseline before the next model update. Do not relabel historical results as results of the new engine or repeatedly rerun a rejected hypothesis. The experiment log is preserved in [ironclad-experiments.md](ironclad-experiments.md). Raw models, game JARs, binaries, and run traces remain local.
+**E69 is collecting 6,324 full continuations.** For every eligible fit or label-holdout family, it tries all first-boss relic choices, including a newly planned parent-choice control. It will compare 23 learned relic scores with a public-state neural ranker containing 92,407 trainable parameters. Both use exactly 1,000 updates on the same labels; the surrounding policy and combat engine are frozen. A candidate needs at least ten net wins and paired exact p<.05 at both the heldout-choice and 512-natural-development gates, plus all integrity checks. The E69 runtime and protocol remain frozen while collection runs.
 
-## Python validation
+**E70 is waiting for E69.** The user proposed combining relic and card-selection strategies. A registered 128-family fit-only pilot will enumerate the first boss relic and the last remaining card offer after the first Act 2 battle. Earlier Prayer Wheel offers retain parent control. All other decisions use the E67 policy. Its hindsight comparisons measure interaction coverage, not learned win rates. Progression requires 16 mixed card states from eight families and at least four extra salvageable families beyond relic-only hindsight. Early failures remain in the denominator; no outcome-based replacements are allowed.
 
-Historical trajectory tests require their original local run artifacts and native engines. They cannot share an interpreter with tests of a newer engine: Python caches imported native modules, and repaired rules can change an old saved trajectory. Run each module with its declared engine:
+**E71 is registered and waiting for E70's coverage gate.** If that gate passes, expand to all E69 fit/label-holdout relic branches, reusing audited pilot leaves. Train relic-only, card-only, and joint arms for exactly 2,000 updates. The joint objective marginalizes true terminal outcomes across the two decisions; the first decision never receives the future card offer. Fit-only option support, a frozen base policy, and all 1,536 assigned fit families define training. Full-data coverage must include 64 mixed card families and 30 extra salvageable families beyond relic-only hindsight. A failed coverage gate ends the experiment without optimizer updates.
+
+E71 compares against the E69-selected incumbent if it passed complete development, otherwise against the E67 parent. Heldout and 512-natural-development gates each require ten net wins, paired exact p<.05, zero faults, all NN/terminal/RNG checks, and fresh winner replans. Three-arm selection is development, not unseen acceptance. E71 protocol SHA is `9a1c963581efa845842a9e72cf85410d447caef1c19605602cb2683fb7fd457b`. Its complete data preparation, formal training, and development have not run. Main simulation pools are sequential and use eight single-thread workers.
+
+## Original-game alignment evidence
+
+E66 repaired 20 confirmed E62 rule/RNG classes and the production potion-target bridge. Twelve recorded original-game action boundaries and eight natural-prefix boundaries match after repair. The 161-case CTest suite passed; ten new native groups fail on the prior source and pass after repair. The portable patch build passed 12 focused entry points. Potion bridge regressions passed five cases.
+
+E68 replayed four preselected E67 development winners from natural original-game starts through A20 Heart victory. All 4,080 commands retained state/RNG checks, without state import or resynchronization. Split-slime target mapping was repaired, and the observer waits for the original exhaust-animation callback rather than assigning card costs. Initial failures remain in local evidence. The six slime-target regressions and five potion-target regressions pass. These four same-action traces do not establish a representative original-game win rate, live online model deployment, or exhaustive parity. See [the compact evidence report](../sim_patch/alignment/e68-natural-parity-report.json).
+
+Historical E61 scored 121/1,024 simulator wins with an older engine. E62 found a first original-game divergence in each of those saved winning routes and stopped at that boundary; this does not establish original-game losses. Those old labels and the old win rate are not transferred to the repaired engine. E64/E66 repairs, rejected hypotheses, and evidence boundaries are retained in [the experiment archive](ironclad-experiments.md).
+
+## Training-code checks
+
+Six E70 joint-policy checks and six E71 training-objective checks pass. A known development seed supplies a 4-by-4 real relic/card tree: every terminal branch is audited, and all three saved 25-update software-test models reproduce their selected branch from a natural NN/MCTS start, including the complete action prefix, terminal state, and RNG. The three results are win/win/loss; the failed joint arm is retained. This is a deployment contract, not training or generalization evidence.
+
+Four branch-worker replans also reproduce the known leaves, and independent terminal/NN audits pass. Live choices from all three checkpoints match their tables; a deliberately incorrect expected relic choice is rejected. An independent decoder using native reward bits and Card objects verifies a changed-card full route and its permitted first difference. Formal E71 full-data stages remain unexecuted.
+
+Historical trajectory tests require their original local artifacts and engines. Python caches native imports, so each module uses an isolated interpreter and its declared engine:
 
 ```bash
 python tests/run_isolated.py --build /path/to/current/native/build --output /path/to/new/test-results
 ```
 
-The runner verifies the loaded module path and archived engine hashes. On 2026-09-18, all 19 test modules passed. A prior single-process discovery run mixed runtimes and failed; those failures are retained in the local publication evidence. This historical suite requires the local `runs/` archives; the CMake rule tests and retained original-game fixtures in `sim_patch/alignment/` are the distributable regression entry points.
+The earlier E68/E69 regression run covered 22 modules and 124 tests. A portal-trace module initially used the repaired engine and failed on an old RNG prefix; its declared historical engine passes, and the runner now assigns that engine. Those failures and the focused rerun remain recorded. The six E70 and six E71 checks above are subsequent focused runs, not a claim that a new aggregate suite was rerun. Local `runs/` archives are required for these historical tests; `sim_patch/alignment/` contains the distributable native regressions and original-game fixtures.
 
-## E66 and the next collection
-
-E66 repaired 20 E62 game-rule/RNG classes and the production potion-target bridge. Twelve recorded original-game action boundaries and eight natural-prefix boundaries now match. The 161-case CTest suite passed; ten new native groups fail on the prior source and pass after repair. The standalone patch build passed 12 focused entry points. Five potion bridge tests pass, including two that fail on the old bridge. Exhaust-animation timing remains the E64 diagnostic; E68 subsequently verified four full natural same-action original-game routes, with the scope limits below.
-
-E67 has started recollecting 2,560 fresh seed families with this engine and the previous selected policy: 1,536 fit, 512 label holdout, 512 development. Roles are fixed before collection. Old-engine outcomes are excluded as training labels. Every terminal is replayed and every winner is replanned. Execution faults retain null labels and block training. These seeds become development material and cannot serve as the final unseen 50-percent test.
-
-## E68 original-game route checks and E69 learning
-
-Four preselected E67 development winners matched natural original-game replays through A20 Heart victory after fixing split-slime target mapping and waiting for the original exhaust-animation callback. All 4,080 commands retained state/RNG checks; no state import or resynchronization was used. Initial failed attempts remain in the local evidence. This is four same-action trace checks, not a representative original-game win rate, live online model deployment or exhaustive parity. The comparison boundary is after rule-bearing animation callbacks settle. See [the compact evidence report](../sim_patch/alignment/e68-natural-parity-report.json).
-
-E69 is registered and waits for the E67 full-data audit. It compares a 23-score relic ranking and a public-state neural ranker with 92,407 trainable parameters on the same complete first-boss continuations. The surrounding selected policy and combat engine are frozen. Both use exactly 1,000 optimizer updates and separate fit, label-holdout and natural-development roles. The new model's initial behavior matches a known source route under fresh NN/MCTS planning; this is an integration check, not a new win-rate result.
-
-The E67 development cohort has generated 53 Heart wins among 512 assigned seeds (10.3516%). The complete batch and independent audits remain in progress; no new model performance or 50-percent acceptance is claimed.
-
-The E68/E69 Python regression run covered 22 modules and 124 tests. An archived portal-trace test initially ran against the repaired engine and failed on its old RNG prefix; it passed with its declared historical engine, and the runner now assigns that engine to both portal-fixture modules. The initial failure and focused rerun are preserved. These historical fixtures do not validate old labels under the repaired engine.
-
-
-## E70 joint relic and card pilot
-
-The user requested combining relic and card-selection strategies. A registered128-family fit-only pilot will enumerate both the first boss relic and the final card offer after the first Act2 battle, while retaining the E67 policy for the remainder. It waits for E69 to finish and its label audit to pass, keeping the eight-worker resource boundary. Original choices are replanned controls; all terminal states/RNG and every other NN action are audited. Its hindsight oracle comparisons measure interaction coverage, not learned or unseen win rates. A larger joint-learning experiment requires16 mixed card states from8 families and at least4 additional salvageable families beyond relic-only hindsight. No joint optimizer updates have run.
-
-Six new joint-policy checks and six existing contextual-relic regressions pass. A known-seed native integration reproduces the parent route with zero new scores and validates two changed-decision continuations. In that case, changing the relic while retaining the card loses; changing the subsequent card wins. The original policy already won that seed, so this is a scope/continuation contract and interaction example, not a new rescued seed or performance result.
-
-E67 completed2560 assigned natural terminals and347087 outside-NN choice checks with zero execution faults. All255 Heart wins reproduced under fresh NN/MCTS planning. Fit/label-holdout/development have156/1536,46/512 and53/512 Heart wins; nine Act3-without-Heart endings are failures. The255/2560 (9.9609%) result is the repaired-engine old-policy source baseline. E69 verified completion and entered branch preparation. Training and final50percent acceptance remain separate stages.
+Raw models, game JARs, native binaries, and run traces remain local.
