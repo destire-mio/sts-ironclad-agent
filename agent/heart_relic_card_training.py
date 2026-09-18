@@ -127,6 +127,8 @@ def _mask(scores, data):
 
 
 def logits(policy, data):
+    if policy.model_type == 'joint_frozen_readout':
+        return policy.training_logits(data)
     relic, card = data['relic'], data['card']
     rs = policy.relic(relic['features']).gather(1, relic['positions'])
     cs = policy.card(card['features'], card['positions'], card['extras'])
@@ -200,6 +202,9 @@ def deterministic_outcomes(policy, data):
 
 def train_arm(root, arm, data, base, relic_support, card_support, config, provenance):
     """Fit exactly one final checkpoint; callers own independent data gates."""
+    if config.get('learner') == 'frozen_readout':
+        from heart_relic_card_readout_training import train_arm as train_readout
+        return train_readout(root, arm, data, base, relic_support, card_support, config, provenance)
     if arm not in ('relic', 'card', 'joint'):
         raise ValueError('unknown ablation')
     directory = root / arm

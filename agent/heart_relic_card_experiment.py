@@ -24,7 +24,7 @@ def verify_proof(folder, name='completion-verification.json'):
     return proof
 
 
-def register(root, pilot):
+def register(root, pilot, learner='contextual'):
     assert not root.exists()
     source_plan = H.read_json(pilot / 'protocol.json')
     root.mkdir(parents=True)
@@ -51,12 +51,33 @@ def register(root, pilot):
         'resources': 'Eight single-thread workers,300s episode/360s process guards;28800s full continuation collection,10800s independent audit and each development stage. Reuse the verified pilot rather than resampling it. Start after E70 completes; no overlapping simulation pools.',
         'next': 'An adopted improvement is not the 50 percent target. Freeze a contender before a separate 1024-family unseen acceptance cohort. Keep improving if natural development is below the target; preserve all rejected hypotheses and runtime evidence.',
         'limits': 'Two scoped choices under a frozen surrounding NN and combat engine. Not all future card selections, not a population win-rate guarantee, and not exhaustive original-game parity.'})
+    if learner == 'frozen_readout':
+        source = Path(source_plan['source'])
+        proof = verify_proof(source)
+        assert proof['selected_arm'] is None
+        plan = H.read_json(root / 'protocol.json')
+        plan.update(experiment='E73', source_completion_sha256=S.sha(source / 'completion-verification.json'),
+            rationale='E69 public-context ranker matched its fit hindsight oracle but lost21 heldout wins. E71 was superseded before formal collection/updates. Test a different package: freeze pretrained public-state/candidate features, learn small linear readouts, choose regularization inside fit families only. This does not isolate model capacity as the cause, or imply joint decisions cannot generalize.')
+        plan['training'] = {'learner': learner, 'steps': 1000, 'learning_rate': .03,
+            'gradient_norm': 1., 'folds': 3, 'l2_grid': [.0001, .001, .01],
+            'cv_minimum_net_gain': 10, 'cv_p_maximum': .05,
+            'minimum_mixed_card_families': 64, 'minimum_extra_families_over_relic_oracle': 30,
+            'representation': 'Frozen E67 CardContextScorer penultimate192 features of public state and each actual offered descriptor. No seed, map fingerprint, RNG or future card is a feature. Two shared192-weight linear readouts plus fit-only option biases; no newly trained hidden layers. Divide within-offer centered features by fit-only RMS, clamped at .01. Add fixed1 to the parent option. Zero heads deploy parent.',
+            'objective': 'Negative exact terminal Heart return over complete two-decision trees and all assigned fit families, plus selected L2 times the sum of squared active weights and option biases. Fixed1000 full-batch Adam updates, lr .03, norm1. Disabled head is one-hot parent; unknown whole offer sets deploy parent.',
+            'selection': 'SHA256(E73-family-fold:<seed>) modulo3 assigns every fit family and all descendants to one fold, retaining early failures. For each of the three preregistered L2 values and arms, train on two folds and choose on the third. Supports and RMS scales use only each training fold. Pool out-of-fold deterministic terminal outcomes over all1536 fit families; qualify only net>=10 and paired exact p<.05 versus parent. Select more wins, fewer lost parent wins, stronger L2. This internal selection p-value is a development gate, not an independent significance claim. If none qualifies, save unchanged-parent zero heads with zero final updates. Otherwise refit on all fit data for1000 updates. Train all arms before external heldout use; no further sweep.',
+            'arms': 'Independent relic-only, card-only and joint readouts; common frozen pretrained encoder and continuation. Three folds by three L2 values plus at most one final fit per arm. Fit-fold choices, supports and optimization histories are retained and hashed.'}
+        H.write_json(root / 'protocol.json', plan)
+    elif learner != 'contextual':
+        raise ValueError('unknown learner')
     here = Path(__file__).resolve().parent
     for path, name in ((Path(__file__), 'registered-runner.py'), (Path(L.__file__), 'registered-training.py'),
                        (Path(V.__file__), 'registered-pilot.py'), (Path(J.__file__), 'registered-model.py'),
                        (Path(J.M.__file__), 'registered-context.py'),
                        (here / 'heart_relic_card_development.py', 'registered-development.py')):
         shutil.copy2(path, root / name)
+    if learner == 'frozen_readout':
+        for name in ('heart_relic_card_readout.py', 'heart_relic_card_readout_training.py'):
+            shutil.copy2(here / name, root / ('registered-' + name))
     H.write_json(root / 'registration.json', {'hashes': {p.name: S.sha(p) for p in root.iterdir() if p.is_file()}})
     print({'registered': str(root), 'protocol_sha256': S.sha(root / 'protocol.json')}, flush=True)
 
@@ -69,6 +90,13 @@ def prepare(root):
                          (J, 'registered-model.py'), (J.M, 'registered-context.py')):
         assert S.sha(module.__file__) == S.sha(root / name)
     plan = H.read_json(root / 'protocol.json')
+    readout = plan['training'].get('learner') == 'frozen_readout'
+    if readout:
+        source = Path(plan['source'])
+        assert S.sha(source / 'completion-verification.json') == plan['source_completion_sha256']
+        verify_proof(source)
+        for name in ('heart_relic_card_readout.py', 'heart_relic_card_readout_training.py'):
+            assert S.sha(Path(L.__file__).with_name(name)) == S.sha(root / ('registered-' + name))
     pilot, source, natural = (Path(plan[key]) for key in ('pilot', 'source', 'natural_source'))
     assert S.sha(pilot / 'registration.json') == plan['pilot_registration_sha256']
     proof = verify_proof(pilot)
@@ -90,13 +118,21 @@ def prepare(root):
             ('registered-model.py', 'source/heart_relic_card_model.py'),
             ('registered-context.py', 'source/heart_contextual_relic.py')):
         shutil.copy2(root / original, root / destination)
+    if readout:
+        shutil.copy2(root / 'registered-heart_relic_card_readout.py', root / 'source/heart_relic_card_readout.py')
+        shutil.copy2(root / 'registered-heart_relic_card_readout_training.py', root / 'heart_relic_card_readout_training.py')
     loader = root / 'source/heart_train.py'
     text, marker = loader.read_text(), 'def load_scorer(checkpoint):\n'
     assert text.count(marker) == 1 and J.RelicCardPolicy.model_type not in text
-    loader.write_text(text.replace(marker, marker +
+    additions = (
         '    if checkpoint.get("model_type") == "joint_first_relic_card":\n'
         '        from heart_relic_card_model import RelicCardPolicy\n'
-        '        return RelicCardPolicy(checkpoint).eval()\n'))
+        '        return RelicCardPolicy(checkpoint).eval()\n')
+    if readout:
+        additions += ('    if checkpoint.get("model_type") == "joint_frozen_readout":\n'
+                      '        from heart_relic_card_readout import ReadoutPolicy\n'
+                      '        return ReadoutPolicy(checkpoint).eval()\n')
+    loader.write_text(text.replace(marker, marker + additions))
     shutil.copy2(natural / 'seeds.json', root / 'seeds.json')
     H.write_json(root / 'identity.json', plan['identity'])
     seeds = H.read_json(root / 'seeds.json')
@@ -201,7 +237,8 @@ def collect(root):
     assert S.sha(R.sts.__file__) == identity['engine_sha256']
     states = H.read_json(root / 'roots.json.gz')
     jobs = jobs_for(root, states, identity)
-    H.run_jobs(root, jobs, config, 'E71_full_joint_continuations', time.monotonic() + 28800, worker_fn=B.branch_worker)
+    tag = H.read_json(root / 'protocol.json')['experiment']
+    H.run_jobs(root, jobs, config, tag + '_full_joint_continuations', time.monotonic() + 28800, worker_fn=B.branch_worker)
     faults, labels, returned = [], {}, 0
     for job in jobs:
         path = Path(job['output'])
@@ -303,7 +340,8 @@ def audit(root):
     jobs = [{'mode': 'prefix', 'seed': seed, 'root': str(root), 'states': group,
              'labels': {s['id']: labels[s['id']] for s in group}, 'identity': identity,
              'output': str(root / f'label-audit/{seed}.json')} for seed, group in families.items()]
-    rows = H.run_jobs(root, jobs, config, 'E71_independent_terminal_and_NN_audit',
+    tag = H.read_json(root / 'protocol.json')['experiment']
+    rows = H.run_jobs(root, jobs, config, tag + '_independent_terminal_and_NN_audit',
                      time.monotonic() + 10800, worker_fn=audit_worker)
     assert len(rows) == len(jobs) and all(row['status'] == 'verified' for row in rows)
     terminals = sum(len(row['entries']) for row in rows)
@@ -350,7 +388,7 @@ def train(root):
     provenance = {name: S.sha(root / name) for name in ('model.pt', 'manifest.json', 'protocol.json', 'labels.json')}
     for arm in ('relic', 'card', 'joint'):
         L.train_arm(root, arm, data['fit'], base, relics, cards, cfg, provenance)
-        print({'trained': arm, 'updates': cfg['steps']}, flush=True)
+        print({'trained': arm, 'updates': H.read_json(root / arm / 'optimizer-report.json')['updates']}, flush=True)
     incumbent = {r['seed']: r['target'] for r in H.read_json(root / 'incumbent-label-targets.json')}
     reports = {}
     for arm in ('relic', 'card', 'joint'):
@@ -366,7 +404,7 @@ def train(root):
         opt = H.read_json(folder / 'optimizer-report.json')
         reports[arm] = {'status': 'complete', 'arm': arm, 'outcomes': outcomes,
             'heldout_gate_passed': held['net_gain'] >= gate['minimum_net_heart_gain'] and held['exact_p'] < gate['paired_exact_p_maximum'],
-            'trainable_parameters': opt['trainable_parameters'], 'updates': cfg['steps'],
+            'trainable_parameters': opt['trainable_parameters'], 'updates': opt['updates'],
             'heldout_gradient_rows': 0, 'checkpoint_sha256': S.sha(folder / 'candidate.pt')}
         H.write_json(folder / 'choice-results.json', choices)
         H.write_json(folder / 'training-report.json', reports[arm])
@@ -423,10 +461,11 @@ if __name__ == '__main__':
     parser.add_argument('command', choices=('register', 'prepare', 'collect', 'audit', 'train', 'pipeline'))
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--pilot', type=Path)
+    parser.add_argument('--learner', choices=('contextual', 'frozen_readout'), default='contextual')
     parser.add_argument('--repository', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     root = args.root.resolve()
-    if args.command == 'register': register(root, args.pilot.resolve())
+    if args.command == 'register': register(root, args.pilot.resolve(), args.learner)
     elif args.command == 'prepare': prepare(root)
     elif args.command == 'collect': collect(root)
     elif args.command == 'audit': audit(root)

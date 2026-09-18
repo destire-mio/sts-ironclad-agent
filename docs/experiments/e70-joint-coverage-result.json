@@ -1,0 +1,27 @@
+{
+  "experiment": "E70",
+  "continuations": 1640,
+  "coverage_passed": true,
+  "execution_faults": 0,
+  "extra_families_over_relic_oracle": 9,
+  "families": 128,
+  "limits": "A bounded two-choice interaction diagnostic. It does not assess all subsequent card choices, overall original-game parity or the50percent unseen-seed target. Oracle scores use terminal hindsight; no learned win-rate improvement is established.",
+  "mixed_card_states": 60,
+  "mixed_families": 35,
+  "optimizer_updates": 0,
+  "outcomes": {
+    "card_only_oracle": 31,
+    "joint_only_rescue": 3,
+    "joint_oracle": 37,
+    "parent": 22,
+    "relic_only_oracle": 28
+  },
+  "parent_choices_audited": 241934,
+  "status": "complete",
+  "completion_sha256": "ecf7c7d39d012112906b23d79e0f6a67081379ce652948c94f4d4eb6532bd828",
+  "report_sha256": "14e2b69019401cb308f9fd8ba9ec812fb6d9638c009099fe35ca76e653e34546",
+  "all_assigned_families_recounted": true,
+  "joint_only_rescue_family_count": 3,
+  "early_failures": 24,
+  "note": "Preassigned fit-only pilot. These are terminal-hindsight scope bounds, not learned-model wins or an independent population estimate."
+}

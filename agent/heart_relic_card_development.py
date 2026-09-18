@@ -60,12 +60,32 @@ def first_change(old, new, config):
     return {'kind': 'unchanged'}
 
 
+def readout_native_choice(parent, checkpoint, stage, observation, descriptors, options, baseline):
+    """Independent native option mapping and explicit stored-weight arithmetic."""
+    order = list(options)
+    positions = {v: i for i, v in enumerate(checkpoint[stage + '_support'])}
+    identity = J.relic_option if stage == 'relic' else J.card_option
+    for i, value in options.items(): assert identity(descriptors[i]) == value
+    encoder = parent.base
+    with H.torch.no_grad():
+        raw = H.torch.tensor([observation + descriptors[i] for i in order])
+        encoded = encoder.net[:-1](encoder.features(raw))
+        weights = checkpoint[stage + '_state']
+        normalized = (encoded - encoded.mean(0)) / weights['scale']
+        scores = normalized @ weights['weight'] + weights['static_scores'][
+            H.torch.tensor([positions[options[i]] for i in order])]
+        scores[order.index(baseline)] += 1.
+    return order[max(range(len(order)), key=lambda k: (float(scores[k]), order[k] == baseline, -order[k]))]
+
+
 def independent_route(row, config, checkpoint):
     parent = H.load_scorer(checkpoint['base_checkpoint'])
-    relic = J.M.RelicRanker(H.torch.zeros(len(checkpoint['relic_support'])), True)
-    relic.load_state_dict(checkpoint['relic_state'])
-    card = J.CardRanker(len(checkpoint['card_support']))
-    card.load_state_dict(checkpoint['card_state'])
+    readout = checkpoint['model_type'] == 'joint_frozen_readout'
+    if not readout:
+        relic = J.M.RelicRanker(H.torch.zeros(len(checkpoint['relic_support'])), True)
+        relic.load_state_dict(checkpoint['relic_state'])
+        card = J.CardRanker(len(checkpoint['card_support']))
+        card.load_state_dict(checkpoint['card_state'])
     rp = {value: i for i, value in enumerate(checkpoint['relic_support'])}
     cp = {value: i for i, value in enumerate(checkpoint['card_support'])}
     gc = R.sts.GameContext(R.sts.CharacterClass.IRONCLAD, row['seed'], 20)
@@ -83,19 +103,28 @@ def independent_route(row, config, checkpoint):
                 identities = {j: A.RELIC_CAP if action.idx1 == 3 else int(gc.boss_relics[action.idx1])
                               for j, action in enumerate(actions) if not action.is_potion_action}
                 if checkpoint['change_relic'] and set(identities.values()) <= rp.keys():
-                    with H.torch.no_grad(): scores = relic(J.M.public_features(H.torch.tensor([observation])))[0]
-                    chosen = max(identities, key=lambda j: (float(scores[rp[identities[j]]]), j == baseline, -j))
+                    if readout:
+                        chosen = readout_native_choice(parent, checkpoint, 'relic', observation, desc, identities, baseline)
+                    else:
+                        with H.torch.no_grad(): scores = relic(J.M.public_features(H.torch.tensor([observation])))[0]
+                        chosen = max(identities, key=lambda j: (float(scores[rp[identities[j]]]), j == baseline, -j))
             elif (gc.act == 2 and gc.cur_map_node_y == 0 and gc.screen_state == R.sts.ScreenState.REWARDS
                     and len(gc.rewards['cards']) == 1):
                 options = native_card_options(gc, actions)
                 if chosen in options:
                     scopes['card'] += 1
                     if checkpoint['change_card'] and {value[0] for value in options.values()} <= cp.keys():
-                        order = list(options)
-                        positions = H.torch.tensor([[cp[options[j][0]] for j in order]])
-                        extras = H.torch.tensor([[options[j][1] for j in order]])
-                        with H.torch.no_grad(): scores = card(J.M.public_features(H.torch.tensor([observation])), positions, extras)[0]
-                        chosen = order[max(range(len(order)), key=lambda k: (float(scores[k]), order[k] == baseline, -order[k]))]
+                        if readout:
+                            for j, (_, extra) in options.items():
+                                assert all(abs(x-y) < 1e-6 for x, y in zip(J.card_extras(desc[j]), extra))
+                            chosen = readout_native_choice(parent, checkpoint, 'card', observation, desc,
+                                {j: value[0] for j, value in options.items()}, baseline)
+                        else:
+                            order = list(options)
+                            positions = H.torch.tensor([[cp[options[j][0]] for j in order]])
+                            extras = H.torch.tensor([[options[j][1] for j in order]])
+                            with H.torch.no_grad(): scores = card(J.M.public_features(H.torch.tensor([observation])), positions, extras)[0]
+                            chosen = order[max(range(len(order)), key=lambda k: (float(scores[k]), order[k] == baseline, -order[k]))]
             assert step['action'] == int(actions[chosen].bits), (row['seed'], index)
             choices += 1
         else:
@@ -186,6 +215,11 @@ def verify_learning(root):
         assert artifact['relic_support'] == rs and artifact['card_support'] == cs
         for name, digest in artifact['provenance'].items(): assert S.sha(root / name) == digest
         assert S.sha(folder / 'candidate.pt') == reports[arm]['checkpoint_sha256']
+        if artifact['model_type'] == 'joint_frozen_readout':
+            optimizer = H.read_json(folder / 'optimizer-report.json')
+            for name, digest in optimizer['selection_hashes'].items(): assert S.sha(folder / name) == digest
+            from heart_relic_card_readout_training import verify_selection
+            verify_selection(root, arm, trees, states, labels, refs, base)
         expected[arm] = {r['seed']: r for r in H.read_json(folder / 'choice-results.json')}
         assert set(expected[arm]) == {r['seed'] for r in refs}
         hashes[arm] = S.sha(folder / 'candidate.pt')
@@ -196,7 +230,8 @@ def verify_learning(root):
             'states': {key: states[key] for key in children}, 'labels': {key: labels[key] for key in children},
             'expected': {arm: expected[arm][tree['seed']] for arm in expected}, 'model_hashes': hashes,
             'engine_sha256': identity['engine_sha256'], 'output': str(root / f'learning-audit/{tree["seed"]}.json')})
-    rows = H.run_jobs(root, jobs, config, 'E71_live_learning_choices', time.monotonic() + 10800, worker_fn=learning_worker)
+    tag = H.read_json(root / 'protocol.json')['experiment']
+    rows = H.run_jobs(root, jobs, config, tag + '_live_learning_choices', time.monotonic() + 10800, worker_fn=learning_worker)
     assert len(rows) == len(jobs) and all(row['status'] == 'verified' for row in rows)
     audited = {row['seed']: row for row in rows}
     arms = {}
@@ -219,8 +254,11 @@ def verify_learning(root):
         held, gate = outcomes['label_holdout'], plan['label_holdout_gate']
         passed = held['net_gain'] >= gate['minimum_net_heart_gain'] and held['exact_p'] < gate['paired_exact_p_maximum']
         assert passed == reports[arm]['heldout_gate_passed']
+        names = ['candidate.pt', 'choice-results.json', 'training-report.json']
+        if H.read_json(root / 'protocol.json')['training'].get('learner') == 'frozen_readout':
+            names.extend(['optimizer-report.json', 'selection-verification.json'])
         arms[arm] = {'passed': passed, 'outcomes': outcomes,
-            'hashes': {name: S.sha(root / arm / name) for name in ('candidate.pt', 'choice-results.json', 'training-report.json')}}
+            'hashes': {name: S.sha(root / arm / name) for name in names}}
     H.write_json(root / 'learning-verification.json', {'status': 'complete', 'arms': arms,
         'live_families_verified': len(rows), 'assigned_families': len(refs),
         'hashes': {name: S.sha(root / name) for name in ('manifest.json', 'label-verification.json', 'training-report.json')},
@@ -253,7 +291,7 @@ def develop(root):
                  'model_sha256': candidate_sha, 'engine_sha256': identity['engine_sha256'],
                  'output': str(folder / f'development/{ref["seed"]}.json.gz')} for ref in refs]
         deadline = time.monotonic() + 10800
-        rows = H.run_jobs(folder, jobs, config, 'E71_' + arm + '_natural_development', deadline, worker_fn=C.worker)
+        rows = H.run_jobs(folder, jobs, config, plan['experiment'] + '_' + arm + '_natural_development', deadline, worker_fn=C.worker)
         actual_identity = {**identity, 'model_sha256': candidate_sha}
         faults = [{'seed': job['seed'], 'status': row.get('status'), 'target': None}
                   for job, row in zip(jobs, rows) if not B.F.valid(row, job, actual_identity)]
@@ -270,7 +308,7 @@ def develop(root):
                                 [int(row['status'] == 'heart_win') for row in rows])
         repeat_jobs = [dict(job, output=str(folder / f'repeated/{job["seed"]}.json.gz'))
                        for job, row in zip(jobs, rows) if row['status'] == 'heart_win']
-        repeated = H.run_jobs(folder, repeat_jobs, config, 'E71_' + arm + '_winner_replans', deadline, worker_fn=C.worker)
+        repeated = H.run_jobs(folder, repeat_jobs, config, plan['experiment'] + '_' + arm + '_winner_replans', deadline, worker_fn=C.worker)
         assert len(repeated) == len(repeat_jobs)
         lookup, repeats = {row['seed']: row for row in rows}, []
         for job, row in zip(repeat_jobs, repeated):

@@ -1,0 +1,113 @@
+{
+  "experiment": "E69",
+  "status": "complete",
+  "adopted_arm": null,
+  "source_proof_sha256": "a6c7004697660fad423c07c879ced29918ad93d940af3b935022eadd42f7df5f",
+  "verification": {
+    "verified_terminal_replays": 6324,
+    "outside_nn_choices_verified": 919839,
+    "original_controls": 1581,
+    "assigned_early_failures_retained": 467
+  },
+  "arms": {
+    "contextual": {
+      "trainable_parameters": 92407,
+      "fit_mixed_families": 210,
+      "optimizer_updates": 1000,
+      "outcomes": {
+        "fit": {
+          "assigned": 1536,
+          "baseline_wins": 156,
+          "candidate_wins": 221,
+          "exact_p": 5.421010862427522e-20,
+          "net_gain": 65,
+          "paired": {
+            "both_fail": 1315,
+            "both_win": 156,
+            "candidate_only": 65
+          }
+        },
+        "label_holdout": {
+          "assigned": 512,
+          "baseline_wins": 46,
+          "candidate_wins": 25,
+          "exact_p": 0.0005082604475319386,
+          "net_gain": -21,
+          "paired": {
+            "baseline_only": 28,
+            "both_fail": 459,
+            "both_win": 18,
+            "candidate_only": 7
+          }
+        }
+      },
+      "heldout_gate_passed": false,
+      "checkpoint_sha256": "adb4706c5c4acd878f3e93651eb5bf33ea468415e66f63916d11fbbdf0a59627"
+    },
+    "static": {
+      "trainable_parameters": 23,
+      "fit_mixed_families": 210,
+      "optimizer_updates": 1000,
+      "outcomes": {
+        "fit": {
+          "assigned": 1536,
+          "baseline_wins": 156,
+          "candidate_wins": 170,
+          "exact_p": 0.012540951371192932,
+          "net_gain": 14,
+          "paired": {
+            "baseline_only": 7,
+            "both_fail": 1359,
+            "both_win": 149,
+            "candidate_only": 21
+          }
+        },
+        "label_holdout": {
+          "assigned": 512,
+          "baseline_wins": 46,
+          "candidate_wins": 50,
+          "exact_p": 0.2890625,
+          "net_gain": 4,
+          "paired": {
+            "baseline_only": 2,
+            "both_fail": 460,
+            "both_win": 44,
+            "candidate_only": 6
+          }
+        }
+      },
+      "heldout_gate_passed": false,
+      "checkpoint_sha256": "6538f5319ed8cf6daa7d4047797c215be9f89ebce06fd28f1d140efbb2125bda"
+    }
+  },
+  "scope_ceiling": {
+    "fit": {
+      "assigned": 1536,
+      "parent_wins": 156,
+      "best_first_relic_hindsight_wins": 221.0,
+      "early_failures": 351
+    },
+    "label_holdout": {
+      "assigned": 512,
+      "parent_wins": 46,
+      "best_first_relic_hindsight_wins": 75.0,
+      "early_failures": 116
+    }
+  },
+  "natural_candidate_games": 0,
+  "interpretation": "The contextual recipe memorized the210 informative fit families:221/1536 fit equals the first-relic hindsight ceiling, but46 parent wins became25/512 on heldout. Static50/512 vs46 failed the registered paired gate. Reject both. These same fixed-continuation cohorts have first-relic-only hindsight ceilings221/1536 and75/512, not a population bound or a deployable win rate. E70 joint learning is outside that scope.",
+  "E71": {
+    "status": "superseded_before_collection",
+    "formal_continuations": 0,
+    "formal_optimizer_updates": 0,
+    "supersession_sha256": "7cd2b17166975d2bb5bff058f02f8c8d56802810e7168ad6cd6d92118bfed76c"
+  },
+  "hashes": {
+    "completion-verification.json": "a6c7004697660fad423c07c879ced29918ad93d940af3b935022eadd42f7df5f",
+    "label-verification.json": "b188217fc0035b439256ce70943e578bad161add31e93775422cbd59dc35f461",
+    "learning-verification.json": "4d0d5b5195eead68bedb184529efb5fec60d07069e56124a0e578e9be83c0bbd",
+    "training-report.json": "601802dc5f498a43eef8ecf907f63fe5a635a4115be1c954ecf9d4e94a191459",
+    "labels.json": "d79a85470283120f9ac9c4f58cc35915b64a371e3dba53639cc581aa220d6586"
+  },
+  "limits": "All roles are development. No new model was adopted and no fresh1024-seed50percent acceptance was run."
+}
