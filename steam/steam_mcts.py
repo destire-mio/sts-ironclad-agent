@@ -429,6 +429,40 @@ def dead_monster(name, move):
 def canonical_monsters(monsters, convert=monster_snapshot):
     indexed = [(index, monster) for index, monster in enumerate(monsters)
                if not monster.get("is_gone")]
+    # Split parents remain in Java's list after disappearing. Native search
+    # replaces their slots with children; retaining a parent would send an
+    # attack to the vanished monster and can overflow the snapshot capacity.
+    # Keep dead child slots: subsequent splits and random targets use them.
+    slime_boss = [(i, m) for i, m in enumerate(monsters) if monster_key(m) == "SLIME_BOSS"]
+    if slime_boss and any(monster_key(m) in {"SPIKE_SLIME_L", "ACID_SLIME_L"} for m in monsters):
+        snapshots = [dead_monster(color + "_SLIME_M", "INVALID")
+                     for color in ("SPIKE", "SPIKE", "ACID", "ACID")]
+        target_map = [-1] * 4
+        count = 3
+        for color, start in (("SPIKE", 0), ("ACID", 2)):
+            children = [(i, m) for i, m in enumerate(monsters) if monster_key(m) == color + "_SLIME_M"]
+            parents = [(i, m) for i, m in enumerate(monsters) if monster_key(m) == color + "_SLIME_L"]
+            if children:
+                if len(children) != 2:
+                    raise ValueError("split slime snapshot requires both child positions")
+                for dest, (i, m) in zip((start, start + 1), children):
+                    snapshots[dest], target_map[dest] = convert(m), i
+                count = 4
+            elif len(parents) == 1:
+                i, m = parents[0]
+                snapshots[start], target_map[start] = convert(m), i
+            else:
+                raise ValueError("Slime Boss snapshot is missing a split branch")
+        return snapshots[:count], target_map[:count]
+    if not slime_boss:
+        for color in ("SPIKE", "ACID"):
+            large, medium = color + "_SLIME_L", color + "_SLIME_M"
+            keys = {monster_key(m) for m in monsters}
+            if large in keys and medium in keys and keys <= {large, medium}:
+                children = [(i, m) for i, m in enumerate(monsters) if monster_key(m) == medium]
+                if len(children) != 2:
+                    raise ValueError("split slime snapshot requires both child positions")
+                return [convert(m) for _, m in children], [i for i, _ in children]
     reptomancer = next(((index, m) for index, m in indexed if monster_key(m)=="REPTOMANCER"), None)
     if reptomancer:
         snapshots = [dead_monster("DAGGER", "DAGGER_STAB") for _ in range(5)];target_map=[-1]*5

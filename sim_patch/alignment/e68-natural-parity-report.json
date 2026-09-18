@@ -1,0 +1,68 @@
+{
+  "experiment": "E68",
+  "date": "2026-09-18",
+  "scope": "Four fixed E67 development winners, natural original start through Heart, same saved actions, no state import. Stable post-animation command boundaries. This is trace parity, not original model win-rate or exhaustive parity.",
+  "selection": "Four preselected E67 development simulator winners, not a representative original-game win-rate sample.",
+  "runtime": {
+    "engine_sha256": "920d2ba364ae1c7dbc7a6bdf210c8f8531b7bcb34bf54604f12b769e82968377",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a"
+  },
+  "attempts": {
+    "1": {
+      "matched": 2,
+      "adapter_errors": 2
+    },
+    "2": {
+      "matched": 3,
+      "exhaust_animation_boundary_difference": 1
+    },
+    "3": {
+      "matched": 4,
+      "mismatches": 0,
+      "runtime_errors": 0
+    }
+  },
+  "rows": [
+    {
+      "seed": 1633611833,
+      "hp": 37,
+      "commands": 1015,
+      "settled_exhaust_frames": 5479,
+      "matched": true
+    },
+    {
+      "seed": 1657364039,
+      "hp": 55,
+      "commands": 976,
+      "settled_exhaust_frames": 2315,
+      "matched": true
+    },
+    {
+      "seed": 1684958206,
+      "hp": 11,
+      "commands": 1234,
+      "settled_exhaust_frames": 8177,
+      "matched": true
+    },
+    {
+      "seed": 1706559026,
+      "hp": 14,
+      "commands": 855,
+      "settled_exhaust_frames": 3983,
+      "matched": true
+    }
+  ],
+  "changes": [
+    "Map split slime children to their native simulator slots, removing vanished parents while retaining dead-child slots.",
+    "Wait for the original ExhaustCardEffect update callback before comparing settled values; no card-cost or RNG assignment."
+  ],
+  "validation": {
+    "slime_mapping_tests": 6,
+    "old_bridge_failures": 5,
+    "potion_tests": 5,
+    "ctest": 161
+  },
+  "proof_sha256": "c6005d2cfe3647fad5a1281885b3dd942ddb52bc3117d7da88f079812d7376ab",
+  "limits": "Four same-action natural original replays. Not online model deployment, original-game win-rate measurement or exhaustive content parity. Unfinished animation boundaries remain outside the stable-boundary claim."
+}
