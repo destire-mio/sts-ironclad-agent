@@ -1,0 +1,21 @@
+{
+  "included": [
+    "slime_split_rng",
+    "angry_when_blocked",
+    "parasite_roll_branch",
+    "centurion_self_block",
+    "anger_copy_cost",
+    "brutality_rupture",
+    "writhing_repeat_move",
+    "autoplay_perfected_strike",
+    "slime_thorns_split_intent",
+    "half_dead_debuff",
+    "large_acid_slime_repeat",
+    "awakened_curiosity"
+  ],
+  "not_in_snapshot_suite": {
+    "writhing_parasite_ceramic_fish": "Original Runic Dome observer omitted intent; tested by natural-prefix replay and native counterexamples instead",
+    "red_mask_weak_duration": "Restoring the original weak-source flag conceals the initialization bug; tested by natural-prefix and battle-init native regression"
+  },
+  "fixture_sha256": "eda569086902eb5bc60cba65690afdd7b160abd907dd27ba96ae15d50b064f9d"
+}

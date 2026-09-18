@@ -1,3 +1,7 @@
+# Ironclad experiment archive
+
+This copy preserves the local experiment ledger through E67 preparation on 2026-09-18. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
 更新：2026-09-18。此文负责实验设计、结果与原因排查；模拟器规则证据由 [对齐报告](ironclad-alignment/对齐报告.md)负责。
@@ -1759,6 +1763,24 @@ E59 完整开发核验通过后登记协议，排除全部 47,159 个历史及�
 新模块 SHA 为 `83b3abe2e9d1d5a107ef9f9ea0e5d421979a3248067c8f74c4e5e0041ef8fd8b`，路径为 `ironclad-alignment/evidence/parity-repair-e63-20260918-01/build/slaythespire.cpython-312-darwin.so`。增量补丁为 `sts-rl-agent-pr/sim_patch/parity_followup.patch`，接在原规则三份补丁与 action_queue.patch 后；测试与清单同步到 sim_patch/alignment。旧 E61 输入、模型、成绩和 E62/E63 证据摘要核对通过，三个原版隔离进程清理通过。没有训练、提交或推送。
 
 本轮完成 E63 四类修复。E62 清单、动画费用时序和自然开局至心脏的全程原版验收待处理，旧模型胜率不能转记成新规则的胜率。入口：[修复报告](ironclad-alignment/evidence/parity-repair-e63-20260918-01/修复报告.md)、[完成核验](ironclad-alignment/evidence/parity-repair-e63-20260918-01/completion-verification.json)。
-# Archive note
 
-This is the workspace experiment ledger through E64. Paths to raw runs and evidence refer to the original local workspace; those artifacts, native binaries, and game JARs are not part of this repository. For the current scope and acceptance boundary, see [ironclad-training-status.md](ironclad-training-status.md).
+
+## 73. E65：发布当前修复与训练代码，登记 50% 目标
+
+用户授权 git push 与自主训练下一轮。旧 PR 已合并，因此新建 `codex/ironclad-a20-heart-training`，提交 `58cff56bf8f5f59e0340052e766480aa1a745c29` 推送至 `destire-mio/sts-rl-agent`，远端 SHA 核对通过。194 个文件、22,233,930 字节，源码/夹具/实验账本；二进制、权重、游戏 JAR、原始 runs 不上传，凭证扫描无命中。源码空白检查通过，补丁中的合法空上下文行保留。
+
+Python 单进程 discover 为 107 项、4 失败/3 错误；复核发现历史轨迹测试混用了新引擎。新增 `tests/run_isolated.py`，每个模块使用独立进程、归档引擎校验哈希和加载路径，19 模块 107 项通过，原始失败日志保留。原生 150 项与 E64 原版夹具结果沿用其原有边界。
+
+目标登记为冻结模型在 1,024 个未参与训练/选模/调参的新种子上至少 512 次 A20 心脏通关，同时报告区间、故障与重放。模拟器成绩和原版全链路一致性分开验收。E62 规则修复先于重采标签和训练；旧 121/1,024 不转记为修复后胜率。发布证据：`ironclad-alignment/evidence/publish-and-next-training-20260918-01/publication-result.json`。
+
+## 74. E66：E62 规则与随机数修复（进行中）
+
+保留旧 E61/E62/E64 证据与冻结运行时，从 E64 完整源码副本建立新构建。12 个自然原版状态边界在旧 E64 引擎复现规则差异，修复后 12 个匹配；红面具单步起点导入后无法复现自然开战来源差异，需要开战至回合末测试。符文圆顶隐藏意图导致一个快照无法执行，不能记为规则测试通过，改用自然前缀重放。原版耗尽动画的费用瞬态沿用 E64 诊断，不删除被后续发掘实验反驳的费用重置。其余机制对照、全回归、可移植补丁和训练入口待完成。证据：`ironclad-alignment/evidence/e62-rule-repair-20260918-01/`。
+
+### 74.1 E66 完成
+
+20 类游戏行为/RNG 与 1 类生产桥接修复完成；12 条原版动作边界、8 条自然前缀、161 项全回归、12 项分发构建入口通过，5 项桥接回归通过。10 组新增原生测试在旧源码全部失败。修正过程中撤回“任一逃跑取消金币”和“新御守阻止已经排队的陵墓诅咒”两种过宽处理，加入反例。原版全链路与动画费用诊断保留。详见 `ironclad-alignment/evidence/e62-rule-repair-20260918-01/修复报告.md`。
+
+## 75. E67：修复后重建训练数据
+
+冻结 E66 引擎与 E61 所选局外模型，准备 1,536 拟合、512 标签留出、512 开发新家庭；原有历史/预留种子排除，角色在生成对局前固定。局内单次 8,000/Boss×3、8 单线程工作者、300/360 秒保护、每层45秒保持原条件。全部终态/RNG与局外决策核验、胜局重规划通过才生成训练候选。后续学习方案根据失败位置与完整续局对比登记，不能使用旧引擎标签或将这批开发材料当作50%未见验收。

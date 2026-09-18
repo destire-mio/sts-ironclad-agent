@@ -14,6 +14,7 @@ git apply /path/to/sts-rl-agent/sim_patch/combat_rules.patch
 git apply /path/to/sts-rl-agent/sim_patch/ironclad_a20.patch
 git apply /path/to/sts-rl-agent/sim_patch/action_queue.patch
 git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
+git apply /path/to/sts-rl-agent/sim_patch/e62_rules.patch
 ```
 
 第一份补丁提供基础接口和暂停功能，第二份修改战斗规则，第三份增加 A20 至心脏的规则、状态与训练接口，第四份修复动作队列容量及战斗结束后的队尾。第四份改变 `BattleContext` 的内存布局，必须重编所有游戏核心、搜索和 Python 绑定对象，不能与旧静态库或绑定对象混合链接。
@@ -159,3 +160,7 @@ E60 两组共享该保护，原局外网络与学习首幕 Boss 遗物的策略�
 本地 `ScumSearchAgent2.cpp` 接入该补丁，输出 SHA 为 `e088dbb0ac029a493eca4607f2049ae71c7cd86de140146620bf3573f45d19d6`，与受测编译输入相同。[接入证据](../runs/heart-first-boss-confirmation-20260918-01/live-source-adoption.json)记录前后哈希；推理从所选运行时加载配对的模型和原生模块。
 
 补丁在隔离源码上检查和应用，输出与候选编译输入相同。[构建与修改说明](../runs/heart-bounded-replanning-build-20260918-01/build-report.json)、[补丁核验](../runs/heart-bounded-replanning-build-20260918-01/portable-patch-verification.json)、[训练运行时核验](../runs/heart-bounded-replanning-validation-20260918-01/completion-verification.json)。
+
+## E62 规则与随机数修复
+
+`e62_rules.patch` 接在 `parity_followup.patch` 后，修复 20 类 E62 游戏行为和 RNG 差异。它改变 GameContext 状态和 Deck 获牌接口，要求重编核心、搜索、绑定。配套生产桥接修复无目标药水误当丢弃的问题。12 条原版动作边界、8 条本地自然前缀、10 组新增原生回归和整套 161 项 CTest 通过；独立分发构建的 12 个针对性入口通过。历史原版耗尽动画费用诊断保留，完整自然开局至心脏的原版一致性尚未通过。详见 [训练状态](../docs/ironclad-training-status.md) 与 [分发清单](alignment/e62-rules-manifest.json)。

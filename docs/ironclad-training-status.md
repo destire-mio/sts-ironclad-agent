@@ -8,7 +8,7 @@ E64 repairs four additional differences found in E63: Necronomicon autoplay, zer
 
 The user authorized the next phase on 2026-09-18: publish the current work and pursue a 50% win-rate target. Acceptance means at least 512 Heart wins on 1024 fresh seed families that were never used for training, tuning, or model selection, with a frozen model/runtime, confidence interval, explicit execution failures, and full replay verification. Development experiments must use separate seed families and fixed budgets. Original-game parity and simulator win rate remain separate claims.
 
-Next: repair confirmed training-relevant E62 discrepancies, freeze the repaired engine, regenerate or revalidate affected labels, establish a new development baseline, then train and evaluate successive candidates. Do not relabel historical results as results of the new engine or repeatedly rerun a rejected hypothesis. The experiment log is preserved in [ironclad-experiments.md](ironclad-experiments.md). Raw models, game JARs, binaries, and run traces remain local.
+E66 closed the confirmed training-relevant E62 rule/RNG discrepancies and froze the repaired engine. E67 is collecting new labels and a development baseline before the next model update. Do not relabel historical results as results of the new engine or repeatedly rerun a rejected hypothesis. The experiment log is preserved in [ironclad-experiments.md](ironclad-experiments.md). Raw models, game JARs, binaries, and run traces remain local.
 
 ## Python validation
 
@@ -19,3 +19,9 @@ python tests/run_isolated.py --build /path/to/current/native/build --output /pat
 ```
 
 The runner verifies the loaded module path and archived engine hashes. On 2026-09-18, all 19 test modules passed. A prior single-process discovery run mixed runtimes and failed; those failures are retained in the local publication evidence. This historical suite requires the local `runs/` archives; the CMake rule tests and retained original-game fixtures in `sim_patch/alignment/` are the distributable regression entry points.
+
+## E66 and the next collection
+
+E66 repaired 20 E62 game-rule/RNG classes and the production potion-target bridge. Twelve recorded original-game action boundaries and eight natural-prefix boundaries now match. The 161-case CTest suite passed; ten new native groups fail on the prior source and pass after repair. The standalone patch build passed 12 focused entry points. Five potion bridge tests pass, including two that fail on the old bridge. Exhaust-animation timing remains the E64 diagnostic; full original-game runs remain unverified.
+
+E67 has started recollecting 2,560 fresh seed families with this engine and the previous selected policy: 1,536 fit, 512 label holdout, 512 development. Roles are fixed before collection. Old-engine outcomes are excluded as training labels. Every terminal is replayed and every winner is replanned. Execution faults retain null labels and block training. These seeds become development material and cannot serve as the final unseen 50-percent test.

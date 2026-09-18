@@ -75,6 +75,8 @@ MONSTER_POWER_ALIASES = {
 IGNORED_MONSTER_POWERS = {"Split", "Explosive", "Unawakened", "BackAttack"}  # BackAttack is derived from exported facing, not its stale UI marker.
 POTION_ALIASES = {"Potion Slot": "EMPTY_POTION_SLOT"}
 SMOKE_BOMB_ID = sts.potion_id_from_name("SMOKE_BOMB")
+TARGETED_POTION_IDS = {sts.potion_id_from_name(name) for name in
+                      ("FEAR_POTION", "FIRE_POTION", "POISON_POTION", "WEAK_POTION")}
 BOSS_ENCOUNTERS = {
     "THE_GUARDIAN": "THE_GUARDIAN", "SLIME_BOSS": "SLIME_BOSS", "HEXAGHOST": "HEXAGHOST",
     "BRONZE_AUTOMATON": "AUTOMATON", "THE_COLLECTOR": "COLLECTOR", "THE_CHAMP": "CHAMP",
@@ -586,12 +588,18 @@ def action_command(action, battle, snapshot=None):
         return f"PLAY {index + 1} {target}" if card.requires_target else f"PLAY {index + 1}"
     if action.action_type == sts.SearchActionType.POTION:
         index, target = int(action.source_idx), int(action.target_idx)
+        if target < 0 or target > 5:
+            return f"POTION discard {index}"
         potions = (snapshot or {}).get("potions") or []
         if (index < len(potions) and potions[index] == SMOKE_BOMB_ID
                 and (snapshot or {}).get("encounter") in BOSS_ENCOUNTER_IDS):
             return f"POTION discard {index}"
-        if target_map and 0 <= target < len(target_map): target = target_map[target]
-        return f"POTION discard {index}" if target < 0 or target > 5 else f"POTION use {index} {target}"
+        requires_target = index < len(potions) and potions[index] in TARGETED_POTION_IDS
+        if requires_target and target_map and 0 <= target < len(target_map):
+            target = target_map[target]
+            if target < 0:
+                raise ValueError("targeted potion points to an empty monster slot")
+        return f"POTION use {index} {target if requires_target else 0}"
     raise ValueError(f"unsupported live MCTS action type: {action.action_type}")
 
 

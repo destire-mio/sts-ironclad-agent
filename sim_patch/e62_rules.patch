@@ -1,0 +1,426 @@
+diff --git a/include/combat/Actions.h b/include/combat/Actions.h
+--- a/include/combat/Actions.h
++++ b/include/combat/Actions.h
+@@ -11,6 +11,7 @@
+ 
+ #include "constants/PlayerStatusEffects.h"
+ #include "constants/MonsterStatusEffects.h"
++#include "constants/MonsterMoves.h"
+ #include "constants/Cards.h"
+ #include "constants/Potions.h"
+ 
+@@ -66,6 +67,7 @@
+ 
+         static Action MonsterGainBlock(int idx, int amount);
+         static Action RollMove(int monsterIdx);
++        static Action SetMove(int monsterIdx, MonsterMoveId move);
+         static Action ReactiveRollMove(); // for writhing mass
+ 
+         static Action NoOpRollMove();
+diff --git a/include/combat/BattleContext.h b/include/combat/BattleContext.h
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -287,6 +287,7 @@
+     void BattleContext::debuffEnemy(int idx, int amount, bool isSourceMonster) {
+         // todo poison and snake skull
+         Monster &e = monsters.arr[idx];
++        if (!e.isTargetable()) return;
+ 
+         if (e.hasStatus<MS::ARTIFACT>()) {
+             e.decrementStatus<MS::ARTIFACT>();
+diff --git a/include/game/Deck.h b/include/game/Deck.h
+--- a/include/game/Deck.h
++++ b/include/game/Deck.h
+@@ -50,7 +50,7 @@
+         void upgradeRandomCards(Random &miscRng, int count);
+         void transformRandomCards(Random &miscRng, int count);
+ 
+-        void obtain(GameContext &gc, Card card, int count=1); // for all cards
++        void obtain(GameContext &gc, Card card, int count=1, bool checkOmamori=true);
+         void obtainRaw(Card card);
+ 
+         void remove(GameContext &gc, int idx);
+diff --git a/include/game/GameContext.h b/include/game/GameContext.h
+--- a/include/game/GameContext.h
++++ b/include/game/GameContext.h
+@@ -136,6 +136,7 @@
+ 
+         // from combats
+         int stolenGold = 0;
++        bool allMonstersEscaped = false;
+ 
+         // Shop Room
+         Shop shop;
+diff --git a/src/combat/Actions.cpp b/src/combat/Actions.cpp
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -123,6 +123,10 @@
+     return {[=] (BattleContext &bc) {
+         bc.monsters.arr[idx].block += amount;
+     }};
++}
++
++Action Actions::SetMove(int monsterIdx, MonsterMoveId move) {
++    return {[=](BattleContext &bc) { bc.monsters.arr[monsterIdx].moveHistory[0] = move; }};
+ }
+ 
+ Action Actions::RollMove(int monsterIdx) {
+diff --git a/src/combat/BattleContext.cpp b/src/combat/BattleContext.cpp
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -335,7 +335,7 @@
+                 break;
+ 
+             case R::SLAVERS_COLLAR:
+-                if (eliteTrigger || room == Room::BOSS) { // todo this needs to be set by eliteTrigger maybe?
++                if (eliteTrigger || isBossEncounter(encounter)) {
+                     p.energyPerTurn++;
+                 }
+                 break;
+@@ -423,7 +423,7 @@
+                 break;
+ 
+             case R::RED_MASK:
+-                addToBot( Actions::DebuffAllEnemy<MS::WEAK>(1) );
++                addToBot( Actions::DebuffAllEnemy<MS::WEAK>(1, false) );
+                 break;
+ 
+             case R::RING_OF_THE_SNAKE:
+@@ -503,6 +503,12 @@
+     updateCardsOnExit(g.deck);
+ 
+     g.info.stolenGold = 0;
++    g.info.allMonstersEscaped = monsters.monsterCount > 0;
++    for (int i = 0; i < monsters.monsterCount; ++i) {
++        if (monsters.arr[i].id != MonsterId::INVALID) {
++            g.info.allMonstersEscaped &= monsters.arr[i].isEscapingB;
++        }
++    }
+     if (requiresStolenGoldCheck()) {
+         for (int i = 0; i < monsters.monsterCount; ++i) {
+             const auto &m = monsters.arr[i];
+@@ -968,7 +974,7 @@
+ 
+         case CardId::ANGER:
+             addToBot( Actions::AttackEnemy(t, calculateCardDamage(c, t, up ? 8 : 6)) );
+-            addToBot( Actions::MakeTempCardInDiscard( CardInstance(CardId::ANGER, up), 1) );
++            addToBot( Actions::MakeTempCardInDiscard(c, 1) );
+             break;
+ 
+         case CardId::BASH:
+@@ -1079,8 +1085,13 @@
+         }
+ 
+         case CardId::PERFECTED_STRIKE: {
+-            // hack because we calculate strikeCount while non purge cards are still in hand.
+-            const int strikeDmg = cards.strikeCount * (up ? 3 : 2);
++            // Original counts the three piles, excluding cards in limbo.
++            // Manual damage is calculated before removing the card from hand.
++            int strikes = 0;
++            for (int i = 0; i < cards.cardsInHand; ++i) strikes += cards.hand[i].isStrikeCard();
++            for (const auto &card : cards.drawPile) strikes += card.isStrikeCard();
++            for (const auto &card : cards.discardPile) strikes += card.isStrikeCard();
++            const int strikeDmg = strikes * (up ? 3 : 2);
+             const int baseDamage = 6 + strikeDmg;
+             addToBot( Actions::AttackEnemy(t, calculateCardDamage(c, t, baseDamage)) );
+             break;
+@@ -1768,10 +1779,12 @@
+ 
+     onUseCardRelics();
+ 
+-//    auto &m = monsters.optionMap[2];
+-//    if (m.hasStatusInternal<MS::CURIOSITY>()) {
+-//        m.buff<MS::STRENGTH>(m.getStatus<MS::CURIOSITY>());
+-//    }
++    for (int i = 0; i < monsters.monsterCount; ++i) {
++        const auto &m = monsters.arr[i];
++        if (m.isTargetable() && m.hasStatus<MS::CURIOSITY>()) {
++            addToBot(Actions::BuffEnemy<MS::STRENGTH>(i, m.getStatus<MS::CURIOSITY>()));
++        }
++    }
+ }
+ 
+ void BattleContext::onUseCardRelics() {
+diff --git a/src/combat/Monster.cpp b/src/combat/Monster.cpp
+--- a/src/combat/Monster.cpp
++++ b/src/combat/Monster.cpp
+@@ -431,14 +431,14 @@
+         }
+     }
+ 
+-    if (hasStatus<MS::ANGRY>()) { // onAttacked
+-        buff<MS::STRENGTH>(getStatus<MS::ANGRY>());
+-    }
+-
+     const bool hadBlock = block > 0;
+     const int tempDamage = damage;
+     damage -= block;
+     block = std::max(0, block - tempDamage);
++
++    if (damage > 0 && hasStatus<MS::ANGRY>()) {
++        bc.addToTop(Actions::BuffEnemy<MS::STRENGTH>(idx, getStatus<MS::ANGRY>()));
++    }
+ 
+     if (hadBlock && block == 0 && bc.player.hasRelic<RelicId::HAND_DRILL>()) {
+         bc.addToBot(Actions::DebuffEnemy<MS::VULNERABLE>(idx, 2, false) );
+@@ -515,20 +515,26 @@
+     const bool atOrBelowHalf = curHp <= maxHp/2;
+     switch (id) {
+         case MonsterId::ACID_SLIME_L:
+-            if (atOrBelowHalf) {
++            if (atOrBelowHalf && !miscInfo) {
++                miscInfo = 1; // splitTriggered in the original monster.
+                 moveHistory[0] = MMID::ACID_SLIME_L_SPLIT;
++                bc.addToBot(Actions::SetMove(idx, MMID::ACID_SLIME_L_SPLIT));
+             }
+             break;
+ 
+         case MonsterId::SLIME_BOSS:
+-            if (atOrBelowHalf) {
++            if (atOrBelowHalf && !miscInfo) {
++                miscInfo = 1;
+                 moveHistory[0] = MMID::SLIME_BOSS_SPLIT;
++                bc.addToBot(Actions::SetMove(idx, MMID::SLIME_BOSS_SPLIT));
+             }
+             break;
+ 
+         case MonsterId::SPIKE_SLIME_L:
+-            if (atOrBelowHalf) {
++            if (atOrBelowHalf && !miscInfo) {
++                miscInfo = 1;
+                 moveHistory[0] = MMID::SPIKE_SLIME_L_SPLIT;
++                bc.addToBot(Actions::SetMove(idx, MMID::SPIKE_SLIME_L_SPLIT));
+             }
+             break;
+ 
+diff --git a/src/combat/MonsterSpecific.cpp b/src/combat/MonsterSpecific.cpp
+--- a/src/combat/MonsterSpecific.cpp
++++ b/src/combat/MonsterSpecific.cpp
+@@ -542,6 +542,8 @@
+                 auto &mystic = bc.monsters.arr[1];
+                 bc.aiRng.random(0); // GainBlockRandomMonsterAction selects even its only ally.
+                 mystic.addBlock(asc17 ? 20 : 15);
++            } else {
++                addBlock(asc17 ? 20 : 15);
+             }
+             rollMove(bc);
+             break;
+@@ -1507,6 +1509,9 @@
+             if (!bc.player.hasRelic<R::OMAMORI>()) {
+                 if (bc.player.hasRelic<R::DARKSTONE_PERIAPT>()) {
+                     bc.player.increaseMaxHp(6);
++                }
++                if (bc.player.hasRelic<R::CERAMIC_FISH>()) {
++                    bc.player.gainGold(bc, 9);
+                 }
+             }
+             rollMove(bc);
+@@ -1972,7 +1977,7 @@
+ 
+             if (asc17) {
+                 if (roll < 40) {
+-                    if (lastTwoMoves(MMID::ACID_SLIME_M_CORROSIVE_SPIT)) {
++                    if (lastTwoMoves(MMID::ACID_SLIME_L_CORROSIVE_SPIT)) {
+                         if (bc.aiRng.randomBoolean(0.6F)) {
+                             return (MMID::ACID_SLIME_L_TACKLE);
+                         } else {
+@@ -2661,7 +2666,7 @@
+                 break;
+             }
+ 
+-            int roll2 = 100;
++            int roll2 = roll;
+ 
+             if (roll < 20) {
+                 if (!lastMove(MMID::SHELLED_PARASITE_FELL)) {
+@@ -2671,7 +2676,7 @@
+                 roll2 = bc.aiRng.random(20,99);
+             }
+ 
+-            if (roll < 60 || roll2 < 60) {
++            if (roll2 < 60) {
+                 if (!lastTwoMoves(MMID::SHELLED_PARASITE_DOUBLE_STRIKE)) {
+                     return (MMID::SHELLED_PARASITE_DOUBLE_STRIKE);
+                 } else {
+@@ -3142,7 +3147,7 @@
+                     return MMID::WRITHING_MASS_FLAIL;
+ 
+                 } else {
+-                    return (MMID::WRITHING_MASS_WITHER);
++                    myRoll = bc.aiRng.random(69);
+                 }
+             }
+         }
+@@ -3354,8 +3359,9 @@
+     bc.monsters.monstersAlive++;
+     bc.monsters.monsterCount = std::min(bc.monsters.monsterCount+1, 4);
+ 
+-    bc.noOpRollMove();
+-    bc.monsters.extraRollMoveOnTurn.set(idx2, true);
++    // Acid slime has no parent RollMoveAction; spike slime queues one after
++    // spawning. Both children already rolled once in initSpawnedMonster.
++    if (mediumSlimeType == MonsterId::SPIKE_SLIME_M) bc.noOpRollMove();
+     bc.monsterTurnIdx++;
+ }
+ 
+diff --git a/src/combat/Player.cpp b/src/combat/Player.cpp
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -718,7 +718,7 @@
+ 
+         switch (pair.first) {
+             case PS::BRUTALITY:
+-                bc.addToBot( Actions::PlayerLoseHp(pair.second) );
++                bc.addToBot( Actions::PlayerLoseHp(pair.second, true) );
+                 bc.addToBot( Actions::DrawCards(pair.second) );
+                 break;
+ 
+@@ -929,4 +929,3 @@
+ 
+ 
+ 
+-
+diff --git a/src/game/Deck.cpp b/src/game/Deck.cpp
+--- a/src/game/Deck.cpp
++++ b/src/game/Deck.cpp
+@@ -130,9 +130,9 @@
+     // todo
+ }
+ 
+-void Deck::obtain(GameContext &gc, Card card, int count) {
++void Deck::obtain(GameContext &gc, Card card, int count, bool checkOmamori) {
+     const auto type = card.getType();
+-    if (type == CardType::CURSE && gc.hasRelic(RelicId::OMAMORI)) {
++    if (checkOmamori && type == CardType::CURSE && gc.hasRelic(RelicId::OMAMORI)) {
+         int &charges = gc.relics.getRelicValueRef(RelicId::OMAMORI);
+         const int blocked = std::min(count, std::max(0, charges));
+         count -= blocked;
+diff --git a/src/game/GameContext.cpp b/src/game/GameContext.cpp
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -702,8 +702,10 @@
+                 break;
+ 
+             case MonsterEncounter::CHOSEN_AND_BYRDS:
++                if (lastMonster == MonsterEncounter::THREE_BYRDS || lastMonster == MonsterEncounter::CHOSEN) continue;
+                 break;
+             case MonsterEncounter::SENTRY_AND_SPHERE:
++                if (lastMonster == MonsterEncounter::SPHERIC_GUARDIAN) continue;
+                 break;
+             case MonsterEncounter::SNAKE_PLANT:
+                 break;
+@@ -712,6 +714,7 @@
+             case MonsterEncounter::CENTURION_AND_HEALER:
+                 break;
+             case MonsterEncounter::CULTIST_AND_CHOSEN:
++                if (lastMonster == MonsterEncounter::CHOSEN) continue;
+                 break;
+             case MonsterEncounter::THREE_CULTIST:
+                 break;
+@@ -722,6 +725,11 @@
+             case MonsterEncounter::TRANSIENT:
+                 break;
+             case MonsterEncounter::FOUR_SHAPES:
++                if (lastMonster == MonsterEncounter::THREE_SHAPES) continue;
++                break;
++            case MonsterEncounter::THREE_DARKLINGS:
++            case MonsterEncounter::ORB_WALKER:
++                if (lastMonster == toAdd) continue;
+                 break;
+             case MonsterEncounter::MAW:
+                 break;
+@@ -1175,6 +1183,8 @@
+ void GameContext::enterBattle(MonsterEncounter encounter) {
+     screenState = ScreenState::BATTLE;
+     info.encounter = encounter;
++    info.allMonstersEscaped = false;
++    info.stolenGold = 0;
+     if (skipBattles) {
+         afterBattle();
+     }
+@@ -1389,6 +1399,19 @@
+             relicData = 1;
+             break;
+ 
++        case RelicId::MOLTEN_EGG:
++        case RelicId::TOXIC_EGG:
++        case RelicId::FROZEN_EGG: {
++            const auto type = r == RelicId::MOLTEN_EGG ? CardType::ATTACK :
++                              r == RelicId::TOXIC_EGG ? CardType::SKILL : CardType::POWER;
++            for (int i = 0; i < info.rewardsContainer.cardRewardCount; ++i) {
++                for (auto &card : info.rewardsContainer.cardRewards[i]) {
++                    if (card.getType() == type && !card.isUpgraded() && card.canUpgrade()) card.upgrade();
++                }
++            }
++            break;
++        }
++
+         case RelicId::ANCIENT_TEA_SET:
+             relicData = -1;
+             break;
+@@ -1721,6 +1744,7 @@
+ }
+ 
+ Card GameContext::previewObtainCard(Card card) {
++    if (card.isUpgraded() || !card.canUpgrade()) return card;
+     switch (card.getType()) {
+         case CardType::ATTACK:
+             if (hasRelic(RelicId::MOLTEN_EGG)) {
+@@ -1909,8 +1933,7 @@
+ }
+ 
+ void GameContext::addPotionRewards(Rewards &r) {
+-    // assume if in a monsters room, they didnt escape
+-    int chance = 40 + potionChance;
++    int chance = curRoom == Room::MONSTER && info.allMonstersEscaped ? 0 : 40 + potionChance;
+ 
+     if (hasRelic(RelicId::WHITE_BEAST_STATUE)) {
+         chance = 100;
+@@ -2081,11 +2104,13 @@
+ 
+ Rewards GameContext::createCombatReward() {
+     Rewards reward;
+-    int goldAmt = treasureRng.random(10, 20);
+-    if (hasRelic(RelicId::GOLDEN_IDOL)) {
+-        goldAmt += std::round(static_cast<float>(goldAmt) * 0.25f);
+-    }
+-    reward.addGold(goldAmt);
++    if (!info.allMonstersEscaped) {
++        int goldAmt = treasureRng.random(10, 20);
++        if (hasRelic(RelicId::GOLDEN_IDOL)) {
++            goldAmt += std::round(static_cast<float>(goldAmt) * 0.25f);
++        }
++        reward.addGold(goldAmt);
++    }
+     addPotionRewards(reward);
+     reward.addCardReward(createCardReward(Room::MONSTER)); // TODO Prayer wheel
+     if (hasRelic(RelicId::PRAYER_WHEEL)) {
+@@ -2727,6 +2752,8 @@
+         case Event::COLOSSEUM:
+             if (info.eventData == 0) {
+                 regainControlAction = [](GameContext &gc) {
++                    Rewards hiddenRewards;
++                    gc.addPotionRewards(hiddenRewards);
+                     gc.info.eventData = 1;
+                     gc.screenState = ScreenState::EVENT_SCREEN;
+                     gc.regainControlAction = returnToMapAction;
+@@ -3548,10 +3575,17 @@
+         case Event::THE_MAUSOLEUM: {
+             if (idx == 0) {
+                 auto result = miscRng.randomBoolean();
+-                if (result || unfavorable) {
+-                    deck.obtain(*this, CardId::WRITHE);
++                bool receiveCurse = result || unfavorable;
++                // ShowCardAndObtainEffect checks Omamori when queued, before
++                // the relic arrives. Its onObtainCard hooks run afterwards.
++                if (receiveCurse && hasRelic(RelicId::OMAMORI) && relics.getRelicValue(RelicId::OMAMORI) > 0) {
++                    --relics.getRelicValueRef(RelicId::OMAMORI);
++                    receiveCurse = false;
+                 }
+                 obtainRelic(returnRandomScreenlessRelic(returnRandomRelicTier(relicRng, act)));
++                if (receiveCurse) {
++                    deck.obtain(*this, CardId::WRITHE, 1, false);
++                }
+                 regainControl();
+ 
+             } else if (idx == 1) {

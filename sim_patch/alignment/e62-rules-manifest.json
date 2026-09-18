@@ -1,0 +1,62 @@
+{
+  "patch_sha256": "88eed35bbc7274d4d3d6f48b0de839f0c58c88a473b3577d267ce7cd8cfdabf1",
+  "files": [
+    {
+      "path": "include/combat/Actions.h",
+      "before": "77843f2acc26c0571c0ef1b9315724d69885462479ed5851def1152de455d11c",
+      "after": "17e94ac8c1ecf2a13fab8a6ccacabd30380dd4883da4475c3a681fe8b031b959"
+    },
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "fa7186804308940676430ae0da857bb18d729504dd363f6ed51eff687183a463",
+      "after": "ea1aa10e8eb048091746cbf0bf279ce5b274edc1d45bddd4711d30e8265b6a8a"
+    },
+    {
+      "path": "include/game/Deck.h",
+      "before": "4fd1abb2a3fe7d47351a9d405ccd94fb4b9d162b1e5e35af5be42c469dcb3a09",
+      "after": "91ddafc68e673d29efed7f3da23024fe1d7f95eb4c7a57537c5bc4b98795ee39"
+    },
+    {
+      "path": "include/game/GameContext.h",
+      "before": "68effa20d3a75e61027253c68fa4a27a0a86592b519cbac870c56d5a141fbeb2",
+      "after": "d3f941b957fbedd23dd205038a5ebe52f7b2bbeb22b60595d93bf7e9ee9d1ad4"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "51d2038a86e998b461447fc1b0bbce4f9c2896798d1cd61759c6dfdf82fcf501",
+      "after": "6f371f2ef165c0b568f949232770bdbf5aad7f591c48ec70983b4246f11cb552"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "c218a26611c8f0687a6cd5099bc80f64466c48684581b647d5cee97002417105",
+      "after": "f86fe550151eee2377ac2b1caa62bbab9d6177f62cf0e2bc1d79fa980e978e52"
+    },
+    {
+      "path": "src/combat/Monster.cpp",
+      "before": "c103ccfe4de18730e9c85f6d7af0077c9239835edc0f7e873403a1da5838c363",
+      "after": "b51ddca08b5fa11e729a1681660faedd389d90f414b573f835bbde6021e294a4"
+    },
+    {
+      "path": "src/combat/MonsterSpecific.cpp",
+      "before": "1e492ee24752ce7823ee998e3e7fabd2b8737211dc9dac540921421756493016",
+      "after": "89b306e0d3d7ea9da27761be90a9c1c5e5a86c1b54df256c2e350a7887c40552"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "fd232c9f386c21934bd06ac2ec3b652c2bbd62f1b94c03f2e60056951031c87e",
+      "after": "a377998ca1e3484e09e5357a170f1b8f29d635852e65ca31e855c8cd5280840d"
+    },
+    {
+      "path": "src/game/Deck.cpp",
+      "before": "5e79336b46e820f4dd5d5ce9aadb1261ff27ce45c44d28843a66ca7aa8696119",
+      "after": "f0ba91d5a74f3431eb6db350d96e68e3bf1d460f7478ee5be26327da320709dd"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "f5fddb3ec05e26f1d1b87b9dde4bd392bbb00e67b5858af4c29a4dd0366510f9",
+      "after": "5c240fd86604b0dc56c898ef8a05b56fbe224369f75a72cfb9fb96ce8108baee"
+    }
+  ],
+  "portable_source_matches": true,
+  "application_note": "Standalone git root created to prevent enclosing workspace path filtering; all output files compared byte-for-byte."
+}

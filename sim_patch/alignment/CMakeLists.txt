@@ -27,6 +27,12 @@ foreach(case IN ITEMS relic_order copy_isolation necronomicon_free thorns block_
     add_test(NAME parity_followup_${case} COMMAND parity_followup_tests ${case})
     set_tests_properties(parity_followup_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+add_executable(e62_rules_tests tests/e62_rules.cpp)
+target_link_libraries(e62_rules_tests PRIVATE sts_core)
+foreach(case IN ITEMS escaped_rewards eggs mausoleum colosseum event_collar red_mask parasite_fish split_rng encounter_exclusions blocked_angry)
+    add_test(NAME e62_${case} COMMAND e62_rules_tests ${case})
+    set_tests_properties(e62_${case} PROPERTIES TIMEOUT 15)
+endforeach()
 find_package(Python COMPONENTS Interpreter Development.Module REQUIRED)
 find_package(pybind11 CONFIG REQUIRED)
 pybind11_add_module(slaythespire "${SIM_ROOT}/bindings/slaythespire.cpp" "${SIM_ROOT}/bindings/bindings-util.cpp")
@@ -122,3 +128,6 @@ set_tests_properties(repair_original_parity_followup PROPERTIES TIMEOUT 300 ENVI
 
 add_test(NAME repair_original_natural_trace COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/replay_trace.py" "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/original-natural-trace.json.gz")
 set_tests_properties(repair_original_natural_trace PROPERTIES TIMEOUT 120 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1;ALIGNMENT_REPORT_DIR=${CMAKE_CURRENT_BINARY_DIR}/original-comparisons")
+
+add_test(NAME repair_original_e62_boundaries COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/compare_sequences.py" "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/original-e62-boundaries.json.gz" --check)
+set_tests_properties(repair_original_e62_boundaries PROPERTIES TIMEOUT 300 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1;ALIGNMENT_REPORT_DIR=${CMAKE_CURRENT_BINARY_DIR}/original-comparisons")

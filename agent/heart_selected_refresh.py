@@ -119,6 +119,7 @@ def run(root):
     assert not (root / 'completion-verification.json').exists()
     H.torch.set_num_threads(1)
     config, seeds = H.read_json(root / 'config.json'), H.read_json(root / 'seeds.json')
+    experiment = H.read_json(root / 'plan.json')['experiment']
     identity = H.read_json(root / 'identity.json')
     assert S.sha(R.sts.__file__) == S.sha(root / ENGINE) == identity['engine_sha256']
     assert S.sha(root / 'model.pt') == identity['model_sha256']
@@ -127,7 +128,7 @@ def run(root):
         'output': str(root / f'episodes/{seed}.json.gz')}
         for split in ('train_development', 'fit', 'label_holdout') for seed in seeds[split]]
     deadline = time.monotonic() + 10800
-    rows = H.run_jobs(root, jobs, config, 'E55_selected_runtime_refresh', deadline, worker_fn=C.worker)
+    rows = H.run_jobs(root, jobs, config, experiment + '_runtime_refresh', deadline, worker_fn=C.worker)
     faults = [dict(seed=j['seed'], split=j['split'], status=r.get('status'), target=None)
         for j, r in zip(jobs, rows) if not valid(r, j, identity)]
     H.write_json(root / 'collection-accounting.json', {'requested': len(jobs), 'returned': len(rows), 'faults': faults})
@@ -137,7 +138,7 @@ def run(root):
     H.write_json(root / 'source-index.json', index)
     winners = [(j, r) for j, r in zip(jobs, rows) if r['status'] == 'heart_win']
     repeat_jobs = [dict(j, output=str(root / f'repeated/{j["seed"]}.json.gz')) for j, _ in winners]
-    repeated = H.run_jobs(root, repeat_jobs, config, 'E55_winner_replans', deadline, worker_fn=C.worker)
+    repeated = H.run_jobs(root, repeat_jobs, config, experiment + '_winner_replans', deadline, worker_fn=C.worker)
     assert len(repeated) == len(winners)
     repeats = []
     for (job, old), new, repeat_job in zip(winners, repeated, repeat_jobs):
@@ -149,10 +150,10 @@ def run(root):
     for i, (job, row) in enumerate(zip(jobs, rows)):
         cases.append(dict(audit_row(row, config, net), split=job['split']))
         if (i + 1) % 128 == 0:
-            H.write_json(root / 'status.json', {'stage': 'E55_independent_replay_and_NN_audit', 'completed': i + 1, 'total': len(jobs)})
+            H.write_json(root / 'status.json', {'stage': experiment + '_independent_replay_and_NN_audit', 'completed': i + 1, 'total': len(jobs)})
             print({'audit': i + 1, 'total': len(jobs)}, flush=True)
     H.write_json(root / 'cases.json.gz', cases)
-    report = {'status': 'complete', 'experiment': 'E55', 'families': len(jobs), 'execution_faults': 0,
+    report = {'status': 'complete', 'experiment': experiment, 'families': len(jobs), 'execution_faults': 0,
         'splits': {split: {'families': len(values), 'outcomes': dict(Counter(r['status'] for j, r in zip(jobs, rows) if j['split'] == split)),
             'entered_encounters': dict(Counter(f'{b["act"]}:{b["encounter"]}' for c in cases if c['split'] == split for b in c['battles'])),
             'terminal_locations': dict(Counter(f'{c["act"]}:{c["status"]}:{c["terminal_location"]}' for c in cases if c['split'] == split)),
