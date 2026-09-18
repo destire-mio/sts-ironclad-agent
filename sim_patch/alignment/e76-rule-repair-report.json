@@ -1,0 +1,163 @@
+{
+  "experiment": "E76",
+  "status": "eleven_rule_classes_repaired_remaining_findings_open",
+  "frozen_engine_sha256": "10808b789629f79ae540aa43187504b2feadbee18e7f9af37d75ab2883cbd57f",
+  "patch_sha256": "43abf09973a270bc5b85a5b54035e422df9b865d5f5e1f9ce5f8471fb2dd6f1f",
+  "changed_source_files": 8,
+  "original_run_scope": "All 53 E67 development winners checked by E75. This repair checks only the saved first-difference boundaries from natural starts, with no imports or resynchronization.",
+  "repairs": [
+    {
+      "name": "corruption_mummified",
+      "seeds": [
+        1616891667,
+        1696889517,
+        1927008970,
+        1962623078
+      ],
+      "behavior": "Corruption changes skill costs during power-action construction before relic callbacks."
+    },
+    {
+      "name": "darkling_power_reset",
+      "seeds": [
+        1644449217
+      ],
+      "behavior": "Darkling clears power amounts as well as presence flags before revival."
+    },
+    {
+      "name": "darkling_retaliation_regrow",
+      "seeds": [
+        1662225003,
+        1943068509
+      ],
+      "behavior": "Retaliation death queues the regrow move after the pending move roll."
+    },
+    {
+      "name": "necronomicon_play_limit",
+      "seeds": [
+        1682522415
+      ],
+      "behavior": "Copied cards obey current turn and card-play restrictions."
+    },
+    {
+      "name": "stasis_return_queue",
+      "seeds": [
+        1714838215,
+        1773410747,
+        1822426447,
+        1826525428,
+        1932683113
+      ],
+      "behavior": "Stasis returns after existing actions and keeps its hand/discard destination."
+    },
+    {
+      "name": "duplicate_no_draw_artifact",
+      "seeds": [
+        1729117881
+      ],
+      "behavior": "An existing No Draw rejects its duplicate before the Artifact check."
+    },
+    {
+      "name": "time_eater_debuff_order",
+      "seeds": [
+        1741500819
+      ],
+      "behavior": "Ripple applies Vulnerable, Weak, then Frail."
+    },
+    {
+      "name": "infernal_blood_for_blood",
+      "seeds": [
+        1815249264,
+        1853111963
+      ],
+      "behavior": "Infernal Blade generation applies previous HP-loss discounts."
+    },
+    {
+      "name": "dead_adventurer_elite_relics",
+      "seeds": [
+        1824944691
+      ],
+      "behavior": "Dead Adventurer combat triggers elite-only relics."
+    },
+    {
+      "name": "prismatic_shop_scope",
+      "seeds": [
+        1819670092,
+        1821415535,
+        1845602907,
+        1876762155,
+        1907854331
+      ],
+      "behavior": "Preserve the original shuffled shop pool; exclude only purchasing Prismatic Shard."
+    },
+    {
+      "name": "autoplay_shuffle_relics",
+      "seeds": [
+        1949373739
+      ],
+      "behavior": "Autoplay refilling an empty draw pile triggers shuffle relics."
+    }
+  ],
+  "first_boundary_checks": {
+    "before_mismatches": 26,
+    "after_matched": 24,
+    "remaining_rng_mismatches": 2,
+    "before_sha256": "b564c94741a1406d5bc76d8c21df7a657e26529c2fdddeede45490d5fe388b2b",
+    "after_sha256": "5f7839b6a5031529a74a89c767d874233ed72af74fdef0ead80f3e6a08385e4f",
+    "script_sha256": "392ff6b407c89f96918569887dd029ec87aa6e0df14859d51438720c105f6b2f"
+  },
+  "focused_checks": {
+    "cases": 15,
+    "before_target_failures": 13,
+    "before_control_passes": 2,
+    "after_passes": 15,
+    "sha256": "0268b0bf5b7f01cf92ffe3f76138c430928d8a0cc9d22748bc1f7dc05c472a1d"
+  },
+  "full_regressions": {
+    "passed": 176,
+    "total": 176,
+    "sha256": "7ce2d0e24c660fdbc4da5c552f81c1ff99a8ebbfd820945d690b5d603c058fa3"
+  },
+  "portable_validation": {
+    "source_changed_files_match": 8,
+    "build_passed": true,
+    "focused_checks_passed": 16,
+    "focused_checks_total": 16,
+    "test_log_sha256": "6b1cb014ddfa38c64de4f27bcaa69fc25ccaebcf8240838c256d2c47d8ef6a24",
+    "application_proof_sha256": "d6cb9ac1945b1b7cde024ee90a212a231401a430b2116e2bd28de2c9dc9a81f3",
+    "binary_differs_from_training_candidate": "Portable E66 source retains two historical search files; gameplay changed-file contents match exactly."
+  },
+  "remaining": [
+    {
+      "kind": "curse_transform_preview_rng",
+      "seeds": [
+        1746289500,
+        1746312853
+      ],
+      "cause": "GridCardSelectScreen transform preview calls returnTrulyRandomCardFromAvailable; curse previews use global cardRng on each animation tick. Recorded immediate-confirm sequences consume one missing sample. Timing/input contract still needs repair."
+    },
+    {
+      "kind": "replay_adapter",
+      "seeds": [
+        1641038134,
+        1656951760,
+        1795610934,
+        1737019056,
+        1887714089,
+        1842848570
+      ],
+      "cause": "Dream Catcher reward closing, Knowing Skull introductory dialog, Headbutt selection after lethal minion-leader attack."
+    }
+  ],
+  "limits": [
+    "No repaired-engine end-to-end win-rate measured.",
+    "First-boundary matches do not prove the remaining route or all original-game rules.",
+    "Old E67/E70/E73 labels and baselines remain versioned historical evidence; no formal E73 optimization occurred.",
+    "No fresh unseen 1024-seed acceptance occurred."
+  ],
+  "local_evidence": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e75-rule-repair-20260919-01",
+  "notes": [
+    "The first portable build omitted documented JSON_INCLUDE and failed to find nlohmann/json.hpp. The configured rebuild and all 16 portable focused checks passed; failed logs remain.",
+    "Boundary checker version 02 incorrectly advanced the next map action in two outside cases; retained output showed false floor/RNG differences. Version 03 checks the original pre-action boundary and leaves only cardRng mismatches.",
+    "A report-generation assertion expected another CTest summary format and rejected the passing 16-case log. Parsing was corrected without rerunning or changing tests."
+  ]
+}

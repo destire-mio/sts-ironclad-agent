@@ -131,3 +131,15 @@ set_tests_properties(repair_original_natural_trace PROPERTIES TIMEOUT 120 ENVIRO
 
 add_test(NAME repair_original_e62_boundaries COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/compare_sequences.py" "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/original-e62-boundaries.json.gz" --check)
 set_tests_properties(repair_original_e62_boundaries PROPERTIES TIMEOUT 300 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1;ALIGNMENT_REPORT_DIR=${CMAKE_CURRENT_BINARY_DIR}/original-comparisons")
+
+add_executable(e75_rules_tests tests/e75_rules.cpp)
+target_link_libraries(e75_rules_tests PRIVATE sts_core)
+foreach(case IN ITEMS corruption_mummified corruption_no_target corruption_existing_power
+        unrelated_power_mummified darkling_reapply necronomicon_play_limit
+        stasis_exhaust_order stasis_full_hand_destination
+        duplicate_no_draw_artifact time_eater_artifact_order
+        darkling_retaliation_regrow infernal_blood_for_blood
+        dead_adventurer_elite_relics prismatic_shop_scope autoplay_shuffle_relics)
+    add_test(NAME e75_${case} COMMAND e75_rules_tests ${case})
+    set_tests_properties(e75_${case} PROPERTIES TIMEOUT 15)
+endforeach()

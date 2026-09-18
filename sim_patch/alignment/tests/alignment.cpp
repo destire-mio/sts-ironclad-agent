@@ -502,7 +502,7 @@ int main(int argc,char**argv) {try {
         const auto expectPause=[&](GameContext &state,const char *message){agent.playout(state);check(agent.paused,message);check(!search::GameAction::getAllActionsInState(state).empty(),"paused screen has no legal actions");};
 
         auto excluded=game();
-        check(std::find(excluded.shopRelicPool.begin(),excluded.shopRelicPool.end(),RelicId::PRISMATIC_SHARD)==excluded.shopRelicPool.end(),"disabled Prismatic Shard remains in the shop relic pool");
+        check(std::find(excluded.shopRelicPool.begin(),excluded.shopRelicPool.end(),RelicId::PRISMATIC_SHARD)!=excluded.shopRelicPool.end(),"scope exclusion shifted native shop offers");
 
         auto event=game();expectPause(event,"external policy did not receive event choice");
         auto map=game();map.screenState=ScreenState::MAP_SCREEN;expectPause(map,"external policy did not receive map choice");

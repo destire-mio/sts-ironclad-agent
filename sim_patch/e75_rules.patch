@@ -1,0 +1,183 @@
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -226,9 +226,6 @@
+     template <PlayerStatus s>
+     Action Actions::BuffPlayer(int amount) {
+         return {[=] (BattleContext &bc) {
+-            if (s == PlayerStatus::CORRUPTION && !bc.player.hasStatus<PS::CORRUPTION>()) {
+-                bc.cards.onBuffCorruption();
+-            }
+             bc.player.buff<s>(amount);
+         }};
+     }
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -371,6 +371,11 @@
+             return;
+         }
+ 
++        // ApplyPowerAction rejects an existing No Draw before Artifact checks.
++        if (s == PS::NO_DRAW && hasStatus<PS::NO_DRAW>()) {
++            return;
++        }
++
+         if (s == PS::WEAK && hasRelic<RelicId::GINGER>()) {
+             return;
+         }
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -601,7 +601,7 @@
+ Action Actions::InfernalBladeAction() {
+     return {[=] (BattleContext &bc) {
+         const auto cid = getTrulyRandomCardInCombat(bc.cardRandomRng, bc.player.cc, CardType::ATTACK);
+-        CardInstance c(cid);
++        CardInstance c = bc.createGeneratedCard(cid);
+         c.setCostForTurn(0);
+         bc.addToTop( Actions::MakeTempCardInHand(c) );
+     }};
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -89,7 +89,8 @@
+     fixed_list<RelicId, 2> atTurnStartPostDraw;
+ 
+     auto room = gc.curRoom;
+-    const bool eliteTrigger = room == Room::ELITE || encounter == MonsterEncounter::COLOSSEUM_EVENT_NOBS;
++    const bool eliteTrigger = room == Room::ELITE || encounter == MonsterEncounter::COLOSSEUM_EVENT_NOBS
++        || (room == Room::EVENT && gc.curEvent == Event::DEAD_ADVENTURER);
+ 
+     auto &p = player;
+ 
+@@ -837,7 +838,12 @@
+     }
+ 
+ //    bool canPlayCard = false; // not really sure what this is used for
+-    const bool canUseCard = item.purgeOnUse || (item.triggerOnUse && c.canUse(*this, item.target, item.autoplay) && (!c.requiresTarget() || monsters.arr[item.target].isTargetable()));
++    // A duplicated/autoplay card still passes the original canUse checks.
++    // purgeOnUse controls its destination, not permission to bypass Choker,
++    // Normality, Entangled, or card-specific play restrictions.
++    const bool canUseCard = item.triggerOnUse && !turnHasEnded && isCardPlayAllowed()
++            && c.canUse(*this, item.target, item.autoplay)
++            && (!c.requiresTarget() || monsters.arr[item.target].isTargetable());
+     if (canUseCard) { // not sure if this is correct,
+ //        canPlayCard = true; // what is this for......
+ 
+@@ -1535,7 +1541,12 @@
+             break;
+ 
+         case CardId::CORRUPTION:
+-            addToBot( Actions::BuffPlayer<PS::CORRUPTION>() );
++            if (!player.hasStatus<PS::CORRUPTION>()) {
++                // ApplyPowerAction's constructor changes skill costs before
++                // UseCardAction invokes relic callbacks such as Mummified Hand.
++                cards.onBuffCorruption();
++                addToBot(Actions::BuffPlayer<PS::CORRUPTION>());
++            }
+             break;
+ 
+         case CardId::COMBUST:
+@@ -2505,6 +2516,7 @@
+     if (cards.drawPile.empty()) {
+         if (!cards.discardPile.empty()) {
+             addToTop( Actions::PlayTopCard(monsterTargetIdx, exhausts) );
++            onShuffle();
+             addToTop( Actions::EmptyDeckShuffle() );
+         }
+         return;
+--- a/src/combat/Monster.cpp
++++ b/src/combat/Monster.cpp
+@@ -308,6 +308,12 @@
+ 
+     } else if (hasStatus<MS::REGROW>()) {
+         resetAllStatusEffects();
++        // Darkling.damage also queues SetMoveAction after its pending turn.
++        // If retaliation kills it while attacking, that action runs after
++        // RollMoveAction and retains the one-turn regrow delay.
++        if (moveHistory[0] != MMID::DARKLING_REGROW) {
++            bc.addToBot(Actions::SetMove(idx, MMID::DARKLING_REGROW));
++        }
+         setMove(MMID::DARKLING_REGROW);
+         halfDead = true;
+ 
+@@ -574,7 +580,11 @@
+ 
+ void Monster::resetAllStatusEffects() {
+     statusBits = 0;
+-    setStatus<MS::STRENGTH>(0);
++    // Darkling clears its power objects on death. Clearing presence bits alone
++    // leaves old amounts to be added when a debuff is applied after revival.
++    artifact = blockReturn = choked = corpseExplosion = lockOn = mark = 0;
++    metallicize = platedArmor = poison = regen = shackled = 0;
++    strength = vulnerable = weak = uniquePower0 = uniquePower1 = 0;
+     block = 0;
+ }
+ 
+--- a/src/combat/MonsterSpecific.cpp
++++ b/src/combat/MonsterSpecific.cpp
+@@ -1631,8 +1631,8 @@
+ 
+         case MMID::TIME_EATER_RIPPLE: // 3
+             addBlock(20);
++            bc.player.debuff<PS::VULNERABLE>(1, true);
+             bc.player.debuff<PS::WEAK>(1, true);
+-            bc.player.debuff<PS::VULNERABLE>(1, true);
+             if (asc19) {
+                 bc.player.debuff<PS::FRAIL>(1, true);
+             }
+@@ -3510,8 +3510,17 @@
+     assert(stasisCard.id != CardId::INVALID);
+ #endif
+ 
+-    bc.cards.notifyAddCardToCombat(stasisCard);
+-    bc.moveToHandHelper(stasisCard);
++    // StasisPower.onDeath queues the return after existing actions. A full
++    // hand at death selects the discard action even if space opens later.
++    bc.addToBot({[card = stasisCard, discard = bc.cards.cardsInHand == 10](BattleContext &next) {
++        next.cards.notifyAddCardToCombat(card);
++        if (discard || next.cards.cardsInHand == 10) {
++            next.cards.notifyAddToDiscardPile(card);
++            next.cards.discardPile.push_back(card);
++        } else {
++            next.moveToHandHelper(card);
++        }
++    }});
+     stasisCard = {CardId::INVALID};
+ }
+ 
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -513,11 +513,8 @@
+     java::Collections::shuffle(uncommonRelicPool.begin(), uncommonRelicPool.end(), java::Random(relicRng.randomLong()));
+     java::Collections::shuffle(rareRelicPool.begin(), rareRelicPool.end(), java::Random(relicRng.randomLong()));
+     java::Collections::shuffle(shopRelicPool.begin(), shopRelicPool.end(), java::Random(relicRng.randomLong()));
+-    if (disablePrismaticShard) {
+-        shopRelicPool.erase(
+-                std::remove(shopRelicPool.begin(), shopRelicPool.end(), RelicId::PRISMATIC_SHARD),
+-                shopRelicPool.end());
+-    }
++    // Exclude Prismatic Shard at the action boundary. Removing it from this
++    // shuffled pool replaces its offer and shifts every later shop relic.
+     java::Collections::shuffle(bossRelicPool.begin(), bossRelicPool.end(), java::Random(relicRng.randomLong()));
+ 
+ }
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -241,7 +241,8 @@
+             if (select > 2) {
+                 return false;
+             }
+-            return s.relicPrice(select) != -1 && gc.gold >= s.relicPrice(select);
++            return !(gc.disablePrismaticShard && s.relics[select] == RelicId::PRISMATIC_SHARD)
++                && s.relicPrice(select) != -1 && gc.gold >= s.relicPrice(select);
+ 
+         case search::GameAction::RewardsActionType::CARD_REMOVE:
+             return s.removeCost != -1 && gc.gold >= s.removeCost;
+@@ -531,7 +532,8 @@
+ 
+     for (int i = 0; i < 3; ++i) {
+         auto price = s.relicPrice(i);
+-        if (price != -1 && gc.gold >= price) {
++        if (!(gc.disablePrismaticShard && s.relics[i] == RelicId::PRISMATIC_SHARD)
++                && price != -1 && gc.gold >= price) {
+             actions.emplace_back(search::GameAction::RewardsActionType::RELIC, i);
+         }
+     }

@@ -14,6 +14,8 @@ git apply /path/to/sts-rl-agent/sim_patch/combat_rules.patch
 git apply /path/to/sts-rl-agent/sim_patch/ironclad_a20.patch
 git apply /path/to/sts-rl-agent/sim_patch/action_queue.patch
 git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
+git apply /path/to/sts-rl-agent/sim_patch/e62_rules.patch
+git apply /path/to/sts-rl-agent/sim_patch/e75_rules.patch
 ```
 
 独立的 CMake 入口构建 C++ 回归、Python 模块和整局流程驱动。需要 C++17、CMake、Python 开发环境、pybind11 与 nlohmann/json 头文件。
@@ -99,3 +101,10 @@ macOS 使用带 ASan／UBSan 的 Python 模块时，Homebrew 的普通启动器�
 `CardInstance::canUse` 在觉醒者等待复活、场上没有可攻击目标时使用了 -1 敌人下标。候选续局在 ASan／UBSan 下复现数组越界；修复在读取敌人前检查下标范围。`untargetable_card_bounds` 检查无目标时拒绝单体攻击、允许无目标防御、复活后恢复攻击合法性。加入 `heart_expansion_contract` 后，普通构建与干净补丁构建各通过 143 项 CTest。两条原故障路径合计 249 个完整候选续局通过内存检查。
 
 使用旧模块的第二轮实验已停止并作废标签；修复后的轮次重新生成自然前缀和心脏结局，保持原始种子分区。修复不构成自然心脏原版连续重放的验收结论。
+
+
+## 2026-09-19：E75 原版复验与 E76 修复
+
+E75 覆盖预先固定的全部 53 条 E67 开发胜局：21 条自然开局至心脏的状态及 RNG 匹配，26 条首次差异，6 条回放映射错误。它不提供总体原版胜率。[E75 摘要](e75-development-parity-report.json)保留全部分类。
+
+`e75_rules.patch` 修复 11 类差异，接在 `e62_rules.patch` 后；[增量清单](e75-rules-manifest.json)记录 8 个文件摘要。15 组针对性测试在旧源码上为 13 个目标失败、2 个对照通过，修复后通过 15 组，完整本地 CTest 通过 176 项。26 个自然首次差异中修复后匹配 24 个。棱彩碎片保留原版商店池与报价位置，购买候选被排除。当前剩余为诅咒变牌预览 RNG、六条回放映射和修复后的整局复验。E73 保持暂停。[E76 摘要](e76-rule-repair-report.json)给出证据范围；以上历史段落保留当时状态，不能用其测试数量认定当前全面对齐。

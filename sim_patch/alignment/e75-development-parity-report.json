@@ -1,0 +1,499 @@
+{
+  "experiment": "E75",
+  "status": "complete_with_unresolved_findings",
+  "scope": "Natural original Ironclad A20 starts, saved actions, three keys, distinct Act 3 bosses, Act 4 Shield/Spear and Heart; stable post-animation command boundaries. Prismatic Shard excluded.",
+  "universe": 53,
+  "new_runs": 49,
+  "reused": 4,
+  "counts": {
+    "rules_mismatch": 26,
+    "original_heart_trace_matched": 21,
+    "adapter_or_runtime_error": 6
+  },
+  "matched_commands": 22252,
+  "plan_sha256": "788e552c631e4dad811bd7cf0a90de8a588b5ae4b5c28864e7479a230c12d98c",
+  "completion_sha256": "1a530fbe71d61db2062c08dea16bb2d03862a0e9b09015c622ca7a004d5a7684",
+  "classification": "First-difference records, not original-game losses or a representative win-rate estimate.",
+  "rows": [
+    {
+      "seed": 1616891667,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "corruption_mummified",
+      "first_difference_floor": 40,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1633611833,
+      "status": "original_heart_trace_matched",
+      "reused": true,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1634283225,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1641038134,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "dream_catcher_ui_mapping",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1644449217,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "darkling_power_reset",
+      "first_difference_floor": 37,
+      "difference_fields": [
+        "monster_powers_and_intents"
+      ]
+    },
+    {
+      "seed": 1656951760,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "dream_catcher_ui_mapping",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1657364039,
+      "status": "original_heart_trace_matched",
+      "reused": true,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1662225003,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "darkling_retaliation_regrow",
+      "first_difference_floor": 35,
+      "difference_fields": [
+        "monster_powers_and_intents"
+      ]
+    },
+    {
+      "seed": 1682522415,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "necronomicon_play_limit",
+      "first_difference_floor": 50,
+      "difference_fields": [
+        "player",
+        "monsters",
+        "player_powers"
+      ]
+    },
+    {
+      "seed": 1684958206,
+      "status": "original_heart_trace_matched",
+      "reused": true,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1693428597,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1696889517,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "corruption_mummified",
+      "first_difference_floor": 28,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1700357896,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1706559026,
+      "status": "original_heart_trace_matched",
+      "reused": true,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1714838215,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "stasis_return_queue",
+      "first_difference_floor": 33,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1724533521,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1729117881,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "duplicate_no_draw_artifact",
+      "first_difference_floor": 19,
+      "difference_fields": [
+        "player_powers"
+      ]
+    },
+    {
+      "seed": 1737019056,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "knowing_skull_intro_mapping",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1741500819,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "time_eater_debuff_order",
+      "first_difference_floor": 50,
+      "difference_fields": [
+        "player_powers"
+      ]
+    },
+    {
+      "seed": 1742765175,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1746289500,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "curse_transform_preview_rng",
+      "first_difference_floor": 22,
+      "difference_fields": [
+        "cardRng"
+      ]
+    },
+    {
+      "seed": 1746312853,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "curse_transform_preview_rng",
+      "first_difference_floor": 37,
+      "difference_fields": [
+        "cardRng"
+      ]
+    },
+    {
+      "seed": 1747161607,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1769099207,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1773410747,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "stasis_return_queue",
+      "first_difference_floor": 33,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1783957347,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1788237312,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1795610934,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "dream_catcher_ui_mapping",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1796984357,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1808964903,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1815249264,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "infernal_blood_for_blood",
+      "first_difference_floor": 46,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1819670092,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "prismatic_shop_scope",
+      "first_difference_floor": 14,
+      "difference_fields": [
+        "shop_relic_choice"
+      ]
+    },
+    {
+      "seed": 1821415535,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "prismatic_shop_scope",
+      "first_difference_floor": 38,
+      "difference_fields": [
+        "shop_relic_choice"
+      ]
+    },
+    {
+      "seed": 1822076578,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1822426447,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "stasis_return_queue",
+      "first_difference_floor": 33,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1824944691,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "dead_adventurer_elite_relics",
+      "first_difference_floor": 12,
+      "difference_fields": [
+        "monsters"
+      ]
+    },
+    {
+      "seed": 1826525428,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "stasis_return_queue",
+      "first_difference_floor": 33,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1842848570,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "headbutt_lethal_pending_selection",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1845602907,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "prismatic_shop_scope",
+      "first_difference_floor": 45,
+      "difference_fields": [
+        "shop_relic_choice"
+      ]
+    },
+    {
+      "seed": 1853111963,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "infernal_blood_for_blood",
+      "first_difference_floor": 56,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1876762155,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "prismatic_shop_scope",
+      "first_difference_floor": 37,
+      "difference_fields": [
+        "shop_relic_choice"
+      ]
+    },
+    {
+      "seed": 1879628608,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1887714089,
+      "status": "adapter_or_runtime_error",
+      "reused": false,
+      "classification": "knowing_skull_intro_mapping",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1907854331,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "prismatic_shop_scope",
+      "first_difference_floor": 30,
+      "difference_fields": [
+        "shop_relic_choice"
+      ]
+    },
+    {
+      "seed": 1916813831,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1927008970,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "corruption_mummified",
+      "first_difference_floor": 42,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1932683113,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "stasis_return_queue",
+      "first_difference_floor": 33,
+      "difference_fields": [
+        "hand"
+      ]
+    },
+    {
+      "seed": 1943068509,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "darkling_retaliation_regrow",
+      "first_difference_floor": 36,
+      "difference_fields": [
+        "monster_powers_and_intents"
+      ]
+    },
+    {
+      "seed": 1949373739,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "autoplay_shuffle_relics",
+      "first_difference_floor": 18,
+      "difference_fields": [
+        "player"
+      ]
+    },
+    {
+      "seed": 1949439223,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1962623078,
+      "status": "rules_mismatch",
+      "reused": false,
+      "classification": "corruption_mummified",
+      "first_difference_floor": 56,
+      "difference_fields": [
+        "rng"
+      ]
+    },
+    {
+      "seed": 1986285876,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    },
+    {
+      "seed": 1990513944,
+      "status": "original_heart_trace_matched",
+      "reused": false,
+      "classification": "natural_full_trace_matched",
+      "first_difference_floor": null,
+      "difference_fields": []
+    }
+  ],
+  "learning": "E73 paused before optimizer updates. The frozen verifier template saying collection may continue is superseded by parity-halt.json and the post-run decision; the original proof remains unchanged.",
+  "next": "E76 repairs 24 first-difference cases; transform-preview RNG and six UI/replay errors require follow-up. Revalidate natural routes and recollect affected learning labels before adoption."
+}

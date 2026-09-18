@@ -1,0 +1,48 @@
+{
+  "experiment": "E76",
+  "patch_sha256": "43abf09973a270bc5b85a5b54035e422df9b865d5f5e1f9ce5f8471fb2dd6f1f",
+  "applies_after": "e62_rules.patch",
+  "files": [
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "ea1aa10e8eb048091746cbf0bf279ce5b274edc1d45bddd4711d30e8265b6a8a",
+      "after": "7ade51f90f81ea3849f557ca46ecb3c01178bb77229937080cc767f1eff2b22f"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "a28d3e61f2d00bce191a5f38ad02e14702f83542eac6ec0cd3fa5ca8aa1478cc",
+      "after": "898a4f40dfacb82595dbdcb849cfa652e84255c4ecc0597b129ca3102195cfda"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "6f371f2ef165c0b568f949232770bdbf5aad7f591c48ec70983b4246f11cb552",
+      "after": "511982d24dce2249c3cb52cd127ca5b0ad7574a4cb595acf86abd026943ca0fe"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "f86fe550151eee2377ac2b1caa62bbab9d6177f62cf0e2bc1d79fa980e978e52",
+      "after": "e98de8ae1efe0f3fbbcc083125792483bb51d37b412fb02a49c4f11dc6adfa07"
+    },
+    {
+      "path": "src/combat/Monster.cpp",
+      "before": "b51ddca08b5fa11e729a1681660faedd389d90f414b573f835bbde6021e294a4",
+      "after": "68b9ab138f97b3dd7751c5c8d0cd51666d0a7f4850cf4b8fe270ea3fb942cc84"
+    },
+    {
+      "path": "src/combat/MonsterSpecific.cpp",
+      "before": "89b306e0d3d7ea9da27761be90a9c1c5e5a86c1b54df256c2e350a7887c40552",
+      "after": "d4b681785043a190aa9259ae062928de580a2bb3477358ecfbf9e05a06be4e6b"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "5c240fd86604b0dc56c898ef8a05b56fbe224369f75a72cfb9fb96ce8108baee",
+      "after": "4c3bddb41fc47b23cc0e74223c7bf151c301fc1c113c025026c4bc48eca4bf3d"
+    },
+    {
+      "path": "src/sim/search/GameAction.cpp",
+      "before": "159f02c48b51f58ff3d22f433b69049c1e9a471e3f4982fb171e63cf97678749",
+      "after": "b9945bfebcc0e39109ca2dd7412108803fe65ede4d288f3a5ed9e8f3d3ed5d80"
+    }
+  ],
+  "scope": "Eleven confirmed E75 rule classes; transform preview RNG and six original UI adapter errors remain unresolved; no repaired full-run rate"
+}
