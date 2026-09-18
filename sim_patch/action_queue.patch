@@ -1,0 +1,261 @@
+--- a/include/combat/ActionQueue.h
++++ b/include/combat/ActionQueue.h
+@@ -1,127 +1,125 @@
+-//
+-// Created by gamerpuppy on 7/4/2021.
+-//
+-
+ #ifndef STS_LIGHTSPEED_ACTIONQUEUE_H
+ #define STS_LIGHTSPEED_ACTIONQUEUE_H
+ 
+ #include "sts_common.h"
+-
++#include <array>
+ #include <bitset>
++#include <cassert>
+ #include <functional>
+-#include <cassert>
+-
++#include <limits>
++#include <stdexcept>
++#include <vector>
+ 
+ namespace sts {
+ 
+     class BattleContext;
+-    typedef std::function<void (BattleContext &)> ActionFunction;
++    using ActionFunction = std::function<void(BattleContext &)>;
+ 
+     struct Action {
+         ActionFunction actFunc;
+         bool clearOnCombatVictory = true;
+-
+         Action() = default;
+         Action(ActionFunction a) : actFunc(std::move(a)) {}
+-        Action(ActionFunction a, bool b) : actFunc(std::move(a)), clearOnCombatVictory(b) {}
++        Action(ActionFunction a, bool clear) : actFunc(std::move(a)), clearOnCombatVictory(clear) {}
+     };
+ 
+-
+-    // Simple deque
+-    template<int capacity>
++    // Keep ordinary queues inline, but do not impose a game-rule limit on
++    // deferred actions (for example, a late Book of Stabbing multi-attack).
++    template<int inlineCapacity>
+     struct ActionQueue {
+-        friend BattleContext;
++        static_assert(inlineCapacity > 0);
+         int front = 0;
+         int back = 0;
+         int size = 0;
+-        std::bitset<capacity> bits; // for the shouldClear field
+ 
+-#ifdef sts_action_queue_use_raw_array
+-        ActionFunction arr[capacity];
+-        ActionQueue() = default;
+-        ActionQueue(const ActionQueue &rhs) : size(rhs.size), back(rhs.back), front(rhs.front), bits(rhs.bits) {
+-            int cur = rhs.front;
+-            for (int i = 0; i < rhs.size; ++i) {
+-                if (cur >= capacity) {
+-                    cur = 0;
++        void clear() {
++            size = front = back = 0;
++        }
++
++        void pushFront(Action action) {
++            ensureRoom();
++            if (--front < 0) front = getCapacity() - 1;
++            store(front, std::move(action));
++            ++size;
++        }
++
++        void pushBack(Action action) {
++            ensureRoom();
++            if (back == getCapacity()) back = 0;
++            store(back, std::move(action));
++            ++back;
++            ++size;
++        }
++
++        [[nodiscard]] bool isEmpty() const { return size == 0; }
++
++        ActionFunction popFront() {
++            assert(size > 0);
++            // Return a separate callable: it may mutate or grow this queue.
++            ActionFunction action = functionAt(front);
++            if (++front == getCapacity()) front = 0;
++            --size;
++            return action;
++        }
++
++        [[nodiscard]] int getCapacity() const {
++            return expanded.empty() ? inlineCapacity : static_cast<int>(expanded.size());
++        }
++
++        void clearCombatActions() {
++            const int oldSize = size;
++            int read = front, write = front, retained = 0;
++            for (int i = 0; i < oldSize; ++i) {
++                if (!clearAt(read)) {
++                    if (write != read) store(write, Action(std::move(functionAt(read)), false));
++                    if (++write == getCapacity()) write = 0;
++                    ++retained;
+                 }
+-                arr[cur] = rhs.arr[cur];
++                if (++read == getCapacity()) read = 0;
++            }
++            size = retained;
++            // A later append must follow the compacted survivors, including
++            // when the circular queue crossed its storage boundary.
++            back = write;
++        }
++
++    private:
++        std::array<ActionFunction, inlineCapacity> actions;
++        std::bitset<inlineCapacity> clearFlags;
++        std::vector<Action> expanded;
++
++        ActionFunction &functionAt(int index) {
++            return expanded.empty() ? actions[index] : expanded[index].actFunc;
++        }
++
++        [[nodiscard]] bool clearAt(int index) const {
++            return expanded.empty() ? clearFlags[index] : expanded[index].clearOnCombatVictory;
++        }
++
++        void store(int index, Action action) {
++            if (expanded.empty()) {
++                actions[index] = std::move(action.actFunc);
++                clearFlags.set(index, action.clearOnCombatVictory);
++            } else {
++                expanded[index] = std::move(action);
+             }
+         }
+-#else
+-        std::array<ActionFunction,capacity> arr;
++
++        void ensureRoom() {
++            const int oldCapacity = getCapacity();
++            if (size < oldCapacity) return;
++            if (oldCapacity > std::numeric_limits<int>::max() / 2)
++                throw std::length_error("action queue storage exhausted");
++            std::vector<Action> grown(static_cast<std::size_t>(oldCapacity) * 2);
++            int source = front;
++            for (int i = 0; i < size; ++i) {
++                grown[i] = Action(std::move(functionAt(source)), clearAt(source));
++                if (++source == oldCapacity) source = 0;
++            }
++            expanded = std::move(grown);
++            front = 0;
++            back = size;
++        }
++    };
++}
+ #endif
+-
+-        void clear();
+-        void pushFront(Action a);
+-        void pushBack(Action a);
+-        bool isEmpty();
+-        ActionFunction popFront();
+-        [[nodiscard]] int getCapacity() const;
+-    };
+-
+-    template<int capacity>
+-    void ActionQueue<capacity>::clear() {
+-        size = 0;
+-        back = 0;
+-        front = 0;
+-    }
+-
+-    template <int capacity>
+-    void ActionQueue<capacity>::pushFront(Action a) {
+-#ifdef sts_asserts
+-        assert(size != capacity);
+-#endif
+-        --front;
+-        ++size;
+-        if (front < 0) {
+-            front = capacity-1;
+-        }
+-        bits.set(front, a.clearOnCombatVictory);
+-        arr[front] = std::move(a.actFunc);
+-    }
+-
+-    template<int capacity>
+-    void ActionQueue<capacity>::pushBack(Action a) {
+-#ifdef sts_asserts
+-        if (size >= capacity) {
+-            assert(false);
+-        }
+-#endif
+-        if (back >= capacity) {
+-            back = 0;
+-        }
+-        bits.set(back, a.clearOnCombatVictory);
+-        arr[back] = std::move(a.actFunc);
+-        ++back;
+-        ++size;
+-    }
+-
+-    template<int capacity>
+-    bool ActionQueue<capacity>::isEmpty() {
+-        return size == 0;
+-    }
+-
+-    template<int capacity>
+-    ActionFunction ActionQueue<capacity>::popFront() {
+-#ifdef sts_asserts
+-        assert(size > 0 );
+-#endif
+-        ActionFunction a = arr[front];
+-        ++front;
+-        --size;
+-        if (front >= capacity) {
+-            front = 0;
+-        }
+-        return a;
+-    }
+-
+-    template<int capacity>
+-    int ActionQueue<capacity>::getCapacity() const {
+-        return capacity;
+-    }
+-
+-}
+-
+-
+-#endif //STS_LIGHTSPEED_ACTIONQUEUE_H
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -697,29 +697,7 @@
+     cleanCardQueue(); // this is actually done when monsters are damaged but we can do here?
+ //    actionQueue.clearOnCombatVictory();
+ 
+-    int curIdx = actionQueue.front;
+-    int placeIdx = actionQueue.front;
+-
+-    int oldsize = actionQueue.size;
+-    for (int i = 0; i < oldsize; ++i) {
+-        if (curIdx >= actionQueue.getCapacity()) {
+-            curIdx = 0;
+-        }
+-        const bool shouldClear = actionQueue.bits[curIdx];
+-
+-        if (shouldClear) {
+-            --actionQueue.size;
+-        } else {
+-            if (placeIdx >= actionQueue.getCapacity()) {
+-                placeIdx = 0;
+-            }
+-
+-            actionQueue.arr[placeIdx] = actionQueue.arr[curIdx];
+-            actionQueue.bits[placeIdx] = actionQueue.bits[curIdx];
+-            ++placeIdx;
+-        }
+-        ++curIdx;
+-    }
++    actionQueue.clearCombatActions();
+ }
+ 
+ void BattleContext::cleanCardQueue() {

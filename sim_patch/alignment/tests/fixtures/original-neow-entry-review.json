@@ -1,0 +1,2490 @@
+[
+  {
+    "kind": "neow",
+    "name": "3",
+    "seed": 0,
+    "option": 2,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 349,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 0,
+      "neow_rng": 5
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "2",
+    "seed": 3,
+    "option": 2,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 349,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 0,
+      "neow_rng": 5
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "0",
+    "seed": 5,
+    "option": 1,
+    "expected": {
+      "hp": 75,
+      "max_hp": 82,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 0,
+      "neow_rng": 5
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "4",
+    "seed": 16,
+    "option": 2,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Clothesline",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Uppercut",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 0,
+      "neow_rng": 7
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "1",
+    "seed": 39,
+    "option": 2,
+    "expected": {
+      "hp": 82,
+      "max_hp": 89,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 0,
+      "neow_rng": 5
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "5",
+    "seed": 46,
+    "option": 2,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "Armaments",
+          "upgrades": 0
+        },
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Limit Break",
+          "upgrades": 0
+        },
+        {
+          "id": "Shame",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "card_rng": 1,
+      "neow_rng": 7
+    },
+    "source": "original-review-neow-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "battle",
+    "name": "panto_event",
+    "expected": {
+      "hp": 65,
+      "max_hp": 80,
+      "strength": 0,
+      "artifact": 0,
+      "lose_strength": 0
+    },
+    "source": "original-review-battle02-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "battle",
+    "name": "panto_boss",
+    "expected": {
+      "hp": 65,
+      "max_hp": 80,
+      "strength": 0,
+      "artifact": 0,
+      "lose_strength": 0
+    },
+    "source": "original-review-battle02-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "battle",
+    "name": "panto_hallway",
+    "expected": {
+      "hp": 40,
+      "max_hp": 80,
+      "strength": 0,
+      "artifact": 0,
+      "lose_strength": 0
+    },
+    "source": "original-review-battle02-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "battle",
+    "name": "mutagen_clock",
+    "expected": {
+      "hp": 40,
+      "max_hp": 80,
+      "strength": 3,
+      "artifact": 0,
+      "lose_strength": 0
+    },
+    "source": "original-review-battle02-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "battle",
+    "name": "clock_mutagen",
+    "expected": {
+      "hp": 40,
+      "max_hp": 80,
+      "strength": 3,
+      "artifact": 1,
+      "lose_strength": 3
+    },
+    "source": "original-review-battle02-b7kph3b8/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:0",
+    "seed": 0,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:1",
+    "seed": 0,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 349,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:2",
+    "seed": 1,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Panacea",
+            "upgrades": 0
+          },
+          {
+            "id": "Dramatic Entrance",
+            "upgrades": 0
+          },
+          {
+            "id": "Flash of Steel",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 8,
+      "card_rng": 3
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:3",
+    "seed": 1,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Mayhem",
+            "upgrades": 0
+          },
+          {
+            "id": "Secret Weapon",
+            "upgrades": 0
+          },
+          {
+            "id": "Transmutation",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 8,
+      "card_rng": 3
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:4",
+    "seed": 2,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Demon Form",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 6,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:5",
+    "seed": 2,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 82,
+      "max_hp": 89,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Clumsy",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 1
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:6",
+    "seed": 3,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Seeing Red",
+            "upgrades": 0
+          },
+          {
+            "id": "Clothesline",
+            "upgrades": 0
+          },
+          {
+            "id": "Blood for Blood",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 11,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:7",
+    "seed": 3,
+    "option": 1,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 199,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:8",
+    "seed": 3,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 349,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:9",
+    "seed": 4,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:10",
+    "seed": 4,
+    "option": 1,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:11",
+    "seed": 4,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:12",
+    "seed": 5,
+    "option": 1,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 75,
+      "max_hp": 82,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:13",
+    "seed": 6,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 64,
+      "max_hp": 89,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:14",
+    "seed": 8,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Limit Break",
+            "upgrades": 0
+          },
+          {
+            "id": "Impervious",
+            "upgrades": 0
+          },
+          {
+            "id": "Feed",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 11,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:15",
+    "seed": 9,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Magnetism",
+            "upgrades": 0
+          },
+          {
+            "id": "Secret Weapon",
+            "upgrades": 0
+          },
+          {
+            "id": "Thinking Ahead",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 8,
+      "card_rng": 3
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:16",
+    "seed": 10,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Exhume",
+            "upgrades": 0
+          },
+          {
+            "id": "Brutality",
+            "upgrades": 0
+          },
+          {
+            "id": "Immolate",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 11,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:17",
+    "seed": 11,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Clumsy",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Limit Break",
+            "upgrades": 0
+          },
+          {
+            "id": "Reaper",
+            "upgrades": 0
+          },
+          {
+            "id": "Juggernaut",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 11,
+      "card_rng": 1
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:18",
+    "seed": 12,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Writhe",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Magnetism",
+            "upgrades": 0
+          },
+          {
+            "id": "Chrysalis",
+            "upgrades": 0
+          },
+          {
+            "id": "HandOfGreed",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 8,
+      "card_rng": 4
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:19",
+    "seed": 14,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Double Tap",
+            "upgrades": 0
+          },
+          {
+            "id": "Feed",
+            "upgrades": 0
+          },
+          {
+            "id": "Offering",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 11,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:20",
+    "seed": 15,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:21",
+    "seed": 16,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:22",
+    "seed": 17,
+    "option": 0,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:23",
+    "seed": 20,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:24",
+    "seed": 21,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:25",
+    "seed": 22,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 50,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [
+        [
+          {
+            "id": "Secret Weapon",
+            "upgrades": 0
+          },
+          {
+            "id": "Violence",
+            "upgrades": 0
+          },
+          {
+            "id": "Sadistic Nature",
+            "upgrades": 0
+          }
+        ]
+      ],
+      "neow_rng": 8,
+      "card_rng": 3
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:26",
+    "seed": 36,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 349,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Writhe",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 1
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:27",
+    "seed": 39,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 82,
+      "max_hp": 89,
+      "gold": 0,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:28",
+    "seed": 46,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 75,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Shame",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 1
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  },
+  {
+    "kind": "neow",
+    "name": "expanded:29",
+    "seed": 51,
+    "option": 2,
+    "snapshot_only": true,
+    "capture_offers": true,
+    "expected": {
+      "hp": 68,
+      "max_hp": 68,
+      "gold": 99,
+      "deck": [
+        {
+          "id": "AscendersBane",
+          "upgrades": 0
+        },
+        {
+          "id": "Bash",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Defend_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        },
+        {
+          "id": "Strike_R",
+          "upgrades": 0
+        }
+      ],
+      "offers": [],
+      "neow_rng": 5,
+      "card_rng": 0
+    },
+    "source": "original-review-neow-scan-01/rpc.jsonl"
+  }
+]

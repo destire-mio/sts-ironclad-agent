@@ -15,7 +15,7 @@ sys.path.insert(0, str(SIM))
 
 import slaythespire as sts  # noqa: E402
 
-CARD_ALIASES = {"Strike_R": "STRIKE_RED", "Defend_R": "DEFEND_RED"}
+CARD_ALIASES = {"Strike_R": "STRIKE_RED", "Defend_R": "DEFEND_RED", "Ghostly": "APPARITION"}
 MONSTER_ALIASES = {
     "FuzzyLouseNormal": "RED_LOUSE",
     "FuzzyLouseDefensive": "GREEN_LOUSE",
@@ -60,7 +60,7 @@ PLAYER_POWER_ALIASES = {
     "Hello": "HELLO_WORLD",
 }
 MONSTER_POWER_ALIASES = {
-    "Anger": "ANGRY",
+    "Anger": "ENRAGE",
     "BeatOfDeath": "BEAT_OF_DEATH",
     "BlockReturnPower": "BLOCK_RETURN",
     "Compulsive": "REACTIVE",
@@ -72,19 +72,7 @@ MONSTER_POWER_ALIASES = {
     "Regenerate": "REGEN",
     "Weakened": "WEAK",
 }
-# MonsterStatusEffects.h has a stale enum-name array for these bool/secondary slots.
-# Use the actual enum ordinals so snapshot restoration cannot silently select a neighbor.
-MONSTER_POWER_IDS = {
-    "REACTIVE": 32,
-    "SHARP_HIDE": 33,
-    "ASLEEP": 34,
-    "BARRICADE": 35,
-    "MINION": 36,
-    "MINION_LEADER": 37,
-    "PAINFUL_STABS": 38,
-    "REGROW": 39,
-}
-IGNORED_MONSTER_POWERS = {"Split", "Explosive", "Unawakened"}  # Rebuilt from monster HP/moves.
+IGNORED_MONSTER_POWERS = {"Split", "Explosive", "Unawakened", "BackAttack"}  # BackAttack is derived from exported facing, not its stale UI marker.
 POTION_ALIASES = {"Potion Slot": "EMPTY_POTION_SLOT"}
 SMOKE_BOMB_ID = sts.potion_id_from_name("SMOKE_BOMB")
 BOSS_ENCOUNTERS = {
@@ -92,6 +80,7 @@ BOSS_ENCOUNTERS = {
     "BRONZE_AUTOMATON": "AUTOMATON", "THE_COLLECTOR": "COLLECTOR", "THE_CHAMP": "CHAMP",
     "AWAKENED_ONE": "AWAKENED_ONE", "TIME_EATER": "TIME_EATER",
     "DONU": "DONU_AND_DECA", "DECA": "DONU_AND_DECA",
+    "CORRUPT_HEART": "THE_HEART",
 }
 BOSS_ENCOUNTER_IDS = {int(getattr(sts.MonsterEncounter, name))
                       for name in set(BOSS_ENCOUNTERS.values())}
@@ -308,33 +297,52 @@ def enum_key(value):
 def card_snapshot(card):
     identifier = card.get("id") or card.get("name") or ""
     key = CARD_ALIASES.get(identifier, enum_key(identifier))
-    return {"id": sts.card_id_from_name(key),
+    result = {"id": sts.card_id_from_name(key),
             "upgrades": int(card.get("upgrades") or 0),
             "cost": int(card.get("cost") if card.get("cost") is not None else 0),
             "misc": int(card.get("misc") or 0)}
+    for field in ("base_cost", "free_to_play_once"):
+        if field in card:
+            result[field] = card[field]
+    if key == "RAMPAGE" and "base_damage" in card:
+        result["misc"] = int(card["base_damage"]) - 8
+    if key == "RITUAL_DAGGER" and "base_damage" in card:
+        result["misc"] = int(card["base_damage"])
+    return result
 
 
 def power_snapshot(power, owner):
     helper = sts.player_status_id_from_name if owner == "player" else sts.monster_status_id_from_name
     identifier = power.get("id") or power.get("name")
     if owner == "player" and str(identifier).startswith("TheBomb"):
-        description = str(power.get("description") or "")
-        return {"id": helper("THE_BOMB"), "amount": 50 if re.search(r"\b50\b", description) else 40,
+        if "damage" not in power:
+            raise ValueError("The Bomb snapshot is missing its damage field")
+        return {"id": helper("THE_BOMB"), "amount": int(power["damage"]),
                 "bomb_turns": max(1, min(3, int(power.get("amount") or 1))), "just_applied": False}
+    if owner == "player" and identifier == "Panache":
+        if "damage" not in power:
+            raise ValueError("Panache snapshot is missing its damage field")
+        return {"id": helper("PANACHE"), "amount": int(power["damage"]),
+                "counter": int(power["amount"]), "just_applied": False}
+    if owner == "monster" and identifier == "Compulsive":
+        return {"id": helper("REACTIVE"), "amount": 0, "just_applied": False}
     if owner == "monster" and identifier == "Stasis":
-        raise ValueError("unsupported stateful monster power: Stasis card identity unavailable")
+        if not power.get("card"): raise ValueError("Stasis snapshot requires its captured card")
+        return {"id": helper("STASIS"), "amount": 1, "card": card_snapshot(power["card"]), "just_applied": False}
     if owner == "player":
         identifier = PLAYER_POWER_ALIASES.get(identifier, identifier)
         power_id = helper(identifier)
     else:
         identifier = MONSTER_POWER_ALIASES.get(identifier, identifier)
-        power_id = MONSTER_POWER_IDS.get(identifier)
-        if power_id is None:
-            power_id = helper(identifier)
+        power_id = helper(identifier)
     amount = power.get("amount")
-    return {"id": power_id,
-            "amount": int(amount if amount is not None and amount >= 0 else 1),
+    signed_amount = identifier in {"Strength", "Dexterity", "Focus", "STRENGTH", "DEXTERITY", "FOCUS"}
+    result = {"id": power_id,
+            "amount": int(amount if amount is not None and (amount >= 0 or signed_amount) else 1),
             "just_applied": bool(power.get("just_applied", False))}
+    if "misc" in power:
+        result["misc"] = int(power["misc"])
+    return result
 
 
 def monster_key(monster):
@@ -354,13 +362,46 @@ def move_id(monster, raw_key="move_id"):
 
 
 def rng_snapshot(rng):
-    return {"seed0": int(rng["seed0"]), "seed1": int(rng["seed1"]),
+    # Java serializes signed long values; the simulator stores the same bits
+    # as uint64_t. Preserve the bit pattern across both representations.
+    return {"seed0": int(rng["seed0"]) & ((1 << 64) - 1),
+            "seed1": int(rng["seed1"]) & ((1 << 64) - 1),
             "counter": int(rng.get("counter") or 0)}
 
 
 def monster_snapshot(monster):
     powers = monster.get("powers") or []
     key = monster_key(monster)
+    internal = monster.get("internal") or {}
+    misc = 0
+    if key in {"RED_LOUSE", "GREEN_LOUSE"}:
+        misc = internal.get("biteDamage", monster.get("move_base_damage") if monster.get("move_id")==3 else None)
+        if misc is None: raise ValueError("Louse snapshot requires biteDamage")
+    elif key == "DARKLING":
+        misc = internal.get("nipDmg")
+        if misc is None: raise ValueError("Darkling snapshot requires nipDmg")
+    elif key == "BOOK_OF_STABBING":
+        misc = internal.get("stabCount", monster.get("move_hits") if monster.get("move_id")==1 else None)
+        if misc is None: raise ValueError("Book of Stabbing snapshot requires stabCount")
+    elif key == "HEXAGHOST":
+        misc = monster.get("move_base_damage", 0) if monster.get("move_id")==1 else 0
+    elif key == "GREMLIN_WIZARD": misc = internal.get("currentCharge", 1)
+    elif key == "LAGAVULIN": misc = internal.get("idleCount", 0)
+    elif key == "RED_SLAVER": misc = int(internal.get("usedEntangle", False))
+    elif key == "THE_CHAMP": misc = int(internal.get("forgeTimes", 0)) | (4 if internal.get("thresholdReached") else 0)
+    elif key == "BRONZE_AUTOMATON": misc = int(internal.get("numTurns", 0))
+    elif key == "THE_GUARDIAN":
+        if "dmgThreshold" not in internal: raise ValueError("Guardian snapshot requires dmgThreshold and isOpen")
+        misc = int(internal["dmgThreshold"]) - (0 if internal.get("isOpen", True) else 10)
+    elif key == "SPIKER": misc = internal.get("thornsCount", 0)
+    elif key == "WRITHING_MASS": misc = int(internal.get("usedMegaDebuff", False))
+    elif key in {"LOOTER", "MUGGER"}: misc = internal.get("stolenGold", 0)
+    elif key == "BRONZE_ORB": misc = int(internal.get("usedStasis", monster.get("move_id")==3 or any(p.get("id")=="Stasis" for p in powers)))
+    elif key == "TIME_EATER": misc = int(internal.get("usedHaste", False))
+    elif key == "AWAKENED_ONE": misc = 0 if monster.get("half_dead") or any(p.get("id")=="Unawakened" for p in powers) else 1
+    mapped = [power_snapshot(power, "monster") for power in powers if (power.get("id") or power.get("name")) not in IGNORED_MONSTER_POWERS]
+    if key == "LAGAVULIN" and (monster.get("move_id") in {5,6} and internal.get("asleep", True)):
+        mapped.append({"id":sts.monster_status_id_from_name("ASLEEP"),"amount":1,"just_applied":False})
     return {
         "id": sts.monster_id_from_name(key),
         "current_hp": int(monster.get("current_hp") or 0),
@@ -370,10 +411,9 @@ def monster_snapshot(monster):
         "is_gone": bool(monster.get("is_gone", False)),
         "move": move_id(monster),
         "last_move": move_id(monster, "last_move_id"),
-        "misc_info": (0 if any((power.get("id") or power.get("name")) == "Unawakened"
-                               for power in powers) else 1) if key == "AWAKENED_ONE" else 0,
-        "powers": [power_snapshot(power, "monster") for power in powers
-                   if (power.get("id") or power.get("name")) not in IGNORED_MONSTER_POWERS],
+        "misc_info": int(misc),
+        **({"unique_power0": int(internal.get("orbActiveCount", 0))} if key=="HEXAGHOST" else {}),
+        "powers": mapped,
     }
 
 
@@ -384,40 +424,71 @@ def dead_monster(name, move):
             "last_move": sts.monster_move_id_from_name("INVALID"), "powers": []}
 
 
-def canonical_monsters(monsters):
+def canonical_monsters(monsters, convert=monster_snapshot):
     indexed = [(index, monster) for index, monster in enumerate(monsters)
                if not monster.get("is_gone")]
-    collector = next(((index, monster) for index, monster in indexed
-                      if monster_key(monster) == "THE_COLLECTOR"), None)
+    reptomancer = next(((index, m) for index, m in indexed if monster_key(m)=="REPTOMANCER"), None)
+    if reptomancer:
+        snapshots = [dead_monster("DAGGER", "DAGGER_STAB") for _ in range(5)];target_map=[-1]*5
+        snapshots[2]=convert(reptomancer[1]);target_map[2]=reptomancer[0]
+        for index, m in indexed:
+            if monster_key(m)!="DAGGER":continue
+            slot=m.get("dagger_slot")
+            if slot not in range(4):raise ValueError("Reptomancer snapshot requires dagger_slot")
+            dest=[4,1,3,0][slot];snapshots[dest]=convert(m);target_map[dest]=index
+        return snapshots,target_map
+
+    automaton = next(((index, m) for index, m in indexed if monster_key(m)=="BRONZE_AUTOMATON"), None)
+    if automaton:
+        snapshots = [dead_monster("BRONZE_ORB", "BRONZE_ORB_BEAM") for _ in range(3)];target_map=[-1]*3
+        snapshots[1]=convert(automaton[1]);target_map[1]=automaton[0]
+        for index, m in indexed:
+            if monster_key(m)!="BRONZE_ORB":continue
+            dest=0 if index<automaton[0] else 2
+            snapshots[dest]=convert(m);target_map[dest]=index
+        return snapshots,target_map
+
+    collector = next(((index, m) for index, m in indexed if monster_key(m)=="THE_COLLECTOR"), None)
     if collector:
-        torches = [(index, monster) for index, monster in indexed
-                   if monster_key(monster) == "TORCH_HEAD"][:2]
-        snapshots = [monster_snapshot(monster) for _, monster in torches]
-        target_map = [index for index, _ in torches]
-        while len(snapshots) < 2:
-            snapshots.append(dead_monster("TORCH_HEAD", "TORCH_HEAD_TACKLE"))
-            target_map.append(-1)
-        snapshots.append(monster_snapshot(collector[1])); target_map.append(collector[0])
-        return snapshots, target_map
+        snapshots=[dead_monster("TORCH_HEAD","TORCH_HEAD_TACKLE") for _ in range(3)];target_map=[-1]*3
+        snapshots[2]=convert(collector[1]);target_map[2]=collector[0]
+        torches=[(index,m) for index,m in enumerate(monsters) if monster_key(m)=="TORCH_HEAD"]
+        for index,m in torches:
+            if m.get("is_gone"):continue
+            slot=m.get("torch_slot")
+            if slot is None:
+                if len(torches)!=2:raise ValueError("Collector snapshot requires torch_slot after summons")
+                dest=torches.index((index,m))
+            else:dest=2-int(slot)
+            if dest not in range(2):raise ValueError("invalid torch_slot")
+            if not m.get("is_gone"):snapshots[dest]=convert(m);target_map[dest]=index
+        return snapshots,target_map
 
-    leader = next(((index, monster) for index, monster in indexed
-                   if monster_key(monster) == "GREMLIN_LEADER"), None)
+    leader = next(((index, m) for index, m in indexed if monster_key(m)=="GREMLIN_LEADER"), None)
     if leader:
-        minions = [(index, monster) for index, monster in indexed
-                   if monster_key(monster) != "GREMLIN_LEADER"][:3]
-        snapshots = [monster_snapshot(monster) for _, monster in minions]
-        target_map = [index for index, _ in minions]
-        while len(snapshots) < 3:
-            snapshots.append(dead_monster("MAD_GREMLIN", "MAD_GREMLIN_SCRATCH"))
-            target_map.append(-1)
-        snapshots.append(monster_snapshot(leader[1])); target_map.append(leader[0])
-        return snapshots, target_map
+        snapshots=[dead_monster("MAD_GREMLIN","MAD_GREMLIN_SCRATCH") for _ in range(4)];target_map=[-1]*4
+        snapshots[3]=convert(leader[1]);target_map[3]=leader[0]
+        minions=[(index,m) for index,m in enumerate(monsters) if monster_key(m)!="GREMLIN_LEADER"]
+        for index,m in minions:
+            if m.get("is_gone"):continue
+            slot=m.get("gremlin_slot")
+            if slot is None:
+                if len(minions)!=2:raise ValueError("Gremlin Leader snapshot requires gremlin_slot after summons")
+                dest=minions.index((index,m))+1
+            else:
+                if slot not in range(3):raise ValueError("invalid gremlin_slot")
+                dest=[1,2,0][slot]
+            snapshots[dest]=convert(m);target_map[dest]=index
+        return snapshots,target_map
 
-    return ([monster_snapshot(monster) for _, monster in indexed],
-            [index for index, _ in indexed])
+    # Static encounters retain dead positions: action targets and Darkling AI
+    # depend on physical monster slots, even after a neighbour dies.
+    return ([convert(monster) for monster in monsters], list(range(len(monsters))))
 
 
 def encounter_id(monsters):
+    if any(monster_key(m) in {"SPIRE_SHIELD", "SPIRE_SPEAR"} for m in monsters):
+        return int(sts.MonsterEncounter.SHIELD_AND_SPEAR)
     for monster in monsters:
         encounter = BOSS_ENCOUNTERS.get(monster_key(monster))
         if encounter:
@@ -439,17 +510,20 @@ def build_snapshot(game_state, counters=None):
         "ascension": int(game_state.get("ascension_level") or 0),
         "encounter": encounter_id(combat.get("monsters") or []),
         "turn": int(combat.get("turn") or 1),
-        "cards_played_this_turn": int(counters.get("cards", 0)),
-        "attacks_played_this_turn": int(counters.get("attacks", 0)),
-        "skills_played_this_turn": int(counters.get("skills", 0)),
+        "frame_delta_seconds": float(combat.get("frame_delta_seconds", 1.0/60.0)),
+        "cards_played_this_turn": int(combat.get("cards_played_this_turn", counters.get("cards", 0))),
+        "attacks_played_this_turn": int(combat.get("attacks_played_this_turn", counters.get("attacks", 0))),
+        "skills_played_this_turn": int(combat.get("skills_played_this_turn", counters.get("skills", 0))),
         "cards_discarded_this_turn": int(combat.get("cards_discarded_this_turn") or 0),
         "times_damaged": int(combat.get("times_damaged") or 0),
         "player": {
+            "gold": int(game_state.get("gold") or 0),
             "current_hp": int(player.get("current_hp") or 0),
             "max_hp": int(player.get("max_hp") or game_state.get("max_hp") or 0),
             "block": int(player.get("block") or 0),
             "energy": int(player.get("energy") or 0),
             "energy_per_turn": int(combat.get("energy_per_turn") or 3) + berserk_energy,
+            "card_draw_per_turn": int(combat.get("card_draw_per_turn", 5 - int(any(p.get("id")=="Draw Reduction" for p in player_powers)))) ,
             "powers": [power_snapshot(power, "player") for power in player_powers
                        if (power.get("id") or power.get("name")) != "Berserk"],
         },
@@ -466,8 +540,20 @@ def build_snapshot(game_state, counters=None):
             potion.get("id") or potion.get("name"), potion.get("id") or potion.get("name")))
             for potion in game_state.get("potions") or []],
     }
+    relic_state = dict(combat.get("relic_combat_state") or {})
+    for identifier, field in [("Necronomicon", "necronomicon_used"), ("OrangePellets", "orange_pellets_mask")]:
+        if any(r.get("id")==identifier for r in game_state.get("relics") or []):
+            if field not in relic_state and combat.get("cards_played_this_turn", 0):
+                raise ValueError(f"{identifier} snapshot requires {field} after cards were played")
+    snapshot["player"]["necronomicon_used"] = bool(relic_state.get("necronomicon_used", False))
+    snapshot["player"]["orange_pellets_mask"] = int(relic_state.get("orange_pellets_mask", 0))
     if combat.get("rngs"):
         snapshot["rngs"] = {name: rng_snapshot(rng) for name, rng in combat["rngs"].items()}
+    if any(p.get("id") == "Surrounded" for p in player_powers):
+        facing = combat.get("facing_monster_index")
+        if facing not in target_map:
+            raise ValueError("Surrounded snapshot requires facing_monster_index from SteamStateExport")
+        snapshot["player"]["last_targeted_monster"] = target_map.index(facing)
     return snapshot
 
 
@@ -576,12 +662,23 @@ def self_test():
     assert (battle.player.cur_hp, battle.player.energy, len(battle.hand), len(battle.draw_pile)) == (80, 3, 3, 1)
     assert battle.monsters[0].name == "JAW_WORM" and battle.monsters[0].intent == "JAW_WORM_CHOMP"
     assert dict(battle.snapshot_counters)["happy_flower"] == 2
+    # Original counter -2 is a consumed tail, including snapshots imported
+    # after a previous battle; it must not regain its resurrection effect.
+    from copy import deepcopy
+    for tail_counter, expected_hp in [(-1, 40), (-2, 0)]:
+        tail_state = deepcopy(game_state)
+        tail_state["relics"] = [{"id": "Lizard Tail", "counter": tail_counter}]
+        tail_state["combat_state"]["player"]["current_hp"] = 1
+        tail_state["combat_state"]["hand"] = [card("Offering", 0)]
+        tail_battle = sts.BattleContext.from_snapshot(build_snapshot(tail_state), 99)
+        sts.SearchAction(sts.SearchActionType.CARD, 0, 0).execute(tail_battle)
+        assert tail_battle.player.cur_hp == expected_hp
     legal = sts.get_legal_actions(battle)
     assert legal and all(action.is_valid(battle) for action in legal)
     result = recommend(game_state, simulations=100, determinizations=2)
     assert result["command"].startswith(("PLAY ", "END"))
     game_state["combat_state"]["player"]["powers"] = [
-        {"id": "TheBomb0", "amount": 2, "description": "Deal 40 damage."}]
+        {"id": "TheBomb0", "amount": 2, "damage": 40}]
     bomb_snapshot = build_snapshot(game_state)
     assert bomb_snapshot["player"]["powers"][0]["bomb_turns"] == 2
     bomb_battle = sts.BattleContext.from_snapshot(bomb_snapshot, 100)
@@ -616,6 +713,23 @@ def self_test():
                                  "move_id": 1, "last_move_id": -1,
                                  "powers": [{"id": "Unawakened", "amount": -1}]})
     assert awakened["misc_info"] == 0 and awakened["powers"] == []
+    minions = [
+        {"id":"GremlinWarrior", "current_hp":0, "max_hp":22, "move_id":1, "is_gone":True, "gremlin_slot":0},
+        {"id":"GremlinThief", "current_hp":13, "max_hp":13, "move_id":1, "gremlin_slot":1},
+        {"id":"GremlinLeader", "current_hp":150, "max_hp":150, "move_id":2}]
+    _, targets = canonical_monsters(minions)
+    assert targets == [-1, -1, 1, 2]
+    game_state["combat_state"]["player"]["powers"] = []
+    game_state["combat_state"]["monsters"] = [
+        {"id":"AwakenedOne", "current_hp":0, "max_hp":320, "move_id":3,
+         "half_dead":True, "is_gone":True, "powers":[] }]
+    game_state["ascension_level"] = 20
+    revived = sts.BattleContext.from_snapshot(build_snapshot(game_state), 99)
+    sts.SearchAction(sts.SearchActionType.END_TURN).execute(revived)
+    assert revived.monsters[0].cur_hp == 320 and not revived.monsters[0].half_dead
+    hp = revived.player.cur_hp
+    sts.SearchAction(sts.SearchActionType.END_TURN).execute(revived)
+    assert revived.player.cur_hp < hp
     print("SELF_TEST_OK", result["command"], result["action"], result["latency_ms"])
 
 

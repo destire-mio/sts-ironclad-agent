@@ -1,5 +1,7 @@
 # 固定模拟器版本的战士战斗规则修复
 
+A20 至心脏的扩展对齐工作见 [alignment/README.md](alignment/README.md)。第三份补丁 `ironclad_a20.patch` 包含训练观察、统一局外决策入口与配套状态导出修改；整体原版对齐状态仍为 INCOMPLETE。下文保留既有 `combat_rules.patch` 的范围与历史结果边界。
+
 对应 [issue #1](https://github.com/Jialeiv/sts-rl-agent/issues/1)。本补丁覆盖战士能够触发的药水、铁斩波和耗尽牌堆后的战斗结算，不增加角色支持。
 
 ## 应用补丁
@@ -9,9 +11,16 @@
 ```bash
 git apply /path/to/sts-rl-agent/sim_patch/sim_rl_hooks.patch
 git apply /path/to/sts-rl-agent/sim_patch/combat_rules.patch
+git apply /path/to/sts-rl-agent/sim_patch/ironclad_a20.patch
+git apply /path/to/sts-rl-agent/sim_patch/action_queue.patch
+git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
 ```
 
-第一份补丁提供本项目的接口和暂停功能；第二份修改战斗规则。应用后需要重新编译模拟器及 Python 模块，避免继续加载旧模块。
+第一份补丁提供基础接口和暂停功能，第二份修改战斗规则，第三份增加 A20 至心脏的规则、状态与训练接口，第四份修复动作队列容量及战斗结束后的队尾。第四份改变 `BattleContext` 的内存布局，必须重编所有游戏核心、搜索和 Python 绑定对象，不能与旧静态库或绑定对象混合链接。
+
+第五份 `parity_followup.patch` 修复 E63 的四类差异：自动出牌的死灵之书触发和复制 X 费牌的能量支付、零伤害攻击的荆棘、按遗物获得顺序执行出牌回调、玩家 999 格挡上限。自然战斗初始化与快照导入共享遗物顺序记录，MCTS 分支按值复制该记录。它改变 `Player`／`BattleContext` 布局，要求从源码重编核心、搜索和绑定；不能复用 E61 或旧实验的对象文件。
+
+新回归入口为 `alignment/CMakeLists.txt` 中的 `parity_followup_*` 和 `repair_original_parity_followup`。后者包含 39 条保留的原版连续动作序列；修复前有 11 条不一致，修复后通过。E62 的其余问题及自然开局至心脏的原版验收列为待处理。完整记录见工作区的 `ironclad-alignment/evidence/parity-repair-e63-20260918-01/修复报告.md`；分发文件身份见 [parity-followup-manifest.json](alignment/parity-followup-manifest.json)。
 
 ## 改动与验证条件
 
@@ -44,3 +53,109 @@ ctest --test-dir build-combat-tests --output-on-failure
 上游将敌人毒层数保存在有符号 8 位整数中；累加到 150 层会读出 -106。这一高层数存储问题不在本补丁范围，毒药水回归覆盖的层数没有跨过该边界。
 
 项目现有评估表来自该规则补丁之前，未用修复后的模拟器重新评估；历史数字保留其原有版本含义。
+
+## MCTS 推演配置
+
+`search_rollout.patch` 保存 E18 开发对照和 E19 未见种子评估使用的搜索版本。它在上述三份补丁之后应用，修改搜索器，不修改游戏结算或候选合法性：
+
+- 全负推演分数也能保存最佳序列，相等回报避免除零。
+- UCB 使用已访问均值、回报区间归一化，以及未访问边优先探索。
+- 随机推演中存在合法出牌时，结束回合相对权重为 0.1。搜索树仍保留结束回合，推演中也保留非零概率。
+
+在模拟器源码副本中复现该候选：
+
+```bash
+git apply --check /path/to/sts-rl-agent/sim_patch/search_rollout.patch
+git apply /path/to/sts-rl-agent/sim_patch/search_rollout.patch
+```
+
+应用前搜索源文件 SHA-256 为 `1b223ccb8da09f57e175e623b8b7387b7b3069fa57b7fe0b8bbf3f5210efeb41`，应用后为 `fa3f0b77507571c4a81fa6f23cbb1ef2c519937f3b1d671c2d5231a45c618a71`；输出源码与 E18 已测构建逐字节相同。需要编译并通过新进程加载，现有冻结引擎不应覆盖。
+
+本机的隔离构建入口是 `agent/heart_search_build.py`。它读取 `ironclad-alignment/build/` 中归档的游戏规则库和两份 Python 绑定对象，在新目录分别编译原搜索、数值边界修正、归一化和推演变体，记录编译命令、源码／对象哈希与 `search_numerics.cpp` 结果。该流程固定 macOS arm64／Python 3.12 的对象格式；跨平台复现需要从对应平台源码构建。
+
+数值回归的两项原缺陷为 `negative_playout`、`equal_returns`；`return_translation` 和 `unvisited_edge` 是归一化版本新增的评分约定。不要把四项检查都解释为原版游戏规则错误。完整对照与未见种子验收见[实验账本第 28 节](../../铁甲战士项目路线与RL实验.md#combat-search-e19)。
+
+## 出牌顺序推演
+
+`search_order.patch` 是 E22—E25 使用的增量搜索补丁，在前三份对齐补丁和 `search_rollout.patch` 之后应用。随机推演选中牌动作后，以 50% 概率从现有 `getPlayOrdering` 优先级最高的合法牌／目标中均匀选择；其余情况保留原选择。出牌、药水、结束回合三类动作的抽样概率和搜索树合法分支保留，游戏规则对象不变。
+
+```bash
+git apply --check /path/to/sts-rl-agent/sim_patch/search_order.patch
+git apply /path/to/sts-rl-agent/sim_patch/search_order.patch
+```
+
+应用前搜索源文件 SHA-256 为 `fa3f0b77507571c4a81fa6f23cbb1ef2c519937f3b1d671c2d5231a45c618a71`，应用后为 `64387b31618d508e4b58d954f9ddcc9e3175fae44ffb20ca493efd6082da6529`。隔离副本上的补丁检查与应用通过，输出与实际编译的候选源码逐字节一致。构建入口 `agent/heart_order_rollout.py build` 复用前版归档规则及绑定对象，输出到新目录；平台限制同上，不覆盖默认原生模块。
+
+E25 在同一批 1,024 个全新种子上，前版 20 胜、候选 33 胜，新增 23、损失 10，配对 p=0.035082；每次 8,000／Boss ×3，整局搜索量增加 7.28%。53 次胜局规划重跑和完整路线核验通过。候选通过采用门槛，10% 目标未达到；它不构成局外网络学习或原版 Java 对齐证据。[可读结果](../runs/heart-order-acceptance-20260917-01/验收结果.md)、[冻结运行时决定](../runs/heart-order-acceptance-20260917-01/decision.json)、[补丁应用核验](../runs/heart-order-acceptance-20260917-01/portable-patch-verification.json)、[实验账本第 34 节](../../铁甲战士项目路线与RL实验.md#combat-search-e25)。
+
+## 绑定编译产物刷新
+
+E32 发现继承的核心对象按 `-O2` 编译，绑定对象的旧生成选项却没有优化等级。当前源 CMake 包含绑定 `-O2`，但历史归档对象并未刷新。检查源码选项不能替代检查生成命令和已加载模块。
+
+`agent/heart_binding_optimization.py build --root <新目录>` 在本机快照相同绑定源码、头文件与对象，分别构建 O0 控制和 O2 候选；复用 E25 的规则库与搜索对象，保留断言和链接参数。完整命令与哈希写入 `build-report.json`。这个入口依赖本机归档的 macOS arm64／Python 3.12 对象，不是跨平台构建器，也不覆盖默认模块。没有新增游戏或搜索补丁。
+
+O0 重建模块与 E25 的 `931cc829…` 逐字节相同。O2 模块 SHA-256 为 `62bcc5a7673b5e15e5b8f2362f800740ba2a2560361f9c075cc5ba61fc406385`；两种重建各通过 256 单战与 64 整局的行动、搜索量、终态和 RNG 对照。原搜索数值检查属于复用对象的历史结果，不算作新绑定测试。
+
+固定 16 状态重复 8 轮的平衡配对测试中，搜索耗时降幅中位数 7.05%，按轮 bootstrap 95% 区间 6.90%—7.19%，通过 5% 预设门槛。采用 O2 运行时进行后续实验，网络和搜索预算保持；没有把 E26／E29／E30／E31 的拒绝候选合入。这份计时结果不代表全训练吞吐率或新的未见种子胜率。
+
+复用入口为 [E32 决定](../runs/heart-binding-validation-20260917-01/decision.json) 的 `selected_runtime`；新实验冻结源码／模块／权重并核对 SHA，保留旧标签的引擎身份。[可读结果](../runs/heart-binding-validation-20260917-01/优化结果.md)、[构建记录](../runs/heart-binding-build-20260917-01/build-report.json)、[结束核验](../runs/heart-binding-validation-20260917-01/completion-verification.json)、[实验账本第 41 节](../../铁甲战士项目路线与RL实验.md#runtime-speed-e32)。
+
+## 动作队列修复（E50）
+
+E49 的自然根 `166835586` 在 A20 第二幕第 29 层扎人之书的搜索中触发 `ActionQueue<50>::pushBack` 容量断言。原版 `GameActionManager` 使用可增长列表，50 不是游戏规则限制。`action_queue.patch` 为常规队列保留 50 个内联位置，满时扩容，按值复制搜索分支的队列。执行中的回调与队列存储分离，回调追加动作导致扩容时不会失效。
+
+另一处错误是战斗胜利后压缩保留动作时，没有移动队尾；后续追加可能跳过或重复执行效果。修复把稳定过滤放回队列自身并更新队尾。原版 Java 类的合成动作测试确认可容纳 512 个动作，清理后的追加顺序为 `[11,4,7,8,10]`；这个测试验证队列语义，不证明所有动作的清理标记或原版整局一致。
+
+修复前的规则源码重建与 E32、E45 两份原生模块逐字节相同；修复后重编 29 个游戏核心、2 个搜索、2 个绑定对象。8 项队列用例在 ASAN/UBSAN 下通过，旧实现重现容量断言和队尾顺序错误；143 项现有原生、训练接口与原版存档夹具检查通过。2,046 条旧有效轨迹中 2,016 条状态/RNG 一致，30 条在胜利结算后变化；只修改旧队尾的一份控制引擎逐条复现这 30 个变化后的完整状态，因此这些变化归因于队尾修正。
+
+43 对已检查种子的整局重跑与 22 次胜局复跑通过，含两个故障种子。这个面板含历史胜局，不能用来估计未见种子胜率。超时案例在新引擎下耗时约 123.55 秒走到觉醒者死亡；下一轮两组的整局/进程保护在抽种子前固定为 300/360 秒，每次搜索仍为 8,000、Boss ×3。旧 E49 故障记录保留。
+
+源码补丁 SHA-256：`138bcc0a86d087bb8a531840c49ce60de98d5941e9a445054e7c901cc1043350`。修复后的均值引擎为 `8aa40d11b33764a339749e82c39d635b74794bad6a76fc9ad2decc1010ebc25e`，最大值引擎为 `f01adb43ee141b7f9e84c328d7a275e1a38f0b31690260e695c27d2cba25d1be`。源码修改应用到本地 `ironclad-alignment/simulator`，旧冻结模块没有覆盖。[修复核验](../runs/heart-action-queue-validation-20260918-01/completion-verification.json)、[构建记录](../runs/heart-action-queue-build-20260918-01/fixed-build-report.json)、[补丁核验](../runs/heart-action-queue-build-20260918-01/portable-patch-verification.json)。
+
+可移植队列用例入口为 `tests/action_queue.cpp`，沿上述 CMake 配置增加 `-DSTS_QUEUE_SANITIZERS=ON`，然后执行：
+
+```bash
+cmake --build build-combat-tests --target action_queue -j 2
+ctest --test-dir build-combat-tests -R '^queue_' --output-on-failure
+```
+
+`tests/QueueOracle.java` 使用本机合法原版 JAR 中的 `GameActionManager`，以合成 `DAMAGE/DRAW` 动作检查队列，不包含或分发原版字节码。跨平台构建应从源码编译所有对象；旧章节的预编译对象复用入口属于其历史布局。
+
+## 最大值搜索与败局加分上限（E54）
+
+`search_bounded_loss.patch` 在 `search_rollout.patch` 和 `search_order.patch` 后应用，运行时要求 E50 的 `action_queue.patch` 及其完整 ABI 重编。它把节点备份与利用项从平均回报改为最佳已知回报，并将败局中的抽牌／回合加分之和限制为 20。胜利公式、合法树、推演抽样概率、探索系数及局外网络沿用原配置。上限下保留数学公式，但浮点加法重新分组，不承诺逐位相同。
+
+同一批 1,024 个新根，对照 34 胜、候选 68 胜；新增 40、损失 6，配对 p=3.1028e-7。2,048 个自然终局、102 次胜局重规划与路线／网络核验通过，执行故障 0，整局搜索量增加 24.13%。通过采用门槛，样本成功率 6.6406%，10% 目标未达到。收益属于这组战斗搜索修改，不能单独归因于上限，也不代表局外网络学习或原版整局对齐。
+
+```bash
+git apply --check /path/to/sts-rl-agent/sim_patch/search_bounded_loss.patch
+git apply /path/to/sts-rl-agent/sim_patch/search_bounded_loss.patch
+```
+
+增量输入源码 SHA-256 为 `64387b31618d508e4b58d954f9ddcc9e3175fae44ffb20ca493efd6082da6529`，输出为 `c20146a5a6e549c402eca200be4e2567e5f7e7da88fb49d763d22ac42a06878b`。三份搜索补丁的完整应用链与编译输入匹配，本地模拟器搜索源码采用该输出。[E54 冻结运行时](../runs/heart-bounded-loss-confirmation-20260918-01/selected-runtime.json)保留为历史入口；E60 在此搜索器上加入下述控制器保护和局外遗物模型，没有覆盖历史原生模块。
+
+在上述 CMake 配置时添加 `-DSTS_BOUNDED_LOSS_TESTS=ON`，可以从应用补丁的源码运行六项搜索评分合同：
+
+```bash
+cmake --build build-combat-tests --target search_terminal_loss -j 2
+ctest --test-dir build-combat-tests -R '^bounded_loss_' --output-on-failure
+```
+
+六项检查覆盖常规败局数学公式、极端加分平台、敌人受伤的进展、胜利公式、合成高抽牌败局与胜局的顺序、未终局的评分边界。这些是搜索评分合同，不是原版游戏规则修复。CMake 入口从匹配的源码编译并通过六项检查；旧源对照在极端平台与合成胜负顺序两项失败。
+
+证据：[验收结果](../runs/heart-bounded-loss-confirmation-20260918-01/验收结果.md)、[整局核验](../runs/heart-bounded-loss-confirmation-20260918-01/completion-verification.json)、[源码应用链](../runs/heart-bounded-loss-confirmation-20260918-01/source-chain-verification.json)、[本地源码接入](../runs/heart-bounded-loss-confirmation-20260918-01/live-source-adoption.json)、[CMake 检查](../runs/heart-bounded-loss-build-20260918-01/portable-check/result.json)。
+
+
+## 重复搜索保护（E58 训练运行时）
+
+`search_replanning_limit.patch` 针对 `ScumSearchAgent2.cpp`，在 E54 配置上将单战重新搜索次数限制为 256。达到上限后执行有效的已知胜利方案，或本次搜索从当前局面找到的有限终局方案；找不到终局时保留执行错误，不能把保护触发直接记为死亡。它不改变合法动作、游戏规则、每次 8,000／Boss ×3 的预算或局外模型。
+
+该方案用于 E59 的训练运行时。41 个自然开局控制的动作、搜索数、终态与 E54 相同，故障根 `648297286` 在约 30.34 秒到达死亡终局；3,072 条自然轨迹的动作／NN／终态／RNG 审计与 247 次胜局重新规划通过。3,071 条轨迹来自满足调用次数边界的旧轨迹迁移，原生成引擎和源文件哈希保留；另外 1 条是新生成。原 E55 故障记录没有改写。这些结果不提供新的未见种子通关率。
+
+相邻实验 E57 的“发现败局就执行方案”使开发成绩从 7/38 降为 4/38，已拒绝，不包含在此补丁。此处保护只在第 256 次搜索后触发。
+
+E60 两组共享该保护，原局外网络与学习首幕 Boss 遗物的策略在同一批新根上为 83→112/1,024；2,048 个终局、195 次胜局重规划及路线／NN／RNG 核验通过，执行故障 0。该对照支持遗物策略的收益，不能单独归因为控制器保护。当前推理入口为 [E60 冻结运行时](../runs/heart-first-boss-confirmation-20260918-01/selected-runtime.json)，见[完整验收](../runs/heart-first-boss-confirmation-20260918-01/验收结果.md)。
+
+本地 `ScumSearchAgent2.cpp` 接入该补丁，输出 SHA 为 `e088dbb0ac029a493eca4607f2049ae71c7cd86de140146620bf3573f45d19d6`，与受测编译输入相同。[接入证据](../runs/heart-first-boss-confirmation-20260918-01/live-source-adoption.json)记录前后哈希；推理从所选运行时加载配对的模型和原生模块。
+
+补丁在隔离源码上检查和应用，输出与候选编译输入相同。[构建与修改说明](../runs/heart-bounded-replanning-build-20260918-01/build-report.json)、[补丁核验](../runs/heart-bounded-replanning-build-20260918-01/portable-patch-verification.json)、[训练运行时核验](../runs/heart-bounded-replanning-validation-20260918-01/completion-verification.json)。

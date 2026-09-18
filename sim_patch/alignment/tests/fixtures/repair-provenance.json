@@ -1,0 +1,103 @@
+[
+  {
+    "file": "tests/fixtures/original-repair-cards.json.gz",
+    "source": "evidence/full-repair-02/card-continuations-original.json.gz",
+    "source_sha256": "0872052c5948e45b8e083fa80b789d61ddfaf3cb86a04692795439a9d7ead05f",
+    "sha256": "66803d4aa8d18832f8bd6bd14daafc0603234be1db44e1c02d6117a143005adb",
+    "rows": 236
+  },
+  {
+    "file": "tests/fixtures/original-repair-powers.json.gz",
+    "source": "oracle/original-full-repair-powers-01/sequence-results.json",
+    "source_sha256": "efdd41876d7c099d11d32b01ceb4c87552707b4dd11a8470bd5388aa443433df",
+    "sha256": "13794e8bf852e90042079bf167eaa189c287a5b8f18ee2d4d2258fd1646fbf44",
+    "rows": 10
+  },
+  {
+    "file": "tests/fixtures/original-repair-potions.json.gz",
+    "source": "oracle/original-full-repair-potions-02/sequence-results.json.gz",
+    "source_sha256": "11bfd5a13d5b0c657a175bf5145d6bc04c002517114d1af12a9226754764c294",
+    "sha256": "7bf3b77d7badaae819a0bccf4d758635c8c824d2db3802a5b0c5c326d8ee907c",
+    "rows": 62
+  },
+  {
+    "file": "tests/fixtures/original-repair-upgrades.json.gz",
+    "source": "oracle/original-full-repair-upgrade-01/sequence-results.json.gz",
+    "source_sha256": "4d8daa915b596780920bbdf80bdf9859825ed72859a1c96e260dd3742a7efb2b",
+    "sha256": "d44597a438683828c6195dfe600dd72979971501a3e88694df41c7f0f22341be",
+    "rows": 53
+  },
+  {
+    "file": "tests/fixtures/original-repair-combinations.json.gz",
+    "source": "oracle/original-full-repair-combos-01/sequence-results.json.gz",
+    "source_sha256": "5995d460219777f897aa664dcbf73642e75fbbe6879e458ededed8b2e025c960",
+    "sha256": "7dbf3f6dc7d459bb5f5c008fb6ea485038b705744efe226f515afa037a81e218",
+    "rows": 20
+  },
+  {
+    "file": "tests/fixtures/original-card-metadata.json",
+    "source": "oracle/original-full-repair-metadata-02/card-metadata.json",
+    "source_sha256": "389c1dd9a78bb3ce0542b5783283fb92fd249fb57da9247a7e0fb3c2761d0964",
+    "sha256": "77a5ae775b573fc6d07420877ad72681d744d2903ce79acf05d38c9dac70746d",
+    "rows": 264
+  },
+  {
+    "file": "tests/fixtures/original-prior-sequences.json.gz",
+    "source": "evidence/full-fix/strict-summary.json",
+    "rows": 198,
+    "sha256": "5c426fe85b9efb3f809ce6d9984f5829136ba111b01f1ef8add8a37331063564",
+    "excluded_original_errors": 3
+  },
+  {
+    "file": "tests/fixtures/original-repair-outside.json",
+    "sha256": "2cadae9a39d59ca5ec15a4322f0bdb86d14e0178b5bfbd91da508f9a0c380c13",
+    "rows": 402,
+    "sources": [
+      {
+        "source": "oracle/original-full-repair-selections-02/results.json",
+        "sha256": "7f4e567fe7ead8a93c690c83a4aeff1a55b80a4c5b0a3cc492849b1ff6642f6f"
+      },
+      {
+        "source": "oracle/original-full-repair-shop-02/results.json",
+        "sha256": "e7b3358661c312a5eeff32d61ca9a7403e80e32b58682bfbc0a249166c40d053"
+      },
+      {
+        "source": "oracle/original-full-repair-potion-slots-01/results.json",
+        "sha256": "418d0611426c35956ee059855abed84297767d956957b2f7217c2c68f0be6c5a"
+      },
+      {
+        "source": "oracle/original-full-repair-lifecycle-01/results.json",
+        "sha256": "ee8de60f89cafb277d3efad8fbe4f06c23524302225a9327bcc10a75ad4a008d"
+      },
+      {
+        "source": "oracle/original-full-repair-lifecycle-02/results.json",
+        "sha256": "d1cc0e7a62e660abd0aae3bb46440dfaac8441e55115afe79550e17644c5ba18"
+      },
+      {
+        "source": "oracle/original-full-repair-colors-01/results.json",
+        "sha256": "a528a2582e962e9625f06895bbe7dae3bd1bcc122d3648af57caea7b8d504683"
+      },
+      {
+        "source": "oracle/original-full-repair-transforms-01/results.json",
+        "sha256": "27455303fae9680bd4715e42c1b29584ccf7e590d23846c38aee88d84fa1434e"
+      },
+      {
+        "source": "oracle/original-full-repair-astrolabe-01/results.json",
+        "sha256": "5bbd2d1fefa78b251a773b5d887c33451c773d4e69f502087840d5e1ae016a13"
+      }
+    ],
+    "excluded_bad_id_fixtures": 4
+  },
+  {
+    "file": "tests/fixtures/original-natural-trace.json.gz",
+    "fixture_sha256": "69c01d583bf521c1db0caef7042771f43eac7aa0a1011224278f60bbf0f2d6b4",
+    "original_rpc": "oracle/original-full-repair-trace-10/rpc.jsonl.gz",
+    "original_rpc_sha256": "b1a19015095782655c18307756b679f15382447726b71780ca370c7fc27297ad",
+    "trace": "evidence/full-repair-02/natural-129-rewards.json",
+    "trace_sha256": "21d2c89609bc4ef708d3b1a6a8b88c82b8580d32dc74ac88ffdbb8d0fd43c398",
+    "commands": 1002,
+    "floor": 51,
+    "victory": false,
+    "resynchronized": false
+  }
+]

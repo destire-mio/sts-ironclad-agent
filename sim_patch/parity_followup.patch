@@ -1,0 +1,389 @@
+diff --git a/bindings/slaythespire.cpp b/bindings/slaythespire.cpp
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -318,6 +318,7 @@
+             for (const auto item : py::cast<py::list>(snapshot["relics"])) {
+                 const auto relic = py::cast<py::dict>(item);
+                 const int id = py::cast<int>(relic["id"]);
++                bc.player.updateCardUseRelic(static_cast<RelicId>(id), true);
+                 if (id < 64) bc.player.relicBits0 |= 1ULL << id;
+                 else if (id < 128) bc.player.relicBits1 |= 1ULL << (id - 64);
+                 if (static_cast<RelicId>(id) == RelicId::LIZARD_TAIL) {
+diff --git a/include/combat/BattleContext.h b/include/combat/BattleContext.h
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -133,6 +133,7 @@
+         void onUseAttackCard();
+         void onUseSkillCard();
+         void onUsePowerCard();
++        void onUseCardRelics();
+ 
+         void onUseStatusOrCurseCard();
+         void onAfterUseCard();
+diff --git a/include/combat/Player.h b/include/combat/Player.h
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -22,6 +22,7 @@
+ #include <constants/CharacterClasses.h>
+ #include <constants/Relics.h>
+ #include <constants/PlayerStatusEffects.h>
++#include <data_structure/fixed_list.h>
+ 
+ // powers that use justApplied:
+ // Vulnerable, requires isSourceMonster and actionManager turn has ended
+@@ -61,6 +62,10 @@
+ 
+         std::uint64_t relicBits0 = 0;
+         std::uint64_t relicBits1 = 0;
++        // Only relics with an implemented onUseCard hook, in acquisition order.
++        // Inline storage is copied with each independent MCTS battle state.
++        fixed_list<RelicId, 12> cardUseRelics;
++        void updateCardUseRelic(RelicId relic, bool present);
+ 
+         // special info
+         int8_t  happyFlowerCounter = 0;
+@@ -445,6 +450,7 @@
+ 
+     template <RelicId r>
+     void Player::setHasRelic(bool value) {
++        updateCardUseRelic(r, value);
+         if (value) {
+             if ((int) r < 64) {
+                 relicBits0 |= 1ULL << (int)r;
+diff --git a/src/combat/BattleContext.cpp b/src/combat/BattleContext.cpp
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -82,6 +82,7 @@
+ void BattleContext::initRelics(const GameContext &gc) {
+     player.relicBits0 = gc.relics.relicBits0;
+     player.relicBits1 = gc.relics.relicBits1;
++    player.cardUseRelics.clear();
+ 
+     fixed_list<RelicId, 4> atBattleStartPreDraw;
+     fixed_list<RelicId, 8> atBattleStart;
+@@ -93,6 +94,7 @@
+     auto &p = player;
+ 
+     for (const auto &r : gc.relics.relics) {
++        player.updateCardUseRelic(r.id, true);
+         switch (r.id) {
+ 
+             case R::HOLY_WATER:
+@@ -1651,61 +1653,7 @@
+         addToBot( Actions::RemoveStatus<PS::PEN_NIB>() );
+     }
+ 
+-    // ********* Relics onUseCard *********
+-    // todo order of relics
+-
+-    if (p.hasRelic<R::INK_BOTTLE>()) {
+-        p.inkBottleCounter++;
+-        if (p.inkBottleCounter == 10) {
+-            p.inkBottleCounter = 0;
+-            addToBot( Actions::DrawCards(1) );
+-        }
+-    }
+-
+-    if (p.hasRelic<R::KUNAI>() && p.attacksPlayedThisTurn % 3 == 0) {
+-        addToBot( Actions::BuffPlayer<PS::DEXTERITY>(1) );
+-    }
+-
+-    if (p.hasRelic<R::ORANGE_PELLETS>()) {
+-        p.orangePelletsCardTypesPlayed.set(static_cast<int>(CardType::ATTACK), true); // set bit 0 true
+-        if (p.orangePelletsCardTypesPlayed.all()) {
+-            p.orangePelletsCardTypesPlayed.reset();
+-            addToBot(Actions::RemovePlayerDebuffs());
+-        }
+-    }
+-
+-    if (p.hasRelic<R::ORNAMENTAL_FAN>() && p.attacksPlayedThisTurn % 3 == 0) {
+-        addToBot( Actions::GainBlock(4) );
+-    }
+-
+-    if (p.hasRelic<R::SHURIKEN>() && p.attacksPlayedThisTurn % 3 == 0) {
+-        addToBot( Actions::BuffPlayer<PS::STRENGTH>(1) );
+-    }
+-
+-    if (p.hasRelic<R::NECRONOMICON>() && !p.haveUsedNecronomiconThisTurn && !item.freeToPlay && !item.purgeOnUse &&
+-        (c.costForTurn >= 2 || c.isXCost() && item.energyOnUse >= 2)) {
+-        queuePurgeCard(c, item.target);
+-        p.haveUsedNecronomiconThisTurn = true;
+-    }
+-
+-    if (p.hasRelic<R::PEN_NIB>()) {
+-        ++p.penNibCounter;
+-        if (p.penNibCounter == 9) {
+-            addToBot( Actions::BuffPlayer<PS::PEN_NIB>(1) );
+-            p.penNibCounter = -1; // take note of this
+-        }
+-    }
+-
+-    if (p.hasRelic<R::DUALITY>()) {
+-        addToBot(Actions::DualityAction());
+-    }
+-
+-    if (p.hasRelic<R::NUNCHAKU>()) {
+-        if (++p.nunchakuCounter >= 10) {
+-            addToBot(Actions::GainEnergy(1));
+-            p.nunchakuCounter = 0;
+-        }
+-    }
++    onUseCardRelics();
+ 
+     /*
+      *  for each card in hand : TriggerOnCardPlayed
+@@ -1769,34 +1717,7 @@
+     // todo Heatsinks
+     // todo BirdFacedUrn
+ 
+-    // ********* Relics onUseCard *********
+-    // todo ink bottle/ ornamental fan need to be ordered i believe
+-
+-    if (p.hasRelic<R::INK_BOTTLE>()) {
+-        p.inkBottleCounter++;
+-        if (p.inkBottleCounter == 10) {
+-            p.inkBottleCounter = 0;
+-            addToBot( Actions::DrawCards(1) );
+-        }
+-    }
+-
+-    if (p.hasRelic<R::ORANGE_PELLETS>()) {
+-        p.orangePelletsCardTypesPlayed.set(static_cast<int>(CardType::SKILL), true); // set bit 0 true
+-        if (p.orangePelletsCardTypesPlayed.all()) {
+-            p.orangePelletsCardTypesPlayed.reset();
+-            addToBot(Actions::RemovePlayerDebuffs());
+-        }
+-    }
+-
+-    if (p.hasRelic<R::LETTER_OPENER>()) {
+-        if (p.skillsPlayedThisTurn >= 3 &&  p.skillsPlayedThisTurn % 3 == 0) {
+-            addToBot(Actions::DamageAllEnemy(5));
+-        }
+-    }
+-
+-    if (p.hasRelic<R::MUMMIFIED_HAND>()) {
+-        // todo
+-    }
++    onUseCardRelics();
+ 
+     /*
+      *  for each card in hand : TriggerOnCardPlayed
+@@ -1845,36 +1766,93 @@
+         addToBot( Actions::DamageAllEnemy(p.getStatus<PS::PANACHE>()) );
+     }
+ 
+-    // ********* Relics onUseCard *********
+-
+-    if (p.hasRelic<R::BIRD_FACED_URN>()) {
+-        p.heal(2);
+-    }
+-
+-    if (p.hasRelic<R::INK_BOTTLE>()) {
+-        p.inkBottleCounter++;
+-        if (p.inkBottleCounter == 10) {
+-            p.inkBottleCounter = 0;
+-            addToBot( Actions::DrawCards(1) );
+-        }
+-    }
+-
+-    if (p.hasRelic<R::ORANGE_PELLETS>()) {
+-        p.orangePelletsCardTypesPlayed.set(static_cast<int>(CardType::POWER), true); // set bit 0 true
+-        if (p.orangePelletsCardTypesPlayed.all()) {
+-            p.orangePelletsCardTypesPlayed.reset();
+-            addToBot(Actions::RemovePlayerDebuffs());
+-        }
+-    }
+-
+-    if (p.hasRelic<R::MUMMIFIED_HAND>()) {
+-        mummifiedHandOnUsePower();
+-    }
++    onUseCardRelics();
+ 
+ //    auto &m = monsters.optionMap[2];
+ //    if (m.hasStatusInternal<MS::CURIOSITY>()) {
+ //        m.buff<MS::STRENGTH>(m.getStatus<MS::CURIOSITY>());
+ //    }
++}
++
++void BattleContext::onUseCardRelics() {
++    auto &p = player;
++    const auto &item = curCardQueueItem;
++    const auto &c = item.card;
++    const auto type = c.getType();
++    const bool attack = type == CardType::ATTACK;
++    const bool skill = type == CardType::SKILL;
++    const bool power = type == CardType::POWER;
++
++    // UseCardAction dispatches relic callbacks in acquisition order. Queueing
++    // draws before/after Orange Pellets changes card costs and RNG consumption.
++    for (const auto relic : p.cardUseRelics) {
++        switch (relic) {
++            case R::INK_BOTTLE:
++                if (++p.inkBottleCounter == 10) {
++                    p.inkBottleCounter = 0;
++                    addToBot(Actions::DrawCards(1));
++                }
++                break;
++            case R::ORANGE_PELLETS:
++                if (attack || skill || power) {
++                    p.orangePelletsCardTypesPlayed.set(static_cast<int>(type), true);
++                    if (p.orangePelletsCardTypesPlayed.all()) {
++                        p.orangePelletsCardTypesPlayed.reset();
++                        addToBot(Actions::RemovePlayerDebuffs());
++                    }
++                }
++                break;
++            case R::KUNAI:
++                if (attack && p.attacksPlayedThisTurn % 3 == 0)
++                    addToBot(Actions::BuffPlayer<PS::DEXTERITY>(1));
++                break;
++            case R::ORNAMENTAL_FAN:
++                if (attack && p.attacksPlayedThisTurn % 3 == 0)
++                    addToBot(Actions::GainBlock(4));
++                break;
++            case R::SHURIKEN:
++                if (attack && p.attacksPlayedThisTurn % 3 == 0)
++                    addToBot(Actions::BuffPlayer<PS::STRENGTH>(1));
++                break;
++            case R::NECRONOMICON:
++                // Autoplay skips energy payment but does not set freeToPlayOnce.
++                // The original X-cost branch checks energyOnUse independently.
++                if (attack && !p.haveUsedNecronomiconThisTurn &&
++                    ((c.costForTurn >= 2 && !c.freeToPlayOnce) ||
++                     (c.isXCost() && item.energyOnUse >= 2))) {
++                    queuePurgeCard(c, item.target);
++                    p.haveUsedNecronomiconThisTurn = true;
++                }
++                break;
++            case R::PEN_NIB:
++                if (attack && ++p.penNibCounter == 9) {
++                    addToBot(Actions::BuffPlayer<PS::PEN_NIB>(1));
++                    p.penNibCounter = -1;
++                }
++                break;
++            case R::DUALITY:
++                if (attack) addToBot(Actions::DualityAction());
++                break;
++            case R::NUNCHAKU:
++                if (attack && ++p.nunchakuCounter >= 10) {
++                    addToBot(Actions::GainEnergy(1));
++                    p.nunchakuCounter = 0;
++                }
++                break;
++            case R::LETTER_OPENER:
++                if (skill && p.skillsPlayedThisTurn % 3 == 0)
++                    addToBot(Actions::DamageAllEnemy(5));
++                break;
++            case R::BIRD_FACED_URN:
++                if (power) p.heal(2);
++                break;
++            case R::MUMMIFIED_HAND:
++                if (power) mummifiedHandOnUsePower();
++                break;
++            default:
++                break;
++        }
++    }
+ }
+ 
+ void BattleContext::onUseStatusOrCurseCard() {
+@@ -1921,13 +1899,7 @@
+         }
+     }
+ 
+-    if (p.hasRelic<R::INK_BOTTLE>()) {
+-        p.inkBottleCounter++;
+-        if (p.inkBottleCounter == 10) {
+-            p.inkBottleCounter = 0;
+-            addToBot( Actions::DrawCards(1) );
+-        }
+-    }
++    onUseCardRelics();
+ 
+ }
+ 
+@@ -2770,6 +2742,7 @@
+     item.energyOnUse = curCardQueueItem.energyOnUse;
+     item.ignoreEnergyTotal = true;
+     item.autoplay = true;
++    item.freeToPlay = true;
+     addPurgeCardToCardQueue(item);
+ }
+ 
+diff --git a/src/combat/Monster.cpp b/src/combat/Monster.cpp
+--- a/src/combat/Monster.cpp
++++ b/src/combat/Monster.cpp
+@@ -395,9 +395,6 @@
+             }
+         }
+ 
+-    } else if (hasStatus<MS::THORNS>()) {
+-        bc.addToTop( Actions::DamagePlayer(getStatus<MS::THORNS>()) );
+-
+     } else if (hasStatus<MS::ASLEEP>()) {
+         // lagavulin
+         setHasStatus<MS::ASLEEP>(false);
+@@ -447,7 +444,12 @@
+         bc.addToBot(Actions::DebuffEnemy<MS::VULNERABLE>(idx, 2, false) );
+     }
+ 
+-    if (damage > 0) { // todo can damage be zero???
++    // Thorns is an onAttacked hook, including zero and fully blocked hits.
++    // HP-loss hooks below still require damage to pass the defender's block.
++    if (hasStatus<MS::THORNS>()) {
++        bc.addToTop(Actions::DamagePlayer(getStatus<MS::THORNS>()));
++    }
++    if (damage > 0) {
+         attackedUnblockedHelper(bc, damage);
+     }
+ }
+diff --git a/src/combat/Player.cpp b/src/combat/Player.cpp
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -11,6 +11,32 @@
+ #include "game/Game.h"
+ 
+ using namespace sts;
++
++void Player::updateCardUseRelic(RelicId relic, bool present) {
++    switch (relic) {
++        case RelicId::INK_BOTTLE:
++        case RelicId::KUNAI:
++        case RelicId::ORANGE_PELLETS:
++        case RelicId::ORNAMENTAL_FAN:
++        case RelicId::SHURIKEN:
++        case RelicId::NECRONOMICON:
++        case RelicId::PEN_NIB:
++        case RelicId::DUALITY:
++        case RelicId::NUNCHAKU:
++        case RelicId::LETTER_OPENER:
++        case RelicId::BIRD_FACED_URN:
++        case RelicId::MUMMIFIED_HAND:
++            break;
++        default:
++            return;
++    }
++    const auto found = std::find(cardUseRelics.begin(), cardUseRelics.end(), relic);
++    if (present && found == cardUseRelics.end()) {
++        cardUseRelics.push_back(relic);
++    } else if (!present && found != cardUseRelics.end()) {
++        cardUseRelics.erase(found);
++    }
++}
+ 
+ 
+ bool Player::hasRelicRuntime(RelicId r) const {
+@@ -71,7 +97,7 @@
+         return;
+     }
+ 
+-    block += amount;
++    block = std::min(999, block + amount);
+ 
+     if (hasStatus<PS::JUGGERNAUT>()) {
+         bc.addToBot(Actions::DamageRandomEnemy(getStatus<PS::JUGGERNAUT>()));
+@@ -904,4 +930,3 @@
+ 
+ 
+ 
+-

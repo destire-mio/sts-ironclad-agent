@@ -1,0 +1,27 @@
+{
+  "source_files": {
+    "ironclad-alignment/evidence/parity-followup-20260918-01/original-01/sequence-results.json.gz": "94979a41a4fe0d6319da11f111cbd988692b13e3187df0cd9ace002c80b3e1da",
+    "ironclad-alignment/evidence/parity-followup-20260918-01/original-02/sequence-results.json.gz": "a54252d37ace82c39f332f04ff3158fd3f2764edf8b3058954335e72183ed614",
+    "ironclad-alignment/evidence/parity-repair-e63-20260918-01/original-extra/sequence-results.json.gz": "a1baa8ce7771107058464dee6b271385c0ca63c1e44ae2615e794d24b2bf56fb"
+  },
+  "fixture_file": "ironclad-alignment/tests/fixtures/original-parity-followup.json.gz",
+  "fixture_sha256": "7ea27218dbce9b9733d50a346f5915d530c63ca33644068f582a8062043dfba4",
+  "cases": 39,
+  "excluded_invalid_fixture": [
+    {
+      "source": "ironclad-alignment/evidence/parity-followup-20260918-01/original-01/sequence-results.json.gz",
+      "name": "darkembrace_fnp_juggernaut",
+      "status": "error",
+      "error": "communicationmod.InvalidCommandException: Invalid command: choose. Possible commands: [play, end, key, click, wait, state]"
+    }
+  ],
+  "original_game_version": "V2.3.4 (12-18-2022)",
+  "scope": "controlled original action sequences imported once; all RNG groups compared; no terminal win-rate claim",
+  "separate_unresolved_diagnostics": [
+    {
+      "name": "havoc_zero_cost_bludgeon",
+      "source": "ironclad-alignment/evidence/parity-repair-e63-20260918-01/original-extra/sequence-results.json.gz",
+      "reason": "E62 conditional cost issue: ExhaustCardEffect resets attributes after 1 second. Removing simulator reset broke Exhume follow-up. Preserve raw record outside the E63 regression gate; do not count as fixed."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ironclad-a20-heart-round2-expanded-natural-roots",
+  "arch": [512, 512],
+  "root_min_floor": 25,
+  "roots_per_seed": 12,
+  "success_roots_per_seed": 8,
+  "train_seeds": 1536,
+  "validation_seeds": 192,
+  "extension_seed_rng": 2026091402,
+  "min_mixed_validation_seeds": 2,
+  "natural_eval_seeds": 64,
+  "scan_chunk": 64,
+  "workers": 8,
+  "wall_seconds": 1800
+}

@@ -1,0 +1,38 @@
+--- a/src/sim/search/ScumSearchAgent2.cpp
++++ b/src/sim/search/ScumSearchAgent2.cpp
+@@ -67,6 +67,7 @@
+ void search::ScumSearchAgent2::playoutBattle(BattleContext &bc) {
+     std::vector<search::Action> bestActions;
+     int bestOutcomePlayerHp = -1;
++    int searchRounds = 0;
+ 
+     while (bc.outcome == Outcome::UNDECIDED) {
+         if (bc.turn >= 500) throw std::runtime_error("battle remains undecided at the 500-turn search limit");
+@@ -85,6 +86,27 @@
+         }
+ 
+         simulationCountTotal += searcher.root.simulationCount;
++
++        // Bound repeated replanning, not the game's legal actions or outcome.
++        // A cached winning plan remains aligned because execution follows it.
++        // Losing cached plans may be stale after visit-based steps: use the
++        // terminal plan found from this exact current state instead.
++        if (++searchRounds >= 256) {
++            if (bestOutcomePlayerHp <= 0 && searcher.outcomePlayerHp < 0) {
++                throw std::runtime_error("replanning limit reached without a terminal plan");
++            }
++            auto terminalActions = bestOutcomePlayerHp > 0 ? bestActions :
++                    std::vector(searcher.bestActionSequence.rbegin(),
++                                searcher.bestActionSequence.rend());
++            while (!terminalActions.empty() && bc.outcome == Outcome::UNDECIDED) {
++                takeAction(bc, terminalActions.back());
++                terminalActions.pop_back();
++            }
++            if (bc.outcome == Outcome::UNDECIDED) {
++                throw std::runtime_error("terminal plan did not reach its promised outcome");
++            }
++            continue;
++        }
+ 
+         if (bestOutcomePlayerHp > 0) {
+             stepThroughSolution(bc, bestActions);

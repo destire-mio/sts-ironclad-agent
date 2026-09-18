@@ -1,0 +1,31 @@
+--- a/src/sim/search/BattleScumSearcher2.cpp
++++ b/src/sim/search/BattleScumSearcher2.cpp
+@@ -178,6 +178,28 @@
+         } while (hasCard && tempNode.edges[selectedIdx].action.getActionType() == ActionType::END_TURN
+                  && keepEndTurn(randGen) != 0);
+ 
++        // Preserve the accepted sampler's CARD/POTION/END_TURN choice.
++        // On half of CARD draws only, prefer the existing expert ordering;
++        // sample uniformly among tied cards/targets. Tree expansion is unchanged.
++        if (tempNode.edges[selectedIdx].action.getActionType() == ActionType::CARD
++                && std::uniform_int_distribution<int>(0, 1)(randGen) == 1) {
++            int bestOrder = std::numeric_limits<int>::max();
++            std::vector<int> preferred;
++            for (int i = 0; i < static_cast<int>(tempNode.edges.size()); ++i) {
++                const auto &candidate = tempNode.edges[i].action;
++                if (candidate.getActionType() != ActionType::CARD) continue;
++                const int order = search::Expert::getPlayOrdering(
++                    state.cards.hand[candidate.getSourceIdx()].getId());
++                if (order < bestOrder) {
++                    bestOrder = order;
++                    preferred.clear();
++                }
++                if (order == bestOrder) preferred.push_back(i);
++            }
++            selectedIdx = preferred[std::uniform_int_distribution<int>(
++                0, static_cast<int>(preferred.size()) - 1)(randGen)];
++        }
++
+         const auto action = tempNode.edges[selectedIdx].action;
+ //        action.printDesc(std::cout, state) << std::endl;
+         actionStack.push_back(action);

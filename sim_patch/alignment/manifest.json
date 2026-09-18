@@ -1,0 +1,248 @@
+{
+  "status": "INCOMPLETE",
+  "scope": {
+    "character": "IRONCLAD",
+    "ascension": 20,
+    "ending": "HEART",
+    "prismatic_shard": false
+  },
+  "upstream_commit": "7476a81954020087da31d41d16fddf475746ec2d",
+  "patch_sha256": "07d3039c1cf4feb184f0eae03e5ec73d2fd3fcb01523924676bdc0f0eca7febe",
+  "paired_bridge_files": [
+    {
+      "path": "steam/steam_mcts.py",
+      "sha256": "2b927fcfa91f24427be5ababfe7d8d82d03c5a6fe848bf80402b6cb493f22136"
+    },
+    {
+      "path": "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java",
+      "sha256": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "bindings/bindings-util.cpp",
+      "before": "1992b01d82432a47bb96edb0e5181ce335a64f1ba9180f49ca0d62ef71130411",
+      "after": "0d49a8beb96de7aab852afc0591f41b8d6d8f3f94593e584c4e549191a33934c"
+    },
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "6a7dd8f85f8ddaf541faff8a263594faaaff00b6a0e6eeb58cac606b4fc7c6a3",
+      "after": "543f8ea9fb0b0242991cf5854659ed7a9c4b759b8abfd0643d9ef60667887324"
+    },
+    {
+      "path": "bindings/slaythespire.h",
+      "before": "a3e113fa9b0aa5388f8dfdeaa3edba8f929a5e43c7559336caae8fa7bdb2828b",
+      "after": "8faa076999bb0b3150c9d96f8e01a47bafd394e81216ef36b9768f82db492cbe"
+    },
+    {
+      "path": "include/combat/Actions.h",
+      "before": "31d586652bb2a49604e98b7cf9fc85ba4ae0e113fe39ac53faca09e0035187f6",
+      "after": "77843f2acc26c0571c0ef1b9315724d69885462479ed5851def1152de455d11c"
+    },
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "321624e5cf3351ae695de8fd0b699282946d0ef8e5f76ededa94484bcc338634",
+      "after": "5bcadcce47c5de436ec73945a9555ff00a6f8eb29fd73feddc2ce532b72f18a8"
+    },
+    {
+      "path": "include/combat/CardSelectInfo.h",
+      "before": "82f7bde7ede6412cbccbb7f1aa4f7b4a493a1cc5c076162e350d390f4c9a3cda",
+      "after": "0ca34522a27e9c8e25246cabd55e4024ef42eb0de76db088ecce5bd750dcc16e"
+    },
+    {
+      "path": "include/combat/Monster.h",
+      "before": "36b055c855d0808faf8f6c820cb8eed1027ba1f6dda5fb9dd31a807641a231f5",
+      "after": "6b042daf0a5a811ebe956ae97f6956dd4a703a6dce749a8acd750c387e038d62"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "a1b39b1f4d8e04858480fabf68620a0bf3f7f75343b5a5dfcecaee50a7c599e9",
+      "after": "e56741776f20c95258b6f7fae4c52ceda46637cb30251b39e27a9f915410bcb3"
+    },
+    {
+      "path": "include/constants/CardPools.h",
+      "before": "bae67383f9b6239263a67b0db7ae34f14aaf27ac812be8874f865b7ed10f7073",
+      "after": "468d456e99928291d1524e37effb83d137dd2ca3207b4f71ac61da7927340279"
+    },
+    {
+      "path": "include/constants/Cards.h",
+      "before": "a963ece62d7e95708f82385d3618519b7c9e338c96f086dfa123530c3ae7506e",
+      "after": "eecd7c7d7d3cd31142c1c65247ba474f5145497d742c058747fae029ac03a7d5"
+    },
+    {
+      "path": "include/constants/Events.h",
+      "before": "286a6556f2ef7261f682bcf59752f3fb9dea6dc3b3b24a952295d2db65e69e38",
+      "after": "4d4088c6da82780a6da4307ccb693bcdf22279e025b77f1fd0bab5d8f8d0ab9f"
+    },
+    {
+      "path": "include/constants/MonsterIds.h",
+      "before": "3ade9312c0a3e0d907d2967462ca160009c5f15b4eccff5ab14bbe4a545f569b",
+      "after": "7403a5aa94ac3e512a81b6a9d0b54d615cfb2366079dffb9e270b624f2324978"
+    },
+    {
+      "path": "include/constants/MonsterStatusEffects.h",
+      "before": "2e9a3dc1962e5baec112edd8c770dabc6802e9e074f047cdf894cd8a0fd7e947",
+      "after": "3167d0b6039a042e0ea7e15ff78b50a95654a63a5887cc87f53d8586f2e77078"
+    },
+    {
+      "path": "include/constants/SaveFileMappings.h",
+      "before": "412fb5816e77d438fde21d693242830b7b8e2193aeb1a51d0bd26a65618a44dc",
+      "after": "fdd7dd134135cfdd35e6e9da91fcb459e95507886783c2ce548c3449c54a2754"
+    },
+    {
+      "path": "include/game/Card.h",
+      "before": "c1a24ce71429f66630dba7653573de399bb5c0b334ce91456034ce68e8c8337a",
+      "after": "6eba84fc44670e099107873064310e1915b35c11aef6f016b25204b511f5f1f7"
+    },
+    {
+      "path": "include/game/Deck.h",
+      "before": "7c7240b9467ded944b1f86f0266f86ba7bbffaf97c185437b416dfcf2f177f7e",
+      "after": "4fd1abb2a3fe7d47351a9d405ccd94fb4b9d162b1e5e35af5be42c469dcb3a09"
+    },
+    {
+      "path": "include/game/GameContext.h",
+      "before": "b78fd16448b96370fd78740a14baa00b4f6811c820dc544dd5c38cba01f73133",
+      "after": "68effa20d3a75e61027253c68fa4a27a0a86592b519cbac870c56d5a141fbeb2"
+    },
+    {
+      "path": "include/game/Neow.h",
+      "before": "d255477d460b59612e7a1e54ee1b686c5c5aeb0335851c8ff883cd8297f5ed57",
+      "after": "edcee74df135106b7522de559501504a46b338f7f00601e0b54c5df04948fbae"
+    },
+    {
+      "path": "include/game/SaveFile.h",
+      "before": "d27d3121125d9a4264bef5a1aed23949291cb7791ab2c684532525210cbc2bc3",
+      "after": "6611a58481092e81af04f216fa13cc9954f3c01a8de45f964f9e6e2b5bdd6f4a"
+    },
+    {
+      "path": "include/sim/search/GameAction.h",
+      "before": "15118481500a2599b3944981bf314e02dd17abeb94c22040066eaddb38cee424",
+      "after": "1f46e878fa0969be8e45ef690dcdbfaa2387277b20f097abff01833a41229497"
+    },
+    {
+      "path": "include/sim/search/ScumSearchAgent2.h",
+      "before": "559334c2c7308c618accdcc48d09afbd1914aacd3fbce640942c6fcddb1f27e0",
+      "after": "f0b9c8f22f66a2084acc4f400dc0b446b1fea82d9b19db2fdf4145bdcbdd9789"
+    },
+    {
+      "path": "include/sts_common.h",
+      "before": "9b5cfb49b16d299d2d6df5d94818d84621c44716d6ab282b8de98d75431e9ff6",
+      "after": "ece0d84459de6548b07b23e4bdac24a7f29b4ad78494d42e77a43815b1cc5a2c"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "105f6644f1d65e34aff9d6bc1b607a8935c19e190a8baa2b8e6eaae1680f5039",
+      "after": "51d2038a86e998b461447fc1b0bbce4f9c2896798d1cd61759c6dfdf82fcf501"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "553972d3cec5bb137760f16bc76e5ca6dea1e36d2da68182c90ce19062ef3135",
+      "after": "8c7141f4fce997790c8014afd67d1be6b8806a5dff4fb7da78c70850dd4c7ae3"
+    },
+    {
+      "path": "src/combat/CardInstance.cpp",
+      "before": "125618b3ea788ddb916d8c273745ccf91d41dc12a62abf95ceb417454df3672d",
+      "after": "b812ac04153ed214de0bf153a128b791ec534cfa98d737aa6ae884c7d3a68d30"
+    },
+    {
+      "path": "src/combat/CardManager.cpp",
+      "before": "127dad6b7d9d6318f64907256b508a1ee82ae8d87d747e2cf1fcb9ac6526ad9d",
+      "after": "ba85cc826ab010210e3b86e0389b9c952d1388cb8cc71dba9dd225356d7b432f"
+    },
+    {
+      "path": "src/combat/CardQueue.cpp",
+      "before": "466a83b9397c035a6de206b445b1d2177e4b2faa276bc32eb5321a2b6a3bb443",
+      "after": "d336080604bce720a223cf5ad6056ae639bbf2411b8a74e05664e96639989622"
+    },
+    {
+      "path": "src/combat/Monster.cpp",
+      "before": "4a60d07bb5872b728470f270b6ca8e2534709cb6562f14b86ace2ab7b3207493",
+      "after": "1295afe8c809aba8e40d0da9b2a2c221741aae97853aa9ab0b2ebe7da3c6b22e"
+    },
+    {
+      "path": "src/combat/MonsterGroup.cpp",
+      "before": "f0464f249f33a232e46ce53a713ffd4f94b8db101d2231c2ff8d9540aac704b5",
+      "after": "9f2d29389327844f23fa0b748eed3a113371d09fa45f0a9874e125eb11619dd3"
+    },
+    {
+      "path": "src/combat/MonsterMoveDamage.cpp",
+      "before": "10dda80b953c876e259fb6985d37b65767491fa848320fd2462796e21a508dc1",
+      "after": "d80b40a351da4aec3853f1d7f50f451a856ea86b8602318dbda30fd09f73358d"
+    },
+    {
+      "path": "src/combat/MonsterSpecific.cpp",
+      "before": "dc91053589a0ad7fd46236efcf0728d0e504ebea1bbd3b8bc120a88026efd161",
+      "after": "1e492ee24752ce7823ee998e3e7fabd2b8737211dc9dac540921421756493016"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "cb7b8abba9db74164da71d29b91cf8fc1160fc815d6292906cfff5c9a2c689c7",
+      "after": "a64f044350e6759032be9959aebb16ba01d3a0696b006b65fe9fdbd52d15a4f8"
+    },
+    {
+      "path": "src/game/CombatReward.cpp",
+      "before": "c59360fbe6d089b17a531a366c9b11a73eef71db6e280679274c1ac8a32a3a86",
+      "after": "9283b39ca83e02424e7640809f663fa380871a4556096f614a8e35a224821c38"
+    },
+    {
+      "path": "src/game/Deck.cpp",
+      "before": "50bcbe3c218577db69b076d8659f69a18c0c7f702004a0e9894d9307b5b2b3e1",
+      "after": "5e79336b46e820f4dd5d5ce9aadb1261ff27ce45c44d28843a66ca7aa8696119"
+    },
+    {
+      "path": "src/game/Game.cpp",
+      "before": "d34ae840b784dbb6691ad8f1752b21a9f8356565c2575f34f0c7a25a2bf546d8",
+      "after": "a4248e38eb3496c61403f4efaf572919fd7a88f1cea3948b98c0207aab18357d"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "f19e4d592f61e72e13777460b205181ba654a10f0639b5f218e8f3b6d5f76d5e",
+      "after": "f5fddb3ec05e26f1d1b87b9dde4bd392bbb00e67b5858af4c29a4dd0366510f9"
+    },
+    {
+      "path": "src/game/SaveFile.cpp",
+      "before": "bc53026e72154ae406cc730e0556b57a0bc6e0b4389989bb21afc339489af291",
+      "after": "7a5e414c20c1613c8a1108fa583a55d86f6ec3622961b54af67af5763a6500c1"
+    },
+    {
+      "path": "src/game/Shop.cpp",
+      "before": "fe0f25a7dc8ee129f665b8ab752c70334f6319925b2746fd464b5b065d7b834b",
+      "after": "c463ba33c05cad9d6ae3eb111685c08384c92ed408914711a4eed7c28bfe9b95"
+    },
+    {
+      "path": "src/sim/BattleSimulator.cpp",
+      "before": "da25126d2595c11139060bad478f8c6b516bc2f35cdbf462475c1320aa769f10",
+      "after": "a5a7011434d9b50e4f5010cee94c8ffe41e80e1c6db1a0c12fe79ab9919a7d23"
+    },
+    {
+      "path": "src/sim/PrintHelpers.cpp",
+      "before": "9c89229a38b504936d6e5474758e7f24b0db24ceb29d2a7ca726ae3bcd7262f7",
+      "after": "34e296aceb587147253b00ddcf2f80b1af88ea6d884f9cba50e383d06c24ee07"
+    },
+    {
+      "path": "src/sim/search/Action.cpp",
+      "before": "ba06a6052b6300ff359582ca1e21b80311327eee51b3997f5ec682f60e5e6b08",
+      "after": "bf8814f373c476139f673f1762bba0ad611f031a72cfd9d7daa1b0e37836905b"
+    },
+    {
+      "path": "src/sim/search/BattleScumSearcher2.cpp",
+      "before": "d265e9a4f2e0e6d3196658a4ad976ea132c340b532f79800b5f16d40b4b71d1f",
+      "after": "1b223ccb8da09f57e175e623b8b7387b7b3069fa57b7fe0b8bbf3f5210efeb41"
+    },
+    {
+      "path": "src/sim/search/GameAction.cpp",
+      "before": "3614c02b8a9f634432d6c7605f6690ad2edde011c93b0aa615e33ef8cf8898d8",
+      "after": "159f02c48b51f58ff3d22f433b69049c1e9a471e3f4982fb171e63cf97678749"
+    },
+    {
+      "path": "src/sim/search/ScumSearchAgent2.cpp",
+      "before": "7bcfe79c60055df5e0e48a10bc40933fe7b400981500049cd00d26b514e7547b",
+      "after": "bdc18662b8352ce30f935e1a3c94e52f9b63e8ab9766c0a7b8acb41f7fac121a"
+    },
+    {
+      "path": "src/sim/search/SimpleAgent.cpp",
+      "before": "963b11291433d979972547ffcba7c953f5447543e5cd90604a12ca9312f97c87",
+      "after": "148ba64449a468e5f267f6ec4734326fe55853b44d6ffa4a013ed4a6e59a1d21"
+    }
+  ]
+}

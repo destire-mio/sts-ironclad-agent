@@ -1,0 +1,56 @@
+diff --git a/src/sim/search/BattleScumSearcher2.cpp b/src/sim/search/BattleScumSearcher2.cpp
+--- a/src/sim/search/BattleScumSearcher2.cpp
++++ b/src/sim/search/BattleScumSearcher2.cpp
+@@ -21,6 +21,7 @@
+ 
+ search::BattleScumSearcher2::BattleScumSearcher2(const BattleContext &bc, search::EvalFnc _evalFnc)
+     : rootState(new BattleContext(bc)), evalFnc(std::move(_evalFnc)), randGen(bc.seed+bc.floorNum) {
++    bestActionValue = std::numeric_limits<double>::lowest();
+ }
+ 
+ void search::BattleScumSearcher2::search(int64_t simulations) {
+@@ -116,15 +117,17 @@
+ 
+     const auto &edge = parent.edges[edgeIdx];
+ 
+-    double qualityValue = 0;
+-    if (!bestActionSequence.empty()) {
+-        auto avgEvaluation = edge.node.evaluationSum / (edge.node.simulationCount+1);
+-        double evalRange = bestActionValue - minActionValue;
+-        qualityValue = avgEvaluation / evalRange;
+-    }
+-
+-    double explorationValue = explorationParameter *
+-            std::sqrt(std::log(parent.simulationCount+1) / (edge.node.simulationCount+1));
++    // Visit every legal edge before applying a finite confidence score.
++    if (edge.node.simulationCount == 0) return std::numeric_limits<double>::infinity();
++    double qualityValue = 0.0;
++    const double evalRange = bestActionValue - minActionValue;
++    if (std::isfinite(evalRange) && evalRange > 0.0) {
++        const double average = edge.node.evaluationSum / edge.node.simulationCount;
++        qualityValue = (average - minActionValue) / evalRange;
++    }
++    // Identical returns carry no preference; avoid 0/0 and use exploration.
++    const double explorationValue = explorationParameter *
++        std::sqrt(std::log(parent.simulationCount + 1) / edge.node.simulationCount);
+ 
+     return qualityValue + explorationValue;
+ }
+@@ -164,7 +167,16 @@
+         }
+ 
+         auto dist = std::uniform_int_distribution<int>(0, static_cast<int>(tempNode.edges.size())-1);
+-        const int selectedIdx = dist(randGen);
++        // Tree expansion still includes every legal action. Only the rollout
++        // policy gives END_TURN one tenth the weight while cards are playable.
++        const bool hasCard = std::any_of(tempNode.edges.begin(), tempNode.edges.end(),
++            [](const auto &edge) { return edge.action.getActionType() == ActionType::CARD; });
++        int selectedIdx;
++        std::uniform_int_distribution<int> keepEndTurn(0, 9);
++        do {
++            selectedIdx = dist(randGen);
++        } while (hasCard && tempNode.edges[selectedIdx].action.getActionType() == ActionType::END_TURN
++                 && keepEndTurn(randGen) != 0);
+ 
+         const auto action = tempNode.edges[selectedIdx].action;
+ //        action.printDesc(std::cout, state) << std::endl;

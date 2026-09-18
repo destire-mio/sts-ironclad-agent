@@ -5,16 +5,10 @@
 """
 import os, sys, json, time, random, statistics, tempfile, shutil
 import multiprocessing as mp
-SB = os.environ.get("STS_BOT_DIR", "../sts-bot")
-sys.path.insert(0, os.path.join(SB, "sim/sts_lightspeed/build312"))
-sys.path.insert(0, SB)
 import torch
-import armG_train as A      # 复用 Scorer / build_choices / play_game / obs / 词表 / read_seeds
+import armG_train as A      # 复用 Scorer / build_choices / play_game / obs / read_seeds
 
-# 冻结词表(并行各进程同一份,禁止增长防漂移)
-def _frozen_idx(name):
-    return A._vocab.get(name, A.VOCAB_CAP - 1)
-A.card_idx = _frozen_idx
+SB = A.SB
 
 ARCH = tuple(int(x) for x in os.environ.get("ARM_G_ARCH", "128,128").split(","))
 

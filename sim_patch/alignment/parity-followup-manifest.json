@@ -1,0 +1,101 @@
+{
+  "complete": true,
+  "patch": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/sim_patch/parity_followup.patch",
+  "patch_sha256": "737475a119d1e53cf1f0fe055fb5fe5e5ccdd5ae8501fe4be535cbe01a2665e7",
+  "source_files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "543f8ea9fb0b0242991cf5854659ed7a9c4b759b8abfd0643d9ef60667887324",
+      "after": "dba6026f4ebe261d9efe56a930d29c18d25471ea324bc4b492b217c4407f34d2"
+    },
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "5bcadcce47c5de436ec73945a9555ff00a6f8eb29fd73feddc2ce532b72f18a8",
+      "after": "fa7186804308940676430ae0da857bb18d729504dd363f6ed51eff687183a463"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "e56741776f20c95258b6f7fae4c52ceda46637cb30251b39e27a9f915410bcb3",
+      "after": "a28d3e61f2d00bce191a5f38ad02e14702f83542eac6ec0cd3fa5ca8aa1478cc"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "63e158f9445a86c2a6c1cff53ece0047ec1d1275adf27180fdd9fb88ed9f3e7f",
+      "after": "c218a26611c8f0687a6cd5099bc80f64466c48684581b647d5cee97002417105"
+    },
+    {
+      "path": "src/combat/Monster.cpp",
+      "before": "1295afe8c809aba8e40d0da9b2a2c221741aae97853aa9ab0b2ebe7da3c6b22e",
+      "after": "c103ccfe4de18730e9c85f6d7af0077c9239835edc0f7e873403a1da5838c363"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "a64f044350e6759032be9959aebb16ba01d3a0696b006b65fe9fdbd52d15a4f8",
+      "after": "fd232c9f386c21934bd06ac2ec3b652c2bbd62f1b94c03f2e60056951031c87e"
+    }
+  ],
+  "steps": [
+    {
+      "patch": "sim_rl_hooks.patch",
+      "operation": "check",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "sim_rl_hooks.patch",
+      "operation": "apply",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "combat_rules.patch",
+      "operation": "check",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "combat_rules.patch",
+      "operation": "apply",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "ironclad_a20.patch",
+      "operation": "check",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "ironclad_a20.patch",
+      "operation": "apply",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "action_queue.patch",
+      "operation": "check",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "action_queue.patch",
+      "operation": "apply",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "parity_followup.patch",
+      "operation": "check",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "parity_followup.patch",
+      "operation": "apply",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "changed_files_match": true,
+  "full_rebuild_required": true
+}

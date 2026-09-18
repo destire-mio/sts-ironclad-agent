@@ -1,0 +1,71 @@
+{
+  "scope": "controlled original methods and original save loader; no game binaries; not complete runs",
+  "save_fields": "only fields consumed by SaveFile; original source records remain unmodified",
+  "sources": [
+    {
+      "run": "original-outside-04",
+      "sha256": "d37127ef06730a9ebfbe2cc55cf35d3c0a3a2a1601098452b4975532edf32bed",
+      "count": 32
+    },
+    {
+      "run": "original-relic-lifecycle-02",
+      "sha256": "671c95f2fabd0733f9a1d1493a72e9ce86bedec1f9158d3f597328cd29339c4e",
+      "count": 157
+    },
+    {
+      "run": "original-outside-expanded-02",
+      "sha256": "a3bfb32e917125e6cce29180c4835e8d8d4932bcb87dbc7893d916f51c3489c0",
+      "count": 101
+    },
+    {
+      "run": "original-save-02",
+      "sha256": "e3326987319c6051e47a31f566a401addf8ee18e37732a01252f1c762ef73be1",
+      "count": 9
+    },
+    {
+      "run": "original-save-04",
+      "sha256": "b7cfefd127dc022fb68610abfc0675ccd3a94d13f0b6d61d4e2828c31da0ef86",
+      "count": 15
+    },
+    {
+      "run": "original-dead-adventurer-01",
+      "sha256": "3bf798ef450b82f649c3d909b60818041dbb4d04242d5c65daf9b0da96b7391f",
+      "count": 37
+    },
+    {
+      "run": "original-dead-complete-01",
+      "sha256": "b970f58bfc6c89b2483356e1acffddd7af898041459e8159ec76416e66bf32be",
+      "count": 3
+    },
+    {
+      "run": "original-event-rewards-03",
+      "sha256": "af5a6b0d1480bba4720ab10dfedf9f6b76789f8b9285aaf555cfa011f002bea9",
+      "count": 18
+    },
+    {
+      "run": "original-entry-02",
+      "sha256": "8582f62f80cb0f65b2f78987426cea58f3d35fec630d268c1fb44b2d42117de8",
+      "count": 35
+    },
+    {
+      "run": "original-save-boundaries-01",
+      "sha256": "5ef73dfe97e7b9849fad7ac8857ed91a657128eb22c9f2a787526852c66bc24f",
+      "count": 11
+    },
+    {
+      "run": "original-large-selection-01",
+      "sha256": "010c5a316a9dcb95c1179efcf26e8c2b2dda10c854fdba07960787c93fcee470",
+      "count": 1
+    },
+    {
+      "run": "original-bottled-identity-01",
+      "sha256": "04616547fa3eda2ae0eb4ab32dc6226d3d28895d44ae3ca079c3268e3f146eb2",
+      "count": 16
+    },
+    {
+      "run": "original-victory-02",
+      "sha256": "fe7bd392075a1c95c20b563d1fef8137e6674db6d9cc357270bcbd6fd4b819b9",
+      "count": 32
+    }
+  ]
+}

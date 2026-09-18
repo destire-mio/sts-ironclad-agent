@@ -1,0 +1,35 @@
+--- a/src/sim/search/BattleScumSearcher2.cpp
++++ b/src/sim/search/BattleScumSearcher2.cpp
+@@ -102,8 +102,11 @@
+ 
+     for (auto it = stack.rbegin(); it != stack.rend(); ++it) {
+         auto &node = *(*it);
++        // Retain the best sampled continuation for deterministic planning.
++        // Reuse the existing scalar storage; no class layout or tree/RNG change.
++        node.evaluationSum = node.simulationCount == 0
++            ? evaluation : std::max(node.evaluationSum, evaluation);
+         ++node.simulationCount;
+-        node.evaluationSum += evaluation;
+     }
+ }
+ 
+@@ -122,8 +125,8 @@
+     double qualityValue = 0.0;
+     const double evalRange = bestActionValue - minActionValue;
+     if (std::isfinite(evalRange) && evalRange > 0.0) {
+-        const double average = edge.node.evaluationSum / edge.node.simulationCount;
+-        qualityValue = (average - minActionValue) / evalRange;
++        const double bestReturn = edge.node.evaluationSum;
++        qualityValue = (bestReturn - minActionValue) / evalRange;
+     }
+     // Identical returns carry no preference; avoid 0/0 and use exploration.
+     const double explorationValue = explorationParameter *
+@@ -439,7 +442,7 @@
+         double drawBonus = bc.cardsDrawn * 0.03;
+         double aliveScore = bc.monsters.monstersAlive*-1;
+ 
+-        return (1-getNonMinionMonsterCurHpRatio(bc))*10 + aliveScore + energyPenalty + drawBonus + potionScore / 2 + (bc.turn * .2);
++        return (1-getNonMinionMonsterCurHpRatio(bc))*10 + aliveScore + energyPenalty + std::min(20.0, drawBonus + bc.turn * .2) + potionScore / 2;
+     }
+ }
+ 
