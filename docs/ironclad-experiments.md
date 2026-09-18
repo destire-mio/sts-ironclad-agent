@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E75 completion, E76 rule repairs and E77 preview-timing diagnosis on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E78 repairs and the registered E79 repaired-runtime refresh on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2010,3 +2010,22 @@ E76 独立补丁构建及 16 项针对性验证通过，变更的 8 个文件与
 五项均完成，干预前共 1,864 条原版命令的游戏状态（去除实例 UUID）与全部观察 RNG 匹配，实例完成清理。同一种子的三个诅咒时长得到相同变牌结果、相同 miscRng，cardRng 随动画变动；因此不是变牌池选择本身导致偏差。原版预览计时器在确认后保留，不能把每次变牌都硬编码成推进一次随机数。
 
 后续修复需要模拟预览计时并声明等待帧数／帧间隔输入，验证即时、延迟、重复预览及普通牌控制；外部计时属于执行条件，不能通过读取原版 RNG 再赋回模拟器来“对齐”。E77 是因果诊断，不是修复完成或新胜率。正式 E73 更新保持为零。证据目录 `ironclad-alignment/evidence/e75-preview-input-diagnosis-20260919-01/`；摘要 `sim_patch/alignment/e77-preview-timing-report.json`，完成证明 SHA `327d47164cd6f9b2b716242697516030a40349b072524dfb8653d3b6cac28b43`。
+
+
+## 87. E78：变牌预览计时与 E75 界面回放修复（2026-09-19）
+
+E77 的原版实验落实为持久的 float32 预览计时器。自然隔离运行从 0 开始；每次单牌变换使用外部提供的帧数和帧间隔，默认是确认时的一帧、1/60 秒。计时器跨事件／幕保留，写入运行指纹；普通红牌预览推进计时但不消耗持久 RNG，多牌变换及 Astrolabe 不进入这个预览。原版回放读取计时器并核对，不向游戏写入计时器或 RNG。
+
+五组 E77 自然前缀对照均匹配：两个即时诅咒案例各消耗 1 次 cardRng，同一诅咒等待 6 帧消耗 1 次、等待 12 帧消耗 2 次，红牌控制消耗 0 次；最终牌组、持久 RNG、miscRng 和 float32 计时器吻合。26 个 E75 首次差异边界匹配 26 个。五组 C++ 目标回归在修复前失败、修复后通过，含重复计时、分支隔离和多牌对照；完整 CTest 通过 183 项，增补的运行指纹检查通过，分发补丁独立构建通过 8 个针对性入口。
+
+首次完整回归保留一项失败：20 个历史诅咒变牌夹具的原版 OutsideProbe 直接写入 selectedCards 并关闭界面，不运行预览。对应的 C++ 受控夹具现在采用零预览帧；原版期望数据没有改写。生产接口拒绝零帧，另有自然前缀计时对照。这项夹具修订不能视为自然玩法验证。
+
+E75 六条界面错误均越过原卡点：捕梦网奖励关闭三条、全知头骨开场两条、击杀首领后的头槌选牌一条。采用不变的旧引擎／旧动作隔离界面修复：三条到原版心脏，共 3,487 条命令；三条停在后续旧引擎差异，修复版匹配这三个边界。首轮还遇到烟雾弹被当作定向药水；原版 use 会把目标换成玩家，回放器现提供合法的协议占位目标，复跑到心脏。失败尝试、原始哈希和清理结果保留。
+
+引擎 SHA `8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4`；完成证明 SHA `6fb46ca75becec4225d443a6265c581b755bdfd13e6a045076704641e4b99a3e`。证据在 `ironclad-alignment/evidence/e75-timing-ui-repair-20260919-01/`，分发补丁为 `e78_preview.patch`，接在 `e75_rules.patch` 后。这是已发现边界的修复证据，不能外推为所有路线一致或模型提升。E73 旧引擎数据继续暂停，正式优化器更新为零。
+
+## 88. E79：修复版自然整局基线刷新（2026-09-19，执行中）
+
+保留 E67 全部 2,560 个种子及原分组：fit 1,536、label_holdout 512、train_development 512，不筛选成功种子。冻结相同父模型、E78 引擎和带计时指纹的运行器；MCTS 8,000／Boss ×3，外部时间 45 秒／层，预览确认一帧／1/60 秒，8 个单线程进程。从自然开局运行到终局，逐条验证状态／RNG／预览计时指纹及局外 NN 决策，重算所有胜局。执行故障保留空标签并阻断训练。
+
+这批是开发基线；没有梯度更新，不能称为新模型成绩或未见种子验收。后续对修复版全部开发胜局做原版完整回放，再为遗物＋选牌组合重建续局标签。不得恢复 E73 旧标签或把旧 E67 的 255／2,560 成绩沿用到 E78。预注册 SHA `56652e3e2e8ee9784d9ff59b7b178952a80d9a3f9a661ecdeb433457cdb5c705`，冻结清单 SHA `f135ae7a93c20584df892cad23c82c5b1b20caf824b8729f8a2456d07e6b165c`；运行目录 `sts-rl-agent-pr/runs/heart-e78-repaired-refresh-20260919-01/`。首次启动漏写 CLI 的 run 子命令，在采样前退出；原错误日志保留，补全命令后启动，实验输入未变化。

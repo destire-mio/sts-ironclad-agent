@@ -16,6 +16,7 @@ git apply /path/to/sts-rl-agent/sim_patch/action_queue.patch
 git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
 git apply /path/to/sts-rl-agent/sim_patch/e62_rules.patch
 git apply /path/to/sts-rl-agent/sim_patch/e75_rules.patch
+git apply /path/to/sts-rl-agent/sim_patch/e78_preview.patch
 ```
 
 独立的 CMake 入口构建 C++ 回归、Python 模块和整局流程驱动。需要 C++17、CMake、Python 开发环境、pybind11 与 nlohmann/json 头文件。
@@ -108,3 +109,8 @@ macOS 使用带 ASan／UBSan 的 Python 模块时，Homebrew 的普通启动器�
 E75 覆盖预先固定的全部 53 条 E67 开发胜局：21 条自然开局至心脏的状态及 RNG 匹配，26 条首次差异，6 条回放映射错误。它不提供总体原版胜率。[E75 摘要](e75-development-parity-report.json)保留全部分类。
 
 `e75_rules.patch` 修复 11 类差异，接在 `e62_rules.patch` 后；[增量清单](e75-rules-manifest.json)记录 8 个文件摘要。15 组针对性测试在旧源码上为 13 个目标失败、2 个对照通过，修复后通过 15 组，完整本地 CTest 通过 176 项。26 个自然首次差异中修复后匹配 24 个。棱彩碎片保留原版商店池与报价位置，购买候选被排除。当前剩余为诅咒变牌预览 RNG、六条回放映射和修复后的整局复验。E73 保持暂停。[E76 摘要](e76-rule-repair-report.json)给出证据范围；以上历史段落保留当时状态，不能用其测试数量认定当前全面对齐。
+
+
+E78 adds persistent transform-preview timing (`e78_preview.patch`, applied after `e75_rules.patch`). The default natural input is one confirmation update at float32 1/60 second; explicit positive frame count/delta and the carried timer enter replay identity. Rebuild the core and bindings. Five original natural timing controls, 26 earlier first-divergence boundaries, and three deeper UI boundaries match. Full CTest: 183; independently applied portable focused checks: 8. Controlled OutsideProbe fixtures bypass the original animation and retain zero preview updates for that separate test boundary. Current results and remaining full-run requirements are recorded in the training status.
+
+The supplied `verify_heart_winners.py` is the original-game replay driver, not a self-contained original-game installation: it requires the private licensed-game oracle runner and a frozen local cohort. `e78-preview-observer.patch` adds read-only timer observation to that local oracle. No game JARs, licensed game source, checkpoints, or raw private traces are included.

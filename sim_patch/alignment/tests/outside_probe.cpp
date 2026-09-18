@@ -29,6 +29,10 @@ json snapshot(const GameContext&g){
 int main(int argc,char**argv){try{
  json q;std::ifstream(argv[1])>>q;if(q.contains("save")){SaveFile saved(q["save"].dump(),CharacterClass::IRONCLAD);GameContext loaded;loaded.initFromSave(saved);std::cout<<snapshot(loaded).dump()<<'\n';return 0;}GameContext g(CharacterClass::IRONCLAD,123,20);g.act=q.value("act",1);g.floorNum=q.value("floor",6);g.curHp=q.value("hp",40);g.maxHp=q.value("max_hp",80);g.gold=q.value("gold",1000);
  g.curRoom=q.value("room",std::string("EVENT"))=="SHOP"?Room::SHOP:Room::EVENT;g.screenState=ScreenState::MAP_SCREEN;g.regainControlAction=[](GameContext&a){a.screenState=ScreenState::MAP_SCREEN;};
+ // OutsideProbe.java injects selectedCards and closes the grid without calling
+ // its preview update (lines 66-67). This controlled fixture tests the final
+ // transform only; natural UI timing is covered by E78's separate replays.
+ g.transformPreviewFrames=0;
  g.miscRng=Random(q.value("misc_seed",0));g.cardRng=Random(123);g.cardRandomRng=Random(123);g.potionRng=Random(123);g.relicRng=Random(123);g.merchantRng=Random(123);g.cardRarityFactor=5;g.shuffleRng=Random(123);
  if(q.contains("pools")){auto&p=q["pools"];if(p.contains("colorless"))g.colorlessCardPool=p["colorless"].get<std::array<CardId,35>>();g.commonRelicPool=p["common"].get<std::vector<RelicId>>();g.uncommonRelicPool=p["uncommon"].get<std::vector<RelicId>>();g.rareRelicPool=p["rare"].get<std::vector<RelicId>>();g.shopRelicPool=p["shop"].get<std::vector<RelicId>>();g.bossRelicPool=p["boss"].get<std::vector<RelicId>>();}
  if(q.contains("deck")){g.deck=Deck();for(auto c:q["deck"]){g.deck.obtainRaw(parseCard(c));if(c.is_object()&&c.value("bottled",false))g.deck.bottleCard(g.deck.size()-1,g.deck.cards.back().getType());}}

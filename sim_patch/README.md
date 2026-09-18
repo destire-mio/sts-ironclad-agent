@@ -15,6 +15,8 @@ git apply /path/to/sts-rl-agent/sim_patch/ironclad_a20.patch
 git apply /path/to/sts-rl-agent/sim_patch/action_queue.patch
 git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
 git apply /path/to/sts-rl-agent/sim_patch/e62_rules.patch
+git apply /path/to/sts-rl-agent/sim_patch/e75_rules.patch
+git apply /path/to/sts-rl-agent/sim_patch/e78_preview.patch
 ```
 
 第一份补丁提供基础接口和暂停功能，第二份修改战斗规则，第三份增加 A20 至心脏的规则、状态与训练接口，第四份修复动作队列容量及战斗结束后的队尾。第四份改变 `BattleContext` 的内存布局，必须重编所有游戏核心、搜索和 Python 绑定对象，不能与旧静态库或绑定对象混合链接。
@@ -170,3 +172,8 @@ E60 两组共享该保护，原局外网络与学习首幕 Boss 遗物的策略�
 E66 引擎下四条预选开发胜局通过原版自然开局至 A20 心脏的相同行动重放，共 4,080 条原版操作；逐步比较状态与 RNG。`steam/steam_mcts.py` 修复了史莱姆分裂后消失母体干扰目标编号的问题，保留死亡子体和后续分裂需要的槽位。六个映射用例旧版失败五个、修复后全部通过，161 项 CTest 通过。
 
 核验器等待原版消耗动画的费用重置回调完成，未修改原版费用或 RNG。四条路线与稳定动画边界不构成全部内容对齐，也不是模型在原版上的总体胜率。结果及历史失败口径见 [E68 报告](alignment/e68-natural-parity-report.json)。
+
+
+E78 adds persistent transform-preview timing (`e78_preview.patch`, applied after `e75_rules.patch`). The default natural input is one confirmation update at float32 1/60 second; explicit positive frame count/delta and the carried timer enter replay identity. Rebuild the core and bindings. Five original natural timing controls, 26 earlier first-divergence boundaries, and three deeper UI boundaries match. Full CTest: 183; independently applied portable focused checks: 8. Controlled OutsideProbe fixtures bypass the original animation and retain zero preview updates for that separate test boundary. Current results and remaining full-run requirements are recorded in the training status.
+
+The supplied `verify_heart_winners.py` is the original-game replay driver, not a self-contained original-game installation: it requires the private licensed-game oracle runner and a frozen local cohort. `e78-preview-observer.patch` adds read-only timer observation to that local oracle. No game JARs, licensed game source, checkpoints, or raw private traces are included.

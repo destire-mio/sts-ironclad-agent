@@ -33,17 +33,25 @@ def digest(value):
 def clock_input(gc, config):
     # External elapsed time is an experimental input, never simulator wall time.
     gc.set_play_time(gc.floor_num * config["seconds_per_floor"])
+    if hasattr(gc, "set_transform_preview_timing"):
+        gc.set_transform_preview_timing(config.get("transform_preview_frames", 1),
+                                        config.get("transform_frame_delta_seconds", 1 / 60))
 
 
 def fingerprint(gc):
-    return digest({
+    state = {
         "observation": A.obs_vec(gc), "rng": dict(gc.rng_states),
         "actions": [int(a.bits) for a in sts.get_legal_game_actions(gc)]
         if gc.screen_state != sts.ScreenState.BATTLE else [],
         "outcome": int(gc.outcome), "encounter": int(gc.encounter),
         "deck": [[int(c.id), c.upgrade_count, c.misc] for c in gc.deck],
         "repr": repr(gc),
-    })
+    }
+    # Keep historical engines replayable without changing their fingerprints.
+    # In the repaired engine, the carried preview timer affects future RNG.
+    if hasattr(gc, "transform_preview_state"):
+        state["transform_preview"] = dict(gc.transform_preview_state)
+    return digest(state)
 
 
 def terminal(gc):

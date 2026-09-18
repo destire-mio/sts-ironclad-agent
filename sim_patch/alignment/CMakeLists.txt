@@ -143,3 +143,15 @@ foreach(case IN ITEMS corruption_mummified corruption_no_target corruption_exist
     add_test(NAME e75_${case} COMMAND e75_rules_tests ${case})
     set_tests_properties(e75_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e78_preview_tests tests/e78_preview.cpp)
+target_link_libraries(e78_preview_tests PRIVATE sts_core)
+foreach(case IN ITEMS single_curse carried_timer copy_isolation multi_control astrolabe_control)
+    add_test(NAME e78_${case} COMMAND e78_preview_tests ${case})
+    set_tests_properties(e78_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME e78_timing_contract COMMAND "${Python_EXECUTABLE}" "${TRAINING_TEST_DIR}/test_transform_preview.py" -v)
+set_tests_properties(e78_timing_contract PROPERTIES TIMEOUT 30
+    ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME e78_replay_ui_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_winner_ui.py" -v)
+set_tests_properties(e78_replay_ui_contract PROPERTIES TIMEOUT 15)

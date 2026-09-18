@@ -1,0 +1,80 @@
+--- a/include/game/GameContext.h
++++ b/include/game/GameContext.h
+@@ -217,6 +217,13 @@
+         int shopRemoveCount = 0;
+         bool speedrunPace = true; // Fresh runs start below Secret Portal's 800-second threshold.
+ 
++        // GridCardSelectScreen survives screen/act changes in the original.
++        // External timing includes preview updates while waiting and confirming.
++        float transformPreviewTimer = 0.0f;
++        int transformPreviewFrames = 1;
++        float transformPreviewDelta = 1.0f / 60.0f;
++        void setTransformPreviewTiming(int frames, float delta);
++
+         int curMapNodeX = -1;
+         int curMapNodeY = -1;
+         std::shared_ptr<Map> map = nullptr; // todo fix memory leak
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -6,6 +6,8 @@
+ 
+ #include <algorithm>
+ #include <cassert>
++#include <cmath>
++#include <stdexcept>
+ 
+ #include "constants/RelicPools.h"
+ #include "constants/CardPools.h"
+@@ -4016,7 +4018,33 @@
+     }
+ }
+ 
++void GameContext::setTransformPreviewTiming(int frames, float delta) {
++    if (frames < 1 || !std::isfinite(delta) || delta <= 0.0f) {
++        throw std::invalid_argument("transform preview needs at least one update and a finite positive delta");
++    }
++    transformPreviewFrames = frames;
++    transformPreviewDelta = delta;
++}
++
+ void GameContext::selectScreenTransform() {
++    // Only these single-card transformations open the animated confirmation
++    // preview. Multiple-card transforms (including Astrolabe) do not. The
++    // preview's curse sampler uses global cardRng, unlike the final transform.
++    const bool preview = info.toSelectCount == 1 && info.haveSelectedCards.size() == 1
++            && (curEvent == Event::NEOW || curEvent == Event::LIVING_WALL
++                || curEvent == Event::TRANSMORGRIFIER);
++    if (preview) {
++        const bool curse = info.haveSelectedCards[0].card.getType() == CardType::CURSE;
++        for (int frame = 0; frame < transformPreviewFrames; ++frame) {
++            transformPreviewTimer -= transformPreviewDelta;
++            if (transformPreviewTimer < 0.0f) {
++                if (curse) getRandomCurse(cardRng);
++                // Noncurse previews use a temporary unseeded Java RNG; they
++                // still advance this timer, but consume no persistent RNG.
++                transformPreviewTimer = 0.1f;
++            }
++        }
++    }
+     Random *rng;
+     switch (info.transformRng) {
+         case MISC_RNG:
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -437,6 +437,16 @@
+             if (!std::isfinite(seconds) || seconds < 0) throw std::invalid_argument("play time must be finite and nonnegative");
+             gc.speedrunPace = seconds < 800.0;
+         }, "Supply external elapsed gameplay seconds before a room/event action")
++        .def("set_transform_preview_timing", &GameContext::setTransformPreviewTiming,
++             pybind11::arg("frames"), pybind11::arg("delta_seconds"),
++             "Preview updates including confirmation; fresh isolated runs default to one update at 1/60 second")
++        .def_property_readonly("transform_preview_state", [](const GameContext &gc) {
++            pybind11::dict state;
++            state["timer"] = gc.transformPreviewTimer;
++            state["frames"] = gc.transformPreviewFrames;
++            state["delta_seconds"] = gc.transformPreviewDelta;
++            return state;
++        })
+         .def_property_readonly("deck",
+                [](const GameContext &gc) { return std::vector(gc.deck.cards.begin(), gc.deck.cards.end());},
+                "returns a copy of the list of cards in the deck"

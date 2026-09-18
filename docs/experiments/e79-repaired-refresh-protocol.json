@@ -1,0 +1,29 @@
+{
+  "plan": {
+    "experiment": "E79",
+    "created_at": "2026-09-18T22:27:04.448068+00:00",
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-repaired-refresh-20260918-01",
+    "source_manifest_sha256": "54b3e0d172ce8edf2db0d90c35ba1db354fa3c2cd54137721b2c7c8f3a6fa292",
+    "source_roles_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+    "repair_proof": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e75-timing-ui-repair-20260919-01/completion-verification.json",
+    "repair_proof_sha256": "6fb46ca75becec4225d443a6265c581b755bdfd13e6a045076704641e4b99a3e",
+    "family_counts": {
+      "fit": 1536,
+      "label_holdout": 512,
+      "train_development": 512
+    },
+    "question": "Rebuild the natural-run baseline and reusable labels after E76/E78 confirmed rule and UI-timing repairs, before relic/card joint learning.",
+    "assignment": "Retain every E67 fit/label_holdout/train_development family and role. No success-seed filtering. All 2560 families are development material and forbidden in final unseen acceptance.",
+    "runtime": "Existing E61-selected outside NN, E78 repaired native engine, natural Ironclad A20 Heart start, three keys, Act3 double boss, Act4; exclude Prismatic Shard. MCTS 8000 per call, boss x3. External clock45s/floor; float32 grid preview timer starts0, one confirmation update at1/60 second, carries between screens and acts.",
+    "resources": "8 single-thread workers,300s episode/360s process guard,10800s batch guard including winner replans; no paid resources, seed substitutions or timeout-as-death labels.",
+    "verification": "Full terminal/RNG/preview-timer fingerprint replay and every outside NN choice on all2560; freshly replan all winners. All faults retained and block training. Compare split outcomes to the preserved E67 baseline without transferring old labels.",
+    "next": "Replay every repaired-runtime development winner in original Java with timer/state/RNG checks; repair confirmed differences before reusing data. Only then register the next joint learning recipe and recollect affected full continuations. E73 old-engine labels remain paused.",
+    "limits": "New-engine development baseline, zero optimizer updates, not an unseen-seed score or50-percent acceptance. End-to-end original parity remains incomplete."
+  },
+  "plan_sha256": "56652e3e2e8ee9784d9ff59b7b178952a80d9a3f9a661ecdeb433457cdb5c705",
+  "manifest_sha256": "f135ae7a93c20584df892cad23c82c5b1b20caf824b8729f8a2456d07e6b165c",
+  "identity": {
+    "engine_sha256": "8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  }
+}

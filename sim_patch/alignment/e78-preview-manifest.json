@@ -1,0 +1,23 @@
+{
+  "experiment": "E78",
+  "patch_sha256": "2b915b7a0570f858c1d2cd3c2c492869a771826f2c0a0a4cb912e1fd30955552",
+  "applies_after": "e75_rules.patch",
+  "files": [
+    {
+      "path": "include/game/GameContext.h",
+      "before": "d3f941b957fbedd23dd205038a5ebe52f7b2bbeb22b60595d93bf7e9ee9d1ad4",
+      "after": "26cdc95480ef8f744eee7e063e7fc4e88d367b3f1291d42d47f57b0fe66a4212"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "4c3bddb41fc47b23cc0e74223c7bf151c301fc1c113c025026c4bc48eca4bf3d",
+      "after": "4df6846204af1445f7430c01eb2c151ea85f4880434e1c87dce6662c85e8444d"
+    },
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "dba6026f4ebe261d9efe56a930d29c18d25471ea324bc4b492b217c4407f34d2",
+      "after": "44633c7ffb4a9ffa2cdb5501225dc23e8c1eebde711195aeea0c296119d6f75a"
+    }
+  ],
+  "scope": "Persistent float32 single-transform preview timing; frame count and delta are external inputs, default one confirmation update at 1/60 second. Rebuild native core and bindings. No policy update."
+}

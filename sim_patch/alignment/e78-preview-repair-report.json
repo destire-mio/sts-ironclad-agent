@@ -1,0 +1,260 @@
+{
+  "status": "complete",
+  "experiment": "E78",
+  "finished_at": "2026-09-18T22:26:08.033535+00:00",
+  "engine_sha256": "8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4",
+  "initial_boundaries_matched": 26,
+  "timing_cases_matched": 5,
+  "deeper_ui_boundaries_matched": 3,
+  "full_ctest_passed": 183,
+  "portable_focused_passed": 8,
+  "ui_cases_resolved": 6,
+  "full_original_same_action_routes": 3,
+  "full_original_commands": 3487,
+  "limits": "E78 closes the observed E75 rule/timing/UI boundaries. New repaired-engine whole-run outcomes, original full-route parity and generalization remain unmeasured. E73 old labels remain halted; zero optimizer updates.",
+  "completion_sha256": "6fb46ca75becec4225d443a6265c581b755bdfd13e6a045076704641e4b99a3e",
+  "timing_contract": "Fresh isolated JVM and simulator start with preview timer 0. Default collapsed single-card transform confirms after one preview update at float32 delta 1/60; explicit frame count includes wait and confirmation. Timer persists across previews and is included in runtime fingerprints. Neow single transform, Living Wall and Transmogrifier show the preview; multi-transform and Astrolabe do not.",
+  "timing_evidence": [
+    {
+      "seed": 1746289500,
+      "wait_frames": 0,
+      "kind": "curse",
+      "natural_start": true,
+      "resynchronized": false,
+      "source_actions": 251,
+      "native_result_sha256": "5fa869272fa51ff5cceff54cc789cbaeafb5b688a9091b71173f3ed8a38512af",
+      "status": "matched",
+      "differences": {},
+      "samples": 1,
+      "timer": 0.10000000149011612
+    },
+    {
+      "seed": 1746289500,
+      "wait_frames": 6,
+      "kind": "curse",
+      "natural_start": true,
+      "resynchronized": false,
+      "source_actions": 251,
+      "native_result_sha256": "5f9428cbfc7ce2228614bbb00b23ff25f85459b39f9b679155a48f239c1c21ca",
+      "status": "matched",
+      "differences": {},
+      "samples": 1,
+      "timer": 3.725290298461914e-09
+    },
+    {
+      "seed": 1746289500,
+      "wait_frames": 12,
+      "kind": "curse",
+      "natural_start": true,
+      "resynchronized": false,
+      "source_actions": 251,
+      "native_result_sha256": "c8fb885176f5f03f4b0da0960da0d1fd6651be1936b7c8aa57b35781d926bcf0",
+      "status": "matched",
+      "differences": {},
+      "samples": 2,
+      "timer": 0.016666671261191368
+    },
+    {
+      "seed": 1746289500,
+      "wait_frames": 12,
+      "kind": "red_control",
+      "natural_start": true,
+      "resynchronized": false,
+      "source_actions": 251,
+      "native_result_sha256": "799e052893aa195a3a1c4f001cb04d5c9e2dc5869857e3a0fae0cbcf2801cd67",
+      "status": "matched",
+      "differences": {},
+      "samples": 0,
+      "timer": 0.016666671261191368
+    },
+    {
+      "seed": 1746312853,
+      "wait_frames": 0,
+      "kind": "curse",
+      "natural_start": true,
+      "resynchronized": false,
+      "source_actions": 676,
+      "native_result_sha256": "b57b47078cd2c3a8eec634df458ebbfd91417f8b972247c476335a7c69adecb9",
+      "status": "matched",
+      "differences": {},
+      "samples": 1,
+      "timer": 0.10000000149011612
+    }
+  ],
+  "ui_evidence": {
+    "status": "complete",
+    "results": [
+      {
+        "seed": 1641038134,
+        "initial_status": "original_heart_trace_matched",
+        "final_status": "original_heart_trace_matched",
+        "commands": 1097,
+        "floor": 57,
+        "hp": 28,
+        "ui_boundaries": [
+          {
+            "prefix_index": 192,
+            "command": "proceed",
+            "ui_boundary": "Dream Catcher reward closed at completed rest"
+          },
+          {
+            "prefix_index": 218,
+            "command": "proceed",
+            "ui_boundary": "Dream Catcher reward closed at completed rest"
+          }
+        ],
+        "final_result_sha256": "28936ab103f927b8df788f7c31fbf548781a8e6992aa8b3cd90ba0ed3aec974a",
+        "identity_sha256": "72d1e9f0a63ab68751059b7157d35efdc63cdb422ecc0df63aa2832690661714",
+        "comparisons_sha256": "9c6ab4145b022e93aaf04eefb3d25a5df41ad68676c9a0dc58b907eae6f025fd",
+        "rpc_sha256": "365a7e07a195fc82170935fb2b83b98cfca3cba6cad54c6c462350c030e41eba",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      },
+      {
+        "seed": 1656951760,
+        "initial_status": "rules_mismatch",
+        "final_status": "rules_mismatch",
+        "commands": 681,
+        "floor": 39,
+        "hp": null,
+        "ui_boundaries": [
+          {
+            "prefix_index": 72,
+            "command": "proceed",
+            "ui_boundary": "Dream Catcher reward closed at completed rest"
+          },
+          {
+            "prefix_index": 105,
+            "command": "proceed",
+            "ui_boundary": "Dream Catcher reward closed at completed rest"
+          }
+        ],
+        "final_result_sha256": "070d27d1924a63238986fad49ed6040add3a153cdd88bed592376f8d9406c6d5",
+        "identity_sha256": "ff46d8609aabbf6afec93895f93e25b825dd158aa2cb8ffa8a99e028a212d927",
+        "comparisons_sha256": "69ea8da089f423d061e1daab21d2ad0bad73d67ee9021b6599af1664cb152e18",
+        "rpc_sha256": "67f20d1c559c9680820a9836043108d87f39b8a221c787dac6e30046506a0aca",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      },
+      {
+        "seed": 1737019056,
+        "initial_status": "adapter_or_runtime_error",
+        "final_status": "original_heart_trace_matched",
+        "commands": 1165,
+        "floor": 57,
+        "hp": 32,
+        "ui_boundaries": [
+          {
+            "prefix_index": 92,
+            "command": "choose 0",
+            "ui_boundary": "Knowing Skull introduction; no reward selected"
+          }
+        ],
+        "final_result_sha256": "bceb3a801c91d02bd61448f2b8b86a1db7fec208ac519914b2a01fe86f81ddc5",
+        "identity_sha256": "9b6b6f27cafaf85b463bc3e27a2d3db557b95237a29c01a24bfb5d87ad39a42f",
+        "comparisons_sha256": "978e64ce493833b598f9a49fbe47ead0a13490d08e1d037f90bc0ad32c31f1ca",
+        "rpc_sha256": "7851a2095b842003aedf69050eacae7d8c6f264bd5060793002d69f8d7c5890c",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      },
+      {
+        "seed": 1795610934,
+        "initial_status": "original_heart_trace_matched",
+        "final_status": "original_heart_trace_matched",
+        "commands": 1225,
+        "floor": 57,
+        "hp": 81,
+        "ui_boundaries": [
+          {
+            "prefix_index": 153,
+            "command": "proceed",
+            "ui_boundary": "Dream Catcher reward closed at completed rest"
+          }
+        ],
+        "final_result_sha256": "911537eda0d05222e6fe7073f4ccfe9cbc2ab0bd7bbfaa1f1b1f54b8ae02b1c8",
+        "identity_sha256": "223c008a5dbc6bfc22231d8b6e589106b82c854f5db589afe9737d7ecb780c2e",
+        "comparisons_sha256": "907d6514fbc00741115ed7bc9c5924f4add788b99bf514c754fdb3807f8c5707",
+        "rpc_sha256": "f78a7997fa123e9e53450f3fb83d40889825792d93611843ca358b2b16dcb493",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      },
+      {
+        "seed": 1842848570,
+        "initial_status": "rules_mismatch",
+        "final_status": "rules_mismatch",
+        "commands": 546,
+        "floor": 33,
+        "hp": null,
+        "ui_boundaries": [
+          {
+            "prefix_index": 109,
+            "command": "choose 0",
+            "ui_boundary": "terminal Headbutt discard placement before minion-leader victory"
+          }
+        ],
+        "final_result_sha256": "b72c0592e3122b92804ad4ec4cc2c41f01ec22c92eebc2d9a9b453512ff1043f",
+        "identity_sha256": "68318e9b05b101d8c0c1e18445cc7b2baf6ef4bc9149f8f21eb966c61aaf389a",
+        "comparisons_sha256": "291e27a312044970f9651e1dcd22cc653128bd2dcfe4e3e473be2390ab0de565",
+        "rpc_sha256": "5aab096d3b3e4309178ea3a96133ff57ec0718a15716be337a7be1e66300f3fd",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      },
+      {
+        "seed": 1887714089,
+        "initial_status": "rules_mismatch",
+        "final_status": "rules_mismatch",
+        "commands": 557,
+        "floor": 35,
+        "hp": null,
+        "ui_boundaries": [
+          {
+            "prefix_index": 122,
+            "command": "choose 0",
+            "ui_boundary": "Knowing Skull introduction; no reward selected"
+          }
+        ],
+        "final_result_sha256": "19d5fad2bca17927404bc6cc50f757339526fd3e810f5ffa52c08c21ee160626",
+        "identity_sha256": "e48401b9e5ab070cf26ea9a8821f3e9e1652bc3821450ffc42cdf6ec351f0fff",
+        "comparisons_sha256": "8c27902942e946668d0051f36a644fffd56ab55d9d8a0456ad1f2cba2efe2f6b",
+        "rpc_sha256": "4d7d977f5955bfa224736069e3fc7be296bf3aef72e7c2deb69674bbc547c48f",
+        "cleanup_sha256": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+        "first_attempt_preserved": true
+      }
+    ],
+    "full_original_wins": 3,
+    "full_original_commands": 3487,
+    "deeper_rule_boundaries_matched_with_repaired_engine": 3,
+    "scope": "All six initial UI failures were exercised and resolved; unchanged old-engine actions then encounter three E76-repaired rule differences. The Smoke Bomb initial follow-up failure is preserved. No imported game state or RNG resynchronization."
+  },
+  "controls": "Persistent float32 timer across events, red-card previews, seven-update boundary, copy isolation, multi-transform and Astrolabe. Invalid timing is atomic; otherwise equal natural states with distinct timers have distinct replay fingerprints.",
+  "first_failure": "The first full suite found 20 controlled curse-transform fixtures with zero original preview updates. OutsideProbe.java injects selectedCards and closes the screen; its matching C++ fixture now sets zero preview updates. Production timing still requires at least one. The original expected results and first failure log remain unchanged.",
+  "smoke_follow_up": "The first six-route replay uncovered SmokeBomb isThrown metadata being treated as a strategic target. Its original use replaces target with player. A live native protocol dummy resolves it; the failed attempt is retained and the follow-up reaches Heart.",
+  "new_harness": {
+    "driver_sha256": "b768be677f55ac74c56225ca8ccf8a0bae36c2b2d2aa20ec43f1a21b08a68abc",
+    "ui_helper_sha256": "7f8aac052999c7b6e2b1021ac939e5e247257d6cb4927658b8f3553197204a0f",
+    "observer_sha256": "44cb5a28a6961ec33b2334c445286e7e612d3d9f1e0033e91ab3018f4e9da07f",
+    "runtime_sha256": "0c424dc8e1f3912b954954088724935d2ad767f43ef0019244bce02732d874a5",
+    "note": "New cohorts also compare native preview timer and freeze helper identity. The observer is the read-only E77 implementation; old UI replays preserve their original harness identities."
+  },
+  "evidence_hashes": {
+    "plan.json": "f8b01c98c9e3d1914045f410669f04153f9cc7e7430b42f470a779af42a981e1",
+    "candidate/identity.json": "0b952a6b15a8a47671871a50ace3f1049934e4ecfa6c28e7a890b9879c47e94f",
+    "focused-before.json": "2322c39f72ff83995d5306f7597be213b8a2bd63f0655dbeb095fabe04ee5080",
+    "timing-before.json": "e17703812fd0b8c3efaaf7edbc76089db67278d8dbe663431284ff299b45d590",
+    "timing-after.json": "44f769def23a2236cedbb2e8c5f09af5b5a5b839246850afe7fa3f9cff79214a",
+    "natural-boundaries-after.json": "81d7a3a706f3a55f5ae83070f18bbdd112e45416b0da36c1c58fda7f738b7af7",
+    "ui-deeper-boundaries-after.json": "d5c4fe1a243a715e95190569d4bca4e688b5e351546dd9ddaa5bc78a0397dc3d",
+    "ui-verification.json": "89d883f7d44b244f91b3c26e2a2ab9689bac703416a3476d2d27aabd7a7209fb",
+    "ctest-01.log": "7ea09ce6639339f84a115524f48e332d976178da4552e8b1f6ca7a2c9b99ad49",
+    "ctest-02.log": "4329938be7b32e1eaeb0427476bc66ca2322850990e10afe19e6271a8ff50f1f",
+    "timing-contract-02.log": "34cc6b2a6248a739c626bc2aa710b0caf9e1ea620428016a6b347b440a0b2358",
+    "portable-ctest-01.log": "d2e459bd7f7188cb96977e41af549c220f8c4d297ea3f408aa61ff072d64c154",
+    "check-timing.py": "bba9db6b38a824c51ff2565ef7efb978a7eb9a572900f1b90cf6500b70b94b81",
+    "replay-boundaries.py": "392ff6b407c89f96918569887dd029ec87aa6e0df14859d51438720c105f6b2f",
+    "replay-ui-boundaries.py": "b91a581396dc8c37eba7c779062ca369123d42d0677caa0390470ac48bd9995e",
+    "harness-01/verify_heart_winners.py": "6ad12fe2fe6bdd9136eef77bccd362bff814d85dff1959d47f8542f0c184bcb6",
+    "harness-01/winner_ui.py": "7f8aac052999c7b6e2b1021ac939e5e247257d6cb4927658b8f3553197204a0f",
+    "ui-replays/report-attempt-01.json": "b6f29013ff91d3d3ca035ed298c1c5bebbd2ed63ce5df2e6b0b88d220ef4963e",
+    "ui-replays/report-attempt-02.json": "2313126e5997d79626a502de6a606e96edbb4d7fec0b6ba18db7b907d11e7ff0"
+  }
+}

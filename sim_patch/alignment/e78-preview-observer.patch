@@ -1,0 +1,16 @@
+--- a/oracle/AlignmentProbe.java
++++ b/oracle/AlignmentProbe.java
+@@ -151,6 +151,13 @@
+    Method method=GameStateConverter.class.getDeclaredMethod("getGameState");method.setAccessible(true);out.add("game",JSON.toJsonTree(method.invoke(null)));
+    JsonObject rng=new JsonObject();for(Field f:AbstractDungeon.class.getFields())if(Modifier.isStatic(f.getModifiers())&&f.getType()==Random.class){Random r=(Random)f.get(null);if(r!=null){JsonObject v=new JsonObject();v.addProperty("counter",r.counter);v.addProperty("seed0",r.random.getState(0));v.addProperty("seed1",r.random.getState(1));rng.add(f.getName(),v);}}
+    out.add("observer_notifications",observerNotifications);out.addProperty("observer_renotifications",observerRenotifications);out.addProperty("exhaust_settlement_frames",exhaustSettlementFrames);out.addProperty("play_time_seconds",CardCrawlGame.playtime);out.addProperty("rule_input_play_time",ruleInputPlayTime);
++   JsonObject gridPreview=new JsonObject();
++   gridPreview.addProperty("for_transform",AbstractDungeon.gridSelectScreen.forTransform);
++   gridPreview.addProperty("confirm_up",AbstractDungeon.gridSelectScreen.confirmScreenUp);
++   Field timer=AbstractDungeon.gridSelectScreen.getClass().getDeclaredField("ritualAnimTimer");timer.setAccessible(true);
++   gridPreview.addProperty("timer",timer.getFloat(AbstractDungeon.gridSelectScreen));
++   gridPreview.addProperty("delta",com.badlogic.gdx.Gdx.graphics.getDeltaTime());
++   out.add("grid_transform_preview",gridPreview);
+    out.add("rng",rng);out.addProperty("smoked",AbstractDungeon.getCurrRoom().smoked);
+    out.addProperty("ruby",Settings.hasRubyKey);out.addProperty("emerald",Settings.hasEmeraldKey);out.addProperty("sapphire",Settings.hasSapphireKey);
+    if(AbstractDungeon.map!=null)for(java.util.ArrayList<com.megacrit.cardcrawl.map.MapRoomNode> row:AbstractDungeon.map)for(com.megacrit.cardcrawl.map.MapRoomNode node:row)if(node.hasEmeraldKey){JsonObject elite=new JsonObject();elite.addProperty("x",node.x);elite.addProperty("y",node.y);out.add("burning_elite",elite);}
