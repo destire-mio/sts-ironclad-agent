@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E69 negative-result closure and E73 frozen-readout registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E74 original-game joint-rescue checks and E73 full-cohort collection on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -1912,7 +1912,7 @@ E73 沿用 E70 的两个干预点和完整终局组合树：第一幕 Boss 遗�
 
 E69 未采用候选，因此比较对象保持 E67。外部 512 标签留出、512 自然开发各要求净增 10 胜及配对 p<.05；完整自然路线、终态／RNG、所有局外选择与胜局重规划检查后才能采用。这些角色属于开发；50% 仍需冻结候选后使用历史之外的 1,024 个种子。
 
-协议 SHA `ac6439e1fbc0151d196cb8b8ff4e3bfbb3b7dcedd76614cbb34e89747717416f`，目录 `sts-rl-agent-pr/runs/heart-readout-joint-learning-20260919-01/`。E70 的覆盖门槛通过后，控制器进入完整数据准备；正式模型结果尚未产生。
+协议 SHA `ac6439e1fbc0151d196cb8b8ff4e3bfbb3b7dcedd76614cbb34e89747717416f`，目录 `sts-rl-agent-pr/runs/heart-readout-joint-learning-20260919-01/`。E70 的覆盖门槛通过后，控制器完成数据准备并开始 25,192 条续局的采集，其中 1,640 条复用 E70 核验数据，新增 23,552 条。共有 1,581 个首 Boss 家庭、6,316 个选牌状态；完整拟合支持为 23 种遗物／跳过和 65 种卡牌／跳过／歌唱碗，三臂可训练参数分别为 215、257、472。正式模型结果尚未产生。
 
 24 项相关测试通过，覆盖组合终局目标、父选择、未知选项有限梯度、基础权重不可更新、整局家庭分折与提前失败、验证专属选项和特征不进入训练支持／缩放、内部门槛未过时回退、过门槛后最终拟合、篡改分折记录被拒绝，以及既有两个模型的回归。已见开发种子 1706559026 的零头与三个 25 步软件合同头，从自然开局重规划，全部匹配表格所选分支及完整动作／终态／RNG；它们均沿用父路线，不能计成新策略收益。手工构造的黑暗之血加盛怒控制则检验两个改选路径，原生选项独立控制器与完整重跑匹配。实际验证 worker 的三臂选择通过，错误预期被拒绝。
 
@@ -1933,3 +1933,20 @@ E69 未采用候选，因此比较对象保持 E67。外部 512 标签留出、5
 其中 3 个家庭在两个单项上限下均失败，组合改选能通关；组合相对只改遗物的上限新增 9 个可救家庭。共有 60 个选牌状态出现胜负差异，分属 35 个家庭，超过预先登记的 16 状态／8 家庭／4 新可救家庭门槛。因此扩大完整组合数据有依据，E73 进入准备。这里使用终局知识挑组合，不是神经网络达到 37／128，也不能外推到全部新种子的成功率；探针更新次数为零。
 
 结束证明 SHA `ecf7c7d39d012112906b23d79e0f6a67081379ce652948c94f4d4eb6532bd828`，可发布摘要 `docs/experiments/e70-joint-coverage-result.json`。核对全部家庭记录后，四种计数及三个组合独有可救家庭复算一致。E70 协议、采样顺序和种子名单未因结果改变。
+
+
+## 83. E74：三个组合独有可救种子的原版核验
+
+E70 找到三个家庭：首 Boss 遗物或指定选牌单项改选都没有通关分支，同时改变才出现心脏胜利。对全部三个家庭，各选 `(遗物候选序号, 牌候选序号)` 字典序最小的模拟器胜利分支，在原版结果产生前固定名单与轨迹哈希；未按原版结果替换种子或分支。完整联合采样 E73 在同一引擎上继续。
+
+| 种子 | 选定组合 | 原版终局 HP | 匹配操作数 |
+|---|---|---:|---:|
+| 114401199 | RUNIC_CUBE，加该次选牌跳过 | 47 | 885 |
+| 484425209 | BUSTED_CROWN，加 FLEX | 82 | 1,305 |
+| 1088303726 | SOZU，加该次选牌跳过 | 59 | 1,173 |
+
+三条路线从原版铁甲战士 A20 自然开局走到第 57 层心脏胜利，共 3,363 条命令的稳定边界状态和 RNG 匹配。没有中途状态导入、重同步或给原版状态／随机数赋值。原版观察响应核对角色、难度、三钥匙、两场不同的第三幕 Boss、矛盾与心脏；三个隔离 JVM 顺序运行并完成清理。复用 E68／E72 的驱动、桥接与等待动画回调的观察边界，没有修改引擎或 NN。
+
+这些是三个经过结果筛选的获胜分支，其余失败分支没有在本轮原版重跑。它证明选出的组合胜局可在原版复现，不证明模型会选中它们、原版的单项改选必定失败、总体胜率提升或全内容一致。E70 的“两个单项都无法救活”结论仍限于其已枚举模拟器组合树。
+
+计划 SHA `221999202f0c6853e5b746bed8a63f007dfa1df86d5e8942cbd7301b0482ff19`，完成证明 SHA `8f73116e1c70b21a4a52d00824352957b13def28b7082ec4c0e80397d4118aa4`，原版角色／难度／路线证明 SHA `71d2ed1110b2b38c7eb59b2a4339f28f81c73b88f043cdbfdf0e8667a8769489`。目录 `ironclad-alignment/evidence/joint-rescue-natural-parity-20260919-01/`，可发布摘要 `sim_patch/alignment/e74-joint-rescue-parity-report.json`；原始游戏 JAR、实例与 RPC 保留本地。

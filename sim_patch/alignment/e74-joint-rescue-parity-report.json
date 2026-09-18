@@ -1,0 +1,194 @@
+{
+  "experiment": "E74",
+  "status": "complete",
+  "preassigned_cases": 3,
+  "selection_rule": "All three E70 joint-only rescuable fit families; choose lexically lowest winning(relic_candidate,card_candidate) before any original outcome. No family or branch replacement after results.",
+  "original_heart_trace_matches": 3,
+  "total_commands": 3363,
+  "seed_results": [
+    {
+      "case": "seed-114401199",
+      "seed": 114401199,
+      "hp": 47,
+      "commands": 885,
+      "matched": true,
+      "operations": [
+        "command",
+        "observe"
+      ]
+    },
+    {
+      "case": "seed-484425209",
+      "seed": 484425209,
+      "hp": 82,
+      "commands": 1305,
+      "matched": true,
+      "operations": [
+        "command",
+        "observe"
+      ]
+    },
+    {
+      "case": "seed-1088303726",
+      "seed": 1088303726,
+      "hp": 59,
+      "commands": 1173,
+      "matched": true,
+      "operations": [
+        "command",
+        "observe"
+      ]
+    }
+  ],
+  "native_routes": [
+    {
+      "case": "seed-114401199",
+      "ascension": 20,
+      "character": "IRONCLAD",
+      "original_encounters": [
+        {
+          "act": 3,
+          "floor": 50,
+          "monster_id_sets": [
+            [
+              "TimeEater"
+            ]
+          ]
+        },
+        {
+          "act": 3,
+          "floor": 51,
+          "monster_id_sets": [
+            [
+              "AwakenedOne",
+              "Cultist",
+              "Cultist"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 55,
+          "monster_id_sets": [
+            [
+              "SpireShield",
+              "SpireSpear"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 56,
+          "monster_id_sets": [
+            [
+              "CorruptHeart"
+            ]
+          ]
+        }
+      ],
+      "rpc_sha256": "e1cc33bc22fa7c01ba35a863bac8719c52d6e9cd7988909b2a59cf9a1c08f6d0"
+    },
+    {
+      "case": "seed-484425209",
+      "ascension": 20,
+      "character": "IRONCLAD",
+      "original_encounters": [
+        {
+          "act": 3,
+          "floor": 50,
+          "monster_id_sets": [
+            [
+              "AwakenedOne",
+              "Cultist",
+              "Cultist"
+            ]
+          ]
+        },
+        {
+          "act": 3,
+          "floor": 51,
+          "monster_id_sets": [
+            [
+              "TimeEater"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 55,
+          "monster_id_sets": [
+            [
+              "SpireShield",
+              "SpireSpear"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 56,
+          "monster_id_sets": [
+            [
+              "CorruptHeart"
+            ]
+          ]
+        }
+      ],
+      "rpc_sha256": "ab4b501c705261a1f9c99a3d7aaddaa94280f671f1d34a21ba3dcfc908fa4cb4"
+    },
+    {
+      "case": "seed-1088303726",
+      "ascension": 20,
+      "character": "IRONCLAD",
+      "original_encounters": [
+        {
+          "act": 3,
+          "floor": 50,
+          "monster_id_sets": [
+            [
+              "TimeEater"
+            ]
+          ]
+        },
+        {
+          "act": 3,
+          "floor": 51,
+          "monster_id_sets": [
+            [
+              "Deca",
+              "Donu"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 55,
+          "monster_id_sets": [
+            [
+              "SpireShield",
+              "SpireSpear"
+            ]
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 56,
+          "monster_id_sets": [
+            [
+              "CorruptHeart"
+            ]
+          ]
+        }
+      ],
+      "rpc_sha256": "8fbd718e12cfdfe5f8d2c448e1b675df25ec636c079c9334e7abcad703bdf1e5"
+    }
+  ],
+  "engine_sha256": "920d2ba364ae1c7dbc7a6bdf210c8f8531b7bcb34bf54604f12b769e82968377",
+  "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "no_state_import_or_resynchronization": true,
+  "isolated_instances_cleaned": true,
+  "completion_sha256": "8f73116e1c70b21a4a52d00824352957b13def28b7082ec4c0e80397d4118aa4",
+  "routes_sha256": "71d2ed1110b2b38c7eb59b2a4339f28f81c73b88f043cdbfdf0e8667a8769489",
+  "plan_sha256": "221999202f0c6853e5b746bed8a63f007dfa1df86d5e8942cbd7301b0482ff19",
+  "source_E70_completion_sha256": "ecf7c7d39d012112906b23d79e0f6a67081379ce652948c94f4d4eb6532bd828",
+  "limits": "All three E70 families that require both choices to change, one preselected winning branch each. Natural original-game saved-action parity; no imports or resynchronization. These selected branches are not learned-model gains or representative original win rates."
+}
