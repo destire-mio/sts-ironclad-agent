@@ -22,6 +22,16 @@ The runner verifies the loaded module path and archived engine hashes. On 2026-0
 
 ## E66 and the next collection
 
-E66 repaired 20 E62 game-rule/RNG classes and the production potion-target bridge. Twelve recorded original-game action boundaries and eight natural-prefix boundaries now match. The 161-case CTest suite passed; ten new native groups fail on the prior source and pass after repair. The standalone patch build passed 12 focused entry points. Five potion bridge tests pass, including two that fail on the old bridge. Exhaust-animation timing remains the E64 diagnostic; full original-game runs remain unverified.
+E66 repaired 20 E62 game-rule/RNG classes and the production potion-target bridge. Twelve recorded original-game action boundaries and eight natural-prefix boundaries now match. The 161-case CTest suite passed; ten new native groups fail on the prior source and pass after repair. The standalone patch build passed 12 focused entry points. Five potion bridge tests pass, including two that fail on the old bridge. Exhaust-animation timing remains the E64 diagnostic; E68 subsequently verified four full natural same-action original-game routes, with the scope limits below.
 
 E67 has started recollecting 2,560 fresh seed families with this engine and the previous selected policy: 1,536 fit, 512 label holdout, 512 development. Roles are fixed before collection. Old-engine outcomes are excluded as training labels. Every terminal is replayed and every winner is replanned. Execution faults retain null labels and block training. These seeds become development material and cannot serve as the final unseen 50-percent test.
+
+## E68 original-game route checks and E69 learning
+
+Four preselected E67 development winners matched natural original-game replays through A20 Heart victory after fixing split-slime target mapping and waiting for the original exhaust-animation callback. All 4,080 commands retained state/RNG checks; no state import or resynchronization was used. Initial failed attempts remain in the local evidence. This is four same-action trace checks, not a representative original-game win rate, live online model deployment or exhaustive parity. The comparison boundary is after rule-bearing animation callbacks settle. See [the compact evidence report](../sim_patch/alignment/e68-natural-parity-report.json).
+
+E69 is registered and waits for the E67 full-data audit. It compares a 23-score relic ranking and a public-state neural ranker with 92,407 trainable parameters on the same complete first-boss continuations. The surrounding selected policy and combat engine are frozen. Both use exactly 1,000 optimizer updates and separate fit, label-holdout and natural-development roles. The new model's initial behavior matches a known source route under fresh NN/MCTS planning; this is an integration check, not a new win-rate result.
+
+The E67 development cohort has generated 53 Heart wins among 512 assigned seeds (10.3516%). The complete batch and independent audits remain in progress; no new model performance or 50-percent acceptance is claimed.
+
+The E68/E69 Python regression run covered 22 modules and 124 tests. An archived portal-trace test initially ran against the repaired engine and failed on its old RNG prefix; it passed with its declared historical engine, and the runner now assigns that engine to both portal-fixture modules. The initial failure and focused rerun are preserved. These historical fixtures do not validate old labels under the repaired engine.

@@ -47,9 +47,13 @@ def main():
         if test.stem in ARCHIVED:
             build = runtime / 'engine'
             expected_sha = '6b66eabe8e7a11a91fbba11d6cbdf0d1247d1e2a2137aa46501b96c436af2ffd'
-        elif test.stem == 'test_heart_portal_validation':
+        elif test.stem in {'test_heart_portal_validation', 'test_heart_success_collect'}:
             build = a.runs / 'heart-total-data-20260915-01/engine'
             expected_sha = '9bcc137222d051ae58d437cf0f5551db807bff2815f78ca604eb189fa0fddfe2'
+        elif test.stem == 'test_heart_contextual_relic':
+            runtime = a.runs / 'heart-repaired-refresh-20260918-01'
+            build = runtime / 'engine'
+            expected_sha = '920d2ba364ae1c7dbc7a6bdf210c8f8531b7bcb34bf54604f12b769e82968377'
         modules = list(build.glob('slaythespire*.so'))
         if len(modules) != 1:
             raise RuntimeError(f'exactly one native module is required in {build}')
