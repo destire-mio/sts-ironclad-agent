@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "experiment": "E79-native-pilot",
+  "seed": 1614835269,
+  "original_heart_trace_matched": true,
+  "commands": 960,
+  "hp": 19,
+  "native_observed_timers": [
+    0.0,
+    0.1
+  ],
+  "outside_NN_choices_audited": 198,
+  "engine_sha256": "8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4",
+  "driver_sha256": "b768be677f55ac74c56225ca8ccf8a0bae36c2b2d2aa20ec43f1a21b08a68abc",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "resynchronized": false,
+  "natural_start": true,
+  "remaining_processes": [],
+  "hashes": {
+    "plan.json": "3abbf0eb46b40eba129515c073cc5a9a85163d44dda0528f6527b492774cf03f",
+    "source-independent-audit.json": "b4c450098da5a949d01ae1b88c3552a36f60d10c92b0a25ee613e992ef62d87a",
+    "traces/1614835269.json": "79d3136aec2289730a8d1444f5ee144a5b1aed168204111ae941c2edda3586ac",
+    "original/1614835269-01/result.json": "3e02c42f3a619fd954bbf9d41840cf772d6f37d2b4a841c0dc09a31ab151eba2",
+    "original/1614835269-01/identity.json": "fe5e2783b8d91d2978718c7c48ba37440042a681592141e709877a98d25defa5",
+    "original/1614835269-01/comparisons.json": "c0515482f4c6201e3c352a734492d6c394931cc286d2d78a42e8bf4292ed9b6f",
+    "original/1614835269-01/rpc.jsonl.gz": "dcf8fd1c32df07c1b73d8cc1fa0a37082d5e26c1f65500b1408abd57953f10ec",
+    "original/1614835269-01/cleanup.json": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c"
+  },
+  "limits": "One selected development victory validates the repaired runtime/observer integration. E79 all2560 baseline is still running. This is not an original population win rate or a new trained-policy score; all repaired development winners still require parity.",
+  "completion_sha256": "0efbc56c507b9d07b384f617e06590a77c50e446f9230e2947744ad8066b67ba"
+}
