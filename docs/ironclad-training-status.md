@@ -24,6 +24,8 @@ E68 replayed four preselected E67 development winners from natural original-game
 
 Historical E61 scored 121/1,024 simulator wins with an older engine. E62 found a first original-game divergence in each of those saved winning routes and stopped at that boundary; this does not establish original-game losses. Those old labels and the old win rate are not transferred to the repaired engine. E64/E66 repairs, rejected hypotheses, and evidence boundaries are retained in [the experiment archive](ironclad-experiments.md).
 
+E72 checks two fixed winning combination branches from the same known E71 development seed. Both match natural original A20 Heart runs: Black Blood plus Seeing Red ends at 34 HP; Black Blood plus skipping that offer ends at 20 HP. All 2,047 recorded commands retain state/RNG comparisons, with no import or resynchronization. Original observer responses confirm Ironclad/A20, both Act 3 bosses, Shield/Spear, Heart, and all three keys. These are selected saved-action branches, not two independent seeds or deployed-model gains. The runtime and training protocols are unchanged. See [the compact combination report](../sim_patch/alignment/e72-joint-natural-parity-report.json).
+
 ## Training-code checks
 
 Six E70 joint-policy checks and six E71 training-objective checks pass. A known development seed supplies a 4-by-4 real relic/card tree: every terminal branch is audited, and all three saved 25-update software-test models reproduce their selected branch from a natural NN/MCTS start, including the complete action prefix, terminal state, and RNG. The three results are win/win/loss; the failed joint arm is retained. This is a deployment contract, not training or generalization evidence.

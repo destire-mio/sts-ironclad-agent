@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through conditional E71 registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E72 joint-branch original-game checks on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -1867,3 +1867,16 @@ E67 的 1,536 拟合、512 标签留出、512 开发家庭沿用预分配角色�
 同一已知种子另验证 4 个正式采样 worker 的重规划输出及独立全路线审计，三臂实时选择与表格选择匹配；篡改预期遗物选择的控制被拒绝。以原生奖励位和实际 Card 对象独立解码的控制器核验了改选牌的完整路线，首个差异位于规定选牌点，未提前改变 RNG。证据为 `sts-rl-agent-pr/runs/heart-joint-learning-contract-20260919-01/report.json` 与 `worker-contract-report.json`。完整 E71 数据准备、正式 2,000 步训练与自然开发尚未执行，不能把软件检查计成它们通过。
 
 主采样继续使用 8 个单线程 worker；E71 等 E70 完成才启动采样，不与 E69／E70 主采样池重叠。单局／进程上限为 300／360 秒，扩大组合采样最多 28,800 秒、独立审计及每臂开发最多 10,800 秒；缺失、超时、崩溃保留为空标签并阻止训练。当前范围是两个明确选择，不能覆盖所有选牌、商店或事件配合。若范围上限不足或学习不泛化，依据本轮完整结果决定下一项实验，不反复对同一批数据扫参。
+
+
+## 80. E72：组合分支的自然原版核验
+
+在 E69 采样期间，对 E71 软件接入用的已见开发种子 1706559026，固定两条模拟器胜利组合：首幕拿黑暗之血，随后选择盛怒；首幕拿黑暗之血，随后跳过该组选牌。名单及源轨迹哈希在本轮原版运行前登记，不按原版结果替换。复用 E68 完成核验的驱动、桥接和观察器，用一个隔离 JVM 顺序从铁甲战士 A20 自然开局执行保存的动作，不导入中途状态或重同步。采样引擎、基础网络、运行中的 E69／E70／E71 协议未改。
+
+两条路线在原版第 57 层打赢心脏，终局血量分别为 34、20，与模拟器相同。共 2,047 条操作（963、1,084），稳定命令边界的状态与 RNG 匹配；RPC 仅含 observe／command，各路线一次自然 start，隔离进程清理通过。独立读取原版观察响应，确认全部对局状态为 IRONCLAD／A20，第三幕第 50／51 层分别遇到八体／甜圈和时间吞噬者，第四幕第 55／56 层为矛盾和心脏，终局三钥匙齐备。
+
+该证据覆盖同一已见种子的两个组合分支，不是两个独立测试种子、神经网络新增胜局、原版总体胜率或全内容一致性。E71 的 25 步模型合同结果胜／胜／败保持原记录；这里原版执行的是枚举分支动作，不把事后选择的好分支当成模型会选择的路线。正式新模型训练与未见种子 50% 验收仍属后续工作。
+
+完整结束证明 SHA `41f761092a8475cfe18e5ee25aa43477c1b813ffcafca1868965eb0a0e72691a`，原版角色／难度／路线证明 SHA `3c974c29389754592933d99a164ac7aeb092330ab7ddef802372e789485e3c82`，目录 `ironclad-alignment/evidence/joint-branch-natural-parity-20260919-01/`。可发布摘要为 `sts-rl-agent-pr/sim_patch/alignment/e72-joint-natural-parity-report.json`；原始 RPC、实例和游戏 JAR 保留本地。
+
+同期 E69 的一次局部完整性快照核对 2,977 个完成文件、745 个原选择控制，没有执行或控制复现故障。初次临时扫描误将合法的 `act3_without_heart` 终局名称当成故障，改用冻结运行时的 target／valid 函数后确认其中六条属于真实目标失败，未修改标签或生产代码。该快照不是整批完成证明。

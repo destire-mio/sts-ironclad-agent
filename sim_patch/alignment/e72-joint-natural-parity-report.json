@@ -1,0 +1,122 @@
+{
+  "experiment": "E72",
+  "date": "2026-09-19",
+  "scope": "Two fixed simulator-winning combination branches from one previously seen development seed. Natural original-game same-action parity only, no state import/resynchronization. Not an original model win rate, a training gain, or exhaustive parity.",
+  "selection": "Two simulator-winning branches fixed before original-game replay; same known development seed as the E70/E71 software integration, no replacement based on native outcomes.",
+  "runtime": {
+    "engine_sha256": "920d2ba364ae1c7dbc7a6bdf210c8f8531b7bcb34bf54604f12b769e82968377",
+    "candidate_model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a"
+  },
+  "original_trace_matches": 2,
+  "total_commands": 2047,
+  "rows": [
+    {
+      "case": "black-blood-seeing-red",
+      "seed": 1706559026,
+      "hp": 34,
+      "commands": 963,
+      "matched": true,
+      "operations": [
+        "command",
+        "observe"
+      ]
+    },
+    {
+      "case": "black-blood-skip",
+      "seed": 1706559026,
+      "hp": 20,
+      "commands": 1084,
+      "matched": true,
+      "operations": [
+        "command",
+        "observe"
+      ]
+    }
+  ],
+  "original_routes": [
+    {
+      "case": "black-blood-seeing-red",
+      "ascension": 20,
+      "character": "IRONCLAD",
+      "original_encounters": [
+        {
+          "act": 3,
+          "floor": 50,
+          "monster_ids": [
+            "Deca",
+            "Donu"
+          ]
+        },
+        {
+          "act": 3,
+          "floor": 51,
+          "monster_ids": [
+            "TimeEater"
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 55,
+          "monster_ids": [
+            "SpireShield",
+            "SpireSpear"
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 56,
+          "monster_ids": [
+            "CorruptHeart"
+          ]
+        }
+      ],
+      "rpc_sha256": "c88f955d2e981237768506a2c9e3907f4f2c46a6621a26625094201b08107c6a"
+    },
+    {
+      "case": "black-blood-skip",
+      "ascension": 20,
+      "character": "IRONCLAD",
+      "original_encounters": [
+        {
+          "act": 3,
+          "floor": 50,
+          "monster_ids": [
+            "Deca",
+            "Donu"
+          ]
+        },
+        {
+          "act": 3,
+          "floor": 51,
+          "monster_ids": [
+            "TimeEater"
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 55,
+          "monster_ids": [
+            "SpireShield",
+            "SpireSpear"
+          ]
+        },
+        {
+          "act": 4,
+          "floor": 56,
+          "monster_ids": [
+            "CorruptHeart"
+          ]
+        }
+      ],
+      "rpc_sha256": "e09834deb84b6ac158c259949974f60363871219427d0ad0d066b684d2910c80"
+    }
+  ],
+  "comparison_boundary": "Resolved command boundaries including native exhaust-animation callbacks; no state import or RNG assignments.",
+  "rule_mismatches": 0,
+  "runtime_errors": 0,
+  "engine_or_policy_changed": false,
+  "proof_sha256": "41f761092a8475cfe18e5ee25aa43477c1b813ffcafca1868965eb0a0e72691a",
+  "route_proof_sha256": "3c974c29389754592933d99a164ac7aeb092330ab7ddef802372e789485e3c82",
+  "limits": "Two fixed simulator-winning combination branches from one previously seen development seed. Natural original-game same-action parity only, no state import/resynchronization. Not an original model win rate, a training gain, or exhaustive parity."
+}
