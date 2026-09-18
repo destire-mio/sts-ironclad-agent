@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E78 repairs and the registered E79 repaired-runtime refresh on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E78 repairs, the E79 repaired-runtime refresh and the E80 complete development-winner parity cohort on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2032,3 +2032,12 @@ E75 六条界面错误均越过原卡点：捕梦网奖励关闭三条、全知�
 
 
 E79 运行器整局接入检查：从完成的开发胜局中选定种子 1614835269，重算并核对 198 次局外 NN 决策后，将固定动作送入原版隔离实例。自然开局到 A20 心脏胜利，960 条命令的稳定状态／RNG／预览计时检查通过，终局 19 HP；观察到预览计时器 0 → 0.1 并保留，实例完成清理。该条是选定胜局的接入验证，不是新训练模型成绩，也不能替代修复版全部开发胜局复验。完成证明 SHA `0efbc56c507b9d07b384f617e06590a77c50e446f9230e2947744ad8066b67ba`，证据目录 `ironclad-alignment/evidence/e79-runtime-pilot-parity-20260919-01/`。
+
+
+## 89. E80：修复版全部开发胜局原版核验（2026-09-19，执行中）
+
+E79 的 512 个预分配 train_development 种子完成自然终局采样：50 次心脏胜利、462 次败北，开发成功率 9.765625%。逐条独立核对 512 个终局状态／RNG／预览计时指纹和 70,493 次局外 NN 决策，执行故障 0。其余 fit／label_holdout 与整组胜局重算仍在 E79 执行；不能用这个开发子集代替全部 2,560 局结果。模型参数不变，这不是新训练模型的提升或未见种子验收。
+
+E80 在全部 512 个源终局核对后选取其中全部 50 条心脏胜局，按种子升序核验，不筛掉难例。种子 1614835269 的 E79 原版试运行通过源轨迹、运行器／模型、原版引擎、驱动及辅助模块、完整证明摘要核对后复用；49 条启动新的原版隔离实例。每次最多 1 个 JVM，单种子 900 秒，保留首个状态／RNG／预览计时／界面差异及超时错误，结束清理实例。不导入游戏状态，不回写 RNG 或计时器。
+
+这批核验用于阻断模拟器偏差进入组合训练。匹配数量表示选定动作轨迹的一致性，不表示原版总体胜率；任何证实的游戏差异都要求修复与数据重建。E73 旧标签继续暂停，梯度更新次数为 0。预注册 SHA `19e948909d762daa25f9393e9c97973e8d58ace36f64164b21b9fafe1cb5484b`，选择清单 SHA `88c2356003b8263239cd8a11ad5ebaedbc9317824a5bf4a5b501d7c1ba423917`，源审计 SHA `056b4bdd0bab212debffc815004a5417fbc20871e6c1dd34a63223ef5b729898`。证据目录 `ironclad-alignment/evidence/e79-development-winners-parity-20260919-01/`，分发协议 `sim_patch/alignment/e80-development-parity-protocol.json`。
