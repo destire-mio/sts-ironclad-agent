@@ -50,7 +50,7 @@ def main():
         elif test.stem in {'test_heart_portal_validation', 'test_heart_success_collect'}:
             build = a.runs / 'heart-total-data-20260915-01/engine'
             expected_sha = '9bcc137222d051ae58d437cf0f5551db807bff2815f78ca604eb189fa0fddfe2'
-        elif test.stem == 'test_heart_contextual_relic':
+        elif test.stem in {'test_heart_contextual_relic', 'test_heart_relic_card'}:
             runtime = a.runs / 'heart-repaired-refresh-20260918-01'
             build = runtime / 'engine'
             expected_sha = '920d2ba364ae1c7dbc7a6bdf210c8f8531b7bcb34bf54604f12b769e82968377'

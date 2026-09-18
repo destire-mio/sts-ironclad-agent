@@ -87,6 +87,9 @@ def worker(job, config):
 
 
 def load_scorer(checkpoint):
+    if checkpoint.get("model_type") == "joint_first_relic_card":
+        from heart_relic_card_model import RelicCardPolicy
+        return RelicCardPolicy(checkpoint).eval()
     if checkpoint.get("model_type") == "contextual_first_boss_relic":
         from heart_contextual_relic import ContextualRelicPolicy
         return ContextualRelicPolicy(checkpoint).eval()

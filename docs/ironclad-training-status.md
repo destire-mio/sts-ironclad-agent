@@ -35,3 +35,12 @@ E69 is registered and waits for the E67 full-data audit. It compares a 23-score 
 The E67 development cohort has generated 53 Heart wins among 512 assigned seeds (10.3516%). The complete batch and independent audits remain in progress; no new model performance or 50-percent acceptance is claimed.
 
 The E68/E69 Python regression run covered 22 modules and 124 tests. An archived portal-trace test initially ran against the repaired engine and failed on its old RNG prefix; it passed with its declared historical engine, and the runner now assigns that engine to both portal-fixture modules. The initial failure and focused rerun are preserved. These historical fixtures do not validate old labels under the repaired engine.
+
+
+## E70 joint relic and card pilot
+
+The user requested combining relic and card-selection strategies. A registered128-family fit-only pilot will enumerate both the first boss relic and the final card offer after the first Act2 battle, while retaining the E67 policy for the remainder. It waits for E69 to finish and its label audit to pass, keeping the eight-worker resource boundary. Original choices are replanned controls; all terminal states/RNG and every other NN action are audited. Its hindsight oracle comparisons measure interaction coverage, not learned or unseen win rates. A larger joint-learning experiment requires16 mixed card states from8 families and at least4 additional salvageable families beyond relic-only hindsight. No joint optimizer updates have run.
+
+Six new joint-policy checks and six existing contextual-relic regressions pass. A known-seed native integration reproduces the parent route with zero new scores and validates two changed-decision continuations. In that case, changing the relic while retaining the card loses; changing the subsequent card wins. The original policy already won that seed, so this is a scope/continuation contract and interaction example, not a new rescued seed or performance result.
+
+E67 natural generation has completed2560 assigned families with255 Heart wins (9.9609%) under the repaired engine and old selected model. Winner replans and the independent full-data audit are in progress. Training and final50percent acceptance remain separate downstream stages.
