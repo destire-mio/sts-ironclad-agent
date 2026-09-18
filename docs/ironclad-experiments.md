@@ -1,3 +1,7 @@
+# Ironclad experiment archive
+
+This copy preserves the local experiment ledger through E70 registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
 更新：2026-09-18。此文负责实验设计、结果与原因排查；模拟器规则证据由 [对齐报告](ironclad-alignment/对齐报告.md)负责。
