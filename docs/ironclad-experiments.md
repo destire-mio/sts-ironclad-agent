@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E75 completion and E76 rule repairs on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E75 completion, E76 rule repairs and E77 preview-timing diagnosis on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -1993,3 +1993,20 @@ E75 的其余预定原版路线继续，保留每条首处分歧；后续出现�
 这轮没有用候选引擎重测整局胜率，没有正式 E73 参数更新，没有 1,024 个新种子的最终验收。24 个边界匹配不证明后续整局匹配；旧 E67／E70／E73 证据按旧引擎保留，受影响的自然前缀和终局标签需要重新生成或核验。修复优先级来自训练数据的有效性，与联合学习方向是否有效分开判断。证据目录 `ironclad-alignment/evidence/e75-rule-repair-20260919-01/`，可发布摘要 `sim_patch/alignment/e76-rule-repair-report.json`。
 
 E76 独立补丁构建及 16 项针对性验证通过，变更的 8 个文件与候选源文件一致。发布入口使用 E66 的便携源码，其中两个未改的历史搜索文件与训练候选不同，因此不拿这个独立二进制报告训练胜率。首次汇总脚本预期另一版本 CTest 的输出格式而拒绝了通过日志，修正解析后记录通过，未重跑或改测试。结束证明 SHA `dc2975de7b8a3b401217b01ec6767e14d382945e573590f6217501fb5ca27274`。
+
+
+## 86. E77：变牌预览的随机数随等待帧数变化
+
+为区分“漏固定一次采样”和“需要时间输入”，在结果产生前固定五个原版对照：种子 1746289500 的同一诅咒选择分别即时确认、等待 6 帧、等待 12 帧，再加普通红牌等待 12 帧控制；种子 1746312853 的诅咒即时确认补充复现。每项使用隔离 JVM 从自然开局重放相同原版命令，在指定预览界面改变等待输入。专用观察器增加只读的预览计时器、确认状态和帧间隔，未修改共用 E75 工具、原版规则或 RNG；不导入局面。
+
+| 种子与选择 | 确认前等待帧 | cardRng 消耗次数 |
+|---|---:|---:|
+| 1746289500，诅咒 | 0 | 1 |
+| 1746289500，诅咒 | 6 | 1 |
+| 1746289500，诅咒 | 12 | 2 |
+| 1746289500，普通红牌控制 | 12 | 0 |
+| 1746312853，诅咒 | 0 | 1 |
+
+五项均完成，干预前共 1,864 条原版命令的游戏状态（去除实例 UUID）与全部观察 RNG 匹配，实例完成清理。同一种子的三个诅咒时长得到相同变牌结果、相同 miscRng，cardRng 随动画变动；因此不是变牌池选择本身导致偏差。原版预览计时器在确认后保留，不能把每次变牌都硬编码成推进一次随机数。
+
+后续修复需要模拟预览计时并声明等待帧数／帧间隔输入，验证即时、延迟、重复预览及普通牌控制；外部计时属于执行条件，不能通过读取原版 RNG 再赋回模拟器来“对齐”。E77 是因果诊断，不是修复完成或新胜率。正式 E73 更新保持为零。证据目录 `ironclad-alignment/evidence/e75-preview-input-diagnosis-20260919-01/`；摘要 `sim_patch/alignment/e77-preview-timing-report.json`，完成证明 SHA `327d47164cd6f9b2b716242697516030a40349b072524dfb8653d3b6cac28b43`。

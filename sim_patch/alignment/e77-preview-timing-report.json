@@ -1,0 +1,149 @@
+{
+  "experiment": "E77",
+  "status": "timing_cause_confirmed_not_repaired",
+  "plan_sha256": "cf06ec5fefa2cf83e0d7eebbb41fda6e9504fe68f0f091a13857338946581bae",
+  "report_sha256": "9664de8bcc24088290ec118e8874c9a627d364d148b63f39c2af4aa0f16d5f16",
+  "scope": "Five prespecified isolated original-game natural-prefix replays. No imported states or RNG assignments. Read-only preview timer and delta fields added in a dedicated observer copy; E75 shared harness unchanged.",
+  "compared_native_prefix_commands": 1864,
+  "rows": [
+    {
+      "seed": 1746289500,
+      "kind": "curse",
+      "wait_frames": 0,
+      "card_rng_samples": 1,
+      "compared_prefix_steps": 278,
+      "preview_before": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_wait": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_confirm": {
+        "for_transform": true,
+        "confirm_up": false,
+        "timer": 0.1,
+        "delta": 0.016666668
+      },
+      "remaining_processes": []
+    },
+    {
+      "seed": 1746289500,
+      "kind": "curse",
+      "wait_frames": 6,
+      "card_rng_samples": 1,
+      "compared_prefix_steps": 278,
+      "preview_before": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_wait": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.016666671,
+        "delta": 0.016666668
+      },
+      "preview_after_confirm": {
+        "for_transform": true,
+        "confirm_up": false,
+        "timer": 3.7252903e-09,
+        "delta": 0.016666668
+      },
+      "remaining_processes": []
+    },
+    {
+      "seed": 1746289500,
+      "kind": "curse",
+      "wait_frames": 12,
+      "card_rng_samples": 2,
+      "compared_prefix_steps": 278,
+      "preview_before": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_wait": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.03333334,
+        "delta": 0.016666668
+      },
+      "preview_after_confirm": {
+        "for_transform": true,
+        "confirm_up": false,
+        "timer": 0.016666671,
+        "delta": 0.016666668
+      },
+      "remaining_processes": []
+    },
+    {
+      "seed": 1746289500,
+      "kind": "red_control",
+      "wait_frames": 12,
+      "card_rng_samples": 0,
+      "compared_prefix_steps": 277,
+      "preview_before": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_wait": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.03333334,
+        "delta": 0.016666668
+      },
+      "preview_after_confirm": {
+        "for_transform": true,
+        "confirm_up": false,
+        "timer": 0.016666671,
+        "delta": 0.016666668
+      },
+      "remaining_processes": []
+    },
+    {
+      "seed": 1746312853,
+      "kind": "curse",
+      "wait_frames": 0,
+      "card_rng_samples": 1,
+      "compared_prefix_steps": 753,
+      "preview_before": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_wait": {
+        "for_transform": true,
+        "confirm_up": true,
+        "timer": 0.0,
+        "delta": 0.016666668
+      },
+      "preview_after_confirm": {
+        "for_transform": true,
+        "confirm_up": false,
+        "timer": 0.1,
+        "delta": 0.016666668
+      },
+      "remaining_processes": []
+    }
+  ],
+  "observations": [
+    "The same curse selection uses one sample with immediate confirmation or six wait frames, and two samples with twelve wait frames.",
+    "The red-card control with twelve wait frames uses no cardRng sample.",
+    "Across the three curse timings on the same seed, the transformed deck and miscRng match; cardRng differs.",
+    "The original preview timer remains after confirmation. A constant one-sample patch does not model repeated previews or variable frame timing."
+  ],
+  "next": "Add a simulator preview timer and explicit frame timing input, validate immediate/delayed/repeated previews and noncurse controls, then revalidate complete natural routes. Do not resume old E73 labels.",
+  "local_evidence": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e75-preview-input-diagnosis-20260919-01",
+  "completion_sha256": "327d47164cd6f9b2b716242697516030a40349b072524dfb8653d3b6cac28b43"
+}
