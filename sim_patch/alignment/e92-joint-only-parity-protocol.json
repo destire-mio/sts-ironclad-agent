@@ -1,0 +1,46 @@
+{
+  "experiment": "E92",
+  "status": "registered_controller_started",
+  "selection_rule": "Before reading joint outcomes, fix the first128 assigned fit families, including early failures. Wait until every scoped joint-card leaf of that subset finishes; reject any missing/invalid/fault result. For each family, compute parent, relic-only hindsight, card-only hindsight under the parent relic, and joint hindsight using all legal scoped candidates, retaining relic branches with no card node at their source terminal. Select only families with parent=relic-only=card-only=0 and joint=1. In assigned-family order take at most the first4 distinct families; within each, take the first winning changed-relic/changed-card pair in frozen branch/candidate order. Record empty or unfilled slots without widening/replacement. Freeze selected paths and all subset source hashes before original execution.",
+  "verification": "Independently reconstruct every scoped card root of selected families with the frozen native simulator and parent NN, audit every joint-card candidate in those families (including parent controls, all nonintervention NN choices, terminal/RNG/timer and Heart path). Reuse the current original-game natural-start comparator, then E83 recorded persistent-RNG and E84 command/scope/keys/Act3/Act4/cleanup checks. No mid-run state import, RNG assignment or resynchronization. Preserve every failure; confirmed gameplay/RNG differences block affected E89 labels.",
+  "resources": "No new MCTS sampling pool or optimizer updates. Existing eight-worker E89 collection continues. One read-only selected-family audit process and at most one isolated original JVM at a time,900s per original case. Bounded dependency wait10800s; source pipeline liveness checked.",
+  "limits": "Outcome-selected known-fit joint-only winning routes, maximum4 families from a fixed128-family subset. Does not cover all branches, losing routes, all combinations, learned strategy quality or a population win rate; does not replace the full E89 audit or final unseen1024 acceptance.",
+  "assigned_fit_families": 128,
+  "maximum_original_routes": 4,
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "source_manifest_sha256": "e678ddfcbcf8fa2e902a77a9e061f0a308842d3aa8ab8d7cba90e1db9f7f3b00",
+  "relic_label_proof_sha256": "ddb6f5b5de8314bf0ab8957572c0b29f88eb1b583c33ad4f08628532652156ce",
+  "software_preflight": {
+    "status": "passed",
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0,
+    "source_joint_outcomes_read": 0,
+    "new_mcts_calls": 0,
+    "original_routes": 0,
+    "scope": "Synthetic selection eligibility/order, failure rejection, no-card/early-failure accounting and zero-route driver behavior."
+  },
+  "identity_preflight": {
+    "status": "passed",
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "harness_files": 12,
+    "frozen_source_files": 40,
+    "source_joint_outcomes_read": 0
+  },
+  "formal_optimizer_updates": 0,
+  "evidence_hashes": {
+    "registration.json": "1defeb4d661257f6aeda5952b6259b235c652642da038979214ace67a67f3333",
+    "execution-registration.json": "f4e4ffab0896177fc2b08287a5a0ced91b463533c54f548a8744c8679e4fd835",
+    "prepare.py": "2be9171603f428ca86e7fadca375cb86aa8f0a5b152f0a7188e8d21f81be948a",
+    "run_original.py": "3f88fb089b392097056521fa53f73671f7b9a8dee361489644a09541ca7ded4e",
+    "preflight.py": "19b06e7fcb30cf2a7c983ba485758028931fcb4c08aa6625831218dbcb03ebbf",
+    "software-preflight.json": "bdbd51304ec0d3ffd50f9910d8eeb366f40b77b41bce123a91724e11360c448c",
+    "identity-preflight.json": "431ad08dec08922645e30a760c64e984a10c6882c929ee31a43200d2c6ee0165",
+    "activation-verification.json": "29ba65c22e34d290b9599749d3eb4ec44f15b13b6be40437bfc335fcd2a43b53"
+  }
+}

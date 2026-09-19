@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 completed first-relic audit and joint collection activation and the completed E91 worker-startup comparison on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 completed first-relic audit and joint collection activation, the completed E91 worker-startup comparison and E92 joint-only original-parity registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2197,3 +2197,14 @@ E89 的采样器为每条分支创建新进程，隔离原生崩溃和超时。�
 提速门槛未通过：第一配对不满足至少 5% 的改善，第二配对与合并耗时满足，但预登记要求三项均通过。时序记录显示首轮 spawn 在 14:00:47 UTC 结束，E89 的 8 工人审计在 14:01:17 UTC 开始，处于首轮 forkserver 的运行区间；各轮没有处于恒定并发负载。这份记录支持所测轨迹输出一致，不能给出稳定的整轮采样提速结论，也不能据此把全部开销归因于某个启动方式。保留失败门槛，不采用生产变更，不为通过门槛重跑同一条件。
 
 公开结果 `docs/experiments/e91-worker-startup-result.json`；完成证明 SHA `594d5e743e47f0f8f1ef74f5f8e2025e29da0864c1c12efceca54c660fb43f38`，发布复核 SHA `f109aa546c8e9f28a886a32cd3e8f5539b81bd695a606eb9b61430f4c7fd3a28`。E89 的 6,324 条首遗物续局在启动对照前完成，收集账目和执行故障检查通过；独立审计在对照结束时继续运行。模型更新次数为 0，这些重算属于软件／性能对照，不是新增训练样本或胜率提升。
+
+
+## 101. E92：新引擎的遗物与选牌组合路线核验（2026-09-19，登记与启动）
+
+E89 的第二阶段枚举“首 Boss 遗物 → 第二幕首战末个选牌奖励”的组合。E92 在读取新组合结果前固定前 128 个拟合种子，保留提前失败；等这组的全部 1,590 条组合候选完成后，逐家庭计算父策略、单改遗物、单改选牌与两者联动的终局结果。只有前三者失败、联动能够击败心脏的家庭符合本次原版检查条件。按分配顺序取前四个合格家庭，各取冻结候选顺序中的第一条获胜组合；不够四个时保留空位，不扩大种子范围或替换失败。
+
+所选家庭的所有组合候选经过独立终局／状态／RNG／计时重放及非干预 NN 核验，选牌节点从自然前缀重建。每条所选路线从原版自然开局运行到心脏，追加持久 RNG 与角色、难度、三钥匙、双 Boss、第四幕及实例清理检查；不导入或重同步状态。每次一个原版 JVM，单条 900 秒，主采集的八个工人继续执行原登记任务。确认的游戏规则或 RNG 差异阻断受影响 E89 标签；回放工具错误保留并区分根因。
+
+七项合成软件检查通过，覆盖联合资格、单项胜局排除、提前失败／无选牌节点保留、顺序与家庭上限、缺失／重复／故障标签拒绝，以及零入选时不运行原版且报告零覆盖。冻结的 40 个来源文件、12 个核验工具文件及引擎／模型身份通过检查。此预检查没有读取新组合终局，没有新增 MCTS 采样或模型更新。控制进程启动并等待固定子集；原版结果另行记录。
+
+登记 SHA `1defeb4d661257f6aeda5952b6259b235c652642da038979214ace67a67f3333`；执行登记 SHA `f4e4ffab0896177fc2b08287a5a0ced91b463533c54f548a8744c8679e4fd835`。证据目录 `ironclad-alignment/evidence/e89-joint-only-parity-20260919-01/`，公开协议 `sim_patch/alignment/e92-joint-only-parity-protocol.json`。这些是已知拟合种子中按结果选择的路线核验，不是模型学会联动的证据，也不是原版总体胜率；败局、范围外组合及最终未见种子验收保持独立。
