@@ -1,0 +1,128 @@
+{
+  "experiment": "E94",
+  "status": "complete",
+  "scope": "Four outcome-selected known-fit losing controls paired with selected winning routes; not all losing alternatives, all training labels, original-game population win rate, learned synergy or unseen-seed acceptance.",
+  "selection": "Exactly the four already selected E92/E93 winning pairs, in existing order. Hold the winning relic fixed and replay its incumbent-card losing source continuation. All four controls exactly equal the already audited joint incumbent-card replan in complete action prefix and terminal signature. No widening, replacement or outcome-based retry.",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "native_death_routes": 4,
+  "matched_death_commands": 2606,
+  "paired_E92_E93_winning_routes": 4,
+  "paired_winning_commands": 4676,
+  "combined_matching_commands": 7282,
+  "cases": [
+    {
+      "seed": 13259363,
+      "commands": 1068,
+      "terminal": {
+        "status": "death",
+        "act": 3,
+        "floor": 51,
+        "hp": 0,
+        "keys": [
+          true,
+          true,
+          true
+        ]
+      },
+      "recorded_proof_sha256": "3ffaf0091feea34a432d117b4ceaccb983ea592319a81957d97b08edff7d3b7c",
+      "winning_commands": 1270,
+      "winning_hp": 43,
+      "winning_recorded_proof_sha256": "e4dd77433da5d1e4f0217240a92c07f07e38bb786b75112c69ed300db9d4fd1d"
+    },
+    {
+      "seed": 30885438,
+      "commands": 601,
+      "terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 33,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      },
+      "recorded_proof_sha256": "765062deede8a893f261c68af1f778d23f150eff2eec6fcd4a75ac70c092f4b0",
+      "winning_commands": 1405,
+      "winning_hp": 88,
+      "winning_recorded_proof_sha256": "25c4ca8ca85405d3d0dd2e95205ffce98ec9f73a0331baf14290323e30ace256"
+    },
+    {
+      "seed": 45958430,
+      "commands": 472,
+      "terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 33,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      },
+      "recorded_proof_sha256": "4e368d56a998009d84576a6e123973037ce669c3c01ceb1ef7072f57a52117e2",
+      "winning_commands": 870,
+      "winning_hp": 31,
+      "winning_recorded_proof_sha256": "1ccebd200e7d2c0f64992a4d5f6297ea104060e8362c5c2dc589febf7d910579"
+    },
+    {
+      "seed": 70660461,
+      "commands": 465,
+      "terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 30,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      },
+      "recorded_proof_sha256": "237a0e14133d4f2fffd9d37cb00a05e09d89e838c9476feaee94d5993ab59bd5",
+      "winning_commands": 1131,
+      "winning_hp": 25,
+      "winning_recorded_proof_sha256": "d111aa916ad481f0bbd1440bc4ad19252837729ac1ba834df1a95f45de0fb126"
+    }
+  ],
+  "software_tests": 12,
+  "recorded_controls": {
+    "unchanged_heart_route": "matched",
+    "heart_false_terminal": "rejected",
+    "death_false_terminal": "rejected",
+    "transient_persistent_rng": "rejected",
+    "new_original_execution": false
+  },
+  "checks": [
+    "natural Ironclad A20 start; immutable complete actions and external time inputs",
+    "state, active battle RNG and persistent run RNG; float32 preview timing",
+    "death GAME_OVER, victory false, zero HP and source-identical act/floor/keys",
+    "additional six persistent RNG streams at stable combat observations",
+    "complete original command consumption, source/runtime identity, no state import or resynchronization",
+    "four death instances and paired historical winning instances have no remaining processes"
+  ],
+  "formal_optimizer_updates": 0,
+  "simulator_engine_changed": false,
+  "source_model_changed": false,
+  "new_MCTS_pool": false,
+  "E89_decision": "Continue the registered joint collection and later full audit/three-arm learning. No confirmed rule/RNG difference was found on these four losing controls. No claim covers all other losing alternatives or all labels.",
+  "evidence_hashes": {
+    "registration.json": "9041ee3a3e35447e5383d8001a0cbd71258b0e060b08de8c53f699bd33448f80",
+    "execution-registration.json": "3a42bbf49d1b5c60ae9c0a0f45a20e087397acff3be3e18a474eeba57fa69e7c",
+    "source-pairing.json": "0873f6483a31caa2aa5843bf2c501e351d97c5a321b827ef16a3d5b3e574c5d9",
+    "completion-verification.json": "bb13e28212d4c0279628d1f6e06b555cac4cb8448c5b21485a0cc5e4439ee34d",
+    "publication-verification.json": "62c27ea14a14cd9c4473f273a37434a8399aa31734e9f1a0b464c7736350be98",
+    "verify_publication.py": "dc83ed25e507ccb82b81bfedfab94d28357f1ea4d8d85706d7cd4082dbb2eb09"
+  },
+  "portable_source_hashes": {
+    "verify_heart_winners.py": "20caa3f55c370b8416db41cc088922abdd5350350c6d8f9e9da3e2f679932bb0",
+    "replay_recorded_winner.py": "8ce995c4b7d831acc2f7cfe694486e4a32e59eee272f2c07f27678de6add9ac7",
+    "test_route_terminal.py": "418d6bbc191bc69b3974a14cd714e2c5641ea556116b0195b84cb6539886fc53"
+  }
+}

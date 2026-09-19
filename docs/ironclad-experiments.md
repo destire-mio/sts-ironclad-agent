@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through completed E92 joint-route parity with its retained failed attempt and E93 Vampires transport repair on 2026-09-19. E89 joint collection continues. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through completed E94 paired losing-route parity on 2026-09-20. E89 joint collection continues. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2225,3 +2225,21 @@ E92 固定子集完成 99 个可达家庭、396 个选牌状态、1,590 条组�
 对 E92 同一条失败轨迹从原版自然开局复验，保留原动作和时间输入。吸血鬼事件选择后为 53／75 HP、交出小血瓶，与模拟器一致；整局通过 1,270 条命令，以 43 HP 击败心脏，追加持久 RNG、三钥匙、时间吞噬者与觉醒者、矛盾与心脏及清理核验通过。没有中途状态导入或重同步。受控与自然两个实例清理完成；E89 的冻结来源与原版准入证明通过复核，主采集继续，正式模型更新为 0。
 
 E92 的三条成功路线与 E93 修复后同一失败路线构成四条组合获胜路线的原版证据，合计 4,676 条匹配命令。E92 的 509 条失败尝试保留，不计入匹配命令；四条结果不是模型学会联动或总体胜率。登记 SHA `adc003fe514f471bf8d4ca462cf124ed7a035112d44df1b591d3cbcdfd31d353`；完成 SHA `e40d043112c79cc8e6ba847362c9afd950836271b1d3d3da72fede2e8262e0fc`；发布复核 SHA `a597ac74503f001c3b466027ba69221c749bcb6ffd017ae1e7978956fbaf92cd`。证据在 `ironclad-alignment/evidence/e92-vampires-ui-repair-20260919-01/`，公开结果 `sim_patch/alignment/e93-vampires-ui-report.json`。
+
+
+## 103. E94：组合胜局对应的失败路线（2026-09-20，完成）
+
+E92／E93 核对四条联动获胜路线。E94 固定同四个拟合种子和获胜遗物，保留原选牌，检查对应失败标签：13259363 第 51 层、30885438 与 45958430 第 33 层、70660461 第 30 层死亡。名单在原版执行前冻结，不扩大、替换或按结果重试。四条源续局与 E92 审计过的原选牌对照具有相同完整动作和终局；各自胜败路线在登记选牌节点前相同，第一处差别为该选牌动作。
+
+核验工具增加显式声明的死亡结局：要求原版 GAME_OVER、victory=false、HP=0，幕数、层数、钥匙与冻结终局相同；保留原有完整状态、RNG、外部时间和预览计时比较。未声明结局时沿用心脏胜局要求，死亡结果使用独立状态名。六项终局测试与六项录制输入测试通过；E93 原版心脏录制在新核验工具中通过，故意翻转胜负标记的对照被拒绝。旧核验工具及证据保留快照，未改写历史证明。
+
+每条路线从原版自然开局运行，使用保存动作与时间输入，不中途导入状态或重同步。每次一个隔离 JVM，单条上限 900 秒；匹配后追加六条持久 RNG 的录制复验与命令、角色、A20、死亡终局和清理检查。首条匹配死亡路线追加错误胜负标记及瞬时持久 RNG 变更的拒绝控制。任何失败保留；确认的规则／RNG 差异阻断受影响 E89 标签。E89 八工人主采集继续，没有新增 MCTS 采样池、模型更新或引擎修改。
+
+登记 SHA `9041ee3a3e35447e5383d8001a0cbd71258b0e060b08de8c53f699bd33448f80`；执行登记 SHA `3a42bbf49d1b5c60ae9c0a0f45a20e087397acff3be3e18a474eeba57fa69e7c`；源配对核验 SHA `0873f6483a31caa2aa5843bf2c501e351d97c5a321b827ef16a3d5b3e574c5d9`。证据目录 `ironclad-alignment/evidence/e93-joint-losing-controls-20260920-01/`；公开协议 `sim_patch/alignment/e94-losing-controls-protocol.json`。此项覆盖四条按模拟器结果选定的拟合组败局，未覆盖所有单项失败选项、全部训练标签、学习收益或最终未见种子验收。
+
+
+E94 四条自然原版败局完成并匹配：13259363 为 1,068 条命令／第 51 层死亡；30885438 为 601 条／第 33 层；45958430 为 472 条／第 33 层；70660461 为 465 条／第 30 层，合计 2,606 条命令。每条的状态、RNG、外部计时、幕数、层数、HP=0 与钥匙相同，追加持久 RNG 核验通过。四个原版实例清理完成，复核无遗留进程。首条败局的错误胜负标记与瞬时持久 RNG 改动被检出；心脏正控制及错误终局对照通过预期检查。
+
+四条败局配合 E92／E93 的四条胜局构成四组原版动作路线证据，合计 7,282 条匹配命令，其中胜局 4,676 条。配对路线在指定选牌前相同；结果支持这些组合标签，不能外推为“某遗物应始终配某张牌”。其他失败动作、所有训练标签、模型收益和未见种子胜率不在本次证据范围。未发现需要修复的游戏规则或 RNG 差异；E89 引擎、父模型及学习方案保留，正式更新次数为 0。
+
+完成 SHA `bb13e28212d4c0279628d1f6e06b555cac4cb8448c5b21485a0cc5e4439ee34d`；发布复核 SHA `62c27ea14a14cd9c4473f273a37434a8399aa31734e9f1a0b464c7736350be98`。公开结果 `sim_patch/alignment/e94-losing-controls-report.json`；复核覆盖所有完成摘要、冻结运行文件、原版录制、旧工具快照、四条历史胜局的独立证据、命令计数及进程清理。分发版与本地核验工具一致，分发版 12 项 Python 检查通过；新增 CMake 终局检查入口，此轮没有修改或重跑原生规则测试。

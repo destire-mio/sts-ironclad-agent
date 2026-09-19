@@ -1,0 +1,101 @@
+{
+  "experiment": "E94",
+  "status": "registered",
+  "registration_sha256": "9041ee3a3e35447e5383d8001a0cbd71258b0e060b08de8c53f699bd33448f80",
+  "execution_registration_sha256": "3a42bbf49d1b5c60ae9c0a0f45a20e087397acff3be3e18a474eeba57fa69e7c",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "selection": "Exactly the four already selected E92/E93 winning pairs, in existing order. Hold the winning relic fixed and replay its incumbent-card losing source continuation. All four controls exactly equal the already audited joint incumbent-card replan in complete action prefix and terminal signature. No widening, replacement or outcome-based retry.",
+  "verification": "Natural original starts, same complete actions and external timing. Extend the existing comparator to require an explicitly registered death terminal, zero HP, native GAME_OVER with victory false, identical act/floor/keys and full outside state/RNG/timer. Existing Heart default retains Act4, all keys and victory true. Reuse the same recorded comparator with six extra persistent RNG streams. Validate command identity, terminal and instance cleanup. Keep failures.",
+  "resources": "Four fresh original natural routes, sequential isolated JVMs, 900 seconds each. Existing eight-worker E89 collection continues. No new MCTS pool, model updates or simulator rule changes. Confirmed gameplay/RNG differences block affected E89 labels.",
+  "limits": "Four outcome-selected known-fit losing controls paired with selected winning routes; not all losing alternatives, all training labels, original-game population win rate, learned synergy or unseen-seed acceptance.",
+  "cases": [
+    {
+      "seed": 13259363,
+      "root_id": "13259363-r0-c88",
+      "relic_candidate": 0,
+      "card_candidate": 1,
+      "source_sha256": "9a6ba01598282686031d3b21b7b033c69e78fbb54843d13350981603d088a3cc",
+      "joint_parent_sha256": "00db60db1451032c8113b49231a2d6ed7195b3a2b21bda8af8d323ee0467f00e",
+      "expected_terminal": {
+        "status": "death",
+        "act": 3,
+        "floor": 51,
+        "hp": 0,
+        "keys": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "seed": 30885438,
+      "root_id": "30885438-r1-c86",
+      "relic_candidate": 1,
+      "card_candidate": 3,
+      "source_sha256": "4e488ee5ddecfd5d13a05f7f70d65c1880f880b44f5463b2f8db68d11f9aa838",
+      "joint_parent_sha256": "f51b0ef9cba8171833e69eac5cd45a795de67e5dcd89baa58913b4a764d7c5b4",
+      "expected_terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 33,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "seed": 45958430,
+      "root_id": "45958430-r1-c88",
+      "relic_candidate": 1,
+      "card_candidate": 1,
+      "source_sha256": "eddf41df5ba3756a6234ff403a978fcb32ee31d3a911f1ca36f740f24314e6f8",
+      "joint_parent_sha256": "2aa7f0af65a7e009a1979a76e26e69d0dbc1968088c014400a3365e60d17801d",
+      "expected_terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 33,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "seed": 70660461,
+      "root_id": "70660461-r1-c81",
+      "relic_candidate": 1,
+      "card_candidate": 3,
+      "source_sha256": "10a57c109d10f9e4f29c9c152b07d180f4c059cf2839cc103f4eabfaee94a9e2",
+      "joint_parent_sha256": "6a7be78289cd6a8c8a37a56bffb8f0cfafe9825482f94aa2c0e9a82a9a69e6b5",
+      "expected_terminal": {
+        "status": "death",
+        "act": 2,
+        "floor": 30,
+        "hp": 0,
+        "keys": [
+          false,
+          true,
+          true
+        ]
+      }
+    }
+  ],
+  "source_pairing_sha256": "0873f6483a31caa2aa5843bf2c501e351d97c5a321b827ef16a3d5b3e574c5d9",
+  "preflight": {
+    "portable_tests": 12,
+    "recorded_heart_positive_and_false_terminal": "passed",
+    "new_original_execution": false,
+    "recorded_control_sha256": "83bf9ca143e1f4e22bc4c4eeedaa783f14f17a1460ccc261aee9cc556c0e5e89"
+  },
+  "formal_optimizer_updates": 0
+}

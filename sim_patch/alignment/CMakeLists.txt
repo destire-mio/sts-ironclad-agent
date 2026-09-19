@@ -164,6 +164,8 @@ foreach(case IN ITEMS fnp_one fnp_three lethal dead_branch_order no_fnp_control 
 endforeach()
 add_test(NAME e83_recorded_input_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_recorded_winner.py" -v)
 set_tests_properties(e83_recorded_input_contract PROPERTIES TIMEOUT 15)
+add_test(NAME e94_route_terminal_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_route_terminal.py" -v)
+set_tests_properties(e94_route_terminal_contract PROPERTIES TIMEOUT 15)
 
 add_executable(e85_dropkick_tests tests/e85_dropkick.cpp)
 target_link_libraries(e85_dropkick_tests PRIVATE sts_core)

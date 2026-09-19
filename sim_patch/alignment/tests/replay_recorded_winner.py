@@ -92,8 +92,11 @@ def run(root, mutate=None):
     for path, expected in plan['reference_hashes'].items():
         if sha(path) != expected: raise ValueError('original evidence changed: ' + path)
     reference_result = read(native / 'result.json')
-    if reference_result['status'] != 'original_heart_trace_matched' and not plan.get('regression_only'):
-        raise ValueError('recorded-original reuse requires a complete original Heart route')
+    expected_status = V.expected_terminal_status(plan)
+    native_status = ('original_heart_trace_matched' if expected_status == 'heart_win'
+                     else 'original_death_trace_matched')
+    if reference_result['status'] != native_status and not plan.get('regression_only'):
+        raise ValueError('recorded-original reuse requires the registered complete original terminal')
     if reference_result['resynchronized'] or reference_result['controlled_fixture']:
         raise ValueError('recorded-original reuse requires a natural original start')
     if read(native / 'cleanup.json')['remaining']:
@@ -152,9 +155,9 @@ def run(root, mutate=None):
     try:
         outcome = runner.run()
         probe.finish()
-        if outcome['status'] != 'original_heart_trace_matched':
+        if outcome['status'] != native_status:
             raise ValueError('unexpected comparator terminal')
-        result = dict(outcome, status='recorded_original_heart_trace_matched')
+        result = dict(outcome, status='recorded_' + native_status)
     except Exception as error:
         diff = (runner.last_comparison or {}).get('differences')
         result = {'status':'rules_mismatch' if diff else 'recorded_replay_error',
@@ -185,4 +188,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     result = run(args.root)
     print(json.dumps({k:v for k,v in result.items() if k not in ('traceback','first_mismatch')}, indent=2))
-    if result['status'] != 'recorded_original_heart_trace_matched': raise SystemExit(1)
+    if result['status'] not in ('recorded_original_heart_trace_matched',
+                                'recorded_original_death_trace_matched'): raise SystemExit(1)

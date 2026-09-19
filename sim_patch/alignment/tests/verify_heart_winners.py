@@ -1,4 +1,4 @@
-"""Replay frozen winning actions in isolated original Java, without state import."""
+"""Replay frozen Heart wins or explicit death controls without state import."""
 import argparse
 from collections import Counter
 import gzip
@@ -27,6 +27,31 @@ def write(path, data):
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def expected_terminal_status(plan):
+    status = plan.get('expected_terminal_status', 'heart_win')
+    if status not in ('heart_win', 'death'):
+        raise ValueError('unsupported registered terminal status')
+    return status
+
+
+def validate_original_terminal(view, expected):
+    """Require the frozen terminal, including a distinct native death signal."""
+    status = expected_terminal_status({'expected_terminal_status': expected['status']})
+    game = view['game']
+    if (game['screen_type'] != 'GAME_OVER'
+            or game['screen_state'].get('victory') is not (status == 'heart_win')):
+        raise ValueError('original victory/death terminal differs')
+    actual = [game['act'], game['floor'], game['current_hp'],
+              [view[k] for k in ('ruby', 'emerald', 'sapphire')]]
+    if actual != [expected[k] for k in ('act', 'floor', 'hp', 'keys')]:
+        raise ValueError('original terminal act/floor/HP/keys differ')
+    if status == 'heart_win' and (game['act'] != 4 or expected['keys'] != [True] * 3):
+        raise ValueError('original Heart win lacks Act4 or all keys')
+    if status == 'death' and game['current_hp'] != 0:
+        raise ValueError('original death lacks zero HP')
+    return 'original_heart_trace_matched' if status == 'heart_win' else 'original_death_trace_matched'
 
 
 def setup(root):
@@ -60,7 +85,9 @@ def setup(root):
 def convert(root, runtime, seed, T):
     source = runtime / f'episodes/{seed}.json.gz'
     row = read(source)
-    assert row['seed'] == seed and row['status'] == 'heart_win'
+    status = expected_terminal_status(read(root / 'plan.json'))
+    if row['seed'] != seed or row['status'] != status:
+        raise ValueError('source episode seed or registered terminal differs')
     config = read(runtime / 'config.json')
     gc = T.R.sts.GameContext(T.R.sts.CharacterClass.IRONCLAD, seed, 20)
     steps = []
@@ -482,11 +509,10 @@ def one(root, seed, attempt, modules):
                 self.call('proceed')
             self.check()
             terminal = self.view['game']
-            assert terminal['act'] == 4 and terminal['screen_type'] == 'GAME_OVER' and terminal['screen_state']['victory']
-            assert [self.view[k] for k in ('ruby', 'emerald', 'sapphire')] == [True] * 3
+            status = validate_original_terminal(self.view, trace['expected_terminal'])
             T.R.clock_input(self.gc, config)
             T.P.verify_terminal(self.gc, trace['expected_terminal'])
-            return {'status': 'original_heart_trace_matched', 'floor': self.gc.floor_num,
+            return {'status': status, 'floor': self.gc.floor_num,
                     'hp': self.gc.cur_hp, 'original_terminal': terminal['screen_state']}
 
     runner = WinnerReplay(Q.Probe(instance), trace, d)
