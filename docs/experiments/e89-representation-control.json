@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "natural_fit_states": 32,
+  "input_controls": 128,
+  "relics": {
+    "SNECKO_EYE": {
+      "relative_features_changed": 32,
+      "tested": 32,
+      "maximum_relative_delta": 0.12379500269889832
+    },
+    "RUNIC_PYRAMID": {
+      "relative_features_changed": 32,
+      "tested": 32,
+      "maximum_relative_delta": 0.1314931958913803
+    },
+    "DEAD_BRANCH": {
+      "relative_features_changed": 32,
+      "tested": 32,
+      "maximum_relative_delta": 0.15281260013580322
+    },
+    "MUMMIFIED_HAND": {
+      "relative_features_changed": 32,
+      "tested": 32,
+      "maximum_relative_delta": 0.12789127230644226
+    }
+  },
+  "affine_negative_controls_passed": 128,
+  "formal_optimizer_updates": 0,
+  "game_states_unchanged": true,
+  "model_unchanged": true,
+  "hashes": {
+    "check.py": "544acf812f28000fc1bb632a13256cb2d932dc62214385028c4af66bd2708279",
+    "selection.json": "7de9f2e2259f9449182eaf6de3468bc09f43ec4cde8e258e33e798fc0a7604e0",
+    "results.json": "5c582db72712b5be5c003d13c182fd9ea065ed6bf73c2d500bd40c5ab50b1446"
+  },
+  "limits": "Nonzero relative features demonstrate representational access to the relic input, not learned synergy or sufficient capacity. Zero-output readout heads still retain the parent. No game result, training label or new model is produced; E89 source and performance gates remain required.",
+  "completion_sha256": "d6114eb7ad2480b4500b2e2399e905c7896c5ad8a09b8919ece69500bdb8c4df",
+  "selection_rule": "First32 naturally eligible scoped card offers in assigned fit order, before sensitivity calculation; no Heart outcome filtering. Presence-bit flips are hypothetical public input vectors only, never executed game states.",
+  "source_model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "source_engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329"
+}
