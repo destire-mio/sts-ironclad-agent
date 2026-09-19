@@ -1,0 +1,60 @@
+{
+  "experiment": "E93",
+  "status": "complete",
+  "problem": "With Blood Vial, simulator action ids are vial=0, maxHP=1, leave=2; native menu order is maxHP=0,vial=1,leave=2. Both have all three actions. The rank-based replay adapter sends the wrong choice for the first two. Without Blood Vial, native and legal-rank order match. Rules and source labels have not been shown invalid by this adapter error.",
+  "repair": "One shared simulator-action ordering helper is used in both natural replay directions. With Blood Vial, native buttons maxHP/vial/leave map to simulator actions1/0/2; without it, accept/leave map to1/2. Unexpected menus fail rather than selecting a different action. Simulator action identities, engine and neural decisions are unchanged.",
+  "software_tests": {
+    "status": "passed",
+    "tests_run": 7,
+    "command": "python3.12 -m unittest discover -s tests -p test_winner_ui.py -v",
+    "engine_changed": false,
+    "source_model_changed": false,
+    "scope": "Four mapping contract tests and three preexisting native UI boundary controls."
+  },
+  "controlled_original": {
+    "cases": 5,
+    "before_target_failures": 2,
+    "before_controls": 3,
+    "after_passes": 5,
+    "compared": "HP, max HP, gold, relics, potions, deck/selection multisets, rewards and six persistent RNG streams; these method fixtures do not establish natural deck order."
+  },
+  "natural_original": {
+    "seed": 13259363,
+    "status": "matched",
+    "commands": 1270,
+    "hp": 43,
+    "bosses": [
+      "TIME_EATER",
+      "AWAKENED_ONE"
+    ],
+    "recorded_proof_sha256": "e4dd77433da5d1e4f0217240a92c07f07e38bb786b75112c69ed300db9d4fd1d"
+  },
+  "natural_source_sha256": "0773c77dcf563060397e0ccfe5c09598e3db98fc280186c6974258bfe2ee00cd",
+  "old_boundary_after_repair": {
+    "hp": 53,
+    "max_hp": 75,
+    "blood_vial": false
+  },
+  "extra_persistent_rng_verified": true,
+  "original_instances_cleaned": 2,
+  "source_engine_changed": false,
+  "source_model_changed": false,
+  "formal_optimizer_updates": 0,
+  "E89_source_gates_reverified": true,
+  "limits": "Targeted transport repair and one fixed natural route; not full parity, losing-route parity or learned performance.",
+  "evidence_hashes": {
+    "registration.json": "adc003fe514f471bf8d4ca462cf124ed7a035112d44df1b591d3cbcdfd31d353",
+    "execution-registration.json": "104c0d506a3074f8dfb488961d7c774897d3324de7870698293b650c10df628f",
+    "software-tests.json": "3fee173d9568082e3f010d228e1666caf8c225b58d689dcfca84c43431551006",
+    "controlled-results.json": "15b11c00e53b3f26f5d101bcc4b1758db149a33e2d12373187c46923fac45086",
+    "natural-result.json": "4db89435ee7510a7ce91fbf14f219a77e77bba4d8c5d504aa0759341624df582",
+    "completion-verification.json": "e40d043112c79cc8e6ba847362c9afd950836271b1d3d3da72fede2e8262e0fc",
+    "publication-verification.json": "a597ac74503f001c3b466027ba69221c749bcb6ffd017ae1e7978956fbaf92cd"
+  },
+  "source_file_hashes": {
+    "winner_ui.py": "d62cb7c50a5b99d47e20858e79370c3d9a0f20391e89f43617f32a926289c891",
+    "test_winner_ui.py": "0523980527137e2d646923be8f53d7ae244d7bd4c86a76cebc0615f8f26f1827",
+    "replay_trace.py": "41345f6e900fd88b6dfd633d1bdafb595c007c6948f817f8594d6c2fb17eee3f",
+    "replay_run.py": "7c906378504b06362412808d96a1d8929baa68f7e94253e4b09635a004453faf"
+  }
+}

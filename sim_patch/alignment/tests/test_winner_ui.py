@@ -1,10 +1,47 @@
 """Reject strategic selections while admitting three known native UI boundaries."""
 import copy
 import unittest
-from winner_ui import knowing_skull_intro, dream_catcher_close, terminal_headbutt_selection
+from winner_ui import knowing_skull_intro, dream_catcher_close, terminal_headbutt_selection, event_action_order
 
 
 class WinnerUITest(unittest.TestCase):
+    @staticmethod
+    def vampires(has_vial):
+        return {'screen_type': 'EVENT', 'relics': [{'id': 'Blood Vial'}] if has_vial else [],
+                'screen_state': {'event_id': 'Vampires', 'options': [
+                    {'choice_index': i, 'disabled': False} for i in range(3 if has_vial else 2)]}}
+
+    def test_vial_trade_and_hp_loss_use_distinct_native_buttons(self):
+        order = event_action_order(self.vampires(True), [0, 1, 2])
+        self.assertEqual(order.index(0), 1)  # Hand over Blood Vial.
+        self.assertEqual(order.index(1), 0)  # Lose maximum HP.
+        self.assertEqual(order.index(2), 2)  # Refuse.
+        self.assertEqual([order[i] for i in range(3)], [1, 0, 2])
+        self.assertEqual(event_action_order(self.vampires(True), [2, 0, 1]), order)
+
+    def test_without_vial_preserves_accept_and_refuse(self):
+        order = event_action_order(self.vampires(False), [1, 2])
+        self.assertEqual(order, (1, 2))
+        self.assertEqual([order.index(a) for a in (1, 2)], [0, 1])
+
+    def test_vampires_rejects_stale_or_incompatible_menu(self):
+        for change in ('leave_page', 'disabled', 'wrong_index', 'missing_action', 'duplicate_action'):
+            with self.subTest(change=change):
+                game = self.vampires(True); actions = [0, 1, 2]
+                if change == 'leave_page': game['screen_state']['options'] = game['screen_state']['options'][:1]
+                if change == 'disabled': game['screen_state']['options'][0]['disabled'] = True
+                if change == 'wrong_index': game['screen_state']['options'][1]['choice_index'] = 4
+                if change == 'missing_action': actions = [1, 2]
+                if change == 'duplicate_action': actions = [0, 1, 1]
+                with self.assertRaises(ValueError): event_action_order(game, actions)
+
+    def test_other_event_and_non_event_keep_legal_order(self):
+        for field, value in (('screen_type', 'GRID'), ('event_id', 'Golden Idol')):
+            game = self.vampires(True)
+            if field == 'event_id': game['screen_state'][field] = value
+            else: game[field] = value
+            self.assertEqual(event_action_order(game, [7, 4]), (7, 4))
+
     def test_skull_intro_does_not_select_reward_or_leave(self):
         view = {'available_commands': ['choose'], 'game': {'screen_type': 'EVENT',
                 'screen_state': {'event_id': 'Knowing Skull',

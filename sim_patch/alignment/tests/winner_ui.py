@@ -1,4 +1,23 @@
-"""Narrow original-UI boundaries with no strategic choice or state import."""
+"""Translate selected actions and settle native UI without choosing strategy."""
+
+
+def event_action_order(game, legal_actions):
+    """Simulator action bits in native enabled-button order."""
+    order = tuple(legal_actions)
+    screen = game.get('screen_state', {})
+    if game.get('screen_type') != 'EVENT' or screen.get('event_id') != 'Vampires':
+        return order
+    has_vial = any(r['id'] == 'Blood Vial' for r in game['relics'])
+    expected = (1, 0, 2) if has_vial else (1, 2)
+    options = screen.get('options', [])
+    if (len(order) != len(expected) or set(order) != set(expected)
+            or len(options) != len(expected)
+            or [o.get('choice_index') for o in options] != list(range(len(expected)))
+            or any(o.get('disabled') for o in options)):
+        raise ValueError('Vampires action/menu contract differs')
+    # Native: lose max HP, then optional Blood Vial, then leave.
+    # Simulator: Blood Vial=0, lose max HP=1, leave=2.
+    return expected
 
 
 def knowing_skull_intro(view, event_step):

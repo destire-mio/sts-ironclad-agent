@@ -4,6 +4,7 @@ Only seed and recorded player commands drive GameContext/BattleContext.
 Later original HP, cards, RNG and powers are observations, never imported.
 """
 from compare_cards import *
+from winner_ui import event_action_order
 from replay_run import outside_differences
 from compare_powers import extras
 
@@ -100,7 +101,7 @@ class TraceReplay:
    if key[1]=='Wheel of Change':
     while 'spin' in self.view['game'].get('choice_list',[]):self.call('choose 0')
    options=[x for x in sts.get_legal_game_actions(self.gc) if not x.is_potion_action]
-   choice=next(i for i,x in enumerate(options) if x.bits==a.bits)
+   choice=event_action_order(g,[x.bits for x in options]).index(a.bits)
    self.call('choose '+str(choice));self.event_steps[key]=step+1
   else:raise ValueError('unmapped original '+screen)
   a.execute(self.gc)

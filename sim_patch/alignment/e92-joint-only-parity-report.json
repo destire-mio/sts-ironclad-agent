@@ -1,0 +1,96 @@
+{
+  "experiment": "E92",
+  "status": "complete_with_unresolved_findings",
+  "assigned_fit_families": 128,
+  "eligible_families": 99,
+  "early_failures_retained": 29,
+  "subset_card_states": 396,
+  "subset_joint_continuations": 1590,
+  "hindsight_counts_not_model_wins": {
+    "parent": 12,
+    "relic_only": 21,
+    "card_only": 22,
+    "joint": 30
+  },
+  "joint_only_families": 4,
+  "selected_original_routes": 4,
+  "matched_routes": 3,
+  "matched_commands": 3406,
+  "rows": [
+    {
+      "case": "joint-13259363",
+      "seed": 13259363,
+      "status": "rules_mismatch"
+    },
+    {
+      "case": "joint-30885438",
+      "seed": 30885438,
+      "status": "matched",
+      "commands": 1405,
+      "hp": 88,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "25c4ca8ca85405d3d0dd2e95205ffce98ec9f73a0331baf14290323e30ace256"
+    },
+    {
+      "case": "joint-45958430",
+      "seed": 45958430,
+      "status": "matched",
+      "commands": 870,
+      "hp": 31,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "1ccebd200e7d2c0f64992a4d5f6297ea104060e8362c5c2dc589febf7d910579"
+    },
+    {
+      "case": "joint-70660461",
+      "seed": 70660461,
+      "status": "matched",
+      "commands": 1131,
+      "hp": 25,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "d111aa916ad481f0bbd1440bc4ad19252837729ac1ba834df1a95f45de0fb126"
+    }
+  ],
+  "selected_family_audit": {
+    "reconstructed_card_states": 16,
+    "verified_joint_leaves": 64,
+    "nonintervention_nn_choices": 10940
+  },
+  "first_failure": {
+    "seed": 13259363,
+    "prefix_index": 145,
+    "floor": 31,
+    "commands_executed": 509,
+    "difference_fields": [
+      "hp",
+      "max_hp",
+      "relics"
+    ],
+    "reported_status": "rules_mismatch",
+    "subsequent_diagnosis": "Vampires transport maps simulator Blood Vial action to native max-HP payment; repaired and replayed in E93. Original E92 failure remains unchanged.",
+    "followup": "e93-vampires-ui-report.json"
+  },
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "formal_optimizer_updates": 0,
+  "limits": "Outcome-selected known-fit joint-only winning routes, maximum4 families from a fixed128-family subset. Does not cover all branches, losing routes, all combinations, learned strategy quality or a population win rate; does not replace the full E89 audit or final unseen1024 acceptance.",
+  "evidence_hashes": {
+    "registration.json": "1defeb4d661257f6aeda5952b6259b235c652642da038979214ace67a67f3333",
+    "selection.json": "e75e263082d062b4b94afa5a2d3791a5928f5875edb6f98972a847b3272eff93",
+    "source-audit.json": "c5eb871a4f3de705d9eeef88ef375257460ff4e94bd45d15d3fc2e4892ee5f39",
+    "execution-registration.json": "f4e4ffab0896177fc2b08287a5a0ced91b463533c54f548a8744c8679e4fd835",
+    "completion-verification.json": "22f88917f20fcb3eb1f8898085815e47679bc63e9d875ba0d0aaf7e671fc6205",
+    "publication-verification.json": "9689782e88c4a7f91d1a3fa0f58bc126b395044bd68e0a05489e4589e095da8b",
+    "harness-snapshot.json": "c200401c89359016c6fb363a2c9ee9df38de1917c76599bdac5547bf916a33fe"
+  }
+}

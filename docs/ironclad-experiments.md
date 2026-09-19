@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 completed first-relic audit and joint collection activation, the completed E91 worker-startup comparison and E92 joint-only original-parity registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through completed E92 joint-route parity with its retained failed attempt and E93 Vampires transport repair on 2026-09-19. E89 joint collection continues. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2199,7 +2199,7 @@ E89 的采样器为每条分支创建新进程，隔离原生崩溃和超时。�
 公开结果 `docs/experiments/e91-worker-startup-result.json`；完成证明 SHA `594d5e743e47f0f8f1ef74f5f8e2025e29da0864c1c12efceca54c660fb43f38`，发布复核 SHA `f109aa546c8e9f28a886a32cd3e8f5539b81bd695a606eb9b61430f4c7fd3a28`。E89 的 6,324 条首遗物续局在启动对照前完成，收集账目和执行故障检查通过；独立审计在对照结束时继续运行。模型更新次数为 0，这些重算属于软件／性能对照，不是新增训练样本或胜率提升。
 
 
-## 101. E92：新引擎的遗物与选牌组合路线核验（2026-09-19，登记与启动）
+## 101. E92：新引擎的遗物与选牌组合路线核验（2026-09-19，完成，保留一项映射错误）
 
 E89 的第二阶段枚举“首 Boss 遗物 → 第二幕首战末个选牌奖励”的组合。E92 在读取新组合结果前固定前 128 个拟合种子，保留提前失败；等这组的全部 1,590 条组合候选完成后，逐家庭计算父策略、单改遗物、单改选牌与两者联动的终局结果。只有前三者失败、联动能够击败心脏的家庭符合本次原版检查条件。按分配顺序取前四个合格家庭，各取冻结候选顺序中的第一条获胜组合；不够四个时保留空位，不扩大种子范围或替换失败。
 
@@ -2208,3 +2208,20 @@ E89 的第二阶段枚举“首 Boss 遗物 → 第二幕首战末个选牌奖�
 七项合成软件检查通过，覆盖联合资格、单项胜局排除、提前失败／无选牌节点保留、顺序与家庭上限、缺失／重复／故障标签拒绝，以及零入选时不运行原版且报告零覆盖。冻结的 40 个来源文件、12 个核验工具文件及引擎／模型身份通过检查。此预检查没有读取新组合终局，没有新增 MCTS 采样或模型更新。控制进程启动并等待固定子集；原版结果另行记录。
 
 登记 SHA `1defeb4d661257f6aeda5952b6259b235c652642da038979214ace67a67f3333`；执行登记 SHA `f4e4ffab0896177fc2b08287a5a0ced91b463533c54f548a8744c8679e4fd835`。证据目录 `ironclad-alignment/evidence/e89-joint-only-parity-20260919-01/`，公开协议 `sim_patch/alignment/e92-joint-only-parity-protocol.json`。这些是已知拟合种子中按结果选择的路线核验，不是模型学会联动的证据，也不是原版总体胜率；败局、范围外组合及最终未见种子验收保持独立。
+
+
+E92 固定子集完成 99 个可达家庭、396 个选牌状态、1,590 条组合续局，29 个提前失败保留。模拟器终局回看得到父策略 12、只改遗物最优 21、只改选牌最优 22、联合最优 30；这四个数字使用事后终局信息挑选动作，不能当作模型成绩。四个家庭满足单项皆败、联合获胜，名单在原版执行前冻结。它们的全部 64 条候选、16 个自然选牌节点及 10,940 次非干预 NN 决策通过独立核验。
+
+四条原版运行中三条匹配：30885438 的金字塔与铁斩波组合为 1,405 条命令／88 HP，45958430 的符文立方体与放血组合为 870 条命令／31 HP，70660461 为 1,131 条命令／25 HP，合计 3,406 条。追加持久 RNG、三钥匙、双 Boss、第四幕与清理检查通过。13259363 在第 31 层吸血鬼事件后出现 HP／最大 HP／遗物差异，执行 509 条命令，失败保留。原版菜单与源码表明回放器把“交出小血瓶”发送为“失去最大生命”；模拟器保留两个合法动作，区别在按钮顺序。E93 修复映射，不改写 E92 的 `complete_with_unresolved_findings`。
+
+完成 SHA `22f88917f20fcb3eb1f8898085815e47679bc63e9d875ba0d0aaf7e671fc6205`；发布复核 SHA `9689782e88c4a7f91d1a3fa0f58bc126b395044bd68e0a05489e4589e095da8b`。复核覆盖全部 1,590 条来源摘要、所选四个家庭的审计、全部原版命令计数与清理；12 份旧核验工具在修复前另存快照。原版败局没有覆盖，联合救回结论属于模拟器树；这项工作没有模型更新。公开结果 `sim_patch/alignment/e92-joint-only-parity-report.json`。
+
+## 102. E93：吸血鬼事件的双向按钮映射修复（2026-09-19，完成）
+
+持有小血瓶时，模拟器动作 0／1／2 分别表示交出小血瓶、损失最大生命、拒绝；原版按钮顺序为损失最大生命、交出小血瓶、拒绝。旧回放器按合法动作排序发送按钮，交换了前两个行为。没有小血瓶时，合法模拟器动作是 1／2，与原版两项菜单的相对顺序一致。
+
+修复让两个回放方向共用动作与原版菜单的对应关系，核对小血瓶、菜单数量、合法动作与按钮状态；不符合合同就停止。模拟器动作编号、引擎和神经网络没有变化。七项软件检查通过，包含已有三个界面边界对照。五项原版受控事件选择覆盖有小血瓶的三项和无小血瓶的两项：旧映射两个目标失败、三个控制通过；修复后五项匹配。比较 HP、最大 HP、遗物、金币、药水、奖励、牌组／选择多重集与六条持久 RNG；这些方法夹具不证明自然牌序。
+
+对 E92 同一条失败轨迹从原版自然开局复验，保留原动作和时间输入。吸血鬼事件选择后为 53／75 HP、交出小血瓶，与模拟器一致；整局通过 1,270 条命令，以 43 HP 击败心脏，追加持久 RNG、三钥匙、时间吞噬者与觉醒者、矛盾与心脏及清理核验通过。没有中途状态导入或重同步。受控与自然两个实例清理完成；E89 的冻结来源与原版准入证明通过复核，主采集继续，正式模型更新为 0。
+
+E92 的三条成功路线与 E93 修复后同一失败路线构成四条组合获胜路线的原版证据，合计 4,676 条匹配命令。E92 的 509 条失败尝试保留，不计入匹配命令；四条结果不是模型学会联动或总体胜率。登记 SHA `adc003fe514f471bf8d4ca462cf124ed7a035112d44df1b591d3cbcdfd31d353`；完成 SHA `e40d043112c79cc8e6ba847362c9afd950836271b1d3d3da72fede2e8262e0fc`；发布复核 SHA `a597ac74503f001c3b466027ba69221c749bcb6ffd017ae1e7978956fbaf92cd`。证据在 `ironclad-alignment/evidence/e92-vampires-ui-repair-20260919-01/`，公开结果 `sim_patch/alignment/e93-vampires-ui-report.json`。

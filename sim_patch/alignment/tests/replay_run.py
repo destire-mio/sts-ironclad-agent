@@ -4,6 +4,7 @@ Adapter-only UI screens are skipped; choices are matched to the current original
 screen. Stop at the first discrepancy; never import the original's later state.
 """
 from compare_cards import *
+from winner_ui import event_action_order
 
 def deck_original(g):
  return [(bridge.card_snapshot(c)['id'],int(c['upgrades']),int(c['upgrades']) if c['id']=='Searing Blow' else bridge.card_snapshot(c)['misc']) for c in g['deck']]
@@ -123,7 +124,9 @@ def run(source):
       deck_idx=next((i for i,c in enumerate(old['deck']) if c['uuid']==chosen['uuid']),None)
       action=sts.GameAction(list(gc.selection_deck_indices).index(deck_idx)) if deck_idx is not None else sts.GameAction(idx)
      elif screen in ['EVENT','GRID','BOSS_REWARD']:
-      options=[a for a in sts.get_legal_game_actions(gc) if not a.is_potion_action];action=options[idx]
+      options=[a for a in sts.get_legal_game_actions(gc) if not a.is_potion_action]
+      order=event_action_order(old,[a.bits for a in options])
+      action=next(a for a in options if a.bits==order[idx])
      else:raise ValueError('unmapped original choice '+screen)
     elif typ in ['proceed','skip']:
      if typ=='skip' and screen=='CARD_REWARD':pass # Closing the card screen leaves this offer unclaimed.
