@@ -181,3 +181,6 @@ The supplied `verify_heart_winners.py` is the original-game replay driver, not a
 
 
 E81 (`e81_sever_soul.patch`, after `e78_preview.patch`) fixes Sever Soul exhaust scheduling: Feel No Pain callbacks resolve before the Heart's Beat of Death, while reverse hand exhaust order and Dead Branch RNG are preserved. Four before-repair target failures become passes; three controls remain passing. Full CTest:190; separately applied portable focused checks:7. The natural divergence boundary and a full historical-action original Heart route (1,083 commands,36HP) match. Fresh replanning of that seed loses at Awakened One, so E79 outcomes are not transferred; E82 regenerates the cohort. This is a confirmed rule repair, not an improved-policy or exhaustive-parity claim. See [repair evidence](alignment/e81-sever-soul-report.json).
+
+
+`replay_recorded_winner.py` rechecks identical natural action/timing paths against immutable original responses using the pinned live comparator and additional run-only RNG checks during combat. It performs no new JVM run and never imports original state. Changed paths require new original execution. Eight known-route/negative cases and six input-integrity checks validate this boundary; source records and licensed oracle dependencies remain local. See [E83 evidence](alignment/e83-recorded-replay-report.json).

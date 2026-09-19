@@ -162,3 +162,5 @@ foreach(case IN ITEMS fnp_one fnp_three lethal dead_branch_order no_fnp_control 
     add_test(NAME e81_${case} COMMAND e81_sever_soul_tests ${case})
     set_tests_properties(e81_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+add_test(NAME e83_recorded_input_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_recorded_winner.py" -v)
+set_tests_properties(e83_recorded_input_contract PROPERTIES TIMEOUT 15)
