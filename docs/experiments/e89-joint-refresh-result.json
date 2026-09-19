@@ -1,0 +1,247 @@
+{
+  "experiment": "E89",
+  "status": "complete_not_adopted",
+  "date": "2026-09-20",
+  "scope": "Ironclad A20 natural-start Heart; first Act1 boss relic and last card offer at the first Act2 battle; surrounding parent NN and E86 MCTS frozen. Prismatic Shard purchase excluded.",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "assigned_families": {
+    "fit": 1536,
+    "label_holdout": 512,
+    "train_development": 512
+  },
+  "eligible_label_families": 1581,
+  "early_failures_retained": 467,
+  "card_states": 6316,
+  "relic_branches_without_scoped_card": 8,
+  "collection": {
+    "first_relic_continuations": 6324,
+    "joint_continuations": 25188,
+    "execution_faults": 0,
+    "old_pilot_leaves_reused": 0
+  },
+  "audits": {
+    "first_relic_terminal_replays": 6324,
+    "first_relic_outside_nn_choices": 918755,
+    "joint_terminal_replays": 25188,
+    "joint_outside_nn_choices": 3612519,
+    "joint_exact_parent_controls": 6316,
+    "live_learned_choice_families": 1581,
+    "assigned_learned_choice_families": 2048
+  },
+  "learning": {
+    "arms": [
+      "relic",
+      "card",
+      "joint"
+    ],
+    "cv_folds": 3,
+    "l2_grid": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "steps_per_fit": 1000,
+    "cv_optimizer_updates": 27000,
+    "final_refit_updates": 0,
+    "selected_arm": null,
+    "cv_gate": {
+      "minimum_net_gain": 10,
+      "paired_exact_p_less_than": 0.05
+    },
+    "trials": [
+      {
+        "arm": "relic",
+        "l2": 0.0001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 151,
+          "exact_p": 0.6358280026288412,
+          "net_gain": -4,
+          "paired": {
+            "baseline_only": 22,
+            "both_fail": 1363,
+            "both_win": 133,
+            "candidate_only": 18
+          }
+        }
+      },
+      {
+        "arm": "relic",
+        "l2": 0.001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 152,
+          "exact_p": 0.6476058959960938,
+          "net_gain": -3,
+          "paired": {
+            "baseline_only": 11,
+            "both_fail": 1373,
+            "both_win": 144,
+            "candidate_only": 8
+          }
+        }
+      },
+      {
+        "arm": "relic",
+        "l2": 0.01,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 148,
+          "exact_p": 0.09228515625,
+          "net_gain": -7,
+          "paired": {
+            "baseline_only": 10,
+            "both_fail": 1378,
+            "both_win": 145,
+            "candidate_only": 3
+          }
+        }
+      },
+      {
+        "arm": "card",
+        "l2": 0.0001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 150,
+          "exact_p": 0.6089207154048287,
+          "net_gain": -5,
+          "paired": {
+            "baseline_only": 33,
+            "both_fail": 1353,
+            "both_win": 122,
+            "candidate_only": 28
+          }
+        }
+      },
+      {
+        "arm": "card",
+        "l2": 0.001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 154,
+          "exact_p": 1.0,
+          "net_gain": -1,
+          "paired": {
+            "baseline_only": 38,
+            "both_fail": 1344,
+            "both_win": 117,
+            "candidate_only": 37
+          }
+        }
+      },
+      {
+        "arm": "card",
+        "l2": 0.01,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 153,
+          "exact_p": 0.8898839652765371,
+          "net_gain": -2,
+          "paired": {
+            "baseline_only": 27,
+            "both_fail": 1356,
+            "both_win": 128,
+            "candidate_only": 25
+          }
+        }
+      },
+      {
+        "arm": "joint",
+        "l2": 0.0001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 150,
+          "exact_p": 0.6878853435796911,
+          "net_gain": -5,
+          "paired": {
+            "baseline_only": 52,
+            "both_fail": 1334,
+            "both_win": 103,
+            "candidate_only": 47
+          }
+        }
+      },
+      {
+        "arm": "joint",
+        "l2": 0.001,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 165,
+          "exact_p": 0.3018724904870077,
+          "net_gain": 10,
+          "paired": {
+            "baseline_only": 33,
+            "both_fail": 1338,
+            "both_win": 122,
+            "candidate_only": 43
+          }
+        }
+      },
+      {
+        "arm": "joint",
+        "l2": 0.01,
+        "outcomes": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 157,
+          "exact_p": 0.9087769252754921,
+          "net_gain": 2,
+          "paired": {
+            "baseline_only": 37,
+            "both_fail": 1342,
+            "both_win": 118,
+            "candidate_only": 39
+          }
+        }
+      }
+    ],
+    "fallback_fit_wins": 155,
+    "fallback_label_holdout_wins": 45,
+    "natural_candidate_games": 0,
+    "unseen_acceptance_games": 0
+  },
+  "coverage": {
+    "fit": {
+      "assigned": 1536,
+      "extra_families_over_relic_oracle": 129,
+      "hindsight_counts": {
+        "card_oracle": 258,
+        "joint_oracle": 347,
+        "parent": 155,
+        "relic_oracle": 218
+      },
+      "mixed_card_families": 322,
+      "mixed_card_states": 509
+    },
+    "label_holdout": {
+      "assigned": 512,
+      "extra_families_over_relic_oracle": 43,
+      "hindsight_counts": {
+        "card_oracle": 76,
+        "joint_oracle": 112,
+        "parent": 45,
+        "relic_oracle": 69
+      },
+      "mixed_card_families": 105,
+      "mixed_card_states": 158
+    }
+  },
+  "completion_sha256": "e71c37be2444dacaa6e0c1b23d030ef6bf38b57582d7c09b0a12962cb7b317b2",
+  "joint_completion_sha256": "1d936c11af585a0b2f0153ed16e3457670470b4f224b277cd2e02042af438054",
+  "label_verification_sha256": "6041ae1c6590dcca2261cf0c3737645f479bced51bba789df67ff600f6eb0ec2",
+  "learning_verification_sha256": "73a71b3a1898a7422cc327858559f13ea60bc1d454a5760d4f0b7dd4259b3da7",
+  "publication_verification_sha256": "8dcfc1326375d1d1ca74dfa6d0f2bcaf1d82f312a6cffeab284c265b41b46caf",
+  "limits": "Rechecks complete simulator audit evidence and saved CV selection. No new original-game replay, no adopted model, and no unseen acceptance. Original-game parity scope remains E88/E90/E92/E93/E94.",
+  "next_evidence": "E95 reconstructs all saved fold heads on their own fit and validation families to diagnose fit/generalization and scope; no repeat of the failed grid."
+}
