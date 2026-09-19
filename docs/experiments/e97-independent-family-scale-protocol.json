@@ -1,0 +1,85 @@
+{
+  "experiment": "E97",
+  "created_at": "2026-09-19T23:18:57.944168+00:00",
+  "question": "Does adding independent naturally sampled seed families improve the same fixed joint readout recipe, compared with the1536-family control under the same optimizer update count?",
+  "new_families": {
+    "fit": 3072,
+    "label_holdout": 512,
+    "train_development": 512
+  },
+  "assignment": "Capture local history/reservations by content hash, including sibling project runs and legacy seed files. Draw4096 unique roots disjoint from that union; order bySHA256(E97-role:<seed>) and assign3072fit/512label_holdout/512train_development before outcomes. All are development material immediately. Keep every early failure and execution fault; no substitution.",
+  "runtime": "Byte-identical E87 runtime with E86 engine1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329 and parent modelcbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4. Ironclad A20 natural Heart,3keys,2different Act3 bosses,Act4; Prismatic Shard purchase excluded, native pools retained. MCTS8000/call,bossx3,45s/floor,1preview frame.",
+  "source_gate": "Complete all4096 natural terminal/state/RNG/timer replays, outside NN choices and fresh replans of every winner with zero execution faults. All512 newly assigned development families retain their roles; check every development-winning natural route against the original game before admitting new continuation labels. Preserve findings and stop affected labels on confirmed rule/RNG differences.",
+  "new_continuations": "For all3584 new fit/label-holdout families naturally reaching first Act1 boss relics, enumerate every relic and skip, keep parent control and finish with the unchanged parent. Audit all. Locate the last card offer at the first Act2 battle under each relic, enumerate card/Bowl/skip and audit full terminal/RNG/timer and outside NN choices. Retain missing scoped nodes as original terminal branches; no new development branch labels.",
+  "scale_arms": {
+    "small": {
+      "fit_families": 1536,
+      "data": "Complete E89 fit trees only."
+    },
+    "expanded": {
+      "fit_families": 4608,
+      "data": "Same1536 E89 fit families plus3072 new fit families; no outcome enrichment."
+    }
+  },
+  "learning": "Both arms use E89 joint_frozen_readout, frozen192-dimensional parent representations and legal descriptors, own-fit support and RMS, parent option bias1. Fit exact expected terminal return over both choices plus L2=0.001, from zero heads,1000 full-batch Adam steps at0.03,gradient norm1. No CV,checkpoint,regularization or threshold sweep. Train both before any common heldout evaluation. Same parameterization/update count; different fit supports and total example work are recorded, not claimed equal compute.",
+  "why_control_is_run": "E89 did not refit its failed CV arm on all1536 families. The small arm is a registered data-scale control evaluated alongside newly added data, not a retroactive reversal of E89 or repeated unchanged CV. L2=0.001 is fixed from prior diagnostic evidence before new sampling.",
+  "common_label_holdout": {
+    "old_families": 512,
+    "new_families": 512,
+    "combined": 1024,
+    "criterion": "An arm enters natural development only if net>=20 versus the frozen parent and paired exact p<0.05 on this combined development holdout, with zero faults and full live-choice verification."
+  },
+  "data_scale_hypothesis": "Report expanded minus small on the same1024 label families, its paired table and exact p. Claim support for the data-scale package only if net>=20 and p<0.05. Distinguish this hypothesis from whether either candidate beats the parent.",
+  "natural_development": {
+    "new_families": 512,
+    "criterion": "Run each qualifying arm on all512 assigned new development roots from natural start. Require net>=10,p<0.05 versus parent,zero faults,all terminal/RNG/timer and outside NN checks,first difference at a registered choice,all winners freshly replanned and original-game winner parity. Choose more wins,then fewer lost parent wins,then small arm if tied."
+  },
+  "acceptance": "No final unseen seed is drawn by this experiment. Any adopted improvement below the50percent target remains an intermediate policy. The actual goal remains a later frozen candidate with>=512/1024 genuinely unseen seed-family Heart wins plus confidence interval,faults and full replays.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "natural_stage_seconds": 10800,
+    "first_relic_collection_seconds": 21600,
+    "joint_collection_seconds": 57600,
+    "audit_or_development_stage_seconds": 10800,
+    "observer_interval_seconds": 1200,
+    "original_jvm_instances": 1
+  },
+  "failure_rule": "Preserve every failed stage and do not reset deadlines,retry seeds,lower gates or expand this fixed cohort after outcomes. An actual execution fault blocks downstream training pending diagnosis. No other simulation pools or paid compute.",
+  "limits": "The data-scale package may still overfit the fixed representation and narrow two-choice scope. E95s observed347/1536 hindsight maximum is not a full-policy/population bound. E34/E35 historical data-scale failures remain; this is a larger independent-family/current-engine question, not proof that more data works.",
+  "status": "natural_collection_running",
+  "date": "2026-09-20",
+  "source_experiment": "E87",
+  "joint_source_experiment": "E89",
+  "source_identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "registration_sha256": "9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8",
+  "source_execution_registration_sha256": "796a6eb8c9a0128a492ee8077424d3f048b74c06c6e6792ff3be052bf81e2198",
+  "preparation": {
+    "status": "complete",
+    "at": "2026-09-19T23:24:31.492427+00:00",
+    "registration_sha256": "9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8",
+    "history_sources_rechecked": 233,
+    "excluded_values": 51793,
+    "new_families": {
+      "fit": 3072,
+      "label_holdout": 512,
+      "train_development": 512
+    },
+    "combined_roles": {
+      "fit": 4608,
+      "label_holdout": 1024,
+      "train_development": 512
+    },
+    "copied_runtime_files_identical": 16,
+    "loaded_runtime_modules_verified": 10,
+    "source_manifest_sha256": "e0a7ca4e662b6d3fe4756b95485e479e090c31d0f5a49c719b32edd857041908",
+    "zero_overlap": true,
+    "scope": "Preparation and process launch only. No completed source cohort, new training result or original-game parity claim."
+  },
+  "preparation_publication_sha256": "21538d8174d1c961f7f592cf95c6ac113d9d7e9b82e092c6db07034a1f99ed17"
+}

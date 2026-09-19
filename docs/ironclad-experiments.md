@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through completed E89 joint learning, E95 diagnosis and the rejected E96 paired-advantage screen on 2026-09-20. No new candidate was adopted. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through the registered E97 independent-family data-scale study on 2026-09-20, with natural collection in progress. Completed E89/E95/E96 decisions remain recorded; no new candidate was adopted. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2291,3 +2291,19 @@ E89 的三组小读出头没有通过内部选择。E95 使用保存的 27 个�
 证据目录 `runs/heart-paired-advantage-20260920-01/`，公开结果 `docs/experiments/e96-paired-advantage-result.json`。登记 SHA `d8308519f499236d78c0215e7ea248bf3f0ee7cec984fb120fb4e4bbd54e42d9`，完成 SHA `cf8e1bd35d4436ac78eaf15cf990094e37d4fb5d857478f9b450b9c2ab8de6bc`，发布复核 SHA `676160acf9eba4aee98126f6ae7fba324955f66add9058c491d3395a70eb6d58`。模型适配、现场选择核验、自然整局候选运行和最终未见种子验收均未执行，父模型保留。
 
 下一轮优先检验独立家庭覆盖，不复扫本次读出目标与正则值。先制定扩大自然来源的固定数据规模对照，明确真正新增的家庭数、匹配的学习预算、采样成本和开发名单；旧 E34／E35 在不同运行时、后期节点与较小有效家庭组上的失败不能作为此次数据扩展有效的证据，也不能被删除。两步范围的事后上限限制保留，数据实验即使通过也不是 50% 目标完成。
+
+## 106. E97：扩大独立家庭的数据规模对照（2026-09-20，来源采集中）
+
+本轮检验新增独立种子能否改善同一联合读出配方的泛化。对本地四个项目的历史与预留名单建立内容摘要快照：233 个来源、119 个去重快照，共排除 51,793 个值。生成 4,096 个无重叠新种子，以预定哈希顺序分为 3,072 个拟合家庭、512 个标签留出家庭和 512 个自然开发家庭；分区在结果产生前冻结。失败、缺少目标节点与执行故障均保留，不换种子。它们从分配起属于训练／开发材料，不能进入最终未见种子验收。
+
+自然来源使用 E87 的 16 个逐字节相同运行文件，10 个实际加载模块的路径与摘要通过核对；父模型和 E86 引擎保持原身份。来源准备的五项控制覆盖合法分区、组内重复、跨组重叠、历史重叠和家庭遗漏。8 个单线程工人从自然开局运行 4,096 局；MCTS 8,000 次／调用、Boss 三倍、既有重规划限制和一帧预览计时不变。长任务的人工观察间隔为 20 分钟，不修改暂停的自动化。
+
+准入要求全部自然终局／状态／RNG／计时与局外 NN 选择核验、所有胜局的新规划复跑、零执行故障；另对新开发组每条心脏胜局从原版自然开局检查。两个来源门槛完成后，才对新拟合及标签留出共 3,584 个家庭枚举首幕 Boss 遗物与下一幕首场战斗前最后一次选牌的完整续局。原版发现确证的规则或 RNG 差异时，受影响标签停止准入。新开发组不采候选分支。
+
+训练比较两臂：小组用 E89 原 1,536 个拟合家庭；扩展组用同组加 3,072 个新家庭，共 4,608 个。结构固定为 E89 联合冻结读出，192 维冻结表示、各自拟合数据的支持集合与 RMS、父选项偏置 1；固定 L2=0.001、零头起点、1,000 次全批 Adam 更新、学习率 0.03、梯度范数 1。训练两臂后才读取共同标签留出结果，不扫折数、正则、阈值或检查点。两臂参数形式与更新次数相同；支持集合、样本计算量与采样成本有差异，分别记录。E89 没有做过最终全拟合重训，本次小组是数据规模对照，不撤销 E89 的拒绝结论。
+
+共同标签留出为原 512 加新 512，共 1,024 个家庭。单臂进入自然开发要求相对父策略净增至少 20 胜、配对精确 p<0.05、零故障和现场选择核验。声称数据扩展有效需扩展臂相对小组在同一留出组净增至少 20 且 p<0.05，这与“候选优于父策略”是两个检验。合格臂在全部新开发 512 局中要求净增至少 10、p<0.05，完成终局／RNG／计时、局外选择、首次差异范围、胜局重规划与原版胜局检查。胜数优先，随后比较丢失父胜局数，平局选小组。没有生成最终验收种子，没有新训练结果或采用模型。
+
+阶段预算为自然来源 10,800 秒、首遗物采样 21,600 秒、组合采样 57,600 秒、审计或自然开发 10,800 秒；单局 300 秒、子进程 360 秒，原版每次一个 JVM。不得重置时限、按结果重试种子或扩大固定队列。旧数据规模失败与 E95 两步范围限制保留；通过本次试验也不等于达到最终 50% 目标。
+
+本地证据 `runs/heart-independent-family-scale-20260920-01/`；公开协议 `docs/experiments/e97-independent-family-scale-protocol.json`。登记 SHA `9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8`，执行登记 SHA `796a6eb8c9a0128a492ee8077424d3f048b74c06c6e6792ff3be052bf81e2198`，来源清单 SHA `e0a7ca4e662b6d3fe4756b95485e479e090c31d0f5a49c719b32edd857041908`，准备发布复核 SHA `21538d8174d1c961f7f592cf95c6ac113d9d7e9b82e092c6db07034a1f99ed17`。此证明覆盖分区、文件身份与来源启动，不代表来源完成、原版通过或训练收益。
