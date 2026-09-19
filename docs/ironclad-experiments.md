@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86 and the E87 repaired-runtime refresh registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E86, the E87 source refresh, E88 original comparisons and the E89 joint-learning registration on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2122,3 +2122,20 @@ E85 整局结果：预选种子的新 NN／MCTS 规划打赢心脏，胜局复�
 独立核验使用每块 32 局的进程任务，沿用原比较函数及现有有界进程控制器。启动前用预先固定的 64 条已知 E81 开发轨迹验证：串行与两个进程的有序结果相同；单次耗时 15.70／9.53 秒，不外推为通用加速比。篡改终局导致所在块失败且目标为空，另一块保留通过；错误引擎、模型、来源摘要和超时缺块均被拒绝，结束后无遗留子进程。原受影响数据只用于软件控制，不用作新训练标签。
 
 运行目录 `sts-rl-agent-pr/runs/heart-e86-repaired-refresh-20260919-01/`，协议 `docs/experiments/e87-repaired-refresh-protocol.json`，并行预检 `docs/experiments/e87-parallel-audit-preflight.json`。训练方向保留遗物单独、选牌单独、二者联合三个对照，用相同的心脏终局目标判断组合是否带来收益；当前正式参数更新为零。
+
+
+## 97. E88：E86 开发胜局的整组原版核验（2026-09-19，运行中）
+
+E87 的预分配 512 个开发种子完成独立核验：48 胜、464 败，70,534 次局外 NN 选择及全部终局／RNG／预览计时检查通过，执行故障 0。48 条胜局全部进入原版对照；46 条与已有 E84 或 E86 原版路线动作／界面／时间相同，原版观察在新引擎上重核通过，另 2 条需要新原版运行。旧观察出现差异时保留失败并用当前观察器执行原动作，不忽略费用差异；本轮 46 条没有触发此分支。
+
+新增原版运行仍需追加稳定战斗中的六个局外持久 RNG 流检查。每次最多一个原版 JVM，900 秒保护，实例清理、不导入状态、不替换种子。证据目录 `ironclad-alignment/evidence/e86-development-winners-parity-20260919-01/`，公开登记／协议为 `sim_patch/alignment/e88-development-parity-registration.json` 和 `e88-development-parity-protocol.json`。48／512 是修复后的父模型开发基线，不是新模型收益或未见种子验收。
+
+## 98. E89：修复版遗物＋选牌联合学习入口（2026-09-19，已登记，等待来源核验）
+
+复用 E73 已登记的冻结编码器、小读出头与按种子分组的内部验证方案，正式更新仍为零。新增入口 `agent/heart_relic_card_refresh.py` 接受修复后的自然来源：要求 E87 全 2,560 局完成及 E88 全开发胜局原版对照完成；分歧、缺失、故障和来源摘要变化均阻断启动。E73／E82 旧标签不进入本轮。
+
+先在新引擎重采每个首 Boss 遗物及跳过的完整续局，原选择重规划作为对照；独立检查原生候选、全部终局／RNG／NN 后，从这些路线定位第二幕第一场战斗的末次选牌，枚举牌／歌唱碗／跳过并采到心脏胜负。随后运行遗物单独、选牌单独、二者联合三个学习对照，所有臂完成后才看外部留出，再按原门槛进入 512 局自然开发。中间不重复训练 E69 的两个遗物模型；父模型固定为 E87 所用模型。
+
+入口预检包括 12 项学习合同／当前运行时自然选项测试、4 项来源准入测试；12 个实际加载模块与冻结文件相同，实际未完成的 E87 来源被拒绝，未生成学习阶段。原测试固定读取 E67 状态，现改从指定运行时的自然轨迹定位 Boss，检查轨迹的引擎和模型身份，避免把旧状态指纹用作新引擎夹具。小树中的测试参数更新属于软件验证，不是正式训练结果。
+
+登记目录 `sts-rl-agent-pr/runs/heart-e86-joint-readout-20260919-01/`，公开协议 `docs/experiments/e89-joint-refresh-protocol.json`。两步联合的目标是判断组合是否带来可泛化收益，不声称两个选择足以达到 50%；最终未见种子验收保持独立。

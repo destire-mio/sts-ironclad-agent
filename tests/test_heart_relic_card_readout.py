@@ -145,9 +145,21 @@ class ReadoutTest(unittest.TestCase):
 
     def test_production_loader_and_live_zero_queries_match_parent(self):
         config = H.read_json(self.runtime / 'config.json')
-        # Reconstruct a saved first-boss state from the repaired natural cohort.
-        boss = H.read_json(Path('runs/heart-contextual-relic-learning-20260918-01/roots.json.gz'))[0]
-        episode = H.read_json(boss['source_path'])
+        # Reconstruct with this runtime's own episodes; old-engine fingerprints
+        # are not fixtures for a newly repaired runtime.
+        natural = self.runtime
+        if not (natural / 'episodes').is_dir():
+            natural = Path(H.read_json(natural / 'protocol.json')['natural_source'])
+        parent_policy = H.load_scorer(self.base)
+        boss = None
+        for path in sorted((natural / 'episodes').glob('*.json.gz')):
+            episode = H.read_json(path)
+            self.assertEqual(episode['engine_sha256'], L.B.S.sha(R.sts.__file__))
+            self.assertEqual(episode['checkpoint_sha256'], L.B.S.sha(self.runtime / 'model.pt'))
+            boss = L.B.first_root(episode, path, 'fit', config, parent_policy)
+            if boss is not None:
+                break
+        self.assertIsNotNone(boss, 'runtime needs a naturally reached first-boss fixture')
         gc = R.replay(boss['seed'], episode['prefix'][:boss['prefix_index']], config)
         actions = list(R.sts.get_legal_game_actions(gc)); _, desc, _ = M.A.build_choices(gc)
         observation = M.A.obs_vec(gc)

@@ -1,0 +1,78 @@
+{
+  "protocol": {
+    "families": {
+      "fit": 1536,
+      "label_holdout": 512,
+      "train_development": 512
+    },
+    "training": {
+      "arms": "Independent relic-only, card-only and joint readouts; common frozen pretrained encoder and continuation. Three folds by three L2 values plus at most one final fit per arm. Fit-fold choices, supports and optimization histories are retained and hashed.",
+      "cv_minimum_net_gain": 10,
+      "cv_p_maximum": 0.05,
+      "folds": 3,
+      "gradient_norm": 1.0,
+      "l2_grid": [
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "learner": "frozen_readout",
+      "learning_rate": 0.03,
+      "minimum_extra_families_over_relic_oracle": 30,
+      "minimum_mixed_card_families": 64,
+      "objective": "Negative exact terminal Heart return over complete two-decision trees and all assigned fit families, plus selected L2 times the sum of squared active weights and option biases. Fixed1000 full-batch Adam updates, lr .03, norm1. Disabled head is one-hot parent; unknown whole offer sets deploy parent.",
+      "representation": "Frozen E67 CardContextScorer penultimate192 features of public state and each actual offered descriptor. No seed, map fingerprint, RNG or future card is a feature. Two shared192-weight linear readouts plus fit-only option biases; no newly trained hidden layers. Divide within-offer centered features by fit-only RMS, clamped at .01. Add fixed1 to the parent option. Zero heads deploy parent.",
+      "selection": "SHA256(E73-family-fold:<seed>) modulo3 assigns every fit family and all descendants to one fold, retaining early failures. For each of the three preregistered L2 values and arms, train on two folds and choose on the third. Supports and RMS scales use only each training fold. Pool out-of-fold deterministic terminal outcomes over all1536 fit families; qualify only net>=10 and paired exact p<.05 versus parent. Select more wins, fewer lost parent wins, stronger L2. This internal selection p-value is a development gate, not an independent significance claim. If none qualifies, save unchanged-parent zero heads with zero final updates. Otherwise refit on all fit data for1000 updates. Train all arms before external heldout use; no further sweep.",
+      "steps": 1000
+    },
+    "label_holdout_gate": {
+      "minimum_net_heart_gain": 10,
+      "paired_exact_p_maximum": 0.05
+    },
+    "development_gate": {
+      "assigned_seeds": 512,
+      "minimum_net_heart_gain": 10,
+      "paired_exact_p_maximum": 0.05
+    },
+    "selection": "Only heldout passers enter development. Among development passers choose more wins, then fewer lost incumbent wins, then fewer trained parameters, then lexical arm name. These shared roles are development, not unseen acceptance.",
+    "limits": "Two scoped choices under a frozen surrounding NN and combat engine. Not all future card selections, not a population win-rate guarantee, and not exhaustive original-game parity.",
+    "experiment": "E89",
+    "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e86-repaired-refresh-20260919-01",
+    "parity_root": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e86-development-winners-parity-20260919-01",
+    "source_manifest_sha256": "fb37f9bd35f71353b396ebb19300cbe6e15d7551ee775478fdbb103942dea7e3",
+    "parity_registration_sha256": "2bc1dfca6c6f338b376b51d92b97535a2435cd54d2e2b993d7f005aa93a8aea6",
+    "identity": {
+      "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "recipe_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-readout-joint-learning-20260919-01/protocol.json",
+    "recipe_sha256": "ac6439e1fbc0151d196cb8b8ff4e3bfbb3b7dcedd76614cbb34e89747717416f",
+    "scope": "First Act1 boss relic and the last remaining combat card offer at Act2 map row0, when the parent is about to choose card/Bowl/skip. All other decisions retain the parent. Relic-only/card-only/joint arms share complete terminal Heart feedback.",
+    "activation": "Require complete E87 natural source proof and complete E88 original comparisons of every development winner, with zero unresolved findings. No labels or gradients before those gates.",
+    "collection": "Recompute every first-relic alternative and its original-choice control for all assigned fit/holdout families under E86. Independently verify them. Then enumerate every scoped card alternative and replan its original choice. Keep every early failure and every assigned family. No old E69/E70/E73/E82 labels or pilot leaves are reused.",
+    "incumbent": "Unchanged E87 parent; no intermediate relic-only model is trained or selected before the three joint-learning ablations.",
+    "verification": "Reuse the existing native-option boss audit, terminal/state/RNG/timer and nonintervention-NN audits, exact original-choice controls, grouped fit-fold selection checks, independent live learned choices, and natural512 development with all winner replans. Faults remain null and block learning/adoption.",
+    "resources": "Eight single-thread workers;300s episode/360s process guards. First-relic collection10800s, joint collection28800s, audits/development10800s. No overlapping simulation pools. Freeze each stage before running it.",
+    "next": "Retain rejected hypotheses and continue improvements. This scope does not promise50percent; only a later frozen, disjoint1024-seed test can satisfy that target."
+  },
+  "registration_sha256": "33ef335bffc8058ce9a6e8a465b19ac3352aeae24a6b9e2c922fd44cec38dad7",
+  "software_preflight": {
+    "status": "complete",
+    "software_only": true,
+    "readout_and_tree_tests": 12,
+    "metadata_admission_tests": 4,
+    "frozen_module_matches": 12,
+    "pending_natural_source_rejected": true,
+    "formal_optimizer_updates": 0,
+    "hashes": {
+      "agent/heart_relic_card_refresh.py": "c20b77877d249af088b58f670d91c05f39a9add4d545ac4037b774c1eca03b36",
+      "tests/test_heart_relic_card_refresh.py": "1ef4ace95ee4685b7476d9fff1a4c03bc21d663635e93106e8a107e04ecb8335",
+      "tests/test_heart_relic_card_readout.py": "f52debf900de0a64d9b0d80859088e38cd4145aca8f296585b9b108ce7ad67cf",
+      "tests/test_heart_relic_card_training.py": "0252302215387911fa2cf36fdb5df6a57a2ff11830e228934acf5c09d82c173b",
+      "entry-preflight.json": "7c9c8743243c4f7ee1bdd785c32755279a6d4a9f5bae5441e32708786a669a2a",
+      "readout-controls.log": "1447f6f15e5f10bcae58bef862f9ea5ff40cbe6250df3619519af61777c259a6"
+    },
+    "metadata_test_evidence": "Observed tool invocation: python3.12 -m unittest discover -s tests -p test_heart_relic_card_refresh.py; exit0;4 tests passed. These use metadata-only fixtures to reject partial, faulted, mismatched and changed sources before creating any learning stage.",
+    "limits": "Analytic trees and a current-runtime natural boss fixture check the unchanged learning recipe and runtime wiring. Test optimizer steps do not count as formal policy updates or empirical model gains. Full E87/E88 gates remain prerequisites."
+  }
+}
