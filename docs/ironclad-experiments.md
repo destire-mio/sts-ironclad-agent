@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 joint-learning activation and the completed E91 worker-startup comparison on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 completed first-relic audit and joint collection activation and the completed E91 worker-startup comparison on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2134,7 +2134,7 @@ E87 的预分配 512 个开发种子完成独立核验：48 胜、464 败，70,5
 
 E88 完成：46 条旧原版观察重核与 2 条新原版运行全部通过；新运行也经过持久 RNG 追加检查。48 条原版心脏路线匹配 51,669 条命令，实例清理完成，没有待处理差异。两条新运行种子 1819670092／1927008970 分别为 1,192／1,190 条命令，终局 72／25 HP。完成证明 SHA `12c2efbd075ca57b6c130fd5641f6165f8fbc57597685a959c5e075348446f16`；公开结果 `sim_patch/alignment/e88-development-parity-report.json`。此范围不覆盖所有分支、所有败局或总体原版胜率。
 
-## 98. E89：修复版遗物＋选牌联合学习入口（2026-09-19，遗物续局采集中）
+## 98. E89：修复版遗物＋选牌联合学习入口（2026-09-19，遗物审计完成，组合续局采集中）
 
 复用 E73 已登记的冻结编码器、小读出头与按种子分组的内部验证方案，正式更新仍为零。新增入口 `agent/heart_relic_card_refresh.py` 接受修复后的自然来源：要求 E87 全 2,560 局完成及 E88 全开发胜局原版对照完成；分歧、缺失、故障和来源摘要变化均阻断启动。E73／E82 旧标签不进入本轮。
 
@@ -2155,6 +2155,16 @@ E89 增加只读表示检查：在原拟合种子顺序中选取前 32 个自然
 E89 来源准入完成：E87 全组完成证明与 E88 全开发胜局原版证明均通过，原登记、模型、引擎和分区摘要保持一致。依赖控制程序启动登记流程，首个阶段为 `prepare-relic`；没有重复启动采集池或使用旧标签。启动证明 SHA `4b940e7f7d42463b7ae7255bd4ffbbf96969fb287a6e541ac42e29f167609d27`，记录于运行目录的 `activation-proof.json`，公共摘要附在 E87 完成报告中。正式优化更新为 0，后续仍需新遗物续局、组合续局、标签审计、三个学习对照和自然开发结果。
 
 遗物来源准备完成，阶段进入 `collect-relic`。1,185 个拟合家庭与 396 个标签留出家庭到达首 Boss 遗物，共 1,581 个家庭、6,324 条续局；另 467 个提前失败家庭保留，全部 2,048 个分配家庭唯一且不含自然开发种子。冻结来源文件和摘要通过核对；来源清单 SHA `4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6`。采样结束后仍需完整审计，再生成选牌分支；这些数量不代表训练收益。
+
+首遗物阶段完成：请求、返回及完整独立终局／RNG／预览计时回放均为 6,324 条，执行故障 0；1,581 条父策略原选择重规划对照及 918,755 次非干预局外 NN 选择核验通过。原生候选与来源选择重建通过，467 个提前失败家庭保留。发布前核对 1,581 份审计文件及其索引摘要、6,324 份分支摘要、分区与控制／NN 总数，冻结来源文件未变。
+
+拟合组中 207 个家庭的不同遗物结果有差异，63 个原败局家庭存在获胜遗物分支；标签留出组对应为 66 和 24。这些是固定父策略续局标签的覆盖统计，不能当作学会选遗物后的胜率。当前独立核验为模拟器自然回放；原版证据另由 E88／E90 的限定路线提供，不能外推为这 6,324 条分支的原版全覆盖。流程进入 `prepare-joint`，从每条遗物分支定位登记范围内的选牌节点；后续选牌续局及其审计完成前，正式模型更新仍为 0。
+
+公开摘要 `docs/experiments/e89-first-relic-result.json`；标签审计证明 SHA `ddb6f5b5de8314bf0ab8957572c0b29f88eb1b583c33ad4f08628532652156ce`，发布复核 SHA `268d39dc8af1e3bbb65a1c1cd48fdb9fa5156bdde1f5e97961da2c21fc54b6ed`。所有失败记录、旧数据停机记录和原登记训练方案保留。
+
+组合节点准备完成并进入 `collect-joint`：1,581 个首 Boss 家庭的 6,324 条遗物分支中，6,316 条定位到登记范围内的选牌节点，另 8 条没有该节点，原终局及树边保留。拟合组 4,732 个选牌状态／18,895 条候选续局；标签留出组 1,584 个状态／6,293 条候选续局，合计 25,188 条。每个状态枚举合法的牌、歌唱碗或跳过选项；其后使用固定父策略与原 MCTS 预算运行到终局。自然开发种子不进入采集，旧试验叶子复用为 0。
+
+核对全部树边和选牌状态的种子／分区／遗物动作／来源摘要，选项包含原选择；模型和 incumbent 副本与原身份一致，冻结清单通过检查。沿用 8 个 spawn 工人及原故障时限；E91 的提速门槛失败，没有替换后端。公开准备摘要 `docs/experiments/e89-joint-preparation.json`；组合清单 SHA `e678ddfcbcf8fa2e902a77a9e061f0a308842d3aa8ab8d7cba90e1db9f7f3b00`，准备发布复核 SHA `923645313435e58fa7996f3623e48e7517f39b3aa43459554d4775a175d84489`。本阶段是数据采集，正式模型更新为 0。
 
 ## 99. E90：新遗物续局的自然原版检查（2026-09-19，所选两条完成）
 

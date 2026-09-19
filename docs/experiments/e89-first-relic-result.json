@@ -1,0 +1,50 @@
+{
+  "experiment": "E89",
+  "stage": "first_relic_audit_complete",
+  "status": "complete",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "assigned_families": {
+    "fit": 1536,
+    "label_holdout": 512,
+    "train_development": 512
+  },
+  "eligible_first_relic_families": {
+    "fit": 1185,
+    "label_holdout": 396
+  },
+  "assigned_early_failures_retained": 467,
+  "requested_branches": 6324,
+  "returned_branches": 6324,
+  "execution_faults": 0,
+  "verified_terminal_state_rng_timer_replays": 6324,
+  "verified_original_choice_replans": 1581,
+  "outside_nn_choices_verified": 918755,
+  "development_excluded_from_branch_collection": true,
+  "split_label_coverage": {
+    "fit": {
+      "families": 1185,
+      "mixed_families": 207,
+      "rescued_families": 63
+    },
+    "label_holdout": {
+      "families": 396,
+      "mixed_families": 66,
+      "rescued_families": 24
+    }
+  },
+  "formal_optimizer_updates": 0,
+  "limits": "Source-label collection and independent simulator replay/NN audit, not a learned-model score or unseen acceptance. The separately recorded E88/E90 original-game comparisons cover their declared selected routes, not every branch here. Joint card continuation collection and audit must pass before the frozen E73 readout recipe trains.",
+  "evidence_hashes": {
+    "registration.json": "33ef335bffc8058ce9a6e8a465b19ac3352aeae24a6b9e2c922fd44cec38dad7",
+    "relic-source/manifest.json": "4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6",
+    "relic-source/selection.json": "c3a93f8ef82e10f6087207cc01026f2ec41ca227ebd742ec117e97c038ea0dcf",
+    "relic-source/roots.json.gz": "6f36ceb18a5e009d43970a1b2af8747f2b43ef3cb52de02ccaa5d9cb59b88a36",
+    "relic-source/labels.json": "b62384220597ff82cbd7231e0194f667952662dce8668d1864d1ad35d8abcaa2",
+    "relic-source/collection-accounting.json": "a74f9c0dd4192a7c2388f4b75988a2cf1ded1ccbe5e9d09836d03c06b3282547",
+    "relic-source/collection-report.json": "aa9a31af2c6381ae862782442dda18cedc7663910ce26a904fe7a7f7694c63de",
+    "relic-source/label-verification.json": "ddb6f5b5de8314bf0ab8957572c0b29f88eb1b583c33ad4f08628532652156ce"
+  }
+}
