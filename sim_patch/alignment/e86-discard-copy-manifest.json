@@ -1,0 +1,14 @@
+{
+  "experiment": "E86",
+  "patch_sha256": "44863a6d00148f4be0053b42c4c1523470b93704eca5d67f775164a48180607c",
+  "applies_after": "e85_dropkick.patch",
+  "files": [
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "5ca63f851e7a366e7fb78e7858080b949ce0fbd0173cc5caf7ff8d7456b99f2b",
+      "after": "bd495ac8a2d561dee843e907efdda2175537e52b546b1bb192c679b3c00f6072"
+    }
+  ],
+  "observer_patch_sha256": "6972f03cc5150b9b8bd609bd6855fc1ed295fbce4e8e11f63273714dba75ad8b",
+  "scope": "Reset temporary cost only in Actions.MakeTempCardInDiscard, modeling its original one-object animation/Soul completion. Retain hand-copy and overflow temporary costs, which animate a distinct copy. Original observer waits for the pending discard-creation callback and reports waiting frames, without assigning card state/RNG."
+}

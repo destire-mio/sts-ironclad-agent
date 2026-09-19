@@ -1,0 +1,13 @@
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -266,6 +266,10 @@
+ 
+ Action Actions::MakeTempCardInDiscard(const CardInstance &c, int amount) {
+     CardInstance c_copy(c);
++    // This action animates the inserted object; its Soul clears temporary
++    // costs. Hand-overflow and Dual Wield insert a distinct source object
++    // while animating a copy, so their CardManager paths must not reset it.
++    c_copy.costForTurn = c_copy.cost;
+     return {[=](BattleContext &bc) { // todo maybe store by reference instead of copy if CardInstance is too big to fit directly in the lambda. Make a seperate space where the card will be stored
+         for (int i = 0; i < amount; ++i) {
+             bc.cards.createTempCardInDiscard(c_copy);

@@ -1,0 +1,29 @@
+--- a/oracle/AlignmentProbe.java
++++ b/oracle/AlignmentProbe.java
+@@ -27,6 +27,7 @@
+  static float ruleInputPlayTime;
+  static int observerRenotifications;
+  static int exhaustSettlementFrames;
++ static int discardCreationSettlementFrames;
+  static JsonArray observerNotifications=new JsonArray();
+  static void frameInterval(float delta) {
+   if(baseGraphics==null)baseGraphics=com.badlogic.gdx.Gdx.graphics;
+@@ -139,6 +140,9 @@
+     // ExhaustCardEffect.update resets temporary card attributes at completion.
+     // Compare the settled native state; never synthesize the reset in a view.
+     if(effect instanceof com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect){exhaustSettlementFrames++;return true;}
++    // The generated card is inserted before this effect creates its Soul.
++    // Soul.update later clears temporary costs; wait for both native callbacks.
++    if(effect instanceof com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect){discardCreationSettlementFrames++;return true;}
+    }
+   return false;
+  }
+@@ -150,7 +154,7 @@
+   if(CommandExecutor.isInDungeon()) {
+    Method method=GameStateConverter.class.getDeclaredMethod("getGameState");method.setAccessible(true);out.add("game",JSON.toJsonTree(method.invoke(null)));
+    JsonObject rng=new JsonObject();for(Field f:AbstractDungeon.class.getFields())if(Modifier.isStatic(f.getModifiers())&&f.getType()==Random.class){Random r=(Random)f.get(null);if(r!=null){JsonObject v=new JsonObject();v.addProperty("counter",r.counter);v.addProperty("seed0",r.random.getState(0));v.addProperty("seed1",r.random.getState(1));rng.add(f.getName(),v);}}
+-   out.add("observer_notifications",observerNotifications);out.addProperty("observer_renotifications",observerRenotifications);out.addProperty("exhaust_settlement_frames",exhaustSettlementFrames);out.addProperty("play_time_seconds",CardCrawlGame.playtime);out.addProperty("rule_input_play_time",ruleInputPlayTime);
++   out.add("observer_notifications",observerNotifications);out.addProperty("observer_renotifications",observerRenotifications);out.addProperty("exhaust_settlement_frames",exhaustSettlementFrames);out.addProperty("discard_creation_settlement_frames",discardCreationSettlementFrames);out.addProperty("play_time_seconds",CardCrawlGame.playtime);out.addProperty("rule_input_play_time",ruleInputPlayTime);
+    JsonObject gridPreview=new JsonObject();
+    gridPreview.addProperty("for_transform",AbstractDungeon.gridSelectScreen.forTransform);
+    gridPreview.addProperty("confirm_up",AbstractDungeon.gridSelectScreen.confirmScreenUp);

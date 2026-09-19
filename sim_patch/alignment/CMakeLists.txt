@@ -171,3 +171,10 @@ foreach(case IN ITEMS vigor_vulnerable vigor_no_vulnerable vigor_weak generated_
     add_test(NAME e85_${case} COMMAND e85_dropkick_tests ${case})
     set_tests_properties(e85_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e86_discard_copy_tests tests/e86_discard_copy.cpp)
+target_link_libraries(e86_discard_copy_tests PRIVATE sts_core)
+foreach(case IN ITEMS anger_cost upgraded_cost free_copy overflow_control ordinary_control hand_copy_control)
+    add_test(NAME e86_${case} COMMAND e86_discard_copy_tests ${case})
+    set_tests_properties(e86_${case} PROPERTIES TIMEOUT 15)
+endforeach()

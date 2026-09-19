@@ -1,0 +1,34 @@
+{
+  "expired_deadline_rejected": true,
+  "families": 64,
+  "fault_isolated": true,
+  "hashes": {
+    "auditor-source.py": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+    "fault/audits/0000.json.gz": "81fc4138e1275ce2ebd6052c02bb01c2f8af6a340ea9b63b0e8031019a722071",
+    "fault/audits/0001.json.gz": "c5f157da1e70859e29661a0b2265ec71b145dd8d08e6a25bb073948e7f94c1f7",
+    "fault/changed-source.json.gz": "28d9e3f31d06aef1d8fa67c7ac5826a5cae8f821f9b16f3594b38cfa9a0173c5",
+    "parallel.json.gz": "f7133db314faf1a1cf2536f9f333d10aacebb3a3cb8f9ac1790c6c1bfdd6afb1",
+    "plan.json": "5a764511d2d676bb4aa75b23b2a4cace8aa7457edaf866071ed44d35627641b5",
+    "serial.json.gz": "d32cffa79b88b5c6a4c6dd6fcf28ac8503d2340b608ca45a8636789cda1f3581",
+    "validate.py": "9e2b43abcf5a7a0e384615b69f86ec8818188b898246c5e444c79073d9f78f90",
+    "wrong-engine.json": "b635a697617b4d4071fd98007a639d098e2bdc096bbaec6f8d2e2b26b1fa7546",
+    "wrong-model.json": "b91d105ee8bbaf8f413328fc0a3f15b13e30363d8ff1c35e3ae1504ffeb1f03b",
+    "wrong-source.json": "f9a98931328c5b9aaa0a04ceb5cab1ae5a6a1ff91a5fab70f550296a2dc3b63f"
+  },
+  "optimizer_updates": 0,
+  "rejected_wrong_identities": [
+    "engine",
+    "model",
+    "source"
+  ],
+  "remaining_children": 0,
+  "scope": "Software control on known E81 development data, not repaired labels, performance generalization or model quality.",
+  "serial_parallel_equal": true,
+  "serial_seconds": 15.702365709003061,
+  "status": "complete",
+  "two_worker_seconds": 9.525920167012373,
+  "unchanged_comparator": true,
+  "completion_sha256": "c7042c9cbcd967b8a10df148f646ac5dabcb0b577e25d4aa0e2441dcd4e7c8aa",
+  "adopted_by": "E87",
+  "chunk_size": 32
+}

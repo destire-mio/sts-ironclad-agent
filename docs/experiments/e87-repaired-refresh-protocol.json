@@ -1,0 +1,35 @@
+{
+  "plan": {
+    "experiment": "E87",
+    "created_at": "2026-09-19T10:35:58.623975+00:00",
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e78-repaired-refresh-20260919-01",
+    "source_manifest_sha256": "f135ae7a93c20584df892cad23c82c5b1b20caf824b8729f8a2456d07e6b165c",
+    "source_roles_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+    "source_completion_sha256": "67f4474717e66471bd23e39f37a3cbbd8b065bb9421fcce213f477977919d76e",
+    "repair_proof": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e85-anger-discard-repair-20260919-01/completion-verification.json",
+    "repair_proof_sha256": "85cde5874fe503233a57845c9b77113c47cf672b214560ed9fb8ba029bff71aa",
+    "audit_preflight_proof": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/parallel-refresh-audit-validation-20260919-01/completion-verification.json",
+    "audit_preflight_sha256": "c7042c9cbcd967b8a10df148f646ac5dabcb0b577e25d4aa0e2441dcd4e7c8aa",
+    "runner_sha256": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+    "family_counts": {
+      "fit": 1536,
+      "label_holdout": 512,
+      "train_development": 512
+    },
+    "question": "Regenerate natural outcomes with the E86 discard-copy repair, then learn relic and subsequent card choices against complete Heart continuation outcomes.",
+    "assignment": "All 2560 E67/E79 families retain fit, label_holdout and train_development roles. No outcome filtering, replacement or fresh acceptance seeds.",
+    "reason_full_replanning": "Counterfactual MCTS states can change even when the executed route does not contain the repaired action. Preserve old records but transfer no E79/E82/E73 outcome labels.",
+    "runtime": "Unchanged parent NN; E86 engine; natural Ironclad A20 Heart with three keys, two Act3 bosses and Act4. Prismatic Shard purchase excluded, original relic pool retained. MCTS8000 per call, boss x3;45s/floor, preview1 frame at1/60 second.",
+    "resources": "8 single-thread workers;300s episode/360s process guard;10800s batch guard including winner replans and audits. Independent audits use32-row chunks and the same comparator; all fault outputs retained.",
+    "verification": "Every terminal/state/RNG/timer replay, every outside NN choice, and fresh replanning of every winner. Any missing output or execution fault blocks training. Check all assigned development winners against original observations or fresh original runs before accepting new joint labels.",
+    "observer_boundary": "E86 waits for original discard-creation callbacks. Cached observations made with older observers remain immutable; if an identical path differs at this boundary, preserve the failed comparison and rerun the original with the settled observer. Do not ignore cost differences or import state.",
+    "next": "After source and original gates, register fresh relic/card full continuations under E86; retain the three relic-only, card-only and joint comparisons with grouped seed splits. E73 remains paused with zero formal optimizer updates.",
+    "limits": "Repaired-engine development baseline, zero optimizer updates. Not a new learned policy or unseen50percent acceptance; original parity applies to verified trajectories."
+  },
+  "plan_sha256": "c350ad577f11bbfb2eb0d8a4bfbce5e28bb93968ef17af5775b69169ae485e4a",
+  "manifest_sha256": "fb37f9bd35f71353b396ebb19300cbe6e15d7551ee775478fdbb103942dea7e3",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  }
+}

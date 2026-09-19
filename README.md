@@ -17,7 +17,9 @@ The headline results and shipped weights below use the historical A0 interface. 
 A20-to-Heart development path expands the observation and action contracts; its validation
 status and remaining gates are documented under [`sim_patch/alignment/`](sim_patch/alignment/).
 
-The current A20-to-Heart policy is **E60** (September 18, 2026). On the same 1,024
+**Current development (September 19): E86 repaired the known discard-copy cost difference; E87 is regenerating 2,560 assigned families before joint relic/card training.** Two preselected paths of one known seed match complete original Heart runs, covering 2,759 commands. This does not establish exhaustive parity or a learned win-rate gain. The 50% unseen-seed goal remains open; see [current training status](docs/ironclad-training-status.md) and [E86 evidence](sim_patch/alignment/e86-discard-copy-report.json).
+
+The historical selected A20-to-Heart policy is **E60** (September 18, 2026). On the same 1,024
 fresh root seeds, the original outside policy won **83/1,024 Hearts (8.1055%)**;
 learning the first-act boss-relic choice raised this to **112/1,024 (10.9375%)**.
 There were 40 added wins and 11 lost wins, a net gain of 29 (paired exact

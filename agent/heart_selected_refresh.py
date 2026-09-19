@@ -5,6 +5,7 @@ from collections import Counter
 from pathlib import Path
 import shutil
 import time
+import traceback
 
 import heart_combat_development as C
 import heart_branch_training as T
@@ -114,6 +115,50 @@ def audit_row(row, config, net):
         'outside_categories': dict(categories), 'terminal_fingerprint': R.fingerprint(gc)}
 
 
+def audit_worker(job, config):
+    """Audit a bounded chunk with one model load; faults never become labels."""
+    H.torch.set_num_threads(1)
+    try:
+        identity = job['identity']
+        assert S.sha(R.sts.__file__) == identity['engine_sha256'], 'audit engine differs'
+        assert S.sha(job['model']) == identity['model_sha256'], 'audit model differs'
+        net = H.load_scorer(H.torch.load(job['model'], map_location='cpu', weights_only=True))
+        cases = []
+        for ref in job['sources']:
+            assert S.sha(ref['path']) == ref['sha256'], 'audit source changed'
+            row = H.read_json(ref['path'])
+            assert valid(row, ref, identity), 'audit source identity or terminal invalid'
+            cases.append(dict(audit_row(row, config, net), split=ref['split']))
+        result = {'status': 'audited', 'identity': identity, 'sources': job['sources'], 'cases': cases}
+    except Exception:
+        result = {'status': 'audit_error', 'target': None, 'error': traceback.format_exc()}
+    H.write_json(job['output'], result)
+
+
+def audit_jobs(root, jobs, config, deadline):
+    """Reuse the bounded process controller, retaining source order and hashes."""
+    identity = H.read_json(root / 'identity.json')
+    refs = [{'seed': j['seed'], 'split': j['split'], 'path': j['output'],
+             'sha256': S.sha(j['output'])} for j in jobs]
+    chunks = [{'mode': 'audit', 'seed': i // 32, 'identity': identity,
+               'model': str(root / 'model.pt'), 'sources': refs[i:i + 32],
+               'output': str(root / f'audits/{i // 32:04d}.json.gz')}
+              for i in range(0, len(refs), 32)]
+    results = H.run_jobs(root, chunks, config, 'independent_replay_and_NN_audit',
+                         deadline, worker_fn=audit_worker)
+    assert len(results) == len(chunks), 'audit incomplete; preserve missing chunks'
+    cases = []
+    for chunk, result in zip(chunks, results):
+        assert result.get('status') == 'audited', 'audit fault; no training labels accepted'
+        assert result['identity'] == identity and result['sources'] == chunk['sources'], 'stale audit'
+        assert len(result['cases']) == len(chunk['sources']), 'audit chunk omitted sources'
+        for ref, case in zip(chunk['sources'], result['cases']):
+            assert S.sha(ref['path']) == ref['sha256'], 'audit source changed during collection'
+            assert (case['seed'], case['split']) == (ref['seed'], ref['split']), 'audit order differs'
+        cases.extend(result['cases'])
+    return cases
+
+
 def run(root):
     S.verify_files(root)
     assert not (root / 'completion-verification.json').exists()
@@ -145,13 +190,7 @@ def run(root):
         assert valid(new, job, identity) and old['prefix'] == new['prefix']
         assert P.terminal_signature(old) == P.terminal_signature(new)
         repeats.append({'seed': old['seed'], 'matched': True, 'sha256': S.sha(repeat_job['output'])})
-    net = H.load_scorer(H.torch.load(root / 'model.pt', map_location='cpu', weights_only=True))
-    cases = []
-    for i, (job, row) in enumerate(zip(jobs, rows)):
-        cases.append(dict(audit_row(row, config, net), split=job['split']))
-        if (i + 1) % 128 == 0:
-            H.write_json(root / 'status.json', {'stage': experiment + '_independent_replay_and_NN_audit', 'completed': i + 1, 'total': len(jobs)})
-            print({'audit': i + 1, 'total': len(jobs)}, flush=True)
+    cases = audit_jobs(root, jobs, config, deadline)
     H.write_json(root / 'cases.json.gz', cases)
     report = {'status': 'complete', 'experiment': experiment, 'families': len(jobs), 'execution_faults': 0,
         'splits': {split: {'families': len(values), 'outcomes': dict(Counter(r['status'] for j, r in zip(jobs, rows) if j['split'] == split)),
