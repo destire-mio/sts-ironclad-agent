@@ -17,6 +17,7 @@ git apply /path/to/sts-rl-agent/sim_patch/parity_followup.patch
 git apply /path/to/sts-rl-agent/sim_patch/e62_rules.patch
 git apply /path/to/sts-rl-agent/sim_patch/e75_rules.patch
 git apply /path/to/sts-rl-agent/sim_patch/e78_preview.patch
+git apply /path/to/sts-rl-agent/sim_patch/e81_sever_soul.patch
 ```
 
 独立的 CMake 入口构建 C++ 回归、Python 模块和整局流程驱动。需要 C++17、CMake、Python 开发环境、pybind11 与 nlohmann/json 头文件。
@@ -114,3 +115,6 @@ E75 覆盖预先固定的全部 53 条 E67 开发胜局：21 条自然开局至�
 E78 adds persistent transform-preview timing (`e78_preview.patch`, applied after `e75_rules.patch`). The default natural input is one confirmation update at float32 1/60 second; explicit positive frame count/delta and the carried timer enter replay identity. Rebuild the core and bindings. Five original natural timing controls, 26 earlier first-divergence boundaries, and three deeper UI boundaries match. Full CTest: 183; independently applied portable focused checks: 8. Controlled OutsideProbe fixtures bypass the original animation and retain zero preview updates for that separate test boundary. Current results and remaining full-run requirements are recorded in the training status.
 
 The supplied `verify_heart_winners.py` is the original-game replay driver, not a self-contained original-game installation: it requires the private licensed-game oracle runner and a frozen local cohort. `e78-preview-observer.patch` adds read-only timer observation to that local oracle. No game JARs, licensed game source, checkpoints, or raw private traces are included.
+
+
+E81 (`e81_sever_soul.patch`, after `e78_preview.patch`) fixes Sever Soul exhaust scheduling: Feel No Pain callbacks resolve before the Heart's Beat of Death, while reverse hand exhaust order and Dead Branch RNG are preserved. Four before-repair target failures become passes; three controls remain passing. Full CTest:190; separately applied portable focused checks:7. The natural divergence boundary and a full historical-action original Heart route (1,083 commands,36HP) match. Fresh replanning of that seed loses at Awakened One, so E79 outcomes are not transferred; E82 regenerates the cohort. This is a confirmed rule repair, not an improved-policy or exhaustive-parity claim. See [repair evidence](e81-sever-soul-report.json).

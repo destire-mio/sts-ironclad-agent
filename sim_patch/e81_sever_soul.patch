@@ -1,0 +1,18 @@
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -1240,10 +1240,13 @@
+ 
+ Action Actions::SeverSoulExhaustAction() {
+     return {[=] (BattleContext &bc) {
+-        for (int i = bc.cards.cardsInHand-1; i >= 0; --i) {
++        // Original ExhaustAllNonAttackAction pushes each selected card to the
++        // top. Exhaust in reverse hand order before damage and UseCardAction,
++        // so exhaust callbacks precede the Heart's onAfterUseCard damage.
++        for (int i = 0; i < bc.cards.cardsInHand; ++i) {
+             const auto &c = bc.cards.hand[i];
+             if (c.getType() != CardType::ATTACK) {
+-                bc.addToBot( Actions::ExhaustSpecificCardInHand(i, c.getUniqueId()) );
++                bc.addToTop( Actions::ExhaustSpecificCardInHand(i, c.getUniqueId()) );
+             }
+         }
+     }};

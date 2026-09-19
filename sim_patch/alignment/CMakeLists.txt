@@ -155,3 +155,10 @@ set_tests_properties(e78_timing_contract PROPERTIES TIMEOUT 30
     ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")
 add_test(NAME e78_replay_ui_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_winner_ui.py" -v)
 set_tests_properties(e78_replay_ui_contract PROPERTIES TIMEOUT 15)
+
+add_executable(e81_sever_soul_tests tests/e81_sever_soul.cpp)
+target_link_libraries(e81_sever_soul_tests PRIVATE sts_core)
+foreach(case IN ITEMS fnp_one fnp_three lethal dead_branch_order no_fnp_control no_exhaust_control true_grit_control)
+    add_test(NAME e81_${case} COMMAND e81_sever_soul_tests ${case})
+    set_tests_properties(e81_${case} PROPERTIES TIMEOUT 15)
+endforeach()

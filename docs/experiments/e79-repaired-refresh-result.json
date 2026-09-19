@@ -1,0 +1,49 @@
+{
+  "experiment": "E79",
+  "status": "complete",
+  "families": 2560,
+  "heart_wins": 251,
+  "sample_rate": 0.098046875,
+  "splits": {
+    "fit": {
+      "families": 1536,
+      "outcomes": {
+        "act3_without_heart": 4,
+        "death": 1376,
+        "heart_win": 156
+      }
+    },
+    "label_holdout": {
+      "families": 512,
+      "outcomes": {
+        "act3_without_heart": 4,
+        "death": 463,
+        "heart_win": 45
+      }
+    },
+    "train_development": {
+      "families": 512,
+      "outcomes": {
+        "death": 462,
+        "heart_win": 50
+      }
+    }
+  },
+  "execution_faults": 0,
+  "terminal_replays": 2560,
+  "outside_choices_verified": 346955,
+  "winning_fresh_reruns": 251,
+  "identity": {
+    "engine_sha256": "8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "completion_sha256": "67f4474717e66471bd23e39f37a3cbbd8b065bb9421fcce213f477977919d76e",
+  "evidence_hashes": {
+    "cases.json.gz": "e88a35a2e26980074c42dd4ba69a07ad34d81abe7b5e3359072da1a853b0e8db",
+    "collection-accounting.json": "a495d600fd923ca12bf38290bd6a64cf2649c50c5fbd1cdc3890efee35174ad0",
+    "manifest.json": "f135ae7a93c20584df892cad23c82c5b1b20caf824b8729f8a2456d07e6b165c",
+    "report.json": "720492a1268105fb29f25507f4685b7b13bb1c2befe4617877e2725215422580",
+    "source-index.json": "c5923e74d9b0a405b9ec2578eaeac57bb0770a70fe9db0f2d32ab8acd86cc8f6"
+  },
+  "limits": "E78-engine development baseline with unchanged parent model, not new training or unseen acceptance. All8 Act3-without-Heart results remain failures. E80 found a Sever Soul defect; E81 repairs it and E82 must regenerate outcomes."
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "E81",
+  "patch_sha256": "c07c593cfb8b5528d705305695a88ae30121a1ed7be46bc861636ffbe89f2ebf",
+  "applies_after": "e78_preview.patch",
+  "files": [
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "511982d24dce2249c3cb52cd127ca5b0ad7574a4cb595acf86abd026943ca0fe",
+      "after": "a05c8e0704c07cf2d8fadb7b62e4593a6387a08977da2d6a8e4076d66c792a8b"
+    }
+  ],
+  "scope": "Sever Soul adds non-attack exhaust actions to queue top in forward hand order, matching original reverse execution before main damage and UseCardAction. Exhaust callbacks grant block before Heart Beat of Death. Rebuild native engine; old labels are not transferred."
+}

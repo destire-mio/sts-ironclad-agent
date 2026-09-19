@@ -1,0 +1,93 @@
+{
+  "status": "complete",
+  "experiment": "E81",
+  "finished_at": "2026-09-19T09:12:15.395020+00:00",
+  "engine_sha256": "a47b496c14f39938f2b49aa7a6cbb6352c01ec058e86f7100f58744bc29da2e6",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "changed_source_files": [
+    "src/combat/Actions.cpp"
+  ],
+  "focused_before_failures": 4,
+  "focused_before_passing_controls": 3,
+  "focused_after_passes": 7,
+  "full_ctest_passed": 190,
+  "portable_focused_passed": 7,
+  "natural_boundary_matched": {
+    "seed": 1825657558,
+    "prefix_index": 235,
+    "combat_action_index": 13,
+    "resynchronized": false,
+    "original_result_sha256": "43dff362709b7b07d21c1907b97a2753917fd728b9fcd686f1d76a18070144f3",
+    "source_trace_sha256": "b99ad9724695779b9c961f677bb8c649751b8780674b594299acaa4e7e783c62",
+    "natural_actions": 893,
+    "status": "matched_boundary",
+    "differences": {},
+    "equivalences": []
+  },
+  "original_historical_action_route": {
+    "seed": 1825657558,
+    "status": "original_heart_trace_matched",
+    "hp": 36,
+    "commands": 1083,
+    "reused": false,
+    "bosses": [
+      "TIME_EATER",
+      "AWAKENED_ONE"
+    ],
+    "operations": [
+      "command",
+      "observe"
+    ]
+  },
+  "outside_NN_choices_audited": 208,
+  "fresh_repaired_planner": {
+    "seed": 1825657558,
+    "status": "death",
+    "floor": 51,
+    "hp": 0,
+    "terminal_location": "battle:AWAKENED_ONE",
+    "outside_NN_choices_audited": 195,
+    "first_change": {
+      "kind": "battle",
+      "prefix_index": 219,
+      "before": "c856607dceb99df91abd8d29a539edf202b25e7a639c100a2e4ba24748ed4a0c"
+    },
+    "original_replay_status": "not run; historical-action route alone verified in original"
+  },
+  "auditor_sha256": "2b597f35e1c669f64a16896db630d23fb970bfc8704d91e160b9d05d0581b74a",
+  "limits": "Repairs the confirmed E80 Sever Soul queue defect. The saved E79 actions match the original to Heart under E81; they are not new-planner wins. The newly replanned seed dies at Act3 Awakened One. Historical-action simulations/seconds fields describe the original recorded plan, not new search work. No policy updates or old-label transfer; rebuild affected cohort and joint continuation labels. Exhaustive parity and 50-percent unseen acceptance remain unproven.",
+  "completion_sha256": "5af668827f85a7de88f4f286317422d564151f7ef0b79509ab0fe5f7b5bd32a9",
+  "evidence_hashes": {
+    "plan.json": "15ed25ae03ff1c14c51b228de5ec5a60b446adc900a8773b6f337e1b98c50eb6",
+    "prepare-candidate.py": "b123ea132707249759eac6f43c8d6ae020352fbe33b7f892502406f56266182c",
+    "prepare-same-actions.py": "466a13c4b67533b56ab8ae69b41d49574db5a7db1673343b3429e2c1267868b9",
+    "finalize-repair.py": "11c735600375becc68b16519ce27bc4837bd54c9b6b836a060716fc925dcc48f",
+    "finalize-repair-attempt-01.py": "e51b7f9458a4d3db65756e150486fedf205adc76d14e25259fab5b1962c2c04d",
+    "verification.log": "fed92a8a5f5428f4a66b9dc1fc72706eb95faecdd898eaf624f5126b72db41a8",
+    "focused-before.json": "fc4c1079337681d4ff326eb2f88fe3f7abce01065076c72602ba17263025fb08",
+    "ctest-01.log": "692dd4904cec4bd5fb4bdaa5daa846265ce1b0cefd0b624f56ac68f3594c3b91",
+    "portable-application.json": "d322b3c1c1feb2dd272de9a565e62f8df50cb10cce46349ba8157dd4627b4709",
+    "portable-ctest-01.log": "2f0bcaae0d74d9b553afc05ad3d5cf17382fd6815aba95a1898c3d424cc7d8de",
+    "natural-boundary-before.json": "5acada2ccb1a4b92c64ad467c5082f0ceca9ce21fc41f035ba8361737164f275",
+    "natural-boundary-after.json": "a82cd2e05075d4126ae57f33f33b96f7c9729ae8b616a91a9428022bd577ab4d",
+    "replay-boundary.py": "08495d90289290427922ce490593ea0e88fd9e71f6724b48ab394753e05c5eeb",
+    "candidate/manifest.json": "5067a49440296fea0a42ed113777c1b74c53e7632c7afa08829be1eb1e8ebab6",
+    "candidate/completion-verification.json": "392c67f1a4c0be5296c739cd08fd1844efb5ed3ee10e9b685aba26f832ec5f00",
+    "candidate/report.json": "a17bd1a95c4a4af941a3a40f9e9d42f5b5d09f010c11e3ba7c1a5c624510c910",
+    "candidate/episodes/1825657558.json.gz": "7795015c9f46c28c9b1be4be7e32b46f74a92ca422a244166496384154089087",
+    "candidate/cases.json.gz": "0c40b5a32304acecf3e36d0809e02590ce9755a5830632382368425609b63ea1",
+    "same-action-runtime/manifest.json": "b9e8a71d6ab6aa3a8fd0174ec188b34d292019662fe7d966043e327f57c0f1b9",
+    "same-action-runtime/derivation.json": "0946341296a671cc8f0522d2b32c8dc82b5c48accc4cbe3c87d2567e254c786c",
+    "same-action-runtime/episodes/1825657558.json.gz": "d102f4cb72e50ede67c5369d2e7c203dc1222a5422a8722163839cfe34f7eaee",
+    "same-action-runtime/source-independent-audit.json": "aa7ec85b4c7509a54b76588196f78278fcb94057ee34f90d141add966d701262",
+    "same-action-original/plan.json": "1f4cee76f6c619f780cccfd2bd0eebd0039093821ffb7eeef75f8e0f944f87b2",
+    "same-action-original/traces/1825657558.json": "532e95b7fc3bccb217c77a5e42635de9917a29cbb1c18af771e17eb42577c678",
+    "same-action-original/original/1825657558-01/identity.json": "4fb9671eda3d82b1fc4f3d4ee5d37df61f7b952a31ef8069708df6e309ed345e",
+    "same-action-original/original/1825657558-01/result.json": "c71918922dd9292ad7e97e5f0558e4a68b8bce223fae9720989d68d842f6bd98",
+    "same-action-original/original/1825657558-01/comparisons.json": "adb5fb29a55a32a2489cbc2ac547af12f9fe0edd54f040fe927cdfa95a835552",
+    "same-action-original/original/1825657558-01/rpc.jsonl.gz": "2c3e424378717700450517693bd2d39065f1b2e15fa83cb2c62b2199bb0cbf01",
+    "same-action-original/original/1825657558-01/last-state.json.gz": "c528ef9d69591f7aa485dce6930248451c7e77caf4a0c142115be810ece31031",
+    "same-action-original/original/1825657558-01/cleanup.json": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c"
+  },
+  "rule": "ExhaustAllNonAttackAction enqueues exhaust actions at the top in forward hand order. The reverse hand exhaust callbacks precede UseCardAction and Beat of Death; preserve RNG generation and card identities."
+}

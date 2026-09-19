@@ -1,0 +1,44 @@
+{
+  "status": "complete_with_unresolved_findings",
+  "experiment": "E80",
+  "universe": 50,
+  "development_denominator": 512,
+  "reused": 1,
+  "new_runs": 49,
+  "counts": {
+    "original_heart_trace_matched": 49,
+    "rules_mismatch": 1
+  },
+  "matched_commands": 53163,
+  "unresolved_game_rule_findings": 1,
+  "engine_sha256": "8c4c99d5a4613570b301112401c49d155c3afa0f0e26dc6f36c8ea1fb2a5aac4",
+  "engine_or_policy_changed": false,
+  "limits": "Complete prespecified repaired-development winner cohort. Matched saved-action traces are not a population original win rate or new-model score. Stop each mismatch at its first boundary. Confirmed differences must be repaired and affected data rebuilt before training; E73 old-engine labels remain halted. Subsequent E81 repair proof is separate; E80 historical results are unchanged.",
+  "completion_sha256": "f7075e437c9ec5f81560147445ffae5dfdb9837ca1ccf2745175abebfaf57cdf",
+  "source_audit_sha256": "056b4bdd0bab212debffc815004a5417fbc20871e6c1dd34a63223ef5b729898",
+  "source_index_sha256": "1b91d2b851fec28c491acb6f1f191fbdaa2ba2a8e2261acf1d9cdbf6e961076d",
+  "verification_correction": {
+    "plan_sha256": "88c2356003b8263239cd8a11ad5ebaedbc9317824a5bf4a5b501d7c1ba423917",
+    "verifier_sha256": "b28eb86f20a6c7d114ba9fa67f03f5eaf3f7742ba51c70b6b1b8d581720d6f00",
+    "reused_auditor_sha256": "2b597f35e1c669f64a16896db630d23fb970bfc8704d91e160b9d05d0581b74a",
+    "superseded_verifier_sha256": "4bcc8cff56cc846daf4b947eb55f44881d9b3b926b858f4bce59c9b6bef09be0",
+    "original_auditor_sha256": "5946d44251ef7d12037805395edd32f41e0f506d5b23d2b9e79aba16f5389711",
+    "reason": "The only unclassified row is original Headbutt play before E78 terminal minion-leader discard acknowledgement. Check native played-card identity, strict original grid guard, adjacent acknowledgement and post-victory full comparison; do not relax any gameplay/RNG comparison. Initial verifier and failure log remain unchanged."
+  },
+  "finding": {
+    "seed": 1825657558,
+    "floor": 56,
+    "prefix_index": 235,
+    "combat_action_index": 13,
+    "card": "Sever Soul",
+    "original_hp_block": [
+      34,
+      19
+    ],
+    "simulator_hp_block": [
+      32,
+      21
+    ],
+    "repair_experiment": "E81"
+  }
+}

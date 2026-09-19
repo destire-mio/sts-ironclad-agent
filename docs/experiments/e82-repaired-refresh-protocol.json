@@ -1,0 +1,31 @@
+{
+  "plan": {
+    "experiment": "E82",
+    "created_at": "2026-09-19T09:13:38.579614+00:00",
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e78-repaired-refresh-20260919-01",
+    "source_manifest_sha256": "f135ae7a93c20584df892cad23c82c5b1b20caf824b8729f8a2456d07e6b165c",
+    "source_roles_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+    "source_completion_sha256": "67f4474717e66471bd23e39f37a3cbbd8b065bb9421fcce213f477977919d76e",
+    "repair_proof": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e80-sever-soul-repair-20260919-01/completion-verification.json",
+    "repair_proof_sha256": "5af668827f85a7de88f4f286317422d564151f7ef0b79509ab0fe5f7b5bd32a9",
+    "family_counts": {
+      "fit": 1536,
+      "label_holdout": 512,
+      "train_development": 512
+    },
+    "question": "Regenerate natural outcomes after Sever Soul exhaust scheduling repair; prepare trustworthy relic/card joint-learning labels.",
+    "assignment": "All 2560 E67/E79 families retain their fit, label_holdout and train_development roles. No outcome filtering, replacement or fresh acceptance seeds.",
+    "reason_full_replanning": "Even a route without an executed Sever Soul can have different MCTS decisions because counterfactual search states changed. E81 target seed freshly replans to an Act3 death while its historical actions still win. Do not transfer E79 labels or substitute saved-action wins.",
+    "runtime": "Unchanged parent NN; E81 engine; natural Ironclad A20 Heart with three keys, Act3 double boss and Act4; Prismatic Shard purchase excluded. MCTS8000 per call, bossx3;45s/floor, preview1frame at1/60 second.",
+    "resources": "8 single-thread workers,300s episode/360s process guard,10800s batch guard including fresh winner replans; preserve faults as null labels.",
+    "verification": "Every full terminal/RNG/timer replay, every outside NN choice, and fresh replanning of every winner. All execution faults block training. After collection, compare all development winners with original-game routes before new joint labels are used.",
+    "next": "Register fresh full relic/card continuation collection under this engine after original parity gates. E73 old-engine branch labels remain retired from training.",
+    "limits": "Repaired-engine development baseline, zero optimizer updates; not a new learned policy or unseen50percent acceptance. Original-game parity remains limited to verified trajectories."
+  },
+  "plan_sha256": "6d622dd2b0bb0330da1805211f8c1fb5cc1a50faa814b1884bb5af17151dfb7e",
+  "manifest_sha256": "7b80203fde89bb189948757441f6dc3c83f620b5a5105e175b8149a32bddd67a",
+  "identity": {
+    "engine_sha256": "a47b496c14f39938f2b49aa7a6cbb6352c01ec058e86f7100f58744bc29da2e6",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  }
+}
