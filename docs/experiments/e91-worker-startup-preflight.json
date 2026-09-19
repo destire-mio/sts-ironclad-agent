@@ -1,0 +1,93 @@
+{
+  "experiment": "E91",
+  "status": "replay_preflight_complete_full_mcts_pending",
+  "date": "2026-09-19",
+  "scope": "Local worker-startup preflight. Fixed-action replay comparisons do not establish complete-MCTS equivalence or whole-collection throughput. E89 remains frozen and running; no production change or optimizer update.",
+  "environment": {
+    "python": "3.12.13",
+    "probe_workers": 2,
+    "simultaneous_production_workers": 8
+  },
+  "selection": "First eight eligible assigned fit families in frozen root order, with no outcome filtering. Startup/replay probes use each parent-choice branch; the pending MCTS check uses all 32 relic branches.",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_manifest_sha256": "4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6",
+  "startup_profile": {
+    "fresh_serial_processes": 8,
+    "mean_seconds": {
+      "interpreter_startup_seconds": 0.05183625499921618,
+      "python_driver_setup_seconds": 0.03707393250078894,
+      "module_import_seconds": 1.5636176248772244,
+      "torch_thread_setup_seconds": 2.524486990296282e-05,
+      "model_load_seconds": 0.02567976563295815,
+      "input_read_seconds": 0.15730664574584807,
+      "prefix_replay_and_choice_seconds": 0.14808975537016522,
+      "terminal_replay_seconds": 0.3355174477583205,
+      "measured_child_seconds": 2.2673104167552083,
+      "source_suffix_rollout_seconds": 5.066983400873141,
+      "parent_elapsed_seconds": 2.6619994635038893,
+      "process_exit_seconds": 0.3428527917494648
+    },
+    "limits": "Input reading includes the entire roots file; recorded suffix rollout time excludes process startup, model load, prefix reconstruction and terminal replay."
+  },
+  "implicit_main_probe": {
+    "round_seconds": [
+      10.681016042013653,
+      8.820564124995144,
+      8.951782541989814,
+      10.898083459003828
+    ],
+    "exact_replay_outputs": 32,
+    "limits": "The __main__ preload request did not establish runtime-module preloading. The installed Python forkserver ensure_running filters main_path, while spawn preparation supplies init_main_from_path. Keep this first attempt as start-method-only evidence."
+  },
+  "explicit_runtime_probe": {
+    "preload_module": "heart_boss_relic_bandit",
+    "method_order": [
+      "spawn",
+      "forkserver",
+      "forkserver",
+      "spawn"
+    ],
+    "round_seconds": [
+      10.629898541985312,
+      4.364841916016303,
+      4.611979832989164,
+      10.423641875007888
+    ],
+    "exact_replay_outputs": 32,
+    "preloaded_module_observed_in_every_forkserver_child": true,
+    "abrupt_exit_isolated_as_fault": true,
+    "timeout_isolated_as_fault": true,
+    "unaffected_control_passed": true,
+    "worker_and_auxiliary_cleanup_verified": true,
+    "new_mcts_calls": 0
+  },
+  "full_mcts_gate": {
+    "status": "registered_waiting_for_live_E89_audit",
+    "cases": 32,
+    "planned_recomputations": 128,
+    "workers": 2,
+    "comparison": "Every saved result field except wall-clock seconds must equal its frozen source; require existing validity/qualification checks and process cleanup. Paired and combined forkserver times must beat spawn by at least 5 percent.",
+    "dependency": "Start only during live E89 audit-relic or prepare-joint after complete 6324-branch accounting; abort only the benchmark group if E89 returns to MCTS collection. Never suspend or restart E89.",
+    "production_adoption": false
+  },
+  "formal_optimizer_updates": 0,
+  "production_sampler_changed": false,
+  "evidence_hashes": {
+    "runs/heart-e86-joint-readout-20260919-01/startup-profile-20260919-01/registration.json": "a9f90e39b573edfd49206f77bdc88606c0dfcf6c5d88385863e1792bb3fe2751",
+    "runs/heart-e86-joint-readout-20260919-01/startup-profile-20260919-01/report.json": "eb0ed44dbb0bbc3cfceda4607681a173922268da22f416b3922c8d72ffb4c77d",
+    "runs/heart-e86-joint-readout-20260919-01/startup-profile-20260919-01/profile.py": "5af13046deb3c4f76e8a7ee0e1b1729a4d935c5f72a2b8ec4894844adbffc662",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-probe-20260919-01/registration.json": "e6298b3e7b7b57e3da977c00ecc1f08dee039e497996e331a56a4fdcc5987062",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-probe-20260919-01/report.json": "be83eedf64496c7924fd91b5682a755b2dc15972bf4f9debb97482f70966885b",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-probe-20260919-01/probe.py": "07385feef6061c563f166ed8d0fcc477c1fbb860fa9a8e7e7157295027646a89",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-preload-probe-20260919-01/registration.json": "657e081c32c571100b4ff065b7402a7211b1a31b3af0eebaf4e01bc17f519554",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-preload-probe-20260919-01/report.json": "7f3c878f3e2aba8a4a48f8d06fb3e27464352979665fa548eb4cceb16a00715c",
+    "runs/heart-e86-joint-readout-20260919-01/forkserver-preload-probe-20260919-01/probe.py": "f3878d375e5d971559fb5465eec78060afcafd1f5471a4a5fae50a8c40c1e2d1",
+    "runs/heart-worker-start-method-20260919-01/registration.json": "8c9bfe0e3bfdeb0debaca5d3cce7347cc0ea8000df707bf8088a90c7134cfdc9",
+    "runs/heart-worker-start-method-20260919-01/execution-registration.json": "60b9bdfbb700d9d59f7b850d5f727a0cc9d26bd5da5e9835c37bb71bef3784aa",
+    "runs/heart-worker-start-method-20260919-01/benchmark.py": "3bde52090be802394bbb19dc52f8ab5817c76d215b0fccc9df70f13e73c143b7",
+    "runs/heart-worker-start-method-20260919-01/await-window.py": "ea7562d1789a393021dfb5e324bb7bb4ff2d6e4800076f50adbd90b8e543cb29"
+  }
+}

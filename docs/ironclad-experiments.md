@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86, completed E87 source and E88 original comparisons, E89 joint-learning activation and the completed E90 changed-relic parity check on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E86, completed E87/E88/E90 parity and source work, E89 joint-learning activation and the E91 worker-startup preflight on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2169,3 +2169,15 @@ E88 覆盖父策略的开发胜局；E89 改变首 Boss 遗物后产生不同动
 E90 完成所选两条自然原版路线：金字塔分支 1,283 条命令、心脏终局 8 HP；咖啡滤杯分支 1,322 条命令、心脏终局 25 HP。合计 2,605 条命令匹配，追加的持久 RNG 检查通过；原版角色、A20、三钥匙、第三幕两个不同 Boss 与矛盾／心脏路线通过核对。两实例清理完成，并检查没有遗留 JVM。所测路线没有规则或 RNG 差异；其余败局及两个缺失遗物仍不在此原版证据范围，不能外推为全部训练分支一致或模型收益。E89 按登记方案继续，不改变引擎、采样角色或学习配方。
 
 完成证明 SHA `58ef98dbbd1219368133800b9aeb6802e2a50e1ac0484bf1529ab233495e899a`；独立复核完成文件、来源轨迹及原版录制摘要，重新统计全部原版命令和自然开局次数。公开结果 `sim_patch/alignment/e90-relic-branch-parity-report.json`。
+
+## 100. E91：采样进程启动开销（2026-09-19，回放预检查完成）
+
+E89 的采样器为每条分支创建新进程，隔离原生崩溃和超时。对冻结根节点顺序中的前 8 个合格 fit 家庭运行独立耗时检查，使用父策略选项，不按胜负筛选；8 个进程串行测量，与原 8 工人采样并存。平均导入模块 1.564 秒、加载模型 0.026 秒、重建前缀并核对选择 0.148 秒、终局回放 0.336 秒。读输入的 0.157 秒含整份 roots 文件，不等同于生产工人输入开销；原记录的 suffix rollout 时间也不含启动、模型加载及前后回放，不能把剩余时间全部归因于导入。
+
+用同一 8 条固定轨迹比较启动方式，2 个工人，4 个独立控制进程，顺序为 spawn／forkserver／forkserver／spawn。第一轮请求预加载 `__main__`，耗时为 10.681／8.821／8.952／10.898 秒；32 次动作、根状态、终局及 RNG 核对通过。安装的 Python 3.12.13 中，forkserver 筛选 `main_path`，准备函数提供 `init_main_from_path`，这轮没有建立运行模块预加载证据，作为启动方式对照保留。
+
+第二轮在执行前登记显式预加载 `heart_boss_relic_bandit`，耗时为 10.630／4.365／4.612／10.424 秒。每个 forkserver 子进程在导入前观察到该模块存在，每个 spawn 子进程观察到不存在；32 次固定轨迹输出相同。两轮均保留进程退出码 17、超时和正常轨迹三项并列控制，异常任务为空标签，正常任务通过；工人、forkserver 与资源追踪进程清理通过。这些检查没有新增 MCTS 调用、学习标签或模型更新，也不是整轮采样提速结果。
+
+完整 MCTS 对照另行冻结：同一前 8 个家庭的全部 32 个遗物候选，在 4 轮中重算 128 条续局；引擎、模型、动作搜索预算和故障时限不变。除明确声明的墙钟耗时字段外，每个输出字段需等于 E89 源分支，配对与合并耗时需至少改善 5%。该对照由存活依赖进程等待 E89 的首轮采集完成及审计窗口；若 E89 进入后续 MCTS 采集，对照仅终止自己的进程组，不暂停、重启或修改 E89。登记及 32 个参考结果预检查通过，完整 MCTS 结果待执行；生产配置没有采用变更。
+
+公开摘要 `docs/experiments/e91-worker-startup-preflight.json`；固定轨迹显式预加载登记 SHA `657e081c32c571100b4ff065b7402a7211b1a31b3af0eebaf4e01bc17f519554`，完整 MCTS 登记 SHA `8c9bfe0e3bfdeb0debaca5d3cce7347cc0ea8000df707bf8088a90c7134cfdc9`。证据在 `runs/heart-e86-joint-readout-20260919-01/*profile*`、`*probe*` 与 `runs/heart-worker-start-method-20260919-01/`。发布复核 SHA `5fbc25062bd1960ddcaa2040c33bc54b2bfd979eeb3629f679b8eaebbb95b104`，覆盖来源摘要、四轮逐项输出、故障／清理结果及待执行脚本；不表示完整 MCTS 对照完成。
