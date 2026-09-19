@@ -1,0 +1,69 @@
+{
+  "experiment": "E91",
+  "status": "complete",
+  "full_branch_recomputations": 128,
+  "families": 8,
+  "branches_per_round": 32,
+  "methods": [
+    "spawn",
+    "forkserver",
+    "forkserver",
+    "spawn"
+  ],
+  "workers": 2,
+  "rounds": [
+    {
+      "method": "spawn",
+      "elapsed_seconds": 71.39445150000392,
+      "verified_branches": 32,
+      "first_progress_utc": "2026-09-19T13:59:36Z",
+      "last_progress_utc": "2026-09-19T14:00:47Z"
+    },
+    {
+      "method": "forkserver",
+      "elapsed_seconds": 88.69627054198645,
+      "verified_branches": 32,
+      "first_progress_utc": "2026-09-19T14:00:48Z",
+      "last_progress_utc": "2026-09-19T14:02:16Z"
+    },
+    {
+      "method": "forkserver",
+      "elapsed_seconds": 146.34421491701505,
+      "verified_branches": 32,
+      "first_progress_utc": "2026-09-19T14:02:21Z",
+      "last_progress_utc": "2026-09-19T14:04:46Z"
+    },
+    {
+      "method": "spawn",
+      "elapsed_seconds": 177.93160095898202,
+      "verified_branches": 32,
+      "first_progress_utc": "2026-09-19T14:04:48Z",
+      "last_progress_utc": "2026-09-19T14:07:46Z"
+    }
+  ],
+  "all_saved_fields_except_wall_seconds_equal_to_source": true,
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_manifest_sha256": "4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6",
+  "performance_gate_passed": false,
+  "performance_checks": {
+    "first_pair": false,
+    "second_pair": true,
+    "combined": true
+  },
+  "parent_audit_parallel_phase_started_utc": "2026-09-19T14:01:17Z",
+  "production_changed": false,
+  "formal_optimizer_updates": 0,
+  "benchmark_process_group_cleanup_verified": true,
+  "limits": "Known fit branches, not new learning data, neural-policy improvement or unseen acceptance. The first spawn round completed before E89 entered its eight-worker audit; the audit phase started during the first forkserver round. Concurrent load was not constant across rounds, and the registered performance gate failed. Preserve the failure and do not adopt the backend or claim a stable whole-collection speedup.",
+  "evidence_hashes": {
+    "registration.json": "8c9bfe0e3bfdeb0debaca5d3cce7347cc0ea8000df707bf8088a90c7134cfdc9",
+    "execution-registration.json": "60b9bdfbb700d9d59f7b850d5f727a0cc9d26bd5da5e9835c37bb71bef3784aa",
+    "benchmark.py": "3bde52090be802394bbb19dc52f8ab5817c76d215b0fccc9df70f13e73c143b7",
+    "await-window.py": "ea7562d1789a393021dfb5e324bb7bb4ff2d6e4800076f50adbd90b8e543cb29",
+    "completion-verification.json": "594d5e743e47f0f8f1ef74f5f8e2025e29da0864c1c12efceca54c660fb43f38"
+  },
+  "preflight_reference": "e91-worker-startup-preflight.json"
+}
