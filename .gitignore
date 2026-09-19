@@ -36,3 +36,10 @@ CMakeCache.txt
 .DS_Store
 .idea/
 .vscode/
+
+# Portable full-run experiments build their own platform-native simulator.
+.runtime/
+*.pyd
+*.obj
+*.lib
+*.exp

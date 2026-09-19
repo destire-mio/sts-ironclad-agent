@@ -1,0 +1,11 @@
+{
+  "sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "source_experiment": "E87",
+  "source_model_identity": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "model_type": "first_boss_relic_ranker over card_context_residual",
+  "source_baseline": {
+    "heart_wins": 248,
+    "families": 2560
+  },
+  "limits": "Historical macOS simulator baseline, not Windows performance or a trained PPO result. Re-evaluate on each built runtime."
+}

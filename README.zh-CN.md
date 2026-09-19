@@ -2,6 +2,8 @@
 
 [English](README.md) | 中文
 
+**Windows 原生整局 PPO 实验：** [安装与训练命令](docs/fullrun-windows.md)。本分支固定战斗器，让全部局外决策参与完整对局训练；这是实验入口，没有新的胜率结论。
+
 一个跑在 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) 模拟器上的《杀戮尖塔》混合 agent(A0 铁甲战士):
 
 - **一个从零训练的小网络(约 10 万参数)做全部非战斗决策**——地图选路、奖励选卡、商店、篝火、事件,REINFORCE 训练;

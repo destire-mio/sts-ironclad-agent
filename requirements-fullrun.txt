@@ -1,0 +1,5 @@
+# Python 3.12, CPU training/sampling. CUDA is not required.
+torch==2.8.0
+numpy>=1.26,<3
+pybind11==3.0.1
+cmake>=3.28,<4

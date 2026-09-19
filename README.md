@@ -2,6 +2,8 @@
 
 English | [中文](README.zh-CN.md)
 
+**Windows-native full-run PPO experiment:** see [setup and training commands](docs/fullrun-windows.md). This branch trains all outside decision types from complete Ironclad A20 Heart runs, with fixed combat. It is an experimental entry point, not a new win-rate result.
+
 A hybrid agent for **Slay the Spire** (A0 Ironclad) built on the
 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) simulator:
 
