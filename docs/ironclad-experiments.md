@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through completed E89 joint learning and E95 saved-head diagnosis on 2026-09-20. No E89 candidate was adopted. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through completed E89 joint learning, E95 diagnosis and the rejected E96 paired-advantage screen on 2026-09-20. No new candidate was adopted. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2273,3 +2273,21 @@ E89 的三组小读出头没有通过内部选择。E95 使用保存的 27 个�
 排除项：不重跑 E89 原配方；不降低采用门槛；不把增加同批更新次数当作已获证据支持的下一步；不声称只改这两个动作即可让当前拟合集达到 50%。下一方案需要说明如何让动作收益跨家庭成立，以及如何处理其他决策；此前 E34／E35 的重复曝光、E36／E37 的后期整条续局和 E41／E42 的路线偏好失败记录仍有效，不据此排除这些方法在其他数据条件下的作用。
 
 证据目录 `runs/heart-e89-readout-diagnosis-20260920-01/`，公开结果 `docs/experiments/e95-readout-diagnosis-result.json`。登记 SHA `3a36a6c8946e70dd26063cfb1afe61d881170e7cfa71d0da952c2cf0a36e7dce`，诊断报告 SHA `591a13a17b53bc9380468b43c310640d2cc74c3fdc20cedf6fa91c7c74ba1817`，完成 SHA `335c3d2c2c14222a89b7027f40d8400231c33597a56f40f4b2e29d2eb48fd77e`，发布复核 SHA `5a726d537cb74b796eec1cbf87eadc6a9e167458bd8e801f2cf2edf329af7df5`。没有生成或采用新策略，没有执行未见种子验收。
+
+## 105. E96：相同终局约束下的收益差回归（2026-09-20，完成，拒绝）
+
+复用 E89 已核验的 1,536 个拟合家庭及两步完整动作树，保留原三折家庭分组、冻结编码器和三项 L2。将候选相对原动作的编码差映射到真实终局差 Y(候选)−Y(原动作)，用家庭等权平方误差和 L2 的解析解拟合；相同终局保留零差标签。联合臂先拟合选牌头，再用该固定选牌头在每条遗物分支选中的真实终局拟合遗物头，不使用选牌事后最优值。预测原选择收益为零，最高预测收益优先，同分选原动作；没有额外门槛或阈值扫描。这是目标、顺序拟合与决策规则组成的新配方，不声称只隔离一个原因。
+
+六项控制通过：解析解、零目标解、全部拟合家庭零头保持原选择、同家庭重复行按权重归一后保持拟合系统、相同终局产生零收益差、交换胜负标签反转信号。保存 27 个折内策略，实际求解 54 个线性系统，包含随后归零的禁用头；没有新 MCTS、迭代优化步骤、外部留出或自然开发评估。模型加载前后选项一致。独立发布核验从动作树和终局叶子重建九组共 13,824 个折外家庭结果，逐项核对分组、单项干预边界、配对计数及模型摘要。
+
+| 学习范围 | L2=0.0001 | L2=0.001 | L2=0.01 |
+|---|---:|---:|---:|
+| 遗物 | 133 | 136 | 141 |
+| 选牌 | 147 | 143 | 150 |
+| 遗物＋选牌 | 141 | 134 | 148 |
+
+每列的分母是相同的 1,536 个折外家庭，原策略 155 胜。全部候选低于原策略，没有通过净增至少 10 且配对 p<0.05 的采用前筛选。保留九组失败，不增加同配方的更新次数、阈值或正则网格；不开发或采用这些诊断模型的运行时适配器。折内拟合仍有收益，联合 L2=0.01 为 399／3,072 次相依出现，对照 310；这不能作独立胜率。这项失败只针对当前冻结表示、终局数据和两步范围，不排除其他收益差学习方法。
+
+证据目录 `runs/heart-paired-advantage-20260920-01/`，公开结果 `docs/experiments/e96-paired-advantage-result.json`。登记 SHA `d8308519f499236d78c0215e7ea248bf3f0ee7cec984fb120fb4e4bbd54e42d9`，完成 SHA `cf8e1bd35d4436ac78eaf15cf990094e37d4fb5d857478f9b450b9c2ab8de6bc`，发布复核 SHA `676160acf9eba4aee98126f6ae7fba324955f66add9058c491d3395a70eb6d58`。模型适配、现场选择核验、自然整局候选运行和最终未见种子验收均未执行，父模型保留。
+
+下一轮优先检验独立家庭覆盖，不复扫本次读出目标与正则值。先制定扩大自然来源的固定数据规模对照，明确真正新增的家庭数、匹配的学习预算、采样成本和开发名单；旧 E34／E35 在不同运行时、后期节点与较小有效家庭组上的失败不能作为此次数据扩展有效的证据，也不能被删除。两步范围的事后上限限制保留，数据实验即使通过也不是 50% 目标完成。

@@ -1,0 +1,769 @@
+{
+  "status": "complete_not_adopted",
+  "experiment": "E96",
+  "selected_l2": {
+    "relic": null,
+    "card": null,
+    "joint": null
+  },
+  "trials": [
+    {
+      "arm": "relic",
+      "l2": 0.0001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 133,
+        "net_gain": -22,
+        "paired": {
+          "both_fail": 1366,
+          "both_win": 118,
+          "baseline_only": 37,
+          "candidate_only": 15
+        },
+        "exact_p": 0.003185253447776759
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 106,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2068,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-0.pt",
+          "sha256": "75c4f370da6f0c260034b76192c04991485ec7664b66b8aeadbdb1c2ea0da6eb"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 117,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2154,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-1.pt",
+          "sha256": "3244963cead9dc19b12d4cfbe6a320c8d10e67cbfe2ade54831c55835910588e"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 112,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 2034,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-2.pt",
+          "sha256": "c2444fefc1b19e48a8ccd47611469ef4972e7329d5852dbc9a1e7e7cbcfe2594"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 335
+    },
+    {
+      "arm": "relic",
+      "l2": 0.001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 136,
+        "net_gain": -19,
+        "paired": {
+          "both_fail": 1364,
+          "both_win": 119,
+          "baseline_only": 36,
+          "candidate_only": 17
+        },
+        "exact_p": 0.012660335802414213
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 105,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2068,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.001-fold-0.pt",
+          "sha256": "292ff8245eb21a4ea3d7c2a1ef86d0b88fd1df9ba494ebc21df156d2a8a303bc"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 115,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2154,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.001-fold-1.pt",
+          "sha256": "17b82efc551895a0d9fb79994e8eec0d9b777f50c211e65ec85dc91c5d510a3d"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 113,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 2034,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.001-fold-2.pt",
+          "sha256": "e49d745fdebcbc5ce64834db435cab6542b7b1209419e82590647a51267627dc"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 333
+    },
+    {
+      "arm": "relic",
+      "l2": 0.01,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 141,
+        "net_gain": -14,
+        "paired": {
+          "both_fail": 1364,
+          "both_win": 124,
+          "baseline_only": 31,
+          "candidate_only": 17
+        },
+        "exact_p": 0.05946337525377032
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 105,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2068,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.01-fold-0.pt",
+          "sha256": "399a5c55f5271f69d8ea9ccb7631b80e459578a8994637821fa8aa0246ae5594"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 114,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2154,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.01-fold-1.pt",
+          "sha256": "f06908fb88dda5aaa022cab416446776034916b814fdabfa5d40666c1546af7d"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 113,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 2034,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.01-fold-2.pt",
+          "sha256": "d5150ab4c6b04b4b4735a2972b57b131bf9edd6501514f0b5cd6e01c8c8c9c67"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 332
+    },
+    {
+      "arm": "card",
+      "l2": 0.0001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 147,
+        "net_gain": -8,
+        "paired": {
+          "both_fail": 1351,
+          "both_win": 117,
+          "candidate_only": 30,
+          "baseline_only": 38
+        },
+        "exact_p": 0.39612484029702977
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 120,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2006,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-0.pt",
+          "sha256": "cd20f1a386871774b37bcf20d5c899edede4076d97ef643cebe73591c79870aa"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 136,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2077,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-1.pt",
+          "sha256": "d747140a735ed3c9aaccb215af5f0172381ac9b91ca543eaf93a27753aa6601e"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 126,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1994,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-2.pt",
+          "sha256": "7fea3f9b40515093f65a2757e45aab5f319762cadc0d4763a901db12bf089eb0"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 382
+    },
+    {
+      "arm": "card",
+      "l2": 0.001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 143,
+        "net_gain": -12,
+        "paired": {
+          "both_fail": 1354,
+          "both_win": 116,
+          "candidate_only": 27,
+          "baseline_only": 39
+        },
+        "exact_p": 0.1752857944430353
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 120,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2001,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.001-fold-0.pt",
+          "sha256": "b429318fcad5c4ec03ab398cb5a45a53fa7045e30e0abeccc59e9e688729746b"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 132,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2088,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.001-fold-1.pt",
+          "sha256": "fdb3650c7dcbf0c68cadeb39f21de1ffd89bed496a5c397320f74dc096fc1696"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 129,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1984,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.001-fold-2.pt",
+          "sha256": "397afe79d3b50c1c0e2d9560cc92dec8fc7a6eb39af67f1bfcba0886b58d7ec3"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 381
+    },
+    {
+      "arm": "card",
+      "l2": 0.01,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 150,
+        "net_gain": -5,
+        "paired": {
+          "both_fail": 1350,
+          "both_win": 119,
+          "candidate_only": 31,
+          "baseline_only": 36
+        },
+        "exact_p": 0.6254068289416487
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 121,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 1999,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.01-fold-0.pt",
+          "sha256": "cf573889a9588dc4b73a6cf0d81450bc6500bdf49ba3c8d17f4b978bd4843fc8"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 125,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2109,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.01-fold-1.pt",
+          "sha256": "92389b01d9fd7e7a1a171287c587d36746e7cb5e9085266ede3524c75b8665af"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 129,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1982,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.01-fold-2.pt",
+          "sha256": "62d98dd003a3a9dfae3a965b6d9c289ad694da84fefee66216e0126841f8a584"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 375
+    },
+    {
+      "arm": "joint",
+      "l2": 0.0001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 141,
+        "net_gain": -14,
+        "paired": {
+          "both_fail": 1338,
+          "baseline_only": 57,
+          "both_win": 98,
+          "candidate_only": 43
+        },
+        "exact_p": 0.19334790449564246
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 135,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2006,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-0.pt",
+          "sha256": "6501561505face57d8083b4fc6f151067318aa7bb5b50323b2e81c97f506c6bb"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 146,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2077,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-1.pt",
+          "sha256": "66df9b31f992c2886ee948e8431c4b8c2d3dd444717bf2ac3033a4859d629a9d"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 138,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1994,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.0001-fold-2.pt",
+          "sha256": "f3a7b37373d338a7210a87cbc5d59f931c049ebfe22e292985e33297499307a7"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 419
+    },
+    {
+      "arm": "joint",
+      "l2": 0.001,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 134,
+        "net_gain": -21,
+        "paired": {
+          "both_fail": 1344,
+          "baseline_only": 58,
+          "both_win": 97,
+          "candidate_only": 37
+        },
+        "exact_p": 0.03960823767054589
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 131,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 2001,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.001-fold-0.pt",
+          "sha256": "2c7cc135d20f8879f3a4595949004ee402bd2a6bccc314b55368a999510e4185"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 141,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2088,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.001-fold-1.pt",
+          "sha256": "64b11fae588daa15e36a957f486b83d497e6d32ff5f7d54b957be35e95dd924e"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 137,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1984,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.001-fold-2.pt",
+          "sha256": "33720446d46190dd99d749a0ef2bf98ee0741fdadbdeae2c1caa0392ee813abf"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 409
+    },
+    {
+      "arm": "joint",
+      "l2": 0.01,
+      "outcomes": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 148,
+        "net_gain": -7,
+        "paired": {
+          "both_fail": 1338,
+          "both_win": 105,
+          "baseline_only": 50,
+          "candidate_only": 43
+        },
+        "exact_p": 0.5340598617346067
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "assigned": 1009,
+          "baseline_wins": 96,
+          "candidate_wins": 130,
+          "systems": {
+            "relic": {
+              "paired_rows": 2331,
+              "zero_target_rows": 1999,
+              "weight_sum": 0.7700693756194252
+            },
+            "card": {
+              "paired_rows": 9272,
+              "zero_target_rows": 8771,
+              "weight_sum": 0.770069375619425
+            }
+          },
+          "checkpoint": "cv-0.01-fold-0.pt",
+          "sha256": "ccf7cfdfabf1dfe728da49111716732bfa5d5f0a727226d8c720b72c11a012e0"
+        },
+        {
+          "fold": 1,
+          "assigned": 1051,
+          "baseline_wins": 102,
+          "candidate_wins": 136,
+          "systems": {
+            "relic": {
+              "paired_rows": 2445,
+              "zero_target_rows": 2109,
+              "weight_sum": 0.7754519505233111
+            },
+            "card": {
+              "paired_rows": 9747,
+              "zero_target_rows": 9200,
+              "weight_sum": 0.7754519505233111
+            }
+          },
+          "checkpoint": "cv-0.01-fold-1.pt",
+          "sha256": "7b4d176544f4f46fefca7bdbaf7d60e0b8661327379ab32cabe58896697abf7b"
+        },
+        {
+          "fold": 2,
+          "assigned": 1012,
+          "baseline_wins": 112,
+          "candidate_wins": 133,
+          "systems": {
+            "relic": {
+              "paired_rows": 2334,
+              "zero_target_rows": 1982,
+              "weight_sum": 0.7687747035573124
+            },
+            "card": {
+              "paired_rows": 9307,
+              "zero_target_rows": 8753,
+              "weight_sum": 0.7687747035573124
+            }
+          },
+          "checkpoint": "cv-0.01-fold-2.pt",
+          "sha256": "194d9f59050e9e529135d8347f8f295606af5e8bb169fc0803ed0e9813740497"
+        }
+      ],
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 399
+    }
+  ],
+  "ridge_system_solves": 54,
+  "stored_fold_policies": 27,
+  "new_mcts_calls": 0,
+  "external_holdout_or_development_evaluations": 0,
+  "final_refit_performed": false,
+  "limits": "Fit-only diagnostic. Disabled-head solves are counted. No runtime policy adapter or live choice verification yet; no candidate is deployable or adopted from these results.",
+  "date": "2026-09-20",
+  "registration_sha256": "d8308519f499236d78c0215e7ea248bf3f0ee7cec984fb120fb4e4bbd54e42d9",
+  "completion_sha256": "cf8e1bd35d4436ac78eaf15cf990094e37d4fb5d857478f9b450b9c2ab8de6bc",
+  "publication_verification_sha256": "676160acf9eba4aee98126f6ae7fba324955f66add9058c491d3395a70eb6d58",
+  "verification": {
+    "status": "complete",
+    "at": "2026-09-19T23:08:50.608211+00:00",
+    "completion_sha256": "cf8e1bd35d4436ac78eaf15cf990094e37d4fb5d857478f9b450b9c2ab8de6bc",
+    "source_hashes_unchanged": true,
+    "independent_tree_terminal_choices_reconstructed": 13824,
+    "unique_fit_families_per_trial": 1536,
+    "trials": 9,
+    "controls": {
+      "analytic_ridge_solution": true,
+      "zero_target_solution": true,
+      "all_fit_zero_head_parent_choices": true,
+      "duplicated_family_rows_preserve_fit_system": true,
+      "equal_terminal_labels_have_zero_effect": true,
+      "reversing_terminal_pair_reverses_fit_signal": true
+    },
+    "limits": "Independent decoding validates recorded actions and terminal labels. No live runtime adapter or native replanning was performed for these rejected diagnostic heads."
+  },
+  "conclusion": "All nine fit-only out-of-fold trials underperform155 parent wins. Reject the paired-difference ridge package on this fixed representation and two-choice data. Do not add training steps, thresholds or another grid on this same package. No conclusion that all return-difference learning is ineffective."
+}
