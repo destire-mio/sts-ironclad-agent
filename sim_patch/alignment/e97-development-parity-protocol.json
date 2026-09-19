@@ -1,0 +1,37 @@
+{
+  "experiment": "E97P",
+  "created_at": "2026-09-19T23:36:06.573554+00:00",
+  "source_manifest_sha256": "e0a7ca4e662b6d3fe4756b95485e479e090c31d0f5a49c719b32edd857041908",
+  "source_roles_sha256": "f97049ba11b371241ead1fdb8d31371dad2bbde371e8ee2466d0e24cdc8ae10c",
+  "parent_registration_sha256": "9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8",
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "selection": "All512 E97 development families, with every Heart-winning route in sorted seed order. New original execution for each winner; no winning subset, cached path substitution or retry. Preserve all early failures and original findings.",
+  "verification": "Independent all-development natural terminal/state/RNG/timer and outside-NN audit. Fresh original natural starts with saved actions/timing, no imports or resynchronization. Same E94 comparator, then six additional persistent RNG streams via recorded replay, command/identity/keys/two distinct Act3 bosses/Act4/Heart and cleanup audit. Stop the original gate on its first nonmatch, fault or deadline; preserve unattempted routes. Full4096-source completion and winner replans remain separate training gates.",
+  "resources": {
+    "source_audit_workers": 2,
+    "source_audit_seconds": 1800,
+    "original_jvm_instances": 1,
+    "per_original_seconds": 900,
+    "stage_seconds": 10800,
+    "observer_seconds": 1200
+  },
+  "limits": "Selected development-winning natural action routes only. No losing-route population parity, all-branch parity, learned gain or unseen acceptance. No candidate continuation labels admitted until this gate and the full source gate pass.",
+  "assigned_development_families": 512,
+  "registration_sha256": "958a8508cc0116598fa13b665c260df2d99ff5d1a031ef73606c0958b3fb2f14",
+  "entry_verification_sha256": "1b60bfe9fcb8563e0556714fdf4c13722be7ba76571d6e9087bd2add98f48fa6",
+  "entry_verification": {
+    "status": "passed",
+    "registration_sha256": "958a8508cc0116598fa13b665c260df2d99ff5d1a031ef73606c0958b3fb2f14",
+    "loaded_engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "loaded_comparator_sha256": "20caa3f55c370b8416db41cc088922abdd5350350c6d8f9e9da3e2f679932bb0",
+    "loaded_recorded_comparator_sha256": "8ce995c4b7d831acc2f7cfe694486e4a32e59eee272f2c07f27678de6add9ac7",
+    "model_class": "FirstBossRelicPolicy",
+    "original_template_artifacts_checked": 8,
+    "scope": "Static syntax, frozen inputs and loaded-module identity only; no source outcome audit or original execution."
+  },
+  "status": "registered_waiting_for_complete_development_sources"
+}

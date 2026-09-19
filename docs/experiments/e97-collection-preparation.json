@@ -1,0 +1,25 @@
+{
+  "experiment": "E97C",
+  "status": "prepared_waiting_for_source_gates",
+  "checks": {
+    "status": "passed",
+    "registration_sha256": "4c7d9c1c5c9c7547f85eb0316ac3ad09fcda32957259992ff3a35c5f65458783",
+    "reused_preparation_functions_checked": 9,
+    "frozen_python_files": 15,
+    "byte_identical_files": 13,
+    "deadline_only_changes": 2,
+    "first_relic_collection_seconds": 21600,
+    "joint_collection_seconds": 57600,
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "unfinished_source_negative_control": "missing natural completion rejected",
+    "prior_wrapper_error_sha256": "d4192db0d6460a183abdecd29e37e7a0003a6fd745a8be43b686131cb69bf2ae",
+    "scope": "Frozen preparation and imported collector identity; no new MCTS continuation or label audit has run."
+  },
+  "source_gate": "Complete4096 natural audits and winner replans plus complete E97P all-development-winner original gate; any unresolved finding blocks collection.",
+  "parent_registration_sha256": "9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8",
+  "collection_registration_sha256": "4c7d9c1c5c9c7547f85eb0316ac3ad09fcda32957259992ff3a35c5f65458783",
+  "entry_verification_sha256": "966c1db1b4043e37815392b4560cf51df2218f932aaa71831d391f9abb262f1c",
+  "retries": 0,
+  "formal_optimizer_updates": 0,
+  "verification_wrapper_note": "The first publication check had a path-type error after registration. The corrected checker preserves that failure; frozen collectors and registration were not changed, and no game was retried."
+}
