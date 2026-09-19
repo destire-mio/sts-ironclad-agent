@@ -1,0 +1,584 @@
+{
+  "experiment": "E84",
+  "status": "complete_with_unresolved_findings",
+  "development_denominator": 512,
+  "source_outcomes": {
+    "death": 465,
+    "heart_win": 47
+  },
+  "outside_NN_choices_audited": 70442,
+  "winners": 47,
+  "previous_original_rechecks": 38,
+  "new_original_runs": 9,
+  "counts": {
+    "matched": 46,
+    "rules_mismatch": 1
+  },
+  "matched_commands": 49006,
+  "identity": {
+    "engine_sha256": "a47b496c14f39938f2b49aa7a6cbb6352c01ec058e86f7100f58744bc29da2e6",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "rows": [
+    {
+      "seed": 1614835269,
+      "status": "matched",
+      "commands": 960,
+      "hp": 19,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "be54bb60e4fa12c315ca58ee9742f396df8409592a2df88feac2882c3a99f8c8",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1616891667,
+      "status": "matched",
+      "commands": 866,
+      "hp": 85,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "c033f3a142363196936b10bfb51a5146b5e06cbbb82bb23af02f64172ee917b3",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1633611833,
+      "status": "matched",
+      "commands": 1019,
+      "hp": 37,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "76234993ead8a08e99bf8aaa04720ff485178bc7a593a1d9cbe9e887f3acd85e",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1641038134,
+      "status": "matched",
+      "commands": 1101,
+      "hp": 28,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "412c67b2e1af6dbd61aa98dd9f7e3e025be02998761d6998c38c5d3477d05817",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1644449217,
+      "status": "matched",
+      "commands": 1013,
+      "hp": 16,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "7fe68936fd1c772a814729be230a6b3156542eb376c152888c05a51ab316cc6a",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1656951760,
+      "status": "matched",
+      "commands": 1053,
+      "hp": 81,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "0e224b06478bced44126ced9dcfe2ed16f928a63fb07958bdcbfbd7f48dd4604",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1657364039,
+      "status": "matched",
+      "commands": 971,
+      "hp": 55,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "11e2ab6816296f03930a727d0b883b064e7d0e6ec0cf7f1beafef8088cae5aac",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1665367717,
+      "status": "matched",
+      "commands": 1055,
+      "hp": 21,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "2ef020db1cb3fdb8bd0fca41e12b0e4b846cecb479f4ffb4439cff8e690112fb",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1693428597,
+      "status": "matched",
+      "commands": 1037,
+      "hp": 12,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "4f2925ae9bf50047ce5ef699b74a14fa45045c64eaf4910dad0ff41188137873",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1696889517,
+      "status": "rules_mismatch",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1706559026,
+      "status": "matched",
+      "commands": 855,
+      "hp": 14,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "62220cecd44b70080a68a4729d84e3a0bdb6554a66a5f6cdcb487cfea95070e1",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1714838215,
+      "status": "matched",
+      "commands": 1058,
+      "hp": 75,
+      "bosses": [
+        "AWAKENED_ONE",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "021ef617f6e7ca411aa148efb8d0ecec07f6568de4ad3341d92d1232a64008e5",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1716854890,
+      "status": "matched",
+      "commands": 1022,
+      "hp": 52,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "f0fc2d5619066a72f59fcbafe741e9cb3b6e25b0fdd4357e3421f7a61ef352ab",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1741500819,
+      "status": "matched",
+      "commands": 1162,
+      "hp": 73,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "d95e8689f7683e3fa7cd3fa1490a1aa57b0d29f31828db9697df58ec125655c6",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1742765175,
+      "status": "matched",
+      "commands": 951,
+      "hp": 66,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "04e9e98edbf5647231a97d2bea11b200552aaa1cfc2aec5bd03eede4f73e03c8",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1746289500,
+      "status": "matched",
+      "commands": 844,
+      "hp": 18,
+      "bosses": [
+        "AWAKENED_ONE",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "d6f5103543be67f668915e039957a51c8e8ab039cb4285f47bf0c19034baf9b8",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1746312853,
+      "status": "matched",
+      "commands": 1226,
+      "hp": 54,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "7557e12605afe6c802ead0317296257b124be2ec6bdeed481323af84729c6608",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1747161607,
+      "status": "matched",
+      "commands": 1083,
+      "hp": 52,
+      "bosses": [
+        "AWAKENED_ONE",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "7630c3d9dbb4f0e59aed569b181d78f2238cba4d7ccd0c2a4e2469f90b97d186",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1769099207,
+      "status": "matched",
+      "commands": 976,
+      "hp": 65,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "e66ae4e63d52091c0ded09d4f56a5a344b317f0314484e0f2faa08339ee6a0b6",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1783957347,
+      "status": "matched",
+      "commands": 953,
+      "hp": 62,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "45b674883a7cb98f8e7a5fe2202feff4e4d51de4ee7e39cdf8be6aca19f5596f",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1788104332,
+      "status": "matched",
+      "commands": 1043,
+      "hp": 45,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "fe27a30fd101d65e5397d337d8822e792c853e2a207d82d225875e403a8e12ce",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1788237312,
+      "status": "matched",
+      "commands": 1005,
+      "hp": 36,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "ff8e2db96554c2a3d0dfc5291d675ce66fb51452bf79a6999a341eed7aaf520b",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1795610934,
+      "status": "matched",
+      "commands": 1225,
+      "hp": 81,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "c6e9580081c26a3aced5be327f768d84315600a59055c9e4ea1ba958524ec3fb",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1796984357,
+      "status": "matched",
+      "commands": 933,
+      "hp": 23,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "0f668c7429e14453ad10d7bed44d071af33cd02bc153ca7e239e8453d6613f0f",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1808964903,
+      "status": "matched",
+      "commands": 1059,
+      "hp": 47,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "2c10ff621d159fece506ac5dfb46aed5831b2429f29ea8a2f4e07a130f4c1cc8",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1815249264,
+      "status": "matched",
+      "commands": 1310,
+      "hp": 47,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "d818efab18200f4aef92de4fa7a1160c9209417d2d8240d7f932c09dde0d20c7",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1819670092,
+      "status": "matched",
+      "commands": 1090,
+      "hp": 71,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "b5443dfcc739f2d2340d9ce3b123beabb4fbd422f2352d00c16f1c59963c501a",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1822076578,
+      "status": "matched",
+      "commands": 1031,
+      "hp": 11,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "c6e9c46254ff491e47e43d8def286a6a8c66061d43df75c54c4975b4a07ec131",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1822426447,
+      "status": "matched",
+      "commands": 1135,
+      "hp": 20,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "f52986c245083f284dec804d225fd669475f770045010120763aac2226905841",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1824944691,
+      "status": "matched",
+      "commands": 1192,
+      "hp": 39,
+      "bosses": [
+        "AWAKENED_ONE",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "b30b40b1aa963f8df1bd4ce9ae2441607aedc45528eef8cbf8f30a04eaf1b352",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1826525428,
+      "status": "matched",
+      "commands": 964,
+      "hp": 58,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "8a1423ffb80ce42d47dcd414231afb6f9431966eac27036b02077a86f403f03f",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1842848570,
+      "status": "matched",
+      "commands": 1075,
+      "hp": 30,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "5444b9d267cd49f8f9cd2098062b8c8ec76d323f617e62ef6d5d0024efb8e6be",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1845602907,
+      "status": "matched",
+      "commands": 961,
+      "hp": 10,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "7e3012c70da036977cfc72c88c6a28d98abb488083f5afcc0d817a5e498b7594",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1860374164,
+      "status": "matched",
+      "commands": 1002,
+      "hp": 11,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "e371523cb69277a70e74d8a74bc5ba5ed66fa64849966579131a600cb8901b88",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1876762155,
+      "status": "matched",
+      "commands": 1155,
+      "hp": 98,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "b5dae39918595f7243ff57c05373f4d42123e7884a415472d6ed46a592edff70",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1879628608,
+      "status": "matched",
+      "commands": 1395,
+      "hp": 37,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "86f28e8b8543b62be8667dcabb0aaf5f09fee4fecdfee66b57fcde4531e7a454",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1885521894,
+      "status": "matched",
+      "commands": 986,
+      "hp": 7,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "10167384368d295c21d1ac61c70bd4fb6574035ff94b18a8c55431173a192c0f",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1887714089,
+      "status": "matched",
+      "commands": 998,
+      "hp": 16,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "229247d4aa248c72dced385c6a2a0750ccdda2cce5d74dd25b7d6ba2a8f1f0ea",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1916813831,
+      "status": "matched",
+      "commands": 1108,
+      "hp": 62,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "85a83311c5ed8efc07aef44812f34eba879524ecfe213e9b91397bc58bbdbca5",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1932683113,
+      "status": "matched",
+      "commands": 1020,
+      "hp": 42,
+      "bosses": [
+        "DONU_AND_DECA",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "6db977a82f10899cb5f47b75816aa6c9a5db5ff610e3074e65005d23e10149f1",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1943068509,
+      "status": "matched",
+      "commands": 1304,
+      "hp": 40,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "e4ecc9bd95132245ce4faf90966933f5bb58fcdbe9a5da461160db12169ef2cd",
+      "origin": "new_original_execution"
+    },
+    {
+      "seed": 1946377843,
+      "status": "matched",
+      "commands": 933,
+      "hp": 66,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "63447b6d17228140d85c10ce83531975bdea8f67cde221aafb60ea318d8741de",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1949439223,
+      "status": "matched",
+      "commands": 997,
+      "hp": 56,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "53a0fccd954afe5aba2e27a3819aaad20425565fb730e896e5118e0f9b41b0de",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1962623078,
+      "status": "matched",
+      "commands": 1232,
+      "hp": 85,
+      "bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "ef13b767106a9bbe7751460202f960462e35a0388e46cc9678a0aeb9e2744c4d",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1982876514,
+      "status": "matched",
+      "commands": 1366,
+      "hp": 93,
+      "bosses": [
+        "AWAKENED_ONE",
+        "TIME_EATER"
+      ],
+      "recorded_proof_sha256": "3a7811542416d1b018c784d56fa1e46fb29b1f2a06f2f27a00541be656806597",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1986285876,
+      "status": "matched",
+      "commands": 1037,
+      "hp": 17,
+      "bosses": [
+        "DONU_AND_DECA",
+        "AWAKENED_ONE"
+      ],
+      "recorded_proof_sha256": "2e5b325c39ee169640a592c19c863a4e1f58f2453c2ac6572a7f950966f3e634",
+      "origin": "recorded_previous_original"
+    },
+    {
+      "seed": 1990513944,
+      "status": "matched",
+      "commands": 1245,
+      "hp": 20,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "2626335750951176c4b3f47bf7a30375894852d0b981f7598650e7f5790db646",
+      "origin": "recorded_previous_original"
+    }
+  ],
+  "optimizer_updates": 0,
+  "limits": "All preassigned repaired-development winning trajectories checked. Reused original observations and new JVM runs are distinct above; every match also checks persistent run RNGs during stable combat. These selected saved-action routes do not establish a population original-game win rate, exhaustive parity or policy improvement. Complete E82 source verification and new joint labels are still required before training.",
+  "completion_sha256": "9ee1d1a4d1b6cb2fbe2c33a99cf723fa1ef060a1a9b076532d32995439589404"
+}

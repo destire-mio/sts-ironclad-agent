@@ -1,0 +1,18 @@
+{
+  "status": "halted_for_confirmed_parity_defect",
+  "complete_batch": false,
+  "episode_files_preserved": 1580,
+  "remaining_owned_processes": [],
+  "registration_sha256": "99103bfac8d9dcc1844f1a6a83c14c8ca8d237778d297847b677669b9e0cc7b0",
+  "optimizer_updates": 0,
+  "note": "Do not resume or train these E81-engine labels without repaired-engine regeneration. Preserve incomplete temp artifacts and all completed source episodes. E84 source512 already audited; remaining original checks continue.",
+  "experiment": "E82",
+  "assigned_families": 2560,
+  "reason": "E84 found Dropkick loses Vigor before damage calculation; stop collection, retain all evidence and regenerate under E85 after repair verification.",
+  "evidence_hashes": {
+    "manifest.json": "7b80203fde89bb189948757441f6dc3c83f620b5a5105e175b8149a32bddd67a",
+    "status-at-parity-halt.json": "f847c3a80256ed7807bc051201cceca5f84e5caea953deed8043254b535d7fcd",
+    "parity-halt-registration.json": "99103bfac8d9dcc1844f1a6a83c14c8ca8d237778d297847b677669b9e0cc7b0",
+    "parity-halt.json": "1879a3cd1a018e539c02cd563330d317d38075d84b28d3180625acd4307b766b"
+  }
+}

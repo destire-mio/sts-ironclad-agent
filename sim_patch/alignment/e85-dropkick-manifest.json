@@ -1,0 +1,23 @@
+{
+  "experiment": "E85",
+  "patch_sha256": "95b48b1fc81f2f8c5ea4eb1c7fc6527b7978ef5fd300167c7d1afd0f28042148",
+  "applies_after": "e81_sever_soul.patch",
+  "files": [
+    {
+      "path": "include/combat/Actions.h",
+      "before": "17e94ac8c1ecf2a13fab8a6ccacabd30380dd4883da4475c3a681fe8b031b959",
+      "after": "afaa36b3f7bb059315160c43407be21ad69edd3e478165faddbd78955dce0b33"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "a05c8e0704c07cf2d8fadb7b62e4593a6387a08977da2d6a8e4076d66c792a8b",
+      "after": "5ca63f851e7a366e7fb78e7858080b949ce0fbd0173cc5caf7ff8d7456b99f2b"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "e98de8ae1efe0f3fbbcc083125792483bb51d37b412fb02a49c4f11dc6adfa07",
+      "after": "dc93c86badb1b9fae3ff0759d804a91777c9e46640134672084b3db9331f31cf"
+    }
+  ],
+  "scope": "Dropkick snapshots fully calculated damage when used, before Vigor is consumed, while the queued action retains its late Vulnerable check for draw and energy. Rebuild native engine; no old labels transferred."
+}

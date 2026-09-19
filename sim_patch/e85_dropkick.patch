@@ -1,0 +1,44 @@
+--- a/include/combat/Actions.h
++++ b/include/combat/Actions.h
+@@ -163,7 +163,7 @@
+         static Action DualityAction(); // Duality Relic
+ 
+         static Action ApotheosisAction();
+-        static Action DropkickAction(int targetIdx);
++        static Action DropkickAction(int targetIdx, int damage);
+         static Action EnlightenmentAction(bool upgraded);
+         static Action EntrenchAction();
+         static Action FeedAction(int idx, int damage, bool upgraded);
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -1072,16 +1072,13 @@
+     }};
+ }
+ 
+-Action Actions::DropkickAction(int targetIdx) {
+-    // assume bc.curCard is the card being used
++Action Actions::DropkickAction(int targetIdx, int damage) {
+     return {[=](BattleContext &bc) {
+         if (bc.monsters.arr[targetIdx].isTargetable() && bc.monsters.arr[targetIdx].hasStatus<MS::VULNERABLE>()) {
+             bc.addToTop(Actions::DrawCards(1));
+             bc.addToTop(Actions::GainEnergy(1));
+         }
+ 
+-        const auto &c = bc.curCardQueueItem.card;
+-        const int damage = bc.calculateCardDamage(c, targetIdx, c.isUpgraded() ? 8 : 5);
+         bc.addToTop(Actions::AttackEnemy(targetIdx, damage));
+     }};
+ }
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -1032,7 +1032,9 @@
+         }
+ 
+         case CardId::DROPKICK:
+-            addToBot( Actions::DropkickAction(t) );
++            // Original Dropkick captures DamageInfo before onUseCard consumes
++            // Vigor. Only the vulnerable draw/energy condition is checked later.
++            addToBot( Actions::DropkickAction(t, calculateCardDamage(c, t, up ? 8 : 5)) );
+             break;
+ 
+         case CardId::FEED:

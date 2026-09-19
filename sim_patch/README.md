@@ -184,3 +184,6 @@ E81 (`e81_sever_soul.patch`, after `e78_preview.patch`) fixes Sever Soul exhaust
 
 
 `replay_recorded_winner.py` rechecks identical natural action/timing paths against immutable original responses using the pinned live comparator and additional run-only RNG checks during combat. It performs no new JVM run and never imports original state. Changed paths require new original execution. Eight known-route/negative cases and six input-integrity checks validate this boundary; source records and licensed oracle dependencies remain local. See [E83 evidence](alignment/e83-recorded-replay-report.json).
+
+
+E85 (`e85_dropkick.patch`, after `e81_sever_soul.patch`) captures Dropkick damage at use so Akabeko Vigor is included before removal. The queued Vulnerable draw/energy condition remains unchanged. Five target failures and two controls become seven passes; full CTest198 and portable focused7 pass. All90 portable source inputs match after applying the separately required frozen search patches. The natural divergence and a fresh planned original Heart route(1,371 commands,37HP) match. A separate historical route exposes a deeper temporary discard-cost difference; training remains paused. See [E85 report](alignment/e85-dropkick-report.json). Never treat the targeted passing route as an unseen population win rate.

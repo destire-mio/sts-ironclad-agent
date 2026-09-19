@@ -1,0 +1,568 @@
+{
+  "experiment": "E85",
+  "status": "complete_with_unresolved_findings",
+  "repair_status": "Dropkick_verified",
+  "finished_at": "2026-09-19T10:12:12.103421+00:00",
+  "engine_sha256": "50f35b93a9ab7e2e69b8a8c40db39abae850d9d189415b581d05e0d33a87e6d5",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "changed_source_files": [
+    "include/combat/Actions.h",
+    "src/combat/Actions.cpp",
+    "src/combat/BattleContext.cpp"
+  ],
+  "focused_before_failures": 5,
+  "focused_before_controls": 2,
+  "focused_after_passes": 7,
+  "full_ctest_passed": 198,
+  "portable_focused_passed": 7,
+  "natural_boundary": {
+    "seed": 1696889517,
+    "prefix_index": 184,
+    "combat_action_index": 2,
+    "resynchronized": false,
+    "original_result_sha256": "ffc5f81ec6bec38b3647ddd2111d4dc4e8d023cbeeb22f3a4c84a6e29dae62e1",
+    "source_trace_sha256": "97e0d39e3afedf98b4f93c8004e69f6bad336407daded4fbfe58c2a141766963",
+    "natural_actions": 702,
+    "status": "matched_boundary",
+    "differences": {},
+    "equivalences": []
+  },
+  "fresh_planner_original": {
+    "seed": 1696889517,
+    "status": "matched",
+    "commands": 1371,
+    "hp": 37,
+    "bosses": [
+      "AWAKENED_ONE",
+      "TIME_EATER"
+    ],
+    "recorded_proof_sha256": "b74fb8bad44fa8038fefa918602d7c2dd3f08d80bfe1ff58771c6f658cee6f10"
+  },
+  "outside_NN_choices_audited": 206,
+  "historical_actions": {
+    "seed": 1696889517,
+    "simulator_status": "heart_win",
+    "simulator_hp": 36,
+    "changed_prefix_fingerprints": [],
+    "original_status": "rules_mismatch",
+    "commands": 1042,
+    "first_mismatch": {
+      "prefix_index": 211,
+      "command_index": 1041,
+      "combat_action_index": 97,
+      "floor": 48,
+      "screen": "NONE",
+      "differences": {
+        "discard_pile": {
+          "original": [
+            [
+              73,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              42,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              198,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              249,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              360,
+              0,
+              -1,
+              -1,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              321,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              179,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              3,
+              3,
+              false,
+              0
+            ],
+            [
+              181,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              25,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              181,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              140,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              152,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              47,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              264,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              65,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              329,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              297,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              184,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              179,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              57,
+              1,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              349,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              249,
+              0,
+              3,
+              3,
+              false,
+              0
+            ]
+          ],
+          "simulator": [
+            [
+              73,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              42,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              198,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              249,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              360,
+              0,
+              -1,
+              -1,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              321,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              179,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              3,
+              3,
+              false,
+              0
+            ],
+            [
+              181,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              25,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              181,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              140,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              152,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              47,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              264,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              65,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              329,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              297,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              184,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              179,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              57,
+              1,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              349,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              0,
+              1,
+              false,
+              0
+            ],
+            [
+              11,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              249,
+              0,
+              3,
+              3,
+              false,
+              0
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "optimizer_updates": 0,
+  "training_permitted": false,
+  "auditor_sha256": "5f7d09dbc765b5eff647bf9d32469616f0aeb29d5336e4805a197f82cbe10e0c",
+  "limits": "Dropkick capture is repaired and the targeted fresh NN/MCTS route matches original through Heart. The separately replayed historical route reaches a deeper temporary discard-cost mismatch at floor48, retained and blocking training pending diagnosis/repair. Neither selected route establishes population gains or exhaustive parity. E82/E73 labels remain halted.",
+  "completion_sha256": "c911f43f0088754ebb33bbd9eafa31ff6d116eedf6af888c89f8e88b3b7a3ca1",
+  "evidence_hashes": {
+    "plan.json": "2d0763134e5afa07ccf9071944468b28b205ddf3cbef6afa9849788860883bf0",
+    "prepare-candidate.py": "2d93c0b105badbc279dd4dea150af852056aba8e19cdbb29d5ebcfb8436b5cba",
+    "prepare-same-actions.py": "ed72a435ac1f6506844c9c5eedf0484a09094611d3718b47ab89677ffe9fdde8",
+    "prepare-recorded.py": "8c689c177d16191da6d0ce9fa705633f3bc690ee718c99bd0486130a8c33d4f0",
+    "finalize-repair.py": "a50816b2ce298ca45957c8720cdbd88f20b92f6f79ee4cfff0cb70b8ab092506",
+    "focused-before.json.attempt-01": "f9bc2601138d74e1208b1194eae3cf746443e721f993f0c77ba204bcbdb45ec1",
+    "e85_dropkick-attempt-01.cpp": "ef01d928894f1047b0af7b35f74bad0f1ac4a37f21ca0d175036f49412c7cb41",
+    "focused-before-02.json": "002fa51a142d3eb374af87dbdf07c7934b952bcf6e3e376bb2b31fe937f1997e",
+    "test-registration-02.json": "fbb2acf208ebaa65e216fb4d9ccc44a3eea85008e60dd717941e0f878cf8fcfc",
+    "baseline-source-check.json": "a1d92a254f4ba28b2b12f886b53da11a138497ca2cf16cfca90b2ea455195004",
+    "finalize-repair-attempt-01.py": "66b1da80a243b2f3179e562d25d8d3b502b0d570fd1dceae6ceccccceb8f2343",
+    "verification-attempt-01.log": "5b610c42d4686cfbf916ae4b10e84c36d4248bb8370ecb2ff6e50c32ead87520",
+    "portable-search-chain.json": "4561bc7807155278913ed50d1f6d61f80055246816079ed74930a31b2c14bdf3",
+    "portable-search-application-attempt-01.json": "71c3cc69978d60dfefe6c1f8eb93c7485616197a0499bd97a3e8182db41c3bc9",
+    "portable-search-application-02.log": "f3a7b76924368bbfa72be8b9ffdecd91a411c3114cdc73caf859f026afc847f4",
+    "portable-ctest-rules-only.log": "8ad892c85568acb07cf147dda7bb631fb6824eb93b639de79e83b01c24159b35",
+    "ctest-full.log": "dfc5430ad1a3e4ed3c32857e07b61c5bfb81e21dadcdc073b57dbcb550902b44",
+    "portable-application.json": "29a2bd0436405dd0a3c46f52722ac2461924450c9e6ed634fe627e9767758ea0",
+    "portable-ctest.log": "eefccc236378378e99d4c75868cd4f87d18476d78afc32a9ed827606abd24d66",
+    "natural-before.json": "fac941462968cb71078a66c580ce1b5c9f2343a06e1dc59e0ac4e283b928ea92",
+    "natural-after.json": "2a327c6a15b251448b2135429f2566548e92193ea69d52252360c4171854a799",
+    "replay-boundary.py": "f89516818e35398cebfa5b796527c2702a65eb567a553a46e2e268d7c6842b7c",
+    "candidate/manifest.json": "0542e6aa299c81bb6a222f019f4407cd7364e68c2578c085130473df09feca13",
+    "candidate/completion-verification.json": "4c8df7170af6addbf5f1a379a92938b5f4ec89fab9de650680494b1140758bec",
+    "candidate/report.json": "86da22a94e5f54f0efd9b944c2553a75c4e1d3c3014bd3700d2b2593b054523c",
+    "candidate/cases.json.gz": "08a3c6be545e241a3a42d1b2ce3cf470b62fd6f384ffc76b3672b9f45e57537f",
+    "candidate/episodes/1696889517.json.gz": "ccb3794f85de53abc04344f43a992ccfb9062d09fbf9d2c7b7008cd8dc52e77b",
+    "same-action-runtime/manifest.json": "24aadb0158e1456f97b587a19aa93a30fc878ca5b9ab56976e196750663eb907",
+    "same-action-runtime/derivation.json": "fe002324015823c8be48cb3be96ef25022cc6ac9d3d9d94e82f81cb27c88a241",
+    "same-action-runtime/episodes/1696889517.json.gz": "abf8a54e60a3d31349644a438c0bd3cb66c21a8206352546cd71e39a3d458492",
+    "same-action-runtime/source-independent-audit.json": "62219971f9adfd25c5138b5da8f02d7887908ae53b5c55a0f5837a0e70d31f51",
+    "candidate-original/recorded/completion-verification.json": "b74fb8bad44fa8038fefa918602d7c2dd3f08d80bfe1ff58771c6f658cee6f10",
+    "candidate-original/plan.json": "c703d1bf7ab27e7de2e24ceeb070352b4ee08d44d1452a054f6dc8024148abb4",
+    "candidate-original/traces/1696889517.json": "2762d44381e8fe3ad9d5084d047cf864f28ec433723ac3feb0f9e28bf1009554",
+    "candidate-original/original/1696889517-01/identity.json": "b6204adc48d53e6732cf4176ef08370c1a7e90479a9853ce85c8ab978432ddbe",
+    "candidate-original/original/1696889517-01/result.json": "f161f22f5b672c72636bd297c80c6f9342835a1624116b663ee0b2a4d95fcf1b",
+    "candidate-original/original/1696889517-01/comparisons.json": "04abbb80121f59840fc0bb12319dced2aefbfea0eb5b524298cfd672fac348d1",
+    "candidate-original/original/1696889517-01/rpc.jsonl.gz": "f807ad63a94b05c7b406101f1a9d1741cb98338a8d29db2325bb06c064619344",
+    "candidate-original/original/1696889517-01/last-state.json.gz": "e6ba77c30470f81bf18f11b5c5c4179c4efbf644ff7bfdf2875d8c99ac1d974b",
+    "candidate-original/original/1696889517-01/cleanup.json": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c",
+    "same-action-original/plan.json": "a5b7e9d31da2e331eebbcee430b23d838a2e835d542295d048cf4d112a3bd26b",
+    "same-action-original/traces/1696889517.json": "639b1d30f02b1fe78547238a173fabc0a96cf030ef8dfee2b9d917d3fc1aab2d",
+    "same-action-original/original/1696889517-01/identity.json": "aa308fbcbcfb15061172ae380574b57c75360cce8a1a978fcfdeb513b702a67d",
+    "same-action-original/original/1696889517-01/result.json": "57f7616f20f785987fd503d0b635f43581bbcacc14b3ac0795f8efd99e7d969b",
+    "same-action-original/original/1696889517-01/comparisons.json": "e8dd4061258639213f8c836de9202766d1f310fc0f8068a0d38877da30980887",
+    "same-action-original/original/1696889517-01/rpc.jsonl.gz": "f6372eb53010a02552624fa5c90a14acb4da1fd8bacac29981bc6599e5885c86",
+    "same-action-original/original/1696889517-01/last-state.json.gz": "6679e939ec689da0efeeb65bdcddfbcc31c983def2ec569d87b46dc22c092ada",
+    "same-action-original/original/1696889517-01/cleanup.json": "248afd97220ee28ab828cf639eef0e36889f6bbccb13dfab15fa5489fb249d4c"
+  }
+}
