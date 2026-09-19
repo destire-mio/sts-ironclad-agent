@@ -17,7 +17,7 @@ The headline results and shipped weights below use the historical A0 interface. 
 A20-to-Heart development path expands the observation and action contracts; its validation
 status and remaining gates are documented under [`sim_patch/alignment/`](sim_patch/alignment/).
 
-**Current development (September 19): E86 repaired the known discard-copy cost difference; E87 is regenerating 2,560 assigned families before joint relic/card training.** Two preselected paths of one known seed match complete original Heart runs, covering 2,759 commands. This does not establish exhaustive parity or a learned win-rate gain. The 50% unseen-seed goal remains open; see [current training status](docs/ironclad-training-status.md) and [E86 evidence](sim_patch/alignment/e86-discard-copy-report.json).
+**Current development (September 19): E87 completed the repaired-engine baseline with 248/2,560 Heart wins; E89 passed its source gates and started collecting 6,324 first-relic continuations before joint relic/card learning.** All natural terminal/RNG/timer audits, 346,834 outside-NN choices and 248 winner replans passed with zero execution faults. E88 matched all 48 development-winning original routes (51,669 commands). These are baseline and selected-route results, not new-model gains, exhaustive parity or unseen acceptance. The 50% goal remains open; see [current training status](docs/ironclad-training-status.md) and [E87 result](docs/experiments/e87-repaired-refresh-result.json).
 
 The historical selected A20-to-Heart policy is **E60** (September 18, 2026). On the same 1,024
 fresh root seeds, the original outside policy won **83/1,024 Hearts (8.1055%)**;

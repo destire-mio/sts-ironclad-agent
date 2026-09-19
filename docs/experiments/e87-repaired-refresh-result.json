@@ -1,0 +1,71 @@
+{
+  "experiment": "E87",
+  "status": "complete",
+  "families": 2560,
+  "heart_wins": 248,
+  "splits": {
+    "fit": {
+      "families": 1536,
+      "outcomes": {
+        "act3_without_heart": 4,
+        "death": 1377,
+        "heart_win": 155
+      }
+    },
+    "label_holdout": {
+      "families": 512,
+      "outcomes": {
+        "act3_without_heart": 4,
+        "death": 463,
+        "heart_win": 45
+      }
+    },
+    "train_development": {
+      "families": 512,
+      "outcomes": {
+        "death": 464,
+        "heart_win": 48
+      }
+    }
+  },
+  "execution_faults": 0,
+  "terminal_replays": 2560,
+  "outside_choices_verified": 346834,
+  "winning_fresh_reruns": 248,
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "completion_sha256": "80240bad264f144de6aad5a65941b40fc376176c8b01e114c7b2880dc3ac946a",
+  "evidence_hashes": {
+    "cases.json.gz": "2c9d29b9021b212b4cf234cfbb068f9a50bb2bee52441d6e27daab458a14b71b",
+    "collection-accounting.json": "a495d600fd923ca12bf38290bd6a64cf2649c50c5fbd1cdc3890efee35174ad0",
+    "manifest.json": "fb37f9bd35f71353b396ebb19300cbe6e15d7551ee775478fdbb103942dea7e3",
+    "report.json": "e2d03809c63612242ff1a14c034a4f8c644d86870acf6488488eb7a1c38dabc4",
+    "source-index.json": "87a378faf6e7d0f714ed29f0b26710e376b30c2485a59eb50b48c7548d2181c8"
+  },
+  "formal_optimizer_updates": 0,
+  "next_experiment_activation": {
+    "experiment": "E89",
+    "status": "prerequisites_verified",
+    "source_completion_sha256": "80240bad264f144de6aad5a65941b40fc376176c8b01e114c7b2880dc3ac946a",
+    "parity_completion_sha256": "12c2efbd075ca57b6c130fd5641f6165f8fbc57597685a959c5e075348446f16",
+    "registration_sha256": "33ef335bffc8058ce9a6e8a465b19ac3352aeae24a6b9e2c922fd44cec38dad7",
+    "activation_proof_sha256": "4b940e7f7d42463b7ae7255bd4ffbbf96969fb287a6e541ac42e29f167609d27",
+    "relic_source_preparation": {
+      "status": "complete",
+      "assigned_families": 2048,
+      "eligible_families": {
+        "fit": 1185,
+        "label_holdout": 396
+      },
+      "early_failures_retained": 467,
+      "continuations": 6324,
+      "manifest_sha256": "4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6",
+      "selection_sha256": "c3a93f8ef82e10f6087207cc01026f2ec41ca227ebd742ec117e97c038ea0dcf",
+      "next_stage": "collect-relic"
+    }
+  },
+  "limits": "E86-engine baseline on assigned fit/label-holdout/development families with the unchanged parent model; not a new trained model or unseen acceptance. All8 Act3-without-Heart outcomes remain failures. E88 matched all48 development-winning original routes; losing routes and all alternative branches were not exhaustively checked in the original. E89 prerequisites passed; no policy improvement is claimed.",
+  "sample_rate": 0.096875
+}
