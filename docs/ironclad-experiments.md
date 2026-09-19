@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E86, completed E87 source and E88 original comparisons, and E89 joint-learning activation on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E86, completed E87 source and E88 original comparisons, E89 joint-learning activation and the completed E90 changed-relic parity check on 2026-09-19. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2155,3 +2155,17 @@ E89 增加只读表示检查：在原拟合种子顺序中选取前 32 个自然
 E89 来源准入完成：E87 全组完成证明与 E88 全开发胜局原版证明均通过，原登记、模型、引擎和分区摘要保持一致。依赖控制程序启动登记流程，首个阶段为 `prepare-relic`；没有重复启动采集池或使用旧标签。启动证明 SHA `4b940e7f7d42463b7ae7255bd4ffbbf96969fb287a6e541ac42e29f167609d27`，记录于运行目录的 `activation-proof.json`，公共摘要附在 E87 完成报告中。正式优化更新为 0，后续仍需新遗物续局、组合续局、标签审计、三个学习对照和自然开发结果。
 
 遗物来源准备完成，阶段进入 `collect-relic`。1,185 个拟合家庭与 396 个标签留出家庭到达首 Boss 遗物，共 1,581 个家庭、6,324 条续局；另 467 个提前失败家庭保留，全部 2,048 个分配家庭唯一且不含自然开发种子。冻结来源文件和摘要通过核对；来源清单 SHA `4e27ab46d4328c512b4445e3d6f87b4d823cefc809c377abe3645739761b75e6`。采样结束后仍需完整审计，再生成选牌分支；这些数量不代表训练收益。
+
+## 99. E90：新遗物续局的自然原版检查（2026-09-19，所选两条完成）
+
+E88 覆盖父策略的开发胜局；E89 改变首 Boss 遗物后产生不同动作路线，因此补查新遗物分支。先固定原分配顺序中的前 128 个拟合种子和四个遗物身份：化蛇之眼、符文金字塔、天鹅绒颈圈、咖啡滤杯。等这组全部候选完成后，按原种子顺序为每个遗物选择第一条“区别于父策略且心脏胜利”的分支，名单与摘要在原版运行前冻结。缺少合格分支时保留覆盖缺口，不替换范围。
+
+128 个家庭中 99 个到达首 Boss 遗物，29 个提前失败保留；396 条候选完整。化蛇之眼没有区别于父策略的候选；天鹅绒颈圈有 9 条改选、0 条胜局；符文金字塔有 18 条改选、1 条胜局；咖啡滤杯有 8 条改选、1 条胜局。因此原版执行两条：56173442 选金字塔、84627753 选咖啡滤杯。两个家庭的全部 8 条候选、2 条父策略重规划控制、1,424 次非干预局外 NN 决策和终局／RNG／预览计时通过独立检查。
+
+复用既有自然原版驱动，每次一个隔离 JVM；每条成功原版记录追加 E83 持久 RNG 核验与 E84 的命令、角色、难度、三钥匙、双 Boss、第四幕及清理检查。任何失败保留，已确认的规则／RNG 差异阻断受影响标签。没有中途状态导入、重同步、模型更新或新增 MCTS 采样池。此项只覆盖两条经模拟器胜负筛选的新遗物路线，不覆盖败局或缺失的两个遗物，不代表模型收益或总体胜率。
+
+证据目录 `ironclad-alignment/evidence/e89-relic-branch-parity-20260919-01/`；登记 SHA `cd0c3913134e3e3da454cc18aa63764377e01f444cd4597ab951bbf20f6aea31`，执行登记 SHA `b7121caef65eb174e536201caafacfba8b09f572f1d8dce8512fa3f6bd71d5a8`。公开协议 `sim_patch/alignment/e90-relic-branch-parity-protocol.json`。
+
+E90 完成所选两条自然原版路线：金字塔分支 1,283 条命令、心脏终局 8 HP；咖啡滤杯分支 1,322 条命令、心脏终局 25 HP。合计 2,605 条命令匹配，追加的持久 RNG 检查通过；原版角色、A20、三钥匙、第三幕两个不同 Boss 与矛盾／心脏路线通过核对。两实例清理完成，并检查没有遗留 JVM。所测路线没有规则或 RNG 差异；其余败局及两个缺失遗物仍不在此原版证据范围，不能外推为全部训练分支一致或模型收益。E89 按登记方案继续，不改变引擎、采样角色或学习配方。
+
+完成证明 SHA `58ef98dbbd1219368133800b9aeb6802e2a50e1ac0484bf1529ab233495e899a`；独立复核完成文件、来源轨迹及原版录制摘要，重新统计全部原版命令和自然开局次数。公开结果 `sim_patch/alignment/e90-relic-branch-parity-report.json`。

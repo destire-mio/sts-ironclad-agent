@@ -1,0 +1,76 @@
+{
+  "experiment": "E90",
+  "status": "complete",
+  "assigned_fit_families": 128,
+  "selected_changed_relic_winners": 2,
+  "named_relic_coverage": {
+    "SNECKO_EYE": {
+      "changed_branches": 0,
+      "heart_branches": 0
+    },
+    "RUNIC_PYRAMID": {
+      "changed_branches": 18,
+      "heart_branches": 1
+    },
+    "VELVET_CHOKER": {
+      "changed_branches": 9,
+      "heart_branches": 0
+    },
+    "COFFEE_DRIPPER": {
+      "changed_branches": 8,
+      "heart_branches": 1
+    }
+  },
+  "missing_relics": [
+    "SNECKO_EYE",
+    "VELVET_CHOKER"
+  ],
+  "matched_routes": 2,
+  "matched_commands": 2605,
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "formal_optimizer_updates": 0,
+  "limits": "Targeted changed-first-relic winning-route parity from128 known fit families. Does not cover losing branches, all relics, model selection skill or population win rate. Does not replace the full E89 collection/audit or final unseen1024 acceptance.",
+  "rows": [
+    {
+      "case": "runic_pyramid",
+      "seed": 56173442,
+      "status": "matched",
+      "commands": 1283,
+      "hp": 8,
+      "bosses": [
+        "TIME_EATER",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "672106f3ca2dd5329e9d1f025d65c9e370c6047215839e8b1e0e80e965da08b7"
+    },
+    {
+      "case": "coffee_dripper",
+      "seed": 84627753,
+      "status": "matched",
+      "commands": 1322,
+      "hp": 25,
+      "bosses": [
+        "AWAKENED_ONE",
+        "DONU_AND_DECA"
+      ],
+      "recorded_proof_sha256": "1a98391d21ceb0f2d16e4e52d608ce97005db2c36d21d0f72aa445204dd11e59"
+    }
+  ],
+  "completion_sha256": "58ef98dbbd1219368133800b9aeb6802e2a50e1ac0484bf1529ab233495e899a",
+  "source_audit": {
+    "status": "complete",
+    "selected_seed_families": 2,
+    "verified_branches": 8,
+    "verified_original_controls": 2,
+    "outside_nn_choices_verified": 1424,
+    "selection_sha256": "c78f040b0c10e4fea7f2b8512713254fbf4e39882109f8422f25e421361ed8e7",
+    "group_audit_sha256": {
+      "84627753": "419af97a0a2c06b1332c877f8ec3f57f2efcee68f3588e54108d3a07e3154917",
+      "56173442": "e22a8a07c6ca048a41812e986b61166ca01800acd87b87cf2d8e0df5ae2c4438"
+    },
+    "limits": "Independent native-option and terminal/RNG/timer/NN checks of all four first-relic options for each selected family; not the full E89 source audit."
+  }
+}

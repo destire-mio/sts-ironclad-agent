@@ -1,0 +1,77 @@
+{
+  "experiment": "E90",
+  "status": "registered_original_runs_started",
+  "selection_rule": "Use only the first128 families in the assigned fit order, retaining early failures. Require every eligible family branch in this fixed subset to finish before selection. For each named relic, select the first Heart-winning branch in assigned-family order where the chosen relic differs from the parent. Record missing relic coverage without substitution. Freeze the complete selected list and source hashes before any original execution. These are outcome-selected simulator winning alternatives, not a win-rate sample.",
+  "verification": "Independently audit the complete candidate groups of the selected families (native options, parent control, nonintervention NN, terminal/state/RNG/timer). Reuse the existing natural original comparator, then recheck every successful original recording with E83 persistent-combat RNG coverage and E84 command/scope/routes/cleanup checks. Preserve every failure. A confirmed rules/RNG difference blocks use of affected E89 labels. No original state imports or resynchronization.",
+  "resources": "At most one isolated original JVM at a time,900s per case. Continue the existing E89 eight-worker collection; no additional MCTS sampling pool. No model updates.",
+  "limits": "Targeted changed-first-relic winning-route parity from128 known fit families. Does not cover losing branches, all relics, model selection skill or population win rate. Does not replace the full E89 collection/audit or final unseen1024 acceptance.",
+  "named_relics": [
+    "SNECKO_EYE",
+    "RUNIC_PYRAMID",
+    "VELVET_CHOKER",
+    "COFFEE_DRIPPER"
+  ],
+  "assigned_fit_families": 128,
+  "eligible_families": 99,
+  "early_failures_retained": 29,
+  "complete_subset_branches": 396,
+  "selection_coverage": {
+    "SNECKO_EYE": {
+      "changed_branches": 0,
+      "heart_branches": 0
+    },
+    "RUNIC_PYRAMID": {
+      "changed_branches": 18,
+      "heart_branches": 1
+    },
+    "VELVET_CHOKER": {
+      "changed_branches": 9,
+      "heart_branches": 0
+    },
+    "COFFEE_DRIPPER": {
+      "changed_branches": 8,
+      "heart_branches": 1
+    }
+  },
+  "selected_cases": [
+    {
+      "case": "runic_pyramid",
+      "relic": "RUNIC_PYRAMID",
+      "seed": 56173442,
+      "candidate": 1,
+      "parent_candidate": 2,
+      "source_sha256": "4c45e32159c852875a37d47a9b30f72fa9f76bbe514fd9c8e4b64f02d5c3d7f4"
+    },
+    {
+      "case": "coffee_dripper",
+      "relic": "COFFEE_DRIPPER",
+      "seed": 84627753,
+      "candidate": 0,
+      "parent_candidate": 2,
+      "source_sha256": "a9479b599220a5d686119b1c75bc75bcde27ecc08284a5f302cb69d445434744"
+    }
+  ],
+  "missing_relics": [
+    "SNECKO_EYE",
+    "VELVET_CHOKER"
+  ],
+  "independent_source_audit": {
+    "selected_seed_families": 2,
+    "verified_branches": 8,
+    "verified_original_controls": 2,
+    "outside_nn_choices_verified": 1424,
+    "limits": "Independent native-option and terminal/RNG/timer/NN checks of all four first-relic options for each selected family; not the full E89 source audit."
+  },
+  "identity": {
+    "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "evidence_hashes": {
+    "registration.json": "cd0c3913134e3e3da454cc18aa63764377e01f444cd4597ab951bbf20f6aea31",
+    "selection.json": "c78f040b0c10e4fea7f2b8512713254fbf4e39882109f8422f25e421361ed8e7",
+    "source-audit.json": "0e5669eb86b0daac0cf74dfb7ab5d65bb07c2d435247661678ee61a15c70f851",
+    "execution-registration.json": "b7121caef65eb174e536201caafacfba8b09f572f1d8dce8512fa3f6bd71d5a8",
+    "run.py": "4251be82e27a4e1cc567e9fad88a083d5861b20e88aeb755f47c822ea8dc6e47"
+  }
+}
