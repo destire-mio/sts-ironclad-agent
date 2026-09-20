@@ -1,0 +1,96 @@
+{
+  "experiment": "E118",
+  "status": "preparation_complete",
+  "created_at": "2026-09-20T08:41:51.486547+00:00",
+  "protocol": {
+    "experiment": "E118",
+    "created_at": "2026-09-20T08:34:55.220988+00:00",
+    "families": {
+      "fit": 4608,
+      "label_holdout": 1024,
+      "train_development": 512
+    },
+    "family_groups_path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-source-refresh-20260920-01/family-groups.json",
+    "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+    "identity": {
+      "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-source-refresh-20260920-01/natural",
+    "source_manifest_sha256": "c309c3cfbdca3342b570945aa781fab13d9dfe102f9792289d587d624ef9b89f",
+    "parity_root": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e117-development-parity-20260920-01",
+    "parity_registration_sha256": "e63bf3e269596268b5ddb2daff337c06d07bdb34d4e21bc7a5c973a3a8e8193a",
+    "parent_registration": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-source-refresh-20260920-01/registration.json",
+    "parent_registration_sha256": "b683394a27e37a77d37805355fb3af9b5d46800404c573c74afed82fda77b8fb",
+    "inherited_collector_registration_sha256": "bd9ad9f917d9a74c8819240f0b06afd8b4a492133170e25c5f3d3ba95d905185",
+    "collection": "Same registered first-boss relic and last scoped Act2-row0 card menus as E89/E97. Enumerate all native relic/card/Bowl/skip alternatives and parent controls for all4608 fit and1024 label_holdout families. Keep early failures and absent nodes. One canonical repaired-engine label table supports small1536/expanded4608 fits; no old leaves, duplicated shared-family sampling or development branches.",
+    "source_gates": "All6144 E117 sources, terminal/state/RNG/timer/nonintervention NN audits and allwinner replans; all512 development source audits and every development-winning original route plus added persistent RNG. Any source fault/nonmatch blocks collection. Each original-winning route also needs all twelve exported terminal RNG streams with zero state imports and no resynchronization. Each original route needs the frozen per-instance Bomb comparison in both live and recorded execution, linked to the same trace and RPC.",
+    "resources": {
+      "workers": 8,
+      "torch_threads": 1,
+      "episode_seconds": 300,
+      "process_seconds": 360,
+      "natural_stage_seconds": 10800,
+      "first_relic_collection_seconds": 36000,
+      "joint_collection_seconds": 93600,
+      "independent_label_audit_seconds": 18000,
+      "observer_interval_seconds": 1200,
+      "original_jvm_instances": 1
+    },
+    "deadline_rationale": "The labeled family count grows from E97s3584 to5632, a factor11/7. Scale the preregistered21600/57600/10800s stage budgets by that factor and round up to36000/93600/18000s before new continuation outcomes. Per-episode guards, work per branch and retry policy do not change. These are new-stage budgets, not extensions of an expired job.",
+    "verification": "Independently replay every new continuation terminal/state/RNG/timer and all nonintervention NN choices. Rebuild every card node from its natural relic prefix; every parent-choice card control must reproduce its first-relic source. Preserve duplicate/omitted/fault/missing labels as errors, not losses.",
+    "optimizer_updates": 0,
+    "limits": "Label preparation under E116 only until all E117 gates pass. E112/E113/E114 remain closed and inadmissible. The original scale hypothesis remains untested; no learned gain or unseen acceptance.",
+    "terminal_rng_helper_sha256": "5d1b33d95562c0560eacdb9297afb28e40bd365fe23d1930d372edaeef6c59de",
+    "bomb_combiner_sha256": "0df5fc6c8faf66bb38f25f8be8be4890a927ecb7e2f1463b3e56f8ec758b8125",
+    "bomb_instance_checker_sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be"
+  },
+  "registration_sha256": "29109792a29f51b8e8b44b02c52c7ac9751822826828534c96b6530a1d53c011",
+  "entry_sha256": "3675cd75d7614eb02dcc959a53e04fd78cb3474648e600a004d1e4a5ffa69f9e",
+  "execution_registration_sha256": "239e0c0c246a8cbf3d2d50e7197e58e8e7274a7f5078e2eabb114590f40da8f5",
+  "launcher_controls_sha256": "13ad18e51080bae0ab723bd252b647b16c141f660cda27e5881e2460d019a06a",
+  "launcher_cases": [
+    {
+      "case": "normal",
+      "exit_code": 0,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "fault",
+      "exit_code": 7,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "timeout",
+      "exit_code": 124,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "wrapper_SIGTERM",
+      "exit_code": 143,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    }
+  ],
+  "frozen_collector_modules_byte_identical": 15,
+  "entry_known_source": {
+    "seed": 1138994370,
+    "episode_sha256": "b80056c6fa106a4573783529a9ceda9dddb500e3fe7fda36ecd1e9769fe24213",
+    "prefix_index": 75,
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen": 2,
+    "natural_public_state_reconstructed": true
+  },
+  "new_continuation_labels": 0,
+  "optimizer_updates": 0,
+  "collection_started": false,
+  "limits": "Prepared under the E116 engine. All E117 source and development original checks precede collection. No source results or learned gains in this report."
+}

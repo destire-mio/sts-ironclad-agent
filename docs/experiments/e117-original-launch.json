@@ -1,0 +1,19 @@
+{
+  "experiment": "E117-original-launch",
+  "status": "launched",
+  "started_at": "2026-09-20T08:42:46.051418+00:00",
+  "source_observation_at": "2026-09-20T08:42:06.419044+00:00",
+  "source_files_at_observation": 954,
+  "assigned_source_families": 6144,
+  "development_source_files_ready": 512,
+  "source_gate_check": "run_job.py original --check returned admitted_without_launch before the first execution",
+  "source_process_live_at_observation": true,
+  "source_active_workers": 8,
+  "execution_registration_sha256": "baf5c38e76507cc441c7602a71c6524c62bb734f3114b98adb1aac249f22636d",
+  "original_registration_sha256": "e63bf3e269596268b5ddb2daff337c06d07bdb34d4e21bc7a5c973a3a8e8193a",
+  "original_process_metadata_sha256": "38aa4f2509eca3243738a14ee326ada7e73e754823abe7e5a33b9a69abe6d1fa",
+  "observation_sha256": "a315580c4b566765a567a80f09c17d3a85cacdc3068b6e9a9582f67e21158cda",
+  "observer_interval_seconds": 1200,
+  "next_observation_at": "2026-09-20T09:02:06.419044+00:00",
+  "limits": "Source files are not yet complete independently verified training data. The original job first audits all development sources and then executes every winning route; no original completion or win rate is claimed."
+}

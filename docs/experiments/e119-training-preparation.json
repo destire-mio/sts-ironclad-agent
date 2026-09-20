@@ -1,0 +1,195 @@
+{
+  "experiment": "E119",
+  "status": "preparation_complete",
+  "created_at": "2026-09-20T08:41:51.486547+00:00",
+  "protocol": {
+    "experiment": "E119",
+    "created_at": "2026-09-20T08:34:55.220988+00:00",
+    "identity": {
+      "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_registration_sha256": "b683394a27e37a77d37805355fb3af9b5d46800404c573c74afed82fda77b8fb",
+    "collector_registration_sha256": "29109792a29f51b8e8b44b02c52c7ac9751822826828534c96b6530a1d53c011",
+    "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+    "source_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "inherited_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+    "inherited_training_registration_sha256": "d8767ebeadb818b44f1365f58d3ed39ee5102cd909c8119810f6485a5e759cec",
+    "question": "Does the E97 planned independent-family data expansion improve the fixed joint relic/card readout under the now repaired E116 engine?",
+    "arms": {
+      "small": {
+        "fit_families": 1536,
+        "selection": "E87 fit family IDs, with all outcomes regenerated under E116."
+      },
+      "expanded": {
+        "fit_families": 4608,
+        "selection": "The same1536 plus all3072 E97 additional fit family IDs; no success selection."
+      }
+    },
+    "common_label_holdout": 1024,
+    "development": 512,
+    "config": {
+      "steps": 1000,
+      "learning_rate": 0.03,
+      "gradient_norm": 1.0,
+      "l2": 0.001
+    },
+    "representation": "Inherited frozen parent192-dimensional public-state/candidate embeddings; two learned linear readouts plus fit-only option biases. Centered features and RMS scales fitted only on each arms own fit families, parent score bias1, unknown whole offers use parent. No seed or future state features.",
+    "objective": "Inherited exact expected terminal binary Heart outcome over all assigned fit families and complete two-decision trees plus fixedL2; no invented preference for equal outcomes, no success-only imitation, no layer reward.",
+    "selection": "Train both final checkpoints before common heldout scoring, fixed1000 steps and L2.001, no CV, checkpoint or hyperparameter sweep. Each arm vs parent must net>=20 wins and paired exactp<.05 across common1024. Claim a data-scale gain only if expanded vs small independently meets net>=20 and pairedp<.05. The pairwise development screens are not independent acceptance.",
+    "downstream": "Verify both live choice sets on all reachable heldout families. Qualifying arms then require natural512-development net>=10 and pairedp<.05, zero faults, full terminal/RNG/NN audits, correct scoped first change, winner replans and original winning-route verification. Choose more wins, fewer lost parent wins, then small on a tie. No candidate adoption or natural evaluation by the training command itself.",
+    "implementation_change": "Preserve the E114 fit, data, loader and choice recipe and family assignments. Renew bindings under E116. Require E117 per-instance Bomb comparisons alongside all existing twelve-stream terminal RNG and original-route checks.",
+    "dependency": "All E117 source and original-development gates and E118 complete label audits. No model output directory before those gates pass.",
+    "resources": {
+      "torch_threads": 1,
+      "live_choice_workers": 8,
+      "live_choice_stage_seconds": 10800,
+      "observer_interval_seconds": 1200
+    },
+    "limits": "A test of the unexecuted data-scale hypothesis on narrow coupled decisions. It is not a full-policy ceiling or the50percent goal. Failed E89/E95/E96 results stay recorded. Final acceptance requires a separately frozen candidate and1024 truly unseen families."
+  },
+  "development_protocol": {
+    "experiment": "E119D",
+    "created_at": "2026-09-20T08:34:55.220988+00:00",
+    "identity": {
+      "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "parent_protocol_sha256": "8630a045f79508377d2c094afe341318cbde6e9e0c6b28e07d44b324545c6af6",
+    "training_registration_sha256": "42866409dc499afc78b9e93ad1733fc1af28b672538f89161157747136ad246f",
+    "verification_registration_sha256": "1a78eeb0cf477872a01be68b1b1baf9b18ba2521634d6babaa999021e8a36dbf",
+    "purpose": "Implement E119s predeclared natural-development and original-winning-route checks. No new learning hypothesis, fit, search policy, seed draw or hyperparameter choice.",
+    "arms": [
+      "small",
+      "expanded"
+    ],
+    "assigned_development_families": 512,
+    "development_seed_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "prerequisites": "All E117 natural sources and original development gate, E118 complete joint labels, both E119 fits, and independent common-heldout native-choice verification. Only arms with common-heldout net>=20 and exact paired p<.05 can start natural games.",
+    "natural_gate": "Each admitted arm runs every same assigned512 seed from natural A20 Ironclad start. Require net>=10 Heart wins and exact paired p<.05 against the repaired-engine fixed parent; zero faults; all terminal/state/RNG/timing checks; first changed action in the two declared scopes; independent stored-weight arithmetic audit of every outside choice; identical fresh MCTS/NN replan of every winner. Retain early failures, and reject missing/invalid results without replacement or retries.",
+    "original_selection": "For each arm passing the natural screen, execute every Heart-winning development route in ascending seed order using one owned isolated original JVM. No winner subset, cached-route substitution, retries or resynchronization. Stop at the first nonmatch/fault/deadline, retain all unattempted routes, and block selection.",
+    "original_verification": "Inherited E117 original per-route implementation and all comparators, plus six persistent RNG streams and independent command/identity/keys/two distinct Act3 bosses/Act4/Heart/cleanup audit. Candidate source is its complete audited natural cohort with the candidate model, identity and frozen loader/runtime, not the parent model. Also inherit E117 common-terminal independent replay and all twelve exported RNG streams; mapRng internal state is not exported, while map contents remain checked. Both live and recorded original execution compare every Bomb countdown and damage instance, including empty lists, using the frozen additive checker.",
+    "candidate_selection": "Only after every natural-passing arms complete original gate: more Heart wins, fewer lost parent wins, then small on a tie. The result is a development-screened frozen candidate; no production adoption or unseen evaluation in these commands.",
+    "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+    "resources": {
+      "workers": 8,
+      "torch_threads": 1,
+      "episode_seconds": 300,
+      "prefix_timeout": 360,
+      "natural_stage_seconds_per_arm": 10800,
+      "original_stage_seconds_per_arm": 10800,
+      "per_original_seconds": 900,
+      "original_jvm_instances": 1,
+      "observer_interval_seconds": 1200
+    },
+    "unchanged_game_inputs": "E116 engine; fixed parent192 encoder; MCTS8000 and boss multiplier3; existing E54 search and 256 replan cap; deterministic45 seconds/floor and one transform preview frame; no Prismatic Shard purchase; no new optimizers.",
+    "limits": "Preparation software checks do not establish a learned gain, original candidate parity or50percent success. Final acceptance needs a later frozen selected checkpoint and1024 genuinely unseen seed families.",
+    "terminal_rng_helper_sha256": "0d2fe251645a07355ead5b1f38d20a6798ea93434ad7a4b403ebbc9902a2b57c",
+    "bomb_combiner_sha256": "0df5fc6c8faf66bb38f25f8be8be4890a927ecb7e2f1463b3e56f8ec758b8125",
+    "bomb_instance_checker_sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be"
+  },
+  "registrations": {
+    "scale-training-registration.json": "42866409dc499afc78b9e93ad1733fc1af28b672538f89161157747136ad246f",
+    "scale-verification-registration.json": "1a78eeb0cf477872a01be68b1b1baf9b18ba2521634d6babaa999021e8a36dbf",
+    "development-registration.json": "52f83172d8357c5ad4c4d7fdf30821562b11c766a29401a6d893b30aaa0959b0"
+  },
+  "proofs": {
+    "source-renewal-verification.json": "adb26740731768716a01a8de950d2353335bf5b0846a71125bd782811c604885",
+    "renewal-entry-verification.json": "07e7c405beadbe71129cf50c22dcb7d384b5bb843464fe66709a7cde28154bba",
+    "native-probe/completion-verification.json": "31d1c9e6ec48266456e5f4a2decff0aef9a77dba2ed93e9599491e6031cfd7f3",
+    "development-entry-probe/completion-verification.json": "88a7e0899f41cb35b18e2acf9e1b6ccb008e963e30d06581f4d20fb76eb03b5a",
+    "terminal-bomb-entry-verification.json": "8171623f92becb32fa85f66d452fe62b2c2f5a7a9151de37225c7569198870ef",
+    "terminal-bomb-entry-attempt-01-error.json": "c96e9c0de54f91a369b7b5e268bdb70e7eaa268781adf437f41d2bbb727a2205"
+  },
+  "driver_rebindings_checked": 15,
+  "same_collector_modules": 15,
+  "inherited_stale_nested_hashes": 0,
+  "explicit_nested_hash_rejection_controls": 7,
+  "native_choice_cases": [
+    {
+      "case": "positive",
+      "status": "verified",
+      "result_sha256": "a5e252f75f69d82c1463c4ca9be30b9b22c9238476ab39e1f566f6135b07e16d"
+    },
+    {
+      "case": "wrong-expanded-relic",
+      "status": "verification_error",
+      "result_sha256": "eb0a03cede5006f3135311fbd8e938d448ff59433687965ca1065f184b279358"
+    },
+    {
+      "case": "wrong-expanded-card",
+      "status": "verification_error",
+      "result_sha256": "3e23c9a2ee4ac01f7215bfbdbc5374114d0607f22b2436fe10e5016b02b936e5"
+    }
+  ],
+  "outside_NN_choices_checked": 203,
+  "candidate_selection_cases": 4,
+  "original_admission_rejection_cases": [
+    "model",
+    "engine",
+    "duplicate_route",
+    "missing_route",
+    "fault",
+    "unattempted",
+    "stopped",
+    "terminal_status",
+    "terminal_seed",
+    "terminal_engine",
+    "terminal_helper",
+    "terminal_difference",
+    "terminal_import",
+    "terminal_resync",
+    "terminal_trace",
+    "terminal_rpc",
+    "terminal_missing_stream",
+    "old_six_stream_gate",
+    "bomb_status",
+    "bomb_seed",
+    "bomb_engine",
+    "bomb_combiner",
+    "bomb_checker",
+    "bomb_no_live_checks",
+    "bomb_no_recorded_checks",
+    "bomb_negative_bearing",
+    "bomb_impossible_bearing",
+    "bomb_import",
+    "bomb_resync",
+    "bomb_trace",
+    "bomb_rpc",
+    "bomb_not_required"
+  ],
+  "terminal_rng_streams_checked": 12,
+  "saved_natural_actions": 965,
+  "native_bomb_control_states": 15,
+  "same_total_wrong_instances_rejected": true,
+  "wrong_countdown_rejected": true,
+  "saved_natural_route_bomb_bearing_checks": 0,
+  "helper_resolution_note": "An initial checker expected the candidate directory. The native harness resolves a byte-identical stateless copy from alignment/tests; the corrected checker records the resolved path and validates code hashes. No comparator or game expectation changed.",
+  "new_continuation_labels": 0,
+  "optimizer_updates": 0,
+  "new_mcts_calls": 0,
+  "new_original_executions": 0,
+  "unseen_acceptance_games": 0,
+  "own_source_hashes": {
+    "prepare-e118-e119.py": "7ce454b02cd3f8e2295345cc2231bd98f587f4c38496151d5438221c91cb9036",
+    "publish-preparation.py": "9d883acf4d6d8d3f0950e77c6e9120e8ffe80b52acfd6da97bffef03a77152a3",
+    "collector/run_collections.py": "ec445fa1bdf80f8f73ccb27802da4051bc4bc4a41f51fc3ca2fc6bb0eb348b0f",
+    "collector/check-entry.py": "bb8d100cde64606f5a89f6b9e60f7b31d52d9aebcad054ebd0adecd66a915dbf",
+    "collector/run_pipeline.py": "7dad63255a682759b4b80e193a75d4c5a46e48a631d77f6fa31e6c91dd631db3",
+    "collector/check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa",
+    "training/scale_training.py": "8eac3374fd52ecd70fa35f59d0bac651396c7da81a8dc556431bde66f25a6a23",
+    "training/scale_verify.py": "fa609602a11ac86887bc36c2448b54d4d10b0210e3d2fea30b18a254d00a33ff",
+    "training/scale_development.py": "1671834607471a8710c4f4322e295761bf2ed0d3e3ba1c0475a263fb584296c2",
+    "training/candidate_original.py": "773efeaca2bd3a91d126377a8a60d8f1ad40d52436ffe14e95d1a9e1b2a45766",
+    "training/terminal_rng.py": "0d2fe251645a07355ead5b1f38d20a6798ea93434ad7a4b403ebbc9902a2b57c",
+    "training/bomb_extras.py": "0df5fc6c8faf66bb38f25f8be8be4890a927ecb7e2f1463b3e56f8ec758b8125",
+    "training/bomb_instances.py": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be",
+    "training/check-renewal-entry.py": "ce02d1677cb41c9b492029a3993730718231abed0400e1e65c0ad64347fe9987",
+    "training/prepare-native-probe.py": "1017e258d17969a12786dbb9cabc9c1440cc7e640a929fb957fed81a620e88d9",
+    "training/run-native-probe.py": "d7d356d1e473864d238d8beeb1eddbdf0903377b1d202af1e68919e75d46b14f",
+    "training/check-development-entry.py": "4790a7329b5f930fcf89f114ed9273d2e4250c4423f2267e25ce2fb633894369",
+    "training/check-terminal-bomb-entry.py": "43276094ab649b60fbc4ab627beec4b7026691ecbae5331082f41043d2a22108",
+    "README.md": "02cdee22571a7c50e7dd99eeab069c3b4be3b62001d62aa4b2e1d36cc697237d"
+  },
+  "limits": "Software preparation on saved E116 evidence, including a known-route zero-head fixture. This does not establish a learned gain, candidate native parity or population win rate. Source/label gates remain prerequisites."
+}

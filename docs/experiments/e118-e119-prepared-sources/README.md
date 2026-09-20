@@ -1,0 +1,3 @@
+These own-code snapshots preserve the E118/E119 source gates, fixed two-arm joint relic/card recipe and preparation controls under E116. They depend on the local frozen evidence/runtime layout and earlier collector modules; they are not standalone public runners. They contain no game JARs, model weights or raw traces.
+
+Preparation performs no training or new MCTS. The registered source and original gates must finish before continuation collection; both label audits must finish before fitting. Live and recorded originals require per-instance Bomb and twelve terminal RNG checks. A native helper may resolve through alignment/tests; the entry check records its actual path and verifies byte identity with the frozen helper.
