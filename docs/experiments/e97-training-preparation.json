@@ -1,0 +1,90 @@
+{
+  "experiment": "E97-training",
+  "status": "prepared_waiting_for_continuations",
+  "registration_sha256": "55aacda55c9de5ac93454a0a38199d47c445e1c44abf9ce9bc5047b804d5a27c",
+  "entry_verification_sha256": "68f2f93ce991c833f63b31a8682737cacbc655472ff051065486251bd539e1f3",
+  "cases": [
+    {
+      "case": "split_and_rejoin_actual_complete_trees",
+      "result": "identical",
+      "assigned_families": 2048,
+      "card_states": 6316,
+      "leaves": 25188
+    },
+    {
+      "case": "duplicate_whole_family",
+      "result": "rejected",
+      "reason": "duplicate reference family"
+    },
+    {
+      "case": "missing_assigned_family",
+      "result": "rejected",
+      "reason": "missing assigned family"
+    },
+    {
+      "case": "family_role_changed",
+      "result": "rejected",
+      "reason": "reference role changed"
+    },
+    {
+      "case": "assigned_roles_overlap",
+      "result": "rejected",
+      "reason": "roles overlap or duplicate families"
+    },
+    {
+      "case": "card_attached_to_another_family",
+      "result": "rejected",
+      "reason": ""
+    },
+    {
+      "case": "unfinished_continuations_cannot_train",
+      "result": "rejected_before_output_or_optimizer"
+    }
+  ],
+  "config": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "formal_optimizer_updates": 0,
+  "scope": "Data-assembly contracts on existing complete trees and premature-training rejection. New source/data has not been consumed and no fit executed.",
+  "remaining": "Complete new inputs, execute both fixed fits, then common-heldout reconstruction and live-choice verification. Natural development and original-game checks remain before adoption.",
+  "old_input_loader_check": {
+    "status": "passed",
+    "source_experiment": "E89",
+    "terminal_leaf_hashes_rechecked": 25188,
+    "audit_files_rechecked": 1581,
+    "reference_families": 2560,
+    "card_states": 6316,
+    "label_proof_sha256": "6041ae1c6590dcca2261cf0c3737645f479bced51bba789df67ff600f6eb0ec2",
+    "manifest_sha256": "e678ddfcbcf8fa2e902a77a9e061f0a308842d3aa8ab8d7cba90e1db9f7f3b00",
+    "loader_sha256": "b32282eb40c6ee36594acfe8319ee55a648bbf92c78fac12b54d8852a13e3e3f",
+    "scope": "New input loader tested against complete old immutable data; no new-source read, NN fit, MCTS or candidate evaluation."
+  },
+  "old_input_loader_check_sha256": "073867ddd431eb7db009d87464a51d8239a912ee601e623e41ab536bff08e61c",
+  "live_verifier_entry": {
+    "status": "passed",
+    "registration_sha256": "8be0ab9830f492ebeaf886894db11c8f9469e2a675d71847b7fcb3b66a44b387",
+    "preflight_sha256": "eecee5b29c8e97056fc71ffb49406cd2f2855efade644311e1e601243493827d",
+    "cases": [
+      {
+        "case": "positive",
+        "status": "verified",
+        "result_sha256": "929b258dfc22f34f09ee6cd18d1440d4c2f429420ff524e6038554a76b876e39"
+      },
+      {
+        "case": "wrong-expanded-relic",
+        "status": "verification_error",
+        "result_sha256": "47ea8bfd30b8a8c608be0077f9869146ba77a238aa56720452391585ea578705"
+      },
+      {
+        "case": "wrong-expanded-card",
+        "status": "verification_error",
+        "result_sha256": "7e56f37e28e510a0aba5cc7d34dd132eb22614cb436f836dacbdae3a858c9499"
+      }
+    ],
+    "remaining": "Run only after the registered fits and complete input gates; all1024 heldout families remain required."
+  },
+  "live_verifier_entry_sha256": "bc1bf889a6c0614a6de9003179df6bf5d650629ac936e00b6ae7fc9aa7ad90f9"
+}
