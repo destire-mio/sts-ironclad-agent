@@ -1,0 +1,62 @@
+{
+  "experiment": "E99",
+  "created_at": "2026-09-20T00:48:57.479007+00:00",
+  "question": "Regenerate the complete small and expanded data-scale source families under E98 before comparing joint relic/card learning. The stopped E97 data-scale hypothesis remains untested.",
+  "source_manifest_sha256": "d23f058ab75d0aa47fc1089b363b3794065f118d95b28bfc7da923cf7738ca11",
+  "repair_completion_sha256": "a91a822f5a3d61f6ede3af46f5307331081b2eefcaf230f2a7a72746b9d23092",
+  "repair_publication_sha256": "f222f7e419a4d239898d6661e1db901f7a89336abf0dd1e0253c649ef0654aae",
+  "old_assignment_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+  "new_assignment_sha256": "f97049ba11b371241ead1fdb8d31371dad2bbde371e8ee2466d0e24cdc8ae10c",
+  "inherited_scale_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+  "counts": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "groups": {
+    "small_fit": 1536,
+    "additional_fit": 3072,
+    "old_label_holdout": 512,
+    "additional_label_holdout": 512,
+    "development": 512
+  },
+  "assignment": "Preserve every E87 fit/label_holdout family and every E97 assignment and role. The E87 development panel is not needed for this study. Never substitute faults, early deaths or missing nodes. Draw no new acceptance seeds.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "total_source_seconds": 10800,
+    "wrapper_seconds": 11100,
+    "long_job_observation_seconds": 1200
+  },
+  "scope": {
+    "character": "IRONCLAD",
+    "ascension": 20,
+    "target": "HEART",
+    "keys": 3,
+    "act3_distinct_bosses": 2,
+    "prismatic_shard_purchase": false,
+    "simulations_per_call": 8000,
+    "boss_multiplier": 3,
+    "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "gates": [
+    "All 6144 sources complete, independently replayed terminal/state/RNG/timer and every outside NN choice. All wins replanned with identical action prefix and terminal.",
+    "All 512 assigned development families independently audited, then all winning full routes compared in original Java plus persistent RNG, route/keys and cleanup checks. Stop on a finding.",
+    "Only after both source gates, register and regenerate affected first-relic and relic/card continuation labels under E98. Never relabel or mix old-engine continuations.",
+    "Only after new-label audits may the inherited two-arm data-scale experiment run. No optimizer or candidate evaluation is part of this source refresh."
+  ],
+  "limits": "Known training/development source renewal under a verified rule repair, not a new trained model, representative original win rate, exhaustive parity or final 50 percent acceptance. E97 and E86 evidence stay immutable.",
+  "status": "registered",
+  "registration_sha256": "5088d2971629ab28c48331af18bc70aa116639cbefb9d71edd0384cb306e9bd3",
+  "source_execution_registration_sha256": "bf8bccf557eb7f7a766f872bf0f5f90a805dc408c05785c83388bf81d8e89114",
+  "source_entry_verification_sha256": "4fb2ef66d3e19636be475f0c7ffefa9f5af63a304dbd1c6d7ee9d5dc1a1374cb",
+  "original_gate_registration_sha256": "c7927ef83a653d4b711e8879a1f76bab226238b632e4b77763257a82ae34c0a7",
+  "original_entry_verification_sha256": "209e4349316ee18ec734f92be4ee147f8a9c01ac9420a28209fdfa7cc6e3ef86",
+  "distinct_families": 6144,
+  "actual_loaded_runtime_modules_checked": 10,
+  "new_optimizer_updates": 0,
+  "original_gate": "All512 assigned development sources, then every Heart win; one original JVM, no replacements or retries. Stop on the first nonmatch, with persistent-RNG and route verification."
+}

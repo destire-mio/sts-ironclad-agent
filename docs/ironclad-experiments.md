@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through the E98 Guardian queue repair on 2026-09-20. The stopped E97 attempt remains immutable; affected sources and labels require a new repaired-engine registration. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E98 repair completion and E99 source-refresh registration on 2026-09-20. E97 remains stopped; E99 regenerates the fixed small/expanded study families under E98 before any new joint labels or learning. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2344,3 +2344,16 @@ E97 的数据规模假设没有接受检验，不能把原版门槛失败当作�
 这是一项规则修复和一个已知开发种子的集成验收，不是全内容一致、模型胜率提升或未见种子验收。允许另行登记新引擎来源与续局标签；禁止把 E86 的旧标签当作修复后的训练标签。新参数更新为 0，E97 的数据规模假设仍未受检验。
 
 补丁 SHA `8abb67b6230fb3b24813ba3764cba9ac15a63813f6ff4e2b837081a6cf2815ab`；引擎 SHA `5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36`；完成核验 SHA `a91a822f5a3d61f6ede3af46f5307331081b2eefcaf230f2a7a72746b9d23092`。证据目录 `ironclad-alignment/evidence/e98-guardian-queue-repair-20260920-01/`；公开结果 `sim_patch/alignment/e98-guardian-queue-report.json`，分发回归 `sim_patch/alignment/tests/e98_guardian_queue.cpp`。
+
+
+## 108. E99：用守护者修复引擎更新数据规模对照来源（2026-09-20，登记）
+
+E97 的扩大样本实验被原版规则门槛中断，没有检验数据规模假设。E98 完成已确认的守护者修复后，E99 保留 E87 的 1,536 拟合／512 标签留出种子，以及 E97 的全部 3,072 新拟合／512 新标签留出／512 开发种子，分区与顺序不按新结果调整。合计 6,144 个自然来源：拟合 4,608、共同标签留出 1,024、开发 512；E87 的旧开发组不属于该数据规模实验的输入。没有抽取最终未见验收种子。
+
+原来的小组和新增组都必须用 E98 引擎重新生成，不能把旧 E86 终局贴成新标签。父模型、完整 MCTS 算法及预算保持一致；八个单线程工人，单局／进程时限 300／360 秒，全组含胜局重规划及审计为 10,800 秒。长任务按 20 分钟观察，失败、缺失、提前死亡和不可达节点保留，不替换或重置时限。
+
+源运行器与 E97／E98 集成使用的字节内容相同；只改变合并分区、引擎身份及并发数。十个实际导入模块、引擎／权重摘要及角色分区通过入口核对。原版子门槛沿用 E97 的执行器，仅换来源路径与实验编号；全部 512 个开发来源审计后，按种子排序执行所有心脏胜局，逐条核对原版自然动作、追加持久 RNG、计时、钥匙、双 Boss、第四幕及实例清理。来源未完成时拒绝启动原版，入口控制通过。
+
+训练准入需要 6,144 来源的全部终局／状态／RNG／局外 NN 核验及所有胜局重规划，加上开发胜局的原版门槛。此轮不执行参数更新；后续遗物与选牌组合续局必须在新引擎上另行登记、生成和审计。E97／E89 的旧标签和失败记录保留；此前数据规模方案的两臂比较要等新标签通过门槛，不能从来源重跑次数推断模型改善。
+
+来源登记 SHA `5088d2971629ab28c48331af18bc70aa116639cbefb9d71edd0384cb306e9bd3`；运行登记 SHA `bf8bccf557eb7f7a766f872bf0f5f90a805dc408c05785c83388bf81d8e89114`；原版门槛登记 SHA `c7927ef83a653d4b711e8879a1f76bab226238b632e4b77763257a82ae34c0a7`。运行目录 `runs/heart-e98-scale-source-refresh-20260920-01/`，原版证据目录 `ironclad-alignment/evidence/e99-development-parity-20260920-01/`，公开协议 `docs/experiments/e99-source-refresh-protocol.json`。
