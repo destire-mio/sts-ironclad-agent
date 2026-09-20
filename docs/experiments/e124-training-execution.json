@@ -1,0 +1,81 @@
+{
+  "experiment": "E124-execution",
+  "status": "preparation_complete",
+  "created_at": "2026-09-20T10:30:40.235869+00:00",
+  "registration": {
+    "experiment": "E124-execution",
+    "created_at": "2026-09-20T10:30:11.451533+00:00",
+    "total_seconds": 64800,
+    "fit_seconds": 3600,
+    "verification_wrapper_seconds": 11100,
+    "natural_wrapper_seconds_per_arm": 11100,
+    "original_wrapper_seconds_per_arm": 11100,
+    "finalize_seconds": 3600,
+    "maximum_stage_seconds_sum": 62700,
+    "observer_interval_seconds": 1200,
+    "internal_stage_seconds_unchanged": {
+      "live_heldout_choices": 10800,
+      "natural_per_arm": 10800,
+      "original_per_arm": 10800,
+      "original_per_route": 900
+    },
+    "total_deadline": "Scheduling deadline and remaining subprocess allowance. Input validation and final native cleanup are synchronous; this is not an independent outer OS watchdog.",
+    "entry": "All E122 source/original proofs and E123 labels are revalidated before creating execution, model, or original-candidate directories. No restart or resume. Closed source markers reject before and after each phase.",
+    "ordering": [
+      "both fixed fits",
+      "common heldout live choices",
+      "small: natural if heldout passes, all original winners if natural passes",
+      "expanded: same gates",
+      "final decision after all eligible original gates and native cleanup"
+    ],
+    "ownership": "Each phase subprocess uses the exact E123 owned-group utility and inherited completed control evidence. Original JVM cleanup is confined to this study arm/seed instance directories. Stop on the first execution error; retain all artifacts.",
+    "resolved_stateless_bomb_helper": {
+      "path": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/bomb_instances.py",
+      "sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be"
+    },
+    "no_retry": true,
+    "auto_adoption": false,
+    "unseen_acceptance_games": 0,
+    "recipe_changes": false,
+    "hashes": {
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/run_training_pipeline.py": "50bc2cc310e614a6f39fa6c557e061b993a900718877f3d637cda920fb59303a",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/check-training-execution.py": "7a7cc891a1a1bf0c7f8878f1225fbb9060f036df487478208e1d2e2bfc71a8e8",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/scale_training.py": "6aed65482fb9b8d9bb31451d68d434de157c41047fe29e2b320f920be1b4339f",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/scale_verify.py": "c721578e5665e03b77341b31a402ab0a50f99170227eeda7bc6ca41f72292c7e",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/scale_development.py": "c29f0346da49b6927bbf2a6e2753ddb5fa4ee84061d1933af1636d60c4e525b9",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/candidate_original.py": "7d41598391111ee751d03c110f151f6137c9f2960b0a7758f95c65d7b6d52e05",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/scale-training-registration.json": "6ece3869283dc8988829e60d2c70f58fbbb5a42a32a18a3eb8932d684dc4ef28",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/scale-verification-registration.json": "e18b06e3652fa9378dc4dc0a3ac675d064250ea6b0cccef7f97a6eca1ce5405d",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/development-registration.json": "6344cd839f9c9e95ae93e10a4863893231b745f3c52246a3b0013160351b6f26",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/preparation-publication-verification.json": "596d45ef34a5eef8ba2b80ca1010ff05ff17c994c58feffbfcecc2681551265d",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-joint-labels-20260920-01/run_pipeline.py": "69f67f2848ecd47abe78ccdaa7b31dd3b892176cf13518285d357f679444a7fb",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-joint-labels-20260920-01/check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-joint-labels-20260920-01/registration.json": "6ba85823d04a0baea961d5a1004f2c2730ee8b4cee56f3c92090fb64a88d716c",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-joint-labels-20260920-01/launcher-probe/completion-verification.json": "10e4c00606db56e7c4aae03676b430f7a08269ce3093c66e8de4597d7c17e808",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/bomb_instances.py": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/native-admission-verification.json": "7257b586c005077f259f58c1c7f7069a0a84b69afa90e8d1223e05c3ec286ce2",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/check-native-admission.py": "f6158df4ab075650d43e170648c68c52887c6b1cb33e85206adb57364eac5706",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/turn_extras.py": "28b537d87523898f7d8c9aa861cff7ccebc919cbb2eaf983cac21be9ab033c2f",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/power_order.py": "8e2f5b0d6c96c27ea659c8969a3510e997b405e0df6f4b0fe5650b8daa6d3475",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/terminal_rng.py": "a20a2d2e8bb87aeac0cb6ff4dc1d40470bc2eb7a9e32ca761285951ca4fb745a"
+    }
+  },
+  "registration_sha256": "eeb57782c4bbaea921908c2e30662d13648f30f97e779a5835037b3725803d00",
+  "entry_verification_sha256": "34a6b061fd4af36f8706f6891609c0bb0d57e559d9a62cd71d9ef1a541cdeb5f",
+  "incomplete_inputs_rejected_before_outputs": true,
+  "inherited_process_cases": [
+    "normal",
+    "fault",
+    "timeout",
+    "wrapper_SIGTERM"
+  ],
+  "inherited_launcher_proof_sha256": "10e4c00606db56e7c4aae03676b430f7a08269ce3093c66e8de4597d7c17e808",
+  "new_process_control_cases": 0,
+  "formal_pipeline_started": false,
+  "new_mcts_calls": 0,
+  "optimizer_updates": 0,
+  "new_original_instances": 0,
+  "production_adoption": false,
+  "unseen_acceptance_games": 0,
+  "limits": "Actual missing-input rejection and byte-identical inherited owned-process utility. No new positive full-chain execution, trained candidate or win-rate evidence."
+}

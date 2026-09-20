@@ -1,0 +1,3 @@
+Own-code E123/E124 preparation snapshots under the E121 engine. These depend on the local frozen evidence layout and earlier collector modules; they are not standalone runners. No game JARs, weights or raw traces are included.
+
+The unchanged study compares 1536 versus 4608 fit families, with 1024 common heldout and 512 development families. Source, all original development winners and complete continuation audits precede fitting. Live and recorded originals need per-instance Bomb, ordered end/start/post-draw powers and twelve terminal RNG streams. Preparation creates no labels or optimizer updates.

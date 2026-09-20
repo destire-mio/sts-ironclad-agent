@@ -1,0 +1,27 @@
+{
+  "experiment": "E122",
+  "status": "source_running_original_started",
+  "observed_at": "2026-09-20T10:30:19.848055+00:00",
+  "source_files_saved": 788,
+  "registered_total": 6144,
+  "source_controller_live": true,
+  "source_status": {
+    "active_workers": 8,
+    "completed": 780,
+    "controller_pid": 54754,
+    "seconds_remaining": 9575,
+    "stage": "E122S_runtime_refresh",
+    "total": 6144
+  },
+  "source_observation_sha256": "b3e33384faab44ee2e0fe4fc23661831fd6a6477d3dbbdac198205c8e8408cdb",
+  "all_development_files_present_at_original_admission": 512,
+  "original_started_at": "2026-09-20T10:31:04.211235+00:00",
+  "original_controller_live_at_launch": true,
+  "original_launch_verification_sha256": "360c18c7416c9b51e0ebe7f46ed5cc27fb0b0639a116228d11b44e71074f16d2",
+  "observer_interval_seconds": 1200,
+  "next_observation_at": "2026-09-20T10:51:04.211235+00:00",
+  "original_outcomes_inspected": false,
+  "new_continuation_labels": 0,
+  "optimizer_updates": 0,
+  "limits": "First source observation and original launch. Saved files are not full-source admission; no partial win rate, new trained candidate or unseen acceptance."
+}
