@@ -1,0 +1,109 @@
+{
+  "experiment": "E130",
+  "created_at": "2026-09-20T18:05:37.231347+00:00",
+  "status": "blocked_before_native_evaluation",
+  "requested_evaluation": {
+    "planned_games": 50,
+    "character": "IRONCLAD",
+    "ascension": 20,
+    "goal": "Natural start, three keys, two Act 3 bosses, Act 4, Heart",
+    "prismatic_shard_purchase": false,
+    "seed_requirement": "Disjoint from historical training, development, tests and reserved families; freeze before any original game; no outcome-based replacement",
+    "decision_requirement": "Original live state and legal choices drive the frozen policy and bounded combat planner"
+  },
+  "frozen_identity": {
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "runtime_manifest_sha256": "f7a8b4ea2a05612be8d3fabfee2610d7fb81a9970e72d85f8451c45f7d16a67d",
+    "runtime_files_verified": 19,
+    "loaded_policy_module_sha256": {
+      "armG_train": "582ebb743571fb3bce500d59d84bd79a26e7eb957eba01222f8d408fd892e8f7",
+      "heart_train": "28c29c0da00cfb9c457fe462436a82d822c570c310e2b9f6c3a63fc7aebff1f7",
+      "heart_runtime": "0c424dc8e1f3912b954954088724935d2ad767f43ef0019244bce02732d874a5",
+      "heart_guided": "438bc8244048a7c5dd911ad786c02722790c83ed46f47c8abcd475daf415c791",
+      "heart_boss_relic_model": "304dafc5bca32604e26c696a6540c09b12fe3f3aad34c7884fcc84e0ccabb3e5"
+    },
+    "config_sha256": "a546c4a07323272b2c73486b25d16f639595d6a104dde10f29ca96a2d3d29e0d",
+    "policy_class": "FirstBossRelicPolicy",
+    "model_type": "first_boss_relic_ranker",
+    "parameters": 1061953,
+    "observation_size": 6843,
+    "descriptor_size": 807,
+    "simulations_per_search": 8000,
+    "boss_multiplier": 3.0
+  },
+  "runtime_checks": {
+    "frozen_policy_load": "passed",
+    "legacy_live_entry_with_requested_model": {
+      "status": "rejected",
+      "error_type": "RuntimeError",
+      "error": "Error(s) in loading state_dict for Scorer:\n\tMissing key(s) in state_dict: \"net.0.weight\", \"net.0.bias\", \"net.2.weight\", \"net.2.bias\", \"net.4.weight\", \"net.4.bias\". \n\tUnexpected key(s) in state_dict: \"model_type\", \"base_checkpoint\", \"relic_scores\", \"support\", \"optimizer_updates\", \"parent_model_sha256\", \"labels_sha256\", \"protocol_sha256\". "
+    },
+    "legacy_feature_symbols_missing_from_frozen_policy": [
+      "DT_CARD",
+      "DT_EVENT",
+      "DT_MAP",
+      "DT_REST",
+      "DT_SHOP",
+      "EOPT_CAP",
+      "GOLD_MAX",
+      "OFF_DTYPE",
+      "OFF_EOPT",
+      "OFF_EVID",
+      "OFF_SITEM",
+      "OFF_SPRICE",
+      "SITEM_IDX",
+      "card_idx",
+      "card_name"
+    ],
+    "game_context_has_from_snapshot": false,
+    "battle_context_has_from_snapshot": true,
+    "frozen_battle_resolver_signature": "resolve_battle_recorded(game: sts::GameContext, simulations: typing.SupportsInt | typing.SupportsIndex, boss_multiplier: typing.SupportsFloat | typing.SupportsIndex = 3.0) -> dict\n"
+  },
+  "source_review": [
+    {
+      "source": "steam/live_model_bridge.py",
+      "finding": "LivePolicy constructs Scorer((128,128)), starts A0, writes the old observation layout, uses heuristic boss relics and fixed grid/chest choices. Replacing MODEL alone fails at load and does not implement the requested frozen policy."
+    },
+    {
+      "source": "steam/steam_mcts.py",
+      "finding": "The live entry uses mcts_recommend on reconstructed BattleContext snapshots with determination voting. The frozen rollout invokes resolve_battle_recorded on GameContext. Matching a simulation integer alone does not establish the same bounded combat executor."
+    },
+    {
+      "source": "oracle/natural.py",
+      "finding": "Provides A20 natural original control, but chooses fixed noncombat actions and calls mcts_recommend(...,1000); it stops on a simulator mismatch. Its own contract excludes win-rate evaluation."
+    },
+    {
+      "source": "tests/verify_heart_winners.py",
+      "finding": "Converts saved simulator action prefixes into original commands. This is route replay, not original-state-driven policy inference on a fresh unselected cohort."
+    }
+  ],
+  "remaining_capabilities": [
+    "A verified original public-state and legal-candidate adapter for the complete 6843/807 policy contract, including its first-boss correction and heuristic prior.",
+    "A combat interface importing current original battle state while preserving the frozen bounded planner and its search/replan budget; do not substitute the legacy one-action voting controller.",
+    "After entry verification, reserve the historical-disjoint 50-seed cohort and run a bounded isolated native controller with complete decision, terminal and cleanup evidence."
+  ],
+  "accounting": {
+    "planned": 50,
+    "seed_drawn": 0,
+    "started": 0,
+    "completed": 0,
+    "heart_wins": 0,
+    "gameplay_deaths": 0,
+    "runtime_faults": 0,
+    "unfinished": 50,
+    "unfinished_reason": "entry capability gap before launch",
+    "win_rate": null
+  },
+  "next_training_round": "Complete E127/E128 sampling, learning and registered validation, then review the full training approach and this native capability finding before selecting any further training round.",
+  "limits": "Read-only checks of the named current entry points. This is not an original-game run, a 0% win-rate estimate, proof no adapter can be built, or authorization to resume open-ended simulator alignment. No native JVM, new game, seed draw, optimizer update or change to the running study occurred.",
+  "source_sha256": {
+    "steam/live_model_bridge.py": "85546c0cf88e850b1488af287daf97ddcc6787761d5ef6156d5366d2c07a1499",
+    "steam/steam_mcts.py": "4e79ee9228046a0607a19e1fae9dbaa9e3fe3376edb5eb2ea444e8132e19e752",
+    "oracle/natural.py": "13904a698dc0758cab30534b8f2a17cc46f81c0e4adb90ba906e1748f6c9d988",
+    "oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+    "tests/replay_trace.py": "41345f6e900fd88b6dfd633d1bdafb595c007c6948f817f8594d6c2fb17eee3f",
+    "tests/verify_heart_winners.py": "20caa3f55c370b8416db41cc088922abdd5350350c6d8f9e9da3e2f679932bb0"
+  },
+  "checker_sha256": "a01600e326b3fb4719d13ab0dd3ca627411f3c74119647cf5f6031f363afeae3"
+}
