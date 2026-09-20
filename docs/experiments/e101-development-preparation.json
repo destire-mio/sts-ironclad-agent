@@ -1,0 +1,155 @@
+{
+  "experiment": "E101D",
+  "status": "prepared_no_candidate_games",
+  "created_at": "2026-09-20T01:32:19.428986+00:00",
+  "development_registration_sha256": "36c0bd6b52f1cbe3ad35b98b8fb2140c583d3144d910cf50e90ef37a50ea1f88",
+  "protocol_sha256": "d1db6485d1e901911ccbe7f8c315f1a36017c17367fac68999eb1575d73301b5",
+  "entry_proof_sha256": "3eea02d2b2e42d015c1e1a759c69d431299cf307ba5b9e3df22ac3bf96471308",
+  "checker_sha256": "7853daa55a1ce35789cf0e61593a461067de79dce1fc2884dcceeb3ba5583fe6",
+  "protocol": {
+    "experiment": "E101D",
+    "created_at": "2026-09-20T01:28:31.628174+00:00",
+    "identity": {
+      "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "parent_protocol_sha256": "d933a1fbb1b39b7724140e19074d3ba504b73075d841e46e422b51ed730c4798",
+    "training_registration_sha256": "f7cad595a2d549112d2394b484bd43ebaa525a8078489e641db439566cac10bd",
+    "verification_registration_sha256": "36915ddff4fcf670eddfb60f1d53b270f719493fd40cca5f31ab6e44ac985f1c",
+    "purpose": "Implement E101s predeclared natural-development and original-winning-route checks. No new learning hypothesis, fit, search policy, seed draw or hyperparameter choice.",
+    "arms": [
+      "small",
+      "expanded"
+    ],
+    "assigned_development_families": 512,
+    "development_seed_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "prerequisites": "All E99 natural sources and original development gate, E100 complete joint labels, both E101 fits, and independent common-heldout native-choice verification. Only arms with common-heldout net>=20 and exact paired p<.05 can start natural games.",
+    "natural_gate": "Each admitted arm runs every same assigned512 seed from natural A20 Ironclad start. Require net>=10 Heart wins and exact paired p<.05 against the repaired-engine fixed parent; zero faults; all terminal/state/RNG/timing checks; first changed action in the two declared scopes; independent stored-weight arithmetic audit of every outside choice; identical fresh MCTS/NN replan of every winner. Retain early failures, and reject missing/invalid results without replacement or retries.",
+    "original_selection": "For each arm passing the natural screen, execute every Heart-winning development route in ascending seed order using one owned isolated original JVM. No winner subset, cached-route substitution, retries or resynchronization. Stop at the first nonmatch/fault/deadline, retain all unattempted routes, and block selection.",
+    "original_verification": "Inherited E99 original per-route implementation and all comparators, plus six persistent RNG streams and independent command/identity/keys/two distinct Act3 bosses/Act4/Heart/cleanup audit. Candidate source is its complete audited natural cohort with the candidate model, identity and frozen loader/runtime, not the parent model.",
+    "candidate_selection": "Only after every natural-passing arms complete original gate: more Heart wins, fewer lost parent wins, then small on a tie. The result is a development-screened frozen candidate; no production adoption or unseen evaluation in these commands.",
+    "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+    "resources": {
+      "workers": 8,
+      "torch_threads": 1,
+      "episode_seconds": 300,
+      "prefix_timeout": 360,
+      "natural_stage_seconds_per_arm": 10800,
+      "original_stage_seconds_per_arm": 10800,
+      "per_original_seconds": 900,
+      "original_jvm_instances": 1,
+      "observer_interval_seconds": 1200
+    },
+    "unchanged_game_inputs": "E98 engine; fixed parent192 encoder; MCTS8000 and boss multiplier3; existing E54 search and 256 replan cap; deterministic45 seconds/floor and one transform preview frame; no Prismatic Shard purchase; no new optimizers.",
+    "limits": "Preparation software checks do not establish a learned gain, original candidate parity or50percent success. Final acceptance needs a later frozen selected checkpoint and1024 genuinely unseen seed families."
+  },
+  "entry_checks": {
+    "incomplete_source_rejected": {
+      "rejected": true,
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e98-scale-source-refresh-20260920-01/natural/completion-verification.json'"
+    },
+    "incomplete_source_blocks_selection": {
+      "rejected": true,
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e98-scale-source-refresh-20260920-01/natural/completion-verification.json'"
+    },
+    "selection_order_cases": 4,
+    "original_admission_negative_cases": {
+      "model": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "engine": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "duplicate_route": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "missing_route": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "fault": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "unattempted": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "stopped": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      }
+    },
+    "zero_head_whole_route": {
+      "seed": 218154331,
+      "status": "heart_win",
+      "outside_choices": 194,
+      "scopes": {
+        "relic": 1,
+        "card": 1
+      },
+      "act_three_bosses": [
+        "TIME_EATER",
+        "AWAKENED_ONE"
+      ],
+      "act_four": [
+        "SHIELD_AND_SPEAR",
+        "THE_HEART"
+      ]
+    },
+    "altered_outside_action_rejected": {
+      "rejected": true,
+      "type": "AssertionError",
+      "reason": "(218154331, 0)"
+    },
+    "outside_scope_first_change_rejected": {
+      "rejected": true,
+      "type": "AssertionError",
+      "reason": ""
+    },
+    "terminal_hp_rejected": {
+      "rejected": true,
+      "type": "ValueError",
+      "reason": "natural replay terminal state or RNG differs"
+    },
+    "original_one_route_body_unchanged": true
+  },
+  "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+  "source_episode_sha256": "651be4b07da38d3898ea78bd98801cb0f1f83d122b83aaaf7d39eacfc6d21836",
+  "preserved_checker_error": {
+    "status": "checker_error",
+    "created_at": "2026-09-20T01:29:46.575404+00:00",
+    "error_type": "ValueError",
+    "site": "terminal_hp_rejected negative control",
+    "cause": "The terminal verifier correctly rejected the altered HP with ValueError; the checking script expected AssertionError.",
+    "correction": "Catch the verifier's documented ValueError for this one negative control and use a separate second probe directory. No formal controller, original comparator, runtime, model, game input or expectation changed.",
+    "checker_sha256": "ce9db2e9c3a5aa68e4ae38469b0157a1af744dbd7df062aea64620abdd8ad297",
+    "log_sha256": "fd344b528ad24b0aac0c5916c8817e28d6824d8242040ba0e1cabd6979064020",
+    "new_mcts_calls": 0,
+    "optimizer_updates": 0
+  },
+  "source_archive": "e101-development-sources/",
+  "source_archive_hashes": {
+    "scale_development.py": "3ef755e6b1150a9aa28ab4a4cea50542a5c96dd18653d60ce0af37f0b9aa81f4",
+    "candidate_original.py": "806372a72a0fa2f50e0819e529b8df75dc7bf40d845c711ec11b771eadee2055",
+    "check-development-entry.py": "7853daa55a1ce35789cf0e61593a461067de79dce1fc2884dcceeb3ba5583fe6"
+  },
+  "new_mcts_calls": 0,
+  "optimizer_updates": 0,
+  "new_original_executions": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "limits": "Software entry/selection/whole-route audit controls on the known E98 parent route with a zero-head fixture; no learned candidate or original cohort validation."
+}
