@@ -1,0 +1,37 @@
+{
+  "experiment": "E127",
+  "stage": "first_relic_evidence",
+  "status": "complete",
+  "verified_at": "2026-09-20T19:45:05.381520+00:00",
+  "evidence_scope": "simulator_only",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "eligible_families": 4388,
+  "eligible_by_split": {
+    "fit": 3602,
+    "label_holdout": 786
+  },
+  "early_failures_retained": 1244,
+  "assigned_fit_and_label_holdout_families": 5632,
+  "verified_terminal_replays": 17552,
+  "verified_outside_nn_choices": 2552610,
+  "verified_parent_controls": 4388,
+  "execution_faults": 0,
+  "audit_file_hashes_rechecked": 4388,
+  "branch_file_hashes_rechecked": 17552,
+  "frozen_runtime_files_rechecked": 33,
+  "label_proof_sha256": "f44293840d2ad402b3f549c755c9b5b686887fbe3cd86685e1405776bb909d5c",
+  "manifest_sha256": "027a397d3ca79d7320173a0bb6e5d8d660375c0d02211ce2595fca09c7c99b67",
+  "proof_bound_files_sha256": {
+    "collection-accounting.json": "f0b6c960d8fdf8935c63bb7be7ecb0ecdd07f85f433b9590020a9045ca43a341",
+    "collection-report.json": "c3d798eb61d1eec1f9da1c1f66d0951405d1f363c1ce01ab7969fb3c933dd8e3",
+    "labels.json": "4930e817d5e65e88ec2385d2f523e85536e02ac94530165dc6d3efe1ee0b5b16",
+    "manifest.json": "027a397d3ca79d7320173a0bb6e5d8d660375c0d02211ce2595fca09c7c99b67",
+    "roots.json.gz": "02462422735fbf1e8e8a7a25e472212b57847d2ffb47b8b991e90f53ebd3f508"
+  },
+  "checker_sha256": "f3f7b1ca34b22ef13775bdec477fb97e53ed56047fbb514700717fd10a5f4c15",
+  "next_stage": "Prepare and collect the registered conditional card branches, then independently audit them before E128 fitting.",
+  "limits": "This recheck verifies hashes, identities, complete candidate/audit accounting and counts from already executed independent simulator audits. It performs no new game replay, fitting, original-game execution or policy outcome comparison. The joint label stage and E128 validation remain required; these collection counts are not a learned gain or unseen acceptance."
+}
