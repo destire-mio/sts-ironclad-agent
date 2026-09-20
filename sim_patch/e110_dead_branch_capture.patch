@@ -1,0 +1,13 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -2831,7 +2831,9 @@
+ 
+     if (player.hasRelic<R::DEAD_BRANCH>()){
+         CardId id = getTrulyRandomCardInCombat(cardRandomRng, player.cc);
+-        addToBot(Actions::MakeTempCardInHand(id));
++        // Native Dead Branch makes the card before queued after-use HP loss.
++        const CardInstance generated = createGeneratedCard(id);
++        addToBot(Actions::MakeTempCardInHand(generated));
+     }
+ 
+     if (player.hasStatus<PS::DARK_EMBRACE>()) {

@@ -1,0 +1,58 @@
+{
+  "experiment": "E110",
+  "status": "scoped_fix_verified_integration_finding",
+  "at": "2026-09-20T06:09:51.460643+00:00",
+  "engine_sha256": "ae76e621f676a7e75fb930ccdb7998cc2eb4f83a1358a857774567196fa3b734",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "focused_before_failures": 4,
+  "focused_before_controls": 5,
+  "focused_after_passed": 9,
+  "full_ctest_passed": 240,
+  "portable_focused_passed": 9,
+  "original_control_before_mismatches": 2,
+  "original_control_sequences": 9,
+  "original_control_after_matches": 9,
+  "natural_actions_to_registered_boundary": 905,
+  "natural_prefix_state_imports": 0,
+  "fresh_planner_outcome": "heart_win",
+  "fresh_planner_hp": 62,
+  "fresh_planner_repeat_matched": true,
+  "fresh_outside_NN_choices_audited": 203,
+  "preserved_fixture_menu_errors": 3,
+  "fixture_error_correction": "Retain the three initial Intimidate executions; correct menu index 1 to 10 for the intended bulk cards, then add three registered bulk-then-single exhaust sequences. All nine executed cases retained.",
+  "original_result": {
+    "status": "rules_mismatch",
+    "error": "rules mismatch ['relic_counter:Sundial']",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/verify_heart_winners.py\", line 523, in one\n    result = runner.run()\n             ^^^^^^^^^^^^\n  File \"/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/verify_heart_winners.py\", line 510, in run\n    self.check()\n  File \"/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/verify_heart_winners.py\", line 245, in check\n    self.record_comparison(diff)\n  File \"/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/verify_heart_winners.py\", line 255, in record_comparison\n    raise ValueError('rules mismatch ' + str(list(diff)))\nValueError: rules mismatch ['relic_counter:Sundial']\n",
+    "first_mismatch": {
+      "prefix_index": 230,
+      "command_index": 1064,
+      "combat_action_index": 64,
+      "floor": 57,
+      "screen": "GAME_OVER",
+      "differences": {
+        "relic_counter:Sundial": {
+          "original": 1,
+          "simulator": 2
+        }
+      }
+    },
+    "prefix_index": 230,
+    "floor": 57,
+    "seed": 1138994370,
+    "attempt": 1,
+    "source_episode_sha256": "7edef139e4ba039dba16e1d74c3d2ff50e6dab557fbf12ec6138ab11886a3e9f",
+    "identity_sha256": "6460c89dbaf2287964172281b4e37663dfdff88f60334021d909078f02d13974",
+    "resynchronized": false,
+    "controlled_fixture": false,
+    "seconds": 44.34162129199831,
+    "commands": 1065
+  },
+  "rule": "Dead Branch must capture the generated Blood for Blood cost before queued after-use HP loss.",
+  "followup": "Full original integration exposes a Sundial counter difference after the lethal Feed. Investigate post-victory exhaust callbacks before permitting source generation.",
+  "source_refresh_permitted": false,
+  "old_engine_training_labels_permitted": false,
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "limits": "Scoped creation-time fix passes its controlled and natural-boundary checks; whole-route parity has not passed. E107 remains stopped and E108/E109 remain closed."
+}

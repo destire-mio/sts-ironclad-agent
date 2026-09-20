@@ -1,0 +1,51 @@
+{
+  "experiment": "E111",
+  "status": "complete",
+  "finished_at": "2026-09-20T06:32:56.168620+00:00",
+  "engine_sha256": "ec7c0a665bcf988fce9ef4767e9e385c66365940a256eb2a3c18eb251f3b1467",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "baseline_engine_sha256": "ae76e621f676a7e75fb930ccdb7998cc2eb4f83a1358a857774567196fa3b734",
+  "changed_source_files": [
+    "src/combat/BattleContext.cpp",
+    "src/game/GameContext.cpp"
+  ],
+  "focused_before_failures": 6,
+  "focused_before_controls": 4,
+  "focused_after_passed": 10,
+  "full_ctest_passed": 250,
+  "portable_focused_passed_including_E110": 19,
+  "portable_source_files_matched": 90,
+  "original_control_sequences": 5,
+  "original_control_before_mismatches": 3,
+  "original_control_after_matches": 5,
+  "E110_original_controls_rechecked": 9,
+  "E110_boundary_natural_actions": 905,
+  "natural_terminal_boundary_actions": 965,
+  "natural_prefix_state_imports": 0,
+  "fresh_planner_outcome": "heart_win",
+  "fresh_planner_repeat_matched": true,
+  "fresh_outside_NN_choices_audited": 203,
+  "original_route": {
+    "seed": 1138994370,
+    "status": "matched",
+    "commands": 1065,
+    "hp": 62,
+    "bosses": [
+      "AWAKENED_ONE",
+      "TIME_EATER"
+    ],
+    "recorded_proof_sha256": "821d9e9a77b4064d817d6c2a6216b95872d49a80aa9351622e9da776a65db00d"
+  },
+  "terminal_rng_streams_checked": 12,
+  "terminal_rng_verification_sha256": "b78b9bbd09c482ccb87f45b6866a3057543154cc6d93f4224e365b1fa2862fef",
+  "original_auditor_sha256": "5f7d09dbc765b5eff647bf9d32469616f0aeb29d5336e4805a197f82cbe10e0c",
+  "patch_sha256": "072d76d53019346e6209cd8a501f996ecc0ebd65bb31e7199399640cb4984000",
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "source_refresh_permitted": true,
+  "old_engine_training_labels_permitted": false,
+  "rule": "Dead Branch and Dark Embrace stop when monsters are basically dead; unconditional exhaust effects and Awakened One rebirth remain. Heart victory resets five room RNG streams on entering VictoryRoom.",
+  "boundary_note": "Preserve the raw pre-reward versus post-reward misc delta; native unused boss gold consumes one value. Compare final room RNG after both sides enter VictoryRoom. The frozen original replay comparator is unchanged.",
+  "build_note": "Initial portable configure lacked the pinned Python/pybind11 paths; a cached Python 3.14 retry failed. Preserve both logs; a clean pinned Python 3.12 build passes.",
+  "limits": "Scoped repairs plus one preselected natural route, repeated planning and full original/persistent RNG/terminal verification. Native mapRng is not exported as a simulator state; map contents are checked. No exhaustive parity, population win-rate or learned gain. E107 remains stopped; affected source/label collections need a new registration."
+}

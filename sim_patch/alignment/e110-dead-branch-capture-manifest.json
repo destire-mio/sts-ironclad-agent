@@ -1,0 +1,14 @@
+{
+  "experiment": "E110",
+  "baseline_engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+  "patch_sha256": "7e4b70bbaf65c2ffa8a102dee8b3a0ff564f85028b04b9718adde8bdff5a481e",
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "362c77a91a46b0191ab18657ff5d8b3cd568687a535a7b5e5f9ba95020772e27",
+      "after": "ed97f024f565aec24651086da6af442fe79c92c0972d0abdf877b3eaab51ef49"
+    }
+  ],
+  "apply_after": "E106 Unceasing Top and all preceding simulator patches",
+  "scope": "Capture the Dead Branch generated CardInstance at exhaust time; preserve insertion order, RNG and ordinary HP-loss effects on existing cards."
+}

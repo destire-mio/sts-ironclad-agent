@@ -1,0 +1,19 @@
+{
+  "experiment": "E111",
+  "baseline_engine_sha256": "ae76e621f676a7e75fb930ccdb7998cc2eb4f83a1358a857774567196fa3b734",
+  "patch_sha256": "072d76d53019346e6209cd8a501f996ecc0ebd65bb31e7199399640cb4984000",
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "ed97f024f565aec24651086da6af442fe79c92c0972d0abdf877b3eaab51ef49",
+      "after": "8d36394faf14a5d57a0a0434aee8d135524c9f1603b1a03c6d598d04b0777beb"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "4df6846204af1445f7430c01eb2c151ea85f4880434e1c87dce6662c85e8444d",
+      "after": "401a856ddeb04ede7fac8c689f6a4791151d71f0c36903ff8c7d14abc5a37c1d"
+    }
+  ],
+  "apply_after": "E110 Dead Branch capture and all preceding patches",
+  "scope": "Match native conditional post-victory exhaust callbacks and reset five room RNG streams when Heart victory enters VictoryRoom. Preserve unconditional effects, rebirth and seven persistent run RNG streams."
+}

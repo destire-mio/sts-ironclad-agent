@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E99 source sampling and E100/E101 collector/training preparation on 2026-09-20. Sources, labels, model fitting and acceptance are distinct gates. No E100 labels or E101 optimizer updates have run. Raw models, game JARs and run traces stay local. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger. Sources, labels, model fitting and acceptance have separate gates. Raw models, game JARs and run traces stay local. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2505,3 +2505,38 @@ E107 采样启动后，E108 绑定新来源与 E107P 原版门槛。15 个采集
 上述控制没有参数更新、新 MCTS、候选自然局或原版 JVM。通过留出门槛的组才进入全 512 自然开发，须净增至少 10 胜且 p<0.05，并通过所有胜局重规划与原版整局／持久 RNG 核验。候选选择等待所有合格组完成，最终 1,024 个未见种子验收保持独立。
 
 训练登记 SHA `5143908b0f6744960254639d4b2bfc455588ad7d055dfe1121357270c1b20179`，现场核验登记 SHA `4e44f4d648f26e597adeeb7e3d1e062c33b744c3633cc8469e018ded09472db1`，开发登记 SHA `a7673b1af6734e076451b4d5701cd3011b35511a7f4b0ac2edf423dd8f739a07`，发布复核 SHA `7c9ef9f203e623fb51f701b170ee75e827e36753123899676b0cd604471e5285`。公开报告 `docs/experiments/e109-training-preparation.json`。发布检查首轮把 12 项文本替换误写成 13 项，失败脚本与纠正记录保留；只修正发布计数断言，模型／门槛／采样代码未改。
+
+
+## 122. E107 原版门槛停止：枯木树枝生成以血还血的费用时点（2026-09-20）
+
+512 个开发来源完成独立审计：51 个心脏胜局、459 个死亡、2 个第三幕终局，67,895 次局外 NN 选择通过，开发执行故障为 0。51 条原版胜局中，26 条通过 26,258 个命令；第 27 条种子 1138994370 出现差异，24 条未尝试。此结果属于 E106 引擎与既有父策略，不是新模型成绩。
+
+第 56 层心脏，前缀 230、战斗动作 4：疯狂用后消耗，枯木树枝生成以血还血。原版在已有三次受伤时创建该牌，费用为 1，然后处理排队的心脏律动伤害；模拟器在插入手牌时才创建，用四次受伤计算为 0 费。原版 DeadBranch.onExhaust 在入队时 makeCopy；以血还血的 makeCopy 读取当时受伤次数。现有手牌仍需随这次伤害降费，不能通过少记受伤次数修复。失败整局没有完成追加持久 RNG 审计。
+
+原版门槛于 05:28 UTC 停止，按 20 分钟间隔在 05:34 UTC 检查到终止；05:35 UTC 核对身份后停止所属来源进程组 57157，全部所属来源和原版进程清理完成。保留 3,841 个完整文件：3,329 拟合、512 开发、0 标签留出。其余 2,303 个缺失文件不计死亡。E107 不重启，E108／E109 入口关闭，没有新反事实标签、参数更新或候选自然验收。
+
+停机证明 SHA `74e1017116c5166451788b0e2176970826a196afe4b8a5d564e6db2d345176cf`，发布复核 SHA `c425aeeae7f61c815904be24e2c7cc7d14db1892514b3bfa306924579baf8932`。公开报告 `docs/experiments/e107-source-stop-result.json`。E110 以该预选失败种子验证生成费用捕获的修复；数据规模假设没有因这次规则故障得到检验。
+
+
+## 123. E110：枯木生成费用修复与整局续查（2026-09-20）
+
+将枯木的 CardInstance 创建移到消耗回调当下，入手动作顺序和随机选牌次数不变。九组 C++ 检查由四失败、五对照通过变为九组通过；240 项回归、九项可分发补丁测试通过。九组原版序列由两项费用不一致变为全部匹配；905 动作的自然前缀复现中，疯狂后的以血还血费用、战斗状态和六路 RNG 匹配。
+
+首次三个原版夹具误用菜单位置 1，实际打出威吓；原始执行保留作对照，按实测手牌改为位置 10 后执行原计划的批量消耗。批量消耗本身在旧引擎中也匹配，因此另登记三个“批量消耗后打连击”的连续动作，复现创建与心脏扣血之间的费用差异。九个实际执行用例没有删减。
+
+预选种子 1138994370 在 E110 自然重规划后以 62 HP 心脏通关，重复规划一致，203 次局外 NN 选择通过。但整条新原版运行在第 1,065 个命令结束时出现日晷计数 1 对 2 的差异：最后一刀吞噬击杀心脏后，模拟器仍触发枯木和黑暗之拥，原版对应回调带有敌人全部死亡保护。原版进程清理完成，E110 不宣告整局一致，来源刷新许可为 false。
+
+局部证明 SHA `8e4d299f9f3d348c48ecc869c518a013111b7c6c62938076818e9788515d9f9e`，引擎 SHA `ae76e621f676a7e75fb930ccdb7998cc2eb4f83a1358a857774567196fa3b734`，补丁 SHA `7e4b70bbaf65c2ffa8a102dee8b3a0ff564f85028b04b9718adde8bdff5a481e`。公开报告 `sim_patch/alignment/e110-dead-branch-capture-report.json`。E111 沿用同一失败种子处理胜利后的消耗和终局 RNG；没有重启 E107 或生成标签、更新参数。
+
+
+## 124. E111：胜利后的消耗触发与终局房间 RNG（2026-09-20，完成）
+
+E110 的日晷差异来自最后一刀吞噬：敌人全部死亡后，原版枯木和黑暗之拥停止回调，模拟器仍生成牌、摸牌和洗牌。修复在这两个原版带条件的回调上检查敌人是否全部死亡，保留卡牌进入消耗堆、无惧疼痛、哨卫及觉醒者半死阶段的效果。日晷计数能带入后续战斗，属于影响训练的差异。
+
+原版进入胜利房间还会按种子加新楼层重置 monsterHp、ai、shuffle、cardRandom、misc 五路 RNG；模拟器只增加楼层。补充这五路重置，保留七路持久 RNG、HP、金币和楼层规则，覆盖普通终局与传送门缩短后的终局。首版诊断将原版已结算 Boss 奖励的 COMPLETE 状态与未进入房间奖励的 BattleContext 比较，出现 misc 一步差异；保留该记录，并核对它等于原版一次未领取 Boss 金币抽取。终局比较在双方进入胜利房间后进行，既有原版整局比较器没有改动。
+
+十组 C++ 检查由六失败、四通过变为全部通过；250 项回归通过。补丁应用后 90 个源文件与候选一致，含 E110 的 19 项可分发测试通过。五组新原版序列中，三个击杀用例由不一致变为匹配；敌人存活、觉醒者半死两个对照保持匹配。E110 九组原版序列及 905 动作的费用边界复查通过。初次可分发配置漏传 Python／pybind11 路径，随后旧 Python 缓存造成第二次配置失败；日志保留，干净目录和固定 Python 3.12 构建通过。
+
+预选种子 1138994370 的 965 动作自然前缀在共同终局匹配状态与 12 路可导出 RNG。固定父网络／MCTS 重规划、重复规划均以 62 HP 心脏通关；203 次局外选择、新原版 1,065 个命令、追加持久 RNG 与新终局 12 路 RNG 核验通过，覆盖三钥匙、觉醒者／时间吞噬者、盾矛和心脏，所属 JVM 清理完成。原版 mapRng 没有模拟器状态导出，地图内容由原版整局比较器检查。
+
+引擎 SHA `ec7c0a665bcf988fce9ef4767e9e385c66365940a256eb2a3c18eb251f3b1467`，完成 SHA `0bdb7ae63632d79646a303240a51da18f111fd135cc2b61b4eadd61fb033bf02`，发布复核 SHA `c6c918ebbced509643942288aa0002cf9fe0c0358d08d618861411778ed0f890`，原版追加重放 SHA `821d9e9a77b4064d817d6c2a6216b95872d49a80aa9351622e9da776a65db00d`。公开补丁 `sim_patch/e111_post_victory_exhaust.patch`，报告 `sim_patch/alignment/e111-post-victory-exhaust-report.json`。允许按新登记刷新来源；E107 不重启，E108／E109 不复用旧来源。新训练标签、参数更新和未见种子验收均未执行，此结果不证明总体一致性或胜率提升。

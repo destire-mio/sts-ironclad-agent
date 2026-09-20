@@ -214,3 +214,12 @@ Apply `e106_unceasing_top.patch` after `e102_spot_weakness.patch`, then rebuild 
 Ten focused C++ groups pass (six failed before repair); full CTest231 and portable10 pass. Nine original sequence controls and three recorded natural boundaries match. Two rejected Abacus fixture IDs remain documented; the actual native constant is TheAbacus. The preselected repaired natural route and its repeated plan pass196 outside-choice checks and1,069 original commands, with three keys, two Act3 bosses, Act4/Heart at49HP and persistent-RNG checks. This is scoped repair evidence, not an exhaustive-parity or win-rate claim.
 
 [Patch manifest](alignment/e106-unceasing-top-manifest.json), [result](alignment/e106-unceasing-top-report.json), [regressions](alignment/tests/e106_unceasing_top.cpp).
+
+
+### E110 and E111: generated-card capture and victory state
+
+Apply `e110_dead_branch_capture.patch` after E106, then `e111_post_victory_exhaust.patch`; rebuild core, search and Python bindings together. E110 captures a Dead Branch card before queued after-use HP loss. E111 applies the native dead-monster guards to Dead Branch and Dark Embrace and resets five room RNG streams when Heart victory enters VictoryRoom.
+
+E110's full original integration found the subsequent Sundial mismatch, so its scoped result does not admit source collection. E111 resolves it: 250 CTest cases, 19 portable cases, five new original controls and nine E110 controls pass. The preselected failure seed repeats a natural Heart win; 203 outside choices, 1,065 original commands and twelve terminal RNG streams match. This is repair evidence, not a population win-rate claim. Initial fixture-index and build-configuration mistakes are preserved in the reports.
+
+[E110 manifest](alignment/e110-dead-branch-capture-manifest.json), [E110 scoped result](alignment/e110-dead-branch-capture-report.json), [E111 manifest](alignment/e111-post-victory-exhaust-manifest.json), [E111 completed result](alignment/e111-post-victory-exhaust-report.json).

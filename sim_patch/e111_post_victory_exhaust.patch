@@ -1,0 +1,34 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -2829,14 +2829,14 @@
+         addToTop(Actions::DamageAllEnemy(3));
+     }
+ 
+-    if (player.hasRelic<R::DEAD_BRANCH>()){
++    if (!monsters.areMonstersBasicallyDead() && player.hasRelic<R::DEAD_BRANCH>()) {
+         CardId id = getTrulyRandomCardInCombat(cardRandomRng, player.cc);
+         // Native Dead Branch makes the card before queued after-use HP loss.
+         const CardInstance generated = createGeneratedCard(id);
+         addToBot(Actions::MakeTempCardInHand(generated));
+     }
+ 
+-    if (player.hasStatus<PS::DARK_EMBRACE>()) {
++    if (!monsters.areMonstersBasicallyDead() && player.hasStatus<PS::DARK_EMBRACE>()) {
+         addToBot(Actions::DrawCards(player.getStatus<PS::DARK_EMBRACE>()));
+     }
+ 
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1238,6 +1238,12 @@
+ 
+             } else if (act == 4) {
+                 ++floorNum; // Original proceeds from the Heart to VictoryRoom.
++                const Random roomRng(seed + floorNum);
++                monsterHpRng = roomRng;
++                aiRng = roomRng;
++                shuffleRng = roomRng;
++                cardRandomRng = roomRng;
++                miscRng = roomRng;
+                 outcome = GameOutcome::PLAYER_VICTORY;
+ 
+             }

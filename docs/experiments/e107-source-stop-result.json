@@ -1,0 +1,182 @@
+{
+  "experiment": "E107",
+  "status": "stopped_on_original_finding",
+  "created_at": "2026-09-20T05:50:22.398956+00:00",
+  "source_registration_sha256": "1262e2cd511cc09a41543e8f798ecf65b0bacdf90f59815bd8845714123fdcd4",
+  "source_manifest_sha256": "05fabcae283361989ba164a865ad1b9278155db5d338d5a3ff3ccbf8363130b7",
+  "stop_verification_sha256": "74e1017116c5166451788b0e2176970826a196afe4b8a5d564e6db2d345176cf",
+  "source_saved_files": 3841,
+  "files_by_role": {
+    "fit": 3329,
+    "label_holdout": 0,
+    "train_development": 512
+  },
+  "missing_source_files": 2303,
+  "missing_files_are_deaths": false,
+  "development_audit": {
+    "status": "complete",
+    "families": 512,
+    "terminal_replays": 512,
+    "outcomes": {
+      "death": 459,
+      "heart_win": 51,
+      "act3_without_heart": 2
+    },
+    "execution_faults": 0,
+    "outside_NN_choices_audited": 67895,
+    "identity": {
+      "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_index_sha256": "c444913cd75037b768b1036ae1d71a5ac5eca0d593adb9477ddb6f635631f26e",
+    "source_cases_sha256": "11d53fce92e8b6fdf1b4fd30bd97e617bc9321ba720b036629e1da956aad3915",
+    "limits": "Development subset only; full natural source and winner-replan completion are separate admission gates."
+  },
+  "original_gate": {
+    "status": "stopped_with_unresolved_findings",
+    "requested_winning_routes": 51,
+    "attempted": 27,
+    "matched_routes": 26,
+    "matched_commands": 26258,
+    "unattempted_seeds": [
+      1143952644,
+      1162172025,
+      1172803786,
+      1184205587,
+      1199955940,
+      1265220920,
+      1316135409,
+      1334567629,
+      1342229608,
+      1342574947,
+      1555071777,
+      1577148875,
+      1672898994,
+      1676457485,
+      1678131635,
+      1695501490,
+      1707049679,
+      1803560408,
+      1809097593,
+      1813594522,
+      1826367146,
+      1902830755,
+      1933152777,
+      1992848422
+    ]
+  },
+  "first_mismatch": {
+    "seed": 1138994370,
+    "source_episode_sha256": "a0d471fe3de41080f94a5f4fd60696c781957ef4c26fcf65d3bb794a2948c777",
+    "first_mismatch": {
+      "prefix_index": 230,
+      "command_index": 1000,
+      "combat_action_index": 4,
+      "floor": 56,
+      "screen": "NONE",
+      "differences": {
+        "hand": {
+          "original": [
+            [
+              187,
+              1,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              107,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              184,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              39,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              345,
+              1,
+              1,
+              1,
+              false,
+              0
+            ]
+          ],
+          "simulator": [
+            [
+              187,
+              1,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              107,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              184,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              39,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              345,
+              1,
+              1,
+              1,
+              false,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    "resynchronized": false,
+    "commands": 1001
+  },
+  "original_completion_sha256": "3b22d0060359515d0d89b0e700b3017f471d2e22aa203a39ab5150b652f2039e",
+  "rule_evidence": "At floor56 Heart, Madness exhausts with Dead Branch after three prior HP-loss events. Original captures generated Blood for Blood at cost1 before the queued Heart hit; simulator constructs it after that hit using count4, yielding cost0. RNG and insertion order are not the repair target; freeze the generated card at the exhaust callback.",
+  "rng_limit": "The first failed boundary reports the generated card cost difference. The failed full route has not passed the additional six-stream persistent RNG audit; a local match elsewhere is not full-route RNG parity.",
+  "owned_source_group_remaining": [],
+  "failed_original_cleanup": {
+    "remaining": []
+  },
+  "new_counterfactual_labels": 0,
+  "optimizer_updates": 0,
+  "candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "next": "Repair and validate Dead Branch card capture on the preselected failing seed. A new source/label registration is required; E107 is not restarted and E108/E109 remain closed.",
+  "limits": "Incomplete source admission; data-scale and candidate hypotheses remain untested. The 51/512 development result belongs to the fixed parent under E106, not a new model or unseen acceptance."
+}
