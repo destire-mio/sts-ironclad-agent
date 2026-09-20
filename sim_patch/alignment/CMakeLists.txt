@@ -180,3 +180,11 @@ foreach(case IN ITEMS anger_cost upgraded_cost free_copy overflow_control ordina
     add_test(NAME e86_${case} COMMAND e86_discard_copy_tests ${case})
     set_tests_properties(e86_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e98_guardian_queue_tests tests/e98_guardian_queue.cpp)
+target_link_libraries(e98_guardian_queue_tests PRIVATE sts_core)
+foreach(case IN ITEMS true_grit_chain true_grit_plus_chain exact_zero delayed_damage pending_copy lethal_pending
+        single_hit_control no_juggernaut_control below_threshold_control other_enemy_control)
+    add_test(NAME e98_${case} COMMAND e98_guardian_queue_tests ${case})
+    set_tests_properties(e98_${case} PROPERTIES TIMEOUT 15)
+endforeach()

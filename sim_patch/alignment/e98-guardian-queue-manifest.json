@@ -1,0 +1,13 @@
+{
+  "experiment": "E98",
+  "patch_sha256": "8abb67b6230fb3b24813ba3764cba9ac15a63813f6ff4e2b837081a6cf2815ab",
+  "applies_after": "e86_discard_copy.patch",
+  "files": [
+    {
+      "path": "src/combat/Monster.cpp",
+      "before": "68b9ab138f97b3dd7751c5c8d0cd51666d0a7f4850cf4b8fe270ea3fb942cc84",
+      "after": "eae5ec95b653862cdf9221a0241e47fd13a5028d7680cf7bcd4f7e163741688a"
+    }
+  ],
+  "scope": "Queue Guardian defensive state change, then enqueue Mode Shift removal and defensive block. Preserve zero/negative pending amount and prevent duplicate transition. Capture monster index by value for copied MCTS states. No search or policy change."
+}

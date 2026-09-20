@@ -187,3 +187,12 @@ E81 (`e81_sever_soul.patch`, after `e78_preview.patch`) fixes Sever Soul exhaust
 
 
 E85 (`e85_dropkick.patch`, after `e81_sever_soul.patch`) captures Dropkick damage at use so Akabeko Vigor is included before removal. The queued Vulnerable draw/energy condition remains unchanged. Five target failures and two controls become seven passes; full CTest198 and portable focused7 pass. All90 portable source inputs match after applying the separately required frozen search patches. The natural divergence and a fresh planned original Heart route(1,371 commands,37HP) match. A separate historical route exposes a deeper temporary discard-cost difference; training remains paused. See [E85 report](alignment/e85-dropkick-report.json). Never treat the targeted passing route as an unseen population win rate.
+
+
+## Guardian defensive transition (E98)
+
+Apply `e98_guardian_queue.patch` after `e86_discard_copy.patch`, then rebuild the core, search and bindings together. The repair queues the defensive state change before that action appends Mode Shift removal and 20 block. This allows queued follow-up damage to resolve before block and preserves pending-transition state in copied MCTS branches. No policy or search-budget change is included.
+
+The old engine fails six of ten targeted C++ groups; all ten pass after repair, together with 214 local CTest cases. Seven controlled original card sequences and two selection boundaries match. The fixed natural E97 divergence seed also matches an original A20 Heart route of 1,115 commands at 49HP, with keys, both Act 3 bosses, Act 4 and added persistent-RNG checks. This is targeted repair evidence; affected historical training labels require regeneration, and exhaustive parity remains incomplete.
+
+[Patch manifest](alignment/e98-guardian-queue-manifest.json), [result](alignment/e98-guardian-queue-report.json), [regressions](alignment/tests/e98_guardian_queue.cpp).

@@ -1,0 +1,31 @@
+--- a/src/combat/Monster.cpp
++++ b/src/combat/Monster.cpp
+@@ -545,14 +545,22 @@
+             break;
+ 
+         case MonsterId::THE_GUARDIAN:
+-            if (hasStatus<MS::MODE_SHIFT>()) {
++            if (getStatus<MS::MODE_SHIFT>() > 0) {
+                 const int newModeShiftAmount = getStatus<MS::MODE_SHIFT>() - amount;
++                // A zero/negative amount with the power still present denotes
++                // the original closeUpTriggered state until the queued change.
++                setStatus<MS::MODE_SHIFT>(newModeShiftAmount);
+                 if (newModeShiftAmount <= 0) {
+-                    removeStatus<MS::MODE_SHIFT>();
+-                    setMove(MMID::THE_GUARDIAN_DEFENSIVE_MODE);
+-                    bc.addToBot( Actions::MonsterGainBlock(idx, 20) );
+-                } else {
+-                    setStatus<MS::MODE_SHIFT>(newModeShiftAmount);
++                    const int monsterIdx = idx;
++                    bc.addToBot({[monsterIdx](BattleContext &state) {
++                        // ChangeStateAction appends removal and block when it
++                        // executes. Follow-up damage can precede those actions.
++                        state.monsters.arr[monsterIdx].setMove(MMID::THE_GUARDIAN_DEFENSIVE_MODE);
++                        state.addToBot({[monsterIdx](BattleContext &next) {
++                            next.monsters.arr[monsterIdx].removeStatus<MS::MODE_SHIFT>();
++                        }});
++                        state.addToBot(Actions::MonsterGainBlock(monsterIdx, 20));
++                    }});
+                 }
+             }
+             break;
