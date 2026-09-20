@@ -1,0 +1,1 @@
+These own-code snapshots preserve local E117 registration and execution gates. They require the documented evidence layout, locally owned game installation, raw records and frozen runtime. They are not standalone public runners. No game JAR, checkpoint or raw trace is included.

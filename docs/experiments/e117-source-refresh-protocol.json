@@ -1,0 +1,95 @@
+{
+  "experiment": "E117",
+  "status": "source_launched_entry_verified",
+  "published_at": "2026-09-20T08:23:39.828818+00:00",
+  "protocol": {
+    "experiment": "E117",
+    "created_at": "2026-09-20T08:15:45.783229+00:00",
+    "question": "Regenerate the unchanged 6144 families under E116 before joint relic/card data-scale training. E115 Bomb multiplicity is repaired; the data-scale hypothesis remains untested.",
+    "source_runtime": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e116-bomb-instance-repair-20260920-01/candidate",
+    "source_manifest_sha256": "8c4713c548c51787770b575f6942f792d93da7ed9004329d5edb72888993e007",
+    "repair_completion": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e116-bomb-instance-repair-20260920-01/completion-verification.json",
+    "repair_completion_sha256": "687b20003ef9f88c06ef418966aab53d46088575a37984101c2244f0636b7e66",
+    "repair_publication_sha256": "538eba41d01ca55fa1f7a652db7760b4969792f4e8b4da29b7429956f5a9c219",
+    "old_assignment": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e86-repaired-refresh-20260919-01/seeds.json",
+    "old_assignment_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+    "new_assignment": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-independent-family-scale-20260920-01/natural/seeds.json",
+    "new_assignment_sha256": "f97049ba11b371241ead1fdb8d31371dad2bbde371e8ee2466d0e24cdc8ae10c",
+    "inherited_scale_protocol": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-independent-family-scale-20260920-01/protocol.json",
+    "inherited_scale_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+    "counts": {
+      "fit": 4608,
+      "label_holdout": 1024,
+      "train_development": 512
+    },
+    "groups": {
+      "small_fit": 1536,
+      "additional_fit": 3072,
+      "old_label_holdout": 512,
+      "additional_label_holdout": 512,
+      "development": 512
+    },
+    "assignment": "Preserve every E87 fit/label_holdout family and every E97 assignment and role. The E87 development panel is not needed for this study. Never substitute faults, early deaths or missing nodes. Draw no new acceptance seeds.",
+    "resources": {
+      "workers": 8,
+      "torch_threads": 1,
+      "episode_seconds": 300,
+      "process_seconds": 360,
+      "total_source_seconds": 10800,
+      "wrapper_seconds": 11100,
+      "long_job_observation_seconds": 1200
+    },
+    "scope": {
+      "character": "IRONCLAD",
+      "ascension": 20,
+      "target": "HEART",
+      "keys": 3,
+      "act3_distinct_bosses": 2,
+      "prismatic_shard_purchase": false,
+      "simulations_per_call": 8000,
+      "boss_multiplier": 3,
+      "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "gates": [
+      "All 6144 sources complete, independently replayed terminal/state/RNG/timer and every outside NN choice. All wins replanned with identical action prefix and terminal.",
+      "All 512 assigned development families independently audited, then all winning full routes compared in original Java plus persistent RNG, route/keys and cleanup checks. Stop on a finding. Check all twelve exported RNG streams at the final common VictoryRoom boundary; native mapRng has no exported simulator counterpart. Compare every Bomb instance in both live and recorded native replays; aggregate power totals do not satisfy this gate.",
+      "Only after both source gates, execute the separately registered first-relic and relic/card continuation collection under E116. Never relabel or mix old-engine continuations. Preparation may precede admission; label execution may not.",
+      "Only after new-label audits may the inherited two-arm data-scale experiment run. No optimizer or candidate evaluation is part of this source refresh."
+    ],
+    "limits": "Known-family source renewal after E116, not a learned gain or unseen acceptance. E112/E113/E114 stay closed. Source outcomes and all downstream labels must use E116.",
+    "previous_source_stop_sha256": "4bdacea91e953a786a7d569ab62f75b101454b2132ceaa661c200519099f06c7"
+  },
+  "launch_record": {
+    "started_at": "2026-09-20T08:21:54.047651+00:00",
+    "wrapper_pid": 95203,
+    "pid": 95217,
+    "process_group": 95217,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-source-refresh-20260920-01/natural/run_refresh.py",
+      "run",
+      "--root",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-source-refresh-20260920-01/natural"
+    ],
+    "registration_sha256": "baf5c38e76507cc441c7602a71c6524c62bb734f3114b98adb1aac249f22636d",
+    "wrapper_seconds": 11100
+  },
+  "source_registration_sha256": "b683394a27e37a77d37805355fb3af9b5d46800404c573c74afed82fda77b8fb",
+  "source_manifest_sha256": "c309c3cfbdca3342b570945aa781fab13d9dfe102f9792289d587d624ef9b89f",
+  "original_registration_sha256": "e63bf3e269596268b5ddb2daff337c06d07bdb34d4e21bc7a5c973a3a8e8193a",
+  "execution_registration_sha256": "baf5c38e76507cc441c7602a71c6524c62bb734f3114b98adb1aac249f22636d",
+  "entry": {
+    "runtime_modules": 10,
+    "incomplete_source_rejected": true,
+    "incomplete_original_wrapper_rejected": true,
+    "original_bomb_states": 15,
+    "same_total_wrong_instances_rejected": true,
+    "wrong_countdown_rejected": true,
+    "terminal_rng_negative_controls": 15,
+    "known_terminal_actions_replayed": 965
+  },
+  "optimizer_updates": 0,
+  "new_random_seed_draws": 0,
+  "limits": "Registration, entry checks and initial launch record only. Live source outcomes are not inspected by this publisher. All6144 sources and all512 development-original gates remain outstanding before labels and fits. No unseen acceptance or learned improvement."
+}
