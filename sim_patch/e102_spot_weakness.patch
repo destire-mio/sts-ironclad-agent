@@ -1,0 +1,10 @@
+--- a/include/constants/MonsterMoves.h
++++ b/include/constants/MonsterMoves.h
+@@ -525,6 +525,7 @@
+             case MMID::TIME_EATER_HEAD_SLAM:
+             case MMID::TRANSIENT_ATTACK:
+             case MMID::WRITHING_MASS_FLAIL:
++            case MMID::WRITHING_MASS_WITHER:
+             case MMID::WRITHING_MASS_MULTI_STRIKE:
+             case MMID::WRITHING_MASS_STRONG_STRIKE:
+                 return true;

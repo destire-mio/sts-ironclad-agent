@@ -1,0 +1,146 @@
+{
+  "experiment": "E99",
+  "status": "stopped_on_original_finding",
+  "created_at": "2026-09-20T01:45:56.765247+00:00",
+  "source_registration_sha256": "5088d2971629ab28c48331af18bc70aa116639cbefb9d71edd0384cb306e9bd3",
+  "source_manifest_sha256": "d23f058ab75d0aa47fc1089b363b3794065f118d95b28bfc7da923cf7738ca11",
+  "stop_verification_sha256": "74c9b6b59a0d0128e4384af68b5885545f8ef38f602783e0571758ec155ec7d6",
+  "source_saved_files": 2390,
+  "files_by_role": {
+    "fit": 1878,
+    "label_holdout": 0,
+    "train_development": 512
+  },
+  "missing_source_files": 3754,
+  "missing_files_are_deaths": false,
+  "development_audit": {
+    "status": "complete",
+    "families": 512,
+    "terminal_replays": 512,
+    "outcomes": {
+      "death": 462,
+      "heart_win": 48,
+      "act3_without_heart": 2
+    },
+    "execution_faults": 0,
+    "outside_NN_choices_audited": 67927,
+    "identity": {
+      "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_index_sha256": "1928d2bddb861ea9c7ddf04eba21a57baddcda327cb91cc0a40bc6ec86e1f2b1",
+    "source_cases_sha256": "c6db595b205983ff36cf9b2914b8a81275818e316e076ac45f4bf7a91629e439",
+    "limits": "Development subset only; full natural source and winner-replan completion are separate admission gates."
+  },
+  "original_gate": {
+    "status": "stopped_with_unresolved_findings",
+    "requested_winning_routes": 48,
+    "attempted": 6,
+    "matched_routes": 5,
+    "matched_commands": 5160,
+    "unattempted_seeds": [
+      218154331,
+      355153190,
+      375676657,
+      534815687,
+      598511621,
+      609037150,
+      616544574,
+      647937939,
+      725623962,
+      731283787,
+      796652497,
+      830197655,
+      852482116,
+      852998648,
+      881079338,
+      884770429,
+      896116242,
+      903019303,
+      965063113,
+      974132578,
+      1138994370,
+      1143952644,
+      1162172025,
+      1172803786,
+      1184205587,
+      1199955940,
+      1265220920,
+      1316135409,
+      1334567629,
+      1342229608,
+      1342574947,
+      1555071777,
+      1577148875,
+      1672898994,
+      1678131635,
+      1695501490,
+      1707049679,
+      1809097593,
+      1813594522,
+      1902830755,
+      1933152777,
+      1992848422
+    ]
+  },
+  "first_mismatch": {
+    "seed": 192246470,
+    "source_episode_sha256": "dd78afaad9dfd3f843f447d53332efd9e0972140766cae4a7bed9e5dd2e451e3",
+    "first_mismatch": {
+      "prefix_index": 208,
+      "command_index": 831,
+      "combat_action_index": 21,
+      "floor": 47,
+      "screen": "NONE",
+      "differences": {
+        "player_powers": {
+          "original": {
+            "STRENGTH": 5,
+            "ARTIFACT": 1,
+            "THORNS": 3,
+            "FEEL_NO_PAIN": 3,
+            "DARK_EMBRACE": 1,
+            "bombs": [
+              0,
+              0,
+              0
+            ],
+            "gold": 151,
+            "energy_per_turn": 3,
+            "card_draw_per_turn": 5
+          },
+          "simulator": {
+            "DARK_EMBRACE": 1,
+            "FEEL_NO_PAIN": 3,
+            "THORNS": 3,
+            "ARTIFACT": 1,
+            "STRENGTH": 2,
+            "gold": 151,
+            "bombs": [
+              0,
+              0,
+              0
+            ],
+            "energy_per_turn": 3,
+            "card_draw_per_turn": 5
+          }
+        }
+      }
+    },
+    "resynchronized": false,
+    "commands": 832
+  },
+  "original_completion_sha256": "d45db3d837d65e5aa1988ce4cbde4ff114a11e5a1c63f6e3ce9795ad8845064e",
+  "rule_evidence": "At floor47 Spot Weakness is played against Writhing Mass attack-debuff intent. Original Strength2->5, simulator stays2. The native SpotWeaknessAction checks getIntentBaseDmg>=0; WRITHING_MASS_WITHER is absent from simulator isMoveAttack despite its native attacking intent. Exploder explosion has UNKNOWN intent and remains a required nonattack control.",
+  "rng_limit": "The live comparator reports only Strength at this failed boundary. The failed route has not passed the separate six-stream persistent RNG audit; do not claim its complete RNG parity.",
+  "owned_source_group_remaining": [],
+  "failed_original_cleanup": {
+    "remaining": []
+  },
+  "new_counterfactual_labels": 0,
+  "optimizer_updates": 0,
+  "candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "next": "Repair and validate attack-intent classification on the preselected failing seed, preserving E99. Any affected source/label refresh needs a new registration; E100/E101 gates must remain closed.",
+  "limits": "E99 source gate is incomplete. Data-scale hypothesis and E100/E101 candidate experiments are untested; the development48/512 is the fixed parent under E98, not a new model or unseen result."
+}

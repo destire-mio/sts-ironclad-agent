@@ -188,3 +188,10 @@ foreach(case IN ITEMS true_grit_chain true_grit_plus_chain exact_zero delayed_da
     add_test(NAME e98_${case} COMMAND e98_guardian_queue_tests ${case})
     set_tests_properties(e98_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e102_spot_weakness_tests tests/e102_spot_weakness.cpp)
+target_link_libraries(e102_spot_weakness_tests PRIVATE sts_core)
+foreach(case IN ITEMS wither_base wither_upgraded wither_zero_damage other_writhing_attacks implant_nonattack exploder_unknown exploder_attack)
+    add_test(NAME e102_${case} COMMAND e102_spot_weakness_tests ${case})
+    set_tests_properties(e102_${case} PROPERTIES TIMEOUT 15)
+endforeach()

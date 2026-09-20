@@ -1,0 +1,16 @@
+{
+  "experiment": "E102",
+  "patch": "e102_spot_weakness.patch",
+  "apply_after": "e98_guardian_queue.patch",
+  "patch_sha256": "95e9d800a83114fffb729c9047643d772bf95f6f6ece234c80ee33f106b4aaac",
+  "files": [
+    {
+      "path": "include/constants/MonsterMoves.h",
+      "before": "729e01caaa629401a2fb41f338c3f34446bf43538116477c7a255a132808f2a4",
+      "after": "c16c7d3096997e1f0b8a8b6806af46e2d6d6f24bb741164eb4beca06aeb849c7"
+    }
+  ],
+  "engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+  "test_sha256": "bc7c90de9bed823f4ca4a2aa5167be0fb7dfcde2628d930d867308fde07d0684",
+  "scope": "Classify Writhing Mass WITHER as an attack; preserve Exploder UNKNOWN explosion as a nonattack. This affects Spot Weakness and the public attacking flag. No RNG, NN or MCTS recipe change."
+}

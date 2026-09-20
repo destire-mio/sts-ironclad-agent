@@ -1,0 +1,44 @@
+{
+  "experiment": "E102",
+  "status": "complete",
+  "finished_at": "2026-09-20T02:03:46.147443+00:00",
+  "engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "baseline_engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+  "changed_source_files": [
+    "include/constants/MonsterMoves.h"
+  ],
+  "focused_before_failures": 3,
+  "focused_before_controls": 4,
+  "focused_after_passed": 7,
+  "full_ctest_passed": 221,
+  "portable_focused_passed": 7,
+  "portable_source_files_matched": 90,
+  "recorded_original_spot_boundaries": 18,
+  "recorded_before_mismatches": 1,
+  "recorded_after_matches": 18,
+  "natural_actions_to_registered_boundary": 751,
+  "natural_prefix_state_imports": 0,
+  "fresh_planner_outcome": "heart_win",
+  "fresh_planner_repeat_matched": true,
+  "fresh_outside_NN_choices_audited": 207,
+  "original_route": {
+    "seed": 192246470,
+    "status": "matched",
+    "commands": 1090,
+    "hp": 15,
+    "bosses": [
+      "TIME_EATER",
+      "DONU_AND_DECA"
+    ],
+    "recorded_proof_sha256": "ae9f908f3a6a539d907defe5125975214b3434e501e85af2e053b5d9f4493d31"
+  },
+  "original_auditor_sha256": "5f7d09dbc765b5eff647bf9d32469616f0aeb29d5336e4805a197f82cbe10e0c",
+  "patch_sha256": "95e9d800a83114fffb729c9047643d772bf95f6f6ece234c80ee33f106b4aaac",
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "source_refresh_permitted": true,
+  "old_engine_training_labels_permitted": false,
+  "rule": "WRITHING_MASS_WITHER is an attack-debuff with nonnegative native base damage and must trigger Spot Weakness. Exploder UNKNOWN explosion remains a nonattack despite its damage routine.",
+  "limits": "One confirmed classification repair, seven C++ groups,18 recorded native Spot Weakness boundaries, and one preselected repaired-engine natural Heart route with repeat planning/full original and persistent-RNG verification. No exhaustive parity, population win-rate or learned gain; E99 remains stopped and affected sources/labels need a new registration."
+}
