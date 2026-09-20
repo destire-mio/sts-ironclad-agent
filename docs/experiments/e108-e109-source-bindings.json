@@ -1,0 +1,128 @@
+{
+  "experiment": "E108/E109",
+  "source_archive": "e104-e105-prepared-sources",
+  "operation": "Read the named UTF-8 source from the preceding public archive; apply common_ordered_replacements in order, then the file-specific additional_ordered_replacements; verify rebound_sha256. This records only registered names/paths and known-source probe identity changes. Private runtime inputs are still required to execute.",
+  "common_ordered_replacements": [
+    [
+      "heart-e102-scale-source-refresh-20260920-01",
+      "heart-e106-scale-source-refresh-20260920-01"
+    ],
+    [
+      "heart-e102-scale-joint-labels-20260920-01",
+      "heart-e106-scale-joint-labels-20260920-01"
+    ],
+    [
+      "heart-e102-scale-training-20260920-01",
+      "heart-e106-scale-training-20260920-01"
+    ],
+    [
+      "e103-development-parity-20260920-01",
+      "e107-development-parity-20260920-01"
+    ],
+    [
+      "e102-spot-weakness-intent-repair-20260920-01",
+      "e106-unceasing-top-queue-repair-20260920-01"
+    ],
+    [
+      "E105",
+      "E109"
+    ],
+    [
+      "E104",
+      "E108"
+    ],
+    [
+      "E103",
+      "E107"
+    ],
+    [
+      "E102",
+      "E106"
+    ],
+    [
+      "e105",
+      "e109"
+    ],
+    [
+      "e104",
+      "e108"
+    ],
+    [
+      "e103",
+      "e107"
+    ]
+  ],
+  "files": {
+    "run_collections.py": {
+      "role": "collector",
+      "source_sha256": "ba194da3e55ec6f2634cdab5b8d46135caf88bb2ff1835c111a7eb25166e3b73",
+      "rebound_sha256": "c42f87a35fd28f287f5d3f232ae29691186c672fb13f19925fbacfe8a722b45d",
+      "additional_ordered_replacements": []
+    },
+    "check-entry.py": {
+      "role": "collector",
+      "source_sha256": "9e08b1ee57b5890bc88b3f4fc2cab719510341c2fb08316afd88fc32846dfa6a",
+      "rebound_sha256": "f01391a2ed31d8a71916ee980bfa230bcdc95719e62013f3fea399d0612618e3",
+      "additional_ordered_replacements": [
+        [
+          "192246470",
+          "881079338"
+        ]
+      ]
+    },
+    "scale_training.py": {
+      "role": "training",
+      "source_sha256": "e703ad58cb74c0465379964473ecaab5cafaecc8acbd68214889ea3ce8b4cde3",
+      "rebound_sha256": "1a83b0d7678592588fc0c931395226356b6f80f2cfc4a4abbb0af672a5ac4d65",
+      "additional_ordered_replacements": []
+    },
+    "scale_verify.py": {
+      "role": "training",
+      "source_sha256": "1ebe3e5a4d0246d89e8432facb965df5e4ef6cc428dd7a32af3bbc704549e891",
+      "rebound_sha256": "f42a1c3c64815572d062e4e6ce89b43b2219a35d9cdfc57e074edf6fd7d0b920",
+      "additional_ordered_replacements": []
+    },
+    "scale_development.py": {
+      "role": "training",
+      "source_sha256": "80f93dbf4681cd3e85036de400155d4ac2c78bc1f3b81112af400605a1ce1bac",
+      "rebound_sha256": "1fdb14cb403798a3883fe2fc455cac60342a6d631b4b7de88878c83e360b5368",
+      "additional_ordered_replacements": []
+    },
+    "candidate_original.py": {
+      "role": "training",
+      "source_sha256": "d8dde37692c38f10bba534c0c78af85561761a002192727aa57c516ef856245f",
+      "rebound_sha256": "f52b5bb1f7f687754f541d0a38f8b7bdd99d185ceb46b383058f64f117cfd38c",
+      "additional_ordered_replacements": []
+    },
+    "check-renewal-entry.py": {
+      "role": "training",
+      "source_sha256": "ce02d1677cb41c9b492029a3993730718231abed0400e1e65c0ad64347fe9987",
+      "rebound_sha256": "ce02d1677cb41c9b492029a3993730718231abed0400e1e65c0ad64347fe9987",
+      "additional_ordered_replacements": []
+    },
+    "prepare-native-probe.py": {
+      "role": "training",
+      "source_sha256": "271de1d7cfb858950fb5b5ec3728a641e556c2bc2f1a86fbc321bfe9771e0481",
+      "rebound_sha256": "85c093b2bfb50f2ddd2c767639c3132bb81c4320baadd2073a2b34e4d35a6ebb",
+      "additional_ordered_replacements": [
+        [
+          "192246470",
+          "881079338"
+        ]
+      ]
+    },
+    "run-native-probe.py": {
+      "role": "training",
+      "source_sha256": "6487fbd17d3cad51a5d972d8c0bd16a8c78e6b1ed495e86de323bead2790853d",
+      "rebound_sha256": "8bd2b4ee840b8d1c2bbf55d7ff862adc31989df4e28bdfa6abcf4257f90101f4",
+      "additional_ordered_replacements": []
+    },
+    "check-development-entry.py": {
+      "role": "training",
+      "source_sha256": "d9e4d124cb428212bd55213b5652c9d7943933ce5b9f4a5a2a447dc13d84a46f",
+      "rebound_sha256": "03c6a477bf0294c7cae01bbea9c903b3fc47557e0e9f8c207673c359702cafb6",
+      "additional_ordered_replacements": []
+    }
+  },
+  "frozen_collector_modules": "All15 remain byte-identical to E104/E100, as recorded in source-copy-verification. No algorithm or decision-scope change."
+}

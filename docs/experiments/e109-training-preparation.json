@@ -1,0 +1,212 @@
+{
+  "experiment": "E109",
+  "status": "prepared_not_executed",
+  "created_at": "2026-09-20T04:16:36.354414+00:00",
+  "training_protocol": {
+    "experiment": "E109",
+    "created_at": "2026-09-20T04:12:51.891144+00:00",
+    "identity": {
+      "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_registration_sha256": "1262e2cd511cc09a41543e8f798ecf65b0bacdf90f59815bd8845714123fdcd4",
+    "collector_registration_sha256": "edca117af6fc1f77e8ed689a3f56828bed4adfd69b131ab298d81d3c37f56271",
+    "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+    "source_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "inherited_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+    "inherited_training_registration_sha256": "f851bfa9676d99444df494a9dc5da45a39f8bca0bcbf08947385c6ff2825e3fd",
+    "question": "Does the E97 planned independent-family data expansion improve the fixed joint relic/card readout under the now repaired E106 engine?",
+    "arms": {
+      "small": {
+        "fit_families": 1536,
+        "selection": "E87 fit family IDs, with all outcomes regenerated under E106."
+      },
+      "expanded": {
+        "fit_families": 4608,
+        "selection": "The same1536 plus all3072 E97 additional fit family IDs; no success selection."
+      }
+    },
+    "common_label_holdout": 1024,
+    "development": 512,
+    "config": {
+      "steps": 1000,
+      "learning_rate": 0.03,
+      "gradient_norm": 1.0,
+      "l2": 0.001
+    },
+    "representation": "Inherited frozen parent192-dimensional public-state/candidate embeddings; two learned linear readouts plus fit-only option biases. Centered features and RMS scales fitted only on each arms own fit families, parent score bias1, unknown whole offers use parent. No seed or future state features.",
+    "objective": "Inherited exact expected terminal binary Heart outcome over all assigned fit families and complete two-decision trees plus fixedL2; no invented preference for equal outcomes, no success-only imitation, no layer reward.",
+    "selection": "Train both final checkpoints before common heldout scoring, fixed1000 steps and L2.001, no CV, checkpoint or hyperparameter sweep. Each arm vs parent must net>=20 wins and paired exactp<.05 across common1024. Claim a data-scale gain only if expanded vs small independently meets net>=20 and pairedp<.05. The pairwise development screens are not independent acceptance.",
+    "downstream": "Verify both live choice sets on all reachable heldout families. Qualifying arms then require natural512-development net>=10 and pairedp<.05, zero faults, full terminal/RNG/NN audits, correct scoped first change, winner replans and original winning-route verification. Choose more wins, fewer lost parent wins, then small on a tie. No candidate adoption or natural evaluation by the training command itself.",
+    "implementation_change": "Renew E105 unchanged fixed recipe against E108 E106-engine canonical labels and E107 unchanged family assignments. Only experiment/path/provenance bindings change.",
+    "dependency": "All E107 source and original-development gates and E108 complete label audits. No output model directory may be created before these pass.",
+    "resources": {
+      "torch_threads": 1,
+      "live_choice_workers": 8,
+      "live_choice_stage_seconds": 10800,
+      "observer_interval_seconds": 1200
+    },
+    "limits": "A test of the unexecuted data-scale hypothesis on narrow coupled decisions. It is not a full-policy ceiling or the50percent goal. Failed E89/E95/E96 results stay recorded. Final acceptance requires a separately frozen candidate and1024 truly unseen families."
+  },
+  "development_protocol": {
+    "experiment": "E109D",
+    "created_at": "2026-09-20T04:12:51.891144+00:00",
+    "identity": {
+      "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "parent_protocol_sha256": "124c471a09ebe9b382fcfae8aa9c5b425bf84d771107a20ede4a9abf61db3f53",
+    "training_registration_sha256": "5143908b0f6744960254639d4b2bfc455588ad7d055dfe1121357270c1b20179",
+    "verification_registration_sha256": "4e44f4d648f26e597adeeb7e3d1e062c33b744c3633cc8469e018ded09472db1",
+    "purpose": "Implement E109s predeclared natural-development and original-winning-route checks. No new learning hypothesis, fit, search policy, seed draw or hyperparameter choice.",
+    "arms": [
+      "small",
+      "expanded"
+    ],
+    "assigned_development_families": 512,
+    "development_seed_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "prerequisites": "All E107 natural sources and original development gate, E108 complete joint labels, both E109 fits, and independent common-heldout native-choice verification. Only arms with common-heldout net>=20 and exact paired p<.05 can start natural games.",
+    "natural_gate": "Each admitted arm runs every same assigned512 seed from natural A20 Ironclad start. Require net>=10 Heart wins and exact paired p<.05 against the repaired-engine fixed parent; zero faults; all terminal/state/RNG/timing checks; first changed action in the two declared scopes; independent stored-weight arithmetic audit of every outside choice; identical fresh MCTS/NN replan of every winner. Retain early failures, and reject missing/invalid results without replacement or retries.",
+    "original_selection": "For each arm passing the natural screen, execute every Heart-winning development route in ascending seed order using one owned isolated original JVM. No winner subset, cached-route substitution, retries or resynchronization. Stop at the first nonmatch/fault/deadline, retain all unattempted routes, and block selection.",
+    "original_verification": "Inherited E107 original per-route implementation and all comparators, plus six persistent RNG streams and independent command/identity/keys/two distinct Act3 bosses/Act4/Heart/cleanup audit. Candidate source is its complete audited natural cohort with the candidate model, identity and frozen loader/runtime, not the parent model.",
+    "candidate_selection": "Only after every natural-passing arms complete original gate: more Heart wins, fewer lost parent wins, then small on a tie. The result is a development-screened frozen candidate; no production adoption or unseen evaluation in these commands.",
+    "reference_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+    "resources": {
+      "workers": 8,
+      "torch_threads": 1,
+      "episode_seconds": 300,
+      "prefix_timeout": 360,
+      "natural_stage_seconds_per_arm": 10800,
+      "original_stage_seconds_per_arm": 10800,
+      "per_original_seconds": 900,
+      "original_jvm_instances": 1,
+      "observer_interval_seconds": 1200
+    },
+    "unchanged_game_inputs": "E106 engine; fixed parent192 encoder; MCTS8000 and boss multiplier3; existing E54 search and 256 replan cap; deterministic45 seconds/floor and one transform preview frame; no Prismatic Shard purchase; no new optimizers.",
+    "limits": "Preparation software checks do not establish a learned gain, original candidate parity or50percent success. Final acceptance needs a later frozen selected checkpoint and1024 genuinely unseen seed families."
+  },
+  "training_registration_sha256": "5143908b0f6744960254639d4b2bfc455588ad7d055dfe1121357270c1b20179",
+  "verification_registration_sha256": "4e44f4d648f26e597adeeb7e3d1e062c33b744c3633cc8469e018ded09472db1",
+  "development_registration_sha256": "a7673b1af6734e076451b4d5701cd3011b35511a7f4b0ac2edf423dd8f739a07",
+  "source_renewal_verification_sha256": "7921231aeac7d07abe5ed55504a47f0e0664d86c81b9a0be6bd373e24d4fd473",
+  "entry_verification_sha256": "413cabb15391b3d136a468324d64d019022fcf70c0545b5db84d3fdc73a99eb8",
+  "native_choice_proof_sha256": "947c1ae80f09cb7c9f7d13a6042c3eac2697d70a587b05d7ad3e7a45aac5f672",
+  "development_entry_proof_sha256": "257df7006885fb8ccc1d7a96f7566178ec39beade2b13496ec81844e0dd1c08f",
+  "native_choice_probe": {
+    "seed": 881079338,
+    "relic_prefix_index": 73,
+    "card_prefix_index": 79,
+    "cases": [
+      {
+        "case": "positive",
+        "status": "verified",
+        "result_sha256": "78cf25700e3fceb1fd9c2ff3001aad18b73bd35abf65c59a8b7e38f94d3d8a39"
+      },
+      {
+        "case": "wrong-expanded-relic",
+        "status": "verification_error",
+        "result_sha256": "cc98cdfd93a9ccdccb64260ed503444e4e4812f52a7f3906146c8d4ace114d7a"
+      },
+      {
+        "case": "wrong-expanded-card",
+        "status": "verification_error",
+        "result_sha256": "a91367a518d07ba868e7bdb24757bafecab049057641f4da9375b52e56d1d284"
+      }
+    ],
+    "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+    "new_mcts_calls": 0,
+    "optimizer_updates": 0
+  },
+  "whole_route_software_control": {
+    "seed": 881079338,
+    "status": "heart_win",
+    "outside_choices": 196,
+    "scopes": {
+      "relic": 1,
+      "card": 1
+    },
+    "act_three_bosses": [
+      "DONU_AND_DECA",
+      "AWAKENED_ONE"
+    ],
+    "act_four": [
+      "SHIELD_AND_SPEAR",
+      "THE_HEART"
+    ]
+  },
+  "data_format_controls": "The E101 check remains applicable because the loader body is unchanged. No historical labels loaded or admitted in this renewal check.",
+  "negative_controls": {
+    "incomplete_source_rejected": {
+      "rejected": true,
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e106-scale-source-refresh-20260920-01/natural/completion-verification.json'"
+    },
+    "incomplete_source_blocks_selection": {
+      "rejected": true,
+      "type": "FileNotFoundError",
+      "reason": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e106-scale-source-refresh-20260920-01/natural/completion-verification.json'"
+    },
+    "original_admission_negative_cases": {
+      "model": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "engine": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "duplicate_route": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "missing_route": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "fault": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "unattempted": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      },
+      "stopped": {
+        "rejected": true,
+        "type": "AssertionError",
+        "reason": ""
+      }
+    },
+    "altered_outside_action_rejected": {
+      "rejected": true,
+      "type": "AssertionError",
+      "reason": "(881079338, 0)"
+    },
+    "outside_scope_first_change_rejected": {
+      "rejected": true,
+      "type": "AssertionError",
+      "reason": ""
+    },
+    "terminal_hp_rejected": {
+      "rejected": true,
+      "type": "ValueError",
+      "reason": "natural replay terminal state or RNG differs"
+    },
+    "original_one_route_body_unchanged": true
+  },
+  "selection_order_cases": 4,
+  "formal_optimizer_updates": 0,
+  "new_continuation_labels": 0,
+  "natural_candidate_games": 0,
+  "new_original_executions": 0,
+  "unseen_acceptance_games": 0,
+  "public_source_bindings": "e108-e109-source-bindings.json",
+  "public_source_bindings_sha256": "d4c11a5304039f8d43a0d5d77e8958ede6190bbd3582b86cc1cba055d0a716c9",
+  "limits": "Software preparation with E106 known parent route and zero-head fixtures only. E107 complete sources/original and E108 label audits precede E109 fitting. No old labels admitted, no learned gain or final acceptance. The two fixed data-scale arms and downstream gates are unchanged."
+}
