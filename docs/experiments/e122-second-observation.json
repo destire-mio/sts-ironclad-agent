@@ -1,0 +1,70 @@
+{
+  "experiment": "E122",
+  "status": "source_and_original_running",
+  "observed_at": "2026-09-20T10:51:27.115165+00:00",
+  "source_files_saved": 1671,
+  "registered_source_total": 6144,
+  "source_controller_live": true,
+  "original_controller_live": true,
+  "active_sampling_workers": 8,
+  "completed_original_routes": 9,
+  "requested_original_routes": 51,
+  "completed_original_commands": 9213,
+  "rows_at_observation": [
+    {
+      "seed": 32980350,
+      "case_result_sha256": "64810ba66ca42acb45f23418d0d85a044e001084dc9acbb3db02332c5eb9995e",
+      "commands": 1150
+    },
+    {
+      "seed": 117131367,
+      "case_result_sha256": "99bf3aa81e5d5f80bade1f6718d52f7df18b349149f4f05fba8c51989e9aacaa",
+      "commands": 1125
+    },
+    {
+      "seed": 131011623,
+      "case_result_sha256": "ac2db93e98e723449343cc2ee7cd3faf18acbd054caf17f2a0673ed46bd0b12e",
+      "commands": 1145
+    },
+    {
+      "seed": 160382065,
+      "case_result_sha256": "5dfb7e8063ee4dda40378821dbc8f6565bda3615455ed481cd3243410d0a9df4",
+      "commands": 904
+    },
+    {
+      "seed": 168190709,
+      "case_result_sha256": "e192e032d35b0a5d29cb2c68af71c21879728188d0e65ec7fa7ece8963844b6b",
+      "commands": 838
+    },
+    {
+      "seed": 192246470,
+      "case_result_sha256": "4eba3d5dba949f26871bb55b565b6866b82dd5ea2a6e265316b3f6550a501075",
+      "commands": 1090
+    },
+    {
+      "seed": 218154331,
+      "case_result_sha256": "11485283dbe56fff7337a4675d4a16fa86177a79206a71e914deb796db0a60fa",
+      "commands": 1115
+    },
+    {
+      "seed": 355153190,
+      "case_result_sha256": "960ec5e532dfb3868677b37c0dce1501fb31539b5bd15695a274e6dee85e2149",
+      "commands": 975
+    },
+    {
+      "seed": 375676657,
+      "case_result_sha256": "24e5281eaaa42720c2d86f92829a476afab4fd8ffafab015def79cc63b2c29b6",
+      "commands": 871
+    }
+  ],
+  "source_development_audit_sha256": "835b08536eb1180c69d10ec16418a12e229bc45139d70c5ab0d7bd88b6fc8a8b",
+  "source_development_families": 512,
+  "source_development_execution_faults": 0,
+  "observation_sha256": "40aadfb84b9ad4a8c721c0ef485b1347777677e72a428ee7d7d8ed322f96edf4",
+  "next_observation_at": "2026-09-20T11:11:27.115165+00:00",
+  "interval_seconds": 1200,
+  "E125_native_diagnostic": "waiting_for_existing_original_job_exit_and_cleanup",
+  "labels_collected": 0,
+  "optimizer_updates": 0,
+  "limits": "Scheduled partial source/native progress; only the nine already completed routes are read for this checkpoint. No population win rate or full source/candidate acceptance."
+}
