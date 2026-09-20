@@ -1,0 +1,35 @@
+{
+  "experiment": "E122/E127-E128",
+  "status": "source_sampling_complete_verification_pending",
+  "evidence_scope": "simulator_only",
+  "created_at": "2026-09-20T12:57:48.166724+00:00",
+  "source_snapshot_at": "2026-09-20T12:51:37.691442+00:00",
+  "os_verified_at": "2026-09-20T12:55:57.663460+00:00",
+  "natural_source_files": 6144,
+  "sampling_accounting": {
+    "faults": [],
+    "requested": 6144,
+    "returned": 6144
+  },
+  "winner_replanning": {
+    "completed": 224,
+    "total": 625,
+    "active_workers": 8,
+    "stage": "E122S_winner_replans"
+  },
+  "source_controller_live": true,
+  "study_controller_live": true,
+  "independent_source_audit_complete_at_snapshot": false,
+  "source_completion_proof_admitted": false,
+  "new_continuation_labels": 0,
+  "optimizer_updates": 0,
+  "unseen_acceptance_games": 0,
+  "next_assistant_observation_not_before": "2026-09-20T13:15:57.663460+00:00",
+  "hashes": {
+    "runs/heart-e121-simulator-training-20260920-01/source-wait-20260920T125557.json": "dc1d7fb9e41721cd4ae08e00f5d1e5ac014ffa950b90371413a84ae8fb6b9df1",
+    "runs/heart-e121-scale-source-refresh-20260920-01/natural/collection-accounting.json": "502a69f163b63c7d7db740833571a4bd1849f882698e8700885b4e9981af5f2f",
+    "runs/heart-e121-scale-source-refresh-20260920-01/natural/source-index.json": "3ffb38dd2f934a653753613d3dd97b8e343fc0be3ae660b66afaa745bae41c10",
+    "runs/heart-e121-simulator-training-20260920-01/study-registration.json": "b223d92e118fbbc53e4f2b1848ef18e21a721a75797057a7cce537087ae01b38"
+  },
+  "limits": "All natural source files are saved and initial collection reports no execution faults. Winner replanning and complete independent replay/NN/RNG audits remain pending. No new model or unseen-seed result is claimed."
+}
