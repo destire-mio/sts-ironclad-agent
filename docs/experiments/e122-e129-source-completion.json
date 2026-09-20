@@ -1,0 +1,154 @@
+{
+  "experiment": "E122/E129-source-completion",
+  "status": "source_verified_and_admitted",
+  "evidence_scope": "simulator_only",
+  "finished_at": "2026-09-20T13:35:17.041657+00:00",
+  "observed_at": "2026-09-20T13:50:39.216304+00:00",
+  "families": 6144,
+  "heart_wins": 625,
+  "baseline_heart_win_percent": 10.172526041666666,
+  "splits": {
+    "fit": {
+      "families": 4608,
+      "outcomes": {
+        "act3_without_heart": 10,
+        "death": 4111,
+        "heart_win": 487
+      },
+      "heart_win_percent": 10.56857638888889,
+      "natural_simulations": 2468832000
+    },
+    "label_holdout": {
+      "families": 1024,
+      "outcomes": {
+        "act3_without_heart": 4,
+        "death": 933,
+        "heart_win": 87
+      },
+      "heart_win_percent": 8.49609375,
+      "natural_simulations": 542376000
+    },
+    "train_development": {
+      "families": 512,
+      "outcomes": {
+        "act3_without_heart": 2,
+        "death": 459,
+        "heart_win": 51
+      },
+      "heart_win_percent": 9.9609375,
+      "natural_simulations": 263784000
+    }
+  },
+  "terminal_replays": 6144,
+  "outside_choices_verified": 834427,
+  "winning_fresh_replans_verified": 625,
+  "natural_game_execution_faults": 0,
+  "audit_chunks_verified": 192,
+  "cached_audit_chunks": 38,
+  "new_audit_chunks": 154,
+  "audit_artifact_hashes_verified": 192,
+  "original_source_orchestration_exit_code": 1,
+  "original_audit_deadline_timeouts": 8,
+  "recovery_audit_exit_code": 0,
+  "recovery_cleanup_verified": true,
+  "natural_games_resampled": 0,
+  "winner_replans_resampled": 0,
+  "original_game_executions_in_recovery": 0,
+  "source_identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "downstream": {
+    "experiment": "E127/E128",
+    "stage": "collect-relic",
+    "collection_started_at": "2026-09-20T13:35:18.202027+00:00",
+    "completed_phases": [
+      "prepare-relic"
+    ],
+    "progress": {
+      "active_workers": 8,
+      "completed": 617,
+      "controller_pid": 62873,
+      "seconds_remaining": 35334,
+      "stage": "E127R_all_first_boss_options",
+      "total": 17552
+    },
+    "os_verified_worker_count": 8,
+    "optimizer_updates": 0,
+    "label_table_complete": false,
+    "new_candidate_games": 0,
+    "unseen_acceptance_games": 0,
+    "recipe_changes": false
+  },
+  "source_hashes": {
+    "completion-verification.json": "09c0db472d1635fffbde695d57fd27e57bc12f0b9464de6cf38cadbb50e259e4",
+    "manifest.json": "f7a8b4ea2a05612be8d3fabfee2610d7fb81a9970e72d85f8451c45f7d16a67d",
+    "source-index.json": "3ffb38dd2f934a653753613d3dd97b8e343fc0be3ae660b66afaa745bae41c10",
+    "cases.json.gz": "2fc2acf18e3df051f9cec2695eb6c67c43481ec303bb2840a3854d928116ee62",
+    "report.json": "47228b9a7700a6f07758863934d504bc5661c9e9cbd016e743fbeff924011d85",
+    "collection-accounting.json": "502a69f163b63c7d7db740833571a4bd1849f882698e8700885b4e9981af5f2f",
+    "audit-recovery.json": "77262f818ca0f267ec5a04ebdaffa2c610ed881c936beed0cb8332cfce720cfc"
+  },
+  "recovery_hashes": {
+    "registration.json": "be7c5f9696af5a0dbb744cc3532f9a32516bc7710935b5453b7254d356eb8359",
+    "audit-completion.json": "77262f818ca0f267ec5a04ebdaffa2c610ed881c936beed0cb8332cfce720cfc",
+    "source-admission.json": "4a678042df8076d0288bb074c6ba24449c6226d0716fc1132f867ae17b0428d7",
+    "audit-job/pipeline-process-exit.json": "320d2749abcd1b2ec2139dcf6ba630fb3c10a60061e7491146995ababbdb023d",
+    "inventory.json": "351ba9f5cae6215b4986b64960c45f935967bdc85e3084a6fcc4d158be6f2cd7",
+    "downstream-budget-review.json": "c637fd97f4d037298989a71e985cbad66b835642f602610261fa5abddef73eb5",
+    "disk-capacity-review.json": "759b4eb0d3df1b49cbddbccf02d6e61f6ba21086b06da3cc13511c627b43c960"
+  },
+  "observation_sha256": "02533bc7a8408197f369e671b33330e70ab3d1b39a11e30b416a431cce3c6408",
+  "next_observation_at": "2026-09-20T14:10:39.219290+00:00",
+  "stage_budget_review": {
+    "status": "reviewed",
+    "at": "2026-09-20T13:37:31.841447+00:00",
+    "scope": "Static review of already registered stage budgets; no run status observation or recipe change.",
+    "collection_wrapper_seconds": 172800,
+    "collection_stage_seconds": {
+      "first_relic_collection": 36000,
+      "first_relic_audit": 18000,
+      "joint_collection": 93600,
+      "joint_audit": 18000
+    },
+    "collection_boundary_and_preparation_allowance_seconds": 7200,
+    "training_total_seconds": 43200,
+    "maximum_training_subprocess_seconds": 40500,
+    "training_boundary_allowance_seconds": 2700,
+    "deadline_expressions": [
+      {
+        "file": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/frozen/heart_boss_relic_bandit.py",
+        "sha256": "33519bf505dd9d69d9e16ebf5317fd74dc2162faa90fe6a766348b32d479a40a",
+        "function": "collect",
+        "new_stage_deadline_seconds": 36000
+      },
+      {
+        "file": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/frozen/heart_boss_relic_audit.py",
+        "sha256": "cdc55e3d11e3a9f2245bb4a049e10e858e7b5a67cb66496b625069c587be5f02",
+        "function": "labels",
+        "new_stage_deadline_seconds": 18000
+      },
+      {
+        "file": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/frozen/heart_relic_card_experiment.py",
+        "sha256": "15a0152feab5af3d203fdb22965086b5e2e7b423fc4cc7779e74fab38899ddcc",
+        "function": "collect",
+        "new_stage_deadline_seconds": 93600
+      },
+      {
+        "file": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/frozen/heart_relic_card_experiment.py",
+        "sha256": "15a0152feab5af3d203fdb22965086b5e2e7b423fc4cc7779e74fab38899ddcc",
+        "function": "audit",
+        "new_stage_deadline_seconds": 18000
+      },
+      {
+        "file": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_verify.py",
+        "sha256": "39fe3324aad013f5a826c722da3c20d51ec17afaf7b1d6cf1203b5c7ec278a6a",
+        "function": "verify",
+        "new_stage_deadline_seconds": 10800
+      }
+    ],
+    "natural_development_limit": "Each qualifying arm retains one shared 10800-second allowance for 512 natural games, all winner replans and route/NN replay. The 11100-second wrapper is not an extension of that internal allowance.",
+    "limits": "Budget separation is verified from executed functions, not a guarantee that future workloads finish within their allowances. No expired game or stage is restarted by this review."
+  },
+  "limits": "Baseline outcomes from fixed previously assigned training/label-holdout/development families. Not a new learned gain, unseen-seed acceptance or original-game parity result. E122 shared-deadline failure remains recorded. E127 continuation collection is incomplete; its progress count is not a final zero-fault label proof. E128 has not fit a new model."
+}
