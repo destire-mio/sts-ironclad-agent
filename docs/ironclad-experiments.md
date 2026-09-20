@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through E98 repair completion and E99 source-refresh registration on 2026-09-20. E97 remains stopped; E99 regenerates the fixed small/expanded study families under E98 before any new joint labels or learning. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through E99 source sampling and E100/E101 collector/training preparation on 2026-09-20. Sources, labels, model fitting and acceptance are distinct gates. No E100 labels or E101 optimizer updates have run. Raw models, game JARs and run traces stay local. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2357,3 +2357,27 @@ E97 的扩大样本实验被原版规则门槛中断，没有检验数据规模�
 训练准入需要 6,144 来源的全部终局／状态／RNG／局外 NN 核验及所有胜局重规划，加上开发胜局的原版门槛。此轮不执行参数更新；后续遗物与选牌组合续局必须在新引擎上另行登记、生成和审计。E97／E89 的旧标签和失败记录保留；此前数据规模方案的两臂比较要等新标签通过门槛，不能从来源重跑次数推断模型改善。
 
 来源登记 SHA `5088d2971629ab28c48331af18bc70aa116639cbefb9d71edd0384cb306e9bd3`；运行登记 SHA `bf8bccf557eb7f7a766f872bf0f5f90a805dc408c05785c83388bf81d8e89114`；原版门槛登记 SHA `c7927ef83a653d4b711e8879a1f76bab226238b632e4b77763257a82ae34c0a7`。运行目录 `runs/heart-e98-scale-source-refresh-20260920-01/`，原版证据目录 `ironclad-alignment/evidence/e99-development-parity-20260920-01/`，公开协议 `docs/experiments/e99-source-refresh-protocol.json`。
+
+
+## 109. E100：修复引擎上的完整遗物／选牌标签入口（2026-09-20，准备完成，未采集）
+
+E99 采样期间完成 E100 入口准备。E100 处理 4,608 拟合和 1,024 标签留出家庭，沿用首 Boss 遗物与第二幕第一行战斗后末个选牌菜单的范围，枚举全部遗物、选牌、碗与跳过选项；早死和无选牌节点保留，512 个开发家庭不生成干预标签。小组与扩展组从同一个新引擎标签表取嵌套子集，共有的 1,536 个拟合家庭不采两次。没有复用 E86 旧叶子。
+
+15 个冻结模块中 12 个逐字节沿用 E97，3 个仅修改阶段时限；每条续局的规则、MCTS、300／360 秒保护和核验逻辑不变。相对 E97 的 3,584 个待标注家庭，本轮为 5,632 个，按 11／7 放大并向整小时取整，遗物采集／组合采集／独立审计限额分别为 36,000／93,600／18,000 秒。这些是执行前登记的新阶段预算，不能用于延长过期任务。八个工人，20 分钟观察间隔。
+
+入口核对了全部模块摘要，确认只有声明的时限修改；来源尚不完整时拒绝启动，正式标签目录未创建。使用 E98 已核验种子 218154331 的历史新引擎路线，从自然前缀重建首遗物节点，四个候选及父策略选择匹配；没有新增 MCTS、标签或参数更新。实际采集须等 6,144 条 E99 来源、全组胜局重规划和全部开发胜局原版门槛通过。
+
+登记 SHA `6dd330cb85793c68bf12ca388bb9adb910560f1a5e2d41dfebe8e7159f15649b`。本地目录 `runs/heart-e98-scale-joint-labels-20260920-01/`；公开准备报告 `docs/experiments/e100-label-preparation.json`，冻结驱动源码 `docs/experiments/e100-e101-sources/collector/`。
+
+
+## 110. E101：固定两组数据规模训练与现场选择核验（2026-09-20，准备完成，未训练）
+
+沿用 E97 未执行的数据规模方案：小组为固定 1,536 个拟合家庭，扩展组为这组加 3,072 个家庭，使用同一个 E100 修复标签表；共同标签留出 1,024、自然开发 512。父编码器、两级线性评分、每组 1,000 次 Adam 更新、学习率 0.03、L2 0.001 和梯度上限 1 固定。两组各用自己的拟合支持集合与 RMS；两份最终模型写完摘要后，才评分共同留出。没有内部交叉验证、重拟合选择或参数扫描。
+
+单组进入后续阶段需在共同留出上相对父策略净增至少 20 胜、配对精确 p<0.05；声称扩大数据有效还需扩展组相对小组通过同一门槛。现场选项核验和 512 个自然开发、首差异范围、胜局重规划、原版路线门槛属于后续条件。最终 50% 验收不使用这些家庭。改变限于从同一个修复标签表读取预登记嵌套分组；优化与留出评分的函数体在变量名替换后和 E97 相同，现场选择工人逐字节相同。
+
+数据入口确认实际 6,144 个分区身份；来源未完成时拒绝训练且不创建模型目录。历史 E89 的 25,188 条叶子摘要用于数据格式控制，768／1,536 嵌套子集的引用、树、状态和标签相同，和 512 个留出家庭不交叉；重复、遗漏、角色改变、跨分区和选牌接错家庭均拒绝。历史叶子没有进入 E101 正式训练。
+
+新引擎现场控制使用 E98 种子 218154331 的已观察父策略路线，重建第 78／82 项前缀的遗物与选牌节点，两份零头软件模型选择匹配；对扩展组故意写错遗物或卡牌期望时，核验在对应断言拒绝。仅使用实际观察到的父分支终局，没有构造未观察分支的回报，不能称为完整标签树。第一次控制脚本把字符串路径传给仅接受 Path 的摘要助手，在模型执行前报错；旧脚本／错误保留，修正路径类型后通过。游戏引擎、期望选择和正式训练代码未因此修改。
+
+训练登记 SHA `f7cad595a2d549112d2394b484bd43ebaa525a8078489e641db439566cac10bd`；现场核验登记 SHA `36915ddff4fcf670eddfb60f1d53b270f719493fd40cca5f31ab6e44ac985f1c`。公开准备报告 `docs/experiments/e101-training-preparation.json`，冻结源码 `docs/experiments/e100-e101-sources/training/`；实际参数更新、候选自然局和最终未见种子验收均为 0。

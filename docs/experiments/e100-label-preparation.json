@@ -1,0 +1,192 @@
+{
+  "experiment": "E100",
+  "status": "prepared_not_executed",
+  "created_at": "2026-09-20T01:11:40.862695+00:00",
+  "registration_sha256": "6dd330cb85793c68bf12ca388bb9adb910560f1a5e2d41dfebe8e7159f15649b",
+  "protocol_sha256": "39d256109d98deaf53ff1e267c12c6bf8cd8742211009c5eb1651323068f836d",
+  "identity": {
+    "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "natural_stage_seconds": 10800,
+    "first_relic_collection_seconds": 36000,
+    "joint_collection_seconds": 93600,
+    "independent_label_audit_seconds": 18000,
+    "observer_interval_seconds": 1200,
+    "original_jvm_instances": 1
+  },
+  "collection": "Same registered first-boss relic and last scoped Act2-row0 card menus as E89/E97. Enumerate all native relic/card/Bowl/skip alternatives and parent controls for all4608 fit and1024 label_holdout families. Keep early failures and absent nodes. One canonical repaired-engine label table supports small1536/expanded4608 fits; no old leaves, duplicated shared-family sampling or development branches.",
+  "source_gates": "All6144 E99 sources, terminal/state/RNG/timer/nonintervention NN audits and allwinner replans; all512 development source audits and every development-winning original route plus added persistent RNG. Any source fault/nonmatch blocks collection.",
+  "deadline_rationale": "The labeled family count grows from E97s3584 to5632, a factor11/7. Scale the preregistered21600/57600/10800s stage budgets by that factor and round up to36000/93600/18000s before new continuation outcomes. Per-episode guards, work per branch and retry policy do not change. These are new-stage budgets, not extensions of an expired job.",
+  "entry": {
+    "status": "complete",
+    "registration_sha256": "6dd330cb85793c68bf12ca388bb9adb910560f1a5e2d41dfebe8e7159f15649b",
+    "checker_sha256": "597d6e8c2af0742bc8e4ca2dfad08f9fbd7edafcee6728757b4f25e9177c3127",
+    "incomplete_natural_source_rejected": true,
+    "formal_destination_directories_absent": true,
+    "runtime_identity": {
+      "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "frozen_modules_checked": 15,
+    "deadline_only_module_changes_checked": 3,
+    "known_E98_source_replay": {
+      "seed": 218154331,
+      "episode_sha256": "651be4b07da38d3898ea78bd98801cb0f1f83d122b83aaaf7d39eacfc6d21836",
+      "prefix_index": 78,
+      "candidates": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "chosen": 2,
+      "natural_public_state_reconstructed": true
+    },
+    "new_mcts_calls": 0,
+    "new_continuation_labels": 0,
+    "optimizer_updates": 0,
+    "limits": "Entry and known-source replay controls only; full source admission and new label generation remain pending."
+  },
+  "module_copy_verification": {
+    "status": "verified",
+    "files": {
+      "heart_boss_relic_audit.py": {
+        "before_sha256": "d08be726b60300002a8101ad87f85d03020c8c9e9072d78957420804a2840312",
+        "after_sha256": "cdc55e3d11e3a9f2245bb4a049e10e858e7b5a67cb66496b625069c587be5f02",
+        "changes": [
+          [
+            "time.monotonic() + 10800, worker_fn=audit_worker",
+            "time.monotonic() + 18000, worker_fn=audit_worker"
+          ]
+        ]
+      },
+      "heart_boss_relic_bandit.py": {
+        "before_sha256": "8bba9ca2c50c56d1731e5138941986cd0cb43f04d39352021c57da0be87ff745",
+        "after_sha256": "33519bf505dd9d69d9e16ebf5317fd74dc2162faa90fe6a766348b32d479a40a",
+        "changes": [
+          [
+            "time.monotonic() + 21600, worker_fn=branch_worker",
+            "time.monotonic() + 36000, worker_fn=branch_worker"
+          ]
+        ]
+      },
+      "heart_branch_pilot.py": {
+        "before_sha256": "d4b1d6fb833d7b370aa902003ff8c13f0430ccbefab91a373e960f385791e568",
+        "after_sha256": "d4b1d6fb833d7b370aa902003ff8c13f0430ccbefab91a373e960f385791e568",
+        "changes": []
+      },
+      "heart_branch_training.py": {
+        "before_sha256": "645f3fcaa9a508a7e7a9889884ccce17208b89a81fc17c0f54047558c89be229",
+        "after_sha256": "645f3fcaa9a508a7e7a9889884ccce17208b89a81fc17c0f54047558c89be229",
+        "changes": []
+      },
+      "heart_combat_development.py": {
+        "before_sha256": "de091a5333cc2d798918551a4c95d53d55ef6290eab4bba8332ffd69928242b4",
+        "after_sha256": "de091a5333cc2d798918551a4c95d53d55ef6290eab4bba8332ffd69928242b4",
+        "changes": []
+      },
+      "heart_contextual_relic.py": {
+        "before_sha256": "c5b22388db381fe3304bbc03278f1cc7d5dfffc43f27b17efa744cf9cebe4f06",
+        "after_sha256": "c5b22388db381fe3304bbc03278f1cc7d5dfffc43f27b17efa744cf9cebe4f06",
+        "changes": []
+      },
+      "heart_play_selected.py": {
+        "before_sha256": "0e26953c8a294649f9ebeae52dc5e7f69b4f273ab525874b692ce5651568ad58",
+        "after_sha256": "0e26953c8a294649f9ebeae52dc5e7f69b4f273ab525874b692ce5651568ad58",
+        "changes": []
+      },
+      "heart_relic_card_development.py": {
+        "before_sha256": "7d7bc8d494526cb1b0839412ff1f10560eb60d32f382321e92e28ee33fe4fd46",
+        "after_sha256": "7d7bc8d494526cb1b0839412ff1f10560eb60d32f382321e92e28ee33fe4fd46",
+        "changes": []
+      },
+      "heart_relic_card_experiment.py": {
+        "before_sha256": "041eb20262e1a53065f77ed84bf6fad9104e99d00e5ee3655dd814586c033431",
+        "after_sha256": "15a0152feab5af3d203fdb22965086b5e2e7b423fc4cc7779e74fab38899ddcc",
+        "changes": [
+          [
+            "time.monotonic() + 57600, worker_fn=B.branch_worker",
+            "time.monotonic() + 93600, worker_fn=B.branch_worker"
+          ],
+          [
+            "time.monotonic() + 10800, worker_fn=audit_worker",
+            "time.monotonic() + 18000, worker_fn=audit_worker"
+          ]
+        ]
+      },
+      "heart_relic_card_model.py": {
+        "before_sha256": "22f7e9589b53fd7ce7eaa06d2edeb8d209461f7dbb1f3e36e106e6097c4351e7",
+        "after_sha256": "22f7e9589b53fd7ce7eaa06d2edeb8d209461f7dbb1f3e36e106e6097c4351e7",
+        "changes": []
+      },
+      "heart_relic_card_pilot.py": {
+        "before_sha256": "1ab7c6f179c8d6316cfce575f224b096ec3853f4a722471c9612cc5ca66490b3",
+        "after_sha256": "1ab7c6f179c8d6316cfce575f224b096ec3853f4a722471c9612cc5ca66490b3",
+        "changes": []
+      },
+      "heart_relic_card_readout.py": {
+        "before_sha256": "f9ac10ce019186791bd0f3d888a8c3684e8652860e10f5829a85c425ab02451c",
+        "after_sha256": "f9ac10ce019186791bd0f3d888a8c3684e8652860e10f5829a85c425ab02451c",
+        "changes": []
+      },
+      "heart_relic_card_readout_training.py": {
+        "before_sha256": "898ce665e9a319945776a66dc92ed57587ada993f848d46a2814fd7410583a47",
+        "after_sha256": "898ce665e9a319945776a66dc92ed57587ada993f848d46a2814fd7410583a47",
+        "changes": []
+      },
+      "heart_relic_card_training.py": {
+        "before_sha256": "8278ac78a00439ee8a37da3aba3d0138c635c608b278214e2ff075326653eb37",
+        "after_sha256": "8278ac78a00439ee8a37da3aba3d0138c635c608b278214e2ff075326653eb37",
+        "changes": []
+      },
+      "heart_selected_refresh.py": {
+        "before_sha256": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+        "after_sha256": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+        "changes": []
+      }
+    },
+    "unmodified_modules": 12,
+    "changed_modules": 3,
+    "collector_wrapper_changes": [
+      "experiment label",
+      "derive source count from registered families",
+      "nested subset training description"
+    ],
+    "source_wrapper_sha256": "4623db46393786a216cafcad90c49d09074968a20c80567443a3d6a80cbf950f",
+    "collector_wrapper_sha256": "e634baa737cc0e998f75390dc908a37b733fd71743c798e09832a67abd9ebc65",
+    "training_or_game_rule_changes": false
+  },
+  "source_archive": "e100-e101-sources/collector/",
+  "source_archive_hashes": {
+    "collector/run_collections.py": "e634baa737cc0e998f75390dc908a37b733fd71743c798e09832a67abd9ebc65",
+    "collector/frozen/heart_boss_relic_audit.py": "cdc55e3d11e3a9f2245bb4a049e10e858e7b5a67cb66496b625069c587be5f02",
+    "collector/frozen/heart_combat_development.py": "de091a5333cc2d798918551a4c95d53d55ef6290eab4bba8332ffd69928242b4",
+    "collector/frozen/heart_branch_training.py": "645f3fcaa9a508a7e7a9889884ccce17208b89a81fc17c0f54047558c89be229",
+    "collector/frozen/heart_contextual_relic.py": "c5b22388db381fe3304bbc03278f1cc7d5dfffc43f27b17efa744cf9cebe4f06",
+    "collector/frozen/heart_play_selected.py": "0e26953c8a294649f9ebeae52dc5e7f69b4f273ab525874b692ce5651568ad58",
+    "collector/frozen/heart_boss_relic_bandit.py": "33519bf505dd9d69d9e16ebf5317fd74dc2162faa90fe6a766348b32d479a40a",
+    "collector/frozen/heart_relic_card_readout_training.py": "898ce665e9a319945776a66dc92ed57587ada993f848d46a2814fd7410583a47",
+    "collector/frozen/heart_relic_card_training.py": "8278ac78a00439ee8a37da3aba3d0138c635c608b278214e2ff075326653eb37",
+    "collector/frozen/heart_relic_card_experiment.py": "15a0152feab5af3d203fdb22965086b5e2e7b423fc4cc7779e74fab38899ddcc",
+    "collector/frozen/heart_relic_card_pilot.py": "1ab7c6f179c8d6316cfce575f224b096ec3853f4a722471c9612cc5ca66490b3",
+    "collector/frozen/heart_relic_card_development.py": "7d7bc8d494526cb1b0839412ff1f10560eb60d32f382321e92e28ee33fe4fd46",
+    "collector/frozen/heart_relic_card_readout.py": "f9ac10ce019186791bd0f3d888a8c3684e8652860e10f5829a85c425ab02451c",
+    "collector/frozen/heart_branch_pilot.py": "d4b1d6fb833d7b370aa902003ff8c13f0430ccbefab91a373e960f385791e568",
+    "collector/frozen/heart_selected_refresh.py": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+    "collector/frozen/heart_relic_card_model.py": "22f7e9589b53fd7ce7eaa06d2edeb8d209461f7dbb1f3e36e106e6097c4351e7"
+  },
+  "new_continuation_labels": 0,
+  "optimizer_updates": 0,
+  "limits": "Preparation and generation of corrected training labels. It cannot establish a learned gain or final50percent unseen acceptance. E97 data-scale remains untested; E89/E95/E96 failed model hypotheses stay recorded. A separate training registration will use nested small/expanded fits and common heldout families."
+}

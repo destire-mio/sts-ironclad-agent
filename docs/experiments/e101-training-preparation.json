@@ -1,0 +1,177 @@
+{
+  "experiment": "E101",
+  "status": "prepared_not_trained",
+  "created_at": "2026-09-20T01:11:40.863752+00:00",
+  "training_registration_sha256": "f7cad595a2d549112d2394b484bd43ebaa525a8078489e641db439566cac10bd",
+  "verification_registration_sha256": "36915ddff4fcf670eddfb60f1d53b270f719493fd40cca5f31ab6e44ac985f1c",
+  "protocol_sha256": "d933a1fbb1b39b7724140e19074d3ba504b73075d841e46e422b51ed730c4798",
+  "protocol": {
+    "experiment": "E101",
+    "created_at": "2026-09-20T01:00:01.564561+00:00",
+    "identity": {
+      "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_registration_sha256": "5088d2971629ab28c48331af18bc70aa116639cbefb9d71edd0384cb306e9bd3",
+    "collector_registration_sha256": "6dd330cb85793c68bf12ca388bb9adb910560f1a5e2d41dfebe8e7159f15649b",
+    "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+    "source_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "inherited_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+    "inherited_training_registration_sha256": "55aacda55c9de5ac93454a0a38199d47c445e1c44abf9ce9bc5047b804d5a27c",
+    "question": "Does the E97 planned independent-family data expansion improve the fixed joint relic/card readout under the now repaired E98 engine?",
+    "arms": {
+      "small": {
+        "fit_families": 1536,
+        "selection": "E87 fit family IDs, with all outcomes regenerated under E98."
+      },
+      "expanded": {
+        "fit_families": 4608,
+        "selection": "The same1536 plus all3072 E97 additional fit family IDs; no success selection."
+      }
+    },
+    "common_label_holdout": 1024,
+    "development": 512,
+    "config": {
+      "steps": 1000,
+      "learning_rate": 0.03,
+      "gradient_norm": 1.0,
+      "l2": 0.001
+    },
+    "representation": "Inherited frozen parent192-dimensional public-state/candidate embeddings; two learned linear readouts plus fit-only option biases. Centered features and RMS scales fitted only on each arms own fit families, parent score bias1, unknown whole offers use parent. No seed or future state features.",
+    "objective": "Inherited exact expected terminal binary Heart outcome over all assigned fit families and complete two-decision trees plus fixedL2; no invented preference for equal outcomes, no success-only imitation, no layer reward.",
+    "selection": "Train both final checkpoints before common heldout scoring, fixed1000 steps and L2.001, no CV, checkpoint or hyperparameter sweep. Each arm vs parent must net>=20 wins and paired exactp<.05 across common1024. Claim a data-scale gain only if expanded vs small independently meets net>=20 and pairedp<.05. The pairwise development screens are not independent acceptance.",
+    "downstream": "Verify both live choice sets on all reachable heldout families. Qualifying arms then require natural512-development net>=10 and pairedp<.05, zero faults, full terminal/RNG/NN audits, correct scoped first change, winner replans and original winning-route verification. Choose more wins, fewer lost parent wins, then small on a tie. No candidate adoption or natural evaluation by the training command itself.",
+    "implementation_change": "One canonical E100 repaired-engine label store. Nested subsets replace E97s planned join of old and new stores because historicalE86 labels are invalid after repair; the fit recipe, common roles and decision scope remain fixed.",
+    "dependency": "All E99 source and original-development gates and E100 complete label audits. No output model directory may be created before these pass.",
+    "resources": {
+      "torch_threads": 1,
+      "live_choice_workers": 8,
+      "live_choice_stage_seconds": 10800,
+      "observer_interval_seconds": 1200
+    },
+    "limits": "A test of the unexecuted data-scale hypothesis on narrow coupled decisions. It is not a full-policy ceiling or the50percent goal. Failed E89/E95/E96 results stay recorded. Final acceptance requires a separately frozen candidate and1024 truly unseen families."
+  },
+  "data_entry": {
+    "status": "passed",
+    "training_registration_sha256": "f7cad595a2d549112d2394b484bd43ebaa525a8078489e641db439566cac10bd",
+    "checker_sha256": "c67c26f6acd56c42f75a754a424dde24834abbc7f57c9b7bfa1d944536d8dde1",
+    "incomplete_source_rejected_before_model_directory": true,
+    "actual_registered_group_sizes": {
+      "small_fit": 1536,
+      "additional_fit": 3072,
+      "old_label_holdout": 512,
+      "additional_label_holdout": 512,
+      "development": 512
+    },
+    "historical_fixture": {
+      "label_proof_sha256": "6041ae1c6590dcca2261cf0c3737645f479bced51bba789df67ff600f6eb0ec2",
+      "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+      "label_leaves_hash_checked": 25188,
+      "small_fixture_families": 768,
+      "expanded_fixture_families": 1536,
+      "held_fixture_families": 512,
+      "nested_common_references_trees_states_labels_equal": true
+    },
+    "negative_controls_rejected": [
+      "duplicate_family",
+      "missing_family",
+      "changed_role",
+      "overlapping_roles",
+      "card_attached_to_another_family"
+    ],
+    "new_mcts_calls": 0,
+    "optimizer_updates": 0,
+    "historical_labels_admitted_to_E101": false,
+    "limits": "Historical E89 data is used only for loader-format/partition controls. Actual E100 labels and model fitting remain gated."
+  },
+  "native_choice_probe": {
+    "status": "passed",
+    "cases": [
+      {
+        "case": "positive",
+        "status": "verified",
+        "result_sha256": "109944156f4285fa710efede0aefa443e7785576c89eb78adc820f4b3925e46e"
+      },
+      {
+        "case": "wrong-expanded-relic",
+        "status": "verification_error",
+        "result_sha256": "bc7d15eb38dc7c4b7e6f435eb3c9ed7ac241a90f4ec14964a8fe75d9f3eea987"
+      },
+      {
+        "case": "wrong-expanded-card",
+        "status": "verification_error",
+        "result_sha256": "eab69b8df3190e6699e134c5345de917c961e762c0e6f0c81527a1662173741c"
+      }
+    ],
+    "engine_sha256": "5719dc73cd68c6e9a86bad0407e21a26ad7467bf57ab19ffc9fd3f28ee42ec36",
+    "source_episode_sha256": "651be4b07da38d3898ea78bd98801cb0f1f83d122b83aaaf7d39eacfc6d21836",
+    "seed": 218154331,
+    "relic_prefix_index": 78,
+    "card_prefix_index": 82,
+    "verifier_sha256": "42464a83e3dc551ef839a9bb9f8dd946ec002af716484d77afd0d2a4f403a8ea",
+    "driver_sha256": "66a60279f800c4f71d62cf681442473e6035f9f872dd77ecbcfb59b1469bdaec",
+    "runtime_manifest_sha256": "099ada6d332051997f82ec8b705b60503d7aa13a83d8fb661a052838d061740c",
+    "zero_head_checkpoints": {
+      "small": "0f10a11e97bf8d27616c327fa879e3beacbb5956d3d7bf7c20cbf881907c03ce",
+      "expanded": "eefcf621dd563a335b1ca0bc3b124d8e8615ecdfcadba21bee7cb12b7d4aeca7"
+    },
+    "new_mcts_calls": 0,
+    "optimizer_updates": 0,
+    "counterfactual_labels_generated": 0,
+    "limits": "Observed E98 parent branch only, using two software-only zero-head models; not a complete counterfactual tree or E101 learning result."
+  },
+  "source_changes": {
+    "status": "verified",
+    "training_function_byte_equality": {
+      "joint_input": true,
+      "check_registration": true,
+      "packed": true,
+      "join_inputs": true,
+      "train": false,
+      "sha": true,
+      "components": true,
+      "read": true,
+      "write": true,
+      "assigned_roles": false,
+      "proof": true
+    },
+    "verification_function_byte_equality": {
+      "verify": false,
+      "learning_worker": true,
+      "components": true
+    },
+    "new_training_functions": [
+      "load_inputs"
+    ],
+    "changed_training_scope": "Constants and assigned_roles/load_inputs/train input wiring use one E100 corrected label table with registered nested family groups. The fit loop/optimizer/heldout gates are inherited.",
+    "changed_verification_scope": "verify loads that same single corrected table and selects small_fit from registered groups; native learning_worker is byte-identical.",
+    "old_training_sha256": "b32282eb40c6ee36594acfe8319ee55a648bbf92c78fac12b54d8852a13e3e3f",
+    "new_training_sha256": "f89bfb141ffd8c9be9fb5ca267d4810cf86a62cb125e8f599d58112569af2bce",
+    "old_verifier_sha256": "915d148f91e4812efe49871ea719ccf87d01cafd88d4026efee8b65c2e4bbf34",
+    "new_verifier_sha256": "42464a83e3dc551ef839a9bb9f8dd946ec002af716484d77afd0d2a4f403a8ea"
+  },
+  "recipe_body": {
+    "prior_check_sha256": "472837261166c401aba4a7b9902cfe261345bbb9b1f3c7427514cf94628483ff",
+    "optimizer_and_common_holdout_body_equal_after_group_name_substitution": true,
+    "zero_hidden_layer_changes": true,
+    "training_not_executed": true
+  },
+  "preserved_checker_error": {
+    "status": "checker_error",
+    "error_type": "AttributeError",
+    "error": "'str' object has no attribute 'read_bytes'",
+    "site": "run-native-probe.py engine identity check, before model/probe job creation",
+    "cause": "sha helper accepted Path only but module __file__ is a string.",
+    "correction": "Normalize hash-helper input with pathlib.Path; no runtime, model, game, expected choice or formal training code change.",
+    "script_sha256": "dcc98c59ad4c67ee27d6a213360d52a47f69a327fb69e3def3a8d75c255d3763",
+    "created_at": "2026-09-20T01:06:50.308189+00:00"
+  },
+  "source_archive": "e100-e101-sources/training/",
+  "source_archive_hashes": {
+    "training/scale_verify.py": "42464a83e3dc551ef839a9bb9f8dd946ec002af716484d77afd0d2a4f403a8ea",
+    "training/scale_training.py": "f89bfb141ffd8c9be9fb5ca267d4810cf86a62cb125e8f599d58112569af2bce"
+  },
+  "optimizer_updates": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0
+}
