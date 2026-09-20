@@ -1,0 +1,58 @@
+{
+  "status": "prepared_pending_completed_learning",
+  "created_at": "2026-09-20T11:40:35.643885+00:00",
+  "evidence_scope": "simulator_only",
+  "purpose": "Reuse completed label trees to separate missed available wins from families with no winning measured combination and families outside the measured decision scope. Do not repeat E89/E95 fitting or E96 sweeps.",
+  "historical_reference": {
+    "experiment": "E89",
+    "engine_scope": "Ironclad A20 natural-start Heart; first Act1 boss relic and last card offer at the first Act2 battle; surrounding parent NN and E86 MCTS frozen. Prismatic Shard purchase excluded.",
+    "coverage": {
+      "fit": {
+        "assigned": 1536,
+        "extra_families_over_relic_oracle": 129,
+        "hindsight_counts": {
+          "card_oracle": 258,
+          "joint_oracle": 347,
+          "parent": 155,
+          "relic_oracle": 218
+        },
+        "mixed_card_families": 322,
+        "mixed_card_states": 509
+      },
+      "label_holdout": {
+        "assigned": 512,
+        "extra_families_over_relic_oracle": 43,
+        "hindsight_counts": {
+          "card_oracle": 76,
+          "joint_oracle": 112,
+          "parent": 45,
+          "relic_oracle": 69
+        },
+        "mixed_card_families": 105,
+        "mixed_card_states": 158
+      }
+    },
+    "public_report_sha256": "e0441a7dda46963e23a846e9ad721a425de526f3c657ba1a43d6d999058b1639",
+    "limits": "Historical E86-engine diagnostic only; not an E121 result, population bound or trained policy."
+  },
+  "entry": "Require both E128 frozen fits, completed heldout live-choice verification and complete E127 labels before reading new diagnostic outcomes. No game, gradient, reselection or unseen-seed draw.",
+  "reported_groups": [
+    "no_scoped_node_loss",
+    "no_scoped_node_win",
+    "all_measured_combinations_lose",
+    "missed_available_winning_combination",
+    "selected_winning_combination"
+  ],
+  "cases": {
+    "groups_separated": true,
+    "rescue_accounting": true,
+    "wrong_target_rejected": true
+  },
+  "actual_incomplete_learning_rejected_before_output": true,
+  "diagnostic_sha256": "4745d1b5c1ec81a51be06fc4d092a05cb53d5195608d30f77fb54372eb12e686",
+  "new_labels_read": false,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "study_registration_sha256": "b223d92e118fbbc53e4f2b1848ef18e21a721a75797057a7cce537087ae01b38",
+  "inherited_report_scope_note_sha256": "09bc1e1aed1afc068ca5475c10b2b285a8a1422712332a220570b06bebf1d10d"
+}
