@@ -1,6 +1,6 @@
 {
   "experiment": "E97-training",
-  "status": "prepared_waiting_for_continuations",
+  "status": "prepared_but_blocked_by_original_difference",
   "registration_sha256": "55aacda55c9de5ac93454a0a38199d47c445e1c44abf9ce9bc5047b804d5a27c",
   "entry_verification_sha256": "68f2f93ce991c833f63b31a8682737cacbc655472ff051065486251bd539e1f3",
   "cases": [
@@ -86,5 +86,8 @@
     ],
     "remaining": "Run only after the registered fits and complete input gates; all1024 heldout families remain required."
   },
-  "live_verifier_entry_sha256": "bc1bf889a6c0614a6de9003179df6bf5d650629ac936e00b6ae7fc9aa7ad90f9"
+  "live_verifier_entry_sha256": "bc1bf889a6c0614a6de9003179df6bf5d650629ac936e00b6ae7fc9aa7ad90f9",
+  "status_before_source_stop": "prepared_waiting_for_continuations",
+  "source_stop_result": "docs/experiments/e97-source-stop-result.json",
+  "original_preparation_publication_sha256": "b37fb45053e5b2cd798fa48d0c5d7323b07ba536aaf5db5785e1ea4d6760c744"
 }

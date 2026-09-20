@@ -1,6 +1,6 @@
 {
   "experiment": "E97C",
-  "status": "prepared_waiting_for_source_gates",
+  "status": "prepared_but_blocked_by_original_difference",
   "checks": {
     "status": "passed",
     "registration_sha256": "4c7d9c1c5c9c7547f85eb0316ac3ad09fcda32957259992ff3a35c5f65458783",
@@ -21,5 +21,8 @@
   "entry_verification_sha256": "966c1db1b4043e37815392b4560cf51df2218f932aaa71831d391f9abb262f1c",
   "retries": 0,
   "formal_optimizer_updates": 0,
-  "verification_wrapper_note": "The first publication check had a path-type error after registration. The corrected checker preserves that failure; frozen collectors and registration were not changed, and no game was retried."
+  "verification_wrapper_note": "The first publication check had a path-type error after registration. The corrected checker preserves that failure; frozen collectors and registration were not changed, and no game was retried.",
+  "status_before_source_stop": "prepared_waiting_for_source_gates",
+  "source_stop_result": "docs/experiments/e97-source-stop-result.json",
+  "original_preparation_publication_sha256": "79460a371521568a218ad7ba4d611d6923e67656d6c0c2ac8a23ea0e6a42cb51"
 }

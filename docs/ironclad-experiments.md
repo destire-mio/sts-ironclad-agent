@@ -1,6 +1,6 @@
 # Ironclad experiment archive
 
-This copy preserves the local experiment ledger through the registered E97 independent-family data-scale study on 2026-09-20, with natural collection in progress. Completed E89/E95/E96 decisions remain recorded; no new candidate was adopted. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
+This copy preserves the local experiment ledger through the E97 original-source stop on 2026-09-20. E97 found a Guardian HP/block mismatch and stopped before new labels or training; its data-scale hypothesis remains untested. Historical decisions and partial source evidence are preserved. Raw run artifacts, models and game JARs stay local. Historical absolute paths identify local evidence and are not public downloads. Current status is in [ironclad-training-status.md](ironclad-training-status.md).
 
 # 铁甲战士 A20 心脏：训练路线与实验记录
 
@@ -2292,7 +2292,7 @@ E89 的三组小读出头没有通过内部选择。E95 使用保存的 27 个�
 
 下一轮优先检验独立家庭覆盖，不复扫本次读出目标与正则值。先制定扩大自然来源的固定数据规模对照，明确真正新增的家庭数、匹配的学习预算、采样成本和开发名单；旧 E34／E35 在不同运行时、后期节点与较小有效家庭组上的失败不能作为此次数据扩展有效的证据，也不能被删除。两步范围的事后上限限制保留，数据实验即使通过也不是 50% 目标完成。
 
-## 106. E97：扩大独立家庭的数据规模对照（2026-09-20，来源采集中）
+## 106. E97：扩大独立家庭的数据规模对照（2026-09-20，原版差异停机，未训练）
 
 本轮检验新增独立种子能否改善同一联合读出配方的泛化。对本地四个项目的历史与预留名单建立内容摘要快照：233 个来源、119 个去重快照，共排除 51,793 个值。生成 4,096 个无重叠新种子，以预定哈希顺序分为 3,072 个拟合家庭、512 个标签留出家庭和 512 个自然开发家庭；分区在结果产生前冻结。失败、缺少目标节点与执行故障均保留，不换种子。它们从分配起属于训练／开发材料，不能进入最终未见种子验收。
 
@@ -2315,3 +2315,15 @@ E97C 后续采集准备冻结：复用 E89 九个准备函数和十五个 Python
 固定两臂训练与现场选择核验完成准备。七项数据控制覆盖：E89 全部 2,048 个拟合／留出家庭拆分后合并与原数据相同、重复家庭、遗漏家庭、角色变更、分区重叠、选牌挂接另一家庭、续局未完成时拒绝开训。新输入加载器核对 E89 的 25,188 个叶子文件摘要、1,581 份审计和冻结清单。现场选择工具在一个已知拟合家庭的原生遗物／选牌状态中通过双模型正控制，并拒绝第二个模型的错误遗物与错误选牌期望。所用模型为历史零头对照，不是 E97 新模型；没有新增 MCTS 或参数更新。
 
 训练脚本先拟合两臂并保存摘要，再重建共同留出终局；验证脚本复核各臂自己的拟合支持集合、RMS、保存动作及完整共同留出现场选择。训练登记 SHA `55aacda55c9de5ac93454a0a38199d47c445e1c44abf9ce9bc5047b804d5a27c`，现场核验登记 SHA `8be0ab9830f492ebeaf886894db11c8f9469e2a675d71847b7fcb3b66a44b387`；公开准备报告 `docs/experiments/e97-training-preparation.json`。实际新数据加载、两次各 1,000 步拟合、1,024 家庭留出核验、自然开发与候选原版检查均为后续阶段，不能用准备检查替代。
+
+### 106.1 原版来源门槛失败与数据停机
+
+按 20 分钟间隔检查后发现 E97P 在第七条原版路线停止。全部 512 个开发来源完成独立终局／RNG／计时与 67,916 次局外 NN 核验：48 个心脏胜局、462 个死亡、2 个未打心脏的第三幕终局；这仍是开发数据。48 条待检胜局中，前 6 条匹配 6,261 个原版命令及追加持久 RNG 检查，第 7 条出现规则差异，另 41 条未尝试；已用实例清理完成。
+
+种子 218154331，第 16 层守护者，完整前缀第 73 步、战斗动作第 30 项。原版与模拟器在打“坚毅”之前均为守护者 130 HP／0 格挡、形态转换剩余 3；玩家有无惧疼痛 3、势不可挡 5、黑暗之拥 1。出牌后的原版守护者为 120 HP／20 格挡，模拟器为 125 HP／15 格挡。现场比较报告的差异是怪物 HP／格挡；该失败路线没有进入后续的六条持久 RNG 录制复验，不能把“现场未报 RNG 差异”说成全部 RNG 通过。此差异改变后续战斗状态与搜索结果，阻断新标签及训练。
+
+原版源码的受伤回调将转换形态动作放到队尾，该动作执行时再将移除能力和获得 20 格挡放到队尾。模拟器已经把 20 格挡放到队尾，但省去中间的转换动作，并在受伤回调中移除形态转换、改变意图。排查应覆盖这两级队列和后续触发伤害，不能误诊为“把立即加格挡改成排队”即可修复。本轮尚未修改或验收此规则。
+
+00:09:40 UTC 向所属采样进程组 4072 发送停止信号；父子进程结束，进程组清理核对为空。停机状态快照为 2,478 个完成任务，最终保存 2,485 个完整来源文件（512 开发、1,973 拟合），差额来自观察与停机之间完成的任务；其余 1,611 个没有完整文件，不记作死亡。全部文件摘要和原版完成文件中的摘要复核通过。完整 4,096 来源准入、全组胜局重规划、新候选续局、参数更新、候选自然开发与最终验收均未执行或未完成；不重启旧引擎队列，不重置时限，不替换种子。
+
+E97 的数据规模假设没有接受检验，不能把原版门槛失败当作“扩数据无效”。准备代码和固定分区保留；下一项工作是修复并验证守护者转换队列，之后另行登记受影响来源与标签的更新。原版门槛完成文件 SHA `05e6bb8e5c4a8421a1e879aff830687604b9e8e7e9ab63e4f0b3cc5cf401084d`，停机发布复核 SHA `af01f66104660aa889f145a7af55983f05965d17f54edcd6613019f099036af3`；公开结果 `docs/experiments/e97-source-stop-result.json`。源采样与原版观察计划标记停止；原版观察器最新文件位于运行目录外的 `original-observation-schedule.json`，初始目录内观察文件保留原样以维持完成证明的摘要。

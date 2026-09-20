@@ -1,0 +1,90 @@
+{
+  "experiment": "E97",
+  "status": "stopped_before_training_due_to_original_difference",
+  "at": "2026-09-20T00:14:33.300283+00:00",
+  "registered_families": 4096,
+  "preserved_source_episode_files": 2485,
+  "source_files_by_role": {
+    "train_development": 512,
+    "fit": 1973
+  },
+  "not_collected_families": 1611,
+  "source_stop_observation": {
+    "active_workers": 8,
+    "completed": 2478,
+    "controller_pid": 4072,
+    "seconds_remaining": 7955,
+    "stage": "E97S_runtime_refresh",
+    "total": 4096
+  },
+  "complete_source_admission": false,
+  "source_worker_group_remaining": [],
+  "source_child_exit_code": -15,
+  "development_source_audit": {
+    "status": "complete",
+    "families": 512,
+    "terminal_replays": 512,
+    "outcomes": {
+      "death": 462,
+      "heart_win": 48,
+      "act3_without_heart": 2
+    },
+    "execution_faults": 0,
+    "outside_NN_choices_audited": 67916,
+    "identity": {
+      "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_index_sha256": "0c3a1399e6cdb1e3c250b0eff0196b28780336c00b137c388af542dcd932d979",
+    "source_cases_sha256": "036c700adf62287214cc3042b80e5a3e70e8a73de28329b780a7cf14aae00cef",
+    "limits": "Development subset only; full natural source and winner-replan completion are separate admission gates."
+  },
+  "original_requested_winners": 48,
+  "original_attempted": 7,
+  "original_matched": 6,
+  "original_unattempted": 41,
+  "matched_commands": 6261,
+  "difference": {
+    "seed": 218154331,
+    "act": 1,
+    "floor": 16,
+    "prefix_index": 73,
+    "combat_action_index": 30,
+    "original_command": "play3:TrueGrit",
+    "powers": [
+      "FeelNoPain3",
+      "Juggernaut5",
+      "DarkEmbrace1"
+    ],
+    "guardian_before": {
+      "hp": 130,
+      "block": 0,
+      "mode_shift": 3
+    },
+    "original_after": {
+      "hp": 120,
+      "block": 20
+    },
+    "simulator_after": {
+      "hp": 125,
+      "block": 15
+    },
+    "rng_difference_at_boundary": false,
+    "scope": "Observed full-action monster HP/block difference; changes subsequent combat state. Exact repair and regression proof remain pending."
+  },
+  "source_reading": "The original damage callback queues ChangeStateAction at the bottom; that action later queues power removal and20block at the bottom. The simulator already queues20block at the bottom but skips the extra transition queue stage and removes mode shift/changes intent immediately. Do not mistake this for a simple immediate-block call.",
+  "new_counterfactual_continuations": 0,
+  "formal_optimizer_updates": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "adopted_model": null,
+  "hypothesis_result": "Not tested: new-data collection and fitting did not pass source admission. This is a parity stop, not evidence rejecting data expansion.",
+  "registration_sha256": "9ef7cadcd83e960d2ec3a18d2ae307b2c799dcdca7c72c7c968013889d0ddad8",
+  "original_gate_completion_sha256": "05e6bb8e5c4a8421a1e879aff830687604b9e8e7e9ab63e4f0b3cc5cf401084d",
+  "source_stop_sha256": "cf42147a5533340d903092b1686d6df9e5659881ff861892daaf1e08e9eda346",
+  "stopped_source_index_sha256": "e68559ba721aaa90388509d81ee360975844a127d5c635da0fd3e69ebaf37980",
+  "limits": "The six selected original winning routes are not exhaustive parity or an original population win rate. Remaining partial source episodes are retained without complete source audit or winner replans; missing families are not deaths. No deadline reset, seed substitution or old-engine restart.",
+  "stop_publication_verification_sha256": "af01f66104660aa889f145a7af55983f05965d17f54edcd6613019f099036af3",
+  "rng_scope_note": "The stopped-source report field rng_difference_at_boundary=false means the live comparator reported only monster HP/block differences. The failed original route did not receive the extra recorded six persistent-RNG checks; it is not an all-stream RNG pass.",
+  "reporting_scope_sha256": "7df96661784bf1caf8c7af99f0902b80b3dd422035cfe3e42a701b935e0c64de"
+}

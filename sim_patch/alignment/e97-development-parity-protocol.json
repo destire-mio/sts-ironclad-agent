@@ -33,7 +33,10 @@
     "original_template_artifacts_checked": 8,
     "scope": "Static syntax, frozen inputs and loaded-module identity only; no source outcome audit or original execution."
   },
-  "status": "execution_started",
+  "status": "stopped_on_original_difference",
   "execution_started_at": "2026-09-19T23:45:11.171863+00:00",
-  "execution_started_sha256": "0791a08d51b2600b0aa7d7f378fc680f4f412986ffc004b89a3726b7d847de9b"
+  "execution_started_sha256": "0791a08d51b2600b0aa7d7f378fc680f4f412986ffc004b89a3726b7d847de9b",
+  "status_before_source_stop": "execution_started",
+  "source_stop_result": "docs/experiments/e97-source-stop-result.json",
+  "original_preparation_publication_sha256": "64ecaea0abdad40c8272553968660c887dbc59b55ce15c3948e88d938f764130"
 }

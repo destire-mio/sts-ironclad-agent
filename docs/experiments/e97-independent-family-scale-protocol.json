@@ -49,7 +49,7 @@
   },
   "failure_rule": "Preserve every failed stage and do not reset deadlines,retry seeds,lower gates or expand this fixed cohort after outcomes. An actual execution fault blocks downstream training pending diagnosis. No other simulation pools or paid compute.",
   "limits": "The data-scale package may still overfit the fixed representation and narrow two-choice scope. E95s observed347/1536 hindsight maximum is not a full-policy/population bound. E34/E35 historical data-scale failures remain; this is a larger independent-family/current-engine question, not proof that more data works.",
-  "status": "natural_collection_running",
+  "status": "stopped_on_original_difference",
   "date": "2026-09-20",
   "source_experiment": "E87",
   "joint_source_experiment": "E89",
@@ -81,5 +81,8 @@
     "zero_overlap": true,
     "scope": "Preparation and process launch only. No completed source cohort, new training result or original-game parity claim."
   },
-  "preparation_publication_sha256": "21538d8174d1c961f7f592cf95c6ac113d9d7e9b82e092c6db07034a1f99ed17"
+  "preparation_publication_sha256": "21538d8174d1c961f7f592cf95c6ac113d9d7e9b82e092c6db07034a1f99ed17",
+  "status_before_source_stop": "natural_collection_running",
+  "source_stop_result": "docs/experiments/e97-source-stop-result.json",
+  "original_preparation_publication_sha256": "e3c7cf9a607a7909f242fbee2cbc7e35bf70df83a3bf8446f88def90e42fb9bd"
 }
