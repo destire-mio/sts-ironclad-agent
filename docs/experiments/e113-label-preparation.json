@@ -1,0 +1,59 @@
+{
+  "experiment": "E113",
+  "created_at": "2026-09-20T06:54:05.677164+00:00",
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+  "identity": {
+    "engine_sha256": "ec7c0a665bcf988fce9ef4767e9e385c66365940a256eb2a3c18eb251f3b1467",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_manifest_sha256": "dedec0e98d3660abae842c4f42a70cb0024e76ecc14d931ce711f8e54fc4a6ed",
+  "parity_registration_sha256": "282ebe2ba1ef5630041c8767a7f6cc658c44a67235dd2f3fc49529debd6fb0a5",
+  "parent_registration_sha256": "02a1e70ae35b9061d36de36e655c801bcb9501a9b904239c329d94ca15787bef",
+  "inherited_collector_registration_sha256": "edca117af6fc1f77e8ed689a3f56828bed4adfd69b131ab298d81d3c37f56271",
+  "collection": "Same registered first-boss relic and last scoped Act2-row0 card menus as E89/E97. Enumerate all native relic/card/Bowl/skip alternatives and parent controls for all4608 fit and1024 label_holdout families. Keep early failures and absent nodes. One canonical repaired-engine label table supports small1536/expanded4608 fits; no old leaves, duplicated shared-family sampling or development branches.",
+  "source_gates": "All6144 E112 sources, terminal/state/RNG/timer/nonintervention NN audits and allwinner replans; all512 development source audits and every development-winning original route plus added persistent RNG. Any source fault/nonmatch blocks collection. Each original-winning route also needs all twelve exported terminal RNG streams with zero state imports and no resynchronization.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "natural_stage_seconds": 10800,
+    "first_relic_collection_seconds": 36000,
+    "joint_collection_seconds": 93600,
+    "independent_label_audit_seconds": 18000,
+    "observer_interval_seconds": 1200,
+    "original_jvm_instances": 1
+  },
+  "deadline_rationale": "The labeled family count grows from E97s3584 to5632, a factor11/7. Scale the preregistered21600/57600/10800s stage budgets by that factor and round up to36000/93600/18000s before new continuation outcomes. Per-episode guards, work per branch and retry policy do not change. These are new-stage budgets, not extensions of an expired job.",
+  "verification": "Independently replay every new continuation terminal/state/RNG/timer and all nonintervention NN choices. Rebuild every card node from its natural relic prefix; every parent-choice card control must reproduce its first-relic source. Preserve duplicate/omitted/fault/missing labels as errors, not losses.",
+  "optimizer_updates": 0,
+  "limits": "Corrected-engine label preparation only until all E112 gates pass. E107/E108/E109 remain closed, immutable and inadmissible. The original data-scale hypothesis is untested; no learned gain or unseen acceptance.",
+  "terminal_rng_helper_sha256": "5d1b33d95562c0560eacdb9297afb28e40bd365fe23d1930d372edaeef6c59de",
+  "status": "prepared_not_executed",
+  "registration_sha256": "bd9ad9f917d9a74c8819240f0b06afd8b4a492133170e25c5f3d3ba95d905185",
+  "entry_verification_sha256": "0b53b5f6ed0e23f0cfa7532e00944800c1ecc8055ab40f87783d1aefb6ff61e8",
+  "frozen_collector_modules_unchanged": 15,
+  "known_source_entry": {
+    "seed": 1138994370,
+    "episode_sha256": "04f74b473cdf6ad644353e9eecc6b725db3023a859e886cd31232c36d3d183dd",
+    "prefix_index": 75,
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen": 2,
+    "natural_public_state_reconstructed": true
+  },
+  "incomplete_source_rejected": true,
+  "new_continuation_labels": 0,
+  "new_mcts_calls": 0,
+  "public_source_bindings": "e113-e114-source-bindings.json",
+  "public_source_bindings_sha256": "e59afd48f35644a74f954084f326f125f22333eb36f781fa55c740aab7efb21b"
+}

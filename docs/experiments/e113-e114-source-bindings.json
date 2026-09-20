@@ -1,0 +1,640 @@
+{
+  "experiment": "E113/E114",
+  "inherited_bindings": "e108-e109-source-bindings.json",
+  "inherited_bindings_sha256": "d4c11a5304039f8d43a0d5d77e8958ede6190bbd3582b86cc1cba055d0a716c9",
+  "operation": "First reconstruct each E108/E109 file using the named inherited binding manifest; verify inherited_sha256. Then apply this files ordered_replacements in order and verify rebound_sha256. Additional sources are published as exact UTF-8 files. Private runtime inputs remain required.",
+  "files": {
+    "run_collections.py": {
+      "role": "collector",
+      "inherited_sha256": "c42f87a35fd28f287f5d3f232ae29691186c672fb13f19925fbacfe8a722b45d",
+      "rebound_sha256": "d6ac3e19a59230d11f561c32f0c7a3c1624abe145b33c3d68735f959214888c7",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "def source_ready(root):",
+          "\ndef require_terminal_rng(proof, identity, helper_sha):\n    expected = ['aiRng', 'cardRandomRng', 'cardRng', 'eventRng', 'merchantRng',\n                'miscRng', 'monsterHpRng', 'monsterRng', 'potionRng', 'relicRng',\n                'shuffleRng', 'treasureRng']\n    assert proof['terminal_rng_streams_per_route'] == 12\n    for row in proof['rows']:\n        terminal = row['terminal_rng']\n        assert terminal['status'] == 'matched' and terminal['seed'] == row['seed']\n        assert terminal['engine_sha256'] == identity['engine_sha256']\n        assert terminal['script_sha256'] == helper_sha\n        assert terminal['rng_streams'] == expected and terminal['differences'] == {}\n        assert terminal['state_imports'] == 0 and terminal['resynchronized'] is False\n        assert terminal['trace_sha256'] == proof['hashes'][f\"traces/{row['seed']}.json\"]\n        assert terminal['rpc_sha256'] == proof['hashes'][f\"original/{row['seed']}-01/rpc.jsonl.gz\"]\n\n\ndef source_ready(root):"
+        ],
+        [
+          "    assert all(row['status'] == 'matched' for row in original['rows'])\n",
+          "    assert all(row['status'] == 'matched' for row in original['rows'])\n    assert sha(parity / 'terminal_rng.py') == plan['terminal_rng_helper_sha256']\n    require_terminal_rng(original, plan['identity'], plan['terminal_rng_helper_sha256'])\n"
+        ]
+      ]
+    },
+    "check-entry.py": {
+      "role": "collector",
+      "inherited_sha256": "f01391a2ed31d8a71916ee980bfa230bcdc95719e62013f3fea399d0612618e3",
+      "rebound_sha256": "54f878316a40b705e10fcc77b10a2c80bfd7fbdfb993463a967b9cb281314cc0",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "881079338",
+          "1138994370"
+        ]
+      ]
+    },
+    "scale_training.py": {
+      "role": "training",
+      "inherited_sha256": "1a83b0d7678592588fc0c931395226356b6f80f2cfc4a4abbb0af672a5ac4d65",
+      "rebound_sha256": "faae92342f6216ea6b9646794b1a8034afbaf5216f2a97875b5cfdc6a4b23028",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ]
+      ]
+    },
+    "scale_verify.py": {
+      "role": "training",
+      "inherited_sha256": "f42a1c3c64815572d062e4e6ce89b43b2219a35d9cdfc57e074edf6fd7d0b920",
+      "rebound_sha256": "ce75f7469bc94a0c38e7a56a43166f815e594ee9a8c2c75ef8584a945f83cb5d",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ]
+      ]
+    },
+    "run-native-probe.py": {
+      "role": "training",
+      "inherited_sha256": "8bd2b4ee840b8d1c2bbf55d7ff862adc31989df4e28bdfa6abcf4257f90101f4",
+      "rebound_sha256": "72dfd182d071f6ec02813331c49ac06367a9808b996f5a3df1db591e3ca73501",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ]
+      ]
+    },
+    "check-renewal-entry.py": {
+      "role": "training",
+      "inherited_sha256": "ce02d1677cb41c9b492029a3993730718231abed0400e1e65c0ad64347fe9987",
+      "rebound_sha256": "ce02d1677cb41c9b492029a3993730718231abed0400e1e65c0ad64347fe9987",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ]
+      ]
+    },
+    "prepare-native-probe.py": {
+      "role": "training",
+      "inherited_sha256": "85c093b2bfb50f2ddd2c767639c3132bb81c4320baadd2073a2b34e4d35a6ebb",
+      "rebound_sha256": "e3dc9684179cd3ba14e3d6340f3222542be75b684894f7cf2f5e8a971b729fe0",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "881079338",
+          "1138994370"
+        ]
+      ]
+    },
+    "scale_development.py": {
+      "role": "training",
+      "inherited_sha256": "1fdb14cb403798a3883fe2fc455cac60342a6d631b4b7de88878c83e360b5368",
+      "rebound_sha256": "049054d45b006cf5a8030658d0646d32367e31a42ae20f91822da25c810158a2",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "    return read(ROOT / 'development-protocol.json')\n",
+          "    for path, expected in reg['original_harness_sha256'].items():\n        assert sha(path) == expected, path\n    return read(ROOT / 'development-protocol.json')\n"
+        ],
+        [
+          "def require_original_complete(proof, expected, identity):",
+          "\ndef require_terminal_rng(proof, identity, helper_sha):\n    expected = ['aiRng', 'cardRandomRng', 'cardRng', 'eventRng', 'merchantRng',\n                'miscRng', 'monsterHpRng', 'monsterRng', 'potionRng', 'relicRng',\n                'shuffleRng', 'treasureRng']\n    assert proof['terminal_rng_streams_per_route'] == 12\n    for row in proof['rows']:\n        terminal = row['terminal_rng']\n        assert terminal['status'] == 'matched' and terminal['seed'] == row['seed']\n        assert terminal['engine_sha256'] == identity['engine_sha256']\n        assert terminal['script_sha256'] == helper_sha\n        assert terminal['rng_streams'] == expected and terminal['differences'] == {}\n        assert terminal['state_imports'] == 0 and terminal['resynchronized'] is False\n        assert terminal['trace_sha256'] == proof['hashes'][f\"traces/{row['seed']}.json\"]\n        assert terminal['rpc_sha256'] == proof['hashes'][f\"original/{row['seed']}-01/rpc.jsonl.gz\"]\n\n\ndef require_original_complete(proof, expected, identity, terminal_helper_sha):"
+        ],
+        [
+          "    assert all(r['status'] == 'matched' for r in proof['rows'])\n",
+          "    assert all(r['status'] == 'matched' for r in proof['rows'])\n    require_terminal_rng(proof, identity, terminal_helper_sha)\n"
+        ],
+        [
+          "        require_original_complete(proof, expected, report['identity'])\n",
+          "        require_original_complete(proof, expected, report['identity'], sha(ROOT / 'terminal_rng.py'))\n"
+        ]
+      ]
+    },
+    "candidate_original.py": {
+      "role": "training",
+      "inherited_sha256": "f52b5bb1f7f687754f541d0a38f8b7bdd99d185ceb46b383058f64f117cfd38c",
+      "rebound_sha256": "a0aae0308607e7e2d418a59203a1cf5e3d36d6437e56b318bc4ed66782185ff3",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "def one(seed):\n    reg = registered()\n    _, M = modules()\n    V = M.V\n    plan = read(ROOT / 'plan.json')\n    assert seed in plan['seeds']\n    result_path = ROOT / f'case-results/{seed}.json'\n    assert not result_path.exists()\n    original = V.one(ROOT, seed, 1, V.setup(ROOT))\n    result = {'seed': seed, 'status': original['status'], 'original': original}\n    if original['status'] == 'original_heart_trace_matched':\n        native = ROOT / f'original/{seed}-01'\n        trace = ROOT / f'traces/{seed}.json'\n        paths = [native / name for name in ('result.json', 'identity.json', 'cleanup.json',\n                                            'rpc.jsonl.gz', 'comparisons.json')]\n        paths.extend((trace, SOURCE / 'config.json'))\n        recorded_root = ROOT / f'recorded/{seed}'\n        recorded_plan = dict(plan, seeds=[seed],\n            source_episode_sha256={str(seed): plan['source_episode_sha256'][str(seed)]},\n            reference_original=str(native), reference_trace=str(trace),\n            reference_runtime_config=str(SOURCE / 'config.json'),\n            reference_hashes={str(p): sha(p) for p in paths},\n            comparison_driver_sha256=sha(V.__file__), recorded_driver_sha256=sha(M.__file__),\n            regression_only=False)\n        write(recorded_root / 'plan.json', recorded_plan)\n        recorded = M.run(recorded_root)\n        result.update(recorded=recorded, status=recorded['status'])\n        if recorded['status'] == 'recorded_original_heart_trace_matched':\n            result['verified'] = helper().audit_recorded(recorded_root,\n                {'seed': seed, 'sha256': plan['source_episode_sha256'][str(seed)]}, reg['identity'])\n            result['status'] = 'matched'\n    write(result_path, result)",
+          "def one(seed):\n    reg = registered()\n    _, M = modules()\n    V = M.V\n    plan = read(ROOT / 'plan.json')\n    assert seed in plan['seeds']\n    result_path = ROOT / f'case-results/{seed}.json'\n    assert not result_path.exists()\n    original = V.one(ROOT, seed, 1, V.setup(ROOT))\n    result = {'seed': seed, 'status': original['status'], 'original': original}\n    if original['status'] == 'original_heart_trace_matched':\n        native = ROOT / f'original/{seed}-01'\n        trace = ROOT / f'traces/{seed}.json'\n        paths = [native / name for name in ('result.json', 'identity.json', 'cleanup.json',\n                                            'rpc.jsonl.gz', 'comparisons.json')]\n        paths.extend((trace, SOURCE / 'config.json'))\n        recorded_root = ROOT / f'recorded/{seed}'\n        recorded_plan = dict(plan, seeds=[seed],\n            source_episode_sha256={str(seed): plan['source_episode_sha256'][str(seed)]},\n            reference_original=str(native), reference_trace=str(trace),\n            reference_runtime_config=str(SOURCE / 'config.json'),\n            reference_hashes={str(p): sha(p) for p in paths},\n            comparison_driver_sha256=sha(V.__file__), recorded_driver_sha256=sha(M.__file__),\n            regression_only=False)\n        write(recorded_root / 'plan.json', recorded_plan)\n        recorded = M.run(recorded_root)\n        result.update(recorded=recorded, status=recorded['status'])\n        if recorded['status'] == 'recorded_original_heart_trace_matched':\n            result['verified'] = helper().audit_recorded(recorded_root,\n                {'seed': seed, 'sha256': plan['source_episode_sha256'][str(seed)]}, reg['identity'])\n            import terminal_rng\n            terminal = terminal_rng.audit(ROOT, SOURCE, seed)\n            write(ROOT / f'terminal-rng/{seed}.json', terminal)\n            result['terminal_rng'] = terminal\n            result['status'] = 'matched' if terminal['status'] == 'matched' else 'terminal_rng_mismatch'\n    write(result_path, result)"
+        ],
+        [
+          "                assert checked == result['verified']\n                verified.append(checked)",
+          "                assert checked == result['verified']\n                terminal = read(ROOT / f\"terminal-rng/{result['seed']}.json\")\n                assert terminal == result['terminal_rng'] and terminal['status'] == 'matched'\n                assert terminal['script_sha256'] == sha(G.ROOT / 'terminal_rng.py') and len(terminal['rng_streams']) == 12\n                verified.append(checked)"
+        ],
+        [
+          "            'formal_optimizer_updates': 0, 'limits': reg['limits'],\n",
+          "            'formal_optimizer_updates': 0, 'limits': reg['limits'],\n            'terminal_rng_streams_per_route': 12,\n"
+        ]
+      ]
+    },
+    "check-development-entry.py": {
+      "role": "training",
+      "inherited_sha256": "03c6a477bf0294c7cae01bbea9c903b3fc47557e0e9f8c207673c359702cafb6",
+      "rebound_sha256": "65254740d2d90846446da72d11794791a1a98de0002bd68ee33d515f9f306777",
+      "ordered_replacements": [
+        [
+          "heart-e106-scale-source-refresh-20260920-01",
+          "heart-e111-scale-source-refresh-20260920-01"
+        ],
+        [
+          "heart-e106-scale-joint-labels-20260920-01",
+          "heart-e111-scale-joint-labels-20260920-01"
+        ],
+        [
+          "heart-e106-scale-training-20260920-01",
+          "heart-e111-scale-training-20260920-01"
+        ],
+        [
+          "e107-development-parity-20260920-01",
+          "e112-development-parity-20260920-01"
+        ],
+        [
+          "e106-unceasing-top-queue-repair-20260920-01",
+          "e111-post-victory-exhaust-repair-20260920-01"
+        ],
+        [
+          "E109",
+          "E114"
+        ],
+        [
+          "E108",
+          "E113"
+        ],
+        [
+          "E107",
+          "E112"
+        ],
+        [
+          "E106",
+          "E111"
+        ],
+        [
+          "e109",
+          "e114"
+        ],
+        [
+          "e108",
+          "e113"
+        ],
+        [
+          "e107",
+          "e112"
+        ],
+        [
+          "development-entry-probe-v2",
+          "development-entry-probe"
+        ],
+        [
+          "    G.require_original_complete(positive, [11, 29], identity)\n",
+          "    helper_sha = 'fixture-terminal-helper'\n    positive['terminal_rng_streams_per_route'] = 12\n    positive['hashes'] = {}\n    for row in positive['rows']:\n        seed = row['seed']\n        row['terminal_rng'] = {\n            'status': 'matched', 'seed': seed, 'engine_sha256': identity['engine_sha256'],\n            'script_sha256': helper_sha, 'differences': {}, 'state_imports': 0, 'resynchronized': False,\n            'rng_streams': ['aiRng', 'cardRandomRng', 'cardRng', 'eventRng', 'merchantRng',\n                'miscRng', 'monsterHpRng', 'monsterRng', 'potionRng', 'relicRng', 'shuffleRng', 'treasureRng'],\n            'trace_sha256': f'trace-{seed}', 'rpc_sha256': f'rpc-{seed}'}\n        positive['hashes'][f'traces/{seed}.json'] = f'trace-{seed}'\n        positive['hashes'][f'original/{seed}-01/rpc.jsonl.gz'] = f'rpc-{seed}'\n    G.require_original_complete(positive, [11, 29], identity, helper_sha)\n"
+        ],
+        [
+          "    checks['original_admission_negative_cases'] =",
+          "    for name, field, replacement in (\n        ('terminal_status', 'status', 'mismatch'), ('terminal_seed', 'seed', 30),\n        ('terminal_engine', 'engine_sha256', 'wrong-engine'),\n        ('terminal_helper', 'script_sha256', 'old-helper'),\n        ('terminal_difference', 'differences', {'miscRng': 'changed'}),\n        ('terminal_import', 'state_imports', 1), ('terminal_resync', 'resynchronized', True),\n        ('terminal_trace', 'trace_sha256', 'wrong-trace'), ('terminal_rpc', 'rpc_sha256', 'wrong-rpc')):\n        value = copy.deepcopy(positive); value['rows'][1]['terminal_rng'][field] = replacement\n        negatives[name] = value\n    value = copy.deepcopy(positive); value['rows'][1]['terminal_rng']['rng_streams'].pop()\n    negatives['terminal_missing_stream'] = value\n    value = copy.deepcopy(positive); value['terminal_rng_streams_per_route'] = 6\n    negatives['old_six_stream_gate'] = value\n    checks['original_admission_negative_cases'] ="
+        ],
+        [
+          "G.require_original_complete(v, [11, 29], identity)",
+          "G.require_original_complete(v, [11, 29], identity, helper_sha)"
+        ],
+        [
+          "    checks['original_one_route_body_unchanged'] = True\n",
+          "    checks['original_one_route_body_unchanged'] = True\n    assert function(C / 'run_collections.py', 'require_terminal_rng') == function(Path(G.__file__), 'require_terminal_rng')\n    collector.require_terminal_rng(positive, identity, helper_sha)\n    for value in negatives.values():\n        if value.get('identity') == identity and value.get('status') == 'complete':\n            # Aggregate/count failures are covered by require_original_complete above.\n            if any(r.get('terminal_rng', {}).get('status') != 'matched' for r in value['rows']) or value.get('terminal_rng_streams_per_route') != 12:\n                rejected(lambda v=value: collector.require_terminal_rng(v, identity, helper_sha))\n    checks['source_and_candidate_terminal_contract_identical'] = True\n"
+        ]
+      ]
+    }
+  },
+  "additional_sources": {
+    "terminal_rng.py": {
+      "role": "training",
+      "file": "e113-e114-gate-sources/terminal_rng.py",
+      "sha256": "427f4fef4c6e85fa465088ead6580b63db6635a4d9f697b64c8e57ba2b08bbfb"
+    },
+    "check-terminal-entry.py": {
+      "role": "training",
+      "file": "e113-e114-gate-sources/check-terminal-entry.py",
+      "sha256": "2269774a5e87cb3568ddc35822a04bd8c003a415fc7b791013a0a6ef5f8d24cb"
+    }
+  },
+  "semantic_changes": [
+    "Append the E112 twelve-stream common-terminal RNG audit to candidate original routes.",
+    "Require terminal proof identity, complete stream names, no imports/resynchronization and matching trace/RPC references before collection or candidate admission.",
+    "Recompute and check all nested original harness hashes; preserve four previously stale references as rejected controls."
+  ],
+  "unchanged": "All fifteen collector modules, training recipe, data roles, action scopes, live/recorded game comparators and MCTS budgets."
+}
