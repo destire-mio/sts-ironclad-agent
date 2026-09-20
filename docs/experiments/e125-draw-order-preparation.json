@@ -1,0 +1,92 @@
+{
+  "experiment": "E125",
+  "status": "source_difference_pending_original_validation",
+  "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+  "hypothesis": "Evolve and Fire Breathing share priority 5. Native onCardDraw traverses acquired power order; the simulator always queues Evolve first. If lethal Fire Breathing comes first, native victory cleanup removes the queued extra draw before a shuffle; fixed Evolve-first code shuffles and advances persistent RNG and Sundial instead.",
+  "source_plan_sha256": "7884286b58e22064b1944391bb86c91d1be4dc7828602c18e68e5a2029f588b9",
+  "source_run_sha256": "05d674a8f70c1e97949ef1a17318081b8773521104fd9874b3500cebe8077c1e",
+  "native_plan_sha256": "f990bc07e360d007b3afa0c83efa9582fd9c67d9c7144da4e4a2f09296258e74",
+  "source_controls": [
+    {
+      "case": "fire_then_evolve_lethal",
+      "simulator": {
+        "shuffle_delta": 1,
+        "sundial": 0,
+        "hand": 2,
+        "enemy_hp": 0,
+        "victory": true
+      },
+      "source_ordered_reference": {
+        "shuffle_delta": 0,
+        "sundial": 2,
+        "hand": 1,
+        "enemy_hp": 0,
+        "victory": true
+      }
+    },
+    {
+      "case": "evolve_then_fire_lethal",
+      "simulator": {
+        "shuffle_delta": 1,
+        "sundial": 0,
+        "hand": 2,
+        "enemy_hp": 0,
+        "victory": true
+      },
+      "source_ordered_reference": {
+        "shuffle_delta": 1,
+        "sundial": 0,
+        "hand": 2,
+        "enemy_hp": 0,
+        "victory": true
+      }
+    },
+    {
+      "case": "fire_then_evolve_nonlethal",
+      "simulator": {
+        "shuffle_delta": 1,
+        "sundial": 0,
+        "hand": 2,
+        "enemy_hp": 94,
+        "victory": false
+      },
+      "source_ordered_reference": {
+        "shuffle_delta": 1,
+        "sundial": 0,
+        "hand": 2,
+        "enemy_hp": 94,
+        "victory": false
+      }
+    },
+    {
+      "case": "fire_without_evolve",
+      "simulator": {
+        "shuffle_delta": 0,
+        "sundial": 2,
+        "hand": 1,
+        "enemy_hp": 0,
+        "victory": true
+      },
+      "source_ordered_reference": {
+        "shuffle_delta": 0,
+        "sundial": 2,
+        "hand": 1,
+        "enemy_hp": 0,
+        "victory": true
+      }
+    }
+  ],
+  "native_cases_registered": [
+    "fire_then_evolve_lethal",
+    "evolve_then_fire_lethal",
+    "fire_then_evolve_nonlethal",
+    "fire_without_evolve"
+  ],
+  "native_commands_registered": 11,
+  "native_slot_rule": "Wait for the registered E122 original owned-process exit and native cleanup; require zero live native JVMs. No second original instance while the development gate runs.",
+  "new_original_instances": 0,
+  "new_mcts_calls": 0,
+  "optimizer_updates": 0,
+  "engine_modified": false,
+  "limits": "One source-derived C++ discrepancy and three matching controls. No original-game confirmation, natural-cohort mismatch or training gain. E122 has not been stopped by this hypothesis. Native results must determine whether a repair is warranted."
+}
