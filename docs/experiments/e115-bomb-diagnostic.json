@@ -1,0 +1,164 @@
+{
+  "experiment": "E115",
+  "status": "confirmed_rule_difference_repair_pending",
+  "created_at": "2026-09-20T07:30:20.577842+00:00",
+  "engine_sha256": "ec7c0a665bcf988fce9ef4767e9e385c66365940a256eb2a3c18eb251f3b1467",
+  "plan_sha256": "bcd657145bb30cd4001934365667cb5bcbdf18fd35bf95103d1dc2942666344f",
+  "native_plan_sha256": "c9c8337e26560ac915893bd8c7e827fa50a4d59c15cf229c2313f9f413b386d0",
+  "cpp_diagnostic_sha256": "3a428d85133d159e76b465fa3e4da0033448d0686aacbccbdd9ec24c7e9459b8",
+  "original_comparison_sha256": "165e066c02929f6aa2ab95961ecbb724fd28b8472906d3cbcefd3e52f2acb2f4",
+  "original_completion_sha256": "a826aa5925ed91899889772031e06b62a158f2da8d664fd3ba8ecdebd19ac84c",
+  "original_jar_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "cpp_cases": [
+    {
+      "case": "two_plain",
+      "actual_hp_loss": 80,
+      "expected_from_original_source": 80,
+      "matched": true
+    },
+    {
+      "case": "one_intangible",
+      "actual_hp_loss": 1,
+      "expected_from_original_source": 1,
+      "matched": true
+    },
+    {
+      "case": "two_intangible",
+      "actual_hp_loss": 1,
+      "expected_from_original_source": 2,
+      "matched": false
+    },
+    {
+      "case": "two_intangible_one_block",
+      "actual_hp_loss": 0,
+      "expected_from_original_source": 1,
+      "matched": false
+    }
+  ],
+  "original_cases": [
+    {
+      "name": "two_plain",
+      "comparison_status": "passed",
+      "expiry": {
+        "hp_before": 200,
+        "hp_after": 120,
+        "hp_loss": 80,
+        "intangible": false,
+        "native_bomb_instances": 2
+      },
+      "commands": 6,
+      "differences": []
+    },
+    {
+      "name": "one_intangible",
+      "comparison_status": "passed",
+      "expiry": {
+        "hp_before": 200,
+        "hp_after": 199,
+        "hp_loss": 1,
+        "intangible": true,
+        "native_bomb_instances": 1
+      },
+      "commands": 5,
+      "differences": []
+    },
+    {
+      "name": "two_intangible",
+      "comparison_status": "mismatch",
+      "expiry": {
+        "hp_before": 200,
+        "hp_after": 198,
+        "hp_loss": 2,
+        "intangible": true,
+        "native_bomb_instances": 2
+      },
+      "commands": 6,
+      "differences": [
+        {
+          "step": 5,
+          "command": "end",
+          "differences": {
+            "monsters": {
+              "original": [
+                [
+                  34,
+                  198,
+                  200,
+                  0,
+                  false
+                ]
+              ],
+              "simulator": [
+                [
+                  34,
+                  199,
+                  200,
+                  0,
+                  false
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed_intangible",
+      "comparison_status": "mismatch",
+      "expiry": {
+        "hp_before": 200,
+        "hp_after": 198,
+        "hp_loss": 2,
+        "intangible": true,
+        "native_bomb_instances": 2
+      },
+      "commands": 6,
+      "differences": [
+        {
+          "step": 5,
+          "command": "end",
+          "differences": {
+            "monsters": {
+              "original": [
+                [
+                  34,
+                  198,
+                  200,
+                  0,
+                  false
+                ]
+              ],
+              "simulator": [
+                [
+                  34,
+                  199,
+                  200,
+                  0,
+                  false
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rule": "Each native TheBombPower has a distinct ID and queues its own damage action. The simulator stores one summed damage total per expiry turn, so Nemesis Intangible caps multiple bombs to one hit. Native double and mixed-upgrade bombs deal2 versus simulator1; one-bomb and unprotected two-bomb controls match.",
+  "state_issue": "The per-expiry aggregate also loses instance multiplicity in state storage/import. Matching aggregate power totals does not prove equivalent future actions.",
+  "scope": "Controlled original A20 Ironclad battle sequences. Card powers are produced by playing actual Bomb cards on turn two, not injected. Nemesis Intangible is obtained by its ordinary turn sequence. No mid-sequence restoration or RNG resync. One owned isolated JVM; fixture HP and energy prevent unrelated death or unaffordable setup. Not natural-run or training evidence.",
+  "initial_fixture_imports": 4,
+  "mid_sequence_resynchronized": false,
+  "owned_jvm_remaining": [],
+  "new_labels": 0,
+  "optimizer_updates": 0,
+  "natural_candidate_games": 0,
+  "public_sources": {
+    "directory": "e115-diagnostic-sources",
+    "sha256": {
+      "bomb-diagnostic.cpp": "6404a2c414d645af771a816a56c2d0ffb1ed8bb102696454572efc9eb7615287",
+      "original-diagnostic.py": "6d6484d4243c8d2c28e63e4c5e0400ce38cc212ba88d9fe9597fb562708dcd39",
+      "compare-before.py": "35b1323c511f429d33ed9df254a3222027b7feb4298d2ac04163fb7dc622d33b"
+    }
+  },
+  "limits": "Controlled A20 card sequences, not a natural-seed mismatch or population score. E112 stopped because this independent diagnostic makes the training engine inadmissible. No repaired engine exists in this result."
+}
