@@ -1,0 +1,59 @@
+{
+  "experiment": "E113-execution",
+  "status": "prepared_not_executed",
+  "created_at": "2026-09-20T07:12:51.869395+00:00",
+  "registration_sha256": "433a946cbfeb27be03f524d6225fe87763a10e89769af689994bcba035ff3b14",
+  "probe_sha256": "b42adbe17c9edff4848a50cba78df42526a6db6899bfd74085f3f70610c15ee4",
+  "collector_registration_sha256": "bd9ad9f917d9a74c8819240f0b06afd8b4a492133170e25c5f3d3ba95d905185",
+  "collector_preparation_sha256": "ae6d264692c20abd5a2f00c178433ca7308ef1f95b44494e3fe97cc6d592e19e",
+  "wrapper_seconds": 172800,
+  "registered_stage_seconds": {
+    "first_relic_collection": 36000,
+    "first_relic_audit": 18000,
+    "joint_collection": 93600,
+    "joint_audit": 18000
+  },
+  "remaining_prepare_and_verification_allowance_seconds": 7200,
+  "ownership": "One new session/process group for the six-stage collector; cleanup after normal exit, fault, timeout or wrapper SIGINT/SIGTERM. Never signal the observer or other job groups.",
+  "gates": "E113 full source/original gate and passed exact-launcher software controls before any real subprocess. Completion rechecks source and both label proofs.",
+  "no_restart": true,
+  "observer_interval_seconds": 1200,
+  "cases": [
+    {
+      "case": "normal",
+      "exit_code": 0,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "fault",
+      "exit_code": 7,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "timeout",
+      "exit_code": 124,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    },
+    {
+      "case": "wrapper_SIGTERM",
+      "exit_code": 143,
+      "cleanup": true,
+      "unrelated_job_alive": true
+    }
+  ],
+  "incomplete_source_rejected_before_launch": true,
+  "public_sources": {
+    "directory": "e113-e114-gate-sources",
+    "sha256": {
+      "run_pipeline.py": "4b9ed07d6d10391dbb4b676d83c9ffa35d2598dcffb2540bc491c4c4560928b1",
+      "check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa"
+    }
+  },
+  "new_mcts_calls": 0,
+  "new_labels": 0,
+  "optimizer_updates": 0,
+  "limits": "Operating-system subprocess fixtures and entry gates only; no actual E113 collection has begun. This wrapper does not extend any registered collection/audit stage or change simulator, MCTS or learning settings."
+}
