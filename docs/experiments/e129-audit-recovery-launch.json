@@ -1,0 +1,72 @@
+{
+  "experiment": "E129",
+  "status": "launched",
+  "evidence_scope": "simulator_only",
+  "cause": "E122 completed 6144 natural games and all 625 winner replans, but its shared 10800-second allowance expired during the independent replay/NN audit.",
+  "original_source_exit_code": 1,
+  "original_source_execution_faults": 0,
+  "original_audit_deadline_timeouts": 8,
+  "source_samples": 6144,
+  "winner_replans_verified": 625,
+  "completed_cached_chunks": 38,
+  "interrupted_chunks": 8,
+  "unstarted_chunks": 146,
+  "remaining_chunks": 154,
+  "total_chunks": 192,
+  "audit_seconds": 3600,
+  "wrapper_seconds": 3900,
+  "workers": 8,
+  "observer_interval_seconds": 1200,
+  "natural_games_resampled": 0,
+  "winner_replans_resampled": 0,
+  "recipe_changes": false,
+  "entry_verification": {
+    "actual_incomplete_source_rejected_before_collection_or_training": true,
+    "checker_sha256": "ea8e9ca65f01c98222cbb3ecdab7c7def94bc530c4c66909008dbfea93411f6e",
+    "deadline_timeout_resumable_but_not_admitted": true,
+    "recovery_sha256": "a749e9f84aa6e0732c8ee815b8ccc8b8a179d0bd9d5cc27e3215490860739123",
+    "rejected": [
+      "engine",
+      "model",
+      "source",
+      "missing_case",
+      "role",
+      "audit_error",
+      "timeout_cannot_admit"
+    ],
+    "status": "passed",
+    "valid_cached_audit_accepted": true
+  },
+  "launch": {
+    "status": "running",
+    "verified_at": "2026-09-20T13:30:27.813327+00:00",
+    "next_observation_at": "2026-09-20T13:50:27.813327+00:00",
+    "observer_interval_seconds": 1200,
+    "processes": {
+      "study": "58428  1119 58428 Ss   /opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python -u /Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e122-audit-completion-20260920-01/resume_study.py",
+      "audit": "58453 58428 58453 Ss   /opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python -u /Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e122-audit-completion-20260920-01/recover_audit.py run"
+    },
+    "tool_session_id": 45685,
+    "registration_sha256": "be7c5f9696af5a0dbb744cc3532f9a32516bc7710935b5453b7254d356eb8359",
+    "pipeline_process_sha256": "edcb1d4efce3b2c025028078f70a79f23033e63fde54ac31afb3b2ca62153403",
+    "entry_verification_sha256": "64834fb07a56705ab97829181a6caf450d8d3c04ef1b020056847cea9397bd8c",
+    "evidence_scope": "simulator_only",
+    "original_game_executions": 0,
+    "natural_games_resampled": 0,
+    "winner_replans_resampled": 0,
+    "new_optimizer_updates": 0
+  },
+  "hashes": {
+    "registration.json": "be7c5f9696af5a0dbb744cc3532f9a32516bc7710935b5453b7254d356eb8359",
+    "inventory.json": "351ba9f5cae6215b4986b64960c45f935967bdc85e3084a6fcc4d158be6f2cd7",
+    "source-interruption.json": "7bb7a08f5825dcddf362e941f64033105834195ff8f33a6dc7c764ef33f89e03",
+    "entry-verification.json": "64834fb07a56705ab97829181a6caf450d8d3c04ef1b020056847cea9397bd8c",
+    "launch-verification.json": "3fbdeacc66f287f54053d62eff2f7a32f57772106b9f6cf9f69874e08418e623"
+  },
+  "archived_sources_sha256": {
+    "check_entry.py": "ea8e9ca65f01c98222cbb3ecdab7c7def94bc530c4c66909008dbfea93411f6e",
+    "recover_audit.py": "a749e9f84aa6e0732c8ee815b8ccc8b8a179d0bd9d5cc27e3215490860739123",
+    "resume_study.py": "e659587740c081063c373f967a44c6cd5b51feba7fba923f3057f240a2fa4e18"
+  },
+  "limits": "Launch and saved-data integrity evidence only. All 192 source audit chunks must pass before E127 collection or E128 fitting. No new model score, original-game parity claim, or unseen acceptance."
+}
