@@ -1,0 +1,61 @@
+{
+  "experiment": "E104",
+  "created_at": "2026-09-20T02:17:33.838091+00:00",
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+  "identity": {
+    "engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_manifest_sha256": "6888b3a041094b71038d8d7804a17e99afb3e192938a2ee65bac56c81701acec",
+  "parity_registration_sha256": "47095b8ac9f1f60fd77fad2b0073e7b6e3eea3644f68f6eae418966c744055c6",
+  "parent_registration_sha256": "38b1fb93b5d7f73585bfbe7c9b8bba35e3e9511e66cabce6f11060581f668548",
+  "inherited_collector_registration_sha256": "6dd330cb85793c68bf12ca388bb9adb910560f1a5e2d41dfebe8e7159f15649b",
+  "collection": "Same registered first-boss relic and last scoped Act2-row0 card menus as E89/E97. Enumerate all native relic/card/Bowl/skip alternatives and parent controls for all4608 fit and1024 label_holdout families. Keep early failures and absent nodes. One canonical repaired-engine label table supports small1536/expanded4608 fits; no old leaves, duplicated shared-family sampling or development branches.",
+  "source_gates": "All6144 E103 sources, terminal/state/RNG/timer/nonintervention NN audits and allwinner replans; all512 development source audits and every development-winning original route plus added persistent RNG. Any source fault/nonmatch blocks collection.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "natural_stage_seconds": 10800,
+    "first_relic_collection_seconds": 36000,
+    "joint_collection_seconds": 93600,
+    "independent_label_audit_seconds": 18000,
+    "observer_interval_seconds": 1200,
+    "original_jvm_instances": 1
+  },
+  "deadline_rationale": "The labeled family count grows from E97s3584 to5632, a factor11/7. Scale the preregistered21600/57600/10800s stage budgets by that factor and round up to36000/93600/18000s before new continuation outcomes. Per-episode guards, work per branch and retry policy do not change. These are new-stage budgets, not extensions of an expired job.",
+  "verification": "Independently replay every new continuation terminal/state/RNG/timer and all nonintervention NN choices. Rebuild every card node from its natural relic prefix; every parent-choice card control must reproduce its first-relic source. Preserve duplicate/omitted/fault/missing labels as errors, not losses.",
+  "optimizer_updates": 0,
+  "limits": "Preparation and generation of corrected training labels. It cannot establish a learned gain or final50percent unseen acceptance. E97 data-scale remains untested; E89/E95/E96 failed model hypotheses stay recorded. A separate training registration will use nested small/expanded fits and common heldout families. E99 and its E100/E101 downstream gates remain closed. This new registration reuses the prepared recipe and requires the E103 source gate.",
+  "status": "prepared_not_executed",
+  "registration_sha256": "46458a800b15a83e0565c573ecbb6a5a8b5f00cac6f55cec6fdfdea355b4f226",
+  "entry_verification_sha256": "310fd01f8fd25134e92559a26932f721c6c99dfd9e8973111b81fb332a1fa48e",
+  "frozen_modules_byte_identical_to_E100": 15,
+  "driver_changes": "Experiment labels only; artifact paths reside in the new protocol. All collection/audit bodies and budgets are unchanged.",
+  "known_source_entry": {
+    "seed": 192246470,
+    "episode_sha256": "4c5d7813f435d6bc74068b30592423db0ddaf620e741a73066fb4127ca39cf92",
+    "prefix_index": 84,
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen": 2,
+    "natural_public_state_reconstructed": true
+  },
+  "incomplete_source_rejected": true,
+  "new_continuation_labels": 0,
+  "new_mcts_calls": 0,
+  "public_source_files": {
+    "run_collections.py": "ba194da3e55ec6f2634cdab5b8d46135caf88bb2ff1835c111a7eb25166e3b73",
+    "check-entry.py": "9e08b1ee57b5890bc88b3f4fc2cab719510341c2fb08316afd88fc32846dfa6a"
+  }
+}
