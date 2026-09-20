@@ -1,0 +1,25 @@
+{
+  "experiment": "E127-execution",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "wrapper_seconds": 172800,
+  "registered_stage_seconds": {
+    "first_relic_collection": 36000,
+    "first_relic_audit": 18000,
+    "joint_collection": 93600,
+    "joint_audit": 18000
+  },
+  "remaining_prepare_and_verification_allowance_seconds": 7200,
+  "observer_interval_seconds": 1200,
+  "ownership": "One new session/process group for the six-stage collector; cleanup after normal exit, fault, timeout or wrapper SIGINT/SIGTERM. Never signal the observer or other job groups.",
+  "gates": "Complete simulator source evidence and exact-launcher software controls; no native game admission.",
+  "no_restart": true,
+  "no_optimizer": true,
+  "recipe_changes": false,
+  "hashes": {
+    "run_pipeline.py": "347ec45019187f5bff52d4eaeff4819152ded5a2722d35ac7fb04ac7047f2991",
+    "check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa",
+    "registration.json": "e129ace239907acc693f5d685b7f8e2007e63cd4f43299a180d1691dd48d7b53",
+    "protocol.json": "235f7376cc1bdcbc3898a6392ca767639bf8bc0fed7d6c2d4daa874eb622d223",
+    "run_collections.py": "e75d2cea0b9e9803c4039998e9c3d3b4b791c1a36e203a3974862b6b6d8e1594"
+  }
+}

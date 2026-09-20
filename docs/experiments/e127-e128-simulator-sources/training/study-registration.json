@@ -1,0 +1,32 @@
+{
+  "experiment": "E127-E128-simulator-study",
+  "created_at": "2026-09-20T11:21:28.983588+00:00",
+  "evidence_scope": "simulator_only",
+  "observer_interval_seconds": 1200,
+  "source_wait_deadline": "2026-09-20T13:34:44.488659+00:00",
+  "next_source_observation_at_registration": "2026-09-20T11:31:36.869074+00:00",
+  "stages": [
+    "wait for complete E122 simulator proof",
+    "collect and audit all E127 relic/card branches",
+    "fit E128 small and expanded arms",
+    "heldout verification and eligible natural development",
+    "record selection"
+  ],
+  "source_ownership": "Existing E122 wrapper retains source process ownership. This controller owns subsequent collection and training phases only.",
+  "original_game_required": false,
+  "new_game_rules": false,
+  "automatic_retry": false,
+  "unseen_draw": false,
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/run_study.py": "1c79d378cc658880979941c000e899353241476f42c656513b2c299e1b615279",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/training-execution-registration.json": "570426bf75bc1922501f2d6a4b0d7770ef376f170fbf5ce882ef48418df2ad1d",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/training-execution-entry-verification.json": "3ae84d99d4d7e772a4ae9e85ff2fc2b27ce4135064245f87a09d2122bfff2a69",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/execution-registration.json": "1fea7c8d90640f41a0f4411c9a7e106ac90320329c75850977a64322f508c663",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/entry-verification.json": "0d5490f601d082e57b06cee24247252c9a4cec8bf5d77336795a37d2e1cdbd60",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/check-simulator-admission.py": "5ffd3eedd0dae2563bc2cda3d0c3764456d941b7ff1f76cd13d6c868f6cf8991",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/simulator-admission-probe/completion-verification.json": "0f18cc9fa2c15aaf49a8df75b1e913639bd7f51558e7fdea3fe6123c36347132",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/user-scope-amendment.json": "a17e009def735de723b8a5cb6a7a5909614dea5b8d1d708cb0e76de4f2d70d09",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/original-stop-verification.json": "f5db16efdf80b56d7ac6cbd056c70cd76a71dd452cd8fa35f0b70c5c011a7bda",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/execution-registration.json": "ef95509f18ac4aedb6918fa6da0398691cb4632daee38a6e4cccac8e0b96269e"
+  }
+}

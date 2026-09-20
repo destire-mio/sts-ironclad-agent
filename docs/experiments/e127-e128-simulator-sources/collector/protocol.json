@@ -1,0 +1,41 @@
+{
+  "experiment": "E127",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "family_groups_path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/family-groups.json",
+  "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural",
+  "source_manifest_sha256": "f7a8b4ea2a05612be8d3fabfee2610d7fb81a9970e72d85f8451c45f7d16a67d",
+  "parent_registration": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/registration.json",
+  "parent_registration_sha256": "2aa89a9ea20ca5561cc9e1552241f8d1bea063c51e1d22f0240b1f0c3fb182ac",
+  "inherited_collector_registration_sha256": "6ba85823d04a0baea961d5a1004f2c2730ee8b4cee56f3c92090fb64a88d716c",
+  "collection": "Same registered first-boss relic and last scoped Act2-row0 card menus as E89/E97. Enumerate all native relic/card/Bowl/skip alternatives and parent controls for all4608 fit and1024 label_holdout families. Keep early failures and absent nodes. One canonical repaired-engine label table supports small1536/expanded4608 fits; no old leaves, duplicated shared-family sampling or development branches.",
+  "source_gates": "All 6144 frozen E121 simulator sources, full terminal/state/RNG/timing/outside-NN audits and every winning replan. Missing, faulted or irreproducible simulator data blocks labels. Original-game comparisons are paused by user request.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "natural_stage_seconds": 10800,
+    "first_relic_collection_seconds": 36000,
+    "joint_collection_seconds": 93600,
+    "independent_label_audit_seconds": 18000,
+    "observer_interval_seconds": 1200,
+    "original_jvm_instances": 0
+  },
+  "deadline_rationale": "The labeled family count grows from E97s3584 to5632, a factor11/7. Scale the preregistered21600/57600/10800s stage budgets by that factor and round up to36000/93600/18000s before new continuation outcomes. Per-episode guards, work per branch and retry policy do not change. These are new-stage budgets, not extensions of an expired job.",
+  "verification": "Independently replay every new continuation terminal/state/RNG/timer and all nonintervention NN choices. Rebuild every card node from its natural relic prefix; every parent-choice card control must reproduce its first-relic source. Preserve duplicate/omitted/fault/missing labels as errors, not losses.",
+  "optimizer_updates": 0,
+  "limits": "Simulator-only training under the user scope amendment. No original-game parity claim; old frozen evidence remains unchanged.",
+  "evidence_scope": "simulator_only",
+  "scope_amendment": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/user-scope-amendment.json",
+  "scope_amendment_sha256": "a17e009def735de723b8a5cb6a7a5909614dea5b8d1d708cb0e76de4f2d70d09"
+}

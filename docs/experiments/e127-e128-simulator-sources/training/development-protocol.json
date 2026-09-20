@@ -1,0 +1,32 @@
+{
+  "experiment": "E128D",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "parent_protocol_sha256": "2df0b0898069a5e1e00912c7e6ce21667fe868a5536110f0d998bac5f8246757",
+  "training_registration_sha256": "49a4c6d9bebcd4294b6a21923d30fbcb2afc9a90872ee7393d8e7a2905011252",
+  "verification_registration_sha256": "34d6b13eeb2777c32347e12672f41b6255a813114fedf0bec9aa4f7e434fe854",
+  "purpose": "Run the fixed natural-development screen and select using simulator outcomes.",
+  "arms": [
+    "small",
+    "expanded"
+  ],
+  "assigned_development_families": 512,
+  "development_seed_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+  "prerequisites": "All 6144 audited simulator sources, E127 joint labels, both E128 fits and complete heldout live-choice checks. Heldout gate unchanged.",
+  "natural_gate": "Each admitted arm runs every same assigned512 seed from natural A20 Ironclad start. Require net>=10 Heart wins and exact paired p<.05 against the repaired-engine fixed parent; zero faults; all terminal/state/RNG/timing checks; first changed action in the two declared scopes; independent stored-weight arithmetic audit of every outside choice; identical fresh MCTS/NN replan of every winner. Retain early failures, and reject missing/invalid results without replacement or retries.",
+  "candidate_selection": "After complete natural screens: more Heart wins, fewer lost parent wins, then small. No native gate, automatic adoption or unseen draw.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "prefix_timeout": 360,
+    "natural_stage_seconds_per_arm": 10800,
+    "observer_interval_seconds": 1200
+  },
+  "unchanged_game_inputs": "E121 engine; fixed parent192 encoder; MCTS8000 and boss multiplier3; existing E54 search and 256 replan cap; deterministic45 seconds/floor and one transform preview frame; no Prismatic Shard purchase; no new optimizers.",
+  "limits": "Preparation software checks do not establish a learned gain, original candidate parity or50percent success. Final acceptance needs a later frozen selected checkpoint and1024 genuinely unseen seed families.",
+  "evidence_scope": "simulator_only"
+}

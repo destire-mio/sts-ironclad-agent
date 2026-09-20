@@ -1,0 +1,190 @@
+{
+  "experiment": "E127-E128",
+  "recorded_at": "2026-09-20T11:24:05.339102+00:00",
+  "status": "launched_waiting_for_source",
+  "evidence_scope": "simulator_only",
+  "user_instruction": "先不考虑不一致的情况",
+  "scope_amendment": {
+    "created_at": "2026-09-20T11:12:19.468571+00:00",
+    "user_instruction": "先不考虑不一致的情况",
+    "status": "simulator_only_training_scope",
+    "source_sampling_continues": true,
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "original_alignment_paused": true,
+    "original_required_before_training": false,
+    "candidate_original_required": false,
+    "source_replay_rng_fault_and_unseen_separation_checks_retained": true,
+    "observation_interval_seconds": 1200,
+    "prior_protocols": {
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-joint-labels-20260920-01/protocol.json": "7edb26d095fde54e55b721ffd6baa9e5f74c876fa578652e3f09c69ad75609a4",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-training-20260920-01/protocol.json": "a7a8003e006182c733b99899f0284421e3d8837fec0c48f8ee51c79e8527dafe",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e125-draw-power-order-diagnostic-20260920-01/native-plan.json": "f990bc07e360d007b3afa0c83efa9582fd9c67d9c7144da4e4a2f09296258e74",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/evidence/e126-draw-exhaust-repair-20260920-01/plan.json": "35411e12904063f46cd012f69f33b6f397844a4504a2fc05e24eaddd0d9d4320"
+    },
+    "limits": "Results are simulator evidence. No original-game parity or original-game population win-rate claim. E125/E126 pending diagnostics do not block this study."
+  },
+  "original_job_stop": {
+    "exit_code": 143,
+    "owned_processes_clean": true,
+    "native_instances_clean": 21,
+    "native_jvms_remaining": 0,
+    "verified_at": "2026-09-20T11:16:33.685390+00:00",
+    "proof_sha256": "f5db16efdf80b56d7ac6cbd056c70cd76a71dd452cd8fa35f0b70c5c011a7bda"
+  },
+  "source_checkpoint": {
+    "observed_at": "2026-09-20T11:11:36.869074+00:00",
+    "saved_files": 2550,
+    "requested_families": 6144,
+    "active_workers": 8,
+    "controller_os_verified_live": true,
+    "snapshot_sha256": "c1e4cd131bede761c224fdce0be8cfe4895f62afe06577339a84f8cdec1daa01"
+  },
+  "launch": {
+    "status": "launched_waiting_for_source",
+    "verified_at": "2026-09-20T11:22:07.507433+00:00",
+    "controller_pid": 376,
+    "matched_command": "376  1119   376 Ss   /opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python -u run_study.py",
+    "next_observation_at": "2026-09-20T11:31:36.869074+00:00",
+    "study_registration_sha256": "b223d92e118fbbc53e4f2b1848ef18e21a721a75797057a7cce537087ae01b38",
+    "study_started_sha256": "13aef1adcaea0946ec6eab7969a19b7939932d6526874d7b60a6b9111647a426",
+    "evidence_scope": "simulator_only",
+    "labels_started": false,
+    "optimizer_updates": 0
+  },
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "small_fit_families": 1536,
+  "expanded_fit_families": 4608,
+  "joint_decisions": [
+    "first Boss relic",
+    "scoped Act2 card choice"
+  ],
+  "fit_steps_per_arm": 1000,
+  "fixed_fit_config": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "unchanged_collector_modules": 15,
+  "fit_and_live_verification_rebind_only": true,
+  "checks": {
+    "actual_incomplete_source_rejected_before_outputs": true,
+    "known_source_first_relic_replayed": {
+      "seed": 1138994370,
+      "episode_sha256": "5077c3961a610725f67cd00cf58d559df9227e91ebc3723c8c0ec2667ee852ab",
+      "prefix_index": 75,
+      "candidates": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "chosen": 2,
+      "natural_public_state_reconstructed": true
+    },
+    "simulator_admission_cases": [
+      {
+        "case": "complete_without_original",
+        "passed": true
+      },
+      {
+        "case": "execution_fault",
+        "rejected": true
+      },
+      {
+        "case": "missing_terminal_replay",
+        "rejected": true
+      },
+      {
+        "case": "wrong_engine",
+        "rejected": true
+      },
+      {
+        "case": "split_overlap",
+        "rejected": true
+      },
+      {
+        "case": "missing_winner_replan",
+        "rejected": true
+      },
+      {
+        "case": "nonmatching_winner_replan",
+        "rejected": true
+      }
+    ],
+    "owned_process_cases": [
+      {
+        "case": "normal",
+        "exit_code": 0,
+        "cleanup": true,
+        "unrelated_job_alive": true
+      },
+      {
+        "case": "fault",
+        "exit_code": 7,
+        "cleanup": true,
+        "unrelated_job_alive": true
+      },
+      {
+        "case": "timeout",
+        "exit_code": 124,
+        "cleanup": true,
+        "unrelated_job_alive": true
+      },
+      {
+        "case": "wrapper_SIGTERM",
+        "exit_code": 143,
+        "cleanup": true,
+        "unrelated_job_alive": true
+      }
+    ],
+    "training_incomplete_input_rejected": true
+  },
+  "paused_alignment": [
+    "E125 native diagnosis",
+    "E126 isolated candidate before adoption"
+  ],
+  "superseded_unstarted_studies": [
+    "E123",
+    "E124"
+  ],
+  "new_labels": 0,
+  "optimizer_updates": 0,
+  "unseen_acceptance_games": 0,
+  "limits": "A launched dependency chain waiting for source completion. Simulator-only scope does not establish original-game parity. Preparation and partial source counts are not a learned gain or unseen acceptance.",
+  "source_archive": {
+    "docs/experiments/e127-e128-simulator-sources/README.md": "ee33122bc8f1ac31be2284142593145c88de3936268e17d7c378b9c7029c2959",
+    "docs/experiments/e127-e128-simulator-sources/collector/check-entry.py": "ccc1001055eb4d3e5b5f10347d3c92ee28709ba34d239d53739b1b03f8423b11",
+    "docs/experiments/e127-e128-simulator-sources/collector/check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa",
+    "docs/experiments/e127-e128-simulator-sources/collector/check-simulator-admission.py": "5ffd3eedd0dae2563bc2cda3d0c3764456d941b7ff1f76cd13d6c868f6cf8991",
+    "docs/experiments/e127-e128-simulator-sources/collector/execution-registration.json": "1fea7c8d90640f41a0f4411c9a7e106ac90320329c75850977a64322f508c663",
+    "docs/experiments/e127-e128-simulator-sources/collector/protocol.json": "235f7376cc1bdcbc3898a6392ca767639bf8bc0fed7d6c2d4daa874eb622d223",
+    "docs/experiments/e127-e128-simulator-sources/collector/registration.json": "e129ace239907acc693f5d685b7f8e2007e63cd4f43299a180d1691dd48d7b53",
+    "docs/experiments/e127-e128-simulator-sources/collector/run_collections.py": "e75d2cea0b9e9803c4039998e9c3d3b4b791c1a36e203a3974862b6b6d8e1594",
+    "docs/experiments/e127-e128-simulator-sources/collector/run_pipeline.py": "347ec45019187f5bff52d4eaeff4819152ded5a2722d35ac7fb04ac7047f2991",
+    "docs/experiments/e127-e128-simulator-sources/prepare-study.py": "0ad34670dc3f1b0084194a0300dfe7a156eb77e14319d9e8e82c9065296198ba",
+    "docs/experiments/e127-e128-simulator-sources/publish-preparation.py": "e63a00f63f1008b366773387dbdb410b5eac4739a177b6ac5356a260bbe32a3b",
+    "docs/experiments/e127-e128-simulator-sources/training/check-training-execution.py": "9519fcce5603a9a76481ccb41061ccc25b661616de4a4c73b20020ddc523e063",
+    "docs/experiments/e127-e128-simulator-sources/training/development-protocol.json": "ec1de51542cef4998fa068c6280bef3bf019809fe98bbff06bec012302895f17",
+    "docs/experiments/e127-e128-simulator-sources/training/development-registration.json": "8eb031889fa0a0160617f0d1d82415e5cb0e5881bea425d4382e089da8cad55b",
+    "docs/experiments/e127-e128-simulator-sources/training/protocol.json": "2df0b0898069a5e1e00912c7e6ce21667fe868a5536110f0d998bac5f8246757",
+    "docs/experiments/e127-e128-simulator-sources/training/run_study.py": "1c79d378cc658880979941c000e899353241476f42c656513b2c299e1b615279",
+    "docs/experiments/e127-e128-simulator-sources/training/run_training_pipeline.py": "3b20ce268d3eaebc988c6590a685bd803ea1bd217cc032de124600af568f0c43",
+    "docs/experiments/e127-e128-simulator-sources/training/scale-training-registration.json": "49a4c6d9bebcd4294b6a21923d30fbcb2afc9a90872ee7393d8e7a2905011252",
+    "docs/experiments/e127-e128-simulator-sources/training/scale-verification-registration.json": "34d6b13eeb2777c32347e12672f41b6255a813114fedf0bec9aa4f7e434fe854",
+    "docs/experiments/e127-e128-simulator-sources/training/scale_development.py": "0641aab6dd4ba9bcb2c5a753b6d5ed0ec30aa7ed22cfaedf20363a9a163e750e",
+    "docs/experiments/e127-e128-simulator-sources/training/scale_training.py": "fd189165635b03afc1f56af59577fdeb5349aa010069f006b686d02de600ec8b",
+    "docs/experiments/e127-e128-simulator-sources/training/scale_verify.py": "39fe3324aad013f5a826c722da3c20d51ec17afaf7b1d6cf1203b5c7ec278a6a",
+    "docs/experiments/e127-e128-simulator-sources/training/study-registration.json": "b223d92e118fbbc53e4f2b1848ef18e21a721a75797057a7cce537087ae01b38",
+    "docs/experiments/e127-e128-simulator-sources/training/training-execution-registration.json": "570426bf75bc1922501f2d6a4b0d7770ef376f170fbf5ce882ef48418df2ad1d",
+    "docs/experiments/e127-e128-simulator-sources/unchanged-collector-modules.json": "f0572f474e02b138c745d8589efe57f179b69f61917972590be77267a570b95c"
+  }
+}

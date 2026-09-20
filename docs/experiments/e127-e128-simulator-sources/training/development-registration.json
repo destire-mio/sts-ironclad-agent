@@ -1,0 +1,13 @@
+{
+  "experiment": "E128D-registration",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "evidence_scope": "simulator_only",
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/development-protocol.json": "ec1de51542cef4998fa068c6280bef3bf019809fe98bbff06bec012302895f17",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale-training-registration.json": "49a4c6d9bebcd4294b6a21923d30fbcb2afc9a90872ee7393d8e7a2905011252",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale-verification-registration.json": "34d6b13eeb2777c32347e12672f41b6255a813114fedf0bec9aa4f7e434fe854",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_training.py": "fd189165635b03afc1f56af59577fdeb5349aa010069f006b686d02de600ec8b",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_verify.py": "39fe3324aad013f5a826c722da3c20d51ec17afaf7b1d6cf1203b5c7ec278a6a",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_development.py": "0641aab6dd4ba9bcb2c5a753b6d5ed0ec30aa7ed22cfaedf20363a9a163e750e"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "experiment": "E128-training",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "config": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/protocol.json": "2df0b0898069a5e1e00912c7e6ce21667fe868a5536110f0d998bac5f8246757",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_training.py": "fd189165635b03afc1f56af59577fdeb5349aa010069f006b686d02de600ec8b",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/registration.json": "2aa89a9ea20ca5561cc9e1552241f8d1bea063c51e1d22f0240b1f0c3fb182ac",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/manifest.json": "f7a8b4ea2a05612be8d3fabfee2610d7fb81a9970e72d85f8451c45f7d16a67d",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/family-groups.json": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/registration.json": "e129ace239907acc693f5d685b7f8e2007e63cd4f43299a180d1691dd48d7b53",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-independent-family-scale-20260920-01/protocol.json": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5"
+  }
+}

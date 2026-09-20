@@ -1,0 +1,48 @@
+{
+  "experiment": "E128",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_registration_sha256": "2aa89a9ea20ca5561cc9e1552241f8d1bea063c51e1d22f0240b1f0c3fb182ac",
+  "collector_registration_sha256": "e129ace239907acc693f5d685b7f8e2007e63cd4f43299a180d1691dd48d7b53",
+  "family_groups_sha256": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b",
+  "source_roles_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+  "inherited_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+  "inherited_training_registration_sha256": "42866409dc499afc78b9e93ad1733fc1af28b672538f89161157747136ad246f",
+  "question": "Does the E97 planned independent-family data expansion improve the fixed joint relic/card readout under the now repaired E121 engine?",
+  "arms": {
+    "small": {
+      "fit_families": 1536,
+      "selection": "E87 fit family IDs, with all outcomes regenerated under E121."
+    },
+    "expanded": {
+      "fit_families": 4608,
+      "selection": "The same1536 plus all3072 E97 additional fit family IDs; no success selection."
+    }
+  },
+  "common_label_holdout": 1024,
+  "development": 512,
+  "config": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "representation": "Inherited frozen parent192-dimensional public-state/candidate embeddings; two learned linear readouts plus fit-only option biases. Centered features and RMS scales fitted only on each arms own fit families, parent score bias1, unknown whole offers use parent. No seed or future state features.",
+  "objective": "Inherited exact expected terminal binary Heart outcome over all assigned fit families and complete two-decision trees plus fixedL2; no invented preference for equal outcomes, no success-only imitation, no layer reward.",
+  "selection": "Train both final checkpoints before common heldout scoring, fixed1000 steps and L2.001, no CV, checkpoint or hyperparameter sweep. Each arm vs parent must net>=20 wins and paired exactp<.05 across common1024. Claim a data-scale gain only if expanded vs small independently meets net>=20 and pairedp<.05. The pairwise development screens are not independent acceptance.",
+  "downstream": "Heldout-qualified arms require all 512 natural simulator development games, net gain >=10 and paired p<.05, zero faults, full terminal/RNG/NN/timing audits, correct first-change scope and all winning replans. Select more wins, fewer lost parent wins, then small. No original-game prerequisite.",
+  "implementation_change": "Keep both fit recipes and all family roles. Apply the user-requested simulator-only evidence boundary.",
+  "dependency": "Complete E122 simulator sources and E127 complete audited joint labels. No original-game requirement or partial-data fit.",
+  "resources": {
+    "torch_threads": 1,
+    "live_choice_workers": 8,
+    "live_choice_stage_seconds": 10800,
+    "observer_interval_seconds": 1200
+  },
+  "limits": "A test of the unexecuted data-scale hypothesis on narrow coupled decisions. It is not a full-policy ceiling or the50percent goal. Failed E89/E95/E96 results stay recorded. Final acceptance requires a separately frozen candidate and1024 truly unseen families.",
+  "evidence_scope": "simulator_only",
+  "scope_amendment_sha256": "a17e009def735de723b8a5cb6a7a5909614dea5b8d1d708cb0e76de4f2d70d09"
+}

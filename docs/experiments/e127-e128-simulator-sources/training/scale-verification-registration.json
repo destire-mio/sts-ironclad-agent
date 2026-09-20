@@ -1,0 +1,11 @@
+{
+  "experiment": "E128-verification",
+  "created_at": "2026-09-20T11:16:33.385740+00:00",
+  "rule": "Inherited two-arm native-choice worker; load one canonical corrected label store and reconstruct own-arm fit supports/RMS. Both complete checkpoints precede common heldout reads.",
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale-training-registration.json": "49a4c6d9bebcd4294b6a21923d30fbcb2afc9a90872ee7393d8e7a2905011252",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale_verify.py": "39fe3324aad013f5a826c722da3c20d51ec17afaf7b1d6cf1203b5c7ec278a6a",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/registration.json": "e129ace239907acc693f5d685b7f8e2007e63cd4f43299a180d1691dd48d7b53",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/family-groups.json": "907ba371aa623191632b352b7f15ff8052cbd444e1490f34a20979c0532c2a1b"
+  }
+}
