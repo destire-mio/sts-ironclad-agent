@@ -1,0 +1,305 @@
+diff --git a/bindings/slaythespire.cpp b/bindings/slaythespire.cpp
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -87,6 +87,7 @@
+                 player.statusMap[status] = static_cast<std::int16_t>(amount);
+             }
+         }
++        player.updatePowerOrder(status, player.hasStatusRuntime(status));
+         if (justApplied) player.justAppliedBits |= 1ULL << static_cast<int>(status);
+     }
+ 
+@@ -1466,6 +1467,22 @@
+             for (const auto &bomb : p.bombs) instances.emplace_back(bomb.turns, bomb.damage);
+             return instances;
+         })
++        .def_property_readonly("power_order", [](const Player &p) {
++            pybind11::list result;
++            for (const auto &power : p.powerOrder) {
++                pybind11::dict item;
++                item["id"] = static_cast<int>(power.status);
++                if (power.status == PS::THE_BOMB) {
++                    const auto bomb = std::find_if(p.bombs.begin(), p.bombs.end(),
++                            [&](const Player::Bomb &value) { return value.id == power.bombId; });
++                    if (bomb == p.bombs.end()) throw std::logic_error("missing ordered Bomb instance");
++                    item["bomb_turns"] = bomb->turns;
++                    item["amount"] = bomb->damage;
++                }
++                result.append(item);
++            }
++            return result;
++        })
+         .def("has_status", &Player::hasStatusRuntime)
+         .def("get_status", &Player::getStatusRuntime);
+ 
+diff --git a/include/combat/Player.h b/include/combat/Player.h
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -59,6 +59,12 @@
+         std::uint64_t statusBits0 = 0;
+         std::uint32_t statusBits1 = 0;
+         std::map<PlayerStatus, std::int16_t> statusMap;
++
++        // Native powers use priority order, with acquisition order for ties.
++        // A Bomb reference addresses one instance in this copied Player.
++        struct PowerRef { PlayerStatus status; int bombId = -1; };
++        std::vector<PowerRef> powerOrder;
++        void updatePowerOrder(PlayerStatus status, bool present, int bombId = -1);
+ 
+         std::uint64_t relicBits0 = 0;
+         std::uint64_t relicBits1 = 0;
+@@ -99,7 +105,9 @@
+         std::vector<Bomb> bombs;
+         int nextBombId = 0;
+         void addBomb(int damage, int turns = 3) {
+-            bombs.push_back({nextBombId++, turns, damage});
++            const int id = nextBombId++;
++            bombs.push_back({id, turns, damage});
++            updatePowerOrder(PS::THE_BOMB, true, id);
+         }
+ 
+         template <RelicId r> void setHasRelic(bool value);
+@@ -191,18 +199,22 @@
+         switch (s) {
+             case PS::ARTIFACT:
+                 artifact -= amount;
++                updatePowerOrder(s, artifact != 0);
+                 break;
+ 
+             case PS::DEXTERITY:
+                 dexterity = std::clamp(dexterity - amount, -999, 999);    // dexterity should not be used by "hasStatusInternal"
++                updatePowerOrder(s, dexterity != 0);
+                 break;
+ 
+             case PS::FOCUS:
+                 focus -= amount;
++                updatePowerOrder(s, focus != 0);
+                 break;
+ 
+             case PS::STRENGTH:
+                 strength = std::clamp(strength - amount, -999, 999);     // strength should not be used by "hasStatusInternal"
++                updatePowerOrder(s, strength != 0);
+                 break;
+ 
+             default:
+@@ -255,6 +267,7 @@
+                 break;
+         }
+ 
++        updatePowerOrder(s, value);
+         //static_assert(((int)s) < 64); // did we add too many status effects
+         int idx = static_cast<int>(s);
+         if (value) {
+@@ -321,18 +334,22 @@
+         switch (s) {
+             case PS::ARTIFACT:
+                 artifact += amount;
++                updatePowerOrder(s, artifact != 0);
+                 return;
+ 
+             case PS::DEXTERITY:
+                 dexterity = std::clamp(dexterity + amount, -999, 999);
++                updatePowerOrder(s, dexterity != 0);
+                 return;
+ 
+             case PS::FOCUS:
+                 focus += amount;
++                updatePowerOrder(s, focus != 0);
+                 return;
+ 
+             case PS::STRENGTH:
+                 strength = std::clamp(strength + amount, -999, 999);
++                updatePowerOrder(s, strength != 0);
+                 return;
+ 
+             default:
+@@ -410,14 +427,17 @@
+ 
+         if (s == PlayerStatus::STRENGTH) {
+             strength = std::clamp(strength + amount, -999, 999);
++            updatePowerOrder(s, strength != 0);
+             return;
+         }
+         if (s == PlayerStatus::DEXTERITY) {
+             dexterity = std::clamp(dexterity + amount, -999, 999);
++            updatePowerOrder(s, dexterity != 0);
+             return;
+         }
+         if (s == PlayerStatus::FOCUS) {
+             focus += amount;
++            updatePowerOrder(s, focus != 0);
+             return;
+         }
+ 
+@@ -440,18 +460,22 @@
+         switch (s) {
+             case PS::ARTIFACT:
+                 artifact = value;
++                updatePowerOrder(s, artifact != 0);
+                 break;
+ 
+             case PS::DEXTERITY:
+                 dexterity = value;
++                updatePowerOrder(s, dexterity != 0);
+                 break;
+ 
+             case PS::FOCUS:
+                 focus = value;
++                updatePowerOrder(s, focus != 0);
+                 break;
+ 
+             case PS::STRENGTH:
+                 strength = value;
++                updatePowerOrder(s, strength != 0);
+                 break;
+ 
+             default:
+diff --git a/src/combat/Player.cpp b/src/combat/Player.cpp
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -11,6 +11,35 @@
+ #include "game/Game.h"
+ 
+ using namespace sts;
++
++namespace {
++    int powerPriority(PlayerStatus status) {
++        switch (status) {
++            case PS::CONFUSED: return 0;
++            case PS::DOUBLE_DAMAGE:
++            case PS::PEN_NIB: return 6;
++            case PS::FRAIL: return 10;
++            case PS::DRAW_CARD_NEXT_TURN: return 20;
++            case PS::TOOLS_OF_THE_TRADE: return 25;
++            case PS::INTANGIBLE: return 75;
++            case PS::WEAK: return 99;
++            case PS::CONSTRICTED: return 105;
++            default: return 5;
++        }
++    }
++}
++
++void Player::updatePowerOrder(PlayerStatus status, bool present, int bombId) {
++    const auto found = std::find_if(powerOrder.begin(), powerOrder.end(),
++            [=](const PowerRef &power) { return power.status == status && power.bombId == bombId; });
++    if (!present) {
++        if (found != powerOrder.end()) powerOrder.erase(found);
++    } else if (found == powerOrder.end()) {
++        const auto position = std::upper_bound(powerOrder.begin(), powerOrder.end(), powerPriority(status),
++                [](int priority, const PowerRef &power) { return priority < powerPriority(power.status); });
++        powerOrder.insert(position, {status, bombId});
++    }
++}
+ 
+ void Player::updateCardUseRelic(RelicId relic, bool present) {
+     switch (relic) {
+@@ -379,27 +408,36 @@
+ }
+ 
+ void Player::applyEndOfTurnPowers(BattleContext &bc) {
+-    if (!bc.monsters.areMonstersBasicallyDead()) {
+-        for (const auto &bomb : bombs) {
+-            const int id = bomb.id;
++    // Some callbacks remove their power synchronously in the simulator.
++    // Iterate a value copy so those removals cannot skip the next callback.
++    const auto ordered = powerOrder;
++    for (const auto &power : ordered) {
++        if (power.status == PS::THE_BOMB) {
++            if (bc.monsters.areMonstersBasicallyDead()) continue;
++            const int id = power.bombId;
++            const auto bomb = std::find_if(bombs.begin(), bombs.end(),
++                    [id](const Bomb &item) { return item.id == id; });
++            if (bomb == bombs.end()) continue;
+             bc.addToBot({[id](BattleContext &state) {
+                 auto &instances = state.player.bombs;
+                 auto found = std::find_if(instances.begin(), instances.end(),
+                         [id](const Bomb &item) { return item.id == id; });
+                 if (found != instances.end() && --found->turns <= 0) {
+                     instances.erase(found);
++                    state.player.updatePowerOrder(PS::THE_BOMB, false, id);
+                 }
+             }});
+-            if (bomb.turns == 1) {
+-                bc.addToBot(Actions::DamageAllEnemy(bomb.damage));
++            if (bomb->turns == 1) {
++                bc.addToBot(Actions::DamageAllEnemy(bomb->damage));
+             }
+-        }
+-    }
+-
+-    for (auto pair : statusMap) {
+-        if (!hasStatusRuntime(pair.first)) {
+             continue;
+         }
++
++        const auto found = statusMap.find(power.status);
++        if (found == statusMap.end() || !hasStatusRuntime(power.status)) {
++            continue;
++        }
++        const auto pair = *found;
+ 
+         switch (pair.first) {
+             case PS::BURST:
+@@ -408,7 +446,7 @@
+ 
+             case PS::COMBUST:
+                 if (!bc.monsters.areMonstersBasicallyDead()) {
+-                    bc.addToBot(Actions::PlayerLoseHp(combustHpLoss, true)); // todo combust doesnt stack hp loss correctly
++                    bc.addToBot(Actions::PlayerLoseHp(combustHpLoss, true));
+                     bc.addToBot(Actions::DamageAllEnemy(pair.second));
+                 }
+                 break;
+@@ -606,10 +644,13 @@
+ 
+ void Player::applyStartOfTurnPowers(BattleContext &bc) {
+     // ****** Player powers atStartOfTurn ******
+-    for (auto pair : statusMap) {
+-        if (!hasStatusRuntime(pair.first)) {
++    const auto ordered = powerOrder;
++    for (const auto &power : ordered) {
++        const auto found = statusMap.find(power.status);
++        if (found == statusMap.end() || !hasStatusRuntime(power.status)) {
+             continue;
+         }
++        const auto pair = *found;
+ 
+         switch (pair.first) {
+             case PS::BATTLE_HYMN:
+@@ -721,10 +762,13 @@
+ 
+ void Player::applyStartOfTurnPostDrawPowers(BattleContext &bc) {
+     // ****** Player Powers AtStartOfTurnPostDraw ******
+-    for (auto pair :statusMap) {
+-        if (!hasStatusRuntime(pair.first)) {
++    const auto ordered = powerOrder;
++    for (const auto &power : ordered) {
++        const auto found = statusMap.find(power.status);
++        if (found == statusMap.end() || !hasStatusRuntime(power.status)) {
+             continue;
+         }
++        const auto pair = *found;
+ 
+         switch (pair.first) {
+             case PS::BRUTALITY:
+@@ -912,6 +956,16 @@
+             printIfHaveStatus(p, os, pair.first);
+         }
+         os << "}\n";
++        os << "\tPowerOrder: [";
++        for (const auto &power : p.powerOrder) {
++            os << " " << playerStatusEnumStrings[static_cast<int>(power.status)];
++            if (power.status == PS::THE_BOMB) {
++                const auto bomb = std::find_if(p.bombs.begin(), p.bombs.end(),
++                        [&](const Player::Bomb &item) { return item.id == power.bombId; });
++                if (bomb != p.bombs.end()) os << "(" << bomb->turns << "," << bomb->damage << ")";
++            }
++        }
++        os << " ]\n";
+     }
+ 
+     std::ostream& operator<<(std::ostream &os, const Player &p) {
+@@ -937,4 +991,3 @@
+ 
+ 
+ 
+-

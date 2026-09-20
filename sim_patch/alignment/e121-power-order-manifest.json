@@ -1,0 +1,23 @@
+{
+  "experiment": "E121",
+  "patch_sha256": "8172ffb343e65f0b9b5a9912e6c89782a1bdc79e64c0d3de4d10b718217e5ca1",
+  "apply_after": "e116_bomb_instances.patch",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "da45ae22acb6975aab656c198264431efa2f823a17fb700a46879740f88f87b9",
+      "after": "37a034c2e8fa0c1eb2df990895f21b8042ae5714dcf549250bde02400290d4c9"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "215554a69c39cf9ee78be744743c4b05b88df4b167109f9d7f4b22c907e7e6ee",
+      "after": "53cd4fa04d9465387517f324e83ec861e293e9b88a24292f61060077ba249781"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "4c0715a30e07324b3c4df372972b0f29b20e4c8622112541bf51c9c4980b99a3",
+      "after": "f518ea2a47deb03b9d8bc940e281c3fc14e96011b9927ecd8a8eb899343e6d5c"
+    }
+  ]
+}

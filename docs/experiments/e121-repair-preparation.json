@@ -1,0 +1,43 @@
+{
+  "experiment": "E121",
+  "status": "local_passed_integration_pending",
+  "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "local_verification": {
+    "status": "passed",
+    "full_ctest_cases": 279,
+    "existing_case_names_preserved": 263,
+    "verification_groups": {
+      "ctest-existing.log": 262,
+      "focused-after-v2.log": 16,
+      "ctest-e94.log": 1
+    },
+    "portable_related_cases": 47,
+    "source_files_matched": 90,
+    "focused_before_failures": 11,
+    "focused_before_controls": 4,
+    "focused_after_passed": 15,
+    "binding_cases": 5,
+    "controlled_native_sequences": 4,
+    "controlled_native_commands": 11,
+    "order_checks": 38,
+    "snapshot_clone_suffixes": 7,
+    "legacy_bomb_sequences": 4,
+    "legacy_bomb_commands": 23,
+    "fixture_corrections": "Invalid initial post-draw hypothesis removed before repair testing; global diagnostic sum is not branch state. Logs retained.",
+    "cmake_entry_correction": "Local CMake omitted the existing E94 terminal test. Added the unchanged public entry, ran that case, and checked all 263 original case names.",
+    "portable_dependency_correction": "Initial build lacked JSON_INCLUDE. Configured the known header directory and rebuilt; source patch unchanged.",
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "portable_engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d"
+  },
+  "patch_sha256": "8172ffb343e65f0b9b5a9912e6c89782a1bdc79e64c0d3de4d10b718217e5ca1",
+  "integration_registration_sha256": "7e6050ec052557674625eb4f45006ca79acd425d7f2c221a36c900b209ca7d00",
+  "integration_started_at": "2026-09-20T09:44:31.095576+00:00",
+  "next_observation_at": "2026-09-20T10:04:31.095576+00:00",
+  "selected_development_seed": 1138994370,
+  "long_job_observation_interval_seconds": 1200,
+  "source_refresh_permitted": false,
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "limits": "Local repair evidence; full natural/original integration has not been inspected or admitted at publication. The mutable simulator stays E116 until the completion gate passes. E117 stopped and E118/E119 closed. No unseen or learned success claim."
+}

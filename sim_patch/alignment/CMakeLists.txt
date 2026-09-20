@@ -235,3 +235,16 @@ add_test(NAME e116_snapshot_contract COMMAND "${Python_EXECUTABLE}"
     "${CMAKE_CURRENT_SOURCE_DIR}/tests/e116_bomb_snapshot.py" -v)
 set_tests_properties(e116_snapshot_contract PROPERTIES TIMEOUT 30
     ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(e121_power_order_tests tests/e121_power_order.cpp)
+target_link_libraries(e121_power_order_tests PRIVATE sts_core)
+foreach(case combust_first trance_first no_runic no_no_draw stack reapply expired blocked
+        copy queued_copy fingerprint priority bomb_first bomb_after bomb_between)
+    add_test(NAME e121_${case} COMMAND e121_power_order_tests ${case})
+    set_tests_properties(e121_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+add_test(NAME e121_snapshot_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/e121_power_snapshot.py" -v)
+set_tests_properties(e121_snapshot_contract PROPERTIES TIMEOUT 30
+    ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")

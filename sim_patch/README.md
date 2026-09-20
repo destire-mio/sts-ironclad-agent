@@ -232,3 +232,12 @@ Apply `e116_bomb_instances.patch` after E111, then rebuild core, search and Pyth
 263 CTest cases and 31 clean portable cases pass, including public import/copy regressions. Four recorded original controls and one preselected full natural route pass with additive per-instance power checks and twelve terminal RNG streams. The failed initial patch-application attempt is preserved. This admits a newly registered source refresh, not old E112 labels, model improvement or exhaustive parity. Relative ordering among different power types remains outside the scoped repair.
 
 [Manifest](alignment/e116-bomb-instance-manifest.json), [completed result](alignment/e116-bomb-instance-report.json).
+
+
+### E121: player turn power order (integration pending)
+
+Apply `e121_power_order.patch` after E116 and rebuild core, search and Python bindings together. Player state retains priority and stable acquisition order, including individual Bombs. Stacking keeps position; removal and reapplication update it. The existing start, post-draw and end-turn callback loops consume that order; snapshots, copies and `Player.power_order` preserve it.
+
+279 local checks, 47 clean portable checks and four recorded E120 original sequences pass. Full natural/original integration is registered but not admitted at this checkpoint. Keep training and source collection stopped until its completion gate passes. Other hook phases remain outside this scoped repair.
+
+[Manifest](alignment/e121-power-order-manifest.json), [preparation](../docs/experiments/e121-repair-preparation.json).
