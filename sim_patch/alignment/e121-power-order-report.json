@@ -1,0 +1,82 @@
+{
+  "experiment": "E121",
+  "status": "complete",
+  "finished_at": "2026-09-20T10:07:01.744285+00:00",
+  "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "baseline_engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+  "changed_source_files": [
+    "bindings/slaythespire.cpp",
+    "include/combat/Player.h",
+    "src/combat/Player.cpp"
+  ],
+  "focused_before_failures": 11,
+  "focused_before_controls": 4,
+  "focused_after_passed": 15,
+  "public_snapshot_binding_cases": 5,
+  "full_ctest_passed": 279,
+  "portable_related_checks": 47,
+  "portable_source_files_matched": 90,
+  "original_order_sequences": 4,
+  "original_order_commands": 11,
+  "original_order_checks_per_build": 38,
+  "snapshot_suffixes_and_clone_pairs": 7,
+  "wrong_order_same_amount_rejected": true,
+  "wrong_order_changes_next_draw": true,
+  "legacy_bomb_sequences": 4,
+  "legacy_bomb_commands": 23,
+  "legacy_bomb_instance_checks": 110,
+  "fresh_planner_outcome": "heart_win",
+  "fresh_planner_repeat_matched": true,
+  "fresh_outside_NN_choices_audited": 203,
+  "original_route": {
+    "seed": 1138994370,
+    "status": "matched",
+    "commands": 1065,
+    "hp": 62,
+    "bosses": [
+      "AWAKENED_ONE",
+      "TIME_EATER"
+    ],
+    "recorded_proof_sha256": "41efed7998f6c6813a78aea1e3e815653082e27f0b8f6ac3318260c891c01a38"
+  },
+  "turn_order_checks": {
+    "original": {
+      "status": "matched",
+      "checks": 740,
+      "bomb_bearing_checks": 0,
+      "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+      "combiner_sha256": "28b537d87523898f7d8c9aa861cff7ccebc919cbb2eaf983cac21be9ab033c2f",
+      "instance_checker_sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be",
+      "order_checker_sha256": "8e2f5b0d6c96c27ea659c8969a3510e997b405e0df6f4b0fe5650b8daa6d3475",
+      "order_bearing_checks": 403,
+      "result_status": "original_heart_trace_matched",
+      "state_imports": 0,
+      "resynchronized": false
+    },
+    "recorded": {
+      "status": "matched",
+      "checks": 740,
+      "bomb_bearing_checks": 0,
+      "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+      "combiner_sha256": "28b537d87523898f7d8c9aa861cff7ccebc919cbb2eaf983cac21be9ab033c2f",
+      "instance_checker_sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be",
+      "order_checker_sha256": "8e2f5b0d6c96c27ea659c8969a3510e997b405e0df6f4b0fe5650b8daa6d3475",
+      "order_bearing_checks": 403,
+      "result_status": "recorded_original_heart_trace_matched",
+      "state_imports": 0,
+      "resynchronized": false
+    }
+  },
+  "terminal_rng_streams_checked": 12,
+  "terminal_rng_verification_sha256": "085a0e4303ac766b062b76d264932322d637252023ae0a2e55febc5f3bbb74ec",
+  "patch_sha256": "8172ffb343e65f0b9b5a9912e6c89782a1bdc79e64c0d3de4d10b718217e5ca1",
+  "source_refresh_permitted": true,
+  "old_engine_training_labels_permitted": false,
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "rule": "Native priority then stable application order; stack preserves position, removal erases it, reapplication gets a new position. Bomb instances share the order. Snapshot, copy and state text preserve order. Existing start, post-draw and end-turn callbacks use it.",
+  "limits": "Scoped player turn ordering and one preselected development Heart route. Not exhaustive game parity or a learned/unseen win rate. Full-route additive admission compares the three changed callback phases; other hook phases remain outside this repair. Berserk uses energy and scalar zero powers keep the existing presence semantics. mapRng internal state is not exported; map contents are checked. E117 stays stopped, E118/E119 closed.",
+  "local_verification_sha256": "8508ce01db0cb360013fe76636cab1ddaba7606c8f1306df78ead4bf8bb4c697",
+  "integration_registration_sha256": "7e6050ec052557674625eb4f45006ca79acd425d7f2c221a36c900b209ca7d00"
+}

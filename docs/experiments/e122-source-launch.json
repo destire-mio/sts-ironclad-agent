@@ -1,0 +1,47 @@
+{
+  "experiment": "E122",
+  "status": "source_launched",
+  "launch_verified_at": "2026-09-20T10:10:48.164398+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "families": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "workers": 8,
+  "source_registration_sha256": "2aa89a9ea20ca5561cc9e1552241f8d1bea063c51e1d22f0240b1f0c3fb182ac",
+  "source_manifest_sha256": "f7a8b4ea2a05612be8d3fabfee2610d7fb81a9970e72d85f8451c45f7d16a67d",
+  "original_registration_sha256": "c442ed63c6a91cb914bd6ca24e2bac42c4dd34af43db023c3a521d37d058829d",
+  "execution_registration_sha256": "ef95509f18ac4aedb6918fa6da0398691cb4632daee38a6e4cccac8e0b96269e",
+  "repair_completion_sha256": "c2266175332e441304d5b83c6070f3c2736c435de2650c9fd4682ef6e7b2f264",
+  "role_files_byte_identical": true,
+  "source_controller_pid_at_launch": 54754,
+  "source_process_group_at_launch": 54754,
+  "owned_descendants_at_launch": 9,
+  "long_job_observation_seconds": 1200,
+  "next_observation_at": "2026-09-20T10:29:44.252676+00:00",
+  "entry_checks": {
+    "runtime_modules": 10,
+    "native_bomb_states": 15,
+    "wrong_bomb_instances_and_countdown_rejected": true,
+    "native_order_states": 11,
+    "wrong_order_same_amount_rejected": true,
+    "turn_proof_negative_cases": 22,
+    "terminal_rng_negative_cases": 15,
+    "known_natural_actions_replayed": 965,
+    "incomplete_source_rejected_before_original_launch": true,
+    "owned_process_controls_reused": [
+      "normal",
+      "fault",
+      "timeout",
+      "wrapper_SIGTERM"
+    ]
+  },
+  "original_gate_launched": false,
+  "labels_collected": 0,
+  "optimizer_updates": 0,
+  "limits": "Launch checkpoint, not a completed source result or win rate. All 6144 sources and winner replans plus all 512 development audits and every development-winning original route must pass before continuation labels. Native admission includes Bomb instances, turn-phase order and twelve terminal RNG streams. E117 stays stopped, E118/E119 closed. The final 1024 unseen families remain separate."
+}

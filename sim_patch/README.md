@@ -234,10 +234,12 @@ Apply `e116_bomb_instances.patch` after E111, then rebuild core, search and Pyth
 [Manifest](alignment/e116-bomb-instance-manifest.json), [completed result](alignment/e116-bomb-instance-report.json).
 
 
-### E121: player turn power order (integration pending)
+### E121: player turn power order
 
 Apply `e121_power_order.patch` after E116 and rebuild core, search and Python bindings together. Player state retains priority and stable acquisition order, including individual Bombs. Stacking keeps position; removal and reapplication update it. The existing start, post-draw and end-turn callback loops consume that order; snapshots, copies and `Player.power_order` preserve it.
 
-279 local checks, 47 clean portable checks and four recorded E120 original sequences pass. Full natural/original integration is registered but not admitted at this checkpoint. Keep training and source collection stopped until its completion gate passes. Other hook phases remain outside this scoped repair.
+279 local checks, 47 clean portable checks and four recorded E120 original sequences pass. The registered natural/original Heart integration passed, including all outside choices, phase-specific order and twelve terminal RNG streams. Register a new source under E121; old E117 outcomes do not become new-engine labels. Other hook phases remain outside this scoped repair.
 
 [Manifest](alignment/e121-power-order-manifest.json), [preparation](../docs/experiments/e121-repair-preparation.json).
+
+[Completed E121 result](alignment/e121-power-order-report.json). The preparation link above is its historical pending checkpoint.
