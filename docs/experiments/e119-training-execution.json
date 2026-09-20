@@ -1,0 +1,76 @@
+{
+  "experiment": "E119-execution",
+  "status": "preparation_complete",
+  "created_at": "2026-09-20T08:54:50.906369+00:00",
+  "registration": {
+    "experiment": "E119-execution",
+    "created_at": "2026-09-20T08:53:16.619412+00:00",
+    "total_seconds": 64800,
+    "fit_seconds": 3600,
+    "verification_wrapper_seconds": 11100,
+    "natural_wrapper_seconds_per_arm": 11100,
+    "original_wrapper_seconds_per_arm": 11100,
+    "finalize_seconds": 3600,
+    "maximum_stage_seconds_sum": 62700,
+    "observer_interval_seconds": 1200,
+    "internal_stage_seconds_unchanged": {
+      "live_heldout_choices": 10800,
+      "natural_per_arm": 10800,
+      "original_per_arm": 10800,
+      "original_per_route": 900
+    },
+    "total_deadline": "Scheduling deadline and remaining subprocess allowance. Input validation and final native cleanup are synchronous; this is not an independent outer OS watchdog.",
+    "entry": "All E117 source/original proofs and E118 labels are revalidated before creating execution, model, or original-candidate directories. No restart or resume. Closed source markers reject before and after each phase.",
+    "ordering": [
+      "both fixed fits",
+      "common heldout live choices",
+      "small: natural if heldout passes, all original winners if natural passes",
+      "expanded: same gates",
+      "final decision after all eligible original gates and native cleanup"
+    ],
+    "ownership": "Each phase subprocess uses the exact E118 owned-group utility and inherited completed control evidence. Original JVM cleanup is confined to this study arm/seed instance directories. Stop on the first execution error; retain all artifacts.",
+    "resolved_stateless_bomb_helper": {
+      "path": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/bomb_instances.py",
+      "sha256": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be"
+    },
+    "no_retry": true,
+    "auto_adoption": false,
+    "unseen_acceptance_games": 0,
+    "recipe_changes": false,
+    "hashes": {
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/run_training_pipeline.py": "ce05528b4f33a81ee1f1839976f7c6245be843f01aa748f0166362e57b6a2fe5",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/check-training-execution.py": "f80797bed0fbd147b3ba18d8e6cdb9005bf03b3fc913e92f88d02a98128f1653",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/scale_training.py": "8eac3374fd52ecd70fa35f59d0bac651396c7da81a8dc556431bde66f25a6a23",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/scale_verify.py": "fa609602a11ac86887bc36c2448b54d4d10b0210e3d2fea30b18a254d00a33ff",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/scale_development.py": "1671834607471a8710c4f4322e295761bf2ed0d3e3ba1c0475a263fb584296c2",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/candidate_original.py": "773efeaca2bd3a91d126377a8a60d8f1ad40d52436ffe14e95d1a9e1b2a45766",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/scale-training-registration.json": "42866409dc499afc78b9e93ad1733fc1af28b672538f89161157747136ad246f",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/scale-verification-registration.json": "1a78eeb0cf477872a01be68b1b1baf9b18ba2521634d6babaa999021e8a36dbf",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/development-registration.json": "52f83172d8357c5ad4c4d7fdf30821562b11c766a29401a6d893b30aaa0959b0",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-training-20260920-01/preparation-publication-verification.json": "55ef38036035490ed505be0980a541785d31fcf2506a73302fd23414b0fd72c1",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-joint-labels-20260920-01/run_pipeline.py": "7dad63255a682759b4b80e193a75d4c5a46e48a631d77f6fa31e6c91dd631db3",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-joint-labels-20260920-01/check-launcher.py": "c19c016d9c65e326db8c30f4671618fcecbb5e3e5ded0aec1b6efa61a19bd9fa",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-joint-labels-20260920-01/registration.json": "29109792a29f51b8e8b44b02c52c7ac9751822826828534c96b6530a1d53c011",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e116-scale-joint-labels-20260920-01/launcher-probe/completion-verification.json": "13ad18e51080bae0ab723bd252b647b16c141f660cda27e5881e2460d019a06a",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/tests/bomb_instances.py": "3eac720fcf2608df02fdf3117d426cb27f1f89f86cf8b9b962dc1a27de7e73be"
+    }
+  },
+  "registration_sha256": "1701001fbb858cbccec282e59304f7563dd2350243eb15cd89574fba513373fa",
+  "entry_verification_sha256": "87d43cd9b906faa7168aced17b1f6b923f17d4b8631c9d901dce17ee73122d88",
+  "incomplete_inputs_rejected_before_outputs": true,
+  "inherited_process_cases": [
+    "normal",
+    "fault",
+    "timeout",
+    "wrapper_SIGTERM"
+  ],
+  "inherited_launcher_proof_sha256": "13ad18e51080bae0ab723bd252b647b16c141f660cda27e5881e2460d019a06a",
+  "new_process_control_cases": 0,
+  "formal_pipeline_started": false,
+  "new_mcts_calls": 0,
+  "optimizer_updates": 0,
+  "new_original_instances": 0,
+  "production_adoption": false,
+  "unseen_acceptance_games": 0,
+  "limits": "Actual missing-input rejection and byte-identical inherited owned-process utility. No new positive full-chain execution, trained candidate or win-rate evidence."
+}

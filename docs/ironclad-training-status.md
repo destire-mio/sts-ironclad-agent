@@ -2,6 +2,8 @@
 
 Updated 2026-09-20. Scope: Ironclad, Ascension 20, natural start through the Heart, including three keys, two Act 3 bosses, and Act 4. Prismatic Shard is excluded. Combat uses MCTS; a neural policy controls out-of-combat decisions.
 
+**E119 has a prepared single-run execution wrapper.** It chains both fixed fits, heldout choice verification, eligible natural/original gates and final selection. Every phase uses the existing tested owned-process utility; original cleanup is confined to this study and precedes the completion record. Actual incomplete inputs reject before outputs. No full training chain, new process-control experiments or optimizer updates ran. The 18-hour scheduling deadline is not an independent outer OS watchdog. [Execution preparation](experiments/e119-training-execution.json).
+
 **E118/E119 preparation binds the joint relic/card study to E116 and E117.** The fixed 1,536/4,608 fit comparison, common 1,024 holdout, 512 development families and learning recipe are preserved. Per-instance Bomb proofs now gate source and candidate admission alongside the twelve terminal RNG streams. Known-route choice/replay and rejection controls pass; no new labels or model updates ran. [Collector](experiments/e118-label-preparation.json), [training](experiments/e119-training-preparation.json), [source archive](experiments/e118-e119-prepared-sources/README.md).
 
 **E117 original development checking launched at 08:42 UTC.** The scheduled source snapshot had 954 files and all 512 development sources; the job audits those sources before executing every development winner in the original game. Full-source and original completion remain pending. [Launch snapshot](experiments/e117-original-launch.json).
