@@ -1,0 +1,550 @@
+{
+  "experiment": "E103",
+  "status": "stopped_on_original_finding",
+  "created_at": "2026-09-20T04:00:33.174914+00:00",
+  "source_registration_sha256": "38b1fb93b5d7f73585bfbe7c9b8bba35e3e9511e66cabce6f11060581f668548",
+  "source_manifest_sha256": "6888b3a041094b71038d8d7804a17e99afb3e192938a2ee65bac56c81701acec",
+  "stop_verification_sha256": "0a4f90c948c7a372f090d28cec1fc2a956db0646e924fb8bafaf3f7d82886269",
+  "source_saved_files": 4013,
+  "files_by_role": {
+    "fit": 3501,
+    "train_development": 512,
+    "label_holdout": 0
+  },
+  "missing_source_files": 2131,
+  "missing_files_are_deaths": false,
+  "development_audit": {
+    "status": "complete",
+    "families": 512,
+    "terminal_replays": 512,
+    "outcomes": {
+      "death": 460,
+      "heart_win": 50,
+      "act3_without_heart": 2
+    },
+    "execution_faults": 0,
+    "outside_NN_choices_audited": 67922,
+    "identity": {
+      "engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_index_sha256": "8023694454256fa26ed52796c917190df4a0c62e96c35503644b97d39789f8d4",
+    "source_cases_sha256": "0d72712a688f51d3585b2a3474ba86b673dc4ca9686d309a4cf7bc2d2786e342",
+    "limits": "Development subset only; full natural source and winner-replan completion are separate admission gates."
+  },
+  "original_gate": {
+    "status": "stopped_with_unresolved_findings",
+    "requested_winning_routes": 50,
+    "attempted": 21,
+    "matched_routes": 20,
+    "matched_commands": 20274,
+    "unattempted_seeds": [
+      884770429,
+      896116242,
+      903019303,
+      965063113,
+      974132578,
+      1138994370,
+      1143952644,
+      1162172025,
+      1172803786,
+      1184205587,
+      1199955940,
+      1265220920,
+      1316135409,
+      1334567629,
+      1342229608,
+      1342574947,
+      1555071777,
+      1577148875,
+      1672898994,
+      1678131635,
+      1695501490,
+      1707049679,
+      1803560408,
+      1809097593,
+      1813594522,
+      1826367146,
+      1902830755,
+      1933152777,
+      1992848422
+    ]
+  },
+  "first_mismatch": {
+    "seed": 881079338,
+    "source_episode_sha256": "22a390830066144359e757a95856c8603a5f8c2b381564cfad73858cd7fb463a",
+    "first_mismatch": {
+      "prefix_index": 116,
+      "command_index": 429,
+      "combat_action_index": 20,
+      "floor": 27,
+      "screen": "NONE",
+      "differences": {
+        "hand": {
+          "original": [
+            [
+              249,
+              0,
+              1,
+              1,
+              false,
+              0
+            ]
+          ],
+          "simulator": []
+        },
+        "draw_pile": {
+          "original": [
+            [
+              187,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              311,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              345,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              25,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              301,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              329,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              347,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              347,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              65,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              289,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              51,
+              0,
+              -2,
+              -2,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              187,
+              1,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              27,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              329,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              14,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              69,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              266,
+              1,
+              2,
+              2,
+              false,
+              0
+            ]
+          ],
+          "simulator": []
+        },
+        "discard_pile": {
+          "original": [],
+          "simulator": [
+            [
+              329,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              69,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              65,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              27,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              347,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              329,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              25,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              249,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              289,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              347,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              266,
+              1,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              321,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              187,
+              1,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              301,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              311,
+              0,
+              0,
+              0,
+              false,
+              0
+            ],
+            [
+              51,
+              0,
+              -2,
+              -2,
+              false,
+              0
+            ],
+            [
+              187,
+              0,
+              2,
+              2,
+              false,
+              0
+            ],
+            [
+              345,
+              0,
+              1,
+              1,
+              false,
+              0
+            ],
+            [
+              14,
+              0,
+              0,
+              0,
+              false,
+              0
+            ]
+          ]
+        },
+        "rng": {
+          "original": {
+            "ai": {
+              "seed0": 7235804980160306742,
+              "seed1": 16460160403080439458,
+              "counter": 8
+            },
+            "card_random": {
+              "seed0": 11254724417573355592,
+              "seed1": 1157276122498915278,
+              "counter": 60
+            },
+            "misc": {
+              "seed0": 3337151164013254730,
+              "seed1": 582149192330807428,
+              "counter": 2
+            },
+            "monster_hp": {
+              "seed0": 582149192330807428,
+              "seed1": 9288082559742237410,
+              "counter": 3
+            },
+            "potion": {
+              "seed0": 2811962048354020592,
+              "seed1": 2975624746917525803,
+              "counter": 41
+            },
+            "shuffle": {
+              "seed0": 3337151164013254730,
+              "seed1": 582149192330807428,
+              "counter": 2
+            }
+          },
+          "simulator": {
+            "ai": {
+              "seed0": 7235804980160306742,
+              "seed1": 16460160403080439458,
+              "counter": 8
+            },
+            "card_random": {
+              "seed0": 11254724417573355592,
+              "seed1": 1157276122498915278,
+              "counter": 60
+            },
+            "misc": {
+              "seed0": 3337151164013254730,
+              "seed1": 582149192330807428,
+              "counter": 2
+            },
+            "monster_hp": {
+              "seed0": 582149192330807428,
+              "seed1": 9288082559742237410,
+              "counter": 3
+            },
+            "potion": {
+              "seed0": 2811962048354020592,
+              "seed1": 2975624746917525803,
+              "counter": 41
+            },
+            "shuffle": {
+              "seed0": 5391552956147847778,
+              "seed1": 3337151164013254730,
+              "counter": 1
+            }
+          }
+        }
+      }
+    },
+    "resynchronized": false,
+    "commands": 430
+  },
+  "original_completion_sha256": "54d11ad48e91070b20358475bc301f46f662dc91b31e2cb69adc6351c1f6a553",
+  "rule_evidence": "At floor27 Gremlin Leader, a last-card Armaments triggers Unceasing Top with an empty draw pile. Original shuffles and draws Pommel Strike (hand1/draw22/discard0, shuffle counter2); simulator yields control before queued shuffle/draw (hand0/draw0/discard23, counter1). Pending refill and on-draw actions must settle before player input.",
+  "rng_limit": "The failed boundary reports shuffle RNG and pile differences. The failed full route did not pass the additional six-stream persistent RNG audit.",
+  "owned_source_group_remaining": [],
+  "failed_original_cleanup": {
+    "remaining": []
+  },
+  "new_counterfactual_labels": 0,
+  "optimizer_updates": 0,
+  "candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "next": "Repair and validate Top queue settlement on the preselected failing seed. A new source/label registration is required; E103 is not restarted and E104/E105 remain closed.",
+  "limits": "Incomplete source admission; data-scale and candidate hypotheses remain untested. The 50/512 development result belongs to the fixed parent under E102, not a new model or unseen acceptance."
+}

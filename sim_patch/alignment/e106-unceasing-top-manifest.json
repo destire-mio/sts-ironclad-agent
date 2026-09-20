@@ -1,0 +1,14 @@
+{
+  "experiment": "E106",
+  "baseline_engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+  "patch_sha256": "5f8b28912441e92041713ce2833eb03ffd221a064d565cf3803fcaea06ee7900",
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "dc93c86badb1b9fae3ff0759d804a91777c9e46640134672084b3db9331f31cf",
+      "after": "362c77a91a46b0191ab18657ff5d8b3cd568687a535a7b5e5f9ba95020772e27"
+    }
+  ],
+  "apply_after": "E102 Spot Weakness and all preceding simulator patches",
+  "scope": "Finish Top-generated queued shuffle/draw/on-draw actions before yielding the next player decision."
+}

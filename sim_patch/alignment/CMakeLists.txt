@@ -195,3 +195,10 @@ foreach(case IN ITEMS wither_base wither_upgraded wither_zero_damage other_writh
     add_test(NAME e102_${case} COMMAND e102_spot_weakness_tests ${case})
     set_tests_properties(e102_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e106_unceasing_top_tests tests/e106_unceasing_top.cpp)
+target_link_libraries(e106_unceasing_top_tests PRIVATE sts_core)
+foreach(case IN ITEMS shuffle shuffle_triggers sibling_copy evolve fire_breathing lethal_fire_breathing simple_draw no_draw empty_piles no_top)
+    add_test(NAME e106_${case} COMMAND e106_unceasing_top_tests ${case})
+    set_tests_properties(e106_${case} PROPERTIES TIMEOUT 15)
+endforeach()

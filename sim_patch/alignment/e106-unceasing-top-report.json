@@ -1,0 +1,49 @@
+{
+  "experiment": "E106",
+  "status": "complete",
+  "finished_at": "2026-09-20T04:04:20.606911+00:00",
+  "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "baseline_engine_sha256": "634604607dcd15386676d5922cadcba6f969c12b172984d648e8810e378813f3",
+  "changed_source_files": [
+    "src/combat/BattleContext.cpp"
+  ],
+  "focused_before_failures": 6,
+  "focused_before_controls": 4,
+  "focused_after_passed": 10,
+  "full_ctest_passed": 231,
+  "portable_focused_passed": 10,
+  "portable_source_files_matched": 90,
+  "recorded_original_top_boundaries": 3,
+  "recorded_before_mismatches": 1,
+  "recorded_after_matches": 3,
+  "original_control_sequences": 9,
+  "original_control_before_mismatches": 5,
+  "original_control_after_matches": 9,
+  "preserved_fixture_setup_errors": 2,
+  "fixture_error_correction": "The Abacus and Abacus were rejected before card execution; native constant TheAbacus resolves the single planned shuffle-relic control. All attempted fixtures are retained.",
+  "natural_actions_to_registered_boundary": 398,
+  "natural_prefix_state_imports": 0,
+  "fresh_planner_outcome": "heart_win",
+  "fresh_planner_repeat_matched": true,
+  "fresh_outside_NN_choices_audited": 196,
+  "original_route": {
+    "seed": 881079338,
+    "status": "matched",
+    "commands": 1069,
+    "hp": 49,
+    "bosses": [
+      "DONU_AND_DECA",
+      "AWAKENED_ONE"
+    ],
+    "recorded_proof_sha256": "8f373fdd98d708ff4fb763ad494502ec9cb177aac1e3a221a39e733dfc6edbb3"
+  },
+  "original_auditor_sha256": "5f7d09dbc765b5eff647bf9d32469616f0aeb29d5336e4805a197f82cbe10e0c",
+  "patch_sha256": "5f8b28912441e92041713ce2833eb03ffd221a064d565cf3803fcaea06ee7900",
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "source_refresh_permitted": true,
+  "old_engine_training_labels_permitted": false,
+  "rule": "Unceasing Top can enqueue refill and on-draw actions. Drain those actions before the next player input; keep NoDraw, empty-pile and no-relic guards and ordinary draw semantics.",
+  "limits": "One confirmed queue-settlement repair, ten C++ groups, nine original card-sequence fixtures, three recorded native Top boundaries, and one preselected repaired-engine natural Heart route with repeat planning/full original and persistent-RNG verification. No exhaustive parity, population win-rate or learned gain; E103 remains stopped and affected sources/labels need a new registration."
+}

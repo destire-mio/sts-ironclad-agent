@@ -1,0 +1,14 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -808,6 +808,11 @@
+ 
+             if (cards.cardsInHand == 0) {
+                 drawCards(1);
++                // A refill or an on-draw power can enqueue follow-up actions.
++                // Resolve them before exposing the next player decision.
++                if (!actionQueue.isEmpty()) {
++                    continue;
++                }
+             }
+         }
+ 

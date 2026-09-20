@@ -205,3 +205,12 @@ Apply `e102_spot_weakness.patch` after `e98_guardian_queue.patch`, then rebuild 
 Three target groups fail on the old library and pass after repair; four controls pass under both. All221 CTest cases and seven portable focused cases pass. The same751-action natural prefix matches18 recorded native Spot Weakness boundaries, including the prior Strength2-versus5 divergence. The preselected seed192246470 replans to a Heart victory, repeats identically, passes207 outside-NN audits and matches1,090 original commands through Time Eater/Donu and Deca, Shield/Spear and Heart at15HP, including added persistent-RNG checks. This is a rule-repair control, not a new trained model or population win-rate claim. E99 stays stopped; affected sources/labels must be regenerated under a new registration.
 
 [Patch manifest](alignment/e102-spot-weakness-manifest.json), [result](alignment/e102-spot-weakness-report.json), [regressions](alignment/tests/e102_spot_weakness.cpp).
+
+
+### E106: Unceasing Top queued draw effects
+
+Apply `e106_unceasing_top.patch` after `e102_spot_weakness.patch`, then rebuild core/search/bindings together. When Top's draw schedules shuffle/refill or on-draw actions, finish the action queue before returning player input. Preserve NoDraw, empty-pile and no-Top controls.
+
+Ten focused C++ groups pass (six failed before repair); full CTest231 and portable10 pass. Nine original sequence controls and three recorded natural boundaries match. Two rejected Abacus fixture IDs remain documented; the actual native constant is TheAbacus. The preselected repaired natural route and its repeated plan pass196 outside-choice checks and1,069 original commands, with three keys, two Act3 bosses, Act4/Heart at49HP and persistent-RNG checks. This is scoped repair evidence, not an exhaustive-parity or win-rate claim.
+
+[Patch manifest](alignment/e106-unceasing-top-manifest.json), [result](alignment/e106-unceasing-top-report.json), [regressions](alignment/tests/e106_unceasing_top.cpp).
