@@ -1,0 +1,63 @@
+{
+  "experiment": "E107",
+  "created_at": "2026-09-20T04:06:54.257164+00:00",
+  "question": "Regenerate the unchanged 6144 small and expanded data-scale source families under E106 before comparing joint relic/card learning. E97, E99 and E103 stopped for rule differences; their data-scale hypothesis remains untested.",
+  "source_manifest_sha256": "05fabcae283361989ba164a865ad1b9278155db5d338d5a3ff3ccbf8363130b7",
+  "repair_completion_sha256": "f9cc27f44095da942b4f97eab0a73a404edc03d986d94511d1fecd17dd570edc",
+  "repair_publication_sha256": "e7947aac5763efc216beae482df0e0a527a5882739b49fe4f40bf31365fcf557",
+  "old_assignment_sha256": "cbf91fb6804d0d719efb3feece61d6a6b80e62506233d429ad26751a61a80126",
+  "new_assignment_sha256": "f97049ba11b371241ead1fdb8d31371dad2bbde371e8ee2466d0e24cdc8ae10c",
+  "inherited_scale_protocol_sha256": "d502298cb4eec4d8c713751a14f48baaebc838f70f75e28b5e64e619c6dbede5",
+  "counts": {
+    "fit": 4608,
+    "label_holdout": 1024,
+    "train_development": 512
+  },
+  "groups": {
+    "small_fit": 1536,
+    "additional_fit": 3072,
+    "old_label_holdout": 512,
+    "additional_label_holdout": 512,
+    "development": 512
+  },
+  "assignment": "Preserve every E87 fit/label_holdout family and every E97 assignment and role. The E87 development panel is not needed for this study. Never substitute faults, early deaths or missing nodes. Draw no new acceptance seeds.",
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "total_source_seconds": 10800,
+    "wrapper_seconds": 11100,
+    "long_job_observation_seconds": 1200
+  },
+  "scope": {
+    "character": "IRONCLAD",
+    "ascension": 20,
+    "target": "HEART",
+    "keys": 3,
+    "act3_distinct_bosses": 2,
+    "prismatic_shard_purchase": false,
+    "simulations_per_call": 8000,
+    "boss_multiplier": 3,
+    "engine_sha256": "30d8b30bbb9d7f283606cfca169c2e4b5ade8e082f090dd2c02de418fdbd1bc7",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "gates": [
+    "All 6144 sources complete, independently replayed terminal/state/RNG/timer and every outside NN choice. All wins replanned with identical action prefix and terminal.",
+    "All 512 assigned development families independently audited, then all winning full routes compared in original Java plus persistent RNG, route/keys and cleanup checks. Stop on a finding.",
+    "Only after both source gates, execute the separately registered first-relic and relic/card continuation collection under E106. Never relabel or mix old-engine continuations. Preparation may precede admission; label execution may not.",
+    "Only after new-label audits may the inherited two-arm data-scale experiment run. No optimizer or candidate evaluation is part of this source refresh."
+  ],
+  "limits": "Known training/development source renewal under a verified rule repair, not a new trained model, representative original win rate, exhaustive parity or final 50 percent acceptance. All E103/E102 and older evidence stays immutable. E104/E105 old-source gates remain closed.",
+  "previous_source_stop_sha256": "0a4f90c948c7a372f090d28cec1fc2a956db0646e924fb8bafaf3f7d82886269",
+  "status": "registered",
+  "registration_sha256": "1262e2cd511cc09a41543e8f798ecf65b0bacdf90f59815bd8845714123fdcd4",
+  "source_execution_registration_sha256": "c2b6dafcd28d2d2885367be4f47612337c387c9d3996f703b5c2f479de6ca03f",
+  "source_entry_verification_sha256": "44ec307d475e8341ed80971b2fc3fbb8c9d5bafce75bd2633c6df2aeb793a2a1",
+  "original_gate_registration_sha256": "3ef2bf3361dc6dfec7b16f310544b4ded56a9f7a824465a67df56b75e51dae19",
+  "original_entry_verification_sha256": "2562124cf32f189dfca61554b1b897a4892226af64f934d287700a2caabb0fb7",
+  "distinct_families": 6144,
+  "actual_loaded_runtime_modules_checked": 10,
+  "new_optimizer_updates": 0,
+  "original_gate": "All512 assigned development sources, then every Heart win; one original JVM, no replacements or retries. Stop on the first nonmatch, with persistent-RNG and route verification."
+}
