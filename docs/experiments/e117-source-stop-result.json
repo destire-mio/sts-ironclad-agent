@@ -1,0 +1,186 @@
+{
+  "status": "stopped_on_external_confirmed_rule_difference",
+  "created_at": "2026-09-20T09:15:31.091720+00:00",
+  "stop_at": "2026-09-20T09:10:43.704012+00:00",
+  "source_registration_sha256": "b683394a27e37a77d37805355fb3af9b5d46800404c573c74afed82fda77b8fb",
+  "source_manifest_sha256": "c309c3cfbdca3342b570945aa781fab13d9dfe102f9792289d587d624ef9b89f",
+  "identity": {
+    "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_complete": false,
+  "admit_labels": false,
+  "saved_source_files": 1944,
+  "files_by_role": {
+    "fit": 1432,
+    "label_holdout": 0,
+    "train_development": 512
+  },
+  "invalid_source_files": [],
+  "missing_source_files": 4200,
+  "missing_files_are_deaths": false,
+  "development_audit": {
+    "status": "complete",
+    "families": 512,
+    "terminal_replays": 512,
+    "outcomes": {
+      "death": 459,
+      "heart_win": 51,
+      "act3_without_heart": 2
+    },
+    "execution_faults": 0,
+    "outside_NN_choices_audited": 67895,
+    "identity": {
+      "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "source_index_sha256": "1969c33d80769c4db8a8e81303a6b96e0380cd180b425ddb7fd8f7838068cc58",
+    "source_cases_sha256": "93ce1b702d1e8eecafb08b28598dab1e441b8b192e7be3e1c5e020425525b44c",
+    "limits": "Development subset only; full natural source and winner-replan completion are separate admission gates."
+  },
+  "original_gate": {
+    "requested_winning_routes": 51,
+    "original_executions_started": 11,
+    "matched_routes": 10,
+    "matched_commands": 10205,
+    "interrupted_seeds": [
+      598511621
+    ],
+    "unattempted_seeds": [
+      609037150,
+      616544574,
+      647937939,
+      725623962,
+      731283787,
+      796652497,
+      830197655,
+      852482116,
+      852998648,
+      881079338,
+      884770429,
+      896116242,
+      903019303,
+      965063113,
+      974132578,
+      1138994370,
+      1143952644,
+      1162172025,
+      1172803786,
+      1184205587,
+      1199955940,
+      1265220920,
+      1316135409,
+      1334567629,
+      1342229608,
+      1342574947,
+      1555071777,
+      1577148875,
+      1672898994,
+      1676457485,
+      1678131635,
+      1695501490,
+      1707049679,
+      1803560408,
+      1809097593,
+      1813594522,
+      1826367146,
+      1902830755,
+      1933152777,
+      1992848422
+    ],
+    "cohort_rules_mismatches_observed": 0,
+    "rows": [
+      {
+        "seed": 117131367,
+        "status": "matched",
+        "commands": 1125,
+        "bomb_instances_sha256": "6904e31591d04437e80095fb1ef73e7ac4c36ce5acb01153352ddb675b358853",
+        "controller_result_sha256": "4948b44874b445c201ac7c34c3ffcbe03024bf9a8f910da949a0c96628120c2d",
+        "terminal_rng_sha256": "66051c56821e3f0366045ba19c65ddb58e93c05289dc59367421029e2ba7c2f1"
+      },
+      {
+        "seed": 131011623,
+        "status": "matched",
+        "commands": 1145,
+        "bomb_instances_sha256": "d6a96665d1f5e40930655309389dfa581a2dd993f44b1bd88e5140851d11e0da",
+        "controller_result_sha256": "29ea5c826903bea3428503e03f05f251b849636fcc9e2bbe33d7e3360bc4d415",
+        "terminal_rng_sha256": "0ba6dbb609160a8b6d3348b217e884e1dbf98fa5cb6954ba0f9e2fbf681eae15"
+      },
+      {
+        "seed": 160382065,
+        "status": "matched",
+        "commands": 904,
+        "bomb_instances_sha256": "c0287f9b6353798f268d9260fa72f28114f449542cf927c08c3081e4591eab3a",
+        "controller_result_sha256": "8a57bb9ea4b065219f6caccd0763a4392b0ca75179aa3c7ec9f17ce0df163c53",
+        "terminal_rng_sha256": "801a8bdd24e3749f25f6253801abc677bdb287d9671eadb3c19940f98e769fb9"
+      },
+      {
+        "seed": 168190709,
+        "status": "matched",
+        "commands": 838,
+        "bomb_instances_sha256": "a862a4ab85d620a17f39673c784e7b4714d3a3625497e7aa15df4a123a76849f",
+        "controller_result_sha256": "f28d1c32b783c51f5c61a07d97ed7b753798f9bdacb5326e81cce606846f3749",
+        "terminal_rng_sha256": "1b0ba3171cd8360a408789e5ccd4304f269e1a7d3b7f4c481ca4cbe8e0230ef3"
+      },
+      {
+        "seed": 192246470,
+        "status": "matched",
+        "commands": 1090,
+        "bomb_instances_sha256": "aec7bad7a195bb062b572fe02dbf62eaa3c8d80c2b8c01103f9629e437fdab57",
+        "controller_result_sha256": "8493343a1b0eeb42139e4f0af72bdc6df094f4792cbc8f9210e9c0d7171acab9",
+        "terminal_rng_sha256": "4940d9c8f8306248ac5da08da4c2576857832f98fc5913c519f6eb1f0b4dd6f6"
+      },
+      {
+        "seed": 218154331,
+        "status": "matched",
+        "commands": 1115,
+        "bomb_instances_sha256": "b25a93ce4a9f6a146ec0dd7f2b76301b098c6dd52825a6489baf4fffa8bf7651",
+        "controller_result_sha256": "86304e936b20f0e2f4a4515743de40fb426ae1bfc24a42cf1f45c88a713653c1",
+        "terminal_rng_sha256": "b427f6ed221ec50d6621241ecc62260a2728334522966aaf5afd9ffddc6410a9"
+      },
+      {
+        "seed": 32980350,
+        "status": "matched",
+        "commands": 1150,
+        "bomb_instances_sha256": "57762a40b1750614da2400c020fb1cfccc5aa916855dbcbe721b43bb25c3f077",
+        "controller_result_sha256": "9b575198e4f8e316a6cbcf1769282bd484dbf9e08b0ecae3b498c866232bc62f",
+        "terminal_rng_sha256": "5a1c97eaaa3edb8154dc5aa6512244131f14d8bdab38e25725f8bb0717d1f292"
+      },
+      {
+        "seed": 355153190,
+        "status": "matched",
+        "commands": 975,
+        "bomb_instances_sha256": "6bc16e5d6192017a58309b30cf94008fa2cc39c52fe8b27e6a2e84af6b411fc0",
+        "controller_result_sha256": "78341c0377d709119983f49167455868630e3cdd0a9658ec3448fc23c3fe8700",
+        "terminal_rng_sha256": "98e63bbbc99430f056500e958b04c469d42a401c58c7e652b3c37140e8e0d16c"
+      },
+      {
+        "seed": 375676657,
+        "status": "matched",
+        "commands": 871,
+        "bomb_instances_sha256": "2dcda43c634ee9b9a02e6806406f97ca6af697c8992f191d24767347eb49888e",
+        "controller_result_sha256": "0d5289aa8b425f655e1d8c957e7c226d01e8dfef9bc6407076e9310db5fdb82e",
+        "terminal_rng_sha256": "89859e3caa8aef385122464e7a0677b4d680b123727856863f3a883f4dd69214"
+      },
+      {
+        "seed": 534815687,
+        "status": "matched",
+        "commands": 992,
+        "bomb_instances_sha256": "353232340e568c6413962a010ac17e633205bc34639c7b6468c7ad2f914f5c45",
+        "controller_result_sha256": "b257af34c0e3995a665707b7af751321657e27a054156f56ddb4d4bc3aa242dd",
+        "terminal_rng_sha256": "711052fb4c3d92ca6facabdd74797d0e757edaf117e27b46ec765e00499c305e"
+      }
+    ],
+    "reason": "External controlled rule mismatch, not an original mismatch on one of these natural routes."
+  },
+  "confirmed_diagnostic_sha256": "25977d5c74eb73e71a730960eaff3f8becaa591d3ae8d83cf2c9f3f38010ebd0",
+  "original_diagnostic_completion_sha256": "1df68bcac8faa57c213a8f0a9fd323514762f03209cf8c54155814869ced9098",
+  "owned_source_and_original_process_groups_empty": true,
+  "stop_proof_sha256": "b7f6a7767666f107d3eb0b4afadc650cf8e62ad8aa4f5081ac6cad991e4be65b",
+  "new_labels": 0,
+  "optimizer_updates": 0,
+  "unseen_acceptance_games": 0,
+  "limits": "Partial source and 10 completed original routes are retained as scoped evidence. No full-source or original-cohort completion claim; 51/512 belongs to the fixed parent, not a learned candidate.",
+  "experiment": "E117-stop-for-E120",
+  "stop_verification_sha256": "818d40187c0bf123fcd9d05bc5f91b29b7590ff095ef111fef9e34156ab037b0"
+}

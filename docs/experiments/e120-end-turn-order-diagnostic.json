@@ -1,0 +1,104 @@
+{
+  "experiment": "E120",
+  "status": "original_confirmed_pending_repair",
+  "created_at": "2026-09-20T09:17:50.447129+00:00",
+  "engine_sha256": "e9e038f10dfd4cc32a4e4be7e342719bfad728dd5b959e5bc54899dac8e6fbc2",
+  "problem": "Equal-priority player powers retain application order in the original. E116 stores ordinary powers by enum and always removes No Draw before Combust, losing the acquired order.",
+  "trigger": "Play Combust, then Battle Trance while holding Runic Cube; end the turn.",
+  "original_result": "Combust loses HP while No Draw is active, so Runic Cube cannot draw. The following normal turn draws five cards.",
+  "simulator_result": "No Draw is removed first; the Combust HP loss triggers an extra draw. That card is discarded before the following turn, changing both piles.",
+  "native_cases": [
+    {
+      "name": "combust_then_trance_runic",
+      "status": "executed",
+      "power_order_before_end": [
+        "Combust",
+        "No Draw"
+      ],
+      "end_turn": {
+        "draw_before": 9,
+        "draw_after": 4,
+        "hand_after": 5,
+        "discard_after": 4,
+        "hp_after": 99,
+        "draws_beyond_normal_five": 0
+      }
+    },
+    {
+      "name": "trance_then_combust_runic",
+      "status": "executed",
+      "power_order_before_end": [
+        "No Draw",
+        "Combust"
+      ],
+      "end_turn": {
+        "draw_before": 9,
+        "draw_after": 3,
+        "hand_after": 5,
+        "discard_after": 5,
+        "hp_after": 99,
+        "draws_beyond_normal_five": 1
+      }
+    },
+    {
+      "name": "combust_then_trance_no_runic",
+      "status": "executed",
+      "power_order_before_end": [
+        "Combust",
+        "No Draw"
+      ],
+      "end_turn": {
+        "draw_before": 9,
+        "draw_after": 4,
+        "hand_after": 5,
+        "discard_after": 4,
+        "hp_after": 99,
+        "draws_beyond_normal_five": 0
+      }
+    },
+    {
+      "name": "combust_without_no_draw_runic",
+      "status": "executed",
+      "power_order_before_end": [
+        "Combust"
+      ],
+      "end_turn": {
+        "draw_before": 12,
+        "draw_after": 6,
+        "hand_after": 5,
+        "discard_after": 1,
+        "hp_after": 99,
+        "draws_beyond_normal_five": 1
+      }
+    }
+  ],
+  "commands": 11,
+  "native_comparison_statuses": [
+    "mismatch",
+    "passed",
+    "passed",
+    "passed"
+  ],
+  "first_difference_step_zero_based": 2,
+  "first_difference_counts": {
+    "draw_pile": {
+      "original": 4,
+      "simulator": 3
+    },
+    "discard_pile": {
+      "original": 4,
+      "simulator": 5
+    }
+  },
+  "initial_fixture_imports": 4,
+  "mid_sequence_resynchronized": false,
+  "source_regeneration_hypothesis_rejected": "RegenPower actually queues RegenAction at the front. No add-to-back regeneration fix is justified by that source.",
+  "repair_requirement": "Retain native power application order and priority through stacking, removal/reapplication, snapshots, copy and observable state; execute end-turn callbacks in that order. Do not globally swap only No Draw and Combust, because the reverse-order control has a different correct result.",
+  "original_comparison_sha256": "25977d5c74eb73e71a730960eaff3f8becaa591d3ae8d83cf2c9f3f38010ebd0",
+  "source_plan_sha256": "d456574a72fd794b6a4ed42b3aefc274754e8087866ac852a32ec1ba50fa1955",
+  "native_plan_sha256": "12405b13f8995af14e8e7f715a637e2874f7452e6fe4576801c9f54162534578",
+  "native_completion_sha256": "1df68bcac8faa57c213a8f0a9fd323514762f03209cf8c54155814869ced9098",
+  "optimizer_updates": 0,
+  "new_training_labels": 0,
+  "limits": "Four controlled battle sequences; only one ordering combination is a confirmed mismatch. No natural source winner is reported as divergent. E117 is stopped; E118/E119 remain closed pending repair and separately registered sources."
+}

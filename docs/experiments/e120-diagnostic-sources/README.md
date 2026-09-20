@@ -1,0 +1,3 @@
+Own-code diagnostics and cohort accounting for E120. These scripts require the frozen local E116/E117 evidence layout and an owned game installation; they are not standalone public runners. No game source, JAR, weights or raw traces are included.
+
+The C++ diagnostic uses original-source-derived callback order as its comparison. Four separate original-game sequences then confirm the first Combust/No Draw/Runic Cube mismatch and three controls. Initial fixtures are explicit; subsequent cards and end-turn actions are replayed without restoration. This is not a natural-seed mismatch or learned win-rate result.
