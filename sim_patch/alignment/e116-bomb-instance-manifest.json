@@ -1,0 +1,25 @@
+{
+  "experiment": "E116",
+  "baseline": "E111 final engine; apply after e111_post_victory_exhaust.patch",
+  "baseline_engine_sha256": "ec7c0a665bcf988fce9ef4767e9e385c66365940a256eb2a3c18eb251f3b1467",
+  "repair_plan_sha256": "0d1bec97037d3f572971ae63e8200ab8e8f81b359fde0b1fb7b59688fb79a3f5",
+  "patch_sha256": "a83dbce8ad1e8b9c38b0821cd5d23cb3663d83d14404824dc702bc4fb40a3a09",
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "44633c7ffb4a9ffa2cdb5501225dc23e8c1eebde711195aeea0c296119d6f75a",
+      "after": "da45ae22acb6975aab656c198264431efa2f823a17fb700a46879740f88f87b9"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "898a4f40dfacb82595dbdcb849cfa652e84255c4ecc0597b129ca3102195cfda",
+      "after": "215554a69c39cf9ee78be744743c4b05b88df4b167109f9d7f4b22c907e7e6ee"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "a377998ca1e3484e09e5357a170f1b8f29d635852e65ca31e855c8cd5280840d",
+      "after": "4c0715a30e07324b3c4df372972b0f29b20e4c8622112541bf51c9c4980b99a3"
+    }
+  ],
+  "abi_rebuild_required": true
+}

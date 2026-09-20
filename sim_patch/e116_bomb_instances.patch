@@ -1,0 +1,127 @@
+diff --git a/bindings/slaythespire.cpp b/bindings/slaythespire.cpp
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -217,12 +217,11 @@
+                 const int amount = py::cast<int>(power["amount"]);
+                 if (status == PlayerStatus::PANACHE) bc.player.panacheCounter = power.contains("counter") ? py::cast<int>(power["counter"]) : 5;
+                 if (status == PlayerStatus::COMBUST) bc.player.combustHpLoss = power.contains("misc") ? py::cast<int>(power["misc"]) : 1;
+-                if (status == PlayerStatus::THE_BOMB && power.contains("bomb_turns")) {
+-                    switch (py::cast<int>(power["bomb_turns"])) {
+-                        case 1: bc.player.bomb1 += amount; break;
+-                        case 2: bc.player.bomb2 += amount; break;
+-                        default: bc.player.bomb3 += amount; break;
+-                    }
++                if (status == PlayerStatus::THE_BOMB) {
++                    if (!power.contains("bomb_turns")) throw std::invalid_argument("Bomb snapshot requires remaining turns");
++                    const int turns = py::cast<int>(power["bomb_turns"]);
++                    if (turns <= 0) throw std::invalid_argument("Bomb snapshot requires positive remaining turns");
++                    bc.player.addBomb(amount, turns);
+                 } else {
+                     setPlayerStatus(bc.player, status, amount,
+                         power.contains("just_applied") && py::cast<bool>(power["just_applied"]));
+@@ -1454,7 +1453,19 @@
+         .def_readonly("card_draw_per_turn", &Player::cardDrawPerTurn)
+         .def_readonly("panache_counter", &Player::panacheCounter)
+         .def_readonly("combust_hp_loss", &Player::combustHpLoss)
+-        .def_property_readonly("bombs", [](const Player &p) { return std::vector<int>{p.bomb1, p.bomb2, p.bomb3}; })
++        .def_property_readonly("bombs", [](const Player &p) {
++            // Legacy aggregate view; instances remain the authoritative state.
++            std::vector<int> totals(3, 0);
++            for (const auto &bomb : p.bombs) {
++                if (bomb.turns >= 1 && bomb.turns <= 3) totals[bomb.turns - 1] += bomb.damage;
++            }
++            return totals;
++        })
++        .def_property_readonly("bomb_instances", [](const Player &p) {
++            std::vector<std::pair<int, int>> instances;
++            for (const auto &bomb : p.bombs) instances.emplace_back(bomb.turns, bomb.damage);
++            return instances;
++        })
+         .def("has_status", &Player::hasStatusRuntime)
+         .def("get_status", &Player::getStatusRuntime);
+ 
+diff --git a/include/combat/Player.h b/include/combat/Player.h
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -92,9 +92,15 @@
+         int16_t lastAttackUnblockedDamage = 0;
+         int16_t timesDamagedThisCombat = 0;
+ 
+-        int bomb1 = 0;
+-        int bomb2 = 0;
+-        int bomb3 = 0;
++        // Each native TheBombPower has its own countdown and damage action.
++        // IDs address deferred reductions within this copied battle, never
++        // another MCTS branch or a process-global power instance.
++        struct Bomb { int id; int turns; int damage; };
++        std::vector<Bomb> bombs;
++        int nextBombId = 0;
++        void addBomb(int damage, int turns = 3) {
++            bombs.push_back({nextBombId++, turns, damage});
++        }
+ 
+         template <RelicId r> void setHasRelic(bool value);
+         template <PlayerStatus> void setHasStatus(bool value);
+@@ -334,7 +340,7 @@
+         }
+ 
+         if (s == PS::THE_BOMB) {
+-            bomb3 += amount;
++            addBomb(amount);
+             return;
+         }
+ 
+diff --git a/src/combat/Player.cpp b/src/combat/Player.cpp
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -379,12 +379,22 @@
+ }
+ 
+ void Player::applyEndOfTurnPowers(BattleContext &bc) {
+-    if (bomb1) {
+-        bc.addToBot( Actions::DamageAllEnemy(bomb1) );
+-    }
+-    bomb1 = bomb2;
+-    bomb2 = bomb3;
+-    bomb3 = 0;
++    if (!bc.monsters.areMonstersBasicallyDead()) {
++        for (const auto &bomb : bombs) {
++            const int id = bomb.id;
++            bc.addToBot({[id](BattleContext &state) {
++                auto &instances = state.player.bombs;
++                auto found = std::find_if(instances.begin(), instances.end(),
++                        [id](const Bomb &item) { return item.id == id; });
++                if (found != instances.end() && --found->turns <= 0) {
++                    instances.erase(found);
++                }
++            }});
++            if (bomb.turns == 1) {
++                bc.addToBot(Actions::DamageAllEnemy(bomb.damage));
++            }
++        }
++    }
+ 
+     for (auto pair : statusMap) {
+         if (!hasStatusRuntime(pair.first)) {
+@@ -860,11 +870,11 @@
+             << s << "devaFormEnergyPerTurn: " << static_cast<int>(p.devaFormEnergyPerTurn)
+             << s << "echoFormCardsDoubled: " << static_cast<int>(p.echoFormCardsDoubled)
+             << s << "panacheCounter: " << static_cast<int>(p.panacheCounter)
+-            << s << "TheBomb: { 1=" << static_cast<int>(p.bomb1)
+-                << ", 2=" << static_cast<int>(p.bomb2)
+-                << ", 3=" << static_cast<int>(p.bomb3)
+-                << " }"
+-
++            << s << "TheBomb: [";
++        for (const auto &bomb : p.bombs) {
++            os << " { turns=" << bomb.turns << ", damage=" << bomb.damage << " }";
++        }
++        os << " ]"
+             << "\n\t" << "Misc: "
+             << "" << "cardsPlayedThisTurn: " << static_cast<int>(p.cardsPlayedThisTurn)
+             << s << "attacksPlayedThisTurn: " << static_cast<int>(p.attacksPlayedThisTurn)
+@@ -928,4 +938,3 @@
+ 
+ 
+ 
+-

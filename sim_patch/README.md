@@ -223,3 +223,12 @@ Apply `e110_dead_branch_capture.patch` after E106, then `e111_post_victory_exhau
 E110's full original integration found the subsequent Sundial mismatch, so its scoped result does not admit source collection. E111 resolves it: 250 CTest cases, 19 portable cases, five new original controls and nine E110 controls pass. The preselected failure seed repeats a natural Heart win; 203 outside choices, 1,065 original commands and twelve terminal RNG streams match. This is repair evidence, not a population win-rate claim. Initial fixture-index and build-configuration mistakes are preserved in the reports.
 
 [E110 manifest](alignment/e110-dead-branch-capture-manifest.json), [E110 scoped result](alignment/e110-dead-branch-capture-report.json), [E111 manifest](alignment/e111-post-victory-exhaust-manifest.json), [E111 completed result](alignment/e111-post-victory-exhaust-report.json).
+
+
+### E116: independent Bomb powers
+
+Apply `e116_bomb_instances.patch` after E111, then rebuild core, search and Python bindings together. Bombs retain separate countdowns and damage actions; queued reductions address branch-local instances. `Player.bombs` remains a derived three-total view, while `Player.bomb_instances` exposes every `(turns, damage)` pair. Missing or nonpositive imported countdowns reject the snapshot.
+
+263 CTest cases and 31 clean portable cases pass, including public import/copy regressions. Four recorded original controls and one preselected full natural route pass with additive per-instance power checks and twelve terminal RNG streams. The failed initial patch-application attempt is preserved. This admits a newly registered source refresh, not old E112 labels, model improvement or exhaustive parity. Relative ordering among different power types remains outside the scoped repair.
+
+[Manifest](alignment/e116-bomb-instance-manifest.json), [completed result](alignment/e116-bomb-instance-report.json).

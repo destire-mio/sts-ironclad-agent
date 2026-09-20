@@ -223,3 +223,15 @@ foreach(case heart_terminal portal_terminal)
     add_test(NAME e111_${case} COMMAND e111_terminal_rng_tests ${case})
     set_tests_properties(e111_${case} PROPERTIES TIMEOUT 15)
 endforeach()
+
+add_executable(e116_bomb_instance_tests tests/e116_bomb_instances.cpp)
+target_link_libraries(e116_bomb_instance_tests PRIVATE sts_core)
+foreach(case single double mixed block plain high_total staggered equal_totals clone queued_clone dead_guard)
+    add_test(NAME e116_${case} COMMAND e116_bomb_instance_tests ${case})
+    set_tests_properties(e116_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+add_test(NAME e116_snapshot_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/e116_bomb_snapshot.py" -v)
+set_tests_properties(e116_snapshot_contract PROPERTIES TIMEOUT 30
+    ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")
