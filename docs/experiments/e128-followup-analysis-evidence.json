@@ -1,0 +1,93 @@
+{
+  "status": "analysis_and_conditional_design_complete_no_new_runs",
+  "created_at": "2026-09-21T08:13:22.910614+00:00",
+  "sources": {
+    "docs/experiments/e69-contextual-relic-result.json": "3b83cef65ba5fe5f98139ab927e02de9310f3d224656271538b3d0301248e2ab",
+    "docs/experiments/e70-joint-coverage-result.json": "9ab2b358b204f08ab82d8905068c97d4677a916ee9f88a9102cf2c8ae585b8d5",
+    "docs/experiments/e89-joint-refresh-result.json": "e0441a7dda46963e23a846e9ad721a425de526f3c657ba1a43d6d999058b1639",
+    "docs/experiments/e95-readout-diagnosis-result.json": "55d73a7fde00a45fa0bdf5ff23dcc2dd2ea57de4756ab3d249b4ce45db755993",
+    "docs/experiments/e96-paired-advantage-result.json": "d746c0fb21ad46908cb219b99728b5935ff758bab4b070474a1ec20dc3e1aa37",
+    "docs/experiments/e122-fit-failure-profile.json": "df92bba3635e72b4bcf12ef758025bee9e5856c46ffe83963b5c5d9d408a2ad2"
+  },
+  "original_report_hash_checks": [
+    {
+      "path": "runs/heart-e89-readout-diagnosis-20260920-01/report.json",
+      "sha256": "591a13a17b53bc9380468b43c310640d2cc74c3fdc20cedf6fa91c7c74ba1817",
+      "matches_recorded_evidence": true
+    },
+    {
+      "path": "runs/heart-e89-readout-diagnosis-20260920-01/completion-verification.json",
+      "sha256": "335c3d2c2c14222a89b7027f40d8400231c33597a56f40f4b2e29d2eb48fd77e",
+      "matches_recorded_evidence": true
+    },
+    {
+      "path": "runs/heart-paired-advantage-20260920-01/completion-verification.json",
+      "sha256": "cf8e1bd35d4436ac78eaf15cf990094e37d4fb5d857478f9b450b9c2ab8de6bc",
+      "matches_recorded_evidence": true
+    },
+    {
+      "path": "runs/heart-contextual-relic-learning-20260918-01/training-report.json",
+      "sha256": "601802dc5f498a43eef8ecf907f63fe5a635a4115be1c954ecf9d4e94a191459",
+      "matches_recorded_evidence": true
+    },
+    {
+      "path": "runs/heart-contextual-relic-learning-20260918-01/completion-verification.json",
+      "sha256": "a6c7004697660fad423c07c879ced29918ad93d940af3b935022eadd42f7df5f",
+      "matches_recorded_evidence": true
+    }
+  ],
+  "verified_aggregates": {
+    "E95_joint_l2_0_001": {
+      "arm": "joint",
+      "l2": 0.001,
+      "out_of_fold": {
+        "assigned": 1536,
+        "baseline_wins": 155,
+        "candidate_wins": 165,
+        "net_gain": 10,
+        "paired": {
+          "both_fail": 1338,
+          "candidate_only": 43,
+          "both_win": 122,
+          "baseline_only": 33
+        },
+        "exact_p": 0.3018724904870077
+      },
+      "fit_family_evaluations": 3072,
+      "fit_candidate_wins": 446,
+      "fit_baseline_wins": 310,
+      "fit_scope_oracle_per_unique_family": 347
+    },
+    "E121_fit_families": 4608,
+    "E121_parent_heart_wins": 487,
+    "E121_fit_early_act1_losses_outside_current_scope": 1006,
+    "E121_fixed_prefix_act4_only_upper_percent": 24.696180555555554
+  },
+  "E131_selection": {
+    "source": "runs/heart-e121-scale-source-refresh-20260920-01/natural/seeds.json",
+    "source_sha256": "0cd8b23a79e5b802399c3c74bbf8d4145efdec4fe178c4eed29b6f7ef8612290",
+    "input_role": "fit",
+    "input_families": 4608,
+    "selected_families": 128,
+    "method": "sha256(namespace + decimal_seed_ascii), ascending, then integer seed ascending",
+    "namespace": "e131-early-card-scope-20260921:",
+    "selected_ids_file": "runs/heart-e131-early-card-scope-20260921-01/families.json",
+    "selected_ids_file_sha256": "87613e1dc56ef2718ac18f0b06963d7711a168bfb331483cc23da301cb61f1c4",
+    "outcomes_used_for_selection": false,
+    "holdout_and_development_overlap": 0,
+    "label": "known-fit scope diagnostic; not unseen acceptance"
+  },
+  "E131_plan": "runs/heart-e131-early-card-scope-20260921-01/plan.json",
+  "E131_plan_sha256": "63d235799391d6b9b9bd9799c339e5c001aba937c9d3acf04841c96a40eaadad",
+  "E131_execution_started": false,
+  "new_sampling_jobs": 0,
+  "optimizer_updates": 0,
+  "new_unseen_seed_draws": 0,
+  "E128_partial_joint_outcomes_read": false,
+  "limits": [
+    "No E128 partial labels read for this design",
+    "Temporal scope and decision order both change between A and B",
+    "Terminal hindsight is not a deployable policy or proof public information predicts the best branch",
+    "Original-game discrepancy work remains paused; errors or incomplete jobs are not game losses"
+  ]
+}
