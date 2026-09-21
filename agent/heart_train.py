@@ -87,6 +87,9 @@ def worker(job, config):
 
 
 def load_scorer(checkpoint):
+    if checkpoint.get("model_type") == "early_card_relic_readout":
+        from heart_early_card_learning import EarlyCardPolicy
+        return EarlyCardPolicy(checkpoint).eval()
     if checkpoint.get("model_type") == "joint_frozen_readout":
         from heart_relic_card_readout import ReadoutPolicy
         return ReadoutPolicy(checkpoint).eval()

@@ -1,0 +1,59 @@
+{
+  "experiment": "E131",
+  "status": "complete",
+  "finished_at": "2026-09-21T20:35:29.203511+00:00",
+  "assigned_fit_families": 128,
+  "scope": "Known-fit terminal hindsight; no learned-policy evaluation",
+  "hindsight_counts": {
+    "parent": 16,
+    "card_only": 26,
+    "relic_only": 18,
+    "joint": 32,
+    "old_joint": 27
+  },
+  "mixed_families": 31,
+  "new_rescue_families": 8,
+  "old_only_rescue_families": 3,
+  "joint_only_rescue_families": 5,
+  "new_and_joint_only_rescue_intersection": 2,
+  "rescued_original_act1_deaths": 2,
+  "new_complete_continuations": 2020,
+  "independent_family_audits": 128,
+  "new_rescue_fresh_natural_replans": 8,
+  "execution_faults": 0,
+  "data_expansion_gate_passed": true,
+  "stage_exits": [
+    {
+      "name": "collect",
+      "exit_code": 0,
+      "process_exit_sha256": "8cb8c1fe85b654573ac7c48f7afc789d600961a37c0d2859e290129792418144"
+    },
+    {
+      "name": "audit",
+      "exit_code": 0,
+      "process_exit_sha256": "99d88a3862cf0a2ef3d30699b1b07994c0094658ae51dffecc2a37cd75753e0d"
+    }
+  ],
+  "main_task_review": {
+    "complete_source_hash_chain_checked": true,
+    "complete_family_rows_reconstructed_from_trees": true,
+    "all_terminal_trace_hashes_checked": true,
+    "eight_new_rescue_replans_checked": true
+  },
+  "proofs": {
+    "runs/heart-e131-early-card-scope-20260921-01/plan.json": "63d235799391d6b9b9bd9799c339e5c001aba937c9d3acf04841c96a40eaadad",
+    "runs/heart-e131-early-card-scope-20260921-01/families.json": "87613e1dc56ef2718ac18f0b06963d7711a168bfb331483cc23da301cb61f1c4",
+    "runs/heart-e131-early-card-scope-20260921-01/control/exit.json": "6dd25e33f8bc626306aa21c5f60177d0e47ecf5a673f899c206b43ef035d5fe5",
+    "runs/heart-e131-early-card-scope-20260921-01/execution/execution-completion.json": "988356b318320d8c4bbc34d1a90c44417e75991be7da9ea2c15e36c8500bdd24",
+    "runs/heart-e131-early-card-scope-20260921-01/execution/completion-verification.json": "2b9fb4fec86e82128d31cd29fe972830d2f46719852906088aa2b64d02777e54",
+    "runs/heart-e131-early-card-scope-20260921-01/execution/report.json": "0fc904cceb66b785565017a69ec512c5d87cefd4792c032d639c430e768260f9"
+  },
+  "decision": "Expand this scope to the exact original 1536 small-fit and common 1024 label-holdout roles under E133.",
+  "optimizer_updates": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "limits": [
+    "New rescue means the new scope can win while every measured old-scope combination loses. Joint-only rescue is a different within-new-scope comparison; their intersection is two families.",
+    "The 32/128 hindsight count is not a model win rate, public-state predictability proof, or population estimate."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "experiment": "E133",
+  "status": "collection_launched_training_prepared",
+  "recorded_at": "2026-09-21T21:22:40.982878+00:00",
+  "started_at": "2026-09-21T21:04:05.624150+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "assigned": {
+    "fit": 1536,
+    "label_holdout": 1024,
+    "conditional_natural_development": 512
+  },
+  "reused_fit_families": 42,
+  "new_sampling_families": 2518,
+  "new_sampling_fit_families": 1494,
+  "role_rule": "Exact original E128 small-fit and common holdout roles. Pilot reuse is their outcome-independent intersection (42 fit families). No pilot-only family is added.",
+  "training": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "candidate_count": 1,
+  "candidate": "One joint card-first/relic-second readout over the same frozen parent192 encoder; support and RMS from fit only, parent-action bonus1, whole unknown offer falls back to parent.",
+  "objective": "Mean expected terminal binary Heart outcome across all assigned fit families, card probabilities times the actual branch-local later relic probabilities; no future-best-relic target, no early-floor reward.",
+  "checkpoints": "Exactly one final checkpoint after 1000 steps, frozen before common holdout scoring; no validation checkpoint or parameter sweep.",
+  "holdout_gate": {
+    "minimum_net_gain": 20,
+    "paired_exact_p_less_than": 0.05,
+    "assigned": 1024,
+    "all_live_choices_required": true
+  },
+  "natural_gate": {
+    "minimum_net_gain": 10,
+    "paired_exact_p_less_than": 0.05,
+    "assigned": 512,
+    "zero_faults": true,
+    "all_winner_replans": true,
+    "full_NN_state_RNG_route_audit": true
+  },
+  "resources": {
+    "workers": 8,
+    "torch_threads": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "mcts_iterations": 8000,
+    "boss_multiplier": 3,
+    "max_replans": 256,
+    "batch_size": 256,
+    "max_new_continuations": 81920,
+    "collection_seconds": 86400,
+    "audit_seconds": 14400,
+    "fit_seconds": 3600,
+    "verification_seconds": 10800,
+    "natural_seconds": 10800,
+    "observer_interval_seconds": 1200
+  },
+  "checks": {
+    "core": 6,
+    "role_and_admission": 2,
+    "native_fixed_fit_routes": 3,
+    "experiment": 6,
+    "fixed_existing_fit_routes_used": 4,
+    "actual_pending_data_admission": {
+      "exit_code": 1,
+      "reason": "complete collection and audit evidence absent",
+      "learning_directory_created": false,
+      "training_execution_created": false,
+      "log_sha256": "5e6bc4204bffbbb07bac8f3ef51dfcdf94905352b4b259a2daea45622601bd28"
+    },
+    "frozen_collector_and_runtime_hashes_unchanged": true,
+    "preserved_initial_failure": "Native test expected -1 for boss skip; the existing action contract uses RELIC_CAP. Test fixture corrected, production unchanged; initial two passes/one failure and final three passes retained."
+  },
+  "proofs": {
+    "runs/heart-e133-early-card-learning-20260922-01/protocol.json": "fd25d8db288e3efebd8b7419de3d7b3e4a2ebd3f5d683e24e448d8434848caf8",
+    "runs/heart-e133-early-card-learning-20260922-01/registration.json": "eed078f33e64bf084af171f9e66261a30c5f8a095fe60d54f95669b36cbade02",
+    "runs/heart-e133-early-card-learning-20260922-01/entry-verification.json": "20b2171761acee4234d3c6e610c7b9775b25baccbb3729a188410e03959a7716",
+    "runs/heart-e133-early-card-learning-20260922-01/data/registration.json": "dbe441588fa1f29150f59ce559eae6c1aa5ce6a02a4d157fe21712b213dd457c",
+    "runs/heart-e133-early-card-learning-20260922-01/data/runtime/manifest.json": "920c0eea7f025c583746322f638e4fef62be626b795eff7903bd7baf1fce1e88",
+    "runs/heart-e133-early-card-learning-20260922-01/control/registration.json": "355f2f7104886de3fc1f1d6e4df970b9fe4b1378c06d5458123f0c1ba2027b4d",
+    "runs/heart-e133-early-card-learning-20260922-01/control/launch.json": "c8b57bf7d0e47830826a486ee7bf53163b70f36f1430c63fa0795f94dfe607a1",
+    "runs/heart-e133-early-card-learning-20260922-01/learning-registration.json": "ae1ccd02dc3709df1c9b445dfaf8781b9998010c8a9a601e5700a42a15ad274b",
+    "runs/heart-e133-early-card-learning-20260922-01/learning-preparation.json": "237908a3951f0831c0d627ec95b559b0e238834810d4410b04d585aeae28ae7b",
+    "runs/heart-e133-early-card-learning-20260922-01/learning-control/registration.json": "d6eac244ac622e854b9ee8f7579ac76420a26f4a2a4abb80d152808a630a10a9"
+  },
+  "source_sha256": {
+    "agent/heart_early_card_learning.py": "29c3a1dd0c54c359c9c8f6a1da29f7196ee5f9c764680af3a780fe50c61179f2",
+    "agent/heart_early_card_data.py": "4b482800f7e6f64761f36b55e62a02cae3f7003f7fc15da475a9078f257753ed",
+    "agent/heart_early_card_experiment.py": "074669c641aff8c2ebdcc68170ac68926988248557071887bbdfdce64b38dfec",
+    "docs/experiments/e133-collection-controller.py": "9db309c1cfa2f401ae5674b0b266412c4d69337f0c86ec15619ac71594b763d0",
+    "docs/experiments/e133-training-controller.py": "de72e60b12610a147f57d34766d95d4000d796f176249ff4cf4e9f8bc406fb35"
+  },
+  "ownership": {
+    "main": "repairs, experiment design, training launch, analysis, subsequent action",
+    "Luna": "waiting and result/fault delivery every 20 minutes",
+    "automation_id": "luna",
+    "config_readback_verified": true,
+    "luna_takeover_acknowledged": true
+  },
+  "formal_optimizer_updates": 0,
+  "new_candidate_natural_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "limits": [
+    "A different decision scope, not proof of public-state predictability or a 50-percent population win rate.",
+    "The old label holdout is development evidence; a frozen final candidate still needs 1024 genuinely unseen families.",
+    "All legal branches and early failures retained. Reused audited branches are counted once; errors never become deaths.",
+    "Entry and replay checks passed; the complete collection, first formal fit, heldout model outcome and conditional 512 natural development have not completed."
+  ]
+}
