@@ -1,0 +1,44 @@
+{
+  "experiment": "E131",
+  "status": "implementation_and_preflight_complete_formal_pilot_not_started",
+  "created_at": "2026-09-21T08:59:04.810426+00:00",
+  "design": "e128-followup-analysis-plan.md",
+  "plan_sha256": "63d235799391d6b9b9bd9799c339e5c001aba937c9d3acf04841c96a40eaadad",
+  "implementation_sha256": {
+    "agent/heart_early_card_scope.py": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+    "tests/test_heart_early_card_scope.py": "fc5e1073776b11bf485f1229b1dd10f603d5c0ae6e712cebf98ba50f2b1ef696",
+    "tests/test_heart_early_card_scope_native.py": "cbd1c4d2d3238a29ea86a0557b4c0287f22871b0cc102d37277b2ee23a22ade6"
+  },
+  "development_worktree": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-early-card-scope",
+  "base_commit": "1135fbcb34d67f23f7b6a5f4006aa103f71a7615",
+  "checks": {
+    "pure_methods_passed": 17,
+    "simulator_replay_methods_passed": 3,
+    "fixed_fit_source_fixtures": 4,
+    "native_scope": "E121 C++ simulator extension, not the original Java game",
+    "source_selection": "first four already-audited fit IDs, before reading their outcomes; no replacement",
+    "current_incomplete_study_rejected_before_output": true,
+    "actual_rejection": "E128 training-execution.json is absent; this is not a conclusion about the live sampler process",
+    "source_binding": "Physical paths after resolving symbolic links; changed-source copies remain rejected"
+  },
+  "known_preparation_failure": {
+    "symptom": "Two expanded metadata checks rejected the same macOS file addressed through /var and /private/var",
+    "fix": "Canonicalize proof-input paths while rejecting duplicate aliases and genuinely different source paths",
+    "preserved_attempt_history_sha256": "9bb2be543917a3deb6c480ef951e8c1b867d6a7790f7f83e9787a2ed3fe4c1c0"
+  },
+  "local_check_report_sha256": "fd37f833d83034e0b7f638be7cc1417d3fec5292a2bbb15149ae64a4bc14e6a2",
+  "logs": {
+    "pure-final-2.log": "185b3aa379eefc48f202ed37721c5a370b1045b008334bd87b1efafd21000353",
+    "native-final-2.log": "c8d4955b7541c095c1f8a5c26b709b995c946078d29ac32920f8e6a9a12a85eb"
+  },
+  "formal_execution_directory_exists": false,
+  "new_complete_games": 0,
+  "optimizer_updates": 0,
+  "original_game_runs": 0,
+  "unseen_acceptance_games": 0,
+  "limits": [
+    "Replay and one-action native checks are not complete changed-card-then-boss continuations",
+    "Full two-stage collection and selected rescue replans await E128 completion and main result review"
+  ],
+  "execution_condition": "Complete E128 with no qualifying candidate, verify unchanged parent/engine, and main result review bound to input proofs and this runner; reuse the existing owned-process launcher."
+}
