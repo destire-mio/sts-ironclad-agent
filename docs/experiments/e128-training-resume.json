@@ -1,0 +1,78 @@
+{
+  "status": "both_arms_fitted_validation_pending",
+  "verified_at": "2026-09-21T19:37:42.529921+00:00",
+  "failure": {
+    "at": "2026-09-21T18:35:03.654953+00:00",
+    "stage": "collection completion output before training",
+    "error": "BrokenPipeError",
+    "collection_process_exit_code": 0
+  },
+  "repair": "A detached training controller owns regular-file stdout/stderr and null stdin; enter the original unstarted training entry after full original admission.",
+  "collection": {
+    "relic_continuations": 17552,
+    "relic_audited_families": 4388,
+    "joint_continuations": 69599,
+    "joint_audited_families": 4387,
+    "joint_outside_nn_choices": 9981559,
+    "zero_faults": true
+  },
+  "recipe": {
+    "fit_families": [
+      1536,
+      4608
+    ],
+    "shared_label_holdout": 1024,
+    "natural_development_per_qualified_arm": 512,
+    "steps_per_arm": 1000,
+    "learning_rate": 0.03,
+    "l2": 0.001,
+    "unchanged": true
+  },
+  "checks": {
+    "closed_pipe_failure_reproduced": true,
+    "detached_controller_continues_after_launcher_exit": true,
+    "worker_failure_keeps_nonzero_exit_and_log": true,
+    "existing_execution_rejected": true,
+    "focused_tests_passed": 3,
+    "actual_frozen_admission_passed": true,
+    "live_stdio_regular_files": true
+  },
+  "implementation_sha256": "39ff5954333ee115ca299a80888255619c6ee24862f49d8ca95a4bf67a87315a",
+  "tests_sha256": "9b94d5e70d85fce4a038531ee6e2c9a08a94c15b6263be0c855d51b57f602226",
+  "private_proof_hashes": {
+    "runs/heart-e128-training-resume-20260922-01/registration.json": "42a80c0ac4dcc9dfb6450ff53d181194a40ff5856cb80cfe21af0c2635655d0f",
+    "runs/heart-e128-training-resume-20260922-01/launch-verification.json": "a8d21fc95114344c7975fbef1e0ea1e87b4b55ec97209ae71bcdfbb12899bade",
+    "runs/heart-e128-training-resume-20260922-01/execution/launch.json": "e2eac4f7ba9346557ed335e82896e992648f658229d4563f6199c286e132d022",
+    "runs/heart-e128-training-resume-20260922-01/execution/admission.json": "c054757b8a15aaece0f5268649efd57df931ee8cb02091631f92dd8f84db3e50",
+    "runs/heart-e121-simulator-training-20260920-01/execution/started.json": "57926b2f9ddb6a759f4da2f48c92e7ea787caac9d1606407259fd16552a54fe5",
+    "runs/heart-e121-simulator-joint-labels-20260920-01/completion-verification.json": "ce96c3a7877a2be93d5af6aa90ecb106add2fd3e01098a81abee591ee0469ed5",
+    "runs/heart-e121-simulator-joint-labels-20260920-01/pipeline-execution-verification.json": "e966e52169be0d5632cc9f7cbb62c3379e98c01fdddc313940c049c51c4eb575",
+    "runs/heart-e121-simulator-joint-labels-20260920-01/pipeline-process-exit.json": "38af6b048da12fd895c9c2e5ba5851f8ca703c7a3e6a40be5a6fbc1a28141b86",
+    "runs/heart-e121-simulator-joint-labels-20260920-01/joint/label-verification.json": "28c20b59874e1194a59340c893d07d98f7ad0c81a11c731cfae4881633e27327",
+    "runs/heart-e121-simulator-joint-labels-20260920-01/relic-source/label-verification.json": "f44293840d2ad402b3f549c755c9b5b686887fbe3cd86685e1405776bb909d5c",
+    "runs/heart-e121-simulator-training-20260920-01/execution/fit/pipeline-process-exit.json": "8ca982c0ecb7cfaad21e51a7182d4d5a7b5303dba9b2691d53be206443b812ee",
+    "runs/heart-e121-simulator-training-20260920-01/scale/both-arms-trained.json": "d49ee6039a10ff74d308f675abeb3b664464f721f6aadb1517aa9dc3712f446e"
+  },
+  "handoff": {
+    "old_automation_id": "10",
+    "old_automation_missing_confirmed_by_app": true,
+    "automation_id": "luna",
+    "interval_seconds": 1200,
+    "status": "ACTIVE",
+    "target_thread_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+    "configuration_readback_verified": true,
+    "scheduled_execution_verification": "pending",
+    "luna_takeover_acknowledged": true
+  },
+  "responsibility": "Main task owns repairs, design, launch, analysis and next decisions. Luna owns bounded waiting observations and delivery.",
+  "limits": "Launch evidence; no completed E128 result or new acceptance win rate. Original comparison remains outside this run. Earlier failed controller and all collected proofs remain immutable.",
+  "both_fits": {
+    "optimizer_updates": 2000,
+    "checkpoints": {
+      "small": "cda34d026d7db3a8a94168c3fc2a780fb4327e411e45dc1c05ccaa21e0811147",
+      "expanded": "6a190d2c655d73ed6f57ed467a68e33324cba07e7b322fab1cc0d3eb6d59c751"
+    },
+    "fit_process_exit_code": 0,
+    "cleanup_verified": true
+  }
+}
