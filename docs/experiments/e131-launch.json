@@ -1,0 +1,67 @@
+{
+  "experiment": "E131",
+  "status": "launched",
+  "recorded_at": "2026-09-21T20:03:28.536799+00:00",
+  "assigned_families": 128,
+  "source_role": "known fit; outcome-independent preselection",
+  "identity": {
+    "parent_model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "mcts_iterations": 8000,
+    "boss_multiplier": 3,
+    "max_replans": 256
+  },
+  "main_review": {
+    "decision": "execute_registered_E131",
+    "full_input_admission": "passed",
+    "e128_selected_arm": null
+  },
+  "resource_limits": {
+    "collection_seconds": 14400,
+    "audit_seconds": 3600,
+    "max_workers": 8,
+    "threads_per_worker": 1,
+    "episode_seconds": 300,
+    "process_seconds": 360,
+    "max_new_collected_complete_continuations": 4096,
+    "observe_interval_seconds": 1200
+  },
+  "data_expansion_gate": {
+    "assigned": 128,
+    "complete_families": 128,
+    "execution_faults": 0,
+    "minimum_mixed_B_families": 16,
+    "minimum_B_winning_A_all_lose_families": 4,
+    "new_rescue_replan_rule": "one first winning leaf in canonical action identity order per new rescue family",
+    "interpretation": "engineering data-budget screen, not a significance or model-adoption gate"
+  },
+  "runner_sha256": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+  "controller_sha256": "2e020c19fc465247297d40fe66b608c608aeef60a042b560bab5c627f47e5ec0",
+  "proofs": {
+    "runs/heart-e131-early-card-scope-20260921-01/plan.json": "63d235799391d6b9b9bd9799c339e5c001aba937c9d3acf04841c96a40eaadad",
+    "runs/heart-e131-early-card-scope-20260921-01/families.json": "87613e1dc56ef2718ac18f0b06963d7711a168bfb331483cc23da301cb61f1c4",
+    "runs/heart-e131-early-card-scope-20260921-01/result-review.json": "fddb6e137d222d470ac294fae1c5a015c40f2f10e85ea23834ebf89da58da724",
+    "runs/heart-e131-early-card-scope-20260921-01/complete-input-admission.json": "57323d4fdb9eb6b2aabb6b70784deb2a30913d39ae4b86024a99303a9bd4d29d",
+    "runs/heart-e131-early-card-scope-20260921-01/control/registration.json": "87d80bd18ddad9e67df8745e321b7971081be220b6d3157072967fc797de320e",
+    "runs/heart-e131-early-card-scope-20260921-01/control/launch.json": "a3a85d513d59940ce448b6a02baaf735337d8d17ce9f421e47533050e3f18ef8",
+    "runs/heart-e131-early-card-scope-20260921-01/launch-verification.json": "0007f2ab5b0f72c89511f45ba052ab7ebe11aeabc54440161e0eac24a8f66f38",
+    "runs/heart-e131-early-card-scope-20260921-01/execution/registration.json": "ab4e0a48c17c60f04bec3031296a11e67785d4b1792ca6fd65e7cdd6756fe8bb"
+  },
+  "startup_checks": {
+    "registered_runner_unchanged": true,
+    "full_input_admission_passed": true,
+    "controller_and_owned_collector_live": true,
+    "regular_file_stdio": true
+  },
+  "waiting": {
+    "owner": "existing Luna task",
+    "automation_id": "luna",
+    "interval_seconds": 1200,
+    "config_readback_verified": true,
+    "luna_takeover_acknowledged": true
+  },
+  "optimizer_updates": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "limits": "Launch only. E131 has no complete scope comparison or learned model outcome yet."
+}

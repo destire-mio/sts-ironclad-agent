@@ -1,0 +1,180 @@
+{
+  "experiment": "E128",
+  "status": "complete_no_candidate",
+  "recorded_at": "2026-09-21T20:03:28.501026+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "fit_families": {
+    "small": 1536,
+    "expanded": 4608
+  },
+  "updates_per_arm": 1000,
+  "heldout": {
+    "assigned_heldout_families": 1024,
+    "live_families_verified": 786,
+    "early_failures_retained": 238,
+    "arms": {
+      "small": {
+        "passed": false,
+        "outcomes": {
+          "assigned": 1024,
+          "baseline_wins": 87,
+          "candidate_wins": 98,
+          "net_gain": 11,
+          "paired": {
+            "both_win": 69,
+            "both_fail": 908,
+            "candidate_only": 29,
+            "baseline_only": 18
+          },
+          "exact_p": 0.14386508844054902
+        },
+        "live_choices_verified": true,
+        "checkpoint_sha256": "cda34d026d7db3a8a94168c3fc2a780fb4327e411e45dc1c05ccaa21e0811147"
+      },
+      "expanded": {
+        "passed": false,
+        "outcomes": {
+          "assigned": 1024,
+          "baseline_wins": 87,
+          "candidate_wins": 93,
+          "net_gain": 6,
+          "paired": {
+            "both_win": 66,
+            "both_fail": 910,
+            "candidate_only": 27,
+            "baseline_only": 21
+          },
+          "exact_p": 0.4708790136217118
+        },
+        "live_choices_verified": true,
+        "checkpoint_sha256": "6a190d2c655d73ed6f57ed467a68e33324cba07e7b322fab1cc0d3eb6d59c751"
+      }
+    },
+    "expanded_versus_small": {
+      "assigned": 1024,
+      "baseline_wins": 98,
+      "candidate_wins": 93,
+      "net_gain": -5,
+      "paired": {
+        "both_win": 80,
+        "both_fail": 913,
+        "baseline_only": 18,
+        "candidate_only": 13
+      },
+      "exact_p": 0.47312965989112854
+    },
+    "scale_gate_passed": false,
+    "natural_candidate_games": 0,
+    "unseen_acceptance_games": 0
+  },
+  "scope": {
+    "small": {
+      "fit": {
+        "families": 1536,
+        "parent_wins": 149,
+        "model_label_wins": 214,
+        "measured_hindsight_wins": 339,
+        "missed_available_wins": 125,
+        "gained": 79,
+        "lost": 14,
+        "buckets": {
+          "all_measured_combinations_lose": 845,
+          "no_scoped_node_loss": 352,
+          "missed_available_winning_combination": 125,
+          "selected_winning_combination": 214
+        }
+      },
+      "holdout": {
+        "families": 1024,
+        "parent_wins": 87,
+        "model_label_wins": 98,
+        "measured_hindsight_wins": 217,
+        "missed_available_wins": 119,
+        "gained": 29,
+        "lost": 18,
+        "buckets": {
+          "selected_winning_combination": 98,
+          "no_scoped_node_loss": 238,
+          "all_measured_combinations_lose": 569,
+          "missed_available_winning_combination": 119
+        }
+      }
+    },
+    "expanded": {
+      "fit": {
+        "families": 4608,
+        "parent_wins": 487,
+        "model_label_wins": 569,
+        "measured_hindsight_wins": 1021,
+        "missed_available_wins": 452,
+        "gained": 166,
+        "lost": 84,
+        "buckets": {
+          "all_measured_combinations_lose": 2581,
+          "no_scoped_node_loss": 1006,
+          "missed_available_winning_combination": 452,
+          "selected_winning_combination": 569
+        }
+      },
+      "holdout": {
+        "families": 1024,
+        "parent_wins": 87,
+        "model_label_wins": 93,
+        "measured_hindsight_wins": 217,
+        "missed_available_wins": 124,
+        "gained": 27,
+        "lost": 21,
+        "buckets": {
+          "selected_winning_combination": 93,
+          "no_scoped_node_loss": 238,
+          "all_measured_combinations_lose": 569,
+          "missed_available_winning_combination": 124
+        }
+      }
+    }
+  },
+  "execution": {
+    "exit_code": 0,
+    "stages": [
+      "fit",
+      "verify",
+      "finalize"
+    ],
+    "all_stage_exits_zero": true,
+    "all_stage_cleanup_clean": true,
+    "execution_faults": 0
+  },
+  "selection": {
+    "selected_arm": null,
+    "production_adoption": false,
+    "natural_candidate_games": 0,
+    "unseen_acceptance_games": 0,
+    "original_game_executions": 0
+  },
+  "checks": {
+    "existing_full_learning_admission_passed": true,
+    "completed_study_gate_passed": true,
+    "all_paired_counts_and_exact_p_recomputed": true,
+    "scope_leaf_targets_reconstructed": true,
+    "diagnostic_input_hashes_matched": true
+  },
+  "proofs": {
+    "runs/heart-e121-simulator-training-20260920-01/training-execution.json": "d350cadb8ae6565cae81976ea4706ccc49c093898ef68ac01a70bb1ccf1900ea",
+    "runs/heart-e121-simulator-training-20260920-01/scale/development-completion.json": "aab7e832ef16923bd1b90997a7da9ba284f8422637908558c9ca236ef197da23",
+    "runs/heart-e121-simulator-training-20260920-01/scale/development-decision.json": "edbcc97a8244f576a369a234952b73c584314702d1907fdafcde85f016c929a2",
+    "runs/heart-e121-simulator-training-20260920-01/scale/learning-verification.json": "08c86755abf710f9d392baa0d2466dcbe5ddecaa72fe32e35b14dd6e078901f3",
+    "runs/heart-e121-simulator-training-20260920-01/scale/both-arms-trained.json": "d49ee6039a10ff74d308f675abeb3b664464f721f6aadb1517aa9dc3712f446e",
+    "runs/heart-e128-scope-diagnostic-20260920-01/report.json": "251accb4e129624b0bc9a431172d25289230b53e9f0f22cbfa0024161809b94d",
+    "runs/heart-e128-training-resume-20260922-01/execution/exit.json": "26e25c7c94eff45faae77c77f1e0a8e4e5baafcb1197784e0d9dae09203a584e"
+  },
+  "decision": "Retain the frozen parent; no repeat of this fixed recipe/data-scale run. Execute the previously registered E131 known-fit early-card scope diagnostic.",
+  "limits": [
+    "The failed scale screen does not prove all further data collection ineffective.",
+    "217/1024 hindsight wins bounds only these measured decision trees and fixed continuation; no full-policy or population ceiling.",
+    "Winning hindsight branches need not be predictable from available observations.",
+    "No natural candidate evaluation or disjoint unseen acceptance ran."
+  ]
+}
