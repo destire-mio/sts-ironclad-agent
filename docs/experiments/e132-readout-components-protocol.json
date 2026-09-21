@@ -1,0 +1,33 @@
+{
+  "experiment": "E132",
+  "created_at": "2026-09-21T09:16:32.889934+00:00",
+  "question": "In the already fitted E89 joint L2=.001 heads, which deployed score component carries fit gains and cross-family gains or losses?",
+  "e95_root": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e89-readout-diagnosis-20260920-01",
+  "e95_hashes": {
+    "registration.json": "3a36a6c8946e70dd26063cfb1afe61d881170e7cfa71d0da952c2cf0a36e7dce",
+    "protocol.json": "82497189fa16f8bc369269ef79afba710105d89c761c1714db23feefe149151d",
+    "diagnose.py": "d321747a609af442421d5e6f52f1bd53d78338dbc9b7a7650dd0ff8493290a32",
+    "report.json": "591a13a17b53bc9380468b43c310640d2cc74c3fdc20cedf6fa91c7c74ba1817",
+    "completion-verification.json": "335c3d2c2c14222a89b7027f40d8400231c33597a56f40f4b2e29d2eb48fd77e"
+  },
+  "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+  "engine_sha256": "1a723fd400afd0719e80874e8111793a37810e446d37bde0e9a9ac44dd36f329",
+  "arm": "joint",
+  "l2": 0.001,
+  "fit_families": 1536,
+  "modes": [
+    "parent_control",
+    "full",
+    "static_only",
+    "context_only"
+  ],
+  "method": "Reuse the three original family folds, saved fit supports, RMS scales and head checkpoints. In memory only, set either both contextual vectors or both option-ID bias vectors to zero. Keep parent-choice bonus 1, unsupported-offer fallback, argmax ties and all source labels fixed. No refitting, weight rescaling or additional grid. The full model must reproduce every original out-of-fold choice and all E95 fit/fold summaries; zeroing both components must reproduce parent actions. Independently decode every selected terminal leaf from unpaced trees.",
+  "reason_for_fixed_checkpoint_set": "One historical joint configuration, L2=.001 matching the fixed current E128 recipe. Its earlier results are exposed, so this is a post hoc explanatory diagnostic and is not model selection or new acceptance.",
+  "resources": {
+    "threads": 1,
+    "max_seconds": 600,
+    "new_mcts_calls": 0,
+    "new_optimizer_updates": 0
+  },
+  "limits": "Both score components were trained together. Removing one without refitting measures dependence of these fitted policies, not the achievable quality of a separately trained static or contextual model. Contextual frozen embeddings also contain candidate identity; context_only is not identity-free. E89 uses the historical engine, not current E121. Each family appears twice in fit evaluations and once out of fold; 3072 pooled fit rows are dependent. These historically exposed fit-fold results are not unseen acceptance. No current E128 labels, external label holdout or development outcomes are evaluated. No candidate adoption, training-job launch or E128/E131 gate change follows from these diagnostic comparisons."
+}

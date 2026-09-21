@@ -1,0 +1,964 @@
+{
+  "experiment": "E132",
+  "source_artifact_hashes": {
+    "protocol.json": "e9f901805da1846e5fec3f059e06f58d3f7f1f8bcb30de48eefa7e2357b9f634",
+    "registration.json": "a21f052d835f77bb34ec9a94e9e7be5e757aded65c3b0cb9c2c4164737032ada",
+    "diagnose.py": "d820cbaffec47c9e1079d195f29e9785d767472daf7f5506cf512f60c3eff10e",
+    "choices.json": "9124aa2a0460e5d6d6e1f3fe2cb539bf576efee468650ee302ae744f3bd93c43",
+    "report.json": "bcb00d9b30b7248558c6f826315b3fcf360ace70635dac99111588d5cc3d4fe6",
+    "completion-verification.json": "e6bfff67d664bbe171c42a3187494f75d1456f1ec66db790c621b4ff4116abed",
+    "static-bias-inspection.json": "138df31f5472fc46f9bcdc3d01ab2ecd7a6480cc9fa0e44d13525a8023348ef1",
+    "execution-exit.json": "dc90da357191dbc1aca54a5af26a982cdf75ee3209cf1f42596e0c4061be71c1",
+    "execution.log": "bd79e4d4d4b49eb2fd961b0e08ea1dee0c525a9f71e1460444ee4955cf98cb5f"
+  },
+  "report": {
+    "experiment": "E132",
+    "status": "complete",
+    "at": "2026-09-21T09:17:42.194012+00:00",
+    "elapsed_seconds": 51.547573457995895,
+    "fit_families": 1536,
+    "results": [
+      {
+        "mode": "parent_control",
+        "folds": [
+          {
+            "fold": 0,
+            "fit": {
+              "outcomes": {
+                "assigned": 1009,
+                "baseline_wins": 96,
+                "candidate_wins": 96,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 913,
+                  "both_win": 96
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.06207965686917305,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 777,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3101,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 527,
+                "baseline_wins": 59,
+                "candidate_wins": 59,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 468,
+                  "both_win": 59
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.08102753013372421,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 408,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1631,
+                  "unsupported_offers": 4,
+                  "changed_choices": 0
+                }
+              }
+            }
+          },
+          {
+            "fold": 1,
+            "fit": {
+              "outcomes": {
+                "assigned": 1051,
+                "baseline_wins": 102,
+                "candidate_wins": 102,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 949,
+                  "both_win": 102
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.06929250061511993,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 815,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3253,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 485,
+                "baseline_wins": 53,
+                "candidate_wins": 53,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 432,
+                  "both_win": 53
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.06703807413578033,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 370,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1479,
+                  "unsupported_offers": 2,
+                  "changed_choices": 0
+                }
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "fit": {
+              "outcomes": {
+                "assigned": 1012,
+                "baseline_wins": 112,
+                "candidate_wins": 112,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 900,
+                  "both_win": 112
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.07432308793067932,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 778,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3110,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 524,
+                "baseline_wins": 43,
+                "candidate_wins": 43,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 481,
+                  "both_win": 43
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.057490285485982895,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 407,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1622,
+                  "unsupported_offers": 1,
+                  "changed_choices": 0
+                }
+              }
+            }
+          }
+        ],
+        "out_of_fold": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 155,
+          "net_gain": 0,
+          "paired": {
+            "both_fail": 1381,
+            "both_win": 155
+          },
+          "exact_p": 1.0
+        },
+        "out_of_fold_vs_full": {
+          "assigned": 1536,
+          "baseline_wins": 165,
+          "candidate_wins": 155,
+          "net_gain": -10,
+          "paired": {
+            "both_fail": 1338,
+            "baseline_only": 43,
+            "both_win": 122,
+            "candidate_only": 33
+          },
+          "exact_p": 0.3018724904870077
+        },
+        "changed_terminal_paths_vs_full": 847,
+        "fit_family_evaluations": 3072,
+        "fit_candidate_wins": 310,
+        "fit_baseline_wins": 310
+      },
+      {
+        "mode": "full",
+        "folds": [
+          {
+            "fold": 0,
+            "fit": {
+              "outcomes": {
+                "assigned": 1009,
+                "baseline_wins": 96,
+                "candidate_wins": 144,
+                "net_gain": 48,
+                "paired": {
+                  "both_fail": 861,
+                  "candidate_only": 52,
+                  "both_win": 92,
+                  "baseline_only": 4
+                },
+                "exact_p": 1.1008055578187737e-11
+              },
+              "stochastic_return": 0.12208974361419678,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 777,
+                  "unsupported_offers": 0,
+                  "changed_choices": 123
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3101,
+                  "unsupported_offers": 0,
+                  "changed_choices": 1971
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 527,
+                "baseline_wins": 59,
+                "candidate_wins": 67,
+                "net_gain": 8,
+                "paired": {
+                  "both_fail": 450,
+                  "candidate_only": 18,
+                  "both_win": 49,
+                  "baseline_only": 10
+                },
+                "exact_p": 0.1849333420395851
+              },
+              "stochastic_return": 0.11530309170484543,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 408,
+                  "unsupported_offers": 0,
+                  "changed_choices": 61
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1631,
+                  "unsupported_offers": 4,
+                  "changed_choices": 1116
+                }
+              }
+            }
+          },
+          {
+            "fold": 1,
+            "fit": {
+              "outcomes": {
+                "assigned": 1051,
+                "baseline_wins": 102,
+                "candidate_wins": 155,
+                "net_gain": 53,
+                "paired": {
+                  "both_fail": 889,
+                  "candidate_only": 60,
+                  "both_win": 95,
+                  "baseline_only": 7
+                },
+                "exact_p": 1.3280368233066497e-11
+              },
+              "stochastic_return": 0.12828637659549713,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 815,
+                  "unsupported_offers": 0,
+                  "changed_choices": 192
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3253,
+                  "unsupported_offers": 0,
+                  "changed_choices": 2277
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 485,
+                "baseline_wins": 53,
+                "candidate_wins": 54,
+                "net_gain": 1,
+                "paired": {
+                  "both_fail": 420,
+                  "baseline_only": 11,
+                  "candidate_only": 12,
+                  "both_win": 42
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.10030967742204666,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 370,
+                  "unsupported_offers": 0,
+                  "changed_choices": 74
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1479,
+                  "unsupported_offers": 2,
+                  "changed_choices": 980
+                }
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "fit": {
+              "outcomes": {
+                "assigned": 1012,
+                "baseline_wins": 112,
+                "candidate_wins": 147,
+                "net_gain": 35,
+                "paired": {
+                  "both_fail": 849,
+                  "candidate_only": 51,
+                  "both_win": 96,
+                  "baseline_only": 16
+                },
+                "exact_p": 2.1689238760717064e-05
+              },
+              "stochastic_return": 0.13000623881816864,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 778,
+                  "unsupported_offers": 0,
+                  "changed_choices": 248
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3110,
+                  "unsupported_offers": 0,
+                  "changed_choices": 1953
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 524,
+                "baseline_wins": 43,
+                "candidate_wins": 44,
+                "net_gain": 1,
+                "paired": {
+                  "both_fail": 468,
+                  "both_win": 31,
+                  "candidate_only": 13,
+                  "baseline_only": 12
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.0836639329791069,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 407,
+                  "unsupported_offers": 0,
+                  "changed_choices": 124
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1622,
+                  "unsupported_offers": 1,
+                  "changed_choices": 995
+                }
+              }
+            }
+          }
+        ],
+        "out_of_fold": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 165,
+          "net_gain": 10,
+          "paired": {
+            "both_fail": 1338,
+            "candidate_only": 43,
+            "both_win": 122,
+            "baseline_only": 33
+          },
+          "exact_p": 0.3018724904870077
+        },
+        "out_of_fold_vs_full": {
+          "assigned": 1536,
+          "baseline_wins": 165,
+          "candidate_wins": 165,
+          "net_gain": 0,
+          "paired": {
+            "both_fail": 1371,
+            "both_win": 165
+          },
+          "exact_p": 1.0
+        },
+        "changed_terminal_paths_vs_full": 0,
+        "fit_family_evaluations": 3072,
+        "fit_candidate_wins": 446,
+        "fit_baseline_wins": 310
+      },
+      {
+        "mode": "static_only",
+        "folds": [
+          {
+            "fold": 0,
+            "fit": {
+              "outcomes": {
+                "assigned": 1009,
+                "baseline_wins": 96,
+                "candidate_wins": 96,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 913,
+                  "both_win": 96
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.06905344873666763,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 777,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3101,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 527,
+                "baseline_wins": 59,
+                "candidate_wins": 59,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 468,
+                  "both_win": 59
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.08755049854516983,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 408,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1631,
+                  "unsupported_offers": 4,
+                  "changed_choices": 0
+                }
+              }
+            }
+          },
+          {
+            "fold": 1,
+            "fit": {
+              "outcomes": {
+                "assigned": 1051,
+                "baseline_wins": 102,
+                "candidate_wins": 102,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 949,
+                  "both_win": 102
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.07618755847215652,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 815,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3253,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 485,
+                "baseline_wins": 53,
+                "candidate_wins": 53,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 432,
+                  "both_win": 53
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.07250811904668808,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 370,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1479,
+                  "unsupported_offers": 2,
+                  "changed_choices": 0
+                }
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "fit": {
+              "outcomes": {
+                "assigned": 1012,
+                "baseline_wins": 112,
+                "candidate_wins": 112,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 900,
+                  "both_win": 112
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.07911962270736694,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 778,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3110,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 524,
+                "baseline_wins": 43,
+                "candidate_wins": 43,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 481,
+                  "both_win": 43
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.06165695935487747,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 407,
+                  "unsupported_offers": 0,
+                  "changed_choices": 0
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1622,
+                  "unsupported_offers": 1,
+                  "changed_choices": 0
+                }
+              }
+            }
+          }
+        ],
+        "out_of_fold": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 155,
+          "net_gain": 0,
+          "paired": {
+            "both_fail": 1381,
+            "both_win": 155
+          },
+          "exact_p": 1.0
+        },
+        "out_of_fold_vs_full": {
+          "assigned": 1536,
+          "baseline_wins": 165,
+          "candidate_wins": 155,
+          "net_gain": -10,
+          "paired": {
+            "both_fail": 1338,
+            "baseline_only": 43,
+            "both_win": 122,
+            "candidate_only": 33
+          },
+          "exact_p": 0.3018724904870077
+        },
+        "changed_terminal_paths_vs_full": 847,
+        "fit_family_evaluations": 3072,
+        "fit_candidate_wins": 310,
+        "fit_baseline_wins": 310
+      },
+      {
+        "mode": "context_only",
+        "folds": [
+          {
+            "fold": 0,
+            "fit": {
+              "outcomes": {
+                "assigned": 1009,
+                "baseline_wins": 96,
+                "candidate_wins": 143,
+                "net_gain": 47,
+                "paired": {
+                  "both_fail": 861,
+                  "candidate_only": 52,
+                  "both_win": 91,
+                  "baseline_only": 5
+                },
+                "exact_p": 6.401865149108232e-11
+              },
+              "stochastic_return": 0.1184350773692131,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 777,
+                  "unsupported_offers": 0,
+                  "changed_choices": 131
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3101,
+                  "unsupported_offers": 0,
+                  "changed_choices": 1965
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 527,
+                "baseline_wins": 59,
+                "candidate_wins": 67,
+                "net_gain": 8,
+                "paired": {
+                  "both_fail": 450,
+                  "candidate_only": 18,
+                  "both_win": 49,
+                  "baseline_only": 10
+                },
+                "exact_p": 0.1849333420395851
+              },
+              "stochastic_return": 0.11319363117218018,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 408,
+                  "unsupported_offers": 0,
+                  "changed_choices": 68
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1631,
+                  "unsupported_offers": 4,
+                  "changed_choices": 1111
+                }
+              }
+            }
+          },
+          {
+            "fold": 1,
+            "fit": {
+              "outcomes": {
+                "assigned": 1051,
+                "baseline_wins": 102,
+                "candidate_wins": 150,
+                "net_gain": 48,
+                "paired": {
+                  "both_fail": 894,
+                  "candidate_only": 55,
+                  "both_win": 95,
+                  "baseline_only": 7
+                },
+                "exact_p": 2.4300843108615577e-10
+              },
+              "stochastic_return": 0.12454984337091446,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 815,
+                  "unsupported_offers": 0,
+                  "changed_choices": 168
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3253,
+                  "unsupported_offers": 0,
+                  "changed_choices": 2274
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 485,
+                "baseline_wins": 53,
+                "candidate_wins": 54,
+                "net_gain": 1,
+                "paired": {
+                  "both_fail": 420,
+                  "baseline_only": 11,
+                  "candidate_only": 12,
+                  "both_win": 42
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.09892228245735168,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 370,
+                  "unsupported_offers": 0,
+                  "changed_choices": 72
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1479,
+                  "unsupported_offers": 2,
+                  "changed_choices": 978
+                }
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "fit": {
+              "outcomes": {
+                "assigned": 1012,
+                "baseline_wins": 112,
+                "candidate_wins": 145,
+                "net_gain": 33,
+                "paired": {
+                  "both_fail": 850,
+                  "candidate_only": 50,
+                  "both_win": 95,
+                  "baseline_only": 17
+                },
+                "exact_p": 6.737973666915461e-05
+              },
+              "stochastic_return": 0.12814632058143616,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 778,
+                  "unsupported_offers": 0,
+                  "changed_choices": 247
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 3110,
+                  "unsupported_offers": 0,
+                  "changed_choices": 1954
+                }
+              }
+            },
+            "validation": {
+              "outcomes": {
+                "assigned": 524,
+                "baseline_wins": 43,
+                "candidate_wins": 43,
+                "net_gain": 0,
+                "paired": {
+                  "both_fail": 469,
+                  "both_win": 31,
+                  "candidate_only": 12,
+                  "baseline_only": 12
+                },
+                "exact_p": 1.0
+              },
+              "stochastic_return": 0.08268871903419495,
+              "stages": {
+                "relic": {
+                  "enabled": true,
+                  "states": 407,
+                  "unsupported_offers": 0,
+                  "changed_choices": 124
+                },
+                "card": {
+                  "enabled": true,
+                  "states": 1622,
+                  "unsupported_offers": 1,
+                  "changed_choices": 998
+                }
+              }
+            }
+          }
+        ],
+        "out_of_fold": {
+          "assigned": 1536,
+          "baseline_wins": 155,
+          "candidate_wins": 164,
+          "net_gain": 9,
+          "paired": {
+            "both_fail": 1339,
+            "candidate_only": 42,
+            "both_win": 122,
+            "baseline_only": 33
+          },
+          "exact_p": 0.3556992390814875
+        },
+        "out_of_fold_vs_full": {
+          "assigned": 1536,
+          "baseline_wins": 165,
+          "candidate_wins": 164,
+          "net_gain": -1,
+          "paired": {
+            "both_fail": 1369,
+            "both_win": 162,
+            "baseline_only": 3,
+            "candidate_only": 2
+          },
+          "exact_p": 1.0
+        },
+        "changed_terminal_paths_vs_full": 45,
+        "fit_family_evaluations": 3072,
+        "fit_candidate_wins": 438,
+        "fit_baseline_wins": 310
+      }
+    ],
+    "unchanged_full_reproduces_e89_e95": true,
+    "independent_dictionary_decoder_matches_all_outcomes": true,
+    "zero_components_reproduce_parent_choices": true,
+    "source_hashes_unchanged": true,
+    "new_mcts_calls": 0,
+    "new_optimizer_updates": 0,
+    "external_heldout_or_development_evaluations": 0,
+    "limits": "Both score components were trained together. Removing one without refitting measures dependence of these fitted policies, not the achievable quality of a separately trained static or contextual model. Contextual frozen embeddings also contain candidate identity; context_only is not identity-free. E89 uses the historical engine, not current E121. Each family appears twice in fit evaluations and once out of fold; 3072 pooled fit rows are dependent. These historically exposed fit-fold results are not unseen acceptance. No current E128 labels, external label holdout or development outcomes are evaluated. No candidate adoption, training-job launch or E128/E131 gate change follows from these diagnostic comparisons."
+  },
+  "post_result_weight_inspection": {
+    "experiment": "E132",
+    "kind": "post-result-weight-inspection",
+    "at": "2026-09-21T09:18:51.488038+00:00",
+    "rows": [
+      {
+        "fold": 0,
+        "stage": "relic",
+        "number_of_biases": 23,
+        "maximum_bias_difference": 0.8987582921981812,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      },
+      {
+        "fold": 0,
+        "stage": "card",
+        "number_of_biases": 61,
+        "maximum_bias_difference": 0.2823517322540283,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      },
+      {
+        "fold": 1,
+        "stage": "relic",
+        "number_of_biases": 23,
+        "maximum_bias_difference": 0.9227002263069153,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      },
+      {
+        "fold": 1,
+        "stage": "card",
+        "number_of_biases": 63,
+        "maximum_bias_difference": 0.22791986167430878,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      },
+      {
+        "fold": 2,
+        "stage": "relic",
+        "number_of_biases": 23,
+        "maximum_bias_difference": 0.6784376502037048,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      },
+      {
+        "fold": 2,
+        "stage": "card",
+        "number_of_biases": 64,
+        "maximum_bias_difference": 0.1677740216255188,
+        "parent_choice_bonus": 1.0,
+        "can_overcome_parent_bonus_without_context": false
+      }
+    ],
+    "source_cv_sha256": "8f9b307606d7de0b7e5e632ce5eb6fbed0e0f2bc1c765e3337f667fe09f4ad6b",
+    "model_evaluations": 0,
+    "new_optimizer_updates": 0,
+    "new_mcts_calls": 0,
+    "interpretation": "All six saved ID-bias vectors have global range below the unchanged parent-choice bonus. Thus these components alone cannot change the deployed greedy choice. This is a property of the jointly trained saved weights, not of an independently trained static policy."
+  },
+  "execution": {
+    "status": "complete",
+    "exit_code": 0,
+    "exec_session_id": 91655,
+    "observed_at": "2026-09-21T09:19:31.688277+00:00",
+    "scope": "single process read-only analysis; no sampler workers or optimizer"
+  }
+}
