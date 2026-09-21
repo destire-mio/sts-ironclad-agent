@@ -2955,3 +2955,5 @@ C1 局部检查归档：主任务读取 Luna 的报告和脚本，确认合成�
 应用工具更新成功，持久化配置读回匹配目标任务、启用状态及 1200 秒间隔；首次定时唤醒和最终结果通知尚未发生，不能记为端到端通知验证通过。跟进任务中的旧训练集评估要求被当前 E127/E128 交付要求替代，不恢复旧采样目标。没有新模型、采样作业、训练作业或门槛变更；E131 条件不变，原版差异排查保持暂停。
 
 公开交接证据：`docs/experiments/e128-luna-result-handoff.json`。任务唤醒用途的官方说明：https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop#step-9-close-the-loop 。此次是执行交接修补，不另编号为新的学习实验。
+
+首次定时触发补充：09:55:49 UTC，跟进任务 10 唤醒 Luna，实际任务 `01a0c364-ac4f-7ce2-b103-9cdaf23eee37` 在 28.7 秒后结束。主任务通过任务事件核对触发来源确为 heartbeat 10，读取观察结果的命令退出 0，普通进度选择 DONT_NOTIFY。首次调度执行验证通过；最终完成通知仍未触发。证据 `docs/experiments/e128-luna-first-heartbeat.json`。此处只核对任务交接，不由主任务运行采样观察器。

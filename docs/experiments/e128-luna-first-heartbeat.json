@@ -1,0 +1,27 @@
+{
+  "experiment_context": [
+    "E127",
+    "E128"
+  ],
+  "kind": "first-scheduled-result-handoff-wakeup",
+  "checked_at": "2026-09-21T09:59:08.084112+00:00",
+  "registration_sha256": "ddbfad7b2d42816f93eaf907b105bdf8060f7de4e33f1439130e4f1aeaa8875c",
+  "automation_id": "10",
+  "observer_task_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+  "turn_id": "01a0c364-ac4f-7ce2-b103-9cdaf23eee37",
+  "heartbeat_event_id": "fco_01a0c364-ac71-74d3-9dd8-7378ac85b50a",
+  "trigger_time_utc": "2026-09-21T09:55:49.959Z",
+  "task_started_at_epoch_seconds": 1789984550,
+  "task_completed_at_epoch_seconds": 1789984578,
+  "read_thread_verified_heartbeat_id": true,
+  "task_status": "completed",
+  "observation_read_command_exit_code": 0,
+  "notification_decision": "DONT_NOTIFY",
+  "first_scheduled_wakeup_verified": true,
+  "terminal_result_message_delivered": false,
+  "source_tools": [
+    "wait_threads",
+    "read_thread"
+  ],
+  "limits": "This proves a scheduled Luna wakeup and quiet handling of ordinary progress. The E127/E128 final result does not exist at this observation, so delivery of complete evidence to the main task remains untested. No new sampling or training job was started by this verification."
+}
