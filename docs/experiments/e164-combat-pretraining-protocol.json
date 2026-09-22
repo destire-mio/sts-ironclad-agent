@@ -1,0 +1,49 @@
+{
+  "experiment": "E164",
+  "hypothesis": "Dense recorded combat-consequence supervision improves transferable state representations before the unchanged E160 terminal action-improvement task.",
+  "learning_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e154-offline-control-20260922-01",
+  "graph_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e153-existing-control-data-20260922-01",
+  "diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "comparison": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e160-expected-improvement-20260922-01",
+  "failure_profile": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e163-natural-failure-profile-20260922-01",
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "phase_timeout_seconds": 3600,
+  "new_training_rollouts": 0,
+  "auxiliary_recipe": {
+    "steps": 5000,
+    "checkpoints": [
+      0,
+      250,
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "validation_draws": 8192,
+    "seed": 2026092264,
+    "auxiliary_relative_mse_gate": 0.9
+  },
+  "heart_recipe": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "validation_draws": 8192,
+    "seed": 2026092260
+  },
+  "auxiliary_targets": [
+    "Net HP change divided by pre-map max HP through the next outside state or terminal",
+    "Survival through that same entire transition; Act3 without Heart is alive, not a combat death"
+  ],
+  "scope": "All deduplicated accepted old map actions with visible monster, elite or boss destination. No unknown/event destinations, inferred alternate outcomes or new trajectories. Consecutive Act3 bosses form one transition.",
+  "family_roles": "Original E73 three folds, original inner split. Fit auxiliary encoder only on inner training families for inner Heart fits; refit on outer fitting families for final fold actor. Seeds, fingerprints, post-action state and future outcomes are labels/provenance only.",
+  "selection": "Auxiliary stopping uses inner validation equal-weight family-then-transition MSE. Fixed 8192 outer draws screen prediction against an act x visible destination x pre-HP quartile mean fitted only on fitting families. Aggregate MSE at most90% of baseline and better in each fold required before Heart fitting.",
+  "heart_gate": "Keep E160 stopping, sampling, inputs, categorical support, terminal gain/tie/loss labels and P(gain)-P(loss) deployment. Required fit known gains at least half of available improvements, fit gains greater than losses, held gains greater than losses. Unknown actions remain unknown.",
+  "comparison_limits": "A coherent pretraining procedure adds optimization and existing dense supervision; no claim of isolated parameter-budget causality. Dense prediction success alone is not policy improvement. No production adoption or unseen acceptance from this study."
+}

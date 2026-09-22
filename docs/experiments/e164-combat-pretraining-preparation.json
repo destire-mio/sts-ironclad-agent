@@ -1,0 +1,60 @@
+{
+  "status": "prepared_reviewed",
+  "experiment": "E164",
+  "data": {
+    "status": "complete",
+    "families": 1536,
+    "raw_files": 29759,
+    "transitions": 234836,
+    "deaths": 20344,
+    "battle_span_counts": {
+      "1": 228340,
+      "2": 6496
+    },
+    "act_counts": {
+      "1": 46401,
+      "2": 115950,
+      "3": 64217,
+      "4": 8268
+    },
+    "targets": [
+      "(next outside or terminal HP - pre-map HP) / pre-map max HP",
+      "alive after entire transition"
+    ],
+    "limits": "Post-combat settlement is included. Consecutive Act3 bosses are one map transition. Deduplicated state/action edges, not independent episodes.",
+    "new_games": 0,
+    "MCTS_calls": 0,
+    "optimizer_updates": 0
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "data_completion_sha256": "83f7a5322bbbfff2bcef5e2d57d9a4d10bfdc9eb9b722324542047e15632cb36",
+    "runner_sha256": "907521976b4d07048b0c4e8164c1d902c9f564b5b6ca69d53652640aabcd925c",
+    "reviewer_sha256": "afa6c54446ef6a852c5fcc27e64645b08339eafb5350e9a8d4c5982bbd625641",
+    "targets_recomputed": 234836,
+    "terminal_counts": {
+      "nonterminal": 212742,
+      "terminal_death": 20344,
+      "terminal_heart_win": 1750
+    },
+    "native_checks": {
+      "inputs": 58,
+      "act_1": 28,
+      "endpoints": 58,
+      "battle_span_1": 57,
+      "act_2": 18,
+      "act_3": 10,
+      "battle_span_2": 1,
+      "act_4": 2,
+      "heart_win": 1,
+      "death": 1
+    },
+    "held_access_rejections": 3,
+    "owned_exit_sha256": "a340860b06ebe477ecbdacd86f7bb54af08a2dd8956d184723b87204d531bf90",
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "unit_checks": 5,
+  "registration_sha256": "449b5e800f52d9776ca2073d52e3c2ebd47e2381af0a7661364f883d8c2ffcf2",
+  "new_training_games": 0
+}

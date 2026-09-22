@@ -1,0 +1,341 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E163",
+  "report": {
+    "status": "complete",
+    "experiment": "E163",
+    "families": 1536,
+    "battles": 28703,
+    "terminal_statuses": {
+      "death": 1383,
+      "heart_win": 149,
+      "act3_without_heart": 4
+    },
+    "by_act": [
+      {
+        "act": 1,
+        "natural_families_reaching": 1536,
+        "deaths": 352,
+        "observed_battles": 13822,
+        "observed_survived_battles": 13491
+      },
+      {
+        "act": 2,
+        "natural_families_reaching": 1184,
+        "deaths": 446,
+        "observed_battles": 8268,
+        "observed_survived_battles": 7832
+      },
+      {
+        "act": 3,
+        "natural_families_reaching": 738,
+        "deaths": 375,
+        "observed_battles": 5950,
+        "observed_survived_battles": 5576
+      },
+      {
+        "act": 4,
+        "natural_families_reaching": 359,
+        "deaths": 210,
+        "observed_battles": 663,
+        "observed_survived_battles": 453
+      }
+    ],
+    "fatal_encounters": [
+      {
+        "encounter": "THE_HEART",
+        "observed_battles": 304,
+        "natural_deaths": 155
+      },
+      {
+        "encounter": "AWAKENED_ONE",
+        "observed_battles": 379,
+        "natural_deaths": 147
+      },
+      {
+        "encounter": "COLLECTOR",
+        "observed_battles": 341,
+        "natural_deaths": 122
+      },
+      {
+        "encounter": "AUTOMATON",
+        "observed_battles": 338,
+        "natural_deaths": 93
+      },
+      {
+        "encounter": "DONU_AND_DECA",
+        "observed_battles": 385,
+        "natural_deaths": 62
+      },
+      {
+        "encounter": "GREMLIN_NOB",
+        "observed_battles": 886,
+        "natural_deaths": 59
+      },
+      {
+        "encounter": "THREE_SENTRIES",
+        "observed_battles": 893,
+        "natural_deaths": 58
+      },
+      {
+        "encounter": "TIME_EATER",
+        "observed_battles": 374,
+        "natural_deaths": 58
+      },
+      {
+        "encounter": "SHIELD_AND_SPEAR",
+        "observed_battles": 359,
+        "natural_deaths": 55
+      },
+      {
+        "encounter": "HEXAGHOST",
+        "observed_battles": 518,
+        "natural_deaths": 54
+      },
+      {
+        "encounter": "SLAVERS",
+        "observed_battles": 418,
+        "natural_deaths": 50
+      },
+      {
+        "encounter": "CHAMP",
+        "observed_battles": 323,
+        "natural_deaths": 49
+      },
+      {
+        "encounter": "LAGAVULIN",
+        "observed_battles": 866,
+        "natural_deaths": 44
+      },
+      {
+        "encounter": "SLIME_BOSS",
+        "observed_battles": 526,
+        "natural_deaths": 41
+      },
+      {
+        "encounter": "REPTOMANCER",
+        "observed_battles": 334,
+        "natural_deaths": 27
+      },
+      {
+        "encounter": "GREMLIN_LEADER",
+        "observed_battles": 418,
+        "natural_deaths": 23
+      },
+      {
+        "encounter": "BOOK_OF_STABBING",
+        "observed_battles": 433,
+        "natural_deaths": 22
+      },
+      {
+        "encounter": "MYSTERIOUS_SPHERE_EVENT",
+        "observed_battles": 232,
+        "natural_deaths": 21
+      },
+      {
+        "encounter": "GIANT_HEAD",
+        "observed_battles": 344,
+        "natural_deaths": 20
+      },
+      {
+        "encounter": "SHELLED_PARASITE_AND_FUNGI",
+        "observed_battles": 401,
+        "natural_deaths": 19
+      },
+      {
+        "encounter": "THE_GUARDIAN",
+        "observed_battles": 484,
+        "natural_deaths": 19
+      },
+      {
+        "encounter": "LAGAVULIN_EVENT",
+        "observed_battles": 39,
+        "natural_deaths": 14
+      },
+      {
+        "encounter": "CENTURION_AND_HEALER",
+        "observed_battles": 698,
+        "natural_deaths": 13
+      },
+      {
+        "encounter": "THREE_CULTIST",
+        "observed_battles": 414,
+        "natural_deaths": 11
+      },
+      {
+        "encounter": "SNAKE_PLANT",
+        "observed_battles": 684,
+        "natural_deaths": 10
+      },
+      {
+        "encounter": "EXORDIUM_THUGS",
+        "observed_battles": 496,
+        "natural_deaths": 10
+      },
+      {
+        "encounter": "TRANSIENT",
+        "observed_battles": 248,
+        "natural_deaths": 8
+      },
+      {
+        "encounter": "GREMLIN_GANG",
+        "observed_battles": 333,
+        "natural_deaths": 8
+      },
+      {
+        "encounter": "SENTRY_AND_SPHERE",
+        "observed_battles": 247,
+        "natural_deaths": 8
+      },
+      {
+        "encounter": "JAW_WORM_HORDE",
+        "observed_battles": 250,
+        "natural_deaths": 7
+      },
+      {
+        "encounter": "SPIRE_GROWTH",
+        "observed_battles": 253,
+        "natural_deaths": 6
+      },
+      {
+        "encounter": "NEMESIS",
+        "observed_battles": 298,
+        "natural_deaths": 6
+      },
+      {
+        "encounter": "CHOSEN_AND_BYRDS",
+        "observed_battles": 254,
+        "natural_deaths": 5
+      },
+      {
+        "encounter": "THREE_DARKLINGS",
+        "observed_battles": 695,
+        "natural_deaths": 5
+      },
+      {
+        "encounter": "BLUE_SLAVER",
+        "observed_battles": 627,
+        "natural_deaths": 4
+      },
+      {
+        "encounter": "MUSHROOMS_EVENT",
+        "observed_battles": 117,
+        "natural_deaths": 4
+      },
+      {
+        "encounter": "EXORDIUM_WILDLIFE",
+        "observed_battles": 516,
+        "natural_deaths": 4
+      },
+      {
+        "encounter": "CULTIST_AND_CHOSEN",
+        "observed_battles": 375,
+        "natural_deaths": 4
+      },
+      {
+        "encounter": "FOUR_SHAPES",
+        "observed_battles": 225,
+        "natural_deaths": 3
+      },
+      {
+        "encounter": "LOTS_OF_SLIMES",
+        "observed_battles": 335,
+        "natural_deaths": 3
+      },
+      {
+        "encounter": "LARGE_SLIME",
+        "observed_battles": 568,
+        "natural_deaths": 3
+      },
+      {
+        "encounter": "LOOTER",
+        "observed_battles": 661,
+        "natural_deaths": 2
+      },
+      {
+        "encounter": "THREE_LOUSE",
+        "observed_battles": 624,
+        "natural_deaths": 2
+      },
+      {
+        "encounter": "SPHERE_AND_TWO_SHAPES",
+        "observed_battles": 244,
+        "natural_deaths": 2
+      },
+      {
+        "encounter": "SNECKO",
+        "observed_battles": 504,
+        "natural_deaths": 2
+      },
+      {
+        "encounter": "THREE_SHAPES",
+        "observed_battles": 474,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "SPHERIC_GUARDIAN",
+        "observed_battles": 478,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "RED_SLAVER",
+        "observed_battles": 327,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "THREE_BYRDS",
+        "observed_battles": 436,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "COLOSSEUM_EVENT_SLAVERS",
+        "observed_battles": 61,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "TWO_FUNGI_BEASTS",
+        "observed_battles": 643,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "ORB_WALKER",
+        "observed_battles": 485,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "TWO_THIEVES",
+        "observed_battles": 502,
+        "natural_deaths": 1
+      },
+      {
+        "encounter": "SHELL_PARASITE",
+        "observed_battles": 475,
+        "natural_deaths": 1
+      }
+    ],
+    "pre_fatal_battle_hp_buckets": {
+      ">75%": 474,
+      "50-75%": 409,
+      "25-50%": 266,
+      "<=25%": 202,
+      "nonbattle_death": 32
+    },
+    "recorded_battle_hp_changes": {
+      "negative": 9439,
+      "zero": 4789,
+      "positive": 14475
+    },
+    "new_games": 0,
+    "MCTS_calls": 0,
+    "optimizer_updates": 0,
+    "limits": "Observed parent trajectories on historical fit families, not causal attribution or a proof that MCTS could not win. Battle HP change includes the recorded combat settlement. Repeated encounters within a family are exposures, not independent families."
+  },
+  "completion_sha256": "961eda392f75cf717adc7117abef1f2512d22c75b9a7688c591899eef710c7c8",
+  "reviewer_sha256": "614b873eed57583604fb45ab0fd70f80f99203e28f55f74834f69bd3c38bf615",
+  "reviewed_families": 1536,
+  "reviewed_battle_rows": 28703,
+  "hp_change_sign": "Report signs refer to HP loss: negative is net healing; positive is net loss.",
+  "scope": "Accounting and bound source review; native replay was performed by the retained E163 runner. No second native replay or causal combat attribution.",
+  "new_games": 0,
+  "optimizer_updates": 0
+}
