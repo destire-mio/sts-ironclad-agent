@@ -1,0 +1,60 @@
+{
+  "status": "complete_not_adopted",
+  "families": 1536,
+  "folds": 3,
+  "candidate_vs_parent": {
+    "assigned": 1536,
+    "baseline_wins": 149,
+    "candidate_wins": 153,
+    "net_gain": 4,
+    "paired": {
+      "both_fail": 1342,
+      "candidate_only": 45,
+      "both_win": 108,
+      "baseline_only": 41
+    },
+    "exact_p": 0.7465343822890573
+  },
+  "candidate_vs_control": {
+    "assigned": 1536,
+    "baseline_wins": 146,
+    "candidate_wins": 153,
+    "net_gain": 7,
+    "paired": {
+      "both_fail": 1362,
+      "both_win": 125,
+      "candidate_only": 28,
+      "baseline_only": 21
+    },
+    "exact_p": 0.3916029105474905
+  },
+  "fit_screen_passed": false,
+  "optimizer_updates": 3000,
+  "optimizer_seconds": 17.893828917935025,
+  "parameter_counts": [
+    996,
+    998,
+    999
+  ],
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "limits": "Fit-only shared-fold development evidence. No full model, external labels, natural candidate games or adoption are automatic.",
+  "experiment": "E139",
+  "verification": {
+    "status": "complete",
+    "zero_faults": true,
+    "families": 1536,
+    "native_choice_families": 1184,
+    "early_failures_retained": 352,
+    "new_sampling_games": 0,
+    "MCTS_searches": 0,
+    "external_holdout_evaluations": 0,
+    "production_adoption": false
+  },
+  "all_proofs_hashes_and_stage_cleanup_verified": true,
+  "raw_selected_terminal_and_pair_counts_verified": true,
+  "completion_sha256": "26f784586d11f4012d950f0dcfe79cb76cc2d95aba0f291f699a18eab9193453",
+  "controller_exit_sha256": "af5e6b66a266de983a783955935fd36a0f3ea5d5fd335d4f289a76ea170e241c"
+}

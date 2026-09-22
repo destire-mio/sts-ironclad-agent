@@ -1,0 +1,46 @@
+{
+  "experiment": "E140",
+  "created_at": "2026-09-22T02:20:06.259941+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e136-first-card-reuse-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e140-trajectory-value-data-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "fit_families": 1536,
+  "fit_routes": 6144,
+  "workers": 8,
+  "retained_per_act": 8,
+  "timeout_seconds": 7200,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "external_holdout_evaluations": 0,
+  "purpose": "Re-encode complete audited E136 fit routes into public-state/candidate-card terminal-value examples. No new branch collection.",
+  "selection": "All1536 originally assigned fit families, all4 first-card branches each. Keep forced root and at most8 later recorded reward-card choices per act ranked by SHA256(prefix index), regardless of outcome. No pre-intervention rows. Root/candidate order preserved.",
+  "target": "Binary Heart result of this exact route after the recorded card choice, with frozen parent continuation. Later choices are selected by the parent, not counterfactual alternatives. This is supervised fixed-policy Q estimation, not on-policy RL.",
+  "features": "Allowlisted public state and chosen card descriptor, with current boss/map/deck/card specials/relic identity and counters/potions. Internal event scratch, reward probabilities, seed/RNG, prefix identity, future actions and terminal metadata excluded.",
+  "planned_learning_comparison": {
+    "experiment": "E141",
+    "arms": [
+      "root_only",
+      "root_plus_later"
+    ],
+    "family_folds": "original E73 SHA256 modulo3; all same-seed branches/states remain together",
+    "model": "new jointly learned float32 MLP: public state/candidate ->128 SiLU ->64 SiLU ->1 logit; no frozen BC representation",
+    "training": {
+      "steps": 2000,
+      "batch_size": 256,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm": 1.0,
+      "seed": 2026092241,
+      "optimizer": "AdamW",
+      "objective": "unweighted BCE over the predeclared hierarchical training distribution; final checkpoint only"
+    },
+    "sampling": "Both arms uniform fit family then uniform first-card branch. root_only uses forced root. root_plus_later uses root with probability1/2, else uniform available later act then uniform retained row; branches without later rows use root. No win oversampling or length weighting.",
+    "deploy": "Change only Act1 first-fight last card reward; greedy Q logit, ties to parent. Whole-menu unknown card IDs relative to fit-root support fall back to parent. Native feature and choice verification before evaluation.",
+    "gate": "Each arm must gain at least30/1536 versus parent out of fold and descriptive paired p<.025. No holdout fitting/grid; passing final model and historical holdout admission require later explicit recorded root decision.",
+    "limits": "Additional states are correlated observations, not new independent families. Root-only control separates representation/objective change from additional within-trajectory information."
+  }
+}

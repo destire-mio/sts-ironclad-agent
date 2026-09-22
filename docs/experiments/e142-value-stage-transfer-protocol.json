@@ -1,0 +1,21 @@
+{
+  "experiment": "E142",
+  "at": "2026-09-22T02:38:41.139484+00:00",
+  "model_study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e141-trajectory-value-learning-20260922-01",
+  "data_study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e135-static-context-20260922-01",
+  "question": "Do frozen E141 family-fold value networks rank measured Act2 first-card alternatives better, after early-card gates failed?",
+  "assigned_families": 1536,
+  "scope": "Keep the original first-boss relic choice. Evaluate only its measured Act2 first-card options under fixed-parent continuation. Retain all earlier deaths and missing scoped opportunities unchanged.",
+  "models": [
+    "root_only",
+    "root_plus_later"
+  ],
+  "folds": "Exact original E73 3-fold rule. Use only checkpoint excluding the evaluated entire seed family.",
+  "training_updates": 0,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "gate": "Fit-only evidence probe: for each arm require net gain>=30/1536 and descriptive paired p<.025 versus parent before implementing a later-scoped deployment candidate. No auto adoption or model selection on external labels.",
+  "limits": "New development use of the same historical fit families, not an independent acceptance test. Current ValuePolicy is first-card scoped; this probe computes scores on stored real public states and raw terminal labels. If gates fail, no new scoped implementation or full-game candidate evaluation follows from this probe."
+}

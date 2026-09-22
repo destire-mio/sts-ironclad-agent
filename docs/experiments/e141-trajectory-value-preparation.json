@@ -1,0 +1,9 @@
+{
+  "status": "preflight_passed_waiting_for_E140_acceptance",
+  "tests_passed": 6,
+  "preflight_log_sha256": "02eb9fc0ce67699bd97350f3c74ad6508b9bb0db8493be56df922b400208b28a",
+  "command_exit_code": 0,
+  "formal_optimizer_updates": 0,
+  "new_sampling_games": 0,
+  "limits": "One synthetic optimization step belongs to a unit test, not a candidate experiment. Source dataset completion and root acceptance still required."
+}

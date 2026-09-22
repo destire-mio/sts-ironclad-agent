@@ -1,0 +1,74 @@
+{
+  "status": "complete_read_only",
+  "experiment": "E142",
+  "assigned_families": 1536,
+  "coverage": {
+    "measured_card_roots": 1184,
+    "root_only_changed_cards": 778,
+    "root_plus_later_changed_cards": 852,
+    "before_boss": 352,
+    "root_only_unknown_menu_fallback": 33,
+    "root_plus_later_unknown_menu_fallback": 33
+  },
+  "arms": {
+    "root_only": {
+      "out_of_fold": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 152,
+        "net_gain": 3,
+        "paired": {
+          "both_fail": 1355,
+          "candidate_only": 32,
+          "both_win": 120,
+          "baseline_only": 29
+        },
+        "exact_p": 0.798152627305718
+      },
+      "gate_passed": false
+    },
+    "root_plus_later": {
+      "out_of_fold": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 150,
+        "net_gain": 1,
+        "paired": {
+          "both_fail": 1345,
+          "both_win": 108,
+          "candidate_only": 42,
+          "baseline_only": 41
+        },
+        "exact_p": 1.0
+      },
+      "gate_passed": false
+    }
+  },
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "native_scoped_policy_verification": false,
+  "limits": "New development use of the same historical fit families, not an independent acceptance test. Current ValuePolicy is first-card scoped; this probe computes scores on stored real public states and raw terminal labels. If gates fail, no new scoped implementation or full-game candidate evaluation follows from this probe.",
+  "dense_vs_root": {
+    "assigned": 1536,
+    "baseline_wins": 152,
+    "candidate_wins": 150,
+    "net_gain": -2,
+    "paired": {
+      "both_fail": 1356,
+      "baseline_only": 30,
+      "both_win": 122,
+      "candidate_only": 28
+    },
+    "exact_p": 0.8956832138895903
+  },
+  "root_review": {
+    "process_exit_code": 0,
+    "all_frozen_input_and_result_hashes_verified": true,
+    "pair_counts_rechecked": true,
+    "sealed_completion_sha256": "52e48d1ee47064c0ef597853ecc40b990ce2c07642ee1278786a67c215b08973",
+    "completion_export_correction": "Initial proof included redirected stdout before the final report print. Only probe.log hash changed. All data/model/choice/report hashes pass; seal the final closed log after process exit. Public runner excludes the open log. No experiment rerun or score changes."
+  }
+}

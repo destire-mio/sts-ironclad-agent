@@ -1,0 +1,38 @@
+{
+  "experiment": "E141",
+  "arms": [
+    "root_only",
+    "root_plus_later"
+  ],
+  "family_folds": "original E73 SHA256 modulo3; all same-seed branches/states remain together",
+  "model": "new jointly learned float32 MLP: public state/candidate ->128 SiLU ->64 SiLU ->1 logit; no frozen BC representation",
+  "training": {
+    "steps": 2000,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "seed": 2026092241,
+    "optimizer": "AdamW",
+    "objective": "unweighted BCE over the predeclared hierarchical training distribution; final checkpoint only"
+  },
+  "sampling": "Both arms uniform fit family then uniform first-card branch. root_only uses forced root. root_plus_later uses root with probability1/2, else uniform available later act then uniform retained row; branches without later rows use root. No win oversampling or length weighting.",
+  "deploy": "Change only Act1 first-fight last card reward; greedy Q logit, ties to parent. Whole-menu unknown card IDs relative to fit-root support fall back to parent. Native feature and choice verification before evaluation.",
+  "gate": "Each arm must gain at least30/1536 versus parent out of fold and descriptive paired p<.025. No holdout fitting/grid; passing final model and historical holdout admission require later explicit recorded root decision.",
+  "limits": "Fit-only development; no unseen acceptance claim. A passing fold screen is not model adoption. Parent actor/search and all other decisions frozen. Raw public input excludes hidden game state.",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e140-trajectory-value-data-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e141-trajectory-value-learning-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "resources": {
+    "training_seconds": 14400,
+    "verification_seconds": 7200,
+    "torch_threads": 1,
+    "native_workers": 8
+  }
+}
