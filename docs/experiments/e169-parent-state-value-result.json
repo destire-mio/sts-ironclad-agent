@@ -1,0 +1,84 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E169",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 5000,
+      "held_brier": 0.0789781655517735,
+      "baseline_brier": 0.08773966570559665,
+      "inner_baseline_brier": 0.07816390409343775
+    },
+    {
+      "fold": 1,
+      "selected_steps": 5000,
+      "held_brier": 0.06516281830929316,
+      "baseline_brier": 0.07488438081899328,
+      "inner_baseline_brier": 0.08107170674160866
+    },
+    {
+      "fold": 2,
+      "selected_steps": 2000,
+      "held_brier": 0.06048818883864268,
+      "baseline_brier": 0.0636799239468375,
+      "inner_baseline_brier": 0.07920900780285192
+    }
+  ],
+  "held_brier": 0.06820972423323644,
+  "baseline_brier": 0.07543465682380913,
+  "prediction_gate_passed": false,
+  "value_optimizer_updates": 27000,
+  "independent_inner_checkpoints": 18,
+  "independent_held_predictions": 24576,
+  "maximum_numpy_error": 1.2073493316222539e-09,
+  "family_roles_and_fit_only_baselines_verified": true,
+  "data_review_sha256": "c5edece23962e0809460709502092ff272ebbc5887a951a29596e86e5fe5be11",
+  "controller_exit_sha256": "6ceef7da9d480edaa628d644f3889d05467600d5fbebb74dc304c933f275e9e1",
+  "learning_completion_sha256": "e640f0c73307d01c1bf5c1a4cf903493e409ca8ef340f4a58b9bbe95c9d7f1c4",
+  "reviewer_sha256": "8482e0ac6d973c5ed7c0c934466b4683fa4e15ad0286a74ac52bd6589bff186d",
+  "new_games": 0,
+  "actor_optimizer_updates": 0,
+  "auxiliary_optimizer_updates": 0,
+  "policy_adoption": false,
+  "limits": "State prediction under the frozen parent, not an action-selection model or natural/unseen policy win rate. All states remain grouped by the original family.",
+  "relative_brier_improvement": 0.09577736407614057,
+  "disposition": "closed_below_prediction_gate",
+  "natural_games": 0,
+  "registration_sha256": "ed0f21b8e3034072358814117d57f4136ff4cdfce96e82522d6d6317f11045eb",
+  "learning_report": {
+    "status": "complete",
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 5000,
+        "held_brier": 0.07897816563490778,
+        "baseline_brier": 0.08773966570559676,
+        "inner_baseline_brier": 0.07816390409343782
+      },
+      {
+        "fold": 1,
+        "selected_steps": 5000,
+        "held_brier": 0.06516281823860481,
+        "baseline_brier": 0.07488438081899318,
+        "inner_baseline_brier": 0.08107170674160877
+      },
+      {
+        "fold": 2,
+        "selected_steps": 2000,
+        "held_brier": 0.06048818910494447,
+        "baseline_brier": 0.06367992394683741,
+        "inner_baseline_brier": 0.07920900780285187
+      }
+    ],
+    "held_brier": 0.06820972432615235,
+    "baseline_brier": 0.07543465682380912,
+    "prediction_gate_passed": false,
+    "value_optimizer_updates": 27000,
+    "auxiliary_optimizer_updates": 0,
+    "actor_optimizer_updates": 0,
+    "new_games": 0,
+    "policy_adoption": false,
+    "limits": "A fixed-parent state prediction model, not an action policy or unseen win rate. Passing only permits a separate public-effect policy design and verification."
+  },
+  "next": "E170 tests one larger training horizon because two inner fits still improved at the original5000 cap. Same data, random draws, architecture, optimizer and threshold. No afterstate policy is admitted by E169."
+}

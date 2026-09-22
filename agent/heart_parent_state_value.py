@@ -16,6 +16,13 @@ I, O, E = P.I, P.O, P.E
 RECIPE = dict(steps=5000, batch_size=128, learning_rate=.0003, weight_decay=.0001,
     gradient_norm=1., validation_draws=8192, seed=2026092269,
     checkpoints=[0, 250, 500, 1000, 2000, 5000], relative_brier_gate=.9)
+EXTENDED_RECIPE = dict(RECIPE, steps=20000,
+    checkpoints=[0, 250, 500, 1000, 2000, 5000, 10000, 20000])
+
+
+def recipe_for(experiment):
+    E.require(experiment in ('E169', 'E170'), 'unregistered value budget')
+    return RECIPE if experiment == 'E169' else EXTENDED_RECIPE
 
 
 def input_columns(spec, auxiliary_columns):
@@ -52,7 +59,20 @@ def registered(root):
     for path, digest in reg['hashes'].items():
         E.require(E.sha(path) == digest, 'bound source changed: '+path)
     plan = E.read(root / 'protocol.json')
-    E.require(plan['recipe'] == RECIPE and plan['new_training_rollouts'] == 0, 'recipe changed')
+    E.require(plan['recipe'] == recipe_for(plan['experiment']) and plan['new_training_rollouts'] == 0, 'recipe changed')
+    if plan['experiment'] == 'E170':
+        previous = Path(plan['preceding_study'])
+        review = E.read(previous / 'training-review.json')
+        E.require(review['status'] == 'complete_reviewed' and not review['prediction_gate_passed'],
+                  'budget extension needs reviewed preceding result')
+        E.require(review['learning_completion_sha256'] == E.sha(previous / 'learning/completion.json'),
+                  'preceding training changed')
+        old = E.read(previous / 'protocol.json')
+        for key in ('learning_source', 'diagnosis', 'encoder_source', 'runtime', 'natural_source',
+                    'target_audit', 'input_columns'):
+            E.require(plan[key] == old[key], 'budget extension changed '+key)
+        E.require([r['selected_steps'] for r in review['folds']] == [5000, 5000, 2000],
+                  'missing evidence of two boundary-selected inner fits')
     source = Path(plan['encoder_source'])
     accepted = E.read(source / 'auxiliary-review.json')
     E.require(accepted['status'] == 'complete_reviewed' and accepted['passed'], 'encoder not admitted')
@@ -152,21 +172,23 @@ def brier(model, data, ids, allowed):
     return total/len(ids)
 
 
-def fit(model, data, families, steps, fold, checkpoint=None):
-    optimizer = torch.optim.AdamW(model.parameters(), lr=RECIPE['learning_rate'], weight_decay=RECIPE['weight_decay'])
-    rng = np.random.default_rng(RECIPE['seed']+fold)
+def fit(model, data, families, steps, fold, checkpoint=None, recipe=None):
+    recipe = RECIPE if recipe is None else recipe
+    optimizer = torch.optim.AdamW(model.parameters(), lr=recipe['learning_rate'], weight_decay=recipe['weight_decay'])
+    rng = np.random.default_rng(recipe['seed']+fold)
     allowed = {f['seed'] for f in families}
     if checkpoint: checkpoint(0, model)
     for step in range(1, steps+1):
-        ids = data.sample(families, rng.random((RECIPE['batch_size'], 2)))
+        ids = data.sample(families, rng.random((recipe['batch_size'], 2)))
         features, labels = data.batch(ids, allowed)
         loss = NN.binary_cross_entropy_with_logits(model(features).squeeze(-1), labels)
-        O.gradient_step(loss, optimizer, model, RECIPE['gradient_norm'])
-        if checkpoint and step in RECIPE['checkpoints']: checkpoint(step, model)
+        O.gradient_step(loss, optimizer, model, recipe['gradient_norm'])
+        if checkpoint and step in recipe['checkpoints']: checkpoint(step, model)
 
 
 def train(root):
     plan = registered(root)
+    recipe = plan['recipe']
     review = E.read(root / 'data-review.json')
     E.require(review['status'] == 'complete_reviewed' and review['data_completion_sha256'] == E.sha(root / 'data/completion.json'), 'value data not reviewed')
     torch.set_num_threads(1); torch.set_num_interop_threads(1)
@@ -184,9 +206,9 @@ def train(root):
         E.require(roles['inner_train'] == [f['seed'] for f in inner] and roles['inner_validation'] == [f['seed'] for f in valid]
                   and roles['fit'] == [f['seed'] for f in families], 'encoder family roles differ')
         directory = out / f'fold-{fold}'; directory.mkdir()
-        rng = np.random.default_rng(RECIPE['seed']+2000+fold)
-        validation_ids = data.sample(valid, rng.random((RECIPE['validation_draws'], 2)))
-        held_ids = data.sample(held, rng.random((RECIPE['validation_draws'], 2)))
+        rng = np.random.default_rng(recipe['seed']+2000+fold)
+        validation_ids = data.sample(valid, rng.random((recipe['validation_draws'], 2)))
+        held_ids = data.sample(held, rng.random((recipe['validation_draws'], 2)))
         E.write(directory / 'roles.json', dict(inner_train=[f['seed'] for f in inner], inner_validation=[f['seed'] for f in valid],
             fit=[f['seed'] for f in families], held=[f['seed'] for f in held], validation_ids=validation_ids.tolist(), held_ids=held_ids.tolist()))
         model = warm_model(source, width, fold, True)
@@ -194,14 +216,14 @@ def train(root):
         def checkpoint(step, current):
             curve.append(dict(step=step, brier=brier(current, data, validation_ids, {f['seed'] for f in valid})))
             torch.save(current.state_dict(), directory / f'inner-{step}.pt')
-        fit(model, data, inner, RECIPE['steps'], fold, checkpoint)
+        fit(model, data, inner, recipe['steps'], fold, checkpoint, recipe)
         selected = min(curve, key=lambda r: (r['brier'], r['step']))['step']
         model = warm_model(source, width, fold, False)
-        fit(model, data, families, selected, fold)
+        fit(model, data, families, selected, fold, recipe=recipe)
         torch.save(dict(model_type='parent_heart_state_value', prediction_only=True, model_state=model.state_dict(),
             feature_spec=store.spec, input_columns=plan['input_columns'], paired_width=width,
             provenance=dict(fold=fold, fit_families=[f['seed'] for f in families], selected_steps=selected,
-                encoder_sha256=E.sha(source / 'learning' / f'fold-{fold}/auxiliary.pt'), recipe=RECIPE)), directory / 'value.pt')
+                encoder_sha256=E.sha(source / 'learning' / f'fold-{fold}/auxiliary.pt'), recipe=recipe)), directory / 'value.pt')
         table, inner_table = data.baseline(families), data.baseline(inner)
         np.save(directory / 'baseline.npy', table, allow_pickle=False)
         np.save(directory / 'inner-baseline.npy', inner_table, allow_pickle=False)
@@ -213,9 +235,9 @@ def train(root):
         reports.append(report); print(report, flush=True)
     error = float(np.mean([r['held_brier'] for r in reports]))
     baseline = float(np.mean([r['baseline_brier'] for r in reports]))
-    passed = error <= RECIPE['relative_brier_gate']*baseline and all(r['held_brier'] < r['baseline_brier'] for r in reports)
+    passed = error <= recipe['relative_brier_gate']*baseline and all(r['held_brier'] < r['baseline_brier'] for r in reports)
     E.write(out / 'report.json', dict(status='complete', folds=reports, held_brier=error, baseline_brier=baseline,
-        prediction_gate_passed=passed, value_optimizer_updates=3*RECIPE['steps']+sum(r['selected_steps'] for r in reports),
+        prediction_gate_passed=passed, value_optimizer_updates=3*recipe['steps']+sum(r['selected_steps'] for r in reports),
         auxiliary_optimizer_updates=0, actor_optimizer_updates=0, new_games=0, policy_adoption=False,
         limits='A fixed-parent state prediction model, not an action policy or unseen win rate. Passing only permits a separate public-effect policy design and verification.'))
     E.write(out / 'completion.json', dict(status='complete', hashes={str(p.relative_to(out)): E.sha(p) for p in out.rglob('*') if p.is_file()}))

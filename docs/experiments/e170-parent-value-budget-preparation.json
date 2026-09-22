@@ -1,0 +1,32 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E170",
+  "data_completion_sha256": "604c2571b1ed66298f52041922d76bd441811fb6d452a39da8eb4f18334d12c9",
+  "preceding_data_review_sha256": "c5edece23962e0809460709502092ff272ebbc5887a951a29596e86e5fe5be11",
+  "preceding_training_review_sha256": "fdf8a097afde94ac3c750b223833622daac17a3c9c79d426c1e0028118b44a64",
+  "reused_states": 2039965,
+  "reused_families": 1536,
+  "identical_function_definitions": [
+    "input_columns",
+    "state_features",
+    "baseline_cells",
+    "prepare",
+    "Data",
+    "warm_model",
+    "brier"
+  ],
+  "changed_recipe_fields": [
+    "checkpoints",
+    "steps"
+  ],
+  "source_native_fixtures": 36,
+  "new_native_replays": 0,
+  "formal_optimizer_updates": 0,
+  "new_games": 0,
+  "runner_sha256": "065681052f7b0ee2027fcb5f96bbe6acb514b8628deee5d597538e6a405cf190",
+  "reviewer_sha256": "1a730a7de53538dd941cb73f4d7fa9496cc25c1e751aa391a5a0c273e0d7c9bf",
+  "limits": "Reuses reviewed labels, public inputs and family roles; only one larger stopping horizon is admitted. Not a new source replay or model result.",
+  "checks_passed": 6,
+  "check_command": "pytest -q tests/test_heart_parent_state_value.py tests/test_heart_parent_value_budget.py",
+  "registration_sha256": "e1226fe1adc285fe3a944dc60fceedd4d77dd1e05da8067e576eb8cb5b8887c9"
+}
