@@ -1,0 +1,36 @@
+{
+  "experiment": "E148",
+  "created_at": "2026-09-22T04:39:23.557559+00:00",
+  "first_card_data": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "branch_data": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e135-static-context-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01/runtime",
+  "arms": [
+    "absolute",
+    "within_state"
+  ],
+  "training": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "seed": 2026092248
+  },
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "data_timeout_seconds": 3600,
+  "training_timeout_seconds": 3600,
+  "question": "Does learning same-state terminal differences improve held-family ranking over absolute terminal regression on identical existing alternatives?",
+  "features": "Identical E143 allowlisted 5339 public-state/menu/candidate features and E144 691841-parameter fully trainable 128/64 SiLU architecture in both arms. Final layer weight and bias begin at zero.",
+  "sampling": "Original1536fit families, original E73 threefold hash. Sample uniformly by family, available decision stage, conditional branch. All alternatives of the sampled state are included, including all-tied outcomes; no held-family targets enter fitting.",
+  "objective": "Absolute: per-state mean squared error of raw scores versus binary Heart outcomes. Within-state: subtract the within-menu mean of the score-label error before the same squared loss; equivalent to half the all-pairs difference squared loss. No entropy, threshold scan, outcome oversampling or additional regularizer beyond the same AdamW weight decay.",
+  "label_contract": "First-card leaves come from accepted E136/E143. Boss labels come from boss-only raw continuation, never the subsequent card outcome. Conditional cards use the corresponding last-forced-card terminal. All other future choices are fixed parent. Verify raw terminal hashes, runtime, state/RNG fingerprint and action at every labelled boundary.",
+  "selection": "Rank the registered native card/relic candidates whose categorical identity occurs in the fitting families; parent is always eligible and wins ties. No complete natural-run policy is implemented or adopted by this diagnostic.",
+  "evaluation": "First-card-only and boss-then-card are separate recorded scopes; never combine their incompatible prefixes. Also report boss-only and parent-boss-then-card. Preserve1536 denominator and352 pre-boss deaths. Each family uses its excluding-fold checkpoint. Fit and held-family counts reported separately.",
+  "gate": "A recorded-screen arm qualifies for a separately frozen natural-run implementation only if BOTH first_card and boss_then_card gain at least20/1536 with descriptive paired exact p<.025. No automatic full refit, natural games or adoption.",
+  "contrast": "E96 used a frozen representation and linear paired-advantage regression under an older engine. E148 trains the entire nonlinear representation, includes the accepted early-card states, and compares objectives on identical data/budget with no parameter grid. E144 trained recorded trajectory actions; E148 trains complete measured same-state menus.",
+  "limits": "Historical fit families have informed experiment design, so excluding-fold scores and p-values are development evidence, not fresh acceptance. Recorded continuation scopes do not measure repeated natural-run changes or a50% policy. Similar seeds may share public features. The goal remains one frozen policy reaching512/1024 untouched families with complete state/RNG and fault evidence."
+}

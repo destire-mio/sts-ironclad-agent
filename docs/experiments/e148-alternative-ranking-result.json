@@ -1,0 +1,145 @@
+{
+  "status": "complete_recorded_screen_not_adopted",
+  "experiment": "E148",
+  "at": "2026-09-22T04:42:25.130368+00:00",
+  "arms": {
+    "absolute": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 141,
+          "net_gain": -8,
+          "paired": {
+            "both_fail": 1341,
+            "both_win": 95,
+            "candidate_only": 46,
+            "baseline_only": 54
+          },
+          "exact_p": 0.4841184136072915
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 88.0,
+          "net_gain": -61,
+          "paired": {
+            "both_fail": 1373,
+            "both_win": 74,
+            "candidate_only": 14,
+            "baseline_only": 75
+          },
+          "exact_p": 3.0109103586376684e-11
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 147,
+          "net_gain": -2,
+          "paired": {
+            "both_fail": 1347,
+            "both_win": 107,
+            "candidate_only": 40,
+            "baseline_only": 42
+          },
+          "exact_p": 0.9121566075526039
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 91.0,
+          "net_gain": -58,
+          "paired": {
+            "both_fail": 1359,
+            "both_win": 63,
+            "candidate_only": 28,
+            "baseline_only": 86
+          },
+          "exact_p": 4.842132602853125e-08
+        }
+      },
+      "screen_passed": false
+    },
+    "within_state": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 152,
+          "net_gain": 3,
+          "paired": {
+            "both_fail": 1332,
+            "both_win": 97,
+            "candidate_only": 55,
+            "baseline_only": 52
+          },
+          "exact_p": 0.8468020751891949
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 97.0,
+          "net_gain": -52,
+          "paired": {
+            "both_fail": 1369,
+            "both_win": 79,
+            "candidate_only": 18,
+            "baseline_only": 70
+          },
+          "exact_p": 2.0783545041774732e-08
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 148,
+          "net_gain": -1,
+          "paired": {
+            "both_fail": 1355,
+            "both_win": 116,
+            "candidate_only": 32,
+            "baseline_only": 33
+          },
+          "exact_p": 1.0
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 106.0,
+          "net_gain": -43,
+          "paired": {
+            "both_fail": 1349,
+            "both_win": 68,
+            "candidate_only": 38,
+            "baseline_only": 81
+          },
+          "exact_p": 0.00010057870133965112
+        }
+      },
+      "screen_passed": false
+    }
+  },
+  "states": 7448,
+  "families": 1536,
+  "numpy_state_inferences": 14896,
+  "raw_terminal_files": 8108,
+  "stage_counts": {
+    "first_card": 1536,
+    "boss": 1184,
+    "conditional_card": 4728
+  },
+  "mixed_outcome_states": {
+    "first_card": 233,
+    "boss": 198,
+    "conditional_card": 494
+  },
+  "optimizer_updates": 12000,
+  "optimizer_seconds": 58.31798608304234,
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "completion_sha256": "0f7f36523369ca1d727a1dde0cfbe016f0f3b98245f1d320a0d2d42e08feaf40",
+  "controller_exit_sha256": "1a454d68f4914052abf282de378279ce00467fe6f7486506aee124a3a399c401",
+  "review_script_sha256": "cfc159322a11a57ca42bde1a24e833e578f4477a354beae78324f38a876119df",
+  "limits": "Historical fit families have informed experiment design, so excluding-fold scores and p-values are development evidence, not fresh acceptance. Recorded continuation scopes do not measure repeated natural-run changes or a50% policy. Similar seeds may share public features. The goal remains one frozen policy reaching512/1024 untouched families with complete state/RNG and fault evidence."
+}
