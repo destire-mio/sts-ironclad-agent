@@ -1,0 +1,212 @@
+{
+  "status": "complete_recorded_screen_not_adopted",
+  "experiment": "E152",
+  "at": "2026-09-22T05:25:50.065853+00:00",
+  "arms": {
+    "small": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 153,
+          "net_gain": 4,
+          "paired": {
+            "both_fail": 1363,
+            "both_win": 129,
+            "candidate_only": 24,
+            "baseline_only": 20
+          },
+          "exact_p": 0.651587827208914
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 145.0,
+          "net_gain": -4,
+          "paired": {
+            "both_fail": 1383,
+            "both_win": 141,
+            "candidate_only": 4,
+            "baseline_only": 8
+          },
+          "exact_p": 0.3876953125
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 158.0,
+          "net_gain": 9,
+          "paired": {
+            "both_fail": 1365,
+            "both_win": 136,
+            "candidate_only": 22,
+            "baseline_only": 13
+          },
+          "exact_p": 0.17546524899080396
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 156.0,
+          "net_gain": 7,
+          "paired": {
+            "both_fail": 1363,
+            "both_win": 132,
+            "candidate_only": 24,
+            "baseline_only": 17
+          },
+          "exact_p": 0.34888887944907765
+        }
+      },
+      "screen_passed": false
+    },
+    "expanded": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 157,
+          "net_gain": 8,
+          "paired": {
+            "both_fail": 1350,
+            "both_win": 120,
+            "candidate_only": 37,
+            "baseline_only": 29
+          },
+          "exact_p": 0.38905246054779274
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 147.0,
+          "net_gain": -2,
+          "paired": {
+            "both_fail": 1376,
+            "both_win": 136,
+            "candidate_only": 11,
+            "baseline_only": 13
+          },
+          "exact_p": 0.8388197422027588
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 152.0,
+          "net_gain": 3,
+          "paired": {
+            "both_fail": 1367,
+            "both_win": 132,
+            "candidate_only": 20,
+            "baseline_only": 17
+          },
+          "exact_p": 0.7428293587290682
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 152.0,
+          "net_gain": 3,
+          "paired": {
+            "both_fail": 1359,
+            "both_win": 124,
+            "candidate_only": 28,
+            "baseline_only": 25
+          },
+          "exact_p": 0.7838463022094988
+        }
+      },
+      "screen_passed": false
+    }
+  },
+  "expanded_against_small": {
+    "first_card": {
+      "assigned": 1536,
+      "baseline_wins": 153,
+      "candidate_wins": 157,
+      "net_gain": 4,
+      "paired": {
+        "both_fail": 1352,
+        "both_win": 126,
+        "candidate_only": 31,
+        "baseline_only": 27
+      },
+      "exact_p": 0.6940040940761316
+    },
+    "boss_only": {
+      "assigned": 1536,
+      "baseline_wins": 145.0,
+      "candidate_wins": 147.0,
+      "net_gain": 2,
+      "paired": {
+        "both_fail": 1380,
+        "both_win": 136,
+        "candidate_only": 11,
+        "baseline_only": 9
+      },
+      "exact_p": 0.8238029479980469
+    },
+    "parent_boss_then_card": {
+      "assigned": 1536,
+      "baseline_wins": 158.0,
+      "candidate_wins": 152.0,
+      "net_gain": -6,
+      "paired": {
+        "both_fail": 1364,
+        "both_win": 138,
+        "candidate_only": 14,
+        "baseline_only": 20
+      },
+      "exact_p": 0.39152830513194203
+    },
+    "boss_then_card": {
+      "assigned": 1536,
+      "baseline_wins": 156.0,
+      "candidate_wins": 152.0,
+      "net_gain": -4,
+      "paired": {
+        "both_fail": 1357,
+        "both_win": 129,
+        "candidate_only": 23,
+        "baseline_only": 27
+      },
+      "exact_p": 0.6718110337653656
+    }
+  },
+  "selected_steps": {
+    "small": [
+      25,
+      25,
+      25
+    ],
+    "expanded": [
+      50,
+      100,
+      50
+    ]
+  },
+  "optimizer_updates": 12275,
+  "optimizer_seconds": 63.170288997818716,
+  "verified_inner_checkpoints": 48,
+  "numpy_outer_states": 14896,
+  "additional_raw_files_rechecked": 51055,
+  "additional_feature_states_rebuilt": 12070,
+  "original_sparse_prefix_preserved": true,
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "completion_sha256": "e33637dd4dede23d1c3f4762aa1f397be069566983b5fc84cfa24db3e7699c15",
+  "controller_exit_sha256": "b7aa9d249ef31d17ef38e856993ceb6b34a65918067c196de2751a82240525f4",
+  "review_script_sha256": "c5d8c12218114ad80f6df60302a73cd0440578f3d113d1d0acbc2cfeb207130a",
+  "limits": "Existing historical development families, not fresh acceptance. E128 frozen-readout scale failure remains valid for that prior recipe. This study changes neither simulator nor combat/candidate/search budget and collects no games. Source inventory is not an acceptance result; data assembly, learning and independent review must all finish.",
+  "artifact_format_correction": {
+    "status": "resolved_without_learning_rerun",
+    "legacy_path": "store/additional-inputs.json.gz",
+    "legacy_sha256": "c373b621f30f5b12872f1c0d11fe753603b392a0f4429fba93e6ffc964002cf6",
+    "legacy_format": "plain JSON written by E.write despite gzip suffix",
+    "failed_review_log_sha256": "636a956437e382b76f9a349f4254db9caf62e59829858993d6d1e5e1554177a6",
+    "public_writer_sha256": "47f041d8c6e0df9b0a0364f6460a921b0907f7c6050069807ba0728f96b3041a",
+    "review_script_sha256": "c5d8c12218114ad80f6df60302a73cd0440578f3d113d1d0acbc2cfeb207130a",
+    "resolution": "Preserve frozen bytes and first failure. Public writer now uses additional-inputs.json; reviewer explicitly parses legacy plain JSON. Training reads metadata and sparse arrays, not this checklist. Models and results are unchanged."
+  }
+}

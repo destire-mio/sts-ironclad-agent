@@ -1,0 +1,48 @@
+{
+  "experiment": "E152",
+  "created_at": "2026-09-22T05:13:35.619437+00:00",
+  "stopping_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e151-nested-stopping-20260922-01",
+  "small_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e148-alternative-ranking-20260922-01",
+  "joint_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/joint",
+  "family_groups": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/family-groups.json",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01/runtime",
+  "arms": [
+    "small",
+    "expanded"
+  ],
+  "training": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "seed": 2026092248
+  },
+  "checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "data_timeout_seconds": 7200,
+  "training_timeout_seconds": 7200,
+  "question": "Does adding existing independent fit families improve the nonlinear difference learner when stage exposure and inner stopping are matched?",
+  "data": "Preserve all7448 rows in the accepted E148 store. Append only additional-fit first-boss and conditional-card states from the complete E128 current-engine label store. Additional3072families include2418reached boss and654prior failures, adding12070states. No invented early-card labels. Verify raw hash/runtime/terminal and last-forced-action fingerprint at each new label, plus original continuation audit hashes.",
+  "roles": "Same original1536 outer reporting families and E73 modulo3folds. Small trains on original families outside held fold; expanded additionally uses additional-fit families outside held fold. E151-inner modulo5 picks inner validation within each fitting set. Historical1024holdout and512development excluded from every training or stopping role.",
+  "sampling": "Uniform first-card/boss/conditional-card stage, uniform eligible family within stage, uniform conditional branch. Thus additional families cannot dilute early-card exposure. Validation loss uses exactly the same stage/family/branch weighting. Empty pre-boss additional families retain role membership but contribute no invented branch labels. Both arms retrain under this sampler; E151 is background evidence, not a matched control.",
+  "model": "Same E150691842parameter full5339public-input MLP plus learned parent-action scalar, original initial weights/seeds and optimizer recipe. Within-state centered square loss includes tied outcomes. No outcome oversampling, feature changes, hardcoded preferences or margin grid.",
+  "stopping": "For each arm/outerfold, train one inner model2000steps, save all eight inner checkpoints and losses. Choose minimum inner loss, earlier exact tie. Reinitialize and fit all outer fitting families for selected duration. Common maximum24000 updates across inner/final fits; actual stopped budgets reported.",
+  "inference": "Rank measured native card/relic options with fit-only categorical support, parent always allowed, ties prefer parent. Separate first-card and boss/card trees, never splice incompatible prefixes. Every old reporting family remains in denominator.",
+  "gate": "Each arm must improve both first_card and boss_then_card by20/1536 over parent with descriptive paired p<.025 before considering a separately frozen natural policy. Also report expanded minus small for every fixed scope. Neither passage nor scale improvement is50% acceptance or automatic adoption.",
+  "limits": "Existing historical development families, not fresh acceptance. E128 frozen-readout scale failure remains valid for that prior recipe. This study changes neither simulator nor combat/candidate/search budget and collects no games. Source inventory is not an acceptance result; data assembly, learning and independent review must all finish."
+}

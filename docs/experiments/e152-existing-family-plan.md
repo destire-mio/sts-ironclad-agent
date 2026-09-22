@@ -1,6 +1,6 @@
 # E152: existing-family coverage, draft before input audit
 
-Status: design draft. No E152 data assembly, optimizer updates, natural runs or sampling have started. Main task owns implementation and review. Existing Luna remains paused; use it only for actual long waits at20-minute intervals.
+Status: completed without adoption. This document preserves the pre-experiment reasoning; see [frozen protocol](e152-existing-family-scale-protocol.json) and [reviewed result](e152-existing-family-scale-result.json). Data assembly and learning finished; no new sampling or natural candidate followed. Main task owns implementation and review. Existing Luna remains paused; use it only for actual long waits at20-minute intervals.
 
 E148/E150 show a training-versus-family generalization gap; E151 shows that fixed2000 updates cause part of the degradation and that inner-family stopping restores much of it. E128 previously found no qualifying improvement from1536 to4608 families under a frozen encoder/linear readout. Keep that negative result: the proposed comparison asks about a fully trained nonlinear difference model with internal stopping, and reuses already collected data. It is not evidence that more new sampling is needed.
 
