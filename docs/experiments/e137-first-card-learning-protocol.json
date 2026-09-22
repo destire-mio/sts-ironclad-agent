@@ -1,0 +1,40 @@
+{
+  "experiment": "E137",
+  "created_at": "2026-09-22T01:27:50.452105+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e136-first-card-reuse-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e133-early-card-learning-20260922-01/data/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "scope": "Only first Act first fight final card reward. Frozen parent for all later decisions; change_relic=False. Old 192-dimensional frozen representation plus option biases, one card head.",
+  "training": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "l2": 0.001,
+    "gradient_norm": 1.0
+  },
+  "fit_families": 1536,
+  "historical_label_holdout_families": 1024,
+  "fold_rule": "E73-family-fold SHA256 modulo3",
+  "fit_gate": {
+    "minimum_net_gain": 30,
+    "exact_p_less_than": 0.05
+  },
+  "holdout_gate": {
+    "minimum_net_gain": 20,
+    "exact_p_less_than": 0.05
+  },
+  "sequence": "Three fit-only fold models. If the fit screen fails, stop without full fit or external labels. If it passes, fit exactly one final model on all1536, freeze, evaluate historical1024, then verify native actions. Full natural512 development requires both label gates and all native checks; a separate registered execution is required.",
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "new_candidates_after_cv": 1,
+  "adoption": false,
+  "resources": {
+    "torch_threads": 1,
+    "native_workers": 8,
+    "training_seconds": 3600,
+    "verification_seconds": 7200
+  },
+  "limits": "Previously exposed fit and holdout families are development, never final unseen acceptance. Softmax training and greedy deployment differ; both are recorded without claiming equivalence. No hyperparameter sweep or extra data expansion."
+}

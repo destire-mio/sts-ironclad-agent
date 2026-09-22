@@ -1,0 +1,40 @@
+{
+  "experiment": "E137",
+  "status": "implemented_and_checked_not_launched",
+  "entry": {
+    "status": "source_completion_pending",
+    "checked_at": "2026-09-22T01:32:22.840643+00:00",
+    "focused_checks": 6,
+    "fixed_existing_fit_families": 4,
+    "missing_complete_source_rejected_before_learning": true,
+    "source_complete_at_check": false,
+    "reason": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e136-first-card-reuse-20260922-01/completion-verification.json'",
+    "optimizer_updates": 0,
+    "new_sampling_games": 0,
+    "registration_sha256": "0afa6ebca41b6d51ce14fe5995ddf69c34da5e1d81d6840a66b317716d422809"
+  },
+  "parameters": "192 frozen-encoder readout weights plus fit-only card identity biases; parent and relic head frozen",
+  "data": {
+    "fit_families": 1536,
+    "historical_label_holdout": 1024
+  },
+  "formal_optimizer_updates": 0,
+  "new_sampling_games": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "controller_prepared": true,
+  "controller_started": false,
+  "proofs": {
+    "runs/heart-e137-first-card-learning-20260922-01/protocol.json": "d195292fdf816d76e3dee05e8c9732dc0e933307aaab6e288df64928adcb0b5e",
+    "runs/heart-e137-first-card-learning-20260922-01/registration.json": "0afa6ebca41b6d51ce14fe5995ddf69c34da5e1d81d6840a66b317716d422809",
+    "runs/heart-e137-first-card-learning-20260922-01/entry-verification.json": "2b7bfce217815f9208d5917522989c305a1ceae3c8ddd662dc2eb63cf7efb549",
+    "runs/heart-e137-first-card-learning-20260922-01/control/registration.json": "5ca3b7f5bf1e7a9fba105aa8dfc7783a20cb3e6b759045f87b5d715001caee6f",
+    "runs/heart-e137-first-card-learning-20260922-01/checks/preflight-final.log": "5886f48035cdf0a6348325db88932fb9c3872fc06411445569fabcf278ecea28"
+  },
+  "source_sha256": {
+    "agent/heart_first_card_training.py": "d6720dff455b9c12c26c68914191e7c32ee12f7210b1ed5cde98c50e8a0a3c85",
+    "tests/test_heart_first_card_training.py": "a942ec97e912ba6763e4174eea10b29800003302804cc7f1e09fe4ec5c1d90be",
+    "docs/experiments/e137-controller.py": "e36bbc492561c2993cbe71dba9cac89fab27a0ee6175f6bd6f402aa4eed951cf"
+  }
+}
