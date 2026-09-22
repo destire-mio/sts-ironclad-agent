@@ -1,0 +1,24 @@
+{
+  "status": "confirmed_synthetic_counterexample",
+  "actual_loss_source_sha256": "c1430e5dec3418ea649c02c2cb68c1161deb44f7c2bad4f353052840561f9ee5",
+  "hypothetical_states": 10,
+  "identical_public_input": true,
+  "parent_wins": 0,
+  "alternative_wins": 2,
+  "parent_teacher_labels": 8,
+  "alternative_teacher_labels": 2,
+  "optimal_imitation_probabilities": [
+    0.8,
+    0.2
+  ],
+  "loss_gradient_max": 1.1102230246251565e-16,
+  "positive_margin_curvature": 0.16000000000000006,
+  "optimal_imitation_greedy_win_rate": 0.0,
+  "alternative_expected_win_rate": 0.2,
+  "conclusion": "Expected action agreement with a parent-on-ties hindsight teacher need not maximize expected Heart wins. More identical data preserves this population-objective mismatch.",
+  "limits": "Constructed distribution, not an empirical collision count or measured contribution to E158 failures. It establishes a possible objective bias, not that every real state follows this distribution.",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "production_adoption": false,
+  "script_sha256": "7cbe4bf268972c8a942906961743d3275f705e6c42c57058cb2e4540ce9d5476"
+}
