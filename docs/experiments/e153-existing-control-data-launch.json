@@ -1,0 +1,17 @@
+{
+  "status": "launched_pending_completion_and_review",
+  "at": "2026-09-22T05:45:53.742029+00:00",
+  "pid": 60427,
+  "controller": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e153-existing-control-data-20260922-01/control/controller.py",
+  "registration_sha256": "cb0ca0647c6b42d87b3030c0a2b9df1da02021a3854bd7da629876e36349ab30",
+  "preflight_families": 3,
+  "preflight_routes": 53,
+  "software_checks": 5,
+  "progress_observed_at": "2026-09-22T06:16:00Z",
+  "progress_completed_family_artifacts": 761,
+  "assigned_families": 1536,
+  "progress_is_not_acceptance": true,
+  "new_training_rollouts": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0
+}

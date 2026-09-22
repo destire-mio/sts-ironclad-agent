@@ -1,0 +1,31 @@
+{
+  "experiment": "E153",
+  "at": "2026-09-22T05:45:23.603578+00:00",
+  "continuous_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "ranking_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e148-alternative-ranking-20260922-01",
+  "branch_bundle": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e135-static-context-20260922-01/fit-inputs.json.gz",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "fit_families": 1536,
+  "source_scope_counts": {
+    "first_card": 6144,
+    "boss": 4736,
+    "conditional_card": 18879
+  },
+  "new_training_rollouts": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "workers": 8,
+  "timeout_seconds": 7200,
+  "question": "Can accepted first-card, boss and conditional-card complete routes supply a deduplicated observed control transition graph without assigning future interventions as immediate earlier rewards?",
+  "representation": "Every actual noncombat state, full legal menu, exact frozen parent choice and observed action-to-next-noncombat-state edge; recorded battles are inside edges. Final edge has done=true and Heart0/1 reward, earlier edges reward0, gamma1. Natural start included. Dedup within family using full state/RNG fingerprint; identical edge appears once with occurrence count as provenance, not weight. Fingerprints, seed, raw source/terminal/forced metadata never become neural input.",
+  "admission": "Original1536 fit roles only. Reuse accepted E143 sparse public encodings. Rehash all29759 raw route references and validate runtime/forced state/action/terminal. Restore every boss/card route with recorded actions; encode new states, recheck frozen parent and complete terminal/state/RNG. Multiple different successors for one full state/action stop extraction for inspection. No invented transitions or incompatible-prefix splicing.",
+  "preparation": "Five software checks; outcome-independent SHA selection of two reached-boss and one early-failure family passes native extraction. Preflight outputs and hashes retained separately.",
+  "next": "E154 separate frozen offline-control versus unweighted cloning comparison; no optimizer or policy adoption in E153. Root reviews all graph edge/source bindings and role isolation before learning admission.",
+  "limits": "Historical fit/development sources, not unseen acceptance. Same IroncladA20Heart engine, parent, MCTS8000 bossx3 replans256 and PrismaticShard exclusion. No simulator-original parity work.",
+  "private_protocol_sha256": "030e03451bc8c78113ce0913ea6ccb759214c8e41af4dad31bceb2fa03a3fb49",
+  "registration_sha256": "cb0ca0647c6b42d87b3030c0a2b9df1da02021a3854bd7da629876e36349ab30"
+}

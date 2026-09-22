@@ -1,0 +1,28 @@
+{
+  "status": "prepared_not_launched",
+  "at": "2026-09-22T06:19:09.957639+00:00",
+  "tests": {
+    "data": 5,
+    "learning": 6,
+    "evaluation": 3
+  },
+  "native_routes": 4,
+  "zero_actor_outside_choices": 537,
+  "nonzero_numpy_choices": 537,
+  "nonzero_choices_changed": 44,
+  "integration": {
+    "states": 3110,
+    "edges": 3150,
+    "features_checked": 3150,
+    "categorical_identities_checked": 14534,
+    "fixture_optimizer_steps": 300,
+    "seconds": 9.74958974996116
+  },
+  "negative_controls": "Unreviewed graph rejects learning entry. Corrupted state/RNG, action, terminal and combat-first divergence reject natural-route validation. Initial uniform-BC toy had an arbitrary tie; corrected known2:1 behavior bias. Initial std5 actor perturbation changed no choices; std100 inference fixture exercised44 changes. Both failed fixture logs preserved.",
+  "prepared_code_sha256": "c83d8710937a88dd9a31e611b2f403cbc520dfe27cfac4984b5281ecfa7a7e6a",
+  "protocol_sha256": "d9dae2fe8041a8db3be819aa5d76a496f2c11c8aad4c19211f4f9f1815a62ba6",
+  "formal_optimizer_steps": 0,
+  "new_training_rollouts": 0,
+  "natural_evaluation_games": 0,
+  "production_adoption": false
+}

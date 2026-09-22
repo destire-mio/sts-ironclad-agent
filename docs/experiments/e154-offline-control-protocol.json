@@ -1,0 +1,72 @@
+{
+  "experiment": "E154",
+  "at": "2026-09-22T06:03:54.361983+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e153-existing-control-data-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "source_registration_sha256": "cb0ca0647c6b42d87b3030c0a2b9df1da02021a3854bd7da629876e36349ab30",
+  "recipe": {
+    "critic_steps": 20000,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "expectile": 0.7,
+    "target_rate": 0.005,
+    "advantage_scale": 10.0,
+    "maximum_weight": 100.0,
+    "discount": 1.0,
+    "parent_bonus": 3.0,
+    "validation_draws": 8192,
+    "actor_steps": 2000,
+    "seed": 2026092254
+  },
+  "actor_checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "arms": [
+    "cloning",
+    "iql"
+  ],
+  "new_training_rollouts": 0,
+  "training_timeout_seconds": 14400,
+  "evaluation_timeout_seconds": 25200,
+  "question": "Does bootstrapping improved subsequent observed choices and fitting an advantage-weighted actor improve whole-run decisions beyond cloning the same historical routes?",
+  "references": {
+    "paper": "https://arxiv.org/abs/2110.06169",
+    "official_implementation": "https://github.com/ikostrikov/implicit_q_learning/tree/09d700248117881a75cb21f0adb95c6c8a694cb2",
+    "adaptation": "Independent PyTorch discrete-menu implementation, not upstream benchmark reproduction."
+  },
+  "distinction": "E144 lambda backups evaluate the recorded parent next action and deploy greedy Q over all supported legal actions. E128 optimizes two choices jointly with other future choices fixed. E154 uses all observed consecutive noncombat transitions, an upper-expectile V, Q backups through V, and a categorical actor fitted on recorded moves. Deployment never maximizes a critic over unlabelled menu actions.",
+  "critic": "Two independent5339-to128-to64-to1 SiLU critics and one state/menu value network with candidate columns zero. All use sigmoid Heart-probability output initialized.1. V minimizes tau=.7 asymmetric squared error against min delayed Q1/Q2 at the recorded action. Q fits reward+(not done)*new V(next state), gamma1. Two optimizers per update, delayed Q weight EMA.005. Fixed20000 critic updates per excluding-family fold; no critic duration/parameter grid or actor feedback into fitting.",
+  "actor": "Same691841-parameter public-input128/64 SiLU residual for both arms. Zero head and fixed+3 bonus on the exact frozen parent recommendation preserve initial deployed choices including its heuristic and first-boss wrapper. Cloning uses weight1; IQL uses min(100,exp(10*(min delayed Q-V))). Both minimize full-menu categorical negative log likelihood of actual recorded actions. No winning-route filtering, floor/HP reward, off-dataset critic maximization, or hand-written item values.",
+  "sampling": "Uniform fit family; uniform available stratum (multiple recorded actions, remaining terminal states, remaining ordinary states); uniform state in stratum; uniform recorded outgoing action. Identical uniform draws for actor arms. Deduplicated graph edges are sampled once; raw occurrence counts are provenance only. Singleton menus remain for credit propagation.",
+  "roles": "Original1536 fit families, original E73 SHA256 modulo3 outer folds. Complete descendants follow family. Each critic sees outer-fitting families only. Each actor uses the E151-inner SHA rule to separate about20% of these families for stopping. Critic remains frozen and includes those inner actor-validation families; this is actor validation, not a separately held critic test. Outer family is excluded from both.",
+  "stopping": "For each actor arm, deterministic8192 draws from inner actor-validation families produce its fixed validation set. Minimize the same weighted negative log likelihood at0,25,50,100,250,500,1000,2000, ties earliest. Save all checkpoints. Reinitialize actor and refit all outer-fitting families for the chosen duration using the same frozen critic. Outer natural results never choose training length.",
+  "support": "Only categorical action identities recorded as chosen in outer-fit families may replace the frozen parent; the parent is always allowed. Training and deployment apply the same full-menu mask. No seed/RNG/state fingerprint/raw source/terminal metadata in model features.",
+  "whole_run_screen": {
+    "families": 128,
+    "selection": "Same fixed E144-full-run hash-selected original fit pilot, each using its excluding-fold model; historical development evidence, not final unseen acceptance.",
+    "arms_complete": true,
+    "minimum_net_gain": 8,
+    "paired_descriptive_p_less_than": 0.025,
+    "zero_faults": true,
+    "verification": "Full natural A20 Heart games, every terminal/state/RNG and neural choice audited; all winners rerun with fresh NN/MCTS. Both arms retain all128 assigned families. Evaluation trajectories are not training input."
+  },
+  "iql_specific_comparison": "Report paired IQL-minus-cloning. Claim an IQL-specific gain only with net>=4/128 and p<.05. Separately, either arm can qualify against parent under the two-arm gate. Neither gate proves50%.",
+  "continuation": "Only a qualified arm may proceed to separately registered all1536-fit learning and the reserved512 natural-development families; require net>=20/512,p<.05 and complete fault/state/RNG checks. Select among qualified arms by net gain, fewer parent wins lost, then cloning. No automatic adoption or fresh acceptance. Final goal one frozen policy>=512/1024 untouched families.",
+  "resource_limits": "Eight single-thread natural evaluation workers. MCTS8000, bossx3, native max replans256;300s episode and360s process guard unchanged. Four-hour training and seven-hour evaluation ceilings are guards, not duration estimates.",
+  "limits": "No new training sampling. Prismatic Shard and simulator-original parity excluded. Prior E128/E144/E148-E152 failures remain recorded; this is a changed control objective and deployed actor, not another fixed-parent terminal-ranking grid.",
+  "preparation_status": "prepared_pending_E153_root_admission",
+  "private_protocol_sha256": "d9dae2fe8041a8db3be819aa5d76a496f2c11c8aad4c19211f4f9f1815a62ba6"
+}
