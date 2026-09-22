@@ -1,0 +1,92 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E182",
+  "result": {
+    "status": "complete",
+    "experiment": "E182",
+    "fit_families": 4608,
+    "held_families": 1024,
+    "arms": [
+      {
+        "arm": "frozen",
+        "selected_steps": 500,
+        "inner_updates": 1000,
+        "final_updates": 500,
+        "inner_validation_families": 939,
+        "baseline_validation_wins": 92,
+        "trainable_parameters": 477,
+        "continuation_unchanged": true
+      },
+      {
+        "arm": "trainable",
+        "selected_steps": 100,
+        "inner_updates": 1000,
+        "final_updates": 100,
+        "inner_validation_families": 939,
+        "baseline_validation_wins": 92,
+        "trainable_parameters": 1062237,
+        "continuation_unchanged": true
+      }
+    ],
+    "frozen_vs_parent": {
+      "assigned": 1024,
+      "baseline_wins": 87,
+      "candidate_wins": 93,
+      "net_gain": 6,
+      "paired": {
+        "both_win": 66,
+        "both_fail": 910,
+        "candidate_only": 27,
+        "baseline_only": 21
+      },
+      "exact_p": 0.4708790136217118
+    },
+    "trainable_vs_parent": {
+      "assigned": 1024,
+      "baseline_wins": 87,
+      "candidate_wins": 92,
+      "net_gain": 5,
+      "paired": {
+        "both_win": 65,
+        "both_fail": 910,
+        "candidate_only": 27,
+        "baseline_only": 22
+      },
+      "exact_p": 0.5681724128491652
+    },
+    "trainable_vs_frozen": {
+      "assigned": 1024,
+      "baseline_wins": 93,
+      "candidate_wins": 92,
+      "net_gain": -1,
+      "paired": {
+        "both_win": 89,
+        "both_fail": 928,
+        "baseline_only": 4,
+        "candidate_only": 3
+      },
+      "exact_p": 1.0
+    },
+    "learning_gate_passed": false,
+    "optimizer_updates": 2600,
+    "new_games": 0,
+    "policy_adoption": false,
+    "unseen_acceptance_games": 0,
+    "limits": [
+      "Historical held families have been inspected in previous experiments and are not final unseen acceptance.",
+      "Complete old branches cover only two interventions and the unchanged continuation, not a general learned whole-run controller.",
+      "No tuning the recipe or stopping rules after seeing this comparison. Failure closes this full-corpus encoder-copy recipe.",
+      "Passing requires root result review, actual deployment contract and a separately registered development evaluation."
+    ]
+  },
+  "independent_checkpoint_and_dataset_checks": 14,
+  "maximum_numpy_score_error": 1.7763568394002505e-14,
+  "family_roles_and_stopping_verified": true,
+  "original_continuation_unchanged": true,
+  "source_and_exit_proofs_verified": true,
+  "new_games": 0,
+  "policy_adoption": false,
+  "learning_completion_sha256": "19780aa04e0c733a17472d0868a91474984c1d3ce2044440f5b58a399cb06d1e",
+  "registration_sha256": "12e3b483144a9887df67561d191f8543463f85796ff5adb251d59e842c21a01a",
+  "reviewer_sha256": "b11a8a2e1b428505f78d90f9b43b329f327914ffd1278fe619fa111347da9edd"
+}
