@@ -21,7 +21,7 @@ def supports(trees, states):
     return relics, cards
 
 
-def _states(rows, support, stage):
+def _states(rows, support, stage, include_features=True):
     positions = {option: index for index, option in enumerate(support)}
     if len(positions) != len(support):
         raise ValueError('duplicate fit support')
@@ -44,12 +44,15 @@ def _states(rows, support, stage):
                 raise ValueError('descriptor and option identity differ')
             lookup[index, column] = positions.get(option, 0)
             if stage == 'card': extras[index, column] = torch.tensor(J.card_extras(descriptor))
-    features = J.M.public_features(torch.tensor([R.dense(row['observation'], A.OBS_DIM) for row in rows]))
+    # Readout encoders consume their own per-candidate features. They do not
+    # need the dense state-only matrix used by the original contextual heads.
+    features = (J.M.public_features(torch.tensor([R.dense(row['observation'], A.OBS_DIM) for row in rows]))
+                if include_features else None)
     return {'features': features, 'positions': lookup, 'mask': masks, 'extras': extras,
             'baseline': torch.tensor(baseline), 'allowed': torch.tensor(allowed), 'rows': rows}
 
 
-def pack(trees, states, labels, references, relic_support, card_support):
+def pack(trees, states, labels, references, relic_support, card_support, include_features=True):
     """Require complete action trees before deriving any training tensors."""
     if len({tree['seed'] for tree in trees}) != len(trees):
         raise ValueError('duplicate tree family')
@@ -67,8 +70,8 @@ def pack(trees, states, labels, references, relic_support, card_support):
     if not card_ids:
         raise ValueError('no scoped card opportunities')
     card_index = {identity: index for index, identity in enumerate(card_ids)}
-    relic = _states([tree['boss_root'] for tree in trees], relic_support, 'relic')
-    card = _states([states[identity] for identity in card_ids], card_support, 'card')
+    relic = _states([tree['boss_root'] for tree in trees], relic_support, 'relic', include_features)
+    card = _states([states[identity] for identity in card_ids], card_support, 'card', include_features)
     targets = torch.zeros(card['mask'].shape)
     for identity, index in card_index.items():
         state = states[identity]

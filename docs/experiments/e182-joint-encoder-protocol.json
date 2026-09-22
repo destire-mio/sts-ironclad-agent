@@ -1,0 +1,53 @@
+{
+  "experiment": "E182",
+  "status": "registered_before_training",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "arms": [
+    "frozen",
+    "trainable"
+  ],
+  "recipe": {
+    "steps": 1000,
+    "checkpoints": [
+      0,
+      100,
+      250,
+      500,
+      1000
+    ],
+    "head_learning_rate": 0.03,
+    "encoder_learning_rate": 3e-05,
+    "l2": 0.001,
+    "gradient_norm": 1.0,
+    "dtype": "float64",
+    "inner_namespace": "E182-joint-inner:",
+    "inner_modulus": 5
+  },
+  "fit_families": 4608,
+  "historical_label_holdout_families": 1024,
+  "scope": [
+    "first_act_boss_relic",
+    "last_card_offer_act2_row0"
+  ],
+  "objective": "Exact expected Heart terminal return across complete two-decision trees and all assigned families",
+  "representation": "Original public per-candidate transform, 5529 input columns, dedicated copied Linear(5529,192) and ReLU shared by both heads",
+  "learning": "Zero-initialized centered readouts and static option scores with parent margin 1; only trainable arm optimizes copied encoder; parent module never trains",
+  "regularization": "L2 .001 on head parameters and encoder delta from initialization; fit-only initial feature RMS scale clamped to .01",
+  "stopping": "Hash family split mod5; maximize inner validation deterministic wins; tie fewer changed families then earlier step; fall back to 0 if no improvement over parent; refit selected steps on 4608",
+  "holdout_gate": {
+    "minimum_net_gain_vs_parent": 20,
+    "minimum_net_gain_vs_frozen": 20,
+    "paired_exact_p_maximum": 0.05
+  },
+  "restrictions": "Both final candidates precede holdout scoring. No held-family labels affect fitting, support, normalization or stopping. No candidate adoption or further games from this runner.",
+  "timeout_seconds": 14400,
+  "new_games": 0,
+  "maximum_formal_optimizer_updates": 4000,
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "limits": [
+    "Historical held families have been inspected in previous experiments and are not final unseen acceptance.",
+    "Complete old branches cover only two interventions and the unchanged continuation, not a general learned whole-run controller.",
+    "No tuning the recipe or stopping rules after seeing this comparison. Failure closes this full-corpus encoder-copy recipe.",
+    "Passing requires root result review, actual deployment contract and a separately registered development evaluation."
+  ]
+}

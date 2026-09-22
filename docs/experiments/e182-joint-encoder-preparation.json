@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "experiment": "E182",
+  "data": {
+    "status": "complete",
+    "experiment": "E182",
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01",
+    "roles": {
+      "fit": 4608,
+      "label_holdout": 1024
+    },
+    "trees": {
+      "fit": 3602,
+      "label_holdout": 786
+    },
+    "card_menus": {
+      "fit": 14380,
+      "label_holdout": 3127
+    },
+    "terminal_leaves": 69599,
+    "identity": {
+      "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+    },
+    "complete_source_roles_preserved": true,
+    "early_failures_retained": true,
+    "completed_source_verified": true,
+    "raw_label_hashes_verified": true,
+    "new_games": 0,
+    "preparation_sha256": "4c1e621f61f1a591c412ce5cbdd52ae2c31303c487f8fee873c92a1cc12c0748"
+  },
+  "native_preflight": {
+    "status": "passed",
+    "experiment": "E182",
+    "native_full_recorded_runs": 4,
+    "native_scoped_roots": {
+      "relic": 4,
+      "card": 8
+    },
+    "recorded_steps": 1712,
+    "native_outside_choices": 647,
+    "outside_scope_parent_controls": 639,
+    "nonzero_probe_changed_choices": 28,
+    "independent_full_tree_scoring_checks": 3,
+    "maximum_numpy_error": 8.43769498715119e-15,
+    "fit_families": 4608,
+    "assigned_denominator_retained": true,
+    "scoring_state_rng_unchanged": true,
+    "original_continuation_unchanged": true,
+    "new_games": 0,
+    "optimizer_updates": 0,
+    "registration_sha256": "12e3b483144a9887df67561d191f8543463f85796ff5adb251d59e842c21a01a",
+    "preflight_sha256": "5b5d3eb8240f87ae8d6a5fedae746a6f7b50cef4288aec73902ad5f423e6afc9"
+  },
+  "benchmark": {
+    "status": "complete",
+    "feature_seconds": 33.373558999970555,
+    "features": {
+      "relic": {
+        "shape": [
+          14408,
+          5529
+        ],
+        "nnz": 666590
+      },
+      "card": {
+        "shape": [
+          57190,
+          5529
+        ],
+        "nnz": 2809934
+      }
+    },
+    "elapsed_seconds": 3.2706950419815257,
+    "discarded_updates": 3,
+    "assigned_families": 4608,
+    "new_games": 0,
+    "encoder_changed": true
+  },
+  "unit_checks": 9,
+  "joint_tree_regression_checks": 6,
+  "discarded_unit_fixture_updates": 400,
+  "discarded_benchmark_updates": 3,
+  "tests_sha256": {
+    "test_heart_joint_encoder.py": "413d3e3747c7e43ec946ce9ec6b5ca92777ec27a8d390334775943a53037ad8c",
+    "test_heart_relic_card_training.py": "0252302215387911fa2cf36fdb5df6a57a2ff11830e228934acf5c09d82c173b"
+  },
+  "registration_sha256": "12e3b483144a9887df67561d191f8543463f85796ff5adb251d59e842c21a01a",
+  "data_completion_sha256": "f0884252477d439bd23caaf436a9e60a88925acbf4aa39683b3a4caef28be5e6"
+}

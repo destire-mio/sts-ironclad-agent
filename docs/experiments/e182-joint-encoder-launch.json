@@ -1,0 +1,23 @@
+{
+  "launch": {
+    "status": "launched",
+    "pid": 29444,
+    "at": "2026-09-22T23:29:50.237636+00:00",
+    "registration_sha256": "12e3b483144a9887df67561d191f8543463f85796ff5adb251d59e842c21a01a"
+  },
+  "owned_process": {
+    "started_at": "2026-09-22T23:29:50.698408+00:00",
+    "wrapper_pid": 29444,
+    "pid": 29447,
+    "process_group": 29447,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e182-joint-encoder-20260923-01/program/heart_joint_encoder.py",
+      "--study",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e182-joint-encoder-20260923-01"
+    ],
+    "registration_sha256": "12e3b483144a9887df67561d191f8543463f85796ff5adb251d59e842c21a01a",
+    "wrapper_seconds": 14520
+  }
+}
