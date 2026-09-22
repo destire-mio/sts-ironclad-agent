@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "inventory": {
+    "status": "complete",
+    "eligible_selected": 32,
+    "scanned": 254,
+    "total_existing_families": 1536,
+    "unscanned": 1282,
+    "eligibility_counts": {
+      "no_act4_campfire": 198,
+      "eligible": 32,
+      "campfire_pair_ineligible": 24
+    },
+    "new_games": 0,
+    "selection": "First32 eligible old families in prespecified hash order; terminal outcome is not an eligibility criterion.",
+    "hashes": {
+      "states-private.json": "0d9af2a95a5482566c84d522487793b72c0640ddaf7276f1d7fb7e88772e3f99",
+      "inventory-private.json": "598856a9272b1cbec7ecc7db1a80cfe0ee6232a487a330f1a37c4be0210fefab"
+    }
+  },
+  "preflight": {
+    "status": "passed",
+    "native_roots_verified": 32,
+    "source_parent_choices_verified": 6592,
+    "hash_order_and_scanned_inventory_verified": true,
+    "corrupt_root_rejected_before_rollout": true,
+    "new_games": 0,
+    "optimizer_updates": 0,
+    "runner_sha256": "97e8d26722165bf74d23c7212b9b84f7cd192431a6bfba283e820423f0b0fd54",
+    "reviewer_sha256": "cf0cbb546df6676c9e244a13c5614994725306d387d15939715be4edd17f5d59"
+  },
+  "focused_tests": 2,
+  "registration_sha256": "8c1a43332b865ebb4caf7c9aee4565ee38409c92981e00de09140136adedfe6a",
+  "controller_sha256": "7b2983799d6d1d4c42218e361683ad8242a2cffc28b08463c4d914b36a1f1fcb"
+}

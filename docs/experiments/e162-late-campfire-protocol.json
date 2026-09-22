@@ -1,0 +1,17 @@
+{
+  "experiment": "E162",
+  "families": 32,
+  "branches": 64,
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "learning_evidence": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e160-expected-improvement-20260922-01",
+  "collection_timeout_seconds": 3600,
+  "question": "Do existing late reachable states provide an actionable paired signal for rest versus smith, absent from previous training comparisons?",
+  "evidence": "E160 proper expected-difference classification fails its fit/held learning gate; E161 late checkpoints fit more improvements but lose on inner validation. All7448 existing branch states occur at floors1,17,18, with zero later campfire comparisons.",
+  "selection": "Sort the1536 old natural fit families by SHA256(E162-act4-campfire:seed), restore saved actions until the first Act4 REST_ROOM with legal rest(idx1=0) and smith(idx1=1) and frozen parent choosing one of them. Stop after32 eligible families. Do not select by win/death, HP, deck, expected label or available rescue. Record every scanned exclusion and unscanned count.",
+  "continuation": "Force one rest/smith action, then use the unchanged neural parent for smith card targets, shop, map, potions and all other decisions. Freeze Ironclad A20 Heart, all keys, MCTS8000/Bossx3/max replans256 and original runtime identity. Replay prefix; replan suffix. Parent controls must match full source action path and terminal state/RNG before alternatives run.",
+  "verification": "All64 completed branches require legal input/action alignment, whole-prefix terminal/state/RNG replay, every nonintervention parent action checked and zero faults. Every winning suffix gets a second fresh NN/MCTS continuation. Use one owned process group with bounded deadline and verified cleanup.",
+  "budget": "Exactly64 training continuations plus one repeat for each winning branch, maximum128 suffix runs. No new seed family, natural-start collection, optimizer update or automatic expansion. Execution faults stop admission and remain artifacts.",
+  "next": "After source review, test a scoped late-decision learner on these families with excluding-family evaluation; do not expand based on hindsight rescued branches. Any future natural or unseen test requires a frozen trained candidate and its stated gate.",
+  "limits": "This is a conditional Act4 curriculum pilot, not a natural-population or policy win rate. It cannot on its own deliver50% by changing the early survival rate. Original-game parity and Prismatic Shard remain outside this task."
+}
