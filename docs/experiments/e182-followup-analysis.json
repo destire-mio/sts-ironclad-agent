@@ -1,0 +1,122 @@
+{
+  "status": "complete",
+  "experiment": "E182",
+  "scopes": {
+    "fit": {
+      "assigned": 4608,
+      "parent": 487,
+      "joint_oracle": 1021,
+      "relic_only_oracle": 674,
+      "card_only_oracle": 795,
+      "reached_all_lose": 2581,
+      "no_boss_root": 1006
+    },
+    "label_holdout": {
+      "assigned": 1024,
+      "parent": 87,
+      "joint_oracle": 217,
+      "relic_only_oracle": 135,
+      "card_only_oracle": 150,
+      "reached_all_lose": 569,
+      "no_boss_root": 238
+    }
+  },
+  "fit_outcomes": {
+    "frozen": {
+      "wins": 569,
+      "changed": 2275
+    },
+    "trainable": {
+      "wins": 598,
+      "changed": 2342
+    }
+  },
+  "inner_curves": {
+    "frozen": [
+      {
+        "step": 0,
+        "validation_wins": 92,
+        "validation_changes": 0,
+        "fit_expected_return": 0.07142737918485612,
+        "fit_loss": -0.07142737918485612
+      },
+      {
+        "step": 100,
+        "validation_wins": 103,
+        "validation_changes": 450,
+        "fit_expected_return": 0.11387647777745061,
+        "fit_loss": -0.10788359500032328
+      },
+      {
+        "step": 250,
+        "validation_wins": 102,
+        "validation_changes": 434,
+        "fit_expected_return": 0.11422411155758327,
+        "fit_loss": -0.10791497377283088
+      },
+      {
+        "step": 500,
+        "validation_wins": 104,
+        "validation_changes": 445,
+        "fit_expected_return": 0.11428575372834417,
+        "fit_loss": -0.10798312263023835
+      },
+      {
+        "step": 1000,
+        "validation_wins": 102,
+        "validation_changes": 454,
+        "fit_expected_return": 0.1142843916149932,
+        "fit_loss": -0.1079784107126076
+      }
+    ],
+    "trainable": [
+      {
+        "step": 0,
+        "validation_wins": 92,
+        "validation_changes": 0,
+        "fit_expected_return": 0.07142737918485612,
+        "fit_loss": -0.07142737918485612
+      },
+      {
+        "step": 100,
+        "validation_wins": 102,
+        "validation_changes": 411,
+        "fit_expected_return": 0.12163474069430685,
+        "fit_loss": -0.11455462831846301
+      },
+      {
+        "step": 250,
+        "validation_wins": 98,
+        "validation_changes": 428,
+        "fit_expected_return": 0.137569950789173,
+        "fit_loss": -0.12721847966765304
+      },
+      {
+        "step": 500,
+        "validation_wins": 98,
+        "validation_changes": 424,
+        "fit_expected_return": 0.1474126646521578,
+        "fit_loss": -0.1360041485504146
+      },
+      {
+        "step": 1000,
+        "validation_wins": 88,
+        "validation_changes": 454,
+        "fit_expected_return": 0.1590711837792602,
+        "fit_loss": -0.1458049354178491
+      }
+    ]
+  },
+  "result_review_sha256": "50c21043113309a683aea52f2cec1577e40a6d2388bf443d634afd8ebb38dab9",
+  "data_completion_sha256": "f0884252477d439bd23caaf436a9e60a88925acbf4aa39683b3a4caef28be5e6",
+  "interpretation": [
+    "The trainable encoder improves fitted terminal return while later inner checkpoints lose validation wins.",
+    "This recipe has no adoption evidence; do not increase its training budget or sweep its regularization.",
+    "217/1024 reproduces the historical E128 measured-tree ceiling, not a new discovery or a whole-policy/population bound.",
+    "The 50-percent goal requires a broader decision scope. Existing full-run offline and older late-suffix policy-gradient failures remain exclusions, not proof all such learning is impossible."
+  ],
+  "new_games": 0,
+  "new_optimizer_updates": 0,
+  "policy_adoption": false,
+  "runner_sha256": "a8879c7a8e989e2b6195d0421ff4b0dfac02944b085b41952fa576f49450d7bf"
+}
