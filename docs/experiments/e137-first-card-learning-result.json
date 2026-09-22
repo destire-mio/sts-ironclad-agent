@@ -1,0 +1,34 @@
+{
+  "experiment": "E137",
+  "status": "complete_not_adopted",
+  "families": 1536,
+  "out_of_fold": {
+    "assigned": 1536,
+    "baseline_wins": 149,
+    "candidate_wins": 155,
+    "net_gain": 6,
+    "paired": {
+      "both_fail": 1358,
+      "both_win": 126,
+      "candidate_only": 29,
+      "baseline_only": 23
+    },
+    "exact_p": 0.48845566937989204
+  },
+  "cv_gate_passed": false,
+  "optimizer_updates": 3000,
+  "native_choice_checks": 1536,
+  "zero_faults": true,
+  "all_proof_hashes_verified": true,
+  "all_stage_exits_and_log_hashes_verified": true,
+  "independent_selected_terminal_and_pair_counts_verified": true,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "completion_sha256": "99842203fb43eb1950e5a906d740152a3e36d4b5eb260369c76c1bc0892e3708",
+  "controller_exit_sha256": "c59e36962ecb06dce5196bd1c4088061c9b54a336ff9e7b74694792775b90336",
+  "source_completion_sha256": "55784c6507ec43d934402d96afaf4dd04b59a93ff860982bd77fbc1b4e025ff5",
+  "limits": "Same historical fit families reused for development. Family-fold paired p is descriptive. No full model or unseen acceptance."
+}

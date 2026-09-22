@@ -127,7 +127,7 @@ def _mask(scores, data):
 
 
 def logits(policy, data):
-    if policy.model_type in ('joint_frozen_readout', 'explicit_joint_readout'):
+    if policy.model_type in ('joint_frozen_readout', 'explicit_joint_readout', 'boss_conditioned_joint_readout'):
         return policy.training_logits(data)
     relic, card = data['relic'], data['card']
     rs = policy.relic(relic['features']).gather(1, relic['positions'])

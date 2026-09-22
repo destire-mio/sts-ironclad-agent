@@ -1,0 +1,42 @@
+{
+  "experiment": "E139",
+  "at": "2026-09-22T01:52:25.126455+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "question": "Does adding the verified missing boss identity interaction improve cross-family choices on the same completed E128 fit data?",
+  "control_study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e135-static-context-20260922-01",
+  "control_checkpoint": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale/small/candidate.pt",
+  "fit_families": 1536,
+  "fold_rule": "Existing E73-family-fold SHA256 modulo3",
+  "training": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "l2": 0.001,
+    "gradient_norm": 1.0
+  },
+  "new_sampling_games": 0,
+  "external_holdout_evaluations": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 3000,
+  "model": "Preserve all192 E134 features and append12 existing candidate properties crossed with all fit-supported boss-relic presence bits. Boss-relic head padding is zero; no extra costs, feature classes or value rules added.",
+  "parameter_note": "With22 boss IDs, each head has456 slots and total1000 trainable parameters versus472.264 relic-head slots remain always zero; the effective added card parameters are264. Not an equal-capacity comparison.",
+  "control": "Reuse frozen E135 contextual fold checkpoints and reproduce every original fold validation choice. Same folds, fit-only support/RMS, exact terminal objective, margin1 and whole unknown-offer fallback.",
+  "gate": {
+    "comparisons": [
+      "candidate_vs_parent",
+      "candidate_vs_control"
+    ],
+    "minimum_net_gain": 30,
+    "paired_descriptive_p_less_than": 0.05
+  },
+  "decision": "One fixed repair, no grid. Report all fold results and native choices. No full fit, external evaluation, sampling expansion or adoption automatic.",
+  "resources": {
+    "torch_threads": 1,
+    "native_workers": 2,
+    "training_seconds": 3600,
+    "verification_seconds": 7200
+  },
+  "limits": "Existing historical fit data and shared folds give development evidence; no fresh acceptance. Input responsiveness is not policy gain. Existing coarse card properties still omit full card semantics and energy cost."
+}

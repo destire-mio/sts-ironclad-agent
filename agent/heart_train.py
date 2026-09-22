@@ -87,6 +87,9 @@ def worker(job, config):
 
 
 def load_scorer(checkpoint):
+    if checkpoint.get("model_type") == "boss_conditioned_joint_readout":
+        from heart_boss_conditioned_readout import BossConditionedPolicy
+        return BossConditionedPolicy(checkpoint).eval()
     if checkpoint.get("model_type") == "explicit_joint_readout":
         from heart_explicit_readout import ExplicitReadoutPolicy
         return ExplicitReadoutPolicy(checkpoint).eval()

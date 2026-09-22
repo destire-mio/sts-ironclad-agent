@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "reviewed_at": "2026-09-22T01:58:23.444683+00:00",
+  "all_proof_hashes_verified": true,
+  "all_stage_exits_and_cleanup_verified": true,
+  "all10240_leaf_hashes_and_audited_terminal_targets_match": true,
+  "exact_original_roles_verified": true,
+  "E133_remains_closed": true,
+  "new_sampling_games": 0,
+  "optimizer_updates": 0,
+  "completion_sha256": "55784c6507ec43d934402d96afaf4dd04b59a93ff860982bd77fbc1b4e025ff5",
+  "experiment": "E136",
+  "families": 2560,
+  "fit_families": 1536,
+  "historical_holdout_families": 1024,
+  "new_terminal_replays": 10072,
+  "reused_terminal_replays": 168,
+  "outside_parent_choices_verified": 1300331,
+  "zero_faults": true,
+  "MCTS_searches": 0,
+  "limits": "Complete first-card layer only. E133 conditional-relic layer remains incomplete and closed."
+}
