@@ -1,0 +1,168 @@
+{
+  "status": "complete_not_adopted",
+  "experiment": "E154",
+  "at": "2026-09-22T07:36:27.883888+00:00",
+  "arms": {
+    "cloning": {
+      "counts": {
+        "assigned": 128,
+        "baseline_wins": 13,
+        "candidate_wins": 3,
+        "net_gain": -10,
+        "paired": {
+          "both_fail": 115,
+          "both_win": 3,
+          "baseline_only": 10
+        },
+        "exact_p": 0.001953125
+      },
+      "gate_passed": false
+    },
+    "iql": {
+      "counts": {
+        "assigned": 128,
+        "baseline_wins": 13,
+        "candidate_wins": 4,
+        "net_gain": -9,
+        "paired": {
+          "both_fail": 114,
+          "both_win": 3,
+          "candidate_only": 1,
+          "baseline_only": 10
+        },
+        "exact_p": 0.01171875
+      },
+      "gate_passed": false
+    }
+  },
+  "iql_against_cloning": {
+    "assigned": 128,
+    "baseline_wins": 3,
+    "candidate_wins": 4,
+    "net_gain": 1,
+    "paired": {
+      "both_fail": 124,
+      "both_win": 3,
+      "candidate_only": 1
+    },
+    "exact_p": 1.0
+  },
+  "specific_iql_benefit": false,
+  "qualified_for_full_fit": null,
+  "learning": {
+    "states": 2039965,
+    "edges": 2062276,
+    "independent_inner_checkpoints": 48,
+    "source_states_for_numpy_inference": 13224,
+    "selected_actor_steps": {
+      "cloning": [
+        2000,
+        2000,
+        2000
+      ],
+      "iql": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    "optimizer_steps": 144000
+  },
+  "natural_policy_evaluation_games": 256,
+  "winner_replans": 7,
+  "checked_outside_choices": 31754,
+  "zero_faults": true,
+  "new_training_rollouts": 0,
+  "reserved_development_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "completion_sha256": "9c7dbb43cad0fe258a6a53c03eef50e035ffb9d2135cfefd251a57104e77e25d",
+  "controller_exit_sha256": "2051c73c840ca748cb9d576137fdc21095c9f6826b63d080c52446d5b6d839ba",
+  "review_script_sha256": "10c2ef5a4275d7cc3541879fca169abc8ad858cda5bc43adc320ff57aa553691",
+  "limits": "Historical-family development screen; not final untouched-seed50% acceptance. All critics use recorded actions; inner stopping controls actor fitting, not independent critic generalization.",
+  "source_review_sha256": "56eff967a934c0c4a7885efb0b194015817db800ebbbf5ae4451f4afff47fc15",
+  "evaluation": {
+    "status": "complete",
+    "families": 128,
+    "arms": {
+      "cloning": {
+        "counts": {
+          "assigned": 128,
+          "baseline_wins": 13,
+          "candidate_wins": 3,
+          "net_gain": -10,
+          "paired": {
+            "both_fail": 115,
+            "baseline_only": 10,
+            "both_win": 3
+          },
+          "exact_p": 0.001953125
+        },
+        "gate_passed": false,
+        "terminal_statuses": {
+          "death": 124,
+          "heart_win": 3,
+          "act3_without_heart": 1
+        },
+        "changed_actions_by_kind": {
+          "16": 30,
+          "3": 43,
+          "17": 15,
+          "10": 9,
+          "18": 1
+        },
+        "outside_choices": 15858
+      },
+      "iql": {
+        "counts": {
+          "assigned": 128,
+          "baseline_wins": 13,
+          "candidate_wins": 4,
+          "net_gain": -9,
+          "paired": {
+            "both_fail": 114,
+            "baseline_only": 10,
+            "candidate_only": 1,
+            "both_win": 3
+          },
+          "exact_p": 0.01171875
+        },
+        "gate_passed": false,
+        "terminal_statuses": {
+          "death": 123,
+          "heart_win": 4,
+          "act3_without_heart": 1
+        },
+        "changed_actions_by_kind": {
+          "3": 46,
+          "16": 30,
+          "17": 15,
+          "10": 9,
+          "18": 1
+        },
+        "outside_choices": 15896
+      }
+    },
+    "iql_against_cloning": {
+      "assigned": 128,
+      "baseline_wins": 3,
+      "candidate_wins": 4,
+      "net_gain": 1,
+      "paired": {
+        "both_fail": 124,
+        "candidate_only": 1,
+        "both_win": 3
+      },
+      "exact_p": 1.0
+    },
+    "specific_iql_benefit": false,
+    "natural_policy_evaluation_games": 256,
+    "winner_replans": 7,
+    "zero_faults": true,
+    "new_training_rollouts": 0,
+    "full_fit_models": 0,
+    "reserved_development_games": 0,
+    "unseen_acceptance_games": 0,
+    "production_adoption": false
+  }
+}
