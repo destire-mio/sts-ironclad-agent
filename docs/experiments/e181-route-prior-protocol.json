@@ -1,0 +1,18 @@
+{
+  "experiment": "E181",
+  "families": 64,
+  "elite_bonus": 3.5,
+  "selection_namespace": "E181-whole-route:",
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "behavior_audit": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e180-parent-behavior-audit-20260923-01",
+  "learning_evidence": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e179-card-main-effects-20260923-01",
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "timeout_seconds": 7200,
+  "hypothesis": "E180 finds no exact-state alternative map outcomes in52385 natural map decisions, and no neural map override in2310 decisions across64 audited natural families. Test one coordinated whole-route intervention after completed E175/176/178/179 learning failures, instead of another card-label or loss scan. Absence of alternatives is a data gap, not proof of bad routing.",
+  "intervention": "For every currently visible future elite node, add3.5 to the original heuristic path score. This changes healthy (HP>80percent and deck>=14) elite value1.5 to5, otherwise-3.5 to0. Preserve every other room value,100-point green-key reachability bonus, recursive maximum over visible paths and legal-order ties. Replace the recommended map action receiving the existing3-point neural prior. Apply only if both original heuristic and complete parent choose MAP; choose among legal MAP actions. Recompute at each reached map state. The neural residual, card/relic/rest/event/shop decisions, Ironclad/A20 and frozen MCTS8000/Boss3/replan256 engine are retained.",
+  "selection": "First64 original fit families in fixed SHA256 namespace order, irrespective of source outcome; four first families also receive a fresh zero-bonus full-run control. No family skipped for early death.",
+  "diagnostic_gate": "At least8 candidate-only Heart wins and net at least6 across64 old families, zero execution faults, all terminal/state/RNG/independent choices verified and every candidate winner freshly replanned. This is a scoped development diagnostic, not adoption or untouched acceptance. Failure closes this fixed elite-bonus route recipe without a bonus/HP-threshold grid; a pass requires a separately reviewed next stage.",
+  "budget": "64 candidate natural games,4 unchanged-parent controls, one extra fresh replan for each candidate winner, at most132 games. Eight one-thread workers. No new family, gradient update, automatic sample expansion or future experiment launch.",
+  "limits": "Whole-route paired historical development test. Interventions change later reached states, so subsequent frozen policy choices can differ. Route bonus is a fixed experimental prior, not a trained neural improvement or evidence of original-game parity. Final frozen-policy512/1024 unused-family Heart acceptance remains pending."
+}

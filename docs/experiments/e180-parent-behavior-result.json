@@ -1,0 +1,450 @@
+{
+  "status": "complete",
+  "experiment": "E180",
+  "families": 1536,
+  "parent_wins": 149.0,
+  "parent_type": "first_boss_relic_ranker",
+  "base_type": "card_context_residual",
+  "prior_strength": 3.0,
+  "actions": {
+    "EVENT": {
+      "decisions": 11765,
+      "multiple_legal_actions": 11337,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 47931,
+      "recorded_actions": 11765
+    },
+    "CARD_SELECT": {
+      "decisions": 11194,
+      "multiple_legal_actions": 11174,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 217547,
+      "recorded_actions": 11194
+    },
+    "MAP": {
+      "decisions": 52385,
+      "multiple_legal_actions": 35768,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 107481,
+      "recorded_actions": 52385
+    },
+    "REWARD_GOLD": {
+      "decisions": 28598,
+      "multiple_legal_actions": 28598,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 164388,
+      "recorded_actions": 28598
+    },
+    "REWARD_CARD": {
+      "decisions": 22444,
+      "multiple_legal_actions": 22444,
+      "multiple_recorded_actions": 2568,
+      "legal_actions": 103474,
+      "recorded_actions": 30208
+    },
+    "REWARD_SKIP": {
+      "decisions": 31543,
+      "multiple_legal_actions": 17251,
+      "multiple_recorded_actions": 147,
+      "legal_actions": 61521,
+      "recorded_actions": 31985
+    },
+    "REWARD_POTION": {
+      "decisions": 12494,
+      "multiple_legal_actions": 12494,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 63236,
+      "recorded_actions": 12494
+    },
+    "REST": {
+      "decisions": 10318,
+      "multiple_legal_actions": 9945,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 33421,
+      "recorded_actions": 10318
+    },
+    "REWARD_RELIC": {
+      "decisions": 8445,
+      "multiple_legal_actions": 8445,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 37961,
+      "recorded_actions": 8445
+    },
+    "TREASURE_OPEN": {
+      "decisions": 3732,
+      "multiple_legal_actions": 3732,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 9342,
+      "recorded_actions": 3732
+    },
+    "REWARD_BLUE_KEY": {
+      "decisions": 1438,
+      "multiple_legal_actions": 1438,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 5088,
+      "recorded_actions": 1438
+    },
+    "REWARD_GREEN_KEY": {
+      "decisions": 1388,
+      "multiple_legal_actions": 1388,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 9046,
+      "recorded_actions": 1388
+    },
+    "BOSS_RELIC": {
+      "decisions": 1922,
+      "multiple_legal_actions": 1922,
+      "multiple_recorded_actions": 1184,
+      "legal_actions": 8613,
+      "recorded_actions": 5474
+    },
+    "SHOP_RELIC": {
+      "decisions": 1583,
+      "multiple_legal_actions": 1583,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 21651,
+      "recorded_actions": 1583
+    },
+    "SHOP_REMOVE": {
+      "decisions": 1204,
+      "multiple_legal_actions": 1204,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 13190,
+      "recorded_actions": 1204
+    },
+    "SHOP_CARD": {
+      "decisions": 3255,
+      "multiple_legal_actions": 3255,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 35000,
+      "recorded_actions": 3255
+    },
+    "SHOP_LEAVE": {
+      "decisions": 3419,
+      "multiple_legal_actions": 2152,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 7879,
+      "recorded_actions": 3419
+    },
+    "POTION_DRINK": {
+      "decisions": 417,
+      "multiple_legal_actions": 417,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 2293,
+      "recorded_actions": 417
+    },
+    "SHOP_POTION": {
+      "decisions": 264,
+      "multiple_legal_actions": 264,
+      "multiple_recorded_actions": 0,
+      "legal_actions": 1851,
+      "recorded_actions": 264
+    },
+    "REWARD_SINGING_BOWL": {
+      "decisions": 368,
+      "multiple_legal_actions": 368,
+      "multiple_recorded_actions": 5,
+      "legal_actions": 2021,
+      "recorded_actions": 388
+    }
+  },
+  "mapped_routes_by_act": {
+    "1": {
+      "chosen_MONSTER": 9039,
+      "chosen_REST": 3909,
+      "elite_or_other": 2243,
+      "elite_chosen_when_other": 1012,
+      "chosen_ELITE": 2560,
+      "chosen_TREASURE": 1434,
+      "chosen_EVENT": 3966,
+      "chosen_BOSS": 1298,
+      "healthy_elite_or_other": 1059,
+      "healthy_elite_chosen": 617,
+      "chosen_SHOP": 851
+    },
+    "2": {
+      "chosen_MONSTER": 5143,
+      "chosen_EVENT": 4197,
+      "chosen_REST": 3749,
+      "elite_or_other": 1824,
+      "elite_chosen_when_other": 488,
+      "chosen_SHOP": 987,
+      "chosen_TREASURE": 1053,
+      "chosen_BOSS": 1002,
+      "chosen_ELITE": 1269,
+      "healthy_elite_or_other": 793,
+      "healthy_elite_chosen": 434
+    },
+    "3": {
+      "chosen_MONSTER": 2965,
+      "chosen_SHOP": 558,
+      "chosen_EVENT": 2514,
+      "chosen_REST": 2301,
+      "elite_or_other": 1067,
+      "elite_chosen_when_other": 446,
+      "healthy_elite_or_other": 759,
+      "healthy_elite_chosen": 419,
+      "chosen_ELITE": 976,
+      "chosen_TREASURE": 635,
+      "chosen_BOSS": 598
+    },
+    "4": {
+      "chosen_REST": 359,
+      "chosen_SHOP": 359,
+      "chosen_ELITE": 359,
+      "chosen_BOSS": 304
+    }
+  },
+  "campfires_by_act": {
+    "1": {
+      "chosen_1": 2700,
+      "chosen_0": 1198,
+      "chosen_3": 11
+    },
+    "2": {
+      "chosen_0": 1004,
+      "rest_at_least_80pct_hp": 143,
+      "chosen_1": 2675,
+      "chosen_4": 11,
+      "chosen_3": 59
+    },
+    "3": {
+      "chosen_2": 670,
+      "chosen_1": 1027,
+      "chosen_0": 503,
+      "rest_at_least_80pct_hp": 161,
+      "chosen_4": 12,
+      "chosen_6": 39,
+      "chosen_3": 43,
+      "chosen_5": 7
+    },
+    "4": {
+      "chosen_1": 284,
+      "chosen_0": 57,
+      "rest_at_least_80pct_hp": 46,
+      "chosen_5": 2,
+      "chosen_3": 8,
+      "chosen_6": 5,
+      "chosen_4": 3
+    }
+  },
+  "pure_card_menus_by_act": {
+    "1": {
+      "REWARD_CARD": 7266,
+      "REWARD_SKIP": 199,
+      "REWARD_SINGING_BOWL": 2
+    },
+    "2": {
+      "REWARD_CARD": 3419,
+      "REWARD_SKIP": 785,
+      "REWARD_SINGING_BOWL": 44
+    },
+    "3": {
+      "REWARD_CARD": 1263,
+      "REWARD_SKIP": 1379,
+      "REWARD_SINGING_BOWL": 146
+    },
+    "4": {
+      "REWARD_SKIP": 120,
+      "REWARD_CARD": 78,
+      "REWARD_SINGING_BOWL": 15
+    }
+  },
+  "boss_relic_choices_by_act": {
+    "1": {
+      "FUSION_HAMMER": 90,
+      "PANDORAS_BOX": 163,
+      "BLACK_STAR": 13,
+      "PHILOSOPHERS_STONE": 29,
+      "CALLING_BELL": 120,
+      "ASTROLABE": 141,
+      "MARK_OF_PAIN": 96,
+      "SNECKO_EYE": 158,
+      "COFFEE_DRIPPER": 73,
+      "RUNIC_DOME": 85,
+      "TINY_HOUSE": 9,
+      "CURSED_KEY": 28,
+      "ECTOPLASM": 58,
+      "SLAVERS_COLLAR": 16,
+      "RUNIC_CUBE": 48,
+      "VELVET_CHOKER": 42,
+      "EMPTY_CAGE": 10,
+      "SOZU": 4,
+      "RUNIC_PYRAMID": 1
+    },
+    "2": {
+      "SOZU": 60,
+      "BLACK_BLOOD": 25,
+      "VELVET_CHOKER": 33,
+      "RUNIC_DOME": 114,
+      "MARK_OF_PAIN": 34,
+      "FUSION_HAMMER": 80,
+      "CALLING_BELL": 12,
+      "BUSTED_CROWN": 62,
+      "SLAVERS_COLLAR": 35,
+      "CURSED_KEY": 56,
+      "COFFEE_DRIPPER": 97,
+      "PANDORAS_BOX": 62,
+      "SNECKO_EYE": 31,
+      "TINY_HOUSE": 11,
+      "PHILOSOPHERS_STONE": 9,
+      "SACRED_BARK": 2,
+      "RUNIC_CUBE": 9,
+      "ASTROLABE": 4,
+      "BLACK_STAR": 1,
+      "RUNIC_PYRAMID": 1
+    }
+  },
+  "native_audited_families": 64,
+  "native_saved_steps": 10439,
+  "native_policy_components": {
+    "EVENT": {
+      "decisions": 521,
+      "multi_action": 504,
+      "network_changed_heuristic": 1,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 1
+    },
+    "CARD_SELECT": {
+      "decisions": 516,
+      "multi_action": 515,
+      "network_changed_heuristic": 207,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 207
+    },
+    "MAP": {
+      "decisions": 2310,
+      "multi_action": 1605,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REWARD_GOLD": {
+      "decisions": 1235,
+      "multi_action": 1235,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REWARD_CARD": {
+      "decisions": 984,
+      "multi_action": 984,
+      "network_changed_heuristic": 609,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 609
+    },
+    "REWARD_SKIP": {
+      "decisions": 1389,
+      "multi_action": 769,
+      "network_changed_heuristic": 21,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 21
+    },
+    "REWARD_POTION": {
+      "decisions": 553,
+      "multi_action": 553,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REST": {
+      "decisions": 456,
+      "multi_action": 443,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "TREASURE_OPEN": {
+      "decisions": 174,
+      "multi_action": 174,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REWARD_BLUE_KEY": {
+      "decisions": 60,
+      "multi_action": 60,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REWARD_GREEN_KEY": {
+      "decisions": 58,
+      "multi_action": 58,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    },
+    "REWARD_RELIC": {
+      "decisions": 396,
+      "multi_action": 396,
+      "network_changed_heuristic": 2,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 2
+    },
+    "POTION_DRINK": {
+      "decisions": 18,
+      "multi_action": 18,
+      "network_changed_heuristic": 1,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 1
+    },
+    "BOSS_RELIC": {
+      "decisions": 87,
+      "multi_action": 87,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 30,
+      "final_changed_heuristic": 30
+    },
+    "SHOP_RELIC": {
+      "decisions": 77,
+      "multi_action": 77,
+      "network_changed_heuristic": 15,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 15
+    },
+    "SHOP_CARD": {
+      "decisions": 131,
+      "multi_action": 131,
+      "network_changed_heuristic": 98,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 98
+    },
+    "SHOP_LEAVE": {
+      "decisions": 147,
+      "multi_action": 89,
+      "network_changed_heuristic": 4,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 4
+    },
+    "SHOP_REMOVE": {
+      "decisions": 53,
+      "multi_action": 53,
+      "network_changed_heuristic": 13,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 13
+    },
+    "SHOP_POTION": {
+      "decisions": 16,
+      "multi_action": 16,
+      "network_changed_heuristic": 2,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 2
+    },
+    "REWARD_SINGING_BOWL": {
+      "decisions": 12,
+      "multi_action": 12,
+      "network_changed_heuristic": 0,
+      "wrapper_changed_network": 0,
+      "final_changed_heuristic": 0
+    }
+  },
+  "all_natural_actions_graph_edges_and_terminals_matched": true,
+  "native_choices_observations_state_and_rng_matched": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "limits": "Descriptive old development trajectories. Decision exposures are correlated within families. Missing exact-state action outcomes do not prove absence of similar training states. Routing, HP and card associations do not establish causes or counterfactual wins. The64 native families are an outcome-independent audit subset, not the entire population.",
+  "completion_sha256": "c71f3eb11b57927c09fbb18106843dd999289b9964e1043377527276a3c465cf",
+  "registration_sha256": "07a767525684662347fd85617b43866ccd77e3be87b75fd0f7c005797634022e",
+  "root_payload_and_denominator_checked": true
+}

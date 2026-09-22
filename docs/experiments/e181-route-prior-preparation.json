@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "families": 8,
+  "recorded_steps": 1199,
+  "decisions": 1053,
+  "mapped_decisions": 268,
+  "nonmap_parent_controls": 785,
+  "changed_map_choices": 11,
+  "green_key_route_cases": 86,
+  "independent_map_score_max_error": 0.0,
+  "zero_bonus_matches_frozen_parent": true,
+  "source_heuristic_matches_zero_route_scores": true,
+  "scoring_state_rng_unchanged": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "registration_sha256": "5e9749aecf4054709e63777a44fcc680a8cbf6f49e58e771177b84e552eec478",
+  "runner_sha256": "d8571a13365228fc8d161e7ec0a949d8b1da6805829eebf432c89a773b0d6892"
+}
