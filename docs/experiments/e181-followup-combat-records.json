@@ -1,0 +1,43 @@
+{
+  "status": "complete_read_only",
+  "scope": "Existing E163 natural Heart encounters only; no new battle search or causal attribution.",
+  "encounters": 304,
+  "wins": 149,
+  "losses": 155,
+  "losses_starting_above_half_max_hp": 92,
+  "fatal_turn_counts": {
+    "2": 37,
+    "3": 31,
+    "5": 31,
+    "6": 25,
+    "8": 23,
+    "9": 6,
+    "11": 2
+  },
+  "recorded_simulation_counts": {
+    "48000": 16,
+    "72000": 30,
+    "96000": 12,
+    "120000": 10,
+    "144000": 8,
+    "168000": 14,
+    "192000": 11,
+    "216000": 13,
+    "240000": 14,
+    "264000": 9,
+    "288000": 12,
+    "312000": 2,
+    "336000": 4
+  },
+  "source_completion_sha256": "961eda392f75cf717adc7117abef1f2512d22c75b9a7688c591899eef710c7c8",
+  "source_review_sha256": "61e4cac60411939dd39d3378d687eb2424fe4b1345dadfdcdd0f8837083eef14",
+  "historical_budget_exclusions": [
+    "E12 rescued33/128 conditional early fatal fights with4x budget but no Heart wins.",
+    "E13 full-run4x budget5 to7/1024, not adopted.",
+    "E21 Act4 budget4x25 to26/138 reached families, not adopted."
+  ],
+  "decision": "Do not reopen a4x-budget grid solely because current fixed-budget defeats exist. The old results retain their runtime/cohort scope; this record does not prove current fights unwinnable or identify deck quality as the sole cause.",
+  "new_games": 0,
+  "MCTS_calls": 0,
+  "optimizer_updates": 0
+}
