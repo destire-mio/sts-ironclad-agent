@@ -1,0 +1,13 @@
+{
+  "status": "prepared_not_started",
+  "at": "2026-09-22T03:53:54.052781+00:00",
+  "preflight_tests": 4,
+  "missing_source_completion_rejected": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01/control/exit.json'",
+  "source_screen_pending": true,
+  "registration_sha256": "7203d85bfc749cf7128fa31afcabf7bb841c68fb3d82bc38d6ab02a493ac0a8e",
+  "optimizer_updates": 0,
+  "natural_development_games": 0,
+  "new_training_rollouts": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false
+}

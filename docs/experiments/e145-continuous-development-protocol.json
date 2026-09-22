@@ -1,0 +1,40 @@
+{
+  "experiment": "E145",
+  "at": "2026-09-22T03:53:54.052781+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01",
+  "data": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "groups": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/family-groups.json",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01/runtime",
+  "training": {
+    "iterations": 10,
+    "steps_per_iteration": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "conservative_weight": 0.05,
+    "seed": 2026092244
+  },
+  "new_training_rollouts": 0,
+  "training_timeout_seconds": 14400,
+  "development_timeout_seconds": 50400,
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "question": "If the complete E144 natural screen qualifies an arm, does one model refitted on all1536 families improve on the reserved512 natural-development families?",
+  "admission": "Requires both128-family E144 arms complete, zero faults, all outside/state/RNG audits, all winning fresh replans, closed process evidence and root review. Select by net wins, then fewer parent wins lost, then Monte Carlo. No qualification means no refit or candidate development.",
+  "fit": "Reuse E144 immutable continuous store, all1536 original fit families, identical20,000-step recipe and seed2026092244. No E144 evaluation games enter training. Save the final checkpoint only before any candidate development.",
+  "development": "One frozen model, all512 original reserved families in their original order, frozen parent references, eight single-thread workers. Every outside choice/terminal/state/RNG audited; all winning games rerun with fresh NN/MCTS. MCTS8000/boss3/maxreplans256; errors/timeouts never counted as deaths.",
+  "gate": {
+    "minimum_net_gain": 20,
+    "paired_p_less_than": 0.05,
+    "required_valid_games": 512,
+    "zero_faults": true
+  },
+  "limits": "A passed development gate is evidence of improvement, not the final50% goal. No automatic adoption or unseen acceptance. Final acceptance remains a single frozen model with at least512 Heart wins on1024 previously unused families. Original-game parity and Prismatic Shard excluded.",
+  "resources": "The4h fit and14h development limits are process upper bounds, not estimated durations. Existing300s episodes and360s worker guards preserved.",
+  "private_protocol_sha256": "dd31025523ec538c9d633ad91c9c76eb8c4a21ebeb32425d8501a2c326bbfccb",
+  "fit_roles_sha256": "1f64d237929e81131fc1750beed6298d899419397fb589d57bd775ca77b62e2d",
+  "development_roles_sha256": "d787d6c97448ea486c86d14d5b946eab2247626b9f2d2049fd397b49852800b1"
+}
