@@ -1,0 +1,35 @@
+{
+  "experiment": "E133",
+  "status": "cancelled_by_user",
+  "reason": "Replace expansion with existing-data learning evidence before further sampling.",
+  "stop": {
+    "status": "cancelled_by_user",
+    "verified_at": "2026-09-22T00:27:12.559328+00:00",
+    "reason": "Replace expansion with a complete-existing-data learning comparison.",
+    "owned_process_group_empty": true,
+    "owning_wrapper_gone": true,
+    "owned_stage_exit": 143,
+    "requested_signal": 15,
+    "cleanup_clean": true,
+    "controller_exit": 1,
+    "training_started": false,
+    "unfinished_is_not_death": true,
+    "project_paused": false
+  },
+  "preserved_branch_files": 10574,
+  "preserved_bytes": 79047011,
+  "complete_label_study": false,
+  "partial_data_admitted": false,
+  "optimizer_updates": 0,
+  "automation": "E133 follow-up paused, Luna notified; the existing heartbeat was later reassigned to E134 waiting only.",
+  "collection_and_training_closed_input_rejection_verified": true,
+  "proofs": {
+    "runs/heart-e133-early-card-learning-20260922-01/stop-request.json": "3f94a81190bff990f0f6b877b8630252b3c9a3187837153f77a3ca77216a9d7c",
+    "runs/heart-e133-early-card-learning-20260922-01/source-closed.json": "78205259a9b9288f40ad9bf5b81f0c57ca5cbbcae96840647b1a560cd2ee550f",
+    "runs/heart-e133-early-card-learning-20260922-01/stop-verification.json": "4bb0d60b190da2a3e01e2436d4f6912855ca94d4b2b688239780ff9b09812499",
+    "runs/heart-e133-early-card-learning-20260922-01/preserved-files.json": "d571c7b9854ad63afdf169f5de4c578dd2a751599f7f322771fb50fd6b34f693",
+    "runs/heart-e133-early-card-learning-20260922-01/control/exit.json": "4da31e4a741dfd298dcd83e40c69de559ab5730e8f9bbd2ed2f66060f0433852",
+    "runs/heart-e133-early-card-learning-20260922-01/collect-execution/pipeline-process-exit.json": "eca954679af94f7ce0d1d84e67f6647b26a608df02a8b066b77c2b4f6f4e782e"
+  },
+  "limits": "Saved file count is not a complete or validated episode count. Intentional cancellation is not a game death or a learned-policy failure."
+}

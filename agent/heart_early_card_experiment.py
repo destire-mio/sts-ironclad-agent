@@ -35,6 +35,7 @@ def require(value,message):
 
 
 def registered(study):
+    require(not (study / 'source-closed.json').exists(), 'E133 study is closed')
     reg=read(study/'learning-registration.json')
     require(bool(reg['hashes']),'no registered training inputs')
     for path,expected in reg['hashes'].items():require(sha(path)==expected,'learning input changed: '+path)

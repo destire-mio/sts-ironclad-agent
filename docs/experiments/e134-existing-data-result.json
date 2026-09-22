@@ -1,0 +1,139 @@
+{
+  "experiment": "E134",
+  "status": "complete",
+  "fit": {
+    "families": 1536,
+    "optimizer_updates": 1000,
+    "optimizer_seconds": 4.028653874993324,
+    "parameters": 472,
+    "history": [
+      {
+        "step": 100,
+        "expected_return": 0.1453157216310501,
+        "loss": -0.1366681307554245
+      },
+      {
+        "step": 200,
+        "expected_return": 0.14603771269321442,
+        "loss": -0.13688324391841888
+      },
+      {
+        "step": 300,
+        "expected_return": 0.14622163772583008,
+        "loss": -0.13693754374980927
+      },
+      {
+        "step": 400,
+        "expected_return": 0.1462220698595047,
+        "loss": -0.1369367390871048
+      },
+      {
+        "step": 500,
+        "expected_return": 0.14621800184249878,
+        "loss": -0.13693027198314667
+      },
+      {
+        "step": 600,
+        "expected_return": 0.14621984958648682,
+        "loss": -0.13693082332611084
+      },
+      {
+        "step": 700,
+        "expected_return": 0.1462225317955017,
+        "loss": -0.13693490624427795
+      },
+      {
+        "step": 800,
+        "expected_return": 0.14617730677127838,
+        "loss": -0.13688570261001587
+      },
+      {
+        "step": 900,
+        "expected_return": 0.1462133377790451,
+        "loss": -0.13692794740200043
+      },
+      {
+        "step": 1000,
+        "expected_return": 0.14621949195861816,
+        "loss": -0.13693590462207794
+      }
+    ],
+    "baseline_reproduced_without_refitting": true,
+    "candidate_vs_parent": {
+      "assigned": 1536,
+      "baseline_wins": 149,
+      "candidate_wins": 242,
+      "net_gain": 93,
+      "paired": {
+        "both_fail": 1281,
+        "candidate_only": 106,
+        "both_win": 136,
+        "baseline_only": 13
+      },
+      "exact_p": 2.6709648488912807e-19
+    },
+    "candidate_vs_control": {
+      "assigned": 1536,
+      "baseline_wins": 214,
+      "candidate_wins": 242,
+      "net_gain": 28,
+      "paired": {
+        "both_fail": 1277,
+        "both_win": 197,
+        "candidate_only": 45,
+        "baseline_only": 17
+      },
+      "exact_p": 0.0004970915863810334
+    }
+  },
+  "historical_label_holdout": {
+    "families": 1024,
+    "candidate_vs_parent": {
+      "assigned": 1024,
+      "baseline_wins": 87,
+      "candidate_wins": 91,
+      "net_gain": 4,
+      "paired": {
+        "both_win": 60,
+        "both_fail": 906,
+        "candidate_only": 31,
+        "baseline_only": 27
+      },
+      "exact_p": 0.6940040940761316
+    },
+    "candidate_vs_control": {
+      "assigned": 1024,
+      "baseline_wins": 98,
+      "candidate_wins": 91,
+      "net_gain": -7,
+      "paired": {
+        "both_win": 73,
+        "both_fail": 908,
+        "candidate_only": 18,
+        "baseline_only": 25
+      },
+      "exact_p": 0.3603776529357674
+    },
+    "statistical_screen_passed": false
+  },
+  "verification": {
+    "families": 1024,
+    "live_families_verified": 786,
+    "early_failures_retained": 238,
+    "zero_faults": true
+  },
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "checkpoint_sha256": "e084e938d4c9b9c110b0b70f4e6548237cdc0cfdcdab79186861fd49c3ec0db9",
+  "decision": "Reject this fixed explicit representation candidate. Preserve parent; no feature/threshold sweep or new sampling authorized by this outcome.",
+  "limits": "Previously exposed development labels. No natural candidate games or final unseen acceptance.",
+  "proofs": {
+    "runs/heart-e134-existing-data-representation-20260922-01/registration.json": "0f87de91c0a701baf2c9a0b4c9f3a57ad065ef02543913aa493de9047c78815a",
+    "runs/heart-e134-existing-data-representation-20260922-01/learning/fit-completion.json": "00d2007e15c6f584a2fad0738e4fe8f31ebba4a69a22cf8bf3a9aa1b20885aae",
+    "runs/heart-e134-existing-data-representation-20260922-01/learning/completion-verification.json": "57700d5ed427c7b347073cd9097adfeb56199c642f73321707771b7fc201f432",
+    "runs/heart-e134-existing-data-representation-20260922-01/control/exit.json": "31afa1e30d5a5e7f0ccc232e4cb51396c91baa5ef3a3f3e901979e52eb0a28ac"
+  }
+}

@@ -31,6 +31,7 @@ def assigned(plan):
 
 
 def admission(study):
+    require(not (study / 'source-closed.json').exists(), 'E133 study is closed')
     registration = read(study / 'registration.json')
     for path, expected in registration['hashes'].items():
         require(sha(path) == expected, 'registered source changed: ' + path)

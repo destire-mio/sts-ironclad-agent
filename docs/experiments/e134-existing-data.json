@@ -1,0 +1,87 @@
+{
+  "experiment": "E134",
+  "status": "launched",
+  "recorded_at": "2026-09-22T00:47:58.664285+00:00",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "fit_families": 1536,
+  "historical_label_holdout_families": 1024,
+  "reused_card_leaves": 31288,
+  "new_sampling_budget": 0,
+  "new_candidate_count": 1,
+  "baseline": "Frozen E128 small checkpoint reused without refitting.",
+  "training": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "representation": {
+    "width_per_head": 192,
+    "total_trainable_parameters": 472,
+    "card": "12 public candidate properties crossed with 16 deck/HP/relic contexts.",
+    "relic": "Fit-only relic identity crossed with 8 public deck/HP contexts, zero padded to 192.",
+    "limits": "Overlapping coarse mechanics tags, not full card-effect semantics. Relic tail padding means effective feature ranks need not match."
+  },
+  "gate": {
+    "minimum_net_gain": 20,
+    "paired_exact_p_less_than": 0.05,
+    "comparisons": [
+      "candidate_vs_parent",
+      "candidate_vs_control"
+    ]
+  },
+  "checks": {
+    "status": "passed",
+    "at": "2026-09-22T00:45:32.682352+00:00",
+    "registration_sha256": "0f87de91c0a701baf2c9a0b4c9f3a57ad065ef02543913aa493de9047c78815a",
+    "focused_checks": 8,
+    "fixed_existing_fit_families": 4,
+    "actual_completed_input_admission": true,
+    "actual_closed_E133_collection_and_training_rejected": true,
+    "formal_optimizer_updates": 0,
+    "new_sampling_games": 0
+  },
+  "resources": {
+    "torch_threads": 1,
+    "native_check_workers": 8,
+    "fit_seconds": 3600,
+    "verification_seconds": 3600
+  },
+  "launch": {
+    "pid": 22879,
+    "at": "2026-09-22T00:45:32.684705+00:00"
+  },
+  "proofs": {
+    "runs/heart-e134-existing-data-representation-20260922-01/protocol.json": "ca15675267ff6e05d02348912fd0376f99eac09718bde2f15238956962d4863a",
+    "runs/heart-e134-existing-data-representation-20260922-01/input-verification.json": "96dae676f6d62cf155b8baf10d0e9c7616d513573135d2856cf34b2de745c564",
+    "runs/heart-e134-existing-data-representation-20260922-01/registration.json": "0f87de91c0a701baf2c9a0b4c9f3a57ad065ef02543913aa493de9047c78815a",
+    "runs/heart-e134-existing-data-representation-20260922-01/entry-verification.json": "d8b4e838ff42228756bf495ffc8b185a2ff1f73f317dc63a2dbdc364af369a00",
+    "runs/heart-e134-existing-data-representation-20260922-01/runtime/manifest.json": "6a219bfffcca9ef3ede0b0ed278384d761dfc33993c903282616630a0090778e",
+    "runs/heart-e134-existing-data-representation-20260922-01/control/registration.json": "df66f9809b2e6303149e76836a3059ede2f7b9a7c2f1909b2c789bdf3ea2bbfc",
+    "runs/heart-e134-existing-data-representation-20260922-01/control/launch.json": "58189efa0b331d705e2f91406130e2800dd3311b66a68f0d9e11cb8d2255e9dc"
+  },
+  "source_sha256": {
+    "agent/heart_explicit_readout.py": "eacbe717dac7e7b25a2bd347c56c9400e0cba6ebce437845bd102ac9323cbd36",
+    "agent/heart_existing_data_experiment.py": "99a4fc2b5d56d59e066bee222b4409b3ce28dcb698d6ac217e3d2a23d0c87bb3",
+    "docs/experiments/e134-prepare.py": "19bc891cf0265e23ba3efd7499982b46109162953929431c951486cca8b4f15d",
+    "docs/experiments/e134-controller.py": "ba5e95af02e63d92129b36adb149c79697a6238e8134d33b85a167062fc57837",
+    "tests/test_heart_existing_data_experiment.py": "d28608d1a0f3971ebdffa109fd2ba11f708f8052f3f7b0696691228c2df8e7ce"
+  },
+  "waiting": {
+    "owner": "existing Luna task",
+    "interval_seconds": 1200,
+    "automation_id": "luna",
+    "config_readback_verified": true
+  },
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "limits": [
+    "The holdout has previous exposure and is development evidence, not fresh acceptance.",
+    "A representation change does not expand the two-decision ceiling or prove a 50-percent policy.",
+    "Neither interrupted E133 labels nor E131 pilot-only families are admitted."
+  ]
+}

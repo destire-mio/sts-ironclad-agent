@@ -1,5 +1,7 @@
 # E133: learn first-Act card and later relic decisions from complete continuations
 
+> 状态更新：E133 在 2026-09-22 取消采样，训练未启动。产物保留且未准入学习，见 [取消记录](e133-cancelled.md)。下文保留原设计与启动状态。
+
 E131 found eight known fit families whose winning early-card routes were absent from every measured old-scope combination. E133 tests whether a policy can learn useful early choices from that scope. The first decision is the final card offer after Act 1's first fight. Each card branch generates its own later first-boss relic menu, and the model chooses from that actual menu. All other decisions use the frozen parent; combat remains MCTS 8,000, boss multiplier 3 and 256 replans. Scope is Ironclad A20 natural start through keys, both Act-3 bosses, Shield/Spear and Heart, excluding Prismatic Shard.
 
 ## Data and learning contract
