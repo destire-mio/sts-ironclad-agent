@@ -1,0 +1,70 @@
+{
+  "experiment": "E143",
+  "at": "2026-09-22T03:08:12.416686+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e136-first-card-reuse-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "fit_families": 1536,
+  "routes": 6144,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "external_holdout_evaluations": 0,
+  "workers": 8,
+  "timeout_seconds": 7200,
+  "question": "Can existing complete traces supply temporally linked, all-noncombat learning data for a full-run policy?",
+  "admission": "Exact existing fit cohort. The parent-control branch begins at natural start; the other3 card branches begin at the forced card. Every later recorded action follows the frozen parent. No earlier common prefix receives a changed future label.",
+  "transitions": "Keep every actual noncombat decision, including single-action states. Replay automatic battles between successive decisions. The last transition receives binary Heart reward and done=true; intermediate rewards0, gamma1. No floor/HP reward. Store full legal menus; compact completion indexes keep the controller memory bounded.",
+  "features": {
+    "version": "continuous_public_menu_v1",
+    "observation_dim": 6843,
+    "descriptor_dim": 807,
+    "state_width": 3724,
+    "width": 5339,
+    "layout": "Allowlisted public observation; mean of all current legal descriptors; selected descriptor; legal-count/64.",
+    "limits": "No seed, RNG, prefix identity, future or terminal metadata, event scratch storage or internal probabilities in features. Current menus use the existing visibility-aware descriptor builder.",
+    "observation_columns": 3724,
+    "support_columns": 772,
+    "feature_spec_sha256": "c8a136f121315bcc42ed771e38ab4172bb5646fcdbb3fb993f9f32175ac8c9f1"
+  },
+  "planned_learning": {
+    "experiment": "E144",
+    "arms": {
+      "monte_carlo": 1.0,
+      "temporal": 0.8
+    },
+    "families": 1536,
+    "folds": 3,
+    "fold_rule": "Original E73-family-fold SHA256 modulo3",
+    "model": "Full trainable128/64 SiLU critic, same initialization for both arms; public state + mean legal menu + selected descriptor + menu size. Sparse first layer and dense native inference must agree. Initial all-action success probability.1 exactly preserves parent ties.",
+    "training": {
+      "iterations": 10,
+      "steps_per_iteration": 2000,
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm": 1.0,
+      "conservative_weight": 0.05,
+      "seed": 2026092244
+    },
+    "target": "Before each2000-step pass, freeze current critic and compute backward G_lambda. Last G=Heart label; preceding G=(1-lambda)*sigmoid(Qbar(next_state, recorded_parent_next_action))+lambda*G_next. Lambda1 is the exact terminal-return control. Only fit-family trajectories produce targets.",
+    "objective": "BCE for recorded-action G_lambda plus.05 cross entropy of recorded action over full legal-menu logits. The latter penalizes high scores on unsupported alternatives; no optimality guarantee is claimed.",
+    "sampling": "Uniform fit family, uniform one of4 routes. Probability.25 uses that route first-card root. Otherwise choose uniformly among available acts and non-root decisions in that act; empty remainder uses root. Same5 random uniforms per batch row across arms. No winner filtering.",
+    "support": "Only categorical action identities appearing as chosen actions in fit may replace the parent. Parent choice always remains eligible. Continuous prices and raw positional indices are not support identities.",
+    "deployment": "Greedy values at ALL natural noncombat decisions, including Neow, maps, events, cards, shop, rest and boss relics. Exact ties prefer frozen parent. MCTS8000, bossx3 and256 replans remain fixed. This is a changed multi-decision policy, not table lookup of fixed-parent branch labels.",
+    "whole_run_screen": {
+      "families": 128,
+      "selection": "Lowest SHA256(E144-full-run:{seed}) among original fit roles, fixed before candidate outputs. Each family uses only its excluding-fold model. Both arms complete.",
+      "minimum_net_gain": 8,
+      "paired_descriptive_p_less_than": 0.025,
+      "zero_faults": true,
+      "verification": "All complete terminal/state/RNG replays and live policy choices; every winning route rerun with fresh NN/MCTS planning."
+    },
+    "next_gate": "No automatic adoption. Passing full-run arm selected by net wins, then fewer parent wins lost, then Monte Carlo. Fit one final model on all1536 with the same recipe, freeze it, then run the reserved512 natural-development families. Require net>=20/512,p<.05 and complete audits before any adoption or fresh1024 acceptance. Final goal512/1024 unseen Heart wins unchanged.",
+    "limits": "Evaluation games are bounded policy validation, not an expansion of training labels. Single-intervention hindsight scores do not certify this full-run policy. Simulator-original parity remains excluded; Prismatic Shard excluded."
+  },
+  "private_protocol_sha256": "7228ec609e98bff6f0e5130a9820df2c24b809236b1e4677ef733b1510ae11b3"
+}

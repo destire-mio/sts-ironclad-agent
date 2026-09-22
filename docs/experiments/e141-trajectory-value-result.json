@@ -1,0 +1,110 @@
+{
+  "status": "complete_not_adopted",
+  "families": 1536,
+  "folds": 3,
+  "arms": {
+    "root_only": {
+      "out_of_fold": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 150,
+        "net_gain": 1,
+        "paired": {
+          "both_fail": 1341,
+          "both_win": 104,
+          "candidate_only": 46,
+          "baseline_only": 45
+        },
+        "exact_p": 1.0
+      },
+      "gate_passed": false
+    },
+    "root_plus_later": {
+      "out_of_fold": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 139,
+        "net_gain": -10,
+        "paired": {
+          "both_fail": 1347,
+          "baseline_only": 50,
+          "candidate_only": 40,
+          "both_win": 99
+        },
+        "exact_p": 0.34283311942078826
+      },
+      "gate_passed": false
+    }
+  },
+  "optimizer_updates": 12000,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "natural_candidate_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "optimizer_seconds": 23.867517542035785,
+  "dense_vs_root": {
+    "assigned": 1536,
+    "baseline_wins": 150,
+    "candidate_wins": 139,
+    "net_gain": -11,
+    "paired": {
+      "both_fail": 1363,
+      "baseline_only": 34,
+      "candidate_only": 23,
+      "both_win": 116
+    },
+    "exact_p": 0.18485048241641847
+  },
+  "experiment": "E141",
+  "verification": {
+    "status": "complete",
+    "zero_faults": true,
+    "families": 1536,
+    "native_choice_checks": 3072,
+    "new_sampling_games": 0,
+    "MCTS_searches": 0,
+    "external_holdout_evaluations": 0,
+    "production_adoption": false
+  },
+  "all_proofs_stage_cleanup_and_selected_raw_labels_verified": true,
+  "completion_sha256": "1af2f759b009780b276c3043626a42fe6a5ed06385936d10c471c6cb66f6e4a1",
+  "controller_exit_sha256": "da94e3c3c65885c60f5a6ff47a41619bd25b4752ba110734421b6c29d58cdb20",
+  "fit_capacity_diagnosis": {
+    "status": "complete",
+    "assigned_families": 1536,
+    "first_card_hindsight_wins": 281,
+    "mixed_families": 233,
+    "folds": [
+      {
+        "fold": 0,
+        "fit_families": 1009,
+        "hindsight_max": 170,
+        "learned_fit": {
+          "root_only": 170,
+          "root_plus_later": 164
+        }
+      },
+      {
+        "fold": 1,
+        "fit_families": 1051,
+        "hindsight_max": 193,
+        "learned_fit": {
+          "root_only": 193,
+          "root_plus_later": 182
+        }
+      },
+      {
+        "fold": 2,
+        "fit_families": 1012,
+        "hindsight_max": 199,
+        "learned_fit": {
+          "root_only": 199,
+          "root_plus_later": 191
+        }
+      }
+    ],
+    "interpretation": "Hindsight counts are measured action-set bounds, not achievable population success rates. Compare with fitted choices only; all out-of-fold gates failed."
+  }
+}

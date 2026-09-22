@@ -1,0 +1,15 @@
+{
+  "status": "prepared_not_started",
+  "at": "2026-09-22T03:23:22.643892+00:00",
+  "tests": {
+    "data_and_policy": 7,
+    "training": 5,
+    "evaluation": 3
+  },
+  "registration_sha256": "929d8c0577414de23024553ee44dc3b90a1b4874235658318b2146dbc1ed03c3",
+  "missing_source_evidence_rejected": "[Errno 2] No such file or directory: '/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/completion-verification.json'",
+  "optimizer_updates": 0,
+  "new_training_rollouts": 0,
+  "natural_evaluation_games": 0,
+  "production_adoption": false
+}
