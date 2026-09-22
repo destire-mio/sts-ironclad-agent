@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "experiment": "E153",
+  "at": "2026-09-22T06:51:17.377062+00:00",
+  "families": 1536,
+  "states": 2039965,
+  "edges": 2062276,
+  "routes": 29759,
+  "counts": {
+    "raw_files": 29759,
+    "raw_steps": 4822260,
+    "raw_outside_decisions": 4241289,
+    "native_replayed_steps": 3909525,
+    "accepted_encoding_occurrences": 780809,
+    "reused_unique_states": 776122,
+    "newly_encoded_states": 1263843
+  },
+  "source_scope_counts": {
+    "first_card": 6144,
+    "boss": 4736,
+    "conditional_card": 18879
+  },
+  "source_root_features_checked": 7448,
+  "independent_native_feature_checks": 64,
+  "all_source_hashes_and_edge_successors_rewards_parent_choices_checked": true,
+  "zero_faults": true,
+  "completion_sha256": "74dd0b0ac3fd8a1a8673ca0edfc2be1025df66840fc308387ae06a554c30e6ec",
+  "controller_exit_sha256": "7157df8425bc75e0099d013311d70f9842fbcfbe817b8f09206f89a6d7210520",
+  "review_script_sha256": "86b3816a6e996c1c8ca72fab9630ec8de669a8014dc99bd46bdb7219cb8cd2d8",
+  "new_training_rollouts": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "limits": "Native extraction replayed all boss/card raw steps; independent review rechecks all graph/source edges and reused features, plus64 fixed native feature states. No learned-policy win rate or original-game parity claim."
+}

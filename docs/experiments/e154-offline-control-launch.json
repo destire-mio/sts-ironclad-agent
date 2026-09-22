@@ -1,0 +1,24 @@
+{
+  "status": "launched_pending_training_and_full_natural_evaluation",
+  "at": "2026-09-22T06:52:52.906043+00:00",
+  "controller_pid": 68443,
+  "training_process_group": 68454,
+  "registration_sha256": "1ce0f59ac80bbb531e081e2cf0071dbe6f6da1986155bfbfd59de5659bee26b2",
+  "protocol_sha256": "d9dae2fe8041a8db3be819aa5d76a496f2c11c8aad4c19211f4f9f1815a62ba6",
+  "source_completion_sha256": "74dd0b0ac3fd8a1a8673ca0edfc2be1025df66840fc308387ae06a554c30e6ec",
+  "source_root_review_sha256": "112615d24610b80ed3acaec73911e69eceb1bebf7be1d0958cb9b5fec2d6f5f0",
+  "launch_script_sha256": "852f8861ac7d5493abe7d65f68985c240e44d6ce76321d4be0d78576417a9d6b",
+  "observed": {
+    "at": "2026-09-22T06:55:08Z",
+    "controller_and_training_process_live": true,
+    "stage": "train",
+    "substage": "store",
+    "families_encoded": 768,
+    "states_encoded": 1020580,
+    "edges_encoded": 1031724
+  },
+  "new_training_rollouts": 0,
+  "natural_policy_evaluation_results": 0,
+  "production_adoption": false,
+  "limits": "This startup observation proves an owned training pipeline and data assembly, not completed optimizer updates or a policy win rate."
+}
