@@ -1,0 +1,67 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E156",
+  "families": 128,
+  "comparisons": {
+    "parent": {
+      "assigned": 128,
+      "baseline_wins": 13,
+      "candidate_wins": 7,
+      "net_gain": -6,
+      "paired": {
+        "both_fail": 113,
+        "both_win": 5,
+        "baseline_only": 8,
+        "candidate_only": 2
+      },
+      "exact_p": 0.109375
+    },
+    "cloning": {
+      "assigned": 128,
+      "baseline_wins": 3,
+      "candidate_wins": 7,
+      "net_gain": 4,
+      "paired": {
+        "both_fail": 118,
+        "candidate_only": 7,
+        "baseline_only": 3
+      },
+      "exact_p": 0.34375
+    },
+    "iql": {
+      "assigned": 128,
+      "baseline_wins": 4,
+      "candidate_wins": 7,
+      "net_gain": 3,
+      "paired": {
+        "both_fail": 117,
+        "candidate_only": 7,
+        "baseline_only": 4
+      },
+      "exact_p": 0.548828125
+    }
+  },
+  "gate_passed": false,
+  "specific_weight_repair_benefit": false,
+  "natural_policy_evaluation_games": 128,
+  "winner_replans": 7,
+  "zero_faults": true,
+  "new_training_rollouts": 0,
+  "reserved_development_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "inner_checkpoints_recomputed": 24,
+  "maximum_numpy_stopping_error": 2.654102406740577e-07,
+  "selected_actor_steps": [
+    1000,
+    2000,
+    500
+  ],
+  "actor_optimizer_steps": 9500,
+  "verified_outside_choices": 16609,
+  "controller_exit_sha256": "0d92eea924759d28e6655e0c79c0b741cc8a51c16732f4bc0bb861a7b4ae8599",
+  "original_handoff_failure_sha256": "cf23f5755cc7b8e135d090dbe23164ed02b3788a91707ca625237c28ae6ea7a3",
+  "completion_sha256": "9811eaf5737e814139ebbf2330c430ccef31f076067f2f75fed428dbf9fc3cf3",
+  "reviewer_sha256": "49a9c0b53041232a6ffd9ba7ee9fa1ebabefaabcb1ff4f1fc4297bd07d275f78",
+  "result_review_sha256": "352e60ef379e0e31d6bcb25b70691261767cd5bac1cc5d25003453397afc5c33"
+}
