@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "experiment": "E165",
+  "runner_sha256": "63b5dca7d0095cc75e745134e6d0818272f3bccbd1795deb85e203d6a702725b",
+  "registration_sha256": "e721e3d43d61fc4d6954518f13455d08b8c090fc066d9d1feb4b6a034f6e55de",
+  "masked_columns": 2461,
+  "real_input_invariance_cases": 16,
+  "retained_hp_sensitivity_cases": 16,
+  "independent_numpy_cases": 16,
+  "maximum_numpy_error": 1.862645149230957e-09,
+  "discarded_auxiliary_fixture_updates": 8,
+  "unit_checks": 7,
+  "data_completion_sha256": "83f7a5322bbbfff2bcef5e2d57d9a4d10bfdc9eb9b722324542047e15632cb36",
+  "new_games": 0
+}

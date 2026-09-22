@@ -185,6 +185,11 @@ def auxiliary_model(width, fold):
 
 
 def reset_heart_head(model):
+    # A combat-only feature restriction must not silently restrict the later
+    # Heart task, whose outcome can depend on the rest of the public map/menu.
+    if hasattr(model, 'auxiliary_gradient_hook'):
+        model.auxiliary_gradient_hook.remove()
+        del model.auxiliary_gradient_hook
     model.tail[-1] = torch.nn.Linear(64, 3)
     torch.nn.init.zeros_(model.tail[-1].weight)
     torch.nn.init.zeros_(model.tail[-1].bias)
@@ -215,8 +220,8 @@ def mse(model, data, ids, allowed):
     return (total / len(ids)).tolist()
 
 
-def train(root):
-    plan = registered(root)
+def train(root, *, model_factory=auxiliary_model, registration=registered):
+    plan = registration(root)
     review = E.read(root / 'data-review.json')
     E.require(review['status'] == 'complete_reviewed' and
               review['data_completion_sha256'] == E.sha(root / 'data/completion.json'), 'combat labels not reviewed')
@@ -240,14 +245,14 @@ def train(root):
         E.write(directory / 'auxiliary-roles.json', dict(inner_train=[f['seed'] for f in inner], inner_validation=[f['seed'] for f in valid],
             fit=[f['seed'] for f in fit], held=[f['seed'] for f in a_held], validation_ids=ids.tolist(), held_ids=held_ids.tolist()))
         curve = []
-        model = auxiliary_model(width, fold)
+        model = model_factory(width, fold)
         def checkpoint(step, current):
             losses = mse(current, data, ids, {f['seed'] for f in a_valid})
             curve.append(dict(step=step, mse=losses, loss=float(np.mean(losses))))
             torch.save(current.state_dict(), directory / f'aux-inner-{step}.pt')
         auxiliary_fit(model, data, a_inner, RECIPE['steps'], fold, checkpoint)
         selected = min(curve, key=lambda r: (r['loss'], r['step']))['step']
-        model = auxiliary_model(width, fold)
+        model = model_factory(width, fold)
         auxiliary_fit(model, data, a_fit, selected, fold)
         torch.save(model.state_dict(), directory / 'auxiliary.pt')
         baseline = data.baseline(a_fit)[data.cells[held_ids]]
@@ -273,7 +278,7 @@ def train(root):
             rng = np.random.default_rng(I.RECIPE['seed'] + 2000 + fold)
             ids = examples.sample(valid, rng.random((I.RECIPE['validation_draws'], 3)))
             E.write(directory / 'actor-validation.json', dict(indices=ids.tolist(), inner_train=[f['seed'] for f in inner], inner_validation=[f['seed'] for f in valid]))
-            model = auxiliary_model(width, fold)
+            model = model_factory(width, fold)
             model.load_state_dict(torch.load(directory / f'aux-inner-{aux["selected_steps"]}.pt', weights_only=True))
             reset_heart_head(model)
             curve = []
@@ -282,7 +287,7 @@ def train(root):
                 torch.save(current.state_dict(), directory / f'inner-{step}.pt')
             I.fit(model, examples, inner, I.RECIPE['steps'], fold, checkpoint)
             selected = min(curve, key=lambda r: (r['loss'], r['step']))['step']
-            model = auxiliary_model(width, fold)
+            model = model_factory(width, fold)
             model.load_state_dict(torch.load(directory / 'auxiliary.pt', weights_only=True))
             reset_heart_head(model)
             I.fit(model, examples, families, selected, fold)

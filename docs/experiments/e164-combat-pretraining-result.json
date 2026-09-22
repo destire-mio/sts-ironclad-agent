@@ -1,0 +1,111 @@
+{
+  "experiment": "E164",
+  "status": "complete_rejected",
+  "learning": {
+    "status": "complete",
+    "models": [],
+    "auxiliary_passed": false,
+    "branch_screen": {
+      "fit": {},
+      "held": {}
+    },
+    "eligible_for_natural_evaluation": false,
+    "auxiliary_optimizer_steps": 24000,
+    "heart_optimizer_steps": 0,
+    "new_training_rollouts": 0,
+    "production_adoption": false
+  },
+  "auxiliary": {
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 5000,
+        "held_mse": [
+          0.03581255750032142,
+          0.07314359396696091
+        ],
+        "held_baseline_mse": [
+          0.04089137778927944,
+          0.0671499177697791
+        ],
+        "inner_baseline_mse": [
+          0.0400421455156865,
+          0.06004541071920922
+        ]
+      },
+      {
+        "fold": 1,
+        "selected_steps": 2000,
+        "held_mse": [
+          0.03990215831436217,
+          0.07429174025310203
+        ],
+        "held_baseline_mse": [
+          0.04127528123867637,
+          0.0631510611770729
+        ],
+        "inner_baseline_mse": [
+          0.04205381924837604,
+          0.06613586372887577
+        ]
+      },
+      {
+        "fold": 2,
+        "selected_steps": 2000,
+        "held_mse": [
+          0.040681158570805565,
+          0.07578395842574537
+        ],
+        "held_baseline_mse": [
+          0.042978103379240504,
+          0.06807916235696616
+        ],
+        "inner_baseline_mse": [
+          0.040381500688653066,
+          0.061264646470837215
+        ]
+      }
+    ],
+    "mse": 0.05660252783854958,
+    "baseline_mse": 0.053920817285169086,
+    "passed": false
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "experiment": "E164",
+    "auxiliary": {
+      "status": "complete_reviewed",
+      "passed": false,
+      "selected_steps": [
+        5000,
+        2000,
+        2000
+      ],
+      "optimizer_steps": 24000,
+      "inner_checkpoints": 18,
+      "maximum_numpy_error": 1.7044710642899474e-09,
+      "held_mse": 0.05660252783854958,
+      "held_baseline_mse": 0.053920817285169086,
+      "learning_completion_sha256": "6a585b762db92c7b912dbffa4e88ae0d806dcb1e6d04a7b06bdcbfbbf612bc50",
+      "reviewer_sha256": "82d93792564e7234e519ea95eabb117fdb8261d77c71b761c66f304071d41b88"
+    },
+    "eligible_for_natural_evaluation": false,
+    "heart_optimizer_steps": 0,
+    "learning_completion_sha256": "6a585b762db92c7b912dbffa4e88ae0d806dcb1e6d04a7b06bdcbfbbf612bc50",
+    "controller_exit_sha256": "78225969e91584dee32b6543a82bc04e727772d10444093460628dfc49d9ee43",
+    "reviewer_sha256": "82d93792564e7234e519ea95eabb117fdb8261d77c71b761c66f304071d41b88",
+    "new_training_rollouts": 0,
+    "natural_games": 0,
+    "production_adoption": false
+  },
+  "control": {
+    "status": "train_complete",
+    "exit_code": 0,
+    "phase": "train",
+    "owned_exit_sha256": "550065c0506537258c53845bc46084f5bc58971ed7ebd3b6eac4504ba5a49f68",
+    "completion_sha256": "6a585b762db92c7b912dbffa4e88ae0d806dcb1e6d04a7b06bdcbfbbf612bc50",
+    "finished_at": "2026-09-22T15:49:50.637066+00:00"
+  },
+  "review_sha256": "890bf1c5e869ab7eebf0b43c1b8df0a00423a8b78e54d6761ce7564528796d8a",
+  "diagnosis_sha256": "c1b50eb7fec49949418ecaed34cbca8ba7f4fa7d02ceebe4799c97c799716cb3"
+}
