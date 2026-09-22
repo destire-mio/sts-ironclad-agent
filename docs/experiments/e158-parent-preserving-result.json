@@ -1,0 +1,81 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E158",
+  "families": 128,
+  "comparisons": {
+    "parent": {
+      "assigned": 128,
+      "baseline_wins": 13,
+      "candidate_wins": 14,
+      "net_gain": 1,
+      "paired": {
+        "both_fail": 114,
+        "both_win": 13,
+        "candidate_only": 1
+      },
+      "exact_p": 1.0
+    },
+    "cloning": {
+      "assigned": 128,
+      "baseline_wins": 3,
+      "candidate_wins": 14,
+      "net_gain": 11,
+      "paired": {
+        "both_fail": 114,
+        "candidate_only": 11,
+        "both_win": 3
+      },
+      "exact_p": 0.0009765625
+    },
+    "iql": {
+      "assigned": 128,
+      "baseline_wins": 4,
+      "candidate_wins": 14,
+      "net_gain": 10,
+      "paired": {
+        "both_fail": 113,
+        "candidate_only": 11,
+        "baseline_only": 1,
+        "both_win": 3
+      },
+      "exact_p": 0.00634765625
+    },
+    "exact_graph": {
+      "assigned": 128,
+      "baseline_wins": 7,
+      "candidate_wins": 14,
+      "net_gain": 7,
+      "paired": {
+        "both_fail": 112,
+        "both_win": 5,
+        "candidate_only": 9,
+        "baseline_only": 2
+      },
+      "exact_p": 0.0654296875
+    }
+  },
+  "gate_passed": false,
+  "natural_policy_evaluation_games": 128,
+  "winner_replans": 14,
+  "zero_faults": true,
+  "new_training_rollouts": 0,
+  "reserved_development_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "specific_target_repair_benefit": false,
+  "inner_checkpoints_recomputed": 24,
+  "maximum_numpy_stopping_error": 5.462091640096034e-08,
+  "selected_actor_steps": [
+    250,
+    250,
+    250
+  ],
+  "actor_optimizer_steps": 6750,
+  "verified_outside_choices": 17663,
+  "controller_exit_sha256": "3b47842a89c26e607d01e7950f878bb3a3f2a520856724f5ef57b1b338fdf0d3",
+  "completion_sha256": "5bc189f4e91340cb0ab0496bf28065dcabf4c6b701b77cbd85be76f408d06017",
+  "reviewer_sha256": "909d26fe1876e3c157bb8a779d324f85e022bf2fd3324724b53fb6c4879aefe3",
+  "result_review_sha256": "305c248e9d4003aa16910f0812f274fee740d30fcfdb2915cf6ebd1c483aee18",
+  "natural_unchanged_families": 126,
+  "natural_changed_families": 2
+}
