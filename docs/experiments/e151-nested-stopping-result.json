@@ -1,0 +1,147 @@
+{
+  "status": "complete_recorded_screen_not_adopted",
+  "experiment": "E151",
+  "at": "2026-09-22T05:01:18.450516+00:00",
+  "arms": {
+    "nested_stopped_parent_prior": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 143,
+          "net_gain": -6,
+          "paired": {
+            "both_fail": 1352,
+            "both_win": 108,
+            "candidate_only": 35,
+            "baseline_only": 41
+          },
+          "exact_p": 0.5665734423986847
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 149.0,
+          "net_gain": 0,
+          "paired": {
+            "both_fail": 1379,
+            "both_win": 141,
+            "candidate_only": 8,
+            "baseline_only": 8
+          },
+          "exact_p": 1.0
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 145,
+          "net_gain": -4,
+          "paired": {
+            "both_fail": 1363,
+            "both_win": 121,
+            "candidate_only": 24,
+            "baseline_only": 28
+          },
+          "exact_p": 0.6778086391424605
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 145,
+          "net_gain": -4,
+          "paired": {
+            "both_fail": 1359,
+            "both_win": 117,
+            "candidate_only": 28,
+            "baseline_only": 32
+          },
+          "exact_p": 0.6988834276200057
+        }
+      },
+      "screen_passed": false,
+      "against_E150": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 148,
+          "candidate_wins": 143,
+          "net_gain": -5,
+          "paired": {
+            "both_fail": 1336,
+            "both_win": 91,
+            "candidate_only": 52,
+            "baseline_only": 57
+          },
+          "exact_p": 0.701811182064683
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 108.0,
+          "candidate_wins": 149.0,
+          "net_gain": 41,
+          "paired": {
+            "both_fail": 1368,
+            "both_win": 89,
+            "candidate_only": 60,
+            "baseline_only": 19
+          },
+          "exact_p": 4.194042408924102e-06
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 152,
+          "candidate_wins": 145,
+          "net_gain": -7,
+          "paired": {
+            "both_fail": 1353,
+            "both_win": 114,
+            "candidate_only": 31,
+            "baseline_only": 38
+          },
+          "exact_p": 0.4703685318581444
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 118.0,
+          "candidate_wins": 145,
+          "net_gain": 27,
+          "paired": {
+            "both_fail": 1343,
+            "both_win": 70,
+            "candidate_only": 75,
+            "baseline_only": 48
+          },
+          "exact_p": 0.018693425409254057
+        }
+      }
+    }
+  },
+  "states": 7448,
+  "families": 1536,
+  "numpy_state_inferences": 7448,
+  "raw_terminal_files": 4067,
+  "stage_counts": {
+    "first_card": 1536,
+    "boss": 1184,
+    "conditional_card": 4728
+  },
+  "mixed_outcome_states": {
+    "first_card": 233,
+    "boss": 198,
+    "conditional_card": 494
+  },
+  "optimizer_updates": 6075,
+  "selected_steps": [
+    25,
+    25,
+    25
+  ],
+  "optimizer_seconds": 29.647470372903626,
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "completion_sha256": "950707720ecd3b6ba171e01d1eeb046da05b75cc295e17c51e9c3775a547272e",
+  "controller_exit_sha256": "eaccb5e16e2a698a9bc83e0e7f6cff43e96c4a3bdf7397d1c582dd7eed861038",
+  "review_script_sha256": "c1639a9bfe9b0f8516b0d9617e74e4bf2956c0327032e5590d6d6d39daa0bd19",
+  "limits": "These historical-family folds are development data. Nested selection protects outer labels within this experiment but does not erase prior study exposure. Recorded scopes do not measure a complete repeatedly changed natural policy or final50% unseen acceptance. No new games or sampling."
+}

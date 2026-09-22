@@ -1,0 +1,37 @@
+{
+  "experiment": "E151",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e150-parent-prior-20260922-01",
+  "data_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e148-alternative-ranking-20260922-01",
+  "created_at": "2026-09-22T05:00:00.483351+00:00",
+  "training": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "seed": 2026092248
+  },
+  "checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "training_timeout_seconds": 3600,
+  "question": "Does selecting training duration by inner-family generalization remedy the E150 memorization gap?",
+  "partition": "Preserve E73 outer3fold. Inside each outer fitting partition, SHA256(E151-inner:seed) mod5==0 defines inner validation; all other fitting families train the inner model. Outer validation never participates in that choice. Descendants stay with their family.",
+  "selection": "One inner run of2000 updates. Measure the family/stage/branch balanced within-state squared loss at0,25,50,100,250,500,1000,2000 steps. Select minimum loss, earlier exact ties. Step0 represents unchanged-parent scores. Do not use terminal win counts or outer outcomes to pick a step.",
+  "refit": "Restart from the E150 initialization and train on all outer fitting families for the chosen number of updates. Full public features, learned one-scalar parent offset, optimizer, sampling and seeds match E150. Selecting2000 must reproduce the existing E150 tensors bit-for-bit. Save inner splits, complete loss curves, selection, final model and outer results.",
+  "evidence": "E148/E150 training first-card results saturate their measured fit ceilings while outer families fail. This motivates a learning-curve test, not an established diagnosis that any particular shorter duration helps.",
+  "gate": "Retain original screen: first_card and boss_then_card each gain20/1536 versus parent with descriptive paired p<.025. Compare with E150 fixed2000. No alternative loss metric, checkpoint grid expansion, outer threshold tuning or automatic adoption.",
+  "limits": "These historical-family folds are development data. Nested selection protects outer labels within this experiment but does not erase prior study exposure. Recorded scopes do not measure a complete repeatedly changed natural policy or final50% unseen acceptance. No new games or sampling."
+}
