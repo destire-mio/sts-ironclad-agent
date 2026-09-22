@@ -1,0 +1,33 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E162",
+  "parent_wins": 12.0,
+  "alternative_wins": 12.0,
+  "gains": 1,
+  "losses": 1,
+  "hindsight_available_wins": 13.0,
+  "families": 32,
+  "branches": 64,
+  "source_parent_options": {
+    "smith": 32
+  },
+  "paired_outcomes": {
+    "(1.0, 1.0)": 11,
+    "(0.0, 0.0)": 19,
+    "(0.0, 1.0)": 1,
+    "(1.0, 0.0)": 1
+  },
+  "parent_controls": 32,
+  "nonintervention_nn_choices_verified": 13164,
+  "winner_continuation_repeats": 24,
+  "controller_exit_sha256": "8a74d872b979952c4e4e00e5fb8a0716583a3f141aa7cb88da827612e6f691b4",
+  "completion_sha256": "e3f7d0ead6c6260b913f53869ab466fa14b1d340ab7915f0ae8548b7b645732e",
+  "reviewer_sha256": "7f5e8d1a54814dedc96358aaaa35f597966920c94d601fcfa4cd2cff5c852f91",
+  "optimizer_updates": 0,
+  "production_adoption": false,
+  "limits": "Only32 outcome-unfiltered eligible old Act4 campfire roots. No trained policy or natural-population win rate. Native trace and frozen-parent checks reuse the admitted collector verifier; no claim of an independent simulator implementation.",
+  "root_review_sha256": "03c97e8856a9872508d57871e12795d61f5502b6ade570f83b596673a954242c",
+  "scoped_learning_started": false,
+  "sampling_expansion": false,
+  "decision": "Do not prioritize or expand this campfire-only pilot. Only one of32 measured families has a better alternative; nineteen lose under both choices. Do not turn this hindsight limit into a population bound or train a large model to memorize one successful exception."
+}
