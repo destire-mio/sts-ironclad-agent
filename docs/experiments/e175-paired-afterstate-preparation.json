@@ -1,0 +1,71 @@
+{
+  "status": "complete_reviewed",
+  "registration_sha256": "429f197891782b902f85d265f147159436f8a8597d6fd98be8490e67b4a051b6",
+  "data_review": {
+    "status": "complete_reviewed",
+    "experiment": "E175",
+    "actual_afterstate_rows": 6264,
+    "fixed_parent_pairs": 18759,
+    "initial_natural_families": 1536,
+    "changed_comparison_labels": 570,
+    "changed_states": 190,
+    "warm_weight_checks": 6,
+    "independent_menu_checks": 96,
+    "maximum_numpy_error": 8.940696716308594e-08,
+    "held_family_guards": 3,
+    "discarded_fixture_updates": 8,
+    "source_scope_review_reused": true,
+    "source_scope_sha256": "48b17288e57d88b213722c87355650825e85010ca23d62ef3db6ae0445290c55",
+    "data_completion_sha256": "0900e389248d0021f936d32fbb4233a2dd5d41fc93d11785b82689936d4a7078",
+    "reviewer_sha256": "dd5e74606bf892a0ec6635cf1b426fb6ab438d3e56adc6b618ed09ecd3b72b87",
+    "optimizer_candidate_updates": 0,
+    "new_games": 0,
+    "new_native_replays": 0,
+    "policy_adoption": false
+  },
+  "label_audit": {
+    "status": "complete",
+    "states": 6264,
+    "pairs": 18759,
+    "families": 1536,
+    "label_audit": {
+      "changed_states": 190,
+      "parent_optimism": 190,
+      "alternative_optimism": 0
+    },
+    "old_to_fixed_parent_differences": {
+      "all": {
+        "0->0": 17114,
+        "-1->0": 485,
+        "1->1": 494,
+        "-1->-1": 581,
+        "0->1": 85
+      },
+      "initial": {
+        "0->0": 3754,
+        "-1->0": 485,
+        "1->1": 78,
+        "-1->-1": 206,
+        "0->1": 85
+      },
+      "later": {
+        "0->0": 13360,
+        "1->1": 416,
+        "-1->-1": 375
+      }
+    },
+    "fixed_continuation_pair_counts": {
+      "-1": 581,
+      "0": 17599,
+      "1": 579
+    },
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "focused_tests_passed": 11,
+  "test_files": [
+    "tests/test_heart_paired_afterstate_value.py",
+    "tests/test_heart_parent_state_value.py"
+  ],
+  "limits": "Source native acquisition/input proofs are reused by hash. This phase ran no new native replay or game;8 test updates were discarded. No policy result."
+}

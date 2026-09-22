@@ -1,0 +1,91 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E174",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 10000,
+      "held_brier": 0.08017084541366046,
+      "baseline_brier": 0.08773966570559665,
+      "inner_baseline_brier": 0.07816390409343775
+    },
+    {
+      "fold": 1,
+      "selected_steps": 5000,
+      "held_brier": 0.06521575295364145,
+      "baseline_brier": 0.07488438081899328,
+      "inner_baseline_brier": 0.08107170674160866
+    },
+    {
+      "fold": 2,
+      "selected_steps": 2000,
+      "held_brier": 0.05892887420879638,
+      "baseline_brier": 0.0636799239468375,
+      "inner_baseline_brier": 0.07920900780285192
+    }
+  ],
+  "held_brier": 0.0681051575253661,
+  "baseline_brier": 0.07543465682380913,
+  "prediction_gate_passed": false,
+  "value_optimizer_updates": 77000,
+  "independent_inner_checkpoints": 24,
+  "independent_held_predictions": 24576,
+  "maximum_numpy_error": 1.8395920897695817e-09,
+  "family_roles_and_fit_only_baselines_verified": true,
+  "same_roles_and_held_draws_as_binary_control": true,
+  "data_review_sha256": "4f37a7556d0f14a6df188839842589656a50c1fd3454c802d52dfc538b8f050a",
+  "controller_exit_sha256": "a494578dd3ee6eee469bad5acff6f0edeb4801c91258315abc8580980981d9f3",
+  "learning_completion_sha256": "9d49eab96f675c15d8b05e77f002cbe6dd500caba6359d07e88d2a6bbc288eec",
+  "reviewer_sha256": "c264976cbaeebb142cba546face3e7c5e905b8fa5d0cc44a3350ff44df745c70",
+  "new_games": 0,
+  "actor_optimizer_updates": 0,
+  "auxiliary_optimizer_updates": 0,
+  "policy_adoption": false,
+  "limits": "State prediction under the frozen parent, not an action-selection model or natural/unseen policy win rate. All states remain grouped by the original family.",
+  "registration_sha256": "fb5d4da762793b5d0a01a57f69420364f6ea71ba897991a84a20704e7927bc3c",
+  "learning": {
+    "status": "complete",
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 10000,
+        "held_brier": 0.08017084520542994,
+        "baseline_brier": 0.08773966570559676,
+        "inner_baseline_brier": 0.07816390409343782
+      },
+      {
+        "fold": 1,
+        "selected_steps": 5000,
+        "held_brier": 0.06521575269289315,
+        "baseline_brier": 0.07488438081899318,
+        "inner_baseline_brier": 0.08107170674160877
+      },
+      {
+        "fold": 2,
+        "selected_steps": 2000,
+        "held_brier": 0.05892887487425469,
+        "baseline_brier": 0.06367992394683741,
+        "inner_baseline_brier": 0.07920900780285187
+      }
+    ],
+    "held_brier": 0.06810515759085926,
+    "baseline_brier": 0.07543465682380912,
+    "prediction_gate_passed": false,
+    "value_optimizer_updates": 77000,
+    "auxiliary_optimizer_updates": 0,
+    "actor_optimizer_updates": 0,
+    "new_games": 0,
+    "policy_adoption": false,
+    "trainable_parameters": 795397,
+    "categories": [
+      "non_heart_Act1",
+      "non_heart_Act2",
+      "non_heart_Act3_including_act3_only",
+      "non_heart_Act4",
+      "Heart"
+    ],
+    "limits": "Terminal type is extra supervision; only Heart probability selects stopping and measures prediction. No floor reward, action policy or unseen win-rate claim."
+  },
+  "relative_brier_improvement": 0.09716355329304893,
+  "decision": "Close categorical terminal supervision below its original 10 percent prediction gate. No policy adopted; no new games or budget/grid extension."
+}
