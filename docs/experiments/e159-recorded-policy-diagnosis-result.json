@@ -1,0 +1,87 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E159",
+  "aggregate": {
+    "fit": {
+      "assigned": 3072,
+      "status": {
+        "known_nonwin": 2744,
+        "known_heart_win": 297,
+        "unknown_unrecorded_action": 31
+      },
+      "parent_wins": 298,
+      "observed_graph_best_wins": 816
+    },
+    "held": {
+      "assigned": 1536,
+      "status": {
+        "known_nonwin": 1376,
+        "known_heart_win": 149,
+        "unknown_unrecorded_action": 11
+      },
+      "parent_wins": 149,
+      "observed_graph_best_wins": 408
+    }
+  },
+  "held_paths_verified": 1536,
+  "held_path_choices_verified": 207298,
+  "all_held_changes_are_unrecorded": true,
+  "natural_trace_checks": {
+    "assigned": 128,
+    "checked_outside_actions": 17556,
+    "fully_covered": 126,
+    "unrecorded_choice": 2
+  },
+  "original_partial_matches": true,
+  "completion_sha256": "b7981fdb1a764dfa7cfa5d466799cadd5e4d23da5b246a8c5a95e93d13f06885",
+  "reviewer_sha256": "469ec2fd255514a7320ffb7e9f0a3c88350e59d2439e4580edd294d87e7c9429",
+  "limits": "All held graph paths and128 natural prefixes rechecked. Fit rows have family/outcome accounting checks; full fit paths were not saved. Neural inference for every graph path is not independently rerun; E158 natural-policy review and E159 all-branch NumPy probe are separate evidence.",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "production_adoption": false,
+  "report": {
+    "status": "complete",
+    "experiment": "E159",
+    "aggregate": {
+      "fit": {
+        "assigned": 3072,
+        "status": {
+          "known_nonwin": 2744,
+          "known_heart_win": 297,
+          "unknown_unrecorded_action": 31
+        },
+        "parent_wins": 298,
+        "observed_graph_best_wins": 816
+      },
+      "held": {
+        "assigned": 1536,
+        "status": {
+          "known_nonwin": 1376,
+          "known_heart_win": 149,
+          "unknown_unrecorded_action": 11
+        },
+        "parent_wins": 149,
+        "observed_graph_best_wins": 408
+      }
+    },
+    "natural_trace_checks": {
+      "assigned": 128,
+      "fully_covered": 126,
+      "unrecorded_choice": 2,
+      "checked_outside_actions": 17556
+    },
+    "new_games": 0,
+    "optimizer_updates": 0,
+    "new_training_rollouts": 0,
+    "production_adoption": false,
+    "limits": "Fit counts are two model appearances per family; held has one. Unknown choices have no outcome here. Graph best is hindsight within recorded transitions, not a policy win rate."
+  },
+  "root_review_sha256": "be390b7a4088d9eb5de1d7afc20bcac9b2a440b3180ab42ee0f87a16c9fdc76c",
+  "process_exit_code": 0,
+  "observed_processes_absent": [
+    75522,
+    75547,
+    75548,
+    75549
+  ]
+}
