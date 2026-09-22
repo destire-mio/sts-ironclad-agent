@@ -1,0 +1,123 @@
+{
+  "status": "complete",
+  "experiment": "E159-supervision",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e158-parent-preserving-20260922-01",
+  "source_learning_sha256": "811cdcb1461e6b60b6694e1ca5e1c73310499be0d819e62a9d21e0a743178702",
+  "source_runner_sha256": "c1430e5dec3418ea649c02c2cb68c1161deb44f7c2bad4f353052840561f9ee5",
+  "sampler_sha256": "747f3c04f0891b3255861f4bfa988d6e7113337ea0b1d5a7bf832222133404f9",
+  "script_sha256": "416163158fea7376a9e7287ec7e4b15803bc7c6c4cc4dec46abe0d8b65fcd590",
+  "independent_forward_sha256": "10c2ef5a4275d7cc3541879fca169abc8ad858cda5bc43adc320ff57aa553691",
+  "reconstructed_draws": [
+    {
+      "fold": 0,
+      "role": "inner_fit",
+      "draws": 256000,
+      "alternative_teacher_draws": 4765,
+      "distinct_alternative_teacher_states": 205,
+      "expected_alternative_probability": 0.01856522348325627
+    },
+    {
+      "fold": 0,
+      "role": "refit",
+      "draws": 32000,
+      "alternative_teacher_draws": 630,
+      "distinct_alternative_teacher_states": 232,
+      "expected_alternative_probability": 0.019876665565466356
+    },
+    {
+      "fold": 0,
+      "role": "inner_validation",
+      "draws": 8192,
+      "alternative_teacher_draws": 195,
+      "distinct_alternative_teacher_states": 68,
+      "expected_alternative_probability": 0.024691358024691357
+    },
+    {
+      "fold": 1,
+      "role": "inner_fit",
+      "draws": 256000,
+      "alternative_teacher_draws": 5087,
+      "distinct_alternative_teacher_states": 246,
+      "expected_alternative_probability": 0.0196234420578096
+    },
+    {
+      "fold": 1,
+      "role": "refit",
+      "draws": 32000,
+      "alternative_teacher_draws": 654,
+      "distinct_alternative_teacher_states": 245,
+      "expected_alternative_probability": 0.020615287028227083
+    },
+    {
+      "fold": 1,
+      "role": "inner_validation",
+      "draws": 8192,
+      "alternative_teacher_draws": 193,
+      "distinct_alternative_teacher_states": 61,
+      "expected_alternative_probability": 0.024517475221700575
+    },
+    {
+      "fold": 2,
+      "role": "inner_fit",
+      "draws": 256000,
+      "alternative_teacher_draws": 5619,
+      "distinct_alternative_teacher_states": 243,
+      "expected_alternative_probability": 0.02212631867379093
+    },
+    {
+      "fold": 2,
+      "role": "refit",
+      "draws": 32000,
+      "alternative_teacher_draws": 660,
+      "distinct_alternative_teacher_states": 252,
+      "expected_alternative_probability": 0.021794027228809836
+    },
+    {
+      "fold": 2,
+      "role": "inner_validation",
+      "draws": 8192,
+      "alternative_teacher_draws": 162,
+      "distinct_alternative_teacher_states": 51,
+      "expected_alternative_probability": 0.020453289110005525
+    }
+  ],
+  "branch_choices": {
+    "fit": {
+      "parent_is_best": {
+        "appearances": 13998,
+        "parent_choices": 13998,
+        "unrecorded_choices": 0,
+        "recorded_best_choices": 13998
+      },
+      "improvement_available": {
+        "appearances": 898,
+        "parent_choices": 898,
+        "unrecorded_choices": 0,
+        "recorded_best_choices": 0,
+        "best_alternative_minus_parent_score_sum": -3036.8577300310135,
+        "best_alternative_exceeds_parent_score": 0
+      }
+    },
+    "held": {
+      "parent_is_best": {
+        "appearances": 6999,
+        "parent_choices": 6999,
+        "unrecorded_choices": 0,
+        "recorded_best_choices": 6999
+      },
+      "improvement_available": {
+        "appearances": 449,
+        "parent_choices": 449,
+        "unrecorded_choices": 0,
+        "recorded_best_choices": 0,
+        "best_alternative_minus_parent_score_sum": -1607.9861179590225,
+        "best_alternative_exceeds_parent_score": 0
+      }
+    }
+  },
+  "numpy_maximum_score_error": 3.814697265625e-06,
+  "verified_branch_choices": 22344,
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "limits": "Draw counts are reconstructed from frozen RNG and sampler, not new training. Fit branch appearances count each family twice; held once. Recorded maximum outcomes use hidden future knowledge and are not policy win rates."
+}

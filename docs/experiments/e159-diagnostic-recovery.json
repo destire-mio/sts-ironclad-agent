@@ -1,0 +1,22 @@
+{
+  "status": "diagnostic_repair_running",
+  "experiment": "E159",
+  "first_attempt": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-01",
+  "second_attempt": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02",
+  "first_attempt_fault": {
+    "status": "interrupted_for_diagnostic_repair",
+    "pid": 74681,
+    "reason": "Object of type int64 is not JSON serializable",
+    "partial_fold": 0,
+    "source_script_sha256": "4226e8c9beb826d02f4ceccf6b7b763c2f43ee9cb2cd3c5264d2e1faeb6330e9",
+    "new_games": 0,
+    "training_updates": 0,
+    "models_unchanged": true
+  },
+  "retained_partial_sha256": "70be189902eb7cb974e8fa948cc11c6dfef470c18b3cb7ddb471404d64e7fc8c",
+  "second_registration_sha256": "cd0761203fb37d64ea1be5db5030b3319bc90bb90180d84c6f46dbf336211703",
+  "runner_sha256": "ec2993c30ee68abe23bb5ad96d86a5cb8ece3c956d54f21ba71a4b1416939b79",
+  "change": "Convert changed-choice counts to Python integers before JSON encoding; run three frozen folds in separate single-thread spawned workers, with unchanged dense inference and an exact fold-0 comparison to retained output. No retraining or new games.",
+  "source_snapshot": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02/program/e159-recorded-policy-diagnosis.py",
+  "second_attempt_complete": false
+}
