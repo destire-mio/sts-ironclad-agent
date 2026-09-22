@@ -24,5 +24,18 @@
   "formal_optimizer_steps": 0,
   "new_training_rollouts": 0,
   "natural_evaluation_games": 0,
-  "production_adoption": false
+  "production_adoption": false,
+  "launch_preparation": {
+    "status": "prepared_not_launched",
+    "review_arithmetic_checks": 2,
+    "actual_admission_refused": "E153 result-review.json is absent; no registration, learning, store or controller launch created.",
+    "source_conversion_was_confirmed_live": {
+      "controller_pid": 60427,
+      "extraction_pid": 60428,
+      "observed_utc": "2026-09-22T06:25:06Z",
+      "stage": "E153_control_1024"
+    },
+    "formal_optimizer_steps": 0
+  },
+  "launch_preparation_sha256": "90832ebae8f3d295ce352d62dbe72286047bbf676d733b0d91a3bc25037f0c94"
 }
