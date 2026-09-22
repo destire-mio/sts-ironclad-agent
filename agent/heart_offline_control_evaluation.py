@@ -13,6 +13,9 @@ T,C,V,E=O.T,O.C,O.V,O.E
 
 
 def load_policy(checkpoint, x):
+    if checkpoint['model_type'] == 'shared_item_heart_improvement':
+        from heart_item_transfer import ItemPolicy
+        return ItemPolicy(checkpoint, x)
     if checkpoint['model_type'] == 'structured_heart_improvement':
         from heart_structured_comparison import StructuredPolicy
         return StructuredPolicy(checkpoint, x)
@@ -27,13 +30,17 @@ def independent_choice(policy,checkpoint,gc,observation,actions,descriptors):
     row=dict(observation=policy.x.R.sparse([observation[i] for i in policy.spec['observations']]),
              descriptors=[policy.x.R.sparse(d) for d in descriptors])
     structured = checkpoint['model_type'] == 'structured_heart_improvement'
-    improvement = checkpoint['model_type'] == 'expected_heart_improvement' or structured
+    shared_item = checkpoint['model_type'] == 'shared_item_heart_improvement'
+    improvement = checkpoint['model_type'] == 'expected_heart_improvement' or structured or shared_item
     width = policy.spec['width'] + (policy.spec['descriptor_dim'] if improvement else 0)
     values=np.zeros((len(actions),width),dtype=np.float32)
     for i in range(len(actions)):
         for j,v in C.sparse_features(row,i,policy.spec):values[i,j]=v
     if improvement:
         values[:, policy.spec['width']:] = np.asarray(descriptors[parent], dtype=np.float32)
+    if shared_item:
+        from heart_item_transfer import numpy_route
+        values = numpy_route(values, checkpoint['item_layout'])
     weights=checkpoint['actor_state']
     for layer in ('input','tail.1','tail.3'):
         values=values @ weights[layer+'.weight'].numpy().T+weights[layer+'.bias'].numpy()

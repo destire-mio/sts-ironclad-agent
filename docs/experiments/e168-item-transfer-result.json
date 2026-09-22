@@ -1,0 +1,47 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E168",
+  "selected_steps": [
+    100,
+    100,
+    100
+  ],
+  "actor_optimizer_steps": 6300,
+  "inner_checkpoints_verified": 24,
+  "maximum_numpy_loss_error": 2.185844905078227e-07,
+  "independent_branch_choices": 22344,
+  "branch_screen": {
+    "fit": {
+      "states": 14896,
+      "improvement_available": 898,
+      "parent_choices": 14896,
+      "known_gains": 0,
+      "known_losses": 0,
+      "known_ties": 14896
+    },
+    "held": {
+      "states": 7448,
+      "improvement_available": 449,
+      "parent_choices": 7448,
+      "known_gains": 0,
+      "known_losses": 0,
+      "known_ties": 7448
+    }
+  },
+  "eligible_for_natural_evaluation": false,
+  "controller_exit_sha256": "cb00f4c09b6e23a4151324e54f01762bed8d8f89289247ccd5b9a41774d07184",
+  "learning_completion_sha256": "4a13f3744e8b4547acf8f579c9a68022e5178071bb0dcb873253f4534df69252",
+  "reviewer_sha256": "f3c396c288f8bbe4a38dc3592efde16805600603f90be139e4d1ea7bc9f2d7d6",
+  "new_training_rollouts": 0,
+  "natural_games": 0,
+  "production_adoption": false,
+  "limits": "Fit branch appearances count each family twice; held once. Recorded-graph outcomes are hindsight and branch scores are not full-game or unseen win rates.",
+  "natural_entry_rejection": {
+    "status": "passed",
+    "reason": "learning screen/review failed",
+    "evaluation_directory_created": false,
+    "natural_games": 0,
+    "training_review_sha256": "c384e8da0eff5aae4f65d5d4cb2419e3384e93dc34657475095c114e6f2f1169"
+  },
+  "decision": "reject; same selected all-parent behavior as E165; no natural games or adoption; no new stopping grid"
+}

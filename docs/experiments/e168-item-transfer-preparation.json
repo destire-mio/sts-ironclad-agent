@@ -1,0 +1,52 @@
+{
+  "experiment": "E168",
+  "preflight": {
+    "status": "passed",
+    "nonparent_comparisons": 22311,
+    "branching_states": 7448,
+    "class_counts": {
+      "0": 20130,
+      "-1": 1570,
+      "1": 611
+    },
+    "auxiliary_rows": 234836,
+    "auxiliary_candidate_item_rows": 0,
+    "auxiliary_identity_route_checks": 128,
+    "weight_coverage": [
+      {
+        "fold": 0,
+        "candidate_max_nondecay_change": 0.0,
+        "owned_max_nondecay_change": 0.6076647639274597
+      },
+      {
+        "fold": 1,
+        "candidate_max_nondecay_change": 0.0,
+        "owned_max_nondecay_change": 0.5175398588180542
+      },
+      {
+        "fold": 2,
+        "candidate_max_nondecay_change": 0.0,
+        "owned_max_nondecay_change": 0.7153500914573669
+      }
+    ],
+    "item_scopes": {
+      "card": 8,
+      "boss": 8
+    },
+    "actual_native_public_inputs": 16,
+    "independent_nonzero_policy_choices": 16,
+    "old_policy_controls": 16,
+    "outer_family_rejected": true,
+    "fixture_optimizer_updates": 8,
+    "fixture_checkpoint_saved": false,
+    "formal_optimizer_updates": 0,
+    "new_games": 0,
+    "model_parameters": 795267,
+    "runner_sha256": "fbc93972d2e61f09608327ef887122d1008a2b4c53df64e242efbce712e21d60",
+    "script_sha256": "a81a21db5dcfa454d98a150a61ef8299e1f5545a2a40395416d1928a09bdf327"
+  },
+  "mechanism_regression_checks": 12,
+  "registration_sha256": "32a81d25b6c17d37f12374c5e8dde8882e8a4077422c5bbb014dda440a91d7cb",
+  "comparison": "E165 same auxiliary weights,3-class Heart loss,labels,family roles,update caps,selection,support and gates; candidate item identity shares inventory coordinates.",
+  "limits": "Input/gradient coverage checks are not evidence of a policy improvement. Token addition represents feature sharing, not a simulated afterstate."
+}
