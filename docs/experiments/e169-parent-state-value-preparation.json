@@ -1,0 +1,42 @@
+{
+  "experiment": "E169",
+  "data_report": {
+    "status": "complete",
+    "states": 2039965,
+    "families": 1536,
+    "winning_labels": 269081,
+    "losing_labels": 1770884,
+    "baseline_cells": 256,
+    "input_columns": 2896,
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "data_review": {
+    "status": "complete_reviewed",
+    "states": 2039965,
+    "families": 1536,
+    "all_targets_and_cells_recomputed": true,
+    "native_states": 36,
+    "native_states_by_act": {
+      "1": 12,
+      "2": 12,
+      "3": 8,
+      "4": 4
+    },
+    "native_full_terminal_routes": 3,
+    "maximum_numpy_error": 0.0,
+    "held_state_target_rejected": true,
+    "fixture_optimizer_updates": 8,
+    "fixture_checkpoint_saved": false,
+    "formal_optimizer_updates": 0,
+    "new_games": 0,
+    "data_completion_sha256": "604c2571b1ed66298f52041922d76bd441811fb6d452a39da8eb4f18334d12c9",
+    "controller_exit_sha256": "a2c618413887219a147fab9a1b0cad2192ccea467b9837d03d5f628c1ab14ded",
+    "reviewer_sha256": "4a60da3d5afbd4777611ed898f76cae7fbd5efe0795badd8e84a9805a14305aa",
+    "runner_sha256": "ef1b629de694da9d6ae5481406c0b8664e1ef78c9e120b1ff64e913caac2fc97"
+  },
+  "mechanism_checks_passed": 4,
+  "registration_sha256": "ed0f21b8e3034072358814117d57f4136ff4cdfce96e82522d6d6317f11045eb",
+  "runner_sha256": "ef1b629de694da9d6ae5481406c0b8664e1ef78c9e120b1ff64e913caac2fc97",
+  "limits": "Prepared fixed-parent outcome prediction, not a decision policy or win-rate result;8 fixture updates were discarded."
+}

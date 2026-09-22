@@ -1,0 +1,43 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E169_target_audit",
+  "state_targets": 2039965,
+  "families": 1536,
+  "natural_parent_wins": 149,
+  "winning_state_labels": 269081,
+  "losing_state_labels": 1770884,
+  "parent_edges_checked": 2039965,
+  "acyclic_parent_successors_checked": 2016144,
+  "natural_start_targets_checked": 1536,
+  "by_act": {
+    "1": {
+      "states": 367885,
+      "parent_winning_states": 36810
+    },
+    "2": {
+      "states": 1090351,
+      "parent_winning_states": 107555
+    },
+    "3": {
+      "states": 529151,
+      "parent_winning_states": 102322
+    },
+    "4": {
+      "states": 52578,
+      "parent_winning_states": 22394
+    }
+  },
+  "states_where_observed_max_differs_from_parent": 14846,
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "production_adoption": false,
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01/exact-observed-values.npz": "e58ead2de055ce2118bbfa8139b87a1ae284ffd57e20413e9f6a111246617b63",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01/result-review.json": "04ffa1bfe166f14c274d986d2a9650f7a28f2ca6166e50de8c6224e2afb90478",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e154-offline-control-20260922-01/store/completion.json": "955139df02fc45035f9418d711acb477113d4dd96eaa44ce0b72b2534d0ba9c5",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/fit-references.json": "036a7980c78ed1e19b5ec294e3351761b5e3982a688bb478810a4f050794a2a7",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-failure-profile/docs/experiments/e169-parent-target-audit.py": "0a4aef4cb70ab8935cce544bcea42393d0febcb7888976b2b7a16ba73439cd27"
+  },
+  "next": "Test observation-only Heart state-value learning on these fixed-parent outcomes, with family isolation, fitted-only scalar baselines and a frozen recipe before updates. No action choice or afterstate policy is admitted by this audit.",
+  "limits": "These are2,039,965 correlated states within1,536 old families, not independent games. Labels follow the frozen parent, not the observed hindsight maximum. Hidden state/RNG participate only in reference graph identity and labels; value inputs must use the existing public observation whitelist."
+}
