@@ -8,18 +8,8 @@ import numpy as np
 import torch
 
 
-def main(root):
-    sys.path.insert(0,str(root/'program'));import heart_exact_control as F
-    E=F.E;O=F.O;torch.set_num_threads(1);torch.set_num_interop_threads(1);plan=F.registered(root)
-    source=Path(plan['learning_source']);diagnosis=Path(plan['diagnosis'])
-    end=E.read(root/'control/exit.json');assert end['status']=='complete' and end['exit_code']==0
-    for stage in end['stages']:
-        path=root/(stage['stage']+'-execution')/'pipeline-process-exit.json'
-        assert E.sha(path)==stage['proof_sha256']
-        value=E.read(path);assert value['exit_code']==0 and value['cleanup']['clean']
-    E.proof(root/'learning','completion.json');E.proof(root/'evaluation','completion-verification.json')
-    spec=importlib.util.spec_from_file_location('independent',Path(__file__).with_name('e154-review.py'))
-    M=importlib.util.module_from_spec(spec);spec.loader.exec_module(M)
+def training_review(root,plan,F,M):
+    E=F.E;O=F.O;source=Path(plan['learning_source']);diagnosis=Path(plan['diagnosis'])
     store=O.Store(source/'store');exact=np.load(diagnosis/'exact-observed-values.npz',allow_pickle=False)
     selected=[];checkpoints=0;maximum_error=0.;candidates={}
     base=torch.load(Path(plan['runtime'])/'model.pt',map_location='cpu',weights_only=True)
@@ -57,6 +47,53 @@ def main(root):
         assert M.same(cp['base_checkpoint'],base)
     learning=E.read(root/'learning/report.json');assert learning['actor_optimizer_steps']==6000+sum(selected)
     assert learning['critic_optimizer_steps']==0
+    result=dict(status='training_reviewed',selected_actor_steps=selected,
+        inner_checkpoints_recomputed=checkpoints,maximum_numpy_stopping_error=maximum_error,
+        actor_optimizer_steps=learning['actor_optimizer_steps'],critic_optimizer_steps=0,
+        registration_sha256=E.sha(root/'registration.json'),learning_completion_sha256=E.sha(root/'learning/completion.json'),
+        exact_values_sha256=E.sha(diagnosis/'exact-observed-values.npz'),reviewer_sha256=E.sha(__file__),
+        independent_forward_sha256=E.sha(M.__file__))
+    return result,candidates
+
+
+def main(root,training_only=False):
+    sys.path.insert(0,str(root/'program'));import heart_exact_control as F
+    E=F.E;O=F.O;torch.set_num_threads(1);torch.set_num_interop_threads(1);plan=F.registered(root)
+    source=Path(plan['learning_source']);diagnosis=Path(plan['diagnosis'])
+    E.proof(root/'learning','completion.json')
+    train=E.read(root/'train-execution/pipeline-process-exit.json')
+    assert train['exit_code']==0 and train['cleanup']['clean']
+    if not training_only:
+        original_end=E.read(root/'control/exit.json');control=root/'control'
+        if original_end['status']!='complete':
+            control=root/'evaluation-control'
+            continuation=E.read(control/'registration.json')
+            for path,digest in continuation['hashes'].items():assert E.sha(path)==digest
+            assert 'FileExistsError' in original_end['error'] and 'status.json' in original_end['error']
+        end=E.read(control/'exit.json');assert end['status']=='complete' and end['exit_code']==0
+        if control.name=='evaluation-control':
+            assert end['original_handoff_failure_sha256']==E.sha(root/'control/exit.json') and end['repeated_training_updates']==0
+        for stage in end['stages']:
+            path=root/(stage['stage']+'-execution')/'pipeline-process-exit.json'
+            assert E.sha(path)==stage['proof_sha256']
+            value=E.read(path);assert value['exit_code']==0 and value['cleanup']['clean']
+        E.proof(root/'evaluation','completion-verification.json')
+    spec=importlib.util.spec_from_file_location('independent',Path(__file__).with_name('e154-review.py'))
+    M=importlib.util.module_from_spec(spec);spec.loader.exec_module(M)
+    cache=root/'training-review.json'
+    if cache.exists():
+        training=E.read(cache)
+        assert training['status']=='training_reviewed' and training['reviewer_sha256']==E.sha(__file__)
+        assert training['registration_sha256']==E.sha(root/'registration.json')
+        assert training['learning_completion_sha256']==E.sha(root/'learning/completion.json')
+        assert training['exact_values_sha256']==E.sha(diagnosis/'exact-observed-values.npz')
+        assert training['independent_forward_sha256']==E.sha(M.__file__)
+        candidates={fold:torch.load(root/'learning'/f'fold-{fold}'/'candidate.pt',map_location='cpu',weights_only=True) for fold in range(3)}
+    else:
+        training,candidates=training_review(root,plan,F,M);E.write(cache,training)
+    if training_only:print(training);return
+    selected=training['selected_actor_steps'];checkpoints=training['inner_checkpoints_recomputed']
+    maximum_error=training['maximum_numpy_stopping_error'];learning=E.read(root/'learning/report.json')
     old=E.read(source/'protocol.json');graph=Path(old['source']);continuous=Path(E.read(graph/'protocol.json')['continuous_source'])
     seeds=O.T.pilot_seeds(E.read(continuous/'fit-roles.json'));refs=E.indexed(E.read(continuous/'fit-references.json'),'seed','reference')
     x=O.C.D.runtime(plan['runtime']);policies={fold:O.ControlPolicy(cp,x) for fold,cp in candidates.items()}
@@ -83,10 +120,12 @@ def main(root):
     result=dict(status='complete_reviewed',experiment='E156',**{k:v for k,v in report.items() if k!='status'},
         inner_checkpoints_recomputed=checkpoints,maximum_numpy_stopping_error=maximum_error,
         selected_actor_steps=selected,actor_optimizer_steps=learning['actor_optimizer_steps'],
-        verified_outside_choices=outside,controller_exit_sha256=E.sha(root/'control/exit.json'),
+        verified_outside_choices=outside,controller_exit_sha256=E.sha(control/'exit.json'),
+        original_handoff_failure_sha256=E.sha(root/'control/exit.json') if control.name=='evaluation-control' else None,
         completion_sha256=E.sha(root/'evaluation/completion-verification.json'),reviewer_sha256=E.sha(__file__))
     E.write(root/'result-review.json',result);print(result)
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--study',type=Path,required=True);main(p.parse_args().study.resolve())
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--study',type=Path,required=True)
+    p.add_argument('--training-only',action='store_true');a=p.parse_args();main(a.study.resolve(),a.training_only)

@@ -1,0 +1,54 @@
+{
+  "status": "trained_reviewed_evaluation_running",
+  "training": {
+    "status": "training_reviewed",
+    "selected_actor_steps": [
+      1000,
+      2000,
+      500
+    ],
+    "inner_checkpoints_recomputed": 24,
+    "maximum_numpy_stopping_error": 2.654102406740577e-07,
+    "actor_optimizer_steps": 9500,
+    "critic_optimizer_steps": 0,
+    "registration_sha256": "a5bb7d0a7b11a18e8b3338dd9f04832832467d88d5271938bd9cccb8e7ab2a27",
+    "learning_completion_sha256": "6be30ce38ef414e5e9b386a512a6c5320ba290984336bdc046cfb3fa7bd85f08",
+    "exact_values_sha256": "e58ead2de055ce2118bbfa8139b87a1ae284ffd57e20413e9f6a111246617b63",
+    "reviewer_sha256": "49a9c0b53041232a6ffd9ba7ee9fa1ebabefaabcb1ff4f1fc4297bd07d275f78",
+    "independent_forward_sha256": "10c2ef5a4275d7cc3541879fca169abc8ad858cda5bc43adc320ff57aa553691"
+  },
+  "continuation_launch": {
+    "status": "launched_evaluation_only",
+    "pid": 71536,
+    "at": "2026-09-22T08:04:38.661890+00:00",
+    "training_updates_repeated": 0,
+    "original_exit_sha256": "cf23f5755cc7b8e135d090dbe23164ed02b3788a91707ca625237c28ae6ea7a3",
+    "controller_registration_sha256": "7eec14da1cb39a2dd3ed891b5464d76e383be7589a23d97e2b60395f9be8425f",
+    "launch_script_sha256": "6ee1ec6150f749a859017e83865740f832d8f3dca7ab1d68441eecc147669f55"
+  },
+  "original_failure": "The immutable original controller used exclusive creation for a mutable status.json. Training completed cleanly; evaluation-execution was created empty, with no evaluation process started.",
+  "repair": "Future controllers overwrite their status file. This frozen study retains its failed controller/exit and unchanged models. A new owned evaluation-only controller accepts only that failure plus complete clean training and an unstarted evaluation; it reuses the empty execution directory.",
+  "checks": {
+    "before_fixed_fixture": "handoff failure reproduced; cleanup control passed",
+    "after": "2 passed",
+    "fixture_correction": "The first before/after fixture omitted study registration.json; both failed before reaching the target. Those logs are retained; adding that required input produced the target before/after comparison."
+  },
+  "formal_actor_optimizer_steps": 9500,
+  "repeated_training_updates": 0,
+  "new_training_rollouts": 0,
+  "natural_evaluation_complete": false,
+  "production_adoption": false,
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/control/exit.json": "cf23f5755cc7b8e135d090dbe23164ed02b3788a91707ca625237c28ae6ea7a3",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/train-execution/pipeline-process-exit.json": "b97e36b756ec5013a1813f0a19c55378a5436e3cee7d417247b879b089d6759a",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/learning/completion.json": "6be30ce38ef414e5e9b386a512a6c5320ba290984336bdc046cfb3fa7bd85f08",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/training-review.json": "281e5a09cb6ca5fc41611fb1a1cd1858996da8be603f49e17df1467dbf798245",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/controller-before-check.log": "3c19f4a64db65e72c9a9ca03133e6c94af7f75c0ff1cc48bbf4376cfda610a2d",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/controller-after-check.log": "03fe7919b8c1495467a7efbf633a07e7f7e8c506701e6d9a893505e044063bae",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/controller-before-check-2.log": "c09f7fb0457069d01f0187fff1f927612395675de4cc7790d2229cb419476969",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01/controller-after-check-2.log": "e310cdd63a8c70c913b47759eb9ee7c1db83be874db234095ac21000c3912e0d",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-control-diagnosis/tests/test_heart_exact_controller.py": "2767fe43a25efe7b77c15187e055197a4cc7af38dfe6ac753e9d2dbf87991635",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-control-diagnosis/docs/experiments/e156-controller.py": "6d9bad190e0a2998f19e3f38512c677b2ea1ad1d34578b0f58ee0120387449e9",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-control-diagnosis/docs/experiments/e156-evaluation-controller.py": "6ee1ec6150f749a859017e83865740f832d8f3dca7ab1d68441eecc147669f55"
+  }
+}

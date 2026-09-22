@@ -1,6 +1,7 @@
 """Own E156 actor fitting and complete natural evaluation."""
 from datetime import datetime,timezone
 import importlib.util
+import json
 import os
 from pathlib import Path
 import stat
@@ -25,7 +26,7 @@ def main():
         E.write(ROOT/'started.json',dict(at=datetime.now(timezone.utc).isoformat(),pid=os.getpid()))
         for name,budget in [('train',plan['training_timeout_seconds']),('evaluate',plan['evaluation_timeout_seconds']+120)]:
             F.registered(STUDY);directory=STUDY/(name+'-execution');directory.mkdir()
-            E.write(ROOT/'status.json',dict(stage=name,completed=[r['stage'] for r in outcomes]))
+            (ROOT/'status.json').write_text(json.dumps(dict(stage=name,completed=[r['stage'] for r in outcomes]))+'\n')
             result=owner.run_owned(directory,[sys.executable,'-u',str(STUDY/'program/heart_exact_control.py'),name,
                 '--study',str(STUDY)],dict(os.environ,OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1'),
                 budget,E.sha(STUDY/'registration.json'))
