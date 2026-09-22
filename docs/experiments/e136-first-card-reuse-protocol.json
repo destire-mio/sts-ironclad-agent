@@ -1,0 +1,27 @@
+{
+  "experiment": "E136",
+  "created_at": "2026-09-22T01:15:15.385655+00:00",
+  "cancelled_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e133-early-card-learning-20260922-01",
+  "pilot": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e131-early-card-scope-20260921-01/execution",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e133-early-card-learning-20260922-01/data/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "question": "Can the fully saved first-card stage support a complete single-decision learning problem without collecting any more games?",
+  "scope": "First Act first fight final card reward only; all subsequent outside decisions and MCTS stay at the parent. Every original legal card action and family remains. No downstream-relic outcome substitution.",
+  "fit_families": 1536,
+  "historical_label_holdout_families": 1024,
+  "new_first_card_branches_to_audit": 10072,
+  "pilot_first_card_branches_reused": 168,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "workers": 8,
+  "torch_threads": 1,
+  "audit_seconds": 14400,
+  "admission": "Closed E133 cancellation and preserved hashes required. Complete menus and exact E133 roles, row qualification/original controls, all new branch terminal/state/RNG/NN audits, 42 existing pilot family proofs. Any fault rejects all learning admission, never becomes death. The joint study remains closed.",
+  "selection": "Complete predefined first-stage cohort, not a successful/completed-family subset of the unfinished relic stage. No seed replacement or label-dependent filtering.",
+  "learning_handoff": "Root designs and runs early-card learning after this independent single-decision admission succeeds. Source preparation/audit does not evaluate or select a candidate and has no optimizer entry.",
+  "limits": "10,072 file presences are only a reuse lead until this audit passes. Old historical holdout is development, not final unseen acceptance. Original-game alignment remains excluded."
+}

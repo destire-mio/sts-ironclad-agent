@@ -1,0 +1,65 @@
+{
+  "experiment": "E136",
+  "status": "prepared_audit_launched",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "families": {
+    "fit": 1536,
+    "historical_label_holdout": 1024
+  },
+  "first_card_leaves": 10240,
+  "new_routes_to_replay": 10072,
+  "reused_verified_pilot_routes": 168,
+  "prepared": {
+    "status": "complete",
+    "families": 2560,
+    "first_card_leaves": 10240,
+    "new_sampling_games": 0,
+    "reused_pilot_families": 42,
+    "requires_independent_family_audits": 2518
+  },
+  "entry_checks": {
+    "status": "passed",
+    "focused_checks": 4,
+    "one_fixed_first_fit_family_all_card_actions_replayed": true,
+    "missing_duplicate_wrong_family_wrong_action_and_changed_hash_rejected": true,
+    "cancelled_E133_still_closed": true,
+    "formal_optimizer_updates": 0,
+    "new_sampling_games": 0,
+    "complete_label_admission": false,
+    "registration_sha256": "09c9fbdecd15b8129a4f0e99b90cf6f692400e4f29e77b3ee92a49bedb21cc62"
+  },
+  "source_roles_independently_match_original_groups": true,
+  "source_joint_study_remains_closed": true,
+  "live_controller_and_durable_stdio_verified": true,
+  "launch": {
+    "pid": 25902,
+    "at": "2026-09-22T01:16:25.990865+00:00",
+    "registration_sha256": "055dc76cace86b0738e69e73f8388b0396cd2ea1d5b8e3d006224d21dd44a600"
+  },
+  "waiting": {
+    "owner": "existing Luna task",
+    "interval_seconds": 1200,
+    "automation_id": "luna",
+    "config_readback_verified": true,
+    "takeover_acknowledged": true
+  },
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "complete_learning_admission": false,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "proofs": {
+    "runs/heart-e136-first-card-reuse-20260922-01/protocol.json": "885ce797350a903ac084ecc7b8430ef759d6470f664896641df24e674b35c6c1",
+    "runs/heart-e136-first-card-reuse-20260922-01/registration.json": "09c9fbdecd15b8129a4f0e99b90cf6f692400e4f29e77b3ee92a49bedb21cc62",
+    "runs/heart-e136-first-card-reuse-20260922-01/entry-verification.json": "bbe1e8e979e74b80684cce006c24fc9a08446b462217f3c094afc579f1e4de0e",
+    "runs/heart-e136-first-card-reuse-20260922-01/preparation.json": "79ea87074297fd258ea13a77cf90e14a4fd8bc3899501a6e0a41b7227fa0d88b",
+    "runs/heart-e136-first-card-reuse-20260922-01/source-lineage-verification.json": "23b4e4327b6f3aae68c2481783bf0c1fe411803537770e0cdb75503fe4e265c3",
+    "runs/heart-e136-first-card-reuse-20260922-01/control/registration.json": "055dc76cace86b0738e69e73f8388b0396cd2ea1d5b8e3d006224d21dd44a600",
+    "runs/heart-e136-first-card-reuse-20260922-01/control/launch.json": "640e9998306a086529d7998b68360b3df290dd8eb79ba483a6806cd529c7a4ea",
+    "runs/heart-e136-first-card-reuse-20260922-01/prepare-execution/pipeline-process-exit.json": "bed5810b1e1a866e7df26c906c7fdde9daca72cae93ecca4fedf563d2189e677"
+  }
+}
