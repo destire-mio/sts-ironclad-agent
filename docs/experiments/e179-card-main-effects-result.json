@@ -1,0 +1,153 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E179",
+  "folds": [
+    {
+      "fold": 0,
+      "inner": {
+        "fit_pairs": 9691,
+        "fit_families": 793,
+        "active_features": 112,
+        "fitted_coefficients": 224,
+        "normal_equation_maximum_residual": 8.881784197001252e-16,
+        "fit_mse": [
+          0.0062499456184955966,
+          0.011273853361770704
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.006815772525442873,
+          0.009041867374167902
+        ],
+        "zero_baseline_mse": [
+          0.006886439524839629,
+          0.0089111328125
+        ]
+      },
+      "final": {
+        "fit_pairs": 12224,
+        "fit_families": 1009,
+        "active_features": 114,
+        "fitted_coefficients": 228,
+        "normal_equation_maximum_residual": 8.881784197001252e-16,
+        "fit_mse": [
+          0.006288747610563173,
+          0.01083327468419745
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.007125399252616638,
+          0.011760320866382809
+        ],
+        "zero_baseline_mse": [
+          0.00711532765630991,
+          0.01171875
+        ]
+      }
+    },
+    {
+      "fold": 1,
+      "inner": {
+        "fit_pairs": 10345,
+        "fit_families": 838,
+        "active_features": 118,
+        "fitted_coefficients": 236,
+        "normal_equation_maximum_residual": 4.440892098500626e-16,
+        "fit_mse": [
+          0.006538183103003244,
+          0.011606974916010584
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.006275815949826343,
+          0.004604724159758197
+        ],
+        "zero_baseline_mse": [
+          0.006364826596847322,
+          0.0045166015625
+        ]
+      },
+      "final": {
+        "fit_pairs": 12873,
+        "fit_families": 1051,
+        "active_features": 118,
+        "fitted_coefficients": 236,
+        "normal_equation_maximum_residual": 1.1102230246251565e-15,
+        "fit_mse": [
+          0.006524144206117868,
+          0.010581709991467517
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.006925361051827443,
+          0.0125251471591512
+        ],
+        "zero_baseline_mse": [
+          0.006884458281740459,
+          0.012451171875
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "inner": {
+        "fit_pairs": 9850,
+        "fit_families": 811,
+        "active_features": 118,
+        "fitted_coefficients": 236,
+        "normal_equation_maximum_residual": 3.885780586188048e-16,
+        "fit_mse": [
+          0.006348592629200282,
+          0.013015626685430742
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.007509510712090326,
+          0.008445058089916191
+        ],
+        "zero_baseline_mse": [
+          0.007534315365461758,
+          0.0081787109375
+        ]
+      },
+      "final": {
+        "fit_pairs": 12267,
+        "fit_families": 1012,
+        "active_features": 118,
+        "fitted_coefficients": 236,
+        "normal_equation_maximum_residual": 5.551115123125783e-16,
+        "fit_mse": [
+          0.006541514362567285,
+          0.011965010855598809
+        ],
+        "evaluation_pairs": 8192,
+        "evaluation_mse": [
+          0.006312607258861247,
+          0.008934912277814538
+        ],
+        "zero_baseline_mse": [
+          0.006336825786922556,
+          0.0086669921875
+        ]
+      }
+    }
+  ],
+  "held_mse": 0.008930624644442312,
+  "zero_baseline_mse": 0.008862254297912153,
+  "relative_improvement": -0.007714780487202422,
+  "auxiliary_gate_passed": false,
+  "closed_form_fits": 6,
+  "gradient_optimizer_updates": 0,
+  "new_games": 0,
+  "policy_adoption": false,
+  "all_features_native_card_count_units_verified": true,
+  "all_fit_family_weights_sum_to_one": true,
+  "original_E178_held_draws_and_baselines_verified": true,
+  "source_review_sha256": "e8148430fad8bade192757d1fc37084b1cf91004fa8c5fc5d8d551cea0957514",
+  "runner_sha256": "b66b65f7ef3de220329ae43b76cc8a51c7fdaa4addc6115f5b44a07f0f025c09",
+  "limits": "Relative effects at the first subsequent audited mapped combat, including intervening parent decisions and possible event fights. This low-dimensional additive control omits deck/relic interactions. Source labels and all families are historical development data; zero gradient updates must not be described as no fitting. No new game, Heart policy or acceptance result.",
+  "registration_sha256": "f8e7e9cf5e1a8e351476c6103d71b9bcf0a5df4fde78989b71fc47755be31c4c",
+  "completion_sha256": "2b4c56637138cc6e43efe290bcb3d5df86fc8c74ad19c7511f474fd32af17dd9",
+  "root_payload_verification": true,
+  "decision": "Reject fixed main-effect recipe; no regularization scan, Heart transfer or policy adoption."
+}

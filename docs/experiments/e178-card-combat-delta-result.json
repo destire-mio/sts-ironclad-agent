@@ -1,0 +1,59 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E178",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 0,
+      "held_mse": [
+        0.007115327659122119,
+        0.01171875
+      ],
+      "zero_baseline_mse": [
+        0.007115327659122119,
+        0.01171875
+      ]
+    },
+    {
+      "fold": 1,
+      "selected_steps": 250,
+      "held_mse": [
+        0.006827484479455833,
+        0.012364167402298249
+      ],
+      "zero_baseline_mse": [
+        0.006884458301170168,
+        0.012451171875
+      ]
+    },
+    {
+      "fold": 2,
+      "selected_steps": 0,
+      "held_mse": [
+        0.006336825795906042,
+        0.0086669921875
+      ],
+      "zero_baseline_mse": [
+        0.006336825795906042,
+        0.0086669921875
+      ]
+    }
+  ],
+  "held_mse": 0.008838257920713707,
+  "zero_baseline_mse": 0.008862254303116388,
+  "auxiliary_gate_passed": false,
+  "auxiliary_optimizer_updates": 15250,
+  "independent_checkpoints": 18,
+  "independent_held_pairs": 24576,
+  "maximum_numpy_error": 1.7631130392464778e-09,
+  "heart_optimizer_updates": 0,
+  "new_games": 0,
+  "policy_adoption": false,
+  "data_review_sha256": "f78a1fe03f476e48f3f7dff7641cbf3d330f63c3bedcd00be17c5e4ec81cca1e",
+  "learning_completion_sha256": "d22dfcbac6ed098eb91b22d57d881dd9f31f5cdc7f2405d3c4b76d4048859b73",
+  "controller_exit_sha256": "0aa1fbc9660aba4fbab189c962b4e9cf9e7dde0f026f021c1bf1b9f7e1190469",
+  "reviewer_sha256": "8a567a8fd96c2b43fac1f7a28db21e1ccdc233ec9519db853b7de107b5f1ef47",
+  "limits": "Auxiliary mapped-combat effect prediction only, not an adopted Heart policy or natural/unseen result.",
+  "relative_mse_improvement": 0.0027077063670180035,
+  "decision": "Reject auxiliary transfer. Mean held effect MSE improves0.27percent; two folds select zero updates. No Heart transfer, games or budget/threshold grid."
+}

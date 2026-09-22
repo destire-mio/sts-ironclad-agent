@@ -1,0 +1,12 @@
+{
+  "experiment": "E179",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e178-card-combat-delta-20260923-01",
+  "ridge_strength": 1.0,
+  "new_games": 0,
+  "hypothesis": "E178 overfits the dense paired targets. Test whether a fixed low-dimensional additive card effect retains cross-family signal without contextual network memorization. This is a diagnostic comparator, not a new Heart policy.",
+  "features": "Difference of actual afterstate per-card/upgraded inventory counts in native card units, plus maximum-HP difference in2HP units for Bowl. No context interactions, seed, RNG or future inputs. Unobserved fit feature columns remain exactly zero. Deterministic feature extraction and its units checked.",
+  "labels_and_roles": "Exactly18682 covered E178 paired combat targets and all1536 families. Train equal total family weight, then equal covered-menu weight, then equal covered-alternative weight. Original inner/full roles; evaluate identical8192 validation/held draws per fold. Missing77 pairs remain missing.",
+  "objective": "For each of2 output channels, solve weighted squared error plus ridge_strength1 times squared coefficients. Each family has total weight1. Solve once for inner and once for full fit per fold, no regularization grid or checkpoint selection. Six closed-form parameter fits are training, despite zero gradient optimizer updates.",
+  "gate": "Same auxiliary screen as E178: mean held two-channel MSE at most90percent of zero-difference baseline, every fold better. A pass only supports a stable additive auxiliary effect, not a Heart policy or adopted model; a failure closes this fixed main-effect recipe without a regularization scan.",
+  "limits": "Relative effects at the first subsequent audited mapped combat, including intervening parent decisions and possible event fights. This low-dimensional additive control omits deck/relic interactions. Source labels and all families are historical development data; zero gradient updates must not be described as no fitting. No new game, Heart policy or acceptance result."
+}

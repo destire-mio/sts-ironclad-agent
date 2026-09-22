@@ -1,0 +1,283 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E178_readonly_fitting_diagnosis",
+  "folds": [
+    {
+      "fold": 0,
+      "fit_draws": 8192,
+      "checkpoints": [
+        {
+          "step": 0,
+          "fit_mse": [
+            0.006679136599561888,
+            0.0106201171875
+          ],
+          "fit_zero_baseline": [
+            0.006679136599561888,
+            0.0106201171875
+          ],
+          "fit_relative_improvement": 0.0,
+          "validation_mse": [
+            0.006886439467052696,
+            0.0089111328125
+          ],
+          "validation_zero_baseline": [
+            0.006886439467052696,
+            0.0089111328125
+          ],
+          "validation_relative_improvement": 0.0
+        },
+        {
+          "step": 250,
+          "fit_mse": [
+            0.006565535296271369,
+            0.010475978442607342
+          ],
+          "fit_zero_baseline": [
+            0.006679136599561888,
+            0.0106201171875
+          ],
+          "fit_relative_improvement": 0.014898911326218123,
+          "validation_mse": [
+            0.006855398813058855,
+            0.009052290465433543
+          ],
+          "validation_zero_baseline": [
+            0.006886439467052696,
+            0.0089111328125
+          ],
+          "validation_relative_improvement": -0.00697050135242816
+        },
+        {
+          "step": 1000,
+          "fit_mse": [
+            0.006299427314632837,
+            0.009049453978295425
+          ],
+          "fit_zero_baseline": [
+            0.006679136599561888,
+            0.0106201171875
+          ],
+          "fit_relative_improvement": 0.11274315748765473,
+          "validation_mse": [
+            0.007097542067640461,
+            0.010474846961187723
+          ],
+          "validation_zero_baseline": [
+            0.006886439467052696,
+            0.0089111328125
+          ],
+          "validation_relative_improvement": -0.11234743654711354
+        },
+        {
+          "step": 5000,
+          "fit_mse": [
+            0.005492071360795865,
+            0.007191469823951963
+          ],
+          "fit_zero_baseline": [
+            0.006679136599561888,
+            0.0106201171875
+          ],
+          "fit_relative_improvement": 0.26681570541303645,
+          "validation_mse": [
+            0.010468868909811135,
+            0.015264911231497535
+          ],
+          "validation_zero_baseline": [
+            0.006886439467052696,
+            0.0089111328125
+          ],
+          "validation_relative_improvement": -0.628970558635565
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "fit_draws": 8192,
+      "checkpoints": [
+        {
+          "step": 0,
+          "fit_mse": [
+            0.007240352719838033,
+            0.01171875
+          ],
+          "fit_zero_baseline": [
+            0.007240352719838033,
+            0.01171875
+          ],
+          "fit_relative_improvement": 0.0,
+          "validation_mse": [
+            0.00636482660411275,
+            0.0045166015625
+          ],
+          "validation_zero_baseline": [
+            0.00636482660411275,
+            0.0045166015625
+          ],
+          "validation_relative_improvement": 0.0
+        },
+        {
+          "step": 250,
+          "fit_mse": [
+            0.0071374824527311405,
+            0.011694900419544761
+          ],
+          "fit_zero_baseline": [
+            0.007240352719838033,
+            0.01171875
+          ],
+          "fit_relative_improvement": 0.006683852576500726,
+          "validation_mse": [
+            0.006302097121078987,
+            0.0045403054422195055
+          ],
+          "validation_zero_baseline": [
+            0.00636482660411275,
+            0.0045166015625
+          ],
+          "validation_relative_improvement": 0.0035864412939837775
+        },
+        {
+          "step": 1000,
+          "fit_mse": [
+            0.006907446500733389,
+            0.010714278370234682
+          ],
+          "fit_zero_baseline": [
+            0.007240352719838033,
+            0.01171875
+          ],
+          "fit_relative_improvement": 0.07054014468050673,
+          "validation_mse": [
+            0.006300224944425281,
+            0.004627429664651572
+          ],
+          "validation_zero_baseline": [
+            0.00636482660411275,
+            0.0045166015625
+          ],
+          "validation_relative_improvement": -0.004248196262135906
+        },
+        {
+          "step": 5000,
+          "fit_mse": [
+            0.005508534687700998,
+            0.007859104148678032
+          ],
+          "fit_zero_baseline": [
+            0.007240352719838033,
+            0.01171875
+          ],
+          "fit_relative_improvement": 0.2949223898453973,
+          "validation_mse": [
+            0.007397722540190443,
+            0.008425798269627194
+          ],
+          "validation_zero_baseline": [
+            0.00636482660411275,
+            0.0045166015625
+          ],
+          "validation_relative_improvement": -0.45417683851174995
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "fit_draws": 8192,
+      "checkpoints": [
+        {
+          "step": 0,
+          "fit_mse": [
+            0.007005241024105974,
+            0.0145263671875
+          ],
+          "fit_zero_baseline": [
+            0.007005241024105974,
+            0.0145263671875
+          ],
+          "fit_relative_improvement": 0.0,
+          "validation_mse": [
+            0.007534315296652494,
+            0.0081787109375
+          ],
+          "validation_zero_baseline": [
+            0.007534315296652494,
+            0.0081787109375
+          ],
+          "validation_relative_improvement": 0.0
+        },
+        {
+          "step": 250,
+          "fit_mse": [
+            0.006958079901158306,
+            0.014393631277054036
+          ],
+          "fit_zero_baseline": [
+            0.007005241024105974,
+            0.0145263671875
+          ],
+          "fit_relative_improvement": 0.008355020750222542,
+          "validation_mse": [
+            0.0075234423093206715,
+            0.008231683375811372
+          ],
+          "validation_zero_baseline": [
+            0.007534315296652494,
+            0.0081787109375
+          ],
+          "validation_relative_improvement": -0.0026792707115861347
+        },
+        {
+          "step": 1000,
+          "fit_mse": [
+            0.006107239249267392,
+            0.012503186294390225
+          ],
+          "fit_zero_baseline": [
+            0.007005241024105974,
+            0.0145263671875
+          ],
+          "fit_relative_improvement": 0.13566950685893386,
+          "validation_mse": [
+            0.00810658864065772,
+            0.008470185642636352
+          ],
+          "validation_zero_baseline": [
+            0.007534315296652494,
+            0.0081787109375
+          ],
+          "validation_relative_improvement": -0.05497019073666465
+        },
+        {
+          "step": 5000,
+          "fit_mse": [
+            0.005032759845377219,
+            0.0066603949413703315
+          ],
+          "fit_zero_baseline": [
+            0.007005241024105974,
+            0.0145263671875
+          ],
+          "fit_relative_improvement": 0.45693072845136096,
+          "validation_mse": [
+            0.008886400180927012,
+            0.010501087642296625
+          ],
+          "validation_zero_baseline": [
+            0.007534315296652494,
+            0.0081787109375
+          ],
+          "validation_relative_improvement": -0.23384811648087545
+        }
+      ]
+    }
+  ],
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "checkpoint_reselection": false,
+  "original_gate_remains_failed": true,
+  "source_review_sha256": "e8148430fad8bade192757d1fc37084b1cf91004fa8c5fc5d8d551cea0957514",
+  "runner_sha256": "78153cd1da295583b0afc70e27a314b7edecaa108c3be914f6850eb6546b5fc9",
+  "limits": "Post-hoc diagnostic of saved weights on fixed inner fitting draws and original validation. No extra updates, held-result choice, or policy gain claim."
+}
