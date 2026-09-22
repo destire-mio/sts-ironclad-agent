@@ -1,0 +1,126 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E175",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 500,
+      "decision_enabled": true,
+      "held": {
+        "states": 2158,
+        "parent_wins": 194,
+        "chosen_wins": 196,
+        "available_wins": 355,
+        "changed": 1572,
+        "gained": 52,
+        "lost": 50,
+        "families": 527,
+        "family_mean_gain": 0.00683111954459203
+      },
+      "fit": {
+        "states": 4106,
+        "parent_wins": 283,
+        "chosen_wins": 321,
+        "available_wins": 547,
+        "changed": 2836,
+        "gained": 104,
+        "lost": 66,
+        "families": 1009,
+        "family_mean_gain": 0.013082259663032707
+      }
+    },
+    {
+      "fold": 1,
+      "selected_steps": 0,
+      "decision_enabled": true,
+      "held": {
+        "states": 1960,
+        "parent_wins": 153,
+        "chosen_wins": 145,
+        "available_wins": 276,
+        "changed": 1276,
+        "gained": 34,
+        "lost": 42,
+        "families": 485,
+        "family_mean_gain": 0.0016494845360824737
+      },
+      "fit": {
+        "states": 4304,
+        "parent_wins": 324,
+        "chosen_wins": 373,
+        "available_wins": 626,
+        "changed": 2963,
+        "gained": 107,
+        "lost": 58,
+        "families": 1051,
+        "family_mean_gain": 0.01313035204567079
+      }
+    },
+    {
+      "fold": 2,
+      "selected_steps": 2000,
+      "decision_enabled": true,
+      "held": {
+        "states": 2146,
+        "parent_wins": 130,
+        "chosen_wins": 155,
+        "available_wins": 271,
+        "changed": 1470,
+        "gained": 52,
+        "lost": 27,
+        "families": 524,
+        "family_mean_gain": 0.012595419847328246
+      },
+      "fit": {
+        "states": 4118,
+        "parent_wins": 347,
+        "chosen_wins": 364,
+        "available_wins": 631,
+        "changed": 2855,
+        "gained": 86,
+        "lost": 69,
+        "families": 1012,
+        "family_mean_gain": 0.011264822134387353
+      }
+    }
+  ],
+  "all_states": {
+    "states": 6264,
+    "parent_wins": 477,
+    "chosen_wins": 496,
+    "available_wins": 902,
+    "changed": 4318,
+    "gained": 138,
+    "lost": 119,
+    "families": 1536,
+    "family_mean_gain": 0.007161458333333333
+  },
+  "initial": {
+    "states": 1536,
+    "parent_wins": 149,
+    "chosen_wins": 141,
+    "available_wins": 281,
+    "changed": 1125,
+    "gained": 35,
+    "lost": 43,
+    "families": 1536,
+    "family_mean_gain": -0.005208333333333333
+  },
+  "family_bootstrap_95": [
+    0.0013020833333333328,
+    0.013151041666666669
+  ],
+  "learning_gate_passed": false,
+  "value_optimizer_updates": 17500,
+  "independent_inner_checkpoints": 21,
+  "independent_final_choices": 18792,
+  "maximum_numpy_error": 1.1920928955078125e-07,
+  "data_review_sha256": "69410f575329d771b4afd131b8669476a1023c588b6ac3922826b7b171e0e28c",
+  "controller_exit_sha256": "94342c1bfcdb436775671941a4fde2c8ab8b96491e0ed7eb5a4049d78ffed6bc",
+  "learning_completion_sha256": "c4a65925fc9a6c312a7154a1609fda8084859ca49d2437270d69f6dc54bdd610",
+  "reviewer_sha256": "d7a1551bed43f0446fa86427401884c9c50d5cfdd2a1abf6d2f9b58cb90ddfdb",
+  "new_games": 0,
+  "policy_adoption": false,
+  "limits": "Old-family conditional fixed-continuation decision screen; not natural or unseen policy performance.",
+  "decision": "Close this pair recipe below its registered gate. Initial1536 choices lose8 net; conditional family-weighted gains do not override that failed requirement. No live adapter, new games or policy adoption."
+}

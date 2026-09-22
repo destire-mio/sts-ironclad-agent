@@ -19,6 +19,12 @@ RECIPE = dict(steps=5000, batch_size=128, learning_rate=.0003, weight_decay=.000
     gradient_norm=1., calibration_weight=1., seed=2026092375,
     checkpoints=[0, 100, 250, 500, 1000, 2000, 5000], parent_margin=1e-6,
     bootstrap_draws=10000, bootstrap_seed=2026092475)
+PAIR_ONLY_RECIPE = dict(RECIPE, calibration_weight=0.)
+
+
+def recipe_for(experiment):
+    E.require(experiment in ('E175', 'E176'), 'unregistered afterstate objective')
+    return RECIPE if experiment == 'E175' else PAIR_ONLY_RECIPE
 
 
 def registered(root):
@@ -27,8 +33,22 @@ def registered(root):
     for path, digest in reg['hashes'].items():
         E.require(E.sha(path) == digest, 'bound source changed: '+path)
     plan = E.read(root / 'protocol.json')
-    E.require(plan['experiment'] == 'E175' and plan['recipe'] == RECIPE
+    E.require(plan['recipe'] == recipe_for(plan['experiment'])
               and plan['new_training_rollouts'] == 0, 'paired-afterstate plan changed')
+    if plan['experiment'] == 'E176':
+        previous = Path(plan['preceding_study'])
+        result = E.read(previous / 'training-review.json')
+        gradient = E.read(previous / 'gradient-diagnosis.json')
+        E.require(result['status'] == 'complete_reviewed' and not result['learning_gate_passed'],
+                  'missing reviewed calibrated comparison')
+        E.require(gradient['status'] == 'complete_reviewed'
+                  and gradient['training_review_sha256'] == E.sha(previous / 'training-review.json'),
+                  'missing objective gradient diagnosis')
+        old = E.read(previous / 'protocol.json')
+        for key in ('learning_source', 'diagnosis', 'runtime', 'natural_source', 'value_source',
+                    'ranking_source', 'input_columns', 'scope', 'targets', 'inputs', 'sampling',
+                    'stopping', 'learning_gate'):
+            E.require(plan[key] == old[key], 'pair-only control changed '+key)
     source = Path(plan['value_source'])
     control = E.read(source / 'protocol.json')
     review = E.read(source / 'training-review.json')
@@ -207,17 +227,18 @@ def selection_key(row):
     return (round(row['family_mean_gain'], 12), -row['changed'], -row['step'])
 
 
-def fit(model, data, families, steps, fold, checkpoint=None):
-    optimizer = torch.optim.AdamW(model.parameters(), lr=RECIPE['learning_rate'], weight_decay=RECIPE['weight_decay'])
-    rng = np.random.default_rng(RECIPE['seed']+fold)
+def fit(model, data, families, steps, fold, checkpoint=None, recipe=None):
+    recipe = RECIPE if recipe is None else recipe
+    optimizer = torch.optim.AdamW(model.parameters(), lr=recipe['learning_rate'], weight_decay=recipe['weight_decay'])
+    rng = np.random.default_rng(recipe['seed']+fold)
     allowed = {f['seed'] for f in families}
     if checkpoint: checkpoint(0, model)
     for step in range(1, steps+1):
-        pairs, calibration = data.sample(families, rng.random((RECIPE['batch_size'], 4)))
+        pairs, calibration = data.sample(families, rng.random((recipe['batch_size'], 4)))
         features, labels = data.batch(pairs, calibration, allowed)
-        loss = paired_loss(model(features).squeeze(-1), labels, RECIPE['calibration_weight'])
-        O.gradient_step(loss, optimizer, model, RECIPE['gradient_norm'])
-        if checkpoint and step in RECIPE['checkpoints']: checkpoint(step, model)
+        loss = paired_loss(model(features).squeeze(-1), labels, recipe['calibration_weight'])
+        O.gradient_step(loss, optimizer, model, recipe['gradient_norm'])
+        if checkpoint and step in recipe['checkpoints']: checkpoint(step, model)
 
 
 def screen(choices):
@@ -238,6 +259,7 @@ def screen(choices):
 
 def train(root):
     plan = registered(root)
+    recipe = plan['recipe']
     reviewed = E.read(root / 'data-review.json')
     E.require(reviewed['status'] == 'complete_reviewed'
               and reviewed['data_completion_sha256'] == E.sha(root / 'data/completion.json'), 'pair data not reviewed')
@@ -264,17 +286,17 @@ def train(root):
             summary = summarize(choices)
             curve.append(dict(step=step, **summary))
             torch.save(current.state_dict(), directory / f'inner-{step}.pt')
-        fit(model, data, inner, RECIPE['steps'], fold, checkpoint)
+        fit(model, data, inner, recipe['steps'], fold, checkpoint, recipe)
         chosen = max(curve, key=selection_key)
         enabled = round(chosen['family_mean_gain'], 12) > 0
         selected = chosen['step'] if enabled else 0
         model = warm_model(source, width, fold, False)
-        fit(model, data, families, selected, fold)
+        fit(model, data, families, selected, fold, recipe=recipe)
         torch.save(dict(model_type='paired_afterstate_heart_value', prediction_only=True,
             decision_enabled=enabled, model_state=model.state_dict(), feature_spec=store.spec,
             input_columns=plan['input_columns'], paired_width=width,
             provenance=dict(fold=fold, fit_families=roles['fit'], selected_steps=selected,
-                value_sha256=E.sha(source / 'learning' / f'fold-{fold}/value.pt'), recipe=RECIPE)), directory / 'value.pt')
+                value_sha256=E.sha(source / 'learning' / f'fold-{fold}/value.pt'), recipe=recipe)), directory / 'value.pt')
         fit_choices = score(model, data, data.subset(families), set(roles['fit']), enabled)
         held = score(model, data, data.subset(held), set(roles['held']), enabled)
         held_choices.extend(held)
@@ -287,9 +309,9 @@ def train(root):
         reports.append(report)
         print(dict(fold=fold, selected_steps=selected, decision_enabled=enabled,
             fit_gain=report['fit']['family_mean_gain'], held_gain=report['held']['family_mean_gain']), flush=True)
-    report = dict(status='complete', experiment='E175', **screen(held_choices),
+    report = dict(status='complete', experiment=plan['experiment'], **screen(held_choices),
         folds_training=[dict(fold=r['fold'], selected_steps=r['selected_steps'], decision_enabled=r['decision_enabled']) for r in reports],
-        value_optimizer_updates=3*RECIPE['steps']+sum(r['selected_steps'] for r in reports),
+        value_optimizer_updates=3*recipe['steps']+sum(r['selected_steps'] for r in reports),
         new_games=0, auxiliary_optimizer_updates=0, policy_adoption=False,
         limits='Correlated old card afterstates with a fixed continuation, not a natural or unseen win rate. Gate passage permits separate public-effect and natural-pilot verification only.')
     E.write(out / 'report.json', report)

@@ -1,0 +1,34 @@
+{
+  "status": "complete_reviewed",
+  "registration_sha256": "29f63ca93a01632fc30f198d80ba9956765c2db7ed3fcce7e40ab42b88668cb1",
+  "data_review": {
+    "status": "complete_reviewed",
+    "experiment": "E176",
+    "actual_afterstate_rows": 6264,
+    "fixed_parent_pairs": 18759,
+    "initial_natural_families": 1536,
+    "changed_comparison_labels": 570,
+    "changed_states": 190,
+    "warm_weight_checks": 6,
+    "independent_menu_checks": 96,
+    "maximum_numpy_error": 8.940696716308594e-08,
+    "held_family_guards": 3,
+    "discarded_fixture_updates": 8,
+    "source_scope_review_reused": true,
+    "source_scope_sha256": "48b17288e57d88b213722c87355650825e85010ca23d62ef3db6ae0445290c55",
+    "data_completion_sha256": "0900e389248d0021f936d32fbb4233a2dd5d41fc93d11785b82689936d4a7078",
+    "reviewer_sha256": "d642362e66bc01ca22d082053f62cb847040735403bc4467cf14053c533c420f",
+    "optimizer_candidate_updates": 0,
+    "new_games": 0,
+    "new_native_replays": 0,
+    "policy_adoption": false
+  },
+  "focused_tests_passed": 13,
+  "new_tests": [
+    "changing discarded calibration labels cannot alter pair-only model updates or ranking",
+    "all remaining sampling, budget and selection settings match the calibrated control"
+  ],
+  "data_reused_from": "E175",
+  "candidate_optimizer_updates": 0,
+  "new_games": 0
+}

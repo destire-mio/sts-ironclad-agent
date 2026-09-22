@@ -1,0 +1,81 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E175_posthoc_gradient_diagnosis",
+  "folds": [
+    {
+      "fold": 0,
+      "batches": 64,
+      "pair_examples": 8192,
+      "informative_fraction": 0.0462646484375,
+      "pair_to_calibration_gradient_norm_quantiles": [
+        0.01275237174603263,
+        0.03167896384022158,
+        0.0712112160062684
+      ],
+      "objective_gradient_cosine_quantiles": [
+        -0.5556000388647151,
+        -0.025646811726964328,
+        0.3449438615993352
+      ],
+      "calibration_projection_in_pair_gradient_units_quantiles": [
+        -29.791565895283007,
+        -1.0687049517444274,
+        12.081905207522965
+      ],
+      "opposed_objective_batches": 34,
+      "plain_gradient_sum_would_increase_pair_loss_batches": 32
+    },
+    {
+      "fold": 1,
+      "batches": 64,
+      "pair_examples": 8192,
+      "informative_fraction": 0.051513671875,
+      "pair_to_calibration_gradient_norm_quantiles": [
+        0.015694038348078754,
+        0.03922905855430298,
+        0.07359137755432647
+      ],
+      "objective_gradient_cosine_quantiles": [
+        -0.5169628475636184,
+        -0.01878194632035221,
+        0.4427568312764904
+      ],
+      "calibration_projection_in_pair_gradient_units_quantiles": [
+        -17.93814824319032,
+        -0.4903136863261094,
+        17.132387299953077
+      ],
+      "opposed_objective_batches": 34,
+      "plain_gradient_sum_would_increase_pair_loss_batches": 25
+    },
+    {
+      "fold": 2,
+      "batches": 64,
+      "pair_examples": 8192,
+      "informative_fraction": 0.0609130859375,
+      "pair_to_calibration_gradient_norm_quantiles": [
+        0.004174962066926184,
+        0.018875736796804307,
+        0.03828526444757136
+      ],
+      "objective_gradient_cosine_quantiles": [
+        -0.44758470179071447,
+        0.005544180430346938,
+        0.5236866731419553
+      ],
+      "calibration_projection_in_pair_gradient_units_quantiles": [
+        -43.21886029896516,
+        0.13180036298312675,
+        72.7098096091604
+      ],
+      "opposed_objective_batches": 32,
+      "plain_gradient_sum_would_increase_pair_loss_batches": 31
+    }
+  ],
+  "fixed_warm_weights_verified": true,
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "runner_sha256": "154606d38dae6b29e296615b6adfd37aeb53e7a71d0b1d31aba38978d3e1c783",
+  "training_review_sha256": "46c001246cc8dc70762c4fe815d212623dcd8236dde8174b8f03e2aea9bf15a6",
+  "limits": "Same first64 training draws at each untouched inner warm start. Euclidean gradients diagnose local objective scale/conflict, not AdamW update behavior, long-run policy benefit or a causal explanation of the entire failed experiment."
+}

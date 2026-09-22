@@ -1,0 +1,88 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E175_posthoc_natural_path_diagnosis",
+  "all_families": {
+    "families": 1536,
+    "reached": 1184,
+    "parent": 149,
+    "available": 252,
+    "e170": {
+      "wins": 161,
+      "changed": 797,
+      "gained": 36,
+      "lost": 24
+    },
+    "e175": {
+      "wins": 162,
+      "changed": 805,
+      "gained": 39,
+      "lost": 26
+    }
+  },
+  "folds": {
+    "0": {
+      "families": 527,
+      "reached": 408,
+      "parent": 59,
+      "available": 98,
+      "e170": {
+        "wins": 63,
+        "changed": 287,
+        "gained": 16,
+        "lost": 12
+      },
+      "e175": {
+        "wins": 63,
+        "changed": 290,
+        "gained": 16,
+        "lost": 12
+      }
+    },
+    "1": {
+      "families": 485,
+      "reached": 369,
+      "parent": 52,
+      "available": 78,
+      "e170": {
+        "wins": 51,
+        "changed": 238,
+        "gained": 8,
+        "lost": 9
+      },
+      "e175": {
+        "wins": 51,
+        "changed": 238,
+        "gained": 8,
+        "lost": 9
+      }
+    },
+    "2": {
+      "families": 524,
+      "reached": 407,
+      "parent": 38,
+      "available": 76,
+      "e170": {
+        "wins": 47,
+        "changed": 272,
+        "gained": 12,
+        "lost": 3
+      },
+      "e175": {
+        "wins": 48,
+        "changed": 277,
+        "gained": 15,
+        "lost": 5
+      }
+    }
+  },
+  "matched_parent_path_states": 97400,
+  "all_parent_labels_equal_natural_references": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "original_gate_remains_failed": true,
+  "training_review_sha256": "46c001246cc8dc70762c4fe815d212623dcd8236dde8174b8f03e2aea9bf15a6",
+  "runner_sha256": "f052c71ac843f16f02a818c19ca17acd1e71dc114b27cb7e2795e46022ac70a4",
+  "limits": "Post-hoc one-change Act2 scope check along reviewed old parent paths. Every initial family remains in the denominator. These are looked-up fixed-continuation outcomes, not live policy or untouched-seed results.",
+  "rows_sha256": "377e837efdc6a97a6cb5a6c233c8a3491979317791415bab5133a28e03a80c12"
+}
