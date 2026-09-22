@@ -1,0 +1,14 @@
+{
+  "experiment": "E177",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e176-pair-only-afterstate-20260923-01",
+  "combat_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e164-combat-pretraining-20260922-01",
+  "hp_difference_threshold": 0.01,
+  "minimum_pair_fraction": 0.25,
+  "minimum_family_fraction": 0.25,
+  "hypothesis": "Binary final Heart differences are nonzero for only579+581 of18759 card comparisons and4.6-6.1percent of sampled training pairs. Check whether the same complete old continuations carry denser card-consequence supervision through mapped-combat resource change and survival, including Heart ties. No optimizer or simulator rollout is authorized by this audit.",
+  "scope": "Exact E175/E1766264 card menus,18759 comparisons and1536 historical families. For each actual immediate public afterstate follow only the unique frozen parent edges to the first subsequent edge admitted by the E164 combat-target audit. Independent path walks must reproduce every endpoint and family owner. Do not choose endpoints or families by favorable outcomes.",
+  "targets": "Reuse E164[(post-transition HP-pre-map HP)/pre-map maxHP, survived entire transition]. Form alternative-minus-parent targets only if both endpoints exist. A pair is informative at abs(normalized HP-change difference)>=.01 or any survival difference. Missing endpoints are counted, not invented as zero. Such future labels may supervise learning but never enter public policy features.",
+  "coverage_gate": "Before reading this audit, require informative differences in at least25percent of all18759 comparisons and at least25percent of1536 distinct families. Failure closes this target proposal without sampling; passage only permits a separately designed auxiliary card-effect learning experiment, not policy adoption or new collection.",
+  "constraints": "Keep final Heart success as the action-learning and acceptance objective. Intermediate HP/survival would be auxiliary supervision only, never a floor/death-stage reward replacing Heart. E176 failed gate remains failed. No new native replay, MCTS call, game or optimizer update.",
+  "limits": "The endpoint is the first subsequent already-audited direct mapped monster/elite/boss combat, not necessarily the next physical battle: event fights can occur before it. Parent actions between card and endpoint, different rooms, resource changes and post-combat settlement are included. These correlated targets are not isolated card-mechanics causal effects, extra independent games, or proof that denser labels improve a policy."
+}

@@ -1,0 +1,61 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E177",
+  "counts": {
+    "pairs": 18759,
+    "afterstates": 25023,
+    "missing_afterstates": 86,
+    "heart_ties": 17599,
+    "covered_pairs": 18682,
+    "resource_informative": 11333,
+    "survival_informative": 244,
+    "heart_ties_with_resource_information": 10679,
+    "same_room_kind": 18652,
+    "single_fight_both_endpoints": 18682,
+    "missing_pairs": 77
+  },
+  "families": 1536,
+  "informative_families": 1424,
+  "coverage_gate_passed": true,
+  "checked_parent_path_states": 166905,
+  "all_afterstate_endpoints_independently_walked": true,
+  "mapped_combat_distance_quantiles": [
+    0.0,
+    3.0,
+    15.0,
+    46.0
+  ],
+  "source_native_combat_proofs_reused": true,
+  "new_native_replays": 0,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "registration_sha256": "35c0d6c534f26cadda16ddced9b789021a2b04b10d040464add4b58eaed4b0fa",
+  "source_training_review_sha256": "ec23eb311ccadf1020f35768d7a869e4300ab05ae54a8eb4ae7920be224a3425",
+  "combat_source_review_sha256": "0809f0198ff066c5247b7a37782546198d09b39c19138e73110ed20517640444",
+  "runner_sha256": "214aa93e247c9c9552a5fdee428180a4b6f7ab16e62d80eea394e2b493cb1adb",
+  "limits": "The endpoint is the first subsequent already-audited direct mapped monster/elite/boss combat, not necessarily the next physical battle: event fights can occur before it. Parent actions between card and endpoint, different rooms, resource changes and post-combat settlement are included. These correlated targets are not isolated card-mechanics causal effects, extra independent games, or proof that denser labels improve a policy.",
+  "verification": {
+    "status": "complete_reviewed",
+    "source_and_output_payload_proofs": [
+      {
+        "path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e176-pair-only-afterstate-20260923-01/data",
+        "completion_sha256": "0900e389248d0021f936d32fbb4233a2dd5d41fc93d11785b82689936d4a7078"
+      },
+      {
+        "path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e170-parent-value-budget-20260923-01/data",
+        "completion_sha256": "604c2571b1ed66298f52041922d76bd441811fb6d452a39da8eb4f18334d12c9"
+      },
+      {
+        "path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e177-combat-pair-targets-20260923-01/data",
+        "completion_sha256": "cce98b5de9c5aed3f8a3f2a13c41015892a31b285b4900ee14f7d16910752937"
+      }
+    ],
+    "all18682_covered_pair_information_flags_recomputed": true,
+    "eligible_families": 1536,
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "data_completion_sha256": "cce98b5de9c5aed3f8a3f2a13c41015892a31b285b4900ee14f7d16910752937",
+  "verification_sha256": "0538db3847026964d86514756691b04c0e3462230ebf336d92de51b6b8ada832"
+}

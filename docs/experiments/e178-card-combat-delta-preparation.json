@@ -1,0 +1,25 @@
+{
+  "status": "complete_reviewed",
+  "registration_sha256": "a31c7fef3291d87445013b227045ed2bb1f52531c67416f056165ffe5f63e67b",
+  "data_review": {
+    "status": "complete_reviewed",
+    "experiment": "E178",
+    "pair_targets_recomputed": 18682,
+    "excluded_missing_pairs": 77,
+    "eligible_families": 1536,
+    "warm_checks": 6,
+    "independent_nonzero_pairs": 96,
+    "maximum_numpy_error": 2.2351741790771484e-08,
+    "held_target_rejections": 3,
+    "discarded_fixture_updates": 24,
+    "candidate_optimizer_updates": 0,
+    "new_games": 0,
+    "new_native_replays": 0,
+    "target_completion_sha256": "cce98b5de9c5aed3f8a3f2a13c41015892a31b285b4900ee14f7d16910752937",
+    "reviewer_sha256": "8a567a8fd96c2b43fac1f7a28db21e1ccdc233ec9519db853b7de107b5f1ef47"
+  },
+  "focused_tests_passed": 15,
+  "active_auxiliary_parameters": 795202,
+  "heart_optimizer_updates": 0,
+  "new_games": 0
+}
