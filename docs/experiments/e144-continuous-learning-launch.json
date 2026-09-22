@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-22T03:37:21.100232+00:00",
+  "pid": 53422,
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01",
+  "control_registration_sha256": "361d2eaa2b788f7d89e30e5ee48ceb8269baa22213a606392464ffa420643e1d",
+  "source_ready_sha256": "d7981f43ac2f721e53c2073dd2c3c41d52601efaadba1b3dcecdb0019581b095",
+  "source_completion_sha256": "e6d8d86256582f7cf7bbac42cd020cd7329fb36d62855df8b65d7dc498d89bbb",
+  "planned_optimizer_updates": 120000,
+  "planned_natural_evaluation_games": 256,
+  "new_training_rollouts": 0,
+  "production_adoption": false
+}
