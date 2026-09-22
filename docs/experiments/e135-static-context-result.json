@@ -1,0 +1,159 @@
+{
+  "experiment": "E135",
+  "status": "fit_only_complete",
+  "families": 1536,
+  "folds": 3,
+  "training_updates": 8000,
+  "out_of_fold": {
+    "static": {
+      "assigned": 1536,
+      "baseline_wins": 149,
+      "candidate_wins": 145,
+      "net_gain": -4,
+      "paired": {
+        "both_fail": 1356,
+        "candidate_only": 31,
+        "both_win": 114,
+        "baseline_only": 35
+      },
+      "exact_p": 0.7122308826373508
+    },
+    "context": {
+      "assigned": 1536,
+      "baseline_wins": 149,
+      "candidate_wins": 146,
+      "net_gain": -3,
+      "paired": {
+        "both_fail": 1341,
+        "candidate_only": 46,
+        "baseline_only": 49,
+        "both_win": 100
+      },
+      "exact_p": 0.8375560707290739
+    }
+  },
+  "static_vs_context_out_of_fold": {
+    "assigned": 1536,
+    "baseline_wins": 146,
+    "candidate_wins": 145,
+    "net_gain": -1,
+    "paired": {
+      "both_fail": 1351,
+      "both_win": 106,
+      "candidate_only": 39,
+      "baseline_only": 40
+    },
+    "exact_p": 1.0
+  },
+  "full_fit": {
+    "static": {
+      "assigned": 1536,
+      "baseline_wins": 149,
+      "candidate_wins": 149,
+      "net_gain": 0,
+      "paired": {
+        "both_fail": 1387,
+        "both_win": 149
+      },
+      "exact_p": 1.0
+    },
+    "context": {
+      "assigned": 1536,
+      "baseline_wins": 149,
+      "candidate_wins": 242,
+      "net_gain": 93,
+      "paired": {
+        "both_fail": 1281,
+        "candidate_only": 106,
+        "both_win": 136,
+        "baseline_only": 13
+      },
+      "exact_p": 2.6709648488912807e-19
+    }
+  },
+  "full_static_score_ranges": {
+    "relic": 2.8470726013183594,
+    "card": 0.9796953201293945
+  },
+  "optimizer_seconds": 22.340307959006168,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "unseen_acceptance_games": 0,
+  "limits": "Historical fit families reused for diagnosis; folds share training data, exact p is descriptive, not independent acceptance. No automatic candidate promotion.",
+  "diagnostic": {
+    "status": "complete",
+    "fit_only": true,
+    "new_optimizer_updates": 0,
+    "new_sampling_games": 0,
+    "external_holdout_evaluations": 0,
+    "all_8_checkpoint_and_scale_rechecks_passed": true,
+    "independent_stochastic_leaf_calculation_passed": true,
+    "models": {
+      "static-fold-0": {
+        "families": 527,
+        "stochastic_expected_wins": 51.940904583074435,
+        "greedy_wins": 59,
+        "changed_families": 352
+      },
+      "context-fold-0": {
+        "families": 527,
+        "stochastic_expected_wins": 59.14512141817471,
+        "greedy_wins": 59,
+        "changed_families": 333
+      },
+      "static-fold-1": {
+        "families": 485,
+        "stochastic_expected_wins": 40.73442532289943,
+        "greedy_wins": 48,
+        "changed_families": 324
+      },
+      "context-fold-1": {
+        "families": 485,
+        "stochastic_expected_wins": 46.18547956240984,
+        "greedy_wins": 46,
+        "changed_families": 295
+      },
+      "static-fold-2": {
+        "families": 524,
+        "stochastic_expected_wins": 38.20245634765263,
+        "greedy_wins": 38,
+        "changed_families": 0
+      },
+      "context-fold-2": {
+        "families": 524,
+        "stochastic_expected_wins": 41.885805363418825,
+        "greedy_wins": 41,
+        "changed_families": 300
+      },
+      "static-full": {
+        "families": 1536,
+        "stochastic_expected_wins": 134.65326060288675,
+        "greedy_wins": 149,
+        "changed_families": 0
+      },
+      "context-full": {
+        "families": 1536,
+        "stochastic_expected_wins": 224.59509738023613,
+        "greedy_wins": 242,
+        "changed_families": 933
+      }
+    },
+    "out_of_fold_stochastic_expected_wins": {
+      "static": 130.87778625362648,
+      "context": 147.21640634400336
+    },
+    "parent_greedy_wins": 149,
+    "limits": "Fractional stochastic expectations are computed from complete measured terminal branches, not new realized games. No scores, temperatures or margins changed."
+  },
+  "decision": "Do not adopt either model or evaluate external holdout. Neither separately trained static preference nor explicit context produces an out-of-fold gain. Sampling from the same score distribution also lacks a gain.",
+  "proofs": {
+    "runs/heart-e135-static-context-20260922-01/registration.json": "1c1c355c7e0131aa0dfdda7a8e742a1e441560f8ba270322a331217f381f5aca",
+    "runs/heart-e135-static-context-20260922-01/entry-verification.json": "393a3e9c0e38caad139eabefc1bd275778841160907617d80249caf37db8f9db",
+    "runs/heart-e135-static-context-20260922-01/result/completion.json": "494598831f64f0b74d372a1a06b571a515e75139649f602c26740aece92870b4",
+    "runs/heart-e135-static-context-20260922-01/control/exit.json": "f00f63157b7ec679c80cedc55e08b05c4fb02944edd6d46acf512182d2e5ae0f",
+    "runs/heart-e135-static-context-20260922-01/objective-diagnosis.json": "5c17aee6207ae163842e59a83d52bb9008090496a473093cd63e72ad6211c87d",
+    "runs/heart-e135-static-context-20260922-01/checks/recheck.log": "3cf02c10d98fcb2b273b225ad41ee3926b9c472c9fd40fa0d266c0f62af0edaa"
+  }
+}

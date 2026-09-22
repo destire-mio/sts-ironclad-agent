@@ -1,0 +1,37 @@
+{
+  "experiment": "E135",
+  "created_at": "2026-09-22T00:59:54.430763+00:00",
+  "question": "Do independently learned static option preferences generalize better than explicit context on the same historical fit families?",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "control_checkpoint": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale/small/candidate.pt",
+  "e134_fit_choices": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/learning/fit-choices.json",
+  "fit_families": 1536,
+  "fold_assignment": "Existing E73-family-fold SHA256 seed rule, modulo 3; all stages of one family stay together.",
+  "arms": [
+    "static",
+    "context"
+  ],
+  "training": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "gradient_norm": 1.0,
+    "l2": 0.001
+  },
+  "fits": 8,
+  "optimizer_updates": 8000,
+  "new_sampling_games": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "MCTS_searches": 0,
+  "natural_candidate_games": 0,
+  "production_adoption": false,
+  "comparison": "Three separately trained fold models per arm plus one full-fit model per arm. Static freezes all 384 context weights at zero before optimization; train option biases from zero. Context repeats E134, including its fixed coarse feature basis. Parent weights and action margin, support/fallback, terminal objective, recipe and family denominators are unchanged.",
+  "inference": "Reuse explicit_joint_readout loading with zero contextual weights for static. No new deployment policy contract.",
+  "data_admission": "Derived complete fit-only input; reject external roles or extra states. No E133 artifacts admitted. Source E134 complete proof and frozen runtime hashes required.",
+  "evaluation": "Check every assigned fit family once out of fold, independently decode all selected terminal leaves, compare training and out-of-fold outcomes, preserve fold checkpoints and fit-only scales, roundtrip all checkpoints. Full context must reproduce E134 fit choices.",
+  "decision": "This is a diagnosis, not a candidate selection grid. Neither arm enters external evaluation or deployment automatically. Do not scan learning rates, regularization, thresholds or feature weights after the result.",
+  "limits": "Folds share training data and historical fit families already informed prior experiments; paired exact p is descriptive, not fresh acceptance. E69 static relic-only and E132 deleting jointly trained biases do not answer this matched two-stage question."
+}
