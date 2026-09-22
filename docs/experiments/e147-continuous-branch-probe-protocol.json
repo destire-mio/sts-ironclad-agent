@@ -1,0 +1,11 @@
+{
+  "experiment": "E147",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01",
+  "branch_data": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e135-static-context-20260922-01",
+  "new_training_rollouts": 0,
+  "new_natural_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "question": "Do the completed full-run critics rank the existing first-boss and Act2-card alternatives better than the parent, separately or when both recorded choices are changed?",
+  "limits": "Exploratory read-only diagnosis, not a new deployed policy or acceptance. Every measured intervention holds all other choices to the original parent. Scores are restricted to the fully labelled candidate set; full-menu proposals outside that set are reported, not assigned imagined outcomes. Earlier deaths stay in the1536-family denominator. Each family uses its excluding-fold model. No native implementation of these scoped probes, new games, fits, threshold tuning, external holdout or adoption."
+}
