@@ -1,0 +1,142 @@
+{
+  "status": "complete_recorded_screen_not_adopted",
+  "experiment": "E149",
+  "at": "2026-09-22T04:48:48.396212+00:00",
+  "arms": {
+    "within_state_no_map": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 135,
+          "net_gain": -14,
+          "paired": {
+            "both_fail": 1353,
+            "both_win": 101,
+            "candidate_only": 34,
+            "baseline_only": 48
+          },
+          "exact_p": 0.15067520762630382
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 98.0,
+          "net_gain": -51,
+          "paired": {
+            "both_fail": 1364,
+            "both_win": 75,
+            "candidate_only": 23,
+            "baseline_only": 74
+          },
+          "exact_p": 2.027109075312698e-07
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 152,
+          "net_gain": 3,
+          "paired": {
+            "both_fail": 1348,
+            "both_win": 113,
+            "candidate_only": 39,
+            "baseline_only": 36
+          },
+          "exact_p": 0.8175538505509844
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 98,
+          "net_gain": -51,
+          "paired": {
+            "both_fail": 1353,
+            "both_win": 64,
+            "candidate_only": 34,
+            "baseline_only": 85
+          },
+          "exact_p": 3.283757237397982e-06
+        }
+      },
+      "screen_passed": false,
+      "against_E148_with_map": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 152,
+          "candidate_wins": 135,
+          "net_gain": -17,
+          "paired": {
+            "both_fail": 1340,
+            "both_win": 91,
+            "candidate_only": 44,
+            "baseline_only": 61
+          },
+          "exact_p": 0.11799998150585828
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 97.0,
+          "candidate_wins": 98.0,
+          "net_gain": 1,
+          "paired": {
+            "both_fail": 1394,
+            "both_win": 53,
+            "candidate_only": 45,
+            "baseline_only": 44
+          },
+          "exact_p": 1.0
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 148,
+          "candidate_wins": 152,
+          "net_gain": 4,
+          "paired": {
+            "both_fail": 1351,
+            "both_win": 115,
+            "candidate_only": 37,
+            "baseline_only": 33
+          },
+          "exact_p": 0.7202027723528613
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 106.0,
+          "candidate_wins": 98,
+          "net_gain": -8,
+          "paired": {
+            "both_fail": 1382,
+            "both_win": 50,
+            "candidate_only": 48,
+            "baseline_only": 56
+          },
+          "exact_p": 0.49264506648650275
+        }
+      }
+    }
+  },
+  "states": 7448,
+  "families": 1536,
+  "numpy_state_inferences": 7448,
+  "raw_terminal_files": 4697,
+  "stage_counts": {
+    "first_card": 1536,
+    "boss": 1184,
+    "conditional_card": 4728
+  },
+  "mixed_outcome_states": {
+    "first_card": 233,
+    "boss": 198,
+    "conditional_card": 494
+  },
+  "optimizer_updates": 6000,
+  "optimizer_seconds": 30.41205875092419,
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "completion_sha256": "5b029280794374a151f571235ebd122551a8b29733d976c67f3c1a2ffdb1f6ce",
+  "controller_exit_sha256": "0f7c33898ad4ec74f335df461003b81c3841f0a095cea1ef471d5e1abe4971f5",
+  "review_script_sha256": "af343d67511c688a282bdb239da6ee9258c63feacd7350c90653195dce278160",
+  "limits": "Historical family development only; four recorded scopes are separate and cannot be spliced. No natural policy implementation, full refit, external data or50% acceptance. Removing legal public information tests an inductive bias and does not repair a simulator rule."
+}
