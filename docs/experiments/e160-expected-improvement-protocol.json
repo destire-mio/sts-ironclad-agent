@@ -1,0 +1,34 @@
+{
+  "experiment": "E160",
+  "question": "Can a calibrated gain/tie/loss model learn available changes that E158 never takes?",
+  "learning_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e154-offline-control-20260922-01",
+  "diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01",
+  "preceding_study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e158-parent-preserving-20260922-01",
+  "path_diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "recipe": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "validation_draws": 8192,
+    "seed": 2026092260
+  },
+  "training_timeout_seconds": 3600,
+  "evaluation_timeout_seconds": 25200,
+  "new_training_rollouts": 0,
+  "objective": "Three-category cross entropy for observed-graph Q(action)-Q(parent) in {-1,0,1}. Predict P(gain)-P(loss), with the parent defined to score0. Ties remain tie examples and never categorical parent demonstrations.",
+  "inputs": "Previous public5339 action features plus the807-dimensional public descriptor of the actual parent recommendation. No seed, graph identity, RNG state, future reward or value is an input. Two hidden layers128/64 and three logits.",
+  "data": "Exactly22311 nonparent observed actions at7448 branch states of the accepted E153 graph. All labels including tied outcomes retained. No parent-as-alternative examples; parent has identically zero advantage. All1536 source families keep previous outer and inner family roles.",
+  "sampler": "Uniform fitting family, then branching state, then recorded nonparent alternative. Preserve class frequencies; no class balance weights. This replaces both the target and supervision unit as one expected-improvement design, not a one-factor attribution.",
+  "roles": "Three excluding-family folds; inner whole-family validation uses8192 fixed draws and the8 previous step checkpoints, minimum three-class log loss, ties earlier. Refit outer-fit families for chosen steps. All saved inner checkpoints retained. At most12000 updates, plus8 discarded fixture updates.",
+  "support": "Only action identities observed as nonparent comparisons in that model fitting families may override the parent; no per-state graph identity at deployment. This does not establish state-conditional coverage.",
+  "learning_gate": "Before natural games require fitted known gains >=50% of fitted improvement-available branch appearances, fitted known gains > fitted known losses, and held known gains > held known losses. Full legal menus and fitting-only support determine choices; unrecorded outcomes are counted separately and never assigned a return. This is a prespecified feasibility screen, not a win rate or significance test. Main-task independent review is required.",
+  "natural_gate": "If learning screen passes, same128 historical families, each under excluding-fold model, compare with frozen parent and E158. Require parent net gain>=8 and exact paired p<.025, zero faults, every state/RNG and NN choice checked and each winner freshly replanned. No automatic full fit, reserved development or final unseen acceptance.",
+  "limits": "Exact recorded-graph maximum continuations use hidden future outcomes and optimistic recorded coverage; expected predictions and natural policy improvement are not guaranteed. E148/E150 MSE recipes failed and are not rerun. No new training sampling, original parity changes, parameter grid or production adoption.",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  }
+}

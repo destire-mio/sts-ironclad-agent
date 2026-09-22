@@ -12,21 +12,39 @@ import heart_offline_control as O
 T,C,V,E=O.T,O.C,O.V,O.E
 
 
+def load_policy(checkpoint, x):
+    if checkpoint['model_type'] == 'expected_heart_improvement':
+        from heart_expected_improvement import ImprovementPolicy
+        return ImprovementPolicy(checkpoint, x)
+    return O.ControlPolicy(checkpoint, x)
+
+
 def independent_choice(policy,checkpoint,gc,observation,actions,descriptors):
     parent=policy.base.choose(gc,observation,actions,descriptors)
     row=dict(observation=policy.x.R.sparse([observation[i] for i in policy.spec['observations']]),
              descriptors=[policy.x.R.sparse(d) for d in descriptors])
-    values=np.zeros((len(actions),policy.spec['width']),dtype=np.float32)
+    improvement = checkpoint['model_type'] == 'expected_heart_improvement'
+    width = policy.spec['width'] + (policy.spec['descriptor_dim'] if improvement else 0)
+    values=np.zeros((len(actions),width),dtype=np.float32)
     for i in range(len(actions)):
         for j,v in C.sparse_features(row,i,policy.spec):values[i,j]=v
+    if improvement:
+        values[:, policy.spec['width']:] = np.asarray(descriptors[parent], dtype=np.float32)
     weights=checkpoint['actor_state']
     for layer in ('input','tail.1','tail.3'):
         values=values @ weights[layer+'.weight'].numpy().T+weights[layer+'.bias'].numpy()
         if layer!='tail.3':values=values/(1+np.exp(np.clip(-values,-80,80)))
-    values[parent,0]+=checkpoint['parent_bonus']
+    if improvement:
+        probabilities = np.exp(values - values.max(axis=1, keepdims=True))
+        probabilities /= probabilities.sum(axis=1, keepdims=True)
+        scores = probabilities[:, 2] - probabilities[:, 0]
+        scores[parent] = 0.
+    else:
+        values[parent,0]+=checkpoint['parent_bonus']
+        scores = values[:, 0]
     # Independent support/tie arithmetic; do not invoke production select().
     allowed=[i for i,d in enumerate(row['descriptors']) if i==parent or C.support_key(d,policy.spec) in policy.support]
-    chosen=max(allowed,key=lambda i:(float(values[i,0]),i==parent,-i))
+    chosen=max(allowed,key=lambda i:(float(scores[i]),i==parent,-i))
     return chosen,parent
 
 
@@ -75,7 +93,7 @@ def first_change(x,old,new):
 def evaluate_worker(job,config):
     try:
         x=C.D.runtime(job['runtime']);E.require(E.sha(job['checkpoint'])==job['checkpoint_sha256'],'candidate changed')
-        cp=torch.load(job['checkpoint'],weights_only=True,map_location='cpu');policy=O.ControlPolicy(cp,x)
+        cp=torch.load(job['checkpoint'],weights_only=True,map_location='cpu');policy=load_policy(cp,x)
         E.require(cp['provenance']['fold']==T.fold(job['seed']) and
                   job['seed'] not in cp['provenance']['fit_families'],'evaluation family entered its model fit')
         E.require(E.sha(job['reference']['path'])==job['reference']['sha256'],'frozen parent reference changed')

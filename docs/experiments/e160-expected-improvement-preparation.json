@@ -1,0 +1,29 @@
+{
+  "status": "prepared",
+  "preflight": {
+    "status": "passed",
+    "nonparent_comparisons": 22311,
+    "branching_states": 7448,
+    "class_counts": {
+      "0": 20130,
+      "-1": 1570,
+      "1": 611
+    },
+    "actual_native_public_inputs": 16,
+    "independent_nonzero_policy_choices": 16,
+    "old_policy_controls": 16,
+    "outer_family_rejected": true,
+    "fixture_optimizer_updates": 8,
+    "fixture_checkpoint_saved": false,
+    "formal_optimizer_updates": 0,
+    "new_games": 0,
+    "model_parameters": 795267,
+    "runner_sha256": "9cc118a0a11b4247b239d19d558a3aabe06c997f17b3a3ef4615a2020b19bb2e",
+    "script_sha256": "58f7f1a40a2ba11c320297738c69db7844338059f7773a5206a13790c73657cb"
+  },
+  "focused_tests": 7,
+  "tests_log_sha256": "d0472a424c3f559c394f4f2dd2bf1ab5edee63532b2db27c69b82910cc877760",
+  "registration_sha256": "770e475bfcdf1e21e85db1738ff39b952ab2647b004b733e820aca48971e02b2",
+  "bound_files": 50,
+  "new_training_rollouts": 0
+}

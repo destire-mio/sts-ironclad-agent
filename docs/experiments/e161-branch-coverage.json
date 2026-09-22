@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "groups": {
+    "first_card": {
+      "states": 1536,
+      "acts": {
+        "1": 1536
+      },
+      "floor_min": 1,
+      "floor_max": 1
+    },
+    "boss": {
+      "states": 1184,
+      "acts": {
+        "1": 1184
+      },
+      "floor_min": 17,
+      "floor_max": 17
+    },
+    "conditional_card": {
+      "states": 4728,
+      "acts": {
+        "2": 4728
+      },
+      "floor_min": 18,
+      "floor_max": 18
+    }
+  },
+  "hashes": {
+    "runs/heart-e143-continuous-transitions-20260922-01/fit-nodes.json": "29004742ef64c0503688382f00ddea2cf54f8df0af7e3dbaf6f15355dabbb400",
+    "runs/heart-e135-static-context-20260922-01/fit-inputs.json.gz": "8ac8bff9580646eb06b343822cf71b22fb66c97c80917a80092376f83ad76c95"
+  },
+  "new_games": 0
+}

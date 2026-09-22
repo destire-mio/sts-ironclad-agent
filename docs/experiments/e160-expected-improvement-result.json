@@ -1,0 +1,50 @@
+{
+  "status": "complete_not_adopted",
+  "experiment": "E160",
+  "selected_steps": [
+    100,
+    250,
+    250
+  ],
+  "actor_optimizer_steps": 6600,
+  "inner_checkpoints_verified": 24,
+  "maximum_numpy_loss_error": 2.185844905078227e-07,
+  "independent_branch_choices": 22344,
+  "branch_screen": {
+    "fit": {
+      "states": 14896,
+      "improvement_available": 898,
+      "parent_choices": 14896,
+      "known_gains": 0,
+      "known_losses": 0,
+      "known_ties": 14896
+    },
+    "held": {
+      "states": 7448,
+      "improvement_available": 449,
+      "parent_choices": 7448,
+      "known_gains": 0,
+      "known_losses": 0,
+      "known_ties": 7448
+    }
+  },
+  "eligible_for_natural_evaluation": false,
+  "controller_exit_sha256": "2b9774e0c5db326aadb35323b8d854e3e84c93bba527dd98a17b3b779f92d3d2",
+  "learning_completion_sha256": "cdf4c54e71377fcddb03ede8820bd9dc97db33b73a9bf395dfe9053615487415",
+  "reviewer_sha256": "298d302976f2734e81f0b578f9f78318a67e6f4ced80325782575a7afc65957d",
+  "new_training_rollouts": 0,
+  "natural_games": 0,
+  "production_adoption": false,
+  "limits": "Fit branch appearances count each family twice; held once. Recorded-graph outcomes are hindsight and branch scores are not full-game or unseen win rates.",
+  "training_status": "complete_reviewed",
+  "learning_gate_entry": {
+    "status": "rejected_as_required",
+    "reason": "learning screen/review failed",
+    "natural_games": 0,
+    "evaluation_directory_created": false
+  },
+  "registration_sha256": "770e475bfcdf1e21e85db1738ff39b952ab2647b004b733e820aca48971e02b2",
+  "root_review_sha256": "972543b3a326f9108e4137db6b62431072f803ba785f5f3085438d8055c6e11d",
+  "unseen_acceptance_games": 0,
+  "qualified_for_full_fit": false
+}
