@@ -1,0 +1,63 @@
+{
+  "experiment": "E158",
+  "at": "2026-09-22T08:44:34.892043+00:00",
+  "learning_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e154-offline-control-20260922-01",
+  "diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01",
+  "target_diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e157-actor-target-diagnosis-20260922-01",
+  "preceding_actor_study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e156-exact-control-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "recipe": {
+    "critic_steps": 20000,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "expectile": 0.7,
+    "target_rate": 0.005,
+    "advantage_scale": 10.0,
+    "maximum_weight": 100.0,
+    "discount": 1.0,
+    "parent_bonus": 3.0,
+    "validation_draws": 8192,
+    "actor_steps": 2000,
+    "seed": 2026092254
+  },
+  "actor_checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "training_timeout_seconds": 3600,
+  "evaluation_timeout_seconds": 25200,
+  "new_training_rollouts": 0,
+  "actor_target": "preserve_parent_observed_max",
+  "arm": "parent_preserving",
+  "question": "Can a parent-preserving policy-improvement teacher avoid equal-return imitation damage and improve whole-run decisions on the same data?",
+  "evidence": "E157:6213/7448 branch states have equal tau values; their old imitation target suppresses the initial parent logit. Strict observed-maximum improvement is available at449 states, while tau marks658. E156 changes98/128 natural paths and wins7 versus parent13.",
+  "teacher": "On the exact existing transition DAG, compute recorded-action optimal terminal returns. At each full state, retain the deterministic parent if its action attains that maximum. Otherwise give uniform categorical probability to recorded maximizing alternatives. The teacher differs from the parent at449 of7448 branch states; every single-action state retains its parent. No hidden state identity or return is an input to the neural actor.",
+  "objective": "Unweighted full-menu categorical cross entropy to that target; tied failures and tied wins teach the parent. Replace the entire E156 advantage-weighted imitation target. This intentionally changes both the continuation reference (observed maximum) and parent-preserving tie behavior; it is a coherent policy-improvement target test, not an isolated estimate of either change.",
+  "fixed": "Same5339-feature691841-parameter actor, exact parent+3 bonus, initial parameters, family/stratum/state draws, support mask, optimizer, inner8192 samples, all8 stopping checkpoints and refit budget as E156. The fourth uniform variate still samples an edge, but the teacher target depends on its state rather than that exploratory edge.",
+  "roles": "Same three excluding-family folds. Every descendant follows its family. Exact graph values do not connect families; fitting label access explicitly rejects all outer-family edges. Same inner actor families and8192 samples as E154, save all8 checkpoints and refit all outer-fit families at minimum weighted NLL step; ties earlier.",
+  "budget": "Three actors,2000 inner updates maximum each plus chosen refit<=2000. At most12000 actor optimizer updates. E154 critic_steps etc remain in the shared recipe for identity, but are unused here. Zero critic updates and no new training games.",
+  "matched_comparison": "Reuse frozen parent, E154 cloning/IQL and E156 exact-weight evaluations on the same128 historical families. Fit no model on these evaluation traces. Every newly evaluated family uses its excluding-fold actor.",
+  "natural_screen": {
+    "families": 128,
+    "selection": "Same fixed E144-full-run hash-selected original fit pilot, each using its excluding-fold model; historical development evidence, not final unseen acceptance.",
+    "minimum_net_gain": 8,
+    "paired_descriptive_p_less_than": 0.025,
+    "zero_faults": true,
+    "verification": "Full natural A20 Heart games, every terminal/state/RNG and neural choice audited; all winners rerun with fresh NN/MCTS. Both arms retain all128 assigned families. Evaluation trajectories are not training input."
+  },
+  "specific_target_repair_benefit": "Against E156 exact-weight actor require net>=4/128,p<.05; separately require parent net>=8,p<.025 to qualify for the next stage. Historical adaptive development evidence is not final unseen acceptance.",
+  "continuation": "Only a qualified arm may proceed to separately registered all1536-fit learning and the reserved512 natural-development families; require net>=20/512,p<.05 and complete fault/state/RNG checks. Select among qualified arms by net gain, fewer parent wins lost, then cloning. No automatic adoption or fresh acceptance. Final goal one frozen policy>=512/1024 untouched families.",
+  "limits": "Recorded-graph teacher uses hindsight outcomes including fixed hidden RNG. Its graph return is not a deployed win rate or an estimate on a new seed. No new training sampling, runtime game changes, Prismatic Shard, original parity or hyperparameter sweep. Reuse the corrected E156 owned controller; every winner receives a fresh NN/MCTS rerun."
+}
