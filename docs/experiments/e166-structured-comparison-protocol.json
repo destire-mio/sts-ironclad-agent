@@ -1,0 +1,29 @@
+{
+  "experiment": "E166",
+  "encoder_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e165-combat-local-inputs-20260923-01",
+  "comparison": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e165-combat-local-inputs-20260923-01",
+  "learning_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e154-offline-control-20260922-01",
+  "diagnosis": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "heart_recipe": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_norm": 1.0,
+    "validation_draws": 8192,
+    "seed": 2026092260
+  },
+  "phase_timeout_seconds": 3720,
+  "evaluation_timeout_seconds": 3600,
+  "new_training_rollouts": 0,
+  "hypothesis": "The admitted local-combat representation has not yielded a useful direct gain/tie/loss policy. Test a shared utility comparator that forces identical-action expected difference to zero, reverses gain/loss when compared actions are swapped, and removes a free utility offset.",
+  "model": "Same6146 public paired inputs and128/64 encoder, with2 outputs per action:utility and tie level. Score each alternative and reference under the SAME actual parent recommendation. Class logits are[-(u_a-u_b),(t_a+t_b)/2,u_a-u_b]. Deploy P(gain)-P(loss). Parent-reference score is zero by construction.",
+  "initialization": "Reuse each E165 admitted5000-step inner/final auxiliary encoder with its original family roles. Reset the2-output head to zero; perform zero additional auxiliary updates. Input-weight restrictions are removed as in E165 Heart fitting.",
+  "labels": "Same22311 nonparent comparisons on7448 branch states. Exact observed graph return difference supplies loss/tie/gain labels. No replacement of missing outcomes by losses and no hidden/RNG/future features.",
+  "selection": "Same family sampler, three outer folds, inner family partition,8192 fixed validation draws, categorical validation loss and eight E160 checkpoints. No later-checkpoint selection from outer results.",
+  "branch_gate": "Keep E160 stopping, sampling, inputs, categorical support, terminal gain/tie/loss labels and P(gain)-P(loss) deployment. Required fit known gains at least half of available improvements, fit gains greater than losses, held gains greater than losses. Unknown actions remain unknown.",
+  "natural_evaluation": "Only after independent training review and the unchanged branch gate:128 fixed historical pilot families, each excluded from its fold model. Compare with the frozen parent, require net gain>=8 and exact paired p<.025, zero faults, all outside choices/state/RNG audited and every winning trajectory freshly replanned. This is not the untouched1024-seed final acceptance.",
+  "limits": "This is a structured classifier using an admitted encoder, not a claim that the previous unconstrained classifier caused every failure. E148 within-state squared regression and prior stopping/data-expansion failures remain recorded. No new training sampling, auxiliary training or automatic adoption."
+}

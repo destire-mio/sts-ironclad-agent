@@ -13,6 +13,9 @@ T,C,V,E=O.T,O.C,O.V,O.E
 
 
 def load_policy(checkpoint, x):
+    if checkpoint['model_type'] == 'structured_heart_improvement':
+        from heart_structured_comparison import StructuredPolicy
+        return StructuredPolicy(checkpoint, x)
     if checkpoint['model_type'] == 'expected_heart_improvement':
         from heart_expected_improvement import ImprovementPolicy
         return ImprovementPolicy(checkpoint, x)
@@ -23,7 +26,8 @@ def independent_choice(policy,checkpoint,gc,observation,actions,descriptors):
     parent=policy.base.choose(gc,observation,actions,descriptors)
     row=dict(observation=policy.x.R.sparse([observation[i] for i in policy.spec['observations']]),
              descriptors=[policy.x.R.sparse(d) for d in descriptors])
-    improvement = checkpoint['model_type'] == 'expected_heart_improvement'
+    structured = checkpoint['model_type'] == 'structured_heart_improvement'
+    improvement = checkpoint['model_type'] == 'expected_heart_improvement' or structured
     width = policy.spec['width'] + (policy.spec['descriptor_dim'] if improvement else 0)
     values=np.zeros((len(actions),width),dtype=np.float32)
     for i in range(len(actions)):
@@ -35,6 +39,10 @@ def independent_choice(policy,checkpoint,gc,observation,actions,descriptors):
         values=values @ weights[layer+'.weight'].numpy().T+weights[layer+'.bias'].numpy()
         if layer!='tail.3':values=values/(1+np.exp(np.clip(-values,-80,80)))
     if improvement:
+        if structured:
+            difference = values[:, 0] - values[parent, 0]
+            tie = .5 * (values[:, 1] + values[parent, 1])
+            values = np.column_stack((-difference, tie, difference))
         probabilities = np.exp(values - values.max(axis=1, keepdims=True))
         probabilities /= probabilities.sum(axis=1, keepdims=True)
         scores = probabilities[:, 2] - probabilities[:, 0]

@@ -1,0 +1,154 @@
+{
+  "experiment": "E165",
+  "status": "auxiliary_passed_actor_rejected",
+  "learning": {
+    "status": "complete",
+    "models": [
+      {
+        "fold": 0,
+        "sha256": "d4aec3794318f58593cc89587a80827420d65bc9224ca3273eae8cfce44d48d4",
+        "selected_actor_steps": 100
+      },
+      {
+        "fold": 1,
+        "sha256": "977e82d1123145cc04661faa6ab6ca24f654d648981d64d80871328d1efeaeff",
+        "selected_actor_steps": 100
+      },
+      {
+        "fold": 2,
+        "sha256": "d146fd07c5e5b5ac2d9ceaee6800415ee9771e5edeaddb2bc0c5ba32265d80f7",
+        "selected_actor_steps": 100
+      }
+    ],
+    "auxiliary_passed": true,
+    "branch_screen": {
+      "fit": {
+        "states": 14896,
+        "improvement_available": 898,
+        "parent_choices": 14896,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 14896
+      },
+      "held": {
+        "states": 7448,
+        "improvement_available": 449,
+        "parent_choices": 7448,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 7448
+      }
+    },
+    "eligible_for_natural_evaluation": false,
+    "auxiliary_optimizer_steps": 30000,
+    "heart_optimizer_steps": 6300,
+    "new_training_rollouts": 0,
+    "production_adoption": false
+  },
+  "auxiliary": {
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 5000,
+        "held_mse": [
+          0.03370103402994573,
+          0.059030695527326316
+        ],
+        "held_baseline_mse": [
+          0.04089137778927944,
+          0.0671499177697791
+        ],
+        "inner_baseline_mse": [
+          0.0400421455156865,
+          0.06004541071920922
+        ]
+      },
+      {
+        "fold": 1,
+        "selected_steps": 5000,
+        "held_mse": [
+          0.03492157132131979,
+          0.05914357412257232
+        ],
+        "held_baseline_mse": [
+          0.04127528123867637,
+          0.0631510611770729
+        ],
+        "inner_baseline_mse": [
+          0.04205381924837604,
+          0.06613586372887577
+        ]
+      },
+      {
+        "fold": 2,
+        "selected_steps": 5000,
+        "held_mse": [
+          0.037727314804214984,
+          0.06487328605726361
+        ],
+        "held_baseline_mse": [
+          0.042978103379240504,
+          0.06807916235696616
+        ],
+        "inner_baseline_mse": [
+          0.040381500688653066,
+          0.061264646470837215
+        ]
+      }
+    ],
+    "mse": 0.048232912643773794,
+    "baseline_mse": 0.053920817285169086,
+    "passed": true
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "experiment": "E165",
+    "selected_steps": [
+      100,
+      100,
+      100
+    ],
+    "actor_optimizer_steps": 6300,
+    "auxiliary_optimizer_steps": 30000,
+    "auxiliary_review_sha256": "5e64f618895b474c16d19cd92804939a79ea3f21c8db114ab67657e2a14d4822",
+    "inner_checkpoints_verified": 24,
+    "maximum_numpy_loss_error": 2.185844905078227e-07,
+    "independent_branch_choices": 22344,
+    "branch_screen": {
+      "fit": {
+        "states": 14896,
+        "improvement_available": 898,
+        "parent_choices": 14896,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 14896
+      },
+      "held": {
+        "states": 7448,
+        "improvement_available": 449,
+        "parent_choices": 7448,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 7448
+      }
+    },
+    "eligible_for_natural_evaluation": false,
+    "controller_exit_sha256": "cd1db87a150c8e38a39f078abe2073dd890f0295e4438f4bce46a04567571109",
+    "learning_completion_sha256": "23301f10258336200d7432ce71067da9874cb458cce53c39c37bec696b58a7da",
+    "reviewer_sha256": "f0b20cf307a3656bf0ead328b06c789f3b61f1536b1f0aec3e2fe41ac0e8db5e",
+    "new_training_rollouts": 0,
+    "natural_games": 0,
+    "production_adoption": false,
+    "limits": "Fit branch appearances count each family twice; held once. Recorded-graph outcomes are hindsight and branch scores are not full-game or unseen win rates."
+  },
+  "control": {
+    "status": "train_complete",
+    "exit_code": 0,
+    "phase": "train",
+    "owned_exit_sha256": "ff983a0f1f2a9860b1cff5b742e6400173110e8a2e026d8d6a5647da79265ff5",
+    "completion_sha256": "23301f10258336200d7432ce71067da9874cb458cce53c39c37bec696b58a7da",
+    "finished_at": "2026-09-22T16:10:44.341556+00:00"
+  },
+  "review_sha256": "1c019b1312b36e117f31f2dad5be7d3849c5a326489efb81fe44190755587973",
+  "diagnosis_sha256": "38e05afa67a9f2835b9b3e70ea25780cd5d713c226b772ad1ec6b292527c2846"
+}

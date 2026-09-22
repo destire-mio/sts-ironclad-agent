@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "nonparent_comparisons": 22311,
+  "branching_states": 7448,
+  "class_counts": {
+    "0": 20130,
+    "-1": 1570,
+    "1": 611
+  },
+  "actual_native_public_inputs": 16,
+  "independent_nonzero_policy_choices": 16,
+  "old_policy_controls": 16,
+  "outer_family_rejected": true,
+  "fixture_optimizer_updates": 8,
+  "fixture_checkpoint_saved": false,
+  "formal_optimizer_updates": 0,
+  "new_games": 0,
+  "model_parameters": 795202,
+  "runner_sha256": "44162840ebe4167d13789999b0736aa405169d0bd3780fb58d0bc34dfdb66aa8",
+  "script_sha256": "eba93acecc3bf2a8f7e20013de3e6708fd6de7d182b95e4a412bd60524eb5af5"
+}

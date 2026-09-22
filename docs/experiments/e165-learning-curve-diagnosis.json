@@ -1,0 +1,567 @@
+{
+  "status": "complete",
+  "experiment": "E165",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e165-combat-local-inputs-20260923-01",
+  "curves": [
+    {
+      "fold": 0,
+      "step": 0,
+      "categorical_validation_loss": 1.0986120700836182,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 25,
+      "categorical_validation_loss": 0.41828889586031437,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 50,
+      "categorical_validation_loss": 0.37240262096747756,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 100,
+      "categorical_validation_loss": 0.367526532150805,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 250,
+      "categorical_validation_loss": 0.38213004218414426,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 500,
+      "categorical_validation_loss": 0.4290516416076571,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 3860,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3860,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 1022,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1022,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 0,
+      "step": 1000,
+      "categorical_validation_loss": 0.5651855764444917,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 1250,
+        "known_gains": 42,
+        "known_losses": 13,
+        "known_ties": 3805,
+        "family_mean_known_delta_lower_bound": 0.00819672131147541
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 363,
+        "known_gains": 37,
+        "known_losses": 26,
+        "known_ties": 959,
+        "family_mean_known_delta_lower_bound": 0.01234567901234568
+      }
+    },
+    {
+      "fold": 0,
+      "step": 2000,
+      "categorical_validation_loss": 0.7969971266575158,
+      "inner_fit": {
+        "states": 3860,
+        "improvement_available": 205,
+        "parent_choices": 997,
+        "known_gains": 93,
+        "known_losses": 14,
+        "known_ties": 3753,
+        "family_mean_known_delta_lower_bound": 0.026061370323665407
+      },
+      "inner_validation": {
+        "states": 1022,
+        "improvement_available": 81,
+        "parent_choices": 273,
+        "known_gains": 30,
+        "known_losses": 39,
+        "known_ties": 953,
+        "family_mean_known_delta_lower_bound": 0.0007716049382716048
+      }
+    },
+    {
+      "fold": 1,
+      "step": 0,
+      "categorical_validation_loss": 1.0986120700836182,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 25,
+      "categorical_validation_loss": 0.40834521781653166,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 50,
+      "categorical_validation_loss": 0.3363965330645442,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 100,
+      "categorical_validation_loss": 0.33277656394056976,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 250,
+      "categorical_validation_loss": 0.3411059440113604,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 500,
+      "categorical_validation_loss": 0.3766762758605182,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 4110,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 4110,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 1009,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 1009,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "step": 1000,
+      "categorical_validation_loss": 0.43837823858484626,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 1984,
+        "known_gains": 106,
+        "known_losses": 21,
+        "known_ties": 3983,
+        "family_mean_known_delta_lower_bound": 0.02386634844868735
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 461,
+        "known_gains": 23,
+        "known_losses": 20,
+        "known_ties": 966,
+        "family_mean_known_delta_lower_bound": 0.002347417840375587
+      }
+    },
+    {
+      "fold": 1,
+      "step": 2000,
+      "categorical_validation_loss": 0.6136086448095739,
+      "inner_fit": {
+        "states": 4110,
+        "improvement_available": 246,
+        "parent_choices": 1336,
+        "known_gains": 145,
+        "known_losses": 17,
+        "known_ties": 3948,
+        "family_mean_known_delta_lower_bound": 0.03241845664280032
+      },
+      "inner_validation": {
+        "states": 1009,
+        "improvement_available": 69,
+        "parent_choices": 299,
+        "known_gains": 27,
+        "known_losses": 37,
+        "known_ties": 945,
+        "family_mean_known_delta_lower_bound": -0.00782472613458529
+      }
+    },
+    {
+      "fold": 2,
+      "step": 0,
+      "categorical_validation_loss": 1.0986120700836182,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3924,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3924,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 971,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 971,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 2,
+      "step": 25,
+      "categorical_validation_loss": 0.4339514677412808,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3924,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3924,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 971,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 971,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 2,
+      "step": 50,
+      "categorical_validation_loss": 0.32429398922249675,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3924,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3924,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 971,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 971,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 2,
+      "step": 100,
+      "categorical_validation_loss": 0.3222831606399268,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3924,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3924,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 971,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 971,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 2,
+      "step": 250,
+      "categorical_validation_loss": 0.3240207452327013,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3924,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 3924,
+        "family_mean_known_delta_lower_bound": 0.0
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 971,
+        "known_gains": 0,
+        "known_losses": 0,
+        "known_ties": 971,
+        "family_mean_known_delta_lower_bound": 0.0
+      }
+    },
+    {
+      "fold": 2,
+      "step": 500,
+      "categorical_validation_loss": 0.36715336283668876,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 3708,
+        "known_gains": 34,
+        "known_losses": 9,
+        "known_ties": 3881,
+        "family_mean_known_delta_lower_bound": 0.010275380189066994
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 930,
+        "known_gains": 1,
+        "known_losses": 0,
+        "known_ties": 970,
+        "family_mean_known_delta_lower_bound": 0.0008291873963515754
+      }
+    },
+    {
+      "fold": 2,
+      "step": 1000,
+      "categorical_validation_loss": 0.4364487752318382,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 2476,
+        "known_gains": 90,
+        "known_losses": 18,
+        "known_ties": 3816,
+        "family_mean_known_delta_lower_bound": 0.027127003699136867
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 603,
+        "known_gains": 8,
+        "known_losses": 11,
+        "known_ties": 952,
+        "family_mean_known_delta_lower_bound": -0.002487562189054726
+      }
+    },
+    {
+      "fold": 2,
+      "step": 2000,
+      "categorical_validation_loss": 0.5877692755311728,
+      "inner_fit": {
+        "states": 3924,
+        "improvement_available": 243,
+        "parent_choices": 1668,
+        "known_gains": 123,
+        "known_losses": 12,
+        "known_ties": 3789,
+        "family_mean_known_delta_lower_bound": 0.03514180024660912
+      },
+      "inner_validation": {
+        "states": 971,
+        "improvement_available": 54,
+        "parent_choices": 407,
+        "known_gains": 13,
+        "known_losses": 23,
+        "known_ties": 935,
+        "family_mean_known_delta_lower_bound": -0.004145936981757877
+      }
+    }
+  ],
+  "source_learning_sha256": "23301f10258336200d7432ce71067da9874cb458cce53c39c37bec696b58a7da",
+  "source_review_sha256": "1c019b1312b36e117f31f2dad5be7d3849c5a326489efb81fe44190755587973",
+  "runner_sha256": "d463174fbfb383b287600db31058bbe164e2166940aca0ce1929ed285b23480e",
+  "independent_math_sha256": "f0b20cf307a3656bf0ead328b06c789f3b61f1536b1f0aec3e2fe41ac0e8db5e",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "selected_or_adopted_models": 0,
+  "limits": "Uses only inner fitting/validation families, not the excluded outer fold. Counts refer to branch decisions, not games. Unknown outcomes use0 only for a stated pessimistic lower bound, never a recorded death. This diagnosis does not change E165 stopping or adopt any saved model."
+}
