@@ -1,0 +1,52 @@
+{
+  "status": "complete_not_adopted",
+  "experiment": "E144",
+  "at": "2026-09-22T04:05:09.462966+00:00",
+  "arms": {
+    "monte_carlo": {
+      "counts": {
+        "assigned": 128,
+        "baseline_wins": 13,
+        "candidate_wins": 7,
+        "net_gain": -6,
+        "paired": {
+          "both_fail": 111,
+          "both_win": 3,
+          "candidate_only": 4,
+          "baseline_only": 10
+        },
+        "exact_p": 0.1795654296875
+      },
+      "gate_passed": false
+    },
+    "temporal": {
+      "counts": {
+        "assigned": 128,
+        "baseline_wins": 13,
+        "candidate_wins": 7,
+        "net_gain": -6,
+        "paired": {
+          "both_fail": 110,
+          "both_win": 2,
+          "candidate_only": 5,
+          "baseline_only": 11
+        },
+        "exact_p": 0.210113525390625
+      },
+      "gate_passed": false
+    }
+  },
+  "qualified_for_full_fit": null,
+  "natural_policy_evaluation_games": 256,
+  "winner_replans": 14,
+  "checked_outside_choices": 29747,
+  "zero_faults": true,
+  "optimizer_updates": 120000,
+  "new_training_rollouts": 0,
+  "reserved_development_games": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "completion_sha256": "d763a7864b08910e47b49f28fbe8618f7c20a9dd5bb0f2e72192bc68215ff575",
+  "controller_exit_sha256": "48ab4ae52b515d0c3e347e8165a6fa57a7f4890bec1908322386b75e7f415670",
+  "review_script_sha256": "8ee09dcc6c98b46a12358c5f95ff320a18d5919941c47c297d5805134f880461"
+}

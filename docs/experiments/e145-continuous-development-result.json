@@ -1,0 +1,9 @@
+{
+  "status": "closed_not_launched",
+  "reason": "neither whole-run arm qualified",
+  "source_review_sha256": "f67b8645aab0ade84a2379e7f33b22f74170aa9f26afd5f59ef0c7aec7e42400",
+  "optimizer_updates": 0,
+  "natural_development_games": 0,
+  "new_training_rollouts": 0,
+  "production_adoption": false
+}

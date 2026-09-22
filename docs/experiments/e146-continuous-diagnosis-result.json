@@ -1,0 +1,112 @@
+{
+  "status": "complete_read_only",
+  "experiment": "E146",
+  "arms": {
+    "monte_carlo": {
+      "first_card_four_option_only": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 152,
+        "net_gain": 3,
+        "paired": {
+          "both_fail": 1338,
+          "candidate_only": 49,
+          "both_win": 103,
+          "baseline_only": 46
+        },
+        "exact_p": 0.8375560707290739
+      },
+      "first_card_actual_full_menu_without_stored_terminal": 0,
+      "natural_first_difference_kinds": {
+        "AK_MAP": 43,
+        "AK_REWARD_CARD": 49,
+        "AK_REWARD_SKIP": 25,
+        "AK_REWARD_POTION": 1,
+        "AK_REST": 3,
+        "AK_SHOP_CARD": 1,
+        "AK_CARD_SELECT": 5,
+        "AK_SHOP_REMOVE": 1
+      },
+      "lost_parent_win_first_difference_kinds": {
+        "AK_MAP": 4,
+        "AK_REWARD_CARD": 5,
+        "AK_REWARD_SKIP": 1
+      },
+      "new_win_first_difference_kinds": {
+        "AK_REWARD_CARD": 2,
+        "AK_CARD_SELECT": 1,
+        "AK_REWARD_SKIP": 1
+      },
+      "changed_games": 128,
+      "unchanged_games": 0,
+      "first_changes_with_old_alternative_label": 46,
+      "mean_predicted_first_change_gain": 0.013499207098618933,
+      "terminal_acts": {
+        "3": 26,
+        "2": 35,
+        "1": 51,
+        "4": 16
+      }
+    },
+    "temporal": {
+      "first_card_four_option_only": {
+        "assigned": 1536,
+        "baseline_wins": 149,
+        "candidate_wins": 131,
+        "net_gain": -18,
+        "paired": {
+          "both_fail": 1352,
+          "baseline_only": 53,
+          "both_win": 96,
+          "candidate_only": 35
+        },
+        "exact_p": 0.06934604368506442
+      },
+      "first_card_actual_full_menu_without_stored_terminal": 0,
+      "natural_first_difference_kinds": {
+        "AK_MAP": 39,
+        "AK_REWARD_CARD": 55,
+        "AK_REWARD_SKIP": 23,
+        "AK_REWARD_POTION": 3,
+        "AK_REST": 1,
+        "AK_CARD_SELECT": 5,
+        "unchanged": 2
+      },
+      "lost_parent_win_first_difference_kinds": {
+        "AK_MAP": 5,
+        "AK_REWARD_CARD": 4,
+        "AK_REWARD_SKIP": 2
+      },
+      "new_win_first_difference_kinds": {
+        "AK_MAP": 1,
+        "AK_REWARD_CARD": 4
+      },
+      "changed_games": 126,
+      "unchanged_games": 2,
+      "first_changes_with_old_alternative_label": 54,
+      "mean_predicted_first_change_gain": 0.007251519968814959,
+      "terminal_acts": {
+        "4": 20,
+        "2": 36,
+        "1": 40,
+        "3": 32
+      }
+    }
+  },
+  "parent_terminal_acts": {
+    "1": 26,
+    "2": 36,
+    "4": 32,
+    "3": 34
+  },
+  "new_training_rollouts": 0,
+  "new_natural_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "limits": "Exploratory diagnosis of completed development evidence, not policy selection or acceptance. The four-option card ranking restricts to measured cards and uses fixed-parent continuations; it is not the deployed full-run policy. Missing alternative labels within a held family do not prove its action is wrong or unseen in similar fit states. First differences and later deaths are associations, not attribution of the loss to that single action. No thresholds, models or ongoing experiments change.",
+  "completion_sha256": "7e03dcb1d7f8adc8fb03175a9fd12609910ed892a982d1dd177b0691c7fce163",
+  "source_review_sha256": "f67b8645aab0ade84a2379e7f33b22f74170aa9f26afd5f59ef0c7aec7e42400",
+  "independent_raw_choice_count_review_passed": true
+}

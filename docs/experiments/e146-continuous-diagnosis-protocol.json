@@ -1,0 +1,10 @@
+{
+  "experiment": "E146",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e144-continuous-learning-20260922-01",
+  "new_training_rollouts": 0,
+  "new_natural_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "question": "Distinguish existing first-card ranking quality from where whole-run policies first depart from the parent; audit what counterfactual labels exist for those first changes.",
+  "limits": "Exploratory diagnosis of completed development evidence, not policy selection or acceptance. The four-option card ranking restricts to measured cards and uses fixed-parent continuations; it is not the deployed full-run policy. Missing alternative labels within a held family do not prove its action is wrong or unseen in similar fit states. First differences and later deaths are associations, not attribution of the loss to that single action. No thresholds, models or ongoing experiments change."
+}
