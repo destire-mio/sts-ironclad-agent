@@ -1,0 +1,30 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E172",
+  "data_completion_sha256": "604c2571b1ed66298f52041922d76bd441811fb6d452a39da8eb4f18334d12c9",
+  "preceding_data_review_sha256": "32798bce08c5cfb4a7e745bca22eb1660711f1ece643f0e36be841aa3a19b954",
+  "preceding_training_review_sha256": "52520004b345bcf8fe12a2f315fa11404de81e0a05cb6699e30a55015b3bcdba",
+  "reused_states": 2039965,
+  "reused_families": 1536,
+  "identical_input_and_label_functions": [
+    "input_columns",
+    "state_features",
+    "baseline_cells",
+    "prepare",
+    "Data",
+    "brier"
+  ],
+  "unchanged_initial_encoders": 6,
+  "source_native_fixtures": 36,
+  "new_native_replays": 0,
+  "trainable_parameters": 65,
+  "fixture_updates": 8,
+  "fixture_checkpoint_saved": false,
+  "formal_optimizer_updates": 0,
+  "new_games": 0,
+  "runner_sha256": "fa85178d596993c946ebd10c47e6e463ce62b9a3fdf6909255ccbc24255f9b22",
+  "reviewer_sha256": "bce563612b7a63a37ce281dd8a2c27cdf934bbd3a31a9cb383ec964c03896f0f",
+  "checks_passed": 7,
+  "check_command": "pytest -q tests/test_heart_parent_state_value.py tests/test_heart_parent_value_budget.py tests/test_heart_frozen_value_encoder.py",
+  "registration_sha256": "e9da6d2f206fc33e49f68001f43de60add3b1baf221c9fd6586982a6fa7ce37e"
+}

@@ -1,0 +1,14 @@
+{
+  "experiment": "E171",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e170-parent-value-budget-20260923-01",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "policy_adapter_implemented": false,
+  "purpose": "Read-only diagnosis of a different question from global Brier: whether the retained fixed-parent state value ranks existing deterministic card successors. E169/E170 remain rejected by their original prediction gate. This does not reopen that gate or authorize policy deployment.",
+  "population": "All observed branching normal-monster/elite reward states whose parent action is card/bowl/skip and whose complete legal card/bowl/skip menu has recorded nonterminal successors; require all1536 admitted initial floor1 card roots. Family-excluding source models only. Later states remain correlated branches, not independent natural runs.",
+  "inputs": "Recorded successor public state, using the exact source predictor mask. Require changed retained coordinates to belong only to deterministic acquisition resources/cards/relic counters or the reward-to-map screen. Join every initial root to the old public observation, full descriptor menu and parent action. No seed or RNG in the predictor.",
+  "choice": "Canonical independent NumPy sigmoid score, maximum first, parent then lower action index for exact ties. Keep parent if the best advantage is at most1e-6. Resolve choice before loading successor outcome labels. No margin or checkpoint sweep.",
+  "labels": "Parent_value of the actual recorded successor. Verify parent successor label matches parent_value of the current state; report all initial families including unchanged or tied outcomes. No observed_best/terminal-hindsight maximization as a prediction.",
+  "decision": "This diagnostic ends with signed gains/losses and fit-excluded initial/later counts. No training or natural-game entry is provided. Positive diagnostic evidence would still require a separately declared live public-effect interface and policy experiment; failure closes use of this frozen predictor for card scoring.",
+  "limits": "These old families have informed previous designs; no result is fresh unseen acceptance or a deployed action policy."
+}

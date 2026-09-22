@@ -1,0 +1,68 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E171",
+  "initial_card_families": {
+    "states": 1536,
+    "parent_wins": 149,
+    "ranked_wins": 144,
+    "available_wins": 281,
+    "changed": 1075,
+    "gained": 35,
+    "lost": 40
+  },
+  "all_recorded_card_states": {
+    "states": 6264,
+    "parent_wins": 477,
+    "ranked_wins": 492,
+    "available_wins": 902,
+    "changed": 4219,
+    "gained": 131,
+    "lost": 116
+  },
+  "by_fold": {
+    "0": {
+      "states": 2158,
+      "parent_wins": 194,
+      "ranked_wins": 197,
+      "available_wins": 355,
+      "changed": 1531,
+      "gained": 49,
+      "lost": 46
+    },
+    "1": {
+      "states": 1960,
+      "parent_wins": 153,
+      "ranked_wins": 145,
+      "available_wins": 276,
+      "changed": 1276,
+      "gained": 34,
+      "lost": 42
+    },
+    "2": {
+      "states": 2146,
+      "parent_wins": 130,
+      "ranked_wins": 150,
+      "available_wins": 271,
+      "changed": 1412,
+      "gained": 48,
+      "lost": 28
+    }
+  },
+  "exclusions": {
+    "not_card_parent_menu": 1184
+  },
+  "maximum_numpy_error": 1.1920928955078125e-07,
+  "all_family_roles_and_public_successor_change_fields_verified": true,
+  "source_training_review_sha256": "52520004b345bcf8fe12a2f315fa11404de81e0a05cb6699e30a55015b3bcdba",
+  "runner_sha256": "8d62076288b6d306eb56150cc03ef2d674b5d68d67f9950d25dbf1f65efa2ea6",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "policy_adapter_implemented": false,
+  "policy_adoption": false,
+  "limits": "Rankings of recorded deterministic successors under fixed-parent continuation. Conditional later states are correlated. This is neither live scoring nor natural/unseen policy success; E169/E170 remain below their original prediction gate.",
+  "choices_sha256": "46790842c18f16cd768ebea113b159fd1b4abab4cb8272c4a90e7166272da5f9",
+  "initial_labels_independently_match_complete_raw_branch_catalog": 6144,
+  "all_saved_choices_independently_recomputed": 6264,
+  "disposition": "closed_for_this_frozen_predictor; initial-family ranking loses5 versus parent; later correlated net15 does not establish a policy",
+  "registration_sha256": "45b60f0beb7a63da9fd9b60de2ae615bb83094faf7fade685cab14fe6c56aac4"
+}

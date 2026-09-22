@@ -1,0 +1,91 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E170",
+  "folds": [
+    {
+      "fold": 0,
+      "fit_baseline_brier": 0.06883470771964692,
+      "curve": [
+        {
+          "step": 2000,
+          "fit_brier": 0.05364296651577124,
+          "validation_brier": 0.07451082422630861
+        },
+        {
+          "step": 5000,
+          "fit_brier": 0.04734809160243527,
+          "validation_brier": 0.07110329548595473
+        },
+        {
+          "step": 10000,
+          "fit_brier": 0.03949571584713044,
+          "validation_brier": 0.0720433754613623
+        },
+        {
+          "step": 20000,
+          "fit_brier": 0.033767469703017756,
+          "validation_brier": 0.0783392742741853
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "fit_baseline_brier": 0.07610922400943797,
+      "curve": [
+        {
+          "step": 2000,
+          "fit_brier": 0.061509590094116155,
+          "validation_brier": 0.07064026256557554
+        },
+        {
+          "step": 5000,
+          "fit_brier": 0.054279722952532666,
+          "validation_brier": 0.06778090260922909
+        },
+        {
+          "step": 10000,
+          "fit_brier": 0.046300119676875334,
+          "validation_brier": 0.07092826336156577
+        },
+        {
+          "step": 20000,
+          "fit_brier": 0.037591796690388195,
+          "validation_brier": 0.07931674318388104
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "fit_baseline_brier": 0.08257069628491587,
+      "curve": [
+        {
+          "step": 2000,
+          "fit_brier": 0.062084720824414,
+          "validation_brier": 0.0726520863827318
+        },
+        {
+          "step": 5000,
+          "fit_brier": 0.0533859022657823,
+          "validation_brier": 0.07677489519119263
+        },
+        {
+          "step": 10000,
+          "fit_brier": 0.04830625674633897,
+          "validation_brier": 0.07974810060113668
+        },
+        {
+          "step": 20000,
+          "fit_brier": 0.04262498945374269,
+          "validation_brier": 0.08405202359426767
+        }
+      ]
+    }
+  ],
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "held_result_used_to_select_checkpoint": false,
+  "training_review_sha256": "52520004b345bcf8fe12a2f315fa11404de81e0a05cb6699e30a55015b3bcdba",
+  "runner_sha256": "a61781ca4238ed3bc8c116b6f0a9fefe56221a2d2153f34320c6d89fb9bf043a",
+  "inference_reviewer_sha256": "9de3fd0ab5dab0ec274aacf8a6c327687f55e71914a1aa46906fd17822a6b61e",
+  "limits": "Fit/inner-validation diagnosis on retained checkpoints; no checkpoint selected from outer outcomes."
+}

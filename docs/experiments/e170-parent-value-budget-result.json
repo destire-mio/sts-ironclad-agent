@@ -1,0 +1,51 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E170",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 5000,
+      "held_brier": 0.0789781655517735,
+      "baseline_brier": 0.08773966570559665,
+      "inner_baseline_brier": 0.07816390409343775
+    },
+    {
+      "fold": 1,
+      "selected_steps": 5000,
+      "held_brier": 0.06516281830929316,
+      "baseline_brier": 0.07488438081899328,
+      "inner_baseline_brier": 0.08107170674160866
+    },
+    {
+      "fold": 2,
+      "selected_steps": 2000,
+      "held_brier": 0.06048818883864268,
+      "baseline_brier": 0.0636799239468375,
+      "inner_baseline_brier": 0.07920900780285192
+    }
+  ],
+  "held_brier": 0.06820972423323644,
+  "baseline_brier": 0.07543465682380913,
+  "prediction_gate_passed": false,
+  "value_optimizer_updates": 72000,
+  "independent_inner_checkpoints": 24,
+  "independent_held_predictions": 24576,
+  "maximum_numpy_error": 1.4423801736329622e-09,
+  "family_roles_and_fit_only_baselines_verified": true,
+  "original_optimizer_prefix_identical_through_5000": true,
+  "data_review_sha256": "32798bce08c5cfb4a7e745bca22eb1660711f1ece643f0e36be841aa3a19b954",
+  "controller_exit_sha256": "a8fd723436dc815267132f7d3456722d65ee0462830cc3e7e99d2d55fb47ee0e",
+  "learning_completion_sha256": "7ad99b32ace0f545a8b60354706fb07ddf445d6ddbff300113f618400d8e8a87",
+  "reviewer_sha256": "9de3fd0ab5dab0ec274aacf8a6c327687f55e71914a1aa46906fd17822a6b61e",
+  "new_games": 0,
+  "actor_optimizer_updates": 0,
+  "auxiliary_optimizer_updates": 0,
+  "policy_adoption": false,
+  "limits": "State prediction under the frozen parent, not an action-selection model or natural/unseen policy win rate. All states remain grouped by the original family.",
+  "disposition": "closed_budget_hypothesis_not_supported",
+  "registration_sha256": "e1226fe1adc285fe3a944dc60fceedd4d77dd1e05da8067e576eb8cb5b8887c9",
+  "relative_brier_improvement": 0.09577736407614057,
+  "natural_games": 0,
+  "next": "Read-only E171 conditional action-ranking diagnosis on retained predictors; no more budget expansion. The original prediction gate remains failed.",
+  "three_final_model_states_equal_e169": true
+}

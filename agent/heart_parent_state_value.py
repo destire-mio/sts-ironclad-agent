@@ -21,7 +21,7 @@ EXTENDED_RECIPE = dict(RECIPE, steps=20000,
 
 
 def recipe_for(experiment):
-    E.require(experiment in ('E169', 'E170'), 'unregistered value budget')
+    E.require(experiment in ('E169', 'E170', 'E172'), 'unregistered value budget')
     return RECIPE if experiment == 'E169' else EXTENDED_RECIPE
 
 
@@ -60,7 +60,8 @@ def registered(root):
         E.require(E.sha(path) == digest, 'bound source changed: '+path)
     plan = E.read(root / 'protocol.json')
     E.require(plan['recipe'] == recipe_for(plan['experiment']) and plan['new_training_rollouts'] == 0, 'recipe changed')
-    if plan['experiment'] == 'E170':
+    E.require(plan.get('freeze_encoder', False) == (plan['experiment'] == 'E172'), 'trainable layer scope changed')
+    if plan['experiment'] in ('E170', 'E172'):
         previous = Path(plan['preceding_study'])
         review = E.read(previous / 'training-review.json')
         E.require(review['status'] == 'complete_reviewed' and not review['prediction_gate_passed'],
@@ -68,6 +69,10 @@ def registered(root):
         E.require(review['learning_completion_sha256'] == E.sha(previous / 'learning/completion.json'),
                   'preceding training changed')
         old = E.read(previous / 'protocol.json')
+        if plan['experiment'] == 'E172':
+            E.require(old['experiment'] == 'E170' and plan['freeze_encoder'] is True,
+                      'frozen-encoder study differs')
+            E.require(old['recipe'] == plan['recipe'], 'freezing changed optimizer budget')
         for key in ('learning_source', 'diagnosis', 'encoder_source', 'runtime', 'natural_source',
                     'target_audit', 'input_columns'):
             E.require(plan[key] == old[key], 'budget extension changed '+key)
@@ -150,7 +155,7 @@ class Data:
         return np.where(counts > 0, sums/np.maximum(counts, 1e-12), overall)
 
 
-def warm_model(source, width, fold, inner):
+def warm_model(source, width, fold, inner, freeze_encoder=False):
     directory = source / 'learning' / f'fold-{fold}'
     step = E.read(directory / 'auxiliary-report.json')['selected_steps']
     path = directory / (f'aux-inner-{step}.pt' if inner else 'auxiliary.pt')
@@ -159,6 +164,9 @@ def warm_model(source, width, fold, inner):
     model.tail[-1] = torch.nn.Linear(64, 1)
     torch.nn.init.zeros_(model.tail[-1].weight)
     torch.nn.init.zeros_(model.tail[-1].bias)
+    if freeze_encoder:
+        model.requires_grad_(False)
+        model.tail[-1].requires_grad_(True)
     return model
 
 
@@ -174,7 +182,8 @@ def brier(model, data, ids, allowed):
 
 def fit(model, data, families, steps, fold, checkpoint=None, recipe=None):
     recipe = RECIPE if recipe is None else recipe
-    optimizer = torch.optim.AdamW(model.parameters(), lr=recipe['learning_rate'], weight_decay=recipe['weight_decay'])
+    optimizer = torch.optim.AdamW((p for p in model.parameters() if p.requires_grad),
+                                 lr=recipe['learning_rate'], weight_decay=recipe['weight_decay'])
     rng = np.random.default_rng(recipe['seed']+fold)
     allowed = {f['seed'] for f in families}
     if checkpoint: checkpoint(0, model)
@@ -211,19 +220,20 @@ def train(root):
         held_ids = data.sample(held, rng.random((recipe['validation_draws'], 2)))
         E.write(directory / 'roles.json', dict(inner_train=[f['seed'] for f in inner], inner_validation=[f['seed'] for f in valid],
             fit=[f['seed'] for f in families], held=[f['seed'] for f in held], validation_ids=validation_ids.tolist(), held_ids=held_ids.tolist()))
-        model = warm_model(source, width, fold, True)
+        model = warm_model(source, width, fold, True, plan.get('freeze_encoder', False))
         curve = []
         def checkpoint(step, current):
             curve.append(dict(step=step, brier=brier(current, data, validation_ids, {f['seed'] for f in valid})))
             torch.save(current.state_dict(), directory / f'inner-{step}.pt')
         fit(model, data, inner, recipe['steps'], fold, checkpoint, recipe)
         selected = min(curve, key=lambda r: (r['brier'], r['step']))['step']
-        model = warm_model(source, width, fold, False)
+        model = warm_model(source, width, fold, False, plan.get('freeze_encoder', False))
         fit(model, data, families, selected, fold, recipe=recipe)
         torch.save(dict(model_type='parent_heart_state_value', prediction_only=True, model_state=model.state_dict(),
             feature_spec=store.spec, input_columns=plan['input_columns'], paired_width=width,
             provenance=dict(fold=fold, fit_families=[f['seed'] for f in families], selected_steps=selected,
-                encoder_sha256=E.sha(source / 'learning' / f'fold-{fold}/auxiliary.pt'), recipe=recipe)), directory / 'value.pt')
+                encoder_sha256=E.sha(source / 'learning' / f'fold-{fold}/auxiliary.pt'), recipe=recipe,
+                encoder_frozen=plan.get('freeze_encoder', False))), directory / 'value.pt')
         table, inner_table = data.baseline(families), data.baseline(inner)
         np.save(directory / 'baseline.npy', table, allow_pickle=False)
         np.save(directory / 'inner-baseline.npy', inner_table, allow_pickle=False)
@@ -239,6 +249,8 @@ def train(root):
     E.write(out / 'report.json', dict(status='complete', folds=reports, held_brier=error, baseline_brier=baseline,
         prediction_gate_passed=passed, value_optimizer_updates=3*recipe['steps']+sum(r['selected_steps'] for r in reports),
         auxiliary_optimizer_updates=0, actor_optimizer_updates=0, new_games=0, policy_adoption=False,
+        encoder_frozen=plan.get('freeze_encoder', False),
+        trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),
         limits='A fixed-parent state prediction model, not an action policy or unseen win rate. Passing only permits a separate public-effect policy design and verification.'))
     E.write(out / 'completion.json', dict(status='complete', hashes={str(p.relative_to(out)): E.sha(p) for p in out.rglob('*') if p.is_file()}))
 
