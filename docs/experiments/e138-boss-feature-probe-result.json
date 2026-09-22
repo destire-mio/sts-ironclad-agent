@@ -1,0 +1,24 @@
+{
+  "experiment": "E138",
+  "status": "complete",
+  "fit_states": 16,
+  "boss_relic_identities": 22,
+  "input_perturbations": 352,
+  "explicit_changed_variants": 0,
+  "old_centered_feature_changed_variants": 352,
+  "old_learned_score_changed_variants": 352,
+  "positive_controls_passed": 16,
+  "native_inventory_offsets_checked": true,
+  "game_state_unchanged": true,
+  "new_sampling_games": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "heldout_outcomes_scored": 0,
+  "limitations": "Checks only the learned residual representation at fixed other public inputs. Parent-action bonus may react through the parent, and natural relic effects may change other state fields. Does not measure policy gains or claim all relic-conditioned behavior is absent.",
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e138-boss-feature-probe-20260922-01/protocol.json": "52cf7b5c4ceae5f71a0511b0081f7d63bab61a4a9bcc3e06da58a8ebeac82f96",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/learning/candidate.pt": "e084e938d4c9b9c110b0b70f4e6548237cdc0cfdcdab79186861fd49c3ec0db9",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-training-20260920-01/scale/small/candidate.pt": "cda34d026d7db3a8a94168c3fc2a780fb4327e411e45dc1c05ccaa21e0811147"
+  },
+  "completion_sha256": "f8ffc10bcc96488e5df668ea260b1d354d3a67fe3b4dcf0f1e6c593380130557"
+}

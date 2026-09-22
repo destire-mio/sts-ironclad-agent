@@ -1,0 +1,20 @@
+{
+  "experiment": "E138",
+  "at": "2026-09-22T01:42:16.504376+00:00",
+  "fit_states": 16,
+  "selection": "First16 naturally available parent-relic card nodes from distinct fit families in original source order; no winning-label filter.",
+  "question": "Does the explicit card residual observe any fit-supported boss-relic presence bit when every other input stays fixed?",
+  "positive_control": "Toggle the declared Dead Branch presence bit; verify raw boss-relic offsets against native inventories.",
+  "comparison": "Frozen E128 small encoder-centered features and trained residual scores on the exact same input variants.",
+  "interpretation": "Synthetic input dependence only. Do not infer attainable game states, full policy blindness, population performance or a successful representation fix.",
+  "new_sampling_games": 0,
+  "optimizer_updates": 0,
+  "heldout_outcomes_scored": 0,
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-boss-feature-probe/docs/experiments/e138-boss-feature-probe.py": "c0eb31b6683e717f5cbac9b74e0447580bdc768e57885f7f041e829f91556ef7",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/runtime/manifest.json": "6a219bfffcca9ef3ede0b0ed278384d761dfc33993c903282616630a0090778e",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/input-verification.json": "96dae676f6d62cf155b8baf10d0e9c7616d513573135d2856cf34b2de745c564",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/learning/candidate.pt": "e084e938d4c9b9c110b0b70f4e6548237cdc0cfdcdab79186861fd49c3ec0db9",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e134-existing-data-representation-20260922-01/learning/completion-verification.json": "57700d5ed427c7b347073cd9097adfeb56199c642f73321707771b7fc201f432"
+  }
+}
