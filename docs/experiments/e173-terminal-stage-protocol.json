@@ -1,0 +1,19 @@
+{
+  "experiment": "E173",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e172-frozen-value-encoder-20260923-01",
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "new_native_replays": 0,
+  "hypothesis": "Binary Heart supervision discards the known stage of failure. Before changing the learning objective, recover the fixed-parent terminal category for every admitted state from complete existing raw traces and the reviewed acyclic parent graph.",
+  "categories": [
+    "non_heart_Act1",
+    "non_heart_Act2",
+    "non_heart_Act3_including_act3_only",
+    "non_heart_Act4",
+    "Heart"
+  ],
+  "labels": "Read actual final act and status from all29759 fully replayed raw traces, verify terminal edge joins and source hashes, and propagate each unique parent action to its terminal category. Do not infer final act from the preceding state; compare and report transitions. Every category4 label must equal the old Heart target and all1536 natural initial categories must match full original references.",
+  "current_act": "Decode from the admitted public observation independently of graph metadata. A state in act a cannot target a preceding-act failure. Verify all2,039,965 states and every parent category recursion.",
+  "future_learning": "If labels pass, a separately registered five-category likelihood may predict terminal type while evaluation/decisions still use only P(Heart). No floor-progress reward, policy adoption or new rollout is authorized by this audit.",
+  "limits": "Retain original family roles. Reuse source native replay acceptance; only raw provenance/terminal metadata and exact graph label propagation are checked here. No training or fresh acceptance."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E172",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 20000,
+      "held_brier": 0.08406286252539827,
+      "baseline_brier": 0.08773966570559665,
+      "inner_baseline_brier": 0.07816390409343775
+    },
+    {
+      "fold": 1,
+      "selected_steps": 20000,
+      "held_brier": 0.0731420566832039,
+      "baseline_brier": 0.07488438081899328,
+      "inner_baseline_brier": 0.08107170674160866
+    },
+    {
+      "fold": 2,
+      "selected_steps": 20000,
+      "held_brier": 0.06250416319675318,
+      "baseline_brier": 0.0636799239468375,
+      "inner_baseline_brier": 0.07920900780285192
+    }
+  ],
+  "held_brier": 0.07323636080178512,
+  "baseline_brier": 0.07543465682380913,
+  "prediction_gate_passed": false,
+  "value_optimizer_updates": 120000,
+  "independent_inner_checkpoints": 24,
+  "independent_held_predictions": 24576,
+  "maximum_numpy_error": 1.096835261504836e-09,
+  "family_roles_and_fit_only_baselines_verified": true,
+  "all_inner_and_final_encoders_unchanged": true,
+  "trainable_parameters": 65,
+  "data_review_sha256": "fff783dae9a905090c94dbc21b7ee86330b45aa9b16836ce0f123b911b260837",
+  "controller_exit_sha256": "91021492f4c6f4f78b2939bf402b28f9c9a7ba2bbfb0f722ba00487c1684987d",
+  "learning_completion_sha256": "9f73f6432be38edf0a86ea4257af8450386504369fc1b2320d0de2345541140a",
+  "reviewer_sha256": "ba93fa9555c19fc5e72e741c03f63d21ceb0e9ba26b786b07bbf4d6fdbdaafd8",
+  "new_games": 0,
+  "actor_optimizer_updates": 0,
+  "auxiliary_optimizer_updates": 0,
+  "policy_adoption": false,
+  "limits": "State prediction under the frozen parent, not an action-selection model or natural/unseen policy win rate. All states remain grouped by the original family.",
+  "disposition": "closed_frozen_encoder_variant_below_prediction_gate",
+  "relative_brier_improvement": 0.029141724965469296,
+  "registration_sha256": "e9da6d2f206fc33e49f68001f43de60add3b1baf221c9fd6586982a6fa7ce37e",
+  "natural_games": 0
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E174",
+  "states": 2039965,
+  "families": 1536,
+  "all_parent_terminal_categories_and_heart_targets_rechecked": true,
+  "all_current_acts_equal_public_observation": true,
+  "native_full_terminal_routes": 6,
+  "native_stage_target_states": 914,
+  "native_prediction_states": 68,
+  "native_states_by_act": {
+    "1": 24,
+    "2": 20,
+    "3": 16,
+    "4": 8
+  },
+  "maximum_numpy_error": 2.9802322387695312e-08,
+  "held_terminal_label_rejected": true,
+  "fixture_optimizer_updates": 8,
+  "fixture_checkpoint_saved": false,
+  "formal_optimizer_updates": 0,
+  "new_games": 0,
+  "data_completion_sha256": "a965f3f950500ae3632be0908e3ab57b1aac9b022dfd9214a0af6ef79a17721d",
+  "source_target_audit_sha256": "d8552443ecbbe435d51265ce963528a00adaee5ab1c40e111b54ea5d3b96986b",
+  "reviewer_sha256": "470429f6a533de93450c20495db7550233a525acae94dacca20403f11f84aa65",
+  "runner_sha256": "6ecc66f49e586ffb8ec0a60849dc1ea5a7b71917f8ff57089bc969875648811f",
+  "checks_passed": 8,
+  "check_command": "pytest -q tests/test_heart_terminal_stage_value.py tests/test_heart_parent_state_value.py",
+  "registration_sha256": "fb5d4da762793b5d0a01a57f69420364f6ea71ba897991a84a20704e7927bc3c"
+}

@@ -1,0 +1,80 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E173",
+  "families": 1536,
+  "states": 2039965,
+  "routes": 29759,
+  "terminal_edges": 23821,
+  "terminal_category_counts": {
+    "1": 565078,
+    "0": 66363,
+    "3": 405224,
+    "2": 734219,
+    "4": 269081
+  },
+  "natural_initial_categories": {
+    "1": 446,
+    "0": 352,
+    "2": 379,
+    "3": 210,
+    "4": 149
+  },
+  "raw_terminal_counts": {
+    "('death', 2)": 14642,
+    "('death', 1)": 1609,
+    "('death', 4)": 3524,
+    "('death', 3)": 7710,
+    "('heart_win', 4)": 2231,
+    "('act3_without_heart', 3)": 43
+  },
+  "terminal_source_to_actual_act_counts": {
+    "(2, 2)": 14642,
+    "(1, 1)": 1609,
+    "(4, 4)": 5755,
+    "(3, 3)": 7753
+  },
+  "state_counts_by_current_act_and_end": {
+    "1": [
+      66363,
+      116354,
+      96260,
+      52098,
+      36810
+    ],
+    "2": [
+      0,
+      448724,
+      367080,
+      166992,
+      107555
+    ],
+    "3": [
+      0,
+      0,
+      270879,
+      155950,
+      102322
+    ],
+    "4": [
+      0,
+      0,
+      0,
+      30184,
+      22394
+    ]
+  },
+  "all_parent_category_recursions_verified": true,
+  "all_heart_labels_equal_original": true,
+  "all_current_acts_equal_public_observation": true,
+  "impossible_preceding_act_targets": 0,
+  "new_games": 0,
+  "new_native_replays": 0,
+  "MCTS_searches": 0,
+  "optimizer_updates": 0,
+  "source_graph_completion_sha256": "74dd0b0ac3fd8a1a8673ca0edfc2be1025df66840fc308387ae06a554c30e6ec",
+  "source_training_review_sha256": "cc5e7b3e9025b2b3e6f98ff8b5ebc89014594d2e59b65872bc21b956233c83e4",
+  "runner_sha256": "87a8dfa085fb9020809f6d0283477325a34c0057c7070f55715f491f81bc0161",
+  "limits": "Existing fully replayed trace provenance is reused and its raw terminal metadata rechecked. This adds training labels, not public future inputs, new games or prediction/policy gains.",
+  "registration_sha256": "6e6fc7b09095f76f09120d90756d5b6f7dde1bcd7c591895971a7d67119fd6bd",
+  "data_completion_sha256": "a965f3f950500ae3632be0908e3ab57b1aac9b022dfd9214a0af6ef79a17721d"
+}
