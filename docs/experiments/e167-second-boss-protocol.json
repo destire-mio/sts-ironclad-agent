@@ -1,0 +1,18 @@
+{
+  "experiment": "E167",
+  "families": 32,
+  "maximum_branches": 128,
+  "minimum_rescuable_families_for_learning": 8,
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "learning_evidence": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e166-structured-comparison-20260923-01",
+  "collection_timeout_seconds": 3600,
+  "question": "Does the unmeasured second Boss relic decision provide a material Heart improvement signal on existing reachable families?",
+  "evidence": "E161 finds all7448 alternative states at floors1/17/18. E165 learns held combat outcomes but no action gains; E166 completes6600 updates and yields109 gains/163 losses on held branches. E162 campfire pilot is closed with only1 rescuable family. These are completed learning failures and a specific missing late decision scope.",
+  "selection": "Sort1536 existing natural fit families by SHA256(E167-act2-boss-relic:seed), restore saved actions until the first native act2 BOSS_RELIC_REWARDS where the frozen parent chooses a nonpotion relic or skip. Include every actual legal nonpotion option; require2-4 unique choices. Select first32 eligible, record each scan exclusion, never filter by terminal outcome or HP/deck/known rescue. Unexpected menus or replay faults stop, not skip.",
+  "continuation": "Force one chosen relic/skip and retain the frozen parent for every other outside decision. Same Ironclad A20 Heart runtime, MCTS8000/Bossx3/max replans256/workers8. Recorded prefixes, fresh NN/MCTS suffixes. All32 fresh parent controls must reproduce the source full path and terminal state/RNG before alternatives.",
+  "verification": "Every branch passes native legal input/action checks, complete state/RNG/terminal replay and every nonintervention parent NN choice. Replan each winning suffix again. Zero faults and verified owned process cleanup before admission.",
+  "budget": "At most128 primary suffix runs plus at most128 fresh winner repeats. No new seed family, natural-start collection, optimizer updates or automatic expansion. Preserve incomplete artifacts on failure.",
+  "next": "At least8 parent-losing families with a measured winning alternative are required even to admit a small scoped learning test. This potential gate cannot authorize sampling expansion or adoption. A separate family-excluding learner must demonstrate transfer before more data or natural evaluation.",
+  "limits": "Conditional existing second-boss roots; maxima and rescue counts use hindsight, not a natural policy win rate. All alternatives stay separate, with no posthoc best-alternative policy. Original-game parity and Prismatic Shard remain excluded. Final frozen unseen512/1024 acceptance remains required."
+}

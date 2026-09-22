@@ -1,0 +1,35 @@
+{
+  "experiment": "E167",
+  "preparation": {
+    "status": "complete",
+    "eligible_selected": 32,
+    "scanned": 60,
+    "total_existing_families": 1536,
+    "unscanned": 1476,
+    "branches": 128,
+    "eligibility_counts": {
+      "eligible": 32,
+      "no_act2_boss_relic": 28
+    },
+    "new_games": 0,
+    "selection": "First32 eligible old families in fixed hash order; no filtering by terminal outcome.",
+    "hashes": {
+      "states-private.json": "a3a21041fcf7552526aad44b285c9329517ab3df35f04f753da06604c31c3b44",
+      "inventory-private.json": "9f69db523c77129b0112793d05c1c25b76cb1a0b8f66302ba02affdd8198fe1a"
+    }
+  },
+  "preflight": {
+    "status": "passed",
+    "native_roots_verified": 32,
+    "source_parent_choices_verified": 6003,
+    "hash_order_and_scanned_inventory_verified": true,
+    "corrupt_root_rejected_before_rollout": true,
+    "new_games": 0,
+    "optimizer_updates": 0,
+    "runner_sha256": "560bf70feacfcf31c5d792323d3478dade0a2ba77b6c87dd4dc2777718afb104",
+    "reviewer_sha256": "ff5f38aebd6f3c0c9eddfdf5f305072ac671f0557647e9a1c8e97bf77523b252"
+  },
+  "mechanism_checks_passed": 5,
+  "registration_sha256": "54cca1fc3b51c86e21b58cc494738b6a62658fcf315c937fdf6ebddf8bbdf775",
+  "runner_sha256": "560bf70feacfcf31c5d792323d3478dade0a2ba77b6c87dd4dc2777718afb104"
+}
