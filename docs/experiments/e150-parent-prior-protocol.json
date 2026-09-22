@@ -1,0 +1,26 @@
+{
+  "experiment": "E150",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e148-alternative-ranking-20260922-01",
+  "created_at": "2026-09-22T04:54:12.467824+00:00",
+  "training": {
+    "steps": 2000,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm": 1.0,
+    "seed": 2026092248
+  },
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "unseen_acceptance_games": 0,
+  "production_adoption": false,
+  "training_timeout_seconds": 3600,
+  "question": "Does providing the parent recommendation as one learned score offset improve cross-family ranking over the otherwise identical E148 within-state learner?",
+  "intervention": "Score is existing fully trained5339-input value plus one trainable scalar when the action equals the recorded frozen-parent choice. The scalar starts at zero and can become positive or negative from fitting labels. No fixed parent margin, hand-picked relic rule or post-evaluation threshold. Parent identity comes from the available baseline policy, never the outcome.",
+  "matched_control": "Reuse E148 within_state. Same full public maps, initial691841 base weights, initialization seed, family/stage/branch draws, squared within-state difference loss and2000 updates per fold. One scalar is added, giving691842 total parameters; all parameters receive the same AdamW/gradient-clip recipe.",
+  "background": "E148 supplied the parent only to tie-breaking/support, and proposed202 boss skips with4 wins on1184 reached menus. This does not prove every skip wrong. The new experiment tests a learned behavioral prior rather than banning skips. Earlier frozen-readout methods used a fixed parent margin; their failures remain recorded.",
+  "gate": "Same E148 screen: first_card and boss_then_card must each gain20/1536 versus parent with descriptive paired p<.025. Also compare with the immutable no-offset E148 control. No automatic natural-run policy, full fit or acceptance.",
+  "failure_rule": "If no qualifying gain, reject the one-scalar prior as a sufficient remedy; do not sweep offsets or thresholds on these held outcomes.",
+  "limits": "Historical-family development evidence only. Recorded first-card and boss-card scopes remain separate; no incompatible prefixes spliced, new training games, external holdout or50% acceptance. Parent-only tie-breaking still applies at equal final scores."
+}

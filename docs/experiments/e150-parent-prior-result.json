@@ -1,0 +1,142 @@
+{
+  "status": "complete_recorded_screen_not_adopted",
+  "experiment": "E150",
+  "at": "2026-09-22T04:54:49.699970+00:00",
+  "arms": {
+    "within_state_parent_prior": {
+      "counts": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 148,
+          "net_gain": -1,
+          "paired": {
+            "both_fail": 1339,
+            "both_win": 100,
+            "candidate_only": 48,
+            "baseline_only": 49
+          },
+          "exact_p": 1.0
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 108.0,
+          "net_gain": -41,
+          "paired": {
+            "both_fail": 1367,
+            "both_win": 88,
+            "candidate_only": 20,
+            "baseline_only": 61
+          },
+          "exact_p": 5.656214894965938e-06
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 152,
+          "net_gain": 3,
+          "paired": {
+            "both_fail": 1350,
+            "both_win": 115,
+            "candidate_only": 37,
+            "baseline_only": 34
+          },
+          "exact_p": 0.8125886494061618
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 118.0,
+          "net_gain": -31,
+          "paired": {
+            "both_fail": 1339,
+            "both_win": 70,
+            "candidate_only": 48,
+            "baseline_only": 79
+          },
+          "exact_p": 0.007519595098399993
+        }
+      },
+      "screen_passed": false,
+      "against_E148": {
+        "first_card": {
+          "assigned": 1536,
+          "baseline_wins": 152,
+          "candidate_wins": 148,
+          "net_gain": -4,
+          "paired": {
+            "both_fail": 1370,
+            "both_win": 134,
+            "candidate_only": 14,
+            "baseline_only": 18
+          },
+          "exact_p": 0.5966148958541453
+        },
+        "boss_only": {
+          "assigned": 1536,
+          "baseline_wins": 97.0,
+          "candidate_wins": 108.0,
+          "net_gain": 11,
+          "paired": {
+            "both_fail": 1419,
+            "both_win": 88,
+            "candidate_only": 20,
+            "baseline_only": 9
+          },
+          "exact_p": 0.06142834573984146
+        },
+        "parent_boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 148,
+          "candidate_wins": 152,
+          "net_gain": 4,
+          "paired": {
+            "both_fail": 1370,
+            "both_win": 134,
+            "candidate_only": 18,
+            "baseline_only": 14
+          },
+          "exact_p": 0.5966148958541453
+        },
+        "boss_then_card": {
+          "assigned": 1536,
+          "baseline_wins": 106.0,
+          "candidate_wins": 118.0,
+          "net_gain": 12,
+          "paired": {
+            "both_fail": 1398,
+            "both_win": 86,
+            "candidate_only": 32,
+            "baseline_only": 20
+          },
+          "exact_p": 0.12634707581392135
+        }
+      }
+    }
+  },
+  "states": 7448,
+  "families": 1536,
+  "numpy_state_inferences": 7448,
+  "raw_terminal_files": 4654,
+  "stage_counts": {
+    "first_card": 1536,
+    "boss": 1184,
+    "conditional_card": 4728
+  },
+  "mixed_outcome_states": {
+    "first_card": 233,
+    "boss": 198,
+    "conditional_card": 494
+  },
+  "optimizer_updates": 6000,
+  "optimizer_seconds": 28.86828133306699,
+  "new_training_rollouts": 0,
+  "natural_candidate_games": 0,
+  "external_holdout_evaluations": 0,
+  "production_adoption": false,
+  "completion_sha256": "c9bdfea01c943e457930cc0eaf3c51ef6083978392074279d18d932725883095",
+  "controller_exit_sha256": "bedcfde8a8eeeff158217f9caf645b819c7621e7df3ed2adf9abd8b693e964c8",
+  "review_script_sha256": "20eb106df7d7854a43b9f359ecb2b1742e4c5d2087405f49620b12fd813ba49d",
+  "limits": "Historical-family development evidence only. Recorded first-card and boss-card scopes remain separate; no incompatible prefixes spliced, new training games, external holdout or50% acceptance. Parent-only tie-breaking still applies at equal final scores."
+}
