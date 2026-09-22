@@ -1,0 +1,141 @@
+{
+  "status": "complete",
+  "experiment": "E157",
+  "source_completion_sha256": "daa0c9f61dae75a7da457a7a9efc2ff5919804751107c9c693a637435f012db9",
+  "independent_numpy_actor_choices": 22344,
+  "unique_branch_states": 7448,
+  "target_groups": {
+    "all_equal": 6213,
+    "parent_best_with_worse_alternative": 577,
+    "parent_can_improve": 658
+  },
+  "strict_tau_improvement_states": 658,
+  "strict_observed_max_improvement_states": 449,
+  "tau_improvement_without_observed_max_improvement": 209,
+  "lost_parent_wins": {
+    "total": 8,
+    "unrecorded_first_action": 3,
+    "recorded_worse_parent_continuation": 4
+  },
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "production_adoption": false,
+  "target_composition": {
+    "all_equal": {
+      "states": 6213,
+      "parent_target_probability_sum": 1573.3666666666722,
+      "observed_max_all_equal": 6213,
+      "expectile_below_deterministic_parent": 0,
+      "all_observed_actions_fail": 6080
+    },
+    "parent_best_with_worse_alternative": {
+      "states": 577,
+      "parent_target_probability_sum": 431.54671505882067,
+      "observed_max_parent_best_with_worse_alternative": 561,
+      "expectile_below_deterministic_parent": 361,
+      "all_observed_actions_fail": 0,
+      "observed_max_all_equal": 16
+    },
+    "parent_can_improve": {
+      "states": 658,
+      "parent_target_probability_sum": 8.471813919009294,
+      "observed_max_parent_can_improve": 449,
+      "expectile_below_deterministic_parent": 132,
+      "all_observed_actions_fail": 0,
+      "observed_max_parent_best_with_worse_alternative": 145,
+      "observed_max_all_equal": 64
+    }
+  },
+  "actor_groups": {
+    "fit": {
+      "all_equal": {
+        "appearances": 12426,
+        "parent_choices": 8782,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 6219.004580389708,
+        "initial_gradient_reduces_parent_logit": 12426,
+        "lower_tau_value_than_parent": 0,
+        "higher_tau_value_than_parent": 0,
+        "missed_observed_maximum": 0,
+        "observed_max_improvement_over_parent": 0
+      },
+      "parent_best_with_worse_alternative": {
+        "appearances": 1154,
+        "parent_choices": 898,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 645.9480695575476,
+        "initial_gradient_reduces_parent_logit": 554,
+        "lower_tau_value_than_parent": 188,
+        "higher_tau_value_than_parent": 0,
+        "missed_observed_maximum": 182,
+        "observed_max_improvement_over_parent": 0
+      },
+      "parent_can_improve": {
+        "appearances": 1316,
+        "parent_choices": 852,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 621.274125257507,
+        "initial_gradient_reduces_parent_logit": 1316,
+        "lower_tau_value_than_parent": 53,
+        "higher_tau_value_than_parent": 292,
+        "missed_observed_maximum": 749,
+        "observed_max_improvement_over_parent": 202
+      }
+    },
+    "held": {
+      "all_equal": {
+        "appearances": 6213,
+        "parent_choices": 4360,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 3110.024097016081,
+        "initial_gradient_reduces_parent_logit": 6213,
+        "lower_tau_value_than_parent": 0,
+        "higher_tau_value_than_parent": 0,
+        "missed_observed_maximum": 0,
+        "observed_max_improvement_over_parent": 0
+      },
+      "parent_can_improve": {
+        "appearances": 658,
+        "parent_choices": 451,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 325.625434294343,
+        "initial_gradient_reduces_parent_logit": 658,
+        "lower_tau_value_than_parent": 31,
+        "higher_tau_value_than_parent": 103,
+        "missed_observed_maximum": 424,
+        "observed_max_improvement_over_parent": 56
+      },
+      "parent_best_with_worse_alternative": {
+        "appearances": 577,
+        "parent_choices": 427,
+        "unsupported_state_action": 0,
+        "parent_probability_sum": 311.07167933508754,
+        "initial_gradient_reduces_parent_logit": 277,
+        "lower_tau_value_than_parent": 129,
+        "higher_tau_value_than_parent": 0,
+        "missed_observed_maximum": 128,
+        "observed_max_improvement_over_parent": 0
+      }
+    }
+  },
+  "first_divergence": {
+    "counts": {
+      "assigned": 128,
+      "unchanged": 30,
+      "changed": 98,
+      "unrecorded_first_change": 43,
+      "lost_with_recorded_worse_parent_continuation": 4,
+      "lost_with_lower_observed_max": 4
+    },
+    "kinds": {
+      "AK_REWARD_CARD": 71,
+      "AK_REWARD_SKIP": 26,
+      "AK_BOSS_RELIC": 1
+    },
+    "lost_parent_wins_by_kind": {
+      "AK_REWARD_CARD": 3,
+      "AK_REWARD_SKIP": 5
+    }
+  },
+  "result_review_sha256": "c26d3c7b89092c7276f70535618f7e5f38560ba74470e685773b64386b0a06ce"
+}
