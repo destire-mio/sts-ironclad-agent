@@ -1,0 +1,21 @@
+{
+  "experiment": "E191",
+  "status": "reviewer_prepared",
+  "registered_at": "2026-09-23T17:13:28.257201+00:00",
+  "reviewer_sha256": "bbd16020f755422be76f623ea90787ac81228e927ab210404e2a94899ef98491",
+  "review_registration_sha256": "3aa32e5c929306389b44334d33ffac6f3c884d1a074a01229c65f98e86911ccb",
+  "independent_checker_tests_passed": 3,
+  "checks": [
+    "All family roles and sampling-stream assignments",
+    "Every collecting probability from frozen actor weights using NumPy",
+    "All grouped complete-return advantages and stop gates",
+    "Full AdamW replay with separately written clipped likelihood and KL objective",
+    "Every scheduled actor tensor within absolute1e-9; investigate any failed tolerance",
+    "Four greedy-control native replays; first two routes per training round; first two per evaluation arm",
+    "Every winner fresh-replan artifact and all game budgets",
+    "Paired historical comparisons against initial stochastic and greedy parent",
+    "Clean process exit and completion/source hashes"
+  ],
+  "training_or_evaluation_outcomes_read_for_reviewer_design": false,
+  "limits": "Prepared checker and synthetic tests are not completed E191 result review or evidence of policy gains."
+}
