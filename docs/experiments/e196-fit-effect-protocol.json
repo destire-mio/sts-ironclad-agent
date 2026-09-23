@@ -1,0 +1,24 @@
+{
+  "experiment": "E196",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "source_round": 3,
+  "actor_updates": 0,
+  "timeout_seconds": 14400,
+  "preparation_timeout_seconds": 1800,
+  "frozen_executor_sha256": "16636a0f8057a7024dbf6b11ef21a17390397446f9a9f5eecbb5fe32946fcc6d",
+  "question": "What complete-game return change did the final870 E191 optimizer steps produce on their own512 original training paths under the same assigned policy streams?",
+  "evidence": "E191 completed3444 updates and failed historical evaluation; its37/33/37/50 collecting wins use different policies and streams and are not a matched learning curve. E192 greedy20->20 also does not measure this last training increment. E193 diagnoses directions, and E195 state prediction fails; neither supplies this full-game effect.",
+  "assignments": "Use all128 original E191 fit families x4 exact round3 sampling seeds and every recorded status, including all50 old Heart wins and462 failures. Baseline actor-after-2.pt collected these paths; actor-after-3.pt is the single frozen updated candidate, verified tensor-identical to candidate.pt. No choosing a checkpoint, family, outcome or stream. Evaluation-role families are excluded.",
+  "certificate": "Recompute all old and updated distributions from E191-verified public feature records with both Torch and explicit NumPy networks; same one-draw-per-outside-decision stream including forced choices. Both implementations must choose the same action; old probabilities/choices must match records. Certify a whole old outcome only if every updated choice equals the recorded choice. Source state/RNG replay and stateless-input evidence are inherited from the completed E191 review; this certificate calculation is not a new native replay.",
+  "execution": "Execute natural complete updated-policy games only for certified changed paths, plus at most4 unchanged controls selected by fixed E196-control hash. Keep all512 assignments in the comparison. Use the exact old sampling seed, frozen engine, actor, legal support, A20 keys/two Act3 bosses/Act4/Heart, MCTS8000/Bossx3/native256 guard,8 single-thread workers,300s episode and360s process bounds. Fresh NN/MCTS replan every newly executed winner with its same policy stream. No training labels or optimizer update follow.",
+  "budget": "At most512 new base evaluations and at most512 winner replans, never a winning-seed hunt. Actual count is determined by the action certificate before any new outcome. Existing unchanged source outcomes and old-model results are reused. Any execution fault aborts the study; it is not a death or permission to restart.",
+  "analysis": "Report50 baseline wins versus updated wins, paired gained/lost runs and128 family win-count deltas. Four runs per family are related and the candidate was fitted to these trajectories; do not assign an independent512-sample significance test or call this generalization. Describe whole-path likelihood ratios as in-sample objective diagnostics only. No adoption gate or permission for more collection is attached; use the complete result to locate the remaining learning problem.",
+  "verification": "Bind the completed E191 review/learning manifest, initial/before/after checkpoints, roles and every consumed source file. Reconstruct all512 certificates with an independent NumPy reader. Replay every newly executed base route and every winner replan from its natural seed, checking every public input, choice, stream, game-state/RNG, terminal and A20 chain. Check first divergences and unchanged controls against the old cohort. Recompute all pair/family counts and clean owned execution.",
+  "alias_probe": "Retrospective inspection of all55,658 final-cohort nonforced menus finds4,424 menus with matching feature vectors after deleting only3 raw-index coordinates,10,333 groups and94 sampled-versus-parent differences confined to those coordinates. This does not establish identical game effects or RNG: map position, deck order and action identity can matter. No action merging or feature masking follows. Recount the probe during preparation.",
+  "limits": [
+    "This measures only the last870 updates from actor-after-2 to actor-after-3, not the cumulative effect of all3444 updates. A flat last increment cannot prove that earlier updates learned nothing.",
+    "In-sample training-family outcomes do not establish held-family gains, population performance or the final512/1024 unused acceptance target.",
+    "A positive final increment alone cannot justify extending the closed E191 recipe, sampling budget or hyperparameter grid.",
+    "Original-game parity remains deferred; Prismatic Shard excluded. Source errors, missing inputs and replay faults are not death labels. No E133 restart, new seed search, actor training or candidate adoption."
+  ]
+}
