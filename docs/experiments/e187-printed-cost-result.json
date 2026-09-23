@@ -1,0 +1,113 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E187",
+  "result": {
+    "status": "complete",
+    "experiment": "E187",
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 5000,
+        "held_brier": 0.07862614531768486,
+        "baseline_brier": 0.08773966570559676
+      },
+      {
+        "fold": 1,
+        "selected_steps": 5000,
+        "held_brier": 0.06459611357422546,
+        "baseline_brier": 0.07488438081899318
+      },
+      {
+        "fold": 2,
+        "selected_steps": 2000,
+        "held_brier": 0.059351883333874866,
+        "baseline_brier": 0.06367992394683741
+      }
+    ],
+    "held_brier": 0.06752471407526173,
+    "baseline_brier": 0.07543465682380912,
+    "prediction_gate_passed": true,
+    "value_optimizer_updates": 72000,
+    "auxiliary_optimizer_updates": 0,
+    "actor_optimizer_updates": 0,
+    "new_games": 0,
+    "policy_adoption": false,
+    "trainable_parameters": 822017,
+    "normalization": "empty_normal_combat_reward_to_map_v1",
+    "feature_version": "public_printed_cost_relations_v1",
+    "derived_features": 210,
+    "limits": "Derived printed costs are not effective combat costs. No action policy or unseen success claim."
+  },
+  "inner_checkpoints_verified": 24,
+  "held_predictions_verified": 24576,
+  "maximum_brier_error": 1.5397340763501077e-09,
+  "initial": {
+    "states": 1536,
+    "parent": 149,
+    "candidate": 153,
+    "gained": 46,
+    "lost": 42,
+    "changed": 1137
+  },
+  "initial_paired": {
+    "assigned": 1536,
+    "baseline_wins": 149,
+    "candidate_wins": 153,
+    "net_gain": 4,
+    "paired": {
+      "both_fail": 1341,
+      "baseline_only": 42,
+      "candidate_only": 46,
+      "both_win": 107
+    },
+    "exact_p": 0.7493290032022806
+  },
+  "initial_by_fold": {
+    "0": {
+      "states": 527,
+      "parent": 59,
+      "candidate": 58,
+      "gained": 15,
+      "lost": 16,
+      "changed": 427
+    },
+    "1": {
+      "states": 485,
+      "parent": 52,
+      "candidate": 47,
+      "gained": 12,
+      "lost": 17,
+      "changed": 344
+    },
+    "2": {
+      "states": 524,
+      "parent": 38,
+      "candidate": 48,
+      "gained": 19,
+      "lost": 9,
+      "changed": 366
+    }
+  },
+  "all_recorded_menus": {
+    "states": 6264,
+    "parent": 477,
+    "candidate": 521,
+    "gained": 157,
+    "lost": 113,
+    "changed": 4424
+  },
+  "action_gate_passed": false,
+  "eligible_for_policy_design": false,
+  "process_cleanup_verified": true,
+  "torch_numpy_menu_choices_verified": 6264,
+  "learning_completion_sha256": "38d2f81a16027a76018aa6b60af07f271afe03b4a7ce3c55efb46afe55fcdcbd",
+  "ranking_choices_sha256": "09f7cd51f1f7501790563c25c6519135ec3393d18ed6efa5aa7e06d2c626f72d",
+  "reviewer_sha256": "195f93720e6e6e93e2bc2b4a96ebcb84e46e0d3510a19a94ef57f24517cff3cc",
+  "new_games": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "training_review_sha256": "0bcdbf7e8e1e4577be03b78286dc3f726c0250343f21db73d4ab5fb544af91a3",
+  "relative_brier_improvement_over_table": 0.10485820551981107,
+  "relative_brier_improvement_over_e185": 0.010009875901703214,
+  "decision": "Retain evidence of improved prediction; reject policy design under the unchanged action gate. Close the exact end-to-end cost-relation predictor recipe; no bin/context/lr/budget grid."
+}

@@ -1,0 +1,202 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E188",
+  "result": {
+    "status": "complete",
+    "experiment": "E188",
+    "arms": {
+      "base": {
+        "initial": {
+          "states": 1536,
+          "parent": 149,
+          "uncorrected": 150,
+          "candidate": 143,
+          "gained": 48,
+          "lost": 54,
+          "gained_vs_uncorrected": 29,
+          "lost_vs_uncorrected": 36,
+          "changed": 1194
+        },
+        "initial_paired": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 143,
+          "net_gain": -6,
+          "paired": {
+            "both_fail": 1339,
+            "baseline_only": 54,
+            "candidate_only": 48,
+            "both_win": 95
+          },
+          "exact_p": 0.6207676687971156
+        },
+        "initial_by_fold": {
+          "0": {
+            "states": 527,
+            "parent": 59,
+            "uncorrected": 57,
+            "candidate": 59,
+            "gained": 17,
+            "lost": 17,
+            "gained_vs_uncorrected": 6,
+            "lost_vs_uncorrected": 4,
+            "changed": 435
+          },
+          "1": {
+            "states": 485,
+            "parent": 52,
+            "uncorrected": 44,
+            "candidate": 45,
+            "gained": 15,
+            "lost": 22,
+            "gained_vs_uncorrected": 18,
+            "lost_vs_uncorrected": 17,
+            "changed": 360
+          },
+          "2": {
+            "states": 524,
+            "parent": 38,
+            "uncorrected": 49,
+            "candidate": 39,
+            "gained": 16,
+            "lost": 15,
+            "gained_vs_uncorrected": 5,
+            "lost_vs_uncorrected": 15,
+            "changed": 399
+          }
+        },
+        "all_recorded_menus": {
+          "states": 6264,
+          "parent": 477,
+          "uncorrected": 519,
+          "candidate": 500,
+          "gained": 159,
+          "lost": 136,
+          "gained_vs_uncorrected": 64,
+          "lost_vs_uncorrected": 83,
+          "changed": 4820
+        },
+        "action_gate_passed": false
+      },
+      "cost": {
+        "initial": {
+          "states": 1536,
+          "parent": 149,
+          "uncorrected": 151,
+          "candidate": 145,
+          "gained": 44,
+          "lost": 48,
+          "gained_vs_uncorrected": 42,
+          "lost_vs_uncorrected": 48,
+          "changed": 1133
+        },
+        "initial_paired": {
+          "assigned": 1536,
+          "baseline_wins": 149,
+          "candidate_wins": 145,
+          "net_gain": -4,
+          "paired": {
+            "both_fail": 1343,
+            "both_win": 101,
+            "candidate_only": 44,
+            "baseline_only": 48
+          },
+          "exact_p": 0.7546517496104993
+        },
+        "initial_by_fold": {
+          "0": {
+            "states": 527,
+            "parent": 59,
+            "uncorrected": 57,
+            "candidate": 56,
+            "gained": 18,
+            "lost": 21,
+            "gained_vs_uncorrected": 7,
+            "lost_vs_uncorrected": 8,
+            "changed": 433
+          },
+          "1": {
+            "states": 485,
+            "parent": 52,
+            "uncorrected": 49,
+            "candidate": 46,
+            "gained": 11,
+            "lost": 17,
+            "gained_vs_uncorrected": 20,
+            "lost_vs_uncorrected": 23,
+            "changed": 328
+          },
+          "2": {
+            "states": 524,
+            "parent": 38,
+            "uncorrected": 45,
+            "candidate": 43,
+            "gained": 15,
+            "lost": 10,
+            "gained_vs_uncorrected": 15,
+            "lost_vs_uncorrected": 17,
+            "changed": 372
+          }
+        },
+        "all_recorded_menus": {
+          "states": 6264,
+          "parent": 477,
+          "uncorrected": 533,
+          "candidate": 503,
+          "gained": 157,
+          "lost": 131,
+          "gained_vs_uncorrected": 82,
+          "lost_vs_uncorrected": 112,
+          "changed": 4582
+        },
+        "action_gate_passed": false
+      }
+    },
+    "cost_vs_base": {
+      "assigned": 1536,
+      "baseline_wins": 143,
+      "candidate_wins": 145,
+      "net_gain": 2,
+      "paired": {
+        "both_fail": 1360,
+        "candidate_only": 33,
+        "both_win": 112,
+        "baseline_only": 31
+      },
+      "exact_p": 0.9006532462520331
+    },
+    "closed_form_fits": 6,
+    "fitted_coefficients_per_head": 64,
+    "neural_optimizer_updates": 0,
+    "new_games": 0,
+    "objective_checks": 5,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "cost_candidate_eligible_for_separate_design": false,
+    "source_neural_weights_unchanged": true,
+    "all_head_fit_families_disjoint_from_neural_gradient_and_outer": true,
+    "limits": [
+      "Historical outer groups have prior development exposure; not final unused acceptance.",
+      "Calibration roles were used for source stopping, but never for source neural gradient updates.",
+      "E172 frozen combat encoder and E175/E176 full-network paired fits remain failed; this is a separate fixed Heart representation/readout partition, not a claim those approaches were never tried.",
+      "All6264 later conditional menus are correlated and cannot substitute for natural-game wins.",
+      "No original-game alignment work, new rollout data, MCTS changes, E133 restart or automatic policy adoption. Final512/1024 unused-family goal remains unmet."
+    ]
+  },
+  "independent_augmented_least_squares_fits": 6,
+  "independent_menu_choices": 12528,
+  "maximum_coefficient_error": 8.820028041256478e-14,
+  "maximum_score_error": 1.5976109324356003e-13,
+  "roles_stopping_sources_and_family_weights_verified": true,
+  "learning_completion_sha256": "4cd66ff4f2a81eb40acaade3c2a5b1dabd9eb7d3c028f8a7546fab8bfc9b7171",
+  "reviewer_sha256": "3503ccd9c9b34dc7552827dda582dad957c8189528f85439b31288c415f5d44c",
+  "new_games": 0,
+  "neural_optimizer_updates": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "registration_sha256": "f80cd39618472cdbe9c5da31d7b83cf20f16e2160ca8ff607230f338f7df230a",
+  "training_review_sha256": "d0dcefe8ffead215dfea199609b19b2695a796e7b5553533360132d5c6d34cb1",
+  "decision": "Reject both corrections. Close this fixed64-weight independent-gradient-family readout recipe without scale, ridge, layer or budget searches.",
+  "preparation_fault": "Before data fitting, the synthetic duplicate-weight invariance check differed by1.1102230246251565e-16; replace exact scale equality with atol1e-15, rtol0. No fitting, target, partition or gate changed. Original script and registration are retained.",
+  "execution_receipt_sha256": "19d6412245f13b8078a671fe4ae04e2f9009a9cad25d41ac97f7b616f65dc430"
+}
