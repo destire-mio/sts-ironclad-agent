@@ -1,0 +1,29 @@
+{
+  "status": "launched",
+  "pid": 71199,
+  "at": "2026-09-23T20:00:42.495193+00:00",
+  "registration_sha256": "3731ed36ae00604c2741bfe2ad642dd02de2aab7bbd60918033af2e2c3bee922",
+  "execution": {
+    "started_at": "2026-09-23T20:00:42.954277+00:00",
+    "wrapper_pid": 71199,
+    "pid": 71200,
+    "process_group": 71200,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e192-learned-greedy-20260924-01/program/heart_greedy_policy_evaluation.py",
+      "--study",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e192-learned-greedy-20260924-01"
+    ],
+    "registration_sha256": "3731ed36ae00604c2741bfe2ad642dd02de2aab7bbd60918033af2e2c3bee922",
+    "wrapper_seconds": 1320
+  },
+  "preflight_sha256": "6b56266cfa9007607e80ffc4a7c85e5a389cef2c34ca1222d79439dda0803abe",
+  "luna": {
+    "automation_id": "luna",
+    "target_thread_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+    "interval_minutes": 20,
+    "status": "ACTIVE",
+    "quiet_until_actionable": true
+  }
+}
