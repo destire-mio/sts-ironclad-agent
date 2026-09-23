@@ -1,0 +1,60 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E192",
+  "result": {
+    "status": "complete",
+    "experiment": "E192",
+    "comparison": {
+      "assigned": 128,
+      "baseline_wins": 20,
+      "candidate_wins": 20,
+      "net_gain": 0,
+      "paired": {
+        "both_win": 18,
+        "both_fail": 106,
+        "baseline_only": 2,
+        "candidate_only": 2
+      },
+      "exact_p": 1.0
+    },
+    "learning_gate_passed": false,
+    "changed_routes_evaluated": 48,
+    "unchanged_routes_reused": 80,
+    "unchanged_controls": 4,
+    "base_games": 52,
+    "winner_replans": 12,
+    "new_games": 64,
+    "optimizer_updates": 0,
+    "source_optimizer_updates": 3444,
+    "candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+    "zero_faults": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": "Post-hoc deterministic interpretation of a policy learned through stochastic returns. This study measures its actual frozen deployment, not that the learning objective was greedy.48 changed continuations need new outcomes;80 unchanged results are reused with native evidence. A historical128-family gate is not the final512/1024 unused-family objective. No policy adoption or acceptance games are authorized by this protocol."
+  },
+  "counts": {
+    "native_routes": 52,
+    "outside_choices": 8565,
+    "native_steps": 9738,
+    "winner_replans": 12
+  },
+  "maximum_numpy_logit_error": 9.947598300641403e-14,
+  "all_new_base_routes_natively_rechecked": true,
+  "reused_route_roles_and_prior_certificate_verified": true,
+  "process_cleanup_verified": true,
+  "registration_sha256": "3731ed36ae00604c2741bfe2ad642dd02de2aab7bbd60918033af2e2c3bee922",
+  "completion_sha256": "8ea7cca37fd3ed954cca69e4e9846a357359eeec86b22fc6d1005e893cef31a7",
+  "reviewer_sha256": "7f26481c9d8941e392421166a82e87bbee13eb60d0c32df5c14fcba208775fb9",
+  "policy_adoption": false,
+  "limits": "Post-hoc deterministic interpretation of a policy learned through stochastic returns. This study measures its actual frozen deployment, not that the learning objective was greedy.48 changed continuations need new outcomes;80 unchanged results are reused with native evidence. A historical128-family gate is not the final512/1024 unused-family objective. No policy adoption or acceptance games are authorized by this protocol.",
+  "review_sha256": "21a8c814d52c8bd1855ed6c1ee6932eedfd5e995b0e6b01e2ac59c58c82f2f32",
+  "evaluation_controller_exit_sha256": "316787b26b153eb94a8aa9830f68954b1bcc5cc293c0ca822d88f9292c1354c3",
+  "evaluation_owned_exit_sha256": "11782f605f76931f16d7507e55287f284f7bd9e437f1dfb644ceba39a9e68560",
+  "review_owned_exit_sha256": "80802e3038e60453169ec83add2ba284207ca3e7dcaa18477ded98c3cffce075",
+  "review_controller_exit_sha256": "97425e30fb236093335fe30219307a7112e1f3cfd4786615411c48b3e1beba3d",
+  "first_choice_identity_audit_sha256": "c7b13c6a3c825aff55ae25110ddeafef2b4c3fca62056fac63f5aad518924c91",
+  "closure": "Close both stochastic E191 and deterministic E192 deployments of these frozen weights below their original policy gates. No temperature, mixture, learning-rate, epoch or collection-size grid. Existing-data learning-signal diagnosis may follow; it does not authorize new games.",
+  "luna_evaluation_completion_delivered": true,
+  "luna_review_completion_delivered_at_root_closure": false,
+  "root_review_verified_at": "2026-09-24T04:47:54.839379+08:00"
+}
