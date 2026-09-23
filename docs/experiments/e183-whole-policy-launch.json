@@ -1,0 +1,23 @@
+{
+  "launch": {
+    "status": "launched",
+    "pid": 33270,
+    "at": "2026-09-23T02:43:50.124566+00:00",
+    "registration_sha256": "c3ea8480b35621f596e9723983ce1a26e42bb4ef2b5c8ecd760acade035b9ae5"
+  },
+  "owned_process": {
+    "started_at": "2026-09-23T02:43:50.649517+00:00",
+    "wrapper_pid": 33270,
+    "pid": 33271,
+    "process_group": 33271,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e183-whole-policy-search-20260923-01/program/heart_whole_policy_search.py",
+      "--study",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e183-whole-policy-search-20260923-01"
+    ],
+    "registration_sha256": "c3ea8480b35621f596e9723983ce1a26e42bb4ef2b5c8ecd760acade035b9ae5",
+    "wrapper_seconds": 14520
+  }
+}
