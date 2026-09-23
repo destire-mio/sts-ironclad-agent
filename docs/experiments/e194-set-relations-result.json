@@ -1,0 +1,221 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E194",
+  "result": {
+    "status": "complete",
+    "experiment": "E194",
+    "fit_families": 4608,
+    "held_families": 1024,
+    "arms": [
+      {
+        "arm": "pooled",
+        "selected_steps": 250,
+        "inner_updates": 1000,
+        "final_updates": 250,
+        "inner_validation_families": 939,
+        "baseline_validation_wins": 92,
+        "trainable_parameters": 23965,
+        "continuation_unchanged": true
+      },
+      {
+        "arm": "attention",
+        "selected_steps": 100,
+        "inner_updates": 1000,
+        "final_updates": 100,
+        "inner_validation_families": 939,
+        "baseline_validation_wins": 92,
+        "trainable_parameters": 28061,
+        "continuation_unchanged": true
+      }
+    ],
+    "comparisons": {
+      "pooled_vs_parent": {
+        "assigned": 1024,
+        "baseline_wins": 87,
+        "candidate_wins": 100,
+        "net_gain": 13,
+        "paired": {
+          "both_win": 68,
+          "both_fail": 905,
+          "candidate_only": 32,
+          "baseline_only": 19
+        },
+        "exact_p": 0.09191454981585423
+      },
+      "attention_vs_parent": {
+        "assigned": 1024,
+        "baseline_wins": 87,
+        "candidate_wins": 100,
+        "net_gain": 13,
+        "paired": {
+          "both_win": 67,
+          "both_fail": 904,
+          "candidate_only": 33,
+          "baseline_only": 20
+        },
+        "exact_p": 0.09837064844049181
+      },
+      "attention_vs_pooled": {
+        "assigned": 1024,
+        "baseline_wins": 100,
+        "candidate_wins": 100,
+        "net_gain": 0,
+        "paired": {
+          "both_win": 99,
+          "both_fail": 923,
+          "candidate_only": 1,
+          "baseline_only": 1
+        },
+        "exact_p": 1.0
+      },
+      "pooled_vs_frozen_encoder": {
+        "assigned": 1024,
+        "baseline_wins": 93,
+        "candidate_wins": 100,
+        "net_gain": 7,
+        "paired": {
+          "both_win": 86,
+          "both_fail": 917,
+          "candidate_only": 14,
+          "baseline_only": 7
+        },
+        "exact_p": 0.18924713134765625
+      },
+      "attention_vs_frozen_encoder": {
+        "assigned": 1024,
+        "baseline_wins": 93,
+        "candidate_wins": 100,
+        "net_gain": 7,
+        "paired": {
+          "both_win": 87,
+          "both_fail": 918,
+          "candidate_only": 13,
+          "baseline_only": 6
+        },
+        "exact_p": 0.1670684814453125
+      }
+    },
+    "policy_screen_passed": {
+      "pooled": false,
+      "attention": false
+    },
+    "attention_specific_gate_passed": false,
+    "optimizer_updates": 2350,
+    "new_games": 0,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": [
+      "Historical held families have been inspected before and are not untouched acceptance.",
+      "E193 diagnoses limited return contrast under its own whole-game recipe; it does not establish attention as the remedy.",
+      "This study estimates only the two registered interventions under fixed continuation. Successful held branch selection does not establish whole-game or unseen success.",
+      "Original-game parity remains deferred, Ironclad A20 keys/two Act3 bosses/Act4/Heart and Prismatic Shard exclusion remain."
+    ]
+  },
+  "independent_checkpoint_dataset_checks": 14,
+  "maximum_numpy_score_error": 1.4210854715202004e-14,
+  "raw_inventory_inputs_and_family_roles_verified": true,
+  "stopping_and_parent_continuation_verified": true,
+  "completion_sha256": "3aca05efe148692e6d9f2477d2c1bdaf6275f3c20c84cbe40db25e2c5ee4d27b",
+  "reviewer_sha256": "44ef4f914d925c791738d8f9023b23ad2bc588cbfbcafd8aabb371a0876638f5",
+  "registration_sha256": "f5ea3b0cdab111c032d6c4e145eeec389a89759341ddca4452cf27c8d5cc4170",
+  "new_games": 0,
+  "policy_adoption": false,
+  "review_sha256": "73ec8e6a3b9d76ecc03d0bb908b94c8584680a6af96a2066a7cfb6a9ca92f34d",
+  "training_owned_exit_sha256": "327e47ae94ebf6ab3b9c088c6ce97d227768adfe330bc57fd57baeeb49fc371a",
+  "training_controller_exit_sha256": "378efef750d64e58eab355c62fb5818634bc3a34756484bdb5b02db95d922244",
+  "review_owned_exit_sha256": "f2194c52bedf4d5d206120f0e8f3fed5492585235dcaf1d5566a30f01d82f16b",
+  "review_controller_exit_sha256": "3926f9d25aae5a0479b577b657377582adfd9638a8397676244863aaee159a7a",
+  "luna_training_and_review_completion_delivered": true,
+  "fit_and_inner_curve_diagnosis": {
+    "pooled": {
+      "fit_families": 4608,
+      "fit_wins": 594,
+      "fit_changed_families": 2501,
+      "selected_steps": 250,
+      "curve": [
+        {
+          "step": 0,
+          "validation_wins": 92,
+          "validation_changes": 0,
+          "fit_expected_return": 0.07142737918485612,
+          "fit_loss": -0.07142737918485612
+        },
+        {
+          "step": 100,
+          "validation_wins": 98,
+          "validation_changes": 509,
+          "fit_expected_return": 0.12530484284014723,
+          "fit_loss": -0.12009332192465462
+        },
+        {
+          "step": 250,
+          "validation_wins": 101,
+          "validation_changes": 469,
+          "fit_expected_return": 0.12669582015756414,
+          "fit_loss": -0.12162912968247033
+        },
+        {
+          "step": 500,
+          "validation_wins": 99,
+          "validation_changes": 470,
+          "fit_expected_return": 0.12733072568169132,
+          "fit_loss": -0.12211503297724172
+        },
+        {
+          "step": 1000,
+          "validation_wins": 98,
+          "validation_changes": 489,
+          "fit_expected_return": 0.12772155046166067,
+          "fit_loss": -0.12229258581812784
+        }
+      ],
+      "curve_sha256": "6024b9d0ac62e0ceb5abb08ff40918476914eadd2b43d27c0b3678ffb62cfeea"
+    },
+    "attention": {
+      "fit_families": 4608,
+      "fit_wins": 602,
+      "fit_changed_families": 2519,
+      "selected_steps": 100,
+      "curve": [
+        {
+          "step": 0,
+          "validation_wins": 92,
+          "validation_changes": 0,
+          "fit_expected_return": 0.07142737918485612,
+          "fit_loss": -0.07142737918485612
+        },
+        {
+          "step": 100,
+          "validation_wins": 99,
+          "validation_changes": 495,
+          "fit_expected_return": 0.12807382197228004,
+          "fit_loss": -0.12140516413653035
+        },
+        {
+          "step": 250,
+          "validation_wins": 98,
+          "validation_changes": 504,
+          "fit_expected_return": 0.15274631103583172,
+          "fit_loss": -0.13609839557401687
+        },
+        {
+          "step": 500,
+          "validation_wins": 96,
+          "validation_changes": 508,
+          "fit_expected_return": 0.16234895237314345,
+          "fit_loss": -0.14404712943828196
+        },
+        {
+          "step": 1000,
+          "validation_wins": 96,
+          "validation_changes": 517,
+          "fit_expected_return": 0.16506468723779708,
+          "fit_loss": -0.1466861535276936
+        }
+      ],
+      "curve_sha256": "d67f92f9a89737d06a2c79a5e42da81138f1279f07a9c5ad0812d9d1d931dc89"
+    }
+  },
+  "closure": "Close both fixed32-dimensional inventory-relation recipes below the original policy gates. Attention does not beat matched pooling on this historical set. Its later fit objective improves while inner validation declines; this does not support more steps. No width/depth/learning-rate/regularization/budget grid, new games, adoption or unused acceptance follows.",
+  "root_verified_at": "2026-09-24T06:26:36.550671+08:00"
+}
