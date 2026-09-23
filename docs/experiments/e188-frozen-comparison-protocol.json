@@ -1,0 +1,26 @@
+{
+  "experiment": "E188",
+  "base_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e185-empty-reward-value-20260923-01",
+  "cost_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e187-printed-cost-value-20260923-01",
+  "paired_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e175-paired-afterstate-20260923-01",
+  "ridge_strength": 1.0,
+  "scale_floor": 0.01,
+  "parent_margin": 1e-06,
+  "new_games": 0,
+  "neural_optimizer_updates": 0,
+  "question": "Can a fixed Heart representation support card-effect correction when its neural gradient data and readout fitting data are disjoint? Use E185 as a matched representation control for E187.",
+  "roles": "For each original outer fold: freeze the source inner checkpoint at its original Brier-selected step. Neural gradients used inner_train; only inner_validation fits the64-weight correction. All outer held families remain excluded from both gradient and correction fitting. The correction group previously selected neural stopping steps; it is not wholly unseen.",
+  "inputs": "Same E185 public normalized state and optional210 E187 derived printed-cost features. No new observations, hidden RNG, seed IDs, future data or labels enter scores. Canonical feature expansion follows the frozen independent E187 dense decoder; neural math is NumPyfloat64 for both arms.",
+  "score": "P_frozen(s_candidate)-P_frozen(s_parent) plus [h(s_candidate)-h(s_parent)]/fit_only_RMS times64 fitted coefficients. Parent score0. h is the frozen64-dimensional last hidden layer. Scores are expected-improvement comparisons, not calibrated win probabilities. Keep parent when maximum<=1e-6; then prefer legal order.",
+  "fit": "Weighted ridge against [R_candidate-R_parent]-[P_candidate-P_parent]. Each calibration family has total weight1, divided equally over its menus and nonparent alternatives. Scale each hidden difference by fitting-weighted RMS with floor.01. Solve sum(weight*error^2)+1*sum(beta^2) once; no optimizer or hyperparameter grid. Zero correction is the starting comparison.",
+  "controls": "Six closed-form fits total:3folds x original/cost representation. Both use identical correction families, menus, targets, numerical precision and regularization. Retain frozen-inner/no-correction and original-parent comparisons.",
+  "gate": "The cost arm must gain>=20 over149 parent wins on all1536 initial families, paired exact p<.05, every outer fold nonnegative, and not underperform the matched base-readout arm overall. Passing only permits separate live adapter/policy design and prospective validation; no adoption or new sampling automatic.",
+  "decision": "Failure closes this fixed independent-family64-weight correction recipe, with no scale/ridge/layer/budget grid. Report both arms, including negative controls.",
+  "limits": [
+    "Historical outer groups have prior development exposure; not final unused acceptance.",
+    "Calibration roles were used for source stopping, but never for source neural gradient updates.",
+    "E172 frozen combat encoder and E175/E176 full-network paired fits remain failed; this is a separate fixed Heart representation/readout partition, not a claim those approaches were never tried.",
+    "All6264 later conditional menus are correlated and cannot substitute for natural-game wins.",
+    "No original-game alignment work, new rollout data, MCTS changes, E133 restart or automatic policy adoption. Final512/1024 unused-family goal remains unmet."
+  ]
+}
