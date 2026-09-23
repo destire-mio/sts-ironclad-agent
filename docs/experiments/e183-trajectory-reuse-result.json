@@ -1,0 +1,67 @@
+{
+  "status": "complete_reviewed",
+  "summary": {
+    "families": 128,
+    "unique_paths": 786,
+    "parent_wins": 16,
+    "any_winner": 30,
+    "mixed_outcomes": 29,
+    "winning_paths": 69,
+    "losing_paths": 717,
+    "win_lose_pairs": 256,
+    "all_fail": 98,
+    "all_win": 1
+  },
+  "by_fold": {
+    "0": {
+      "families": 45,
+      "unique_paths": 282,
+      "parent_wins": 8,
+      "any_winner": 12,
+      "mixed_outcomes": 11,
+      "winning_paths": 36,
+      "losing_paths": 246,
+      "win_lose_pairs": 103,
+      "all_fail": 33,
+      "all_win": 1
+    },
+    "1": {
+      "families": 36,
+      "unique_paths": 215,
+      "parent_wins": 5,
+      "any_winner": 8,
+      "mixed_outcomes": 8,
+      "winning_paths": 17,
+      "losing_paths": 198,
+      "win_lose_pairs": 73,
+      "all_fail": 28,
+      "all_win": 0
+    },
+    "2": {
+      "families": 47,
+      "unique_paths": 289,
+      "parent_wins": 3,
+      "any_winner": 10,
+      "mixed_outcomes": 10,
+      "winning_paths": 16,
+      "losing_paths": 273,
+      "win_lose_pairs": 80,
+      "all_fail": 37,
+      "all_win": 0
+    }
+  },
+  "sampled_games": 768,
+  "parent_reobserved": 30,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "source_review_sha256": "d4a4015a27b685a70bd141b47ddabef2868cdcee50f1d0902ab3a9adc5940c9e",
+  "source_completion_sha256": "0a7db24e32baba8825e439500d23504d3c99aa8dbfe0c1cd5a981cc5d6eb2011",
+  "inputs_sha256": "15fef1f2596935d8c97f7e3768c59a9778d9bae836b0d3357321313c5ce88d77",
+  "families_sha256": "bb519b71e4a577e3853280473cfeaadd2454cf56fa5a83df27a574963d86f645",
+  "runner_sha256": "9b0f3d1690adcfd481b2891d5a6fa7fef455cc510b9017de26b0c804bcdf5c79",
+  "limits": [
+    "Pair count is not independent-family count.",
+    "Any-winner count is a measured hindsight scope, not a deployable or global bound.",
+    "E183 evaluation roles are excluded. This read-only audit does not authorize sampling expansion or rerunning the failed E41/E42 preference recipe."
+  ]
+}

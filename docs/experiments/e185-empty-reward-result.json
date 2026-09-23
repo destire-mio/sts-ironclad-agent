@@ -1,0 +1,110 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E185",
+  "result": {
+    "status": "complete",
+    "experiment": "E185",
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 5000,
+        "held_brier": 0.07897359388880432,
+        "baseline_brier": 0.08773966570559676
+      },
+      {
+        "fold": 1,
+        "selected_steps": 5000,
+        "held_brier": 0.06517354620154947,
+        "baseline_brier": 0.07488438081899318
+      },
+      {
+        "fold": 2,
+        "selected_steps": 2000,
+        "held_brier": 0.06047524683526717,
+        "baseline_brier": 0.06367992394683741
+      }
+    ],
+    "held_brier": 0.06820746230854031,
+    "baseline_brier": 0.07543465682380912,
+    "prediction_gate_passed": false,
+    "value_optimizer_updates": 72000,
+    "auxiliary_optimizer_updates": 0,
+    "actor_optimizer_updates": 0,
+    "new_games": 0,
+    "policy_adoption": false,
+    "trainable_parameters": 795137,
+    "normalization": "empty_normal_combat_reward_to_map_v1",
+    "limits": "Predictor experiment; unchanged prior failed gates and no action policy or unseen success claim."
+  },
+  "inner_checkpoints_verified": 24,
+  "held_predictions_verified": 24576,
+  "maximum_brier_error": 9.42606062648288e-10,
+  "initial": {
+    "states": 1536,
+    "parent": 149,
+    "candidate": 144,
+    "gained": 38,
+    "lost": 43,
+    "changed": 1165
+  },
+  "initial_paired": {
+    "assigned": 1536,
+    "baseline_wins": 149,
+    "candidate_wins": 144,
+    "net_gain": -5,
+    "paired": {
+      "both_fail": 1349,
+      "baseline_only": 43,
+      "candidate_only": 38,
+      "both_win": 106
+    },
+    "exact_p": 0.6569924675863579
+  },
+  "initial_by_fold": {
+    "0": {
+      "states": 527,
+      "parent": 59,
+      "candidate": 52,
+      "gained": 12,
+      "lost": 19,
+      "changed": 430
+    },
+    "1": {
+      "states": 485,
+      "parent": 52,
+      "candidate": 43,
+      "gained": 8,
+      "lost": 17,
+      "changed": 370
+    },
+    "2": {
+      "states": 524,
+      "parent": 38,
+      "candidate": 49,
+      "gained": 18,
+      "lost": 7,
+      "changed": 365
+    }
+  },
+  "all_recorded_menus": {
+    "states": 6264,
+    "parent": 477,
+    "candidate": 511,
+    "gained": 156,
+    "lost": 122,
+    "changed": 4551
+  },
+  "action_gate_passed": false,
+  "eligible_for_policy_design": false,
+  "process_cleanup_verified": true,
+  "learning_completion_sha256": "3e58abcf6753490a5d718fa70da73c729d5026181f80f65e1bc931ace837cad4",
+  "ranking_choices_sha256": "82bb790c1b10fbb3bcb5fab231c6575081cffa57d292fe2131dcced53fecd10f",
+  "reviewer_sha256": "d9487a10ce9923d874cc01240af75675d8a33cafcf420dbfdc7a75116daa3eea",
+  "new_games": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "training_review_sha256": "0709cf87eec12ac6d8aa32f4e7eeada02169639952c83d88c9dca9d92b2577cb",
+  "old_held_brier": 0.06820972432615235,
+  "relative_improvement_over_table": 0.0958073492950221,
+  "relative_brier_improvement_vs_old": 3.316268515063392e-05
+}
