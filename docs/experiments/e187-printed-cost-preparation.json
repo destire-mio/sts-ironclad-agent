@@ -1,0 +1,62 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E187",
+  "derived_features": 210,
+  "data_completion_sha256": "fe6251ee2e3691d86445e02c3dccd162ca29209eb9de4c9b3e74ca4931282c0b",
+  "card_facts_sha256": "24adbf36b76584c1aa1a5cdab61d5f23f2b86d09812f456e2849df83bb1cd4a1",
+  "all_states_scanned": 2039965,
+  "observed_card_faces": 202,
+  "unsupported_observed_faces": 0,
+  "checked_dense_rows": 4096,
+  "native_checks": {
+    "outside_states": 502,
+    "steps": 575,
+    "routes": 4
+  },
+  "maximum_feature_error": 8.940696716308594e-08,
+  "original_encoder_copies_verified": 6,
+  "zero_initialized_added_weights": 26880,
+  "nominal_trainable_parameters": 822017,
+  "added_gradient_norm": 0.02710554003715515,
+  "family_guard_and_unsupported_face_guard_verified": true,
+  "identical_rows_targets_cells_normalization": true,
+  "state_rng_unchanged_by_queries": true,
+  "metadata_fixtures": 741,
+  "new_games": 0,
+  "MCTS_calls": 0,
+  "optimizer_updates": 0,
+  "prior_fixture_failure_preserved": "33c3859c78bd8d4e8b7ec2f047cf94e1b39ec85ce5131260f2041c5b95c61688",
+  "runner_sha256": "fb79d3649f05b68ce663c4238a9bcfb29f1aa38bb0135262dbee34cce80b39ec",
+  "reviewer_sha256": "144c00fc565fda6bf624bfbf2118e62088b469e5fb0b378c4609ee27376351d2",
+  "registration_sha256": "77fda632f322b0d6cd46a00ac16091f12f9178cefe24a7bff02a9184d5d50408",
+  "preflight_sha256": "8e1d7b27f431eb1e830d76b35b86a98a8a425954cc3b8936de604a4e2eb515c6",
+  "focused_regression_checks": 3,
+  "pre_training_repairs": [
+    {
+      "status": "failed_before_registration",
+      "exit_code": 134,
+      "error": "Native Deck.obtainRaw rejects STATUS cards in a permanent deck. The metadata fixture attempted to obtain all card types.",
+      "impact": "No fact file, registration, training, rollout, or model written. Skip unsupported permanent-deck types and fail admission if any real data contains them.",
+      "original_script_sha256": "252ae5c9c5b90c456fb4abbe447acdf043d4a8b556edcfdc6602a321fd447c29"
+    },
+    {
+      "status": "failed_before_training",
+      "error": "invariance runner changed",
+      "cause": "The E186 imported validator compares its own modified file hash with the original E185 registration. Validate the E185 original recorded source identities instead of invoking another snapshot with the current imported __file__.",
+      "optimizer_updates": 0,
+      "new_games": 0
+    }
+  ],
+  "source_binding_expansion": {
+    "status": "before_training",
+    "registration_sha256": "77fda632f322b0d6cd46a00ac16091f12f9178cefe24a7bff02a9184d5d50408",
+    "prior_registration_sha256": "22b150e1bf70cf19a1732dbcd358ea8404100388688e0a510d6418ab2b47c0d8",
+    "added_paths": 24,
+    "recipe_and_program_unchanged": true,
+    "reason": "Bind exact six reused encoders, their role/stopping metadata, existing control roles/baselines and ranking menus as direct inputs.",
+    "optimizer_updates": 0,
+    "new_games": 0
+  },
+  "future_validation": "Frozen root reviewer reconstructs all24 stopping checkpoints,24576 held predictions and6264 original menu rankings; independent NumPy and Torch choices must match.",
+  "limits": "Input identity already implies printed costs. This tests inductive bias, not a new observation or a proven causal bottleneck. No permanent STATUS-card faces appear among all2039965 rows; their histogram coordinates remain zero and count toward nominal but not effective input capacity."
+}

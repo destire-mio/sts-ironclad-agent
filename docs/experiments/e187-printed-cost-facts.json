@@ -1,0 +1,5247 @@
+{
+  "version": "public_printed_cost_relations_v1",
+  "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+  "faces": [
+    {
+      "id": 0,
+      "name": "INVALID",
+      "upgraded": false,
+      "type": "INVALID",
+      "printed_cost": null
+    },
+    {
+      "id": 0,
+      "name": "INVALID",
+      "upgraded": true,
+      "type": "INVALID",
+      "printed_cost": null
+    },
+    {
+      "id": 1,
+      "name": "ACCURACY",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 1,
+      "name": "ACCURACY",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 2,
+      "name": "ACROBATICS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 2,
+      "name": "ACROBATICS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 3,
+      "name": "ADRENALINE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 3,
+      "name": "ADRENALINE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 4,
+      "name": "AFTER_IMAGE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 4,
+      "name": "AFTER_IMAGE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 5,
+      "name": "AGGREGATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 5,
+      "name": "AGGREGATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 6,
+      "name": "ALCHEMIZE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 6,
+      "name": "ALCHEMIZE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 7,
+      "name": "ALL_FOR_ONE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 7,
+      "name": "ALL_FOR_ONE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 8,
+      "name": "ALL_OUT_ATTACK",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 8,
+      "name": "ALL_OUT_ATTACK",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 9,
+      "name": "ALPHA",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 9,
+      "name": "ALPHA",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 10,
+      "name": "AMPLIFY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 10,
+      "name": "AMPLIFY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 11,
+      "name": "ANGER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 11,
+      "name": "ANGER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 12,
+      "name": "APOTHEOSIS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 12,
+      "name": "APOTHEOSIS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 13,
+      "name": "APPARITION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 13,
+      "name": "APPARITION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 14,
+      "name": "ARMAMENTS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 14,
+      "name": "ARMAMENTS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 15,
+      "name": "ASCENDERS_BANE",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 15,
+      "name": "ASCENDERS_BANE",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 16,
+      "name": "AUTO_SHIELDS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 16,
+      "name": "AUTO_SHIELDS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 17,
+      "name": "A_THOUSAND_CUTS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 17,
+      "name": "A_THOUSAND_CUTS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 18,
+      "name": "BACKFLIP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 18,
+      "name": "BACKFLIP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 19,
+      "name": "BACKSTAB",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 19,
+      "name": "BACKSTAB",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 20,
+      "name": "BALL_LIGHTNING",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 20,
+      "name": "BALL_LIGHTNING",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 21,
+      "name": "BANDAGE_UP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 21,
+      "name": "BANDAGE_UP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 22,
+      "name": "BANE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 22,
+      "name": "BANE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 23,
+      "name": "BARRAGE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 23,
+      "name": "BARRAGE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 24,
+      "name": "BARRICADE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 24,
+      "name": "BARRICADE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 25,
+      "name": "BASH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 25,
+      "name": "BASH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 26,
+      "name": "BATTLE_HYMN",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 26,
+      "name": "BATTLE_HYMN",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 27,
+      "name": "BATTLE_TRANCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 27,
+      "name": "BATTLE_TRANCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 28,
+      "name": "BEAM_CELL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 28,
+      "name": "BEAM_CELL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 29,
+      "name": "BECOME_ALMIGHTY",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 29,
+      "name": "BECOME_ALMIGHTY",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 30,
+      "name": "BERSERK",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 30,
+      "name": "BERSERK",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 31,
+      "name": "BETA",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 31,
+      "name": "BETA",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 32,
+      "name": "BIASED_COGNITION",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 32,
+      "name": "BIASED_COGNITION",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 33,
+      "name": "BITE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 33,
+      "name": "BITE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 34,
+      "name": "BLADE_DANCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 34,
+      "name": "BLADE_DANCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 35,
+      "name": "BLASPHEMY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 35,
+      "name": "BLASPHEMY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 36,
+      "name": "BLIND",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 36,
+      "name": "BLIND",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 37,
+      "name": "BLIZZARD",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 37,
+      "name": "BLIZZARD",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 38,
+      "name": "BLOODLETTING",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 38,
+      "name": "BLOODLETTING",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 39,
+      "name": "BLOOD_FOR_BLOOD",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 4
+    },
+    {
+      "id": 39,
+      "name": "BLOOD_FOR_BLOOD",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 3
+    },
+    {
+      "id": 40,
+      "name": "BLUDGEON",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 3
+    },
+    {
+      "id": 40,
+      "name": "BLUDGEON",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 3
+    },
+    {
+      "id": 41,
+      "name": "BLUR",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 41,
+      "name": "BLUR",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 42,
+      "name": "BODY_SLAM",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 42,
+      "name": "BODY_SLAM",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 43,
+      "name": "BOOT_SEQUENCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 43,
+      "name": "BOOT_SEQUENCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 44,
+      "name": "BOUNCING_FLASK",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 44,
+      "name": "BOUNCING_FLASK",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 45,
+      "name": "BOWLING_BASH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 45,
+      "name": "BOWLING_BASH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 46,
+      "name": "BRILLIANCE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 46,
+      "name": "BRILLIANCE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 47,
+      "name": "BRUTALITY",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 47,
+      "name": "BRUTALITY",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 48,
+      "name": "BUFFER",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 48,
+      "name": "BUFFER",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 49,
+      "name": "BULLET_TIME",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 49,
+      "name": "BULLET_TIME",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 50,
+      "name": "BULLSEYE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 50,
+      "name": "BULLSEYE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 51,
+      "name": "BURN",
+      "upgraded": false,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 51,
+      "name": "BURN",
+      "upgraded": true,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 52,
+      "name": "BURNING_PACT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 52,
+      "name": "BURNING_PACT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 53,
+      "name": "BURST",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 53,
+      "name": "BURST",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 54,
+      "name": "CALCULATED_GAMBLE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 54,
+      "name": "CALCULATED_GAMBLE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 55,
+      "name": "CALTROPS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 55,
+      "name": "CALTROPS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 56,
+      "name": "CAPACITOR",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 56,
+      "name": "CAPACITOR",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 57,
+      "name": "CARNAGE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 57,
+      "name": "CARNAGE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 58,
+      "name": "CARVE_REALITY",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 58,
+      "name": "CARVE_REALITY",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 59,
+      "name": "CATALYST",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 59,
+      "name": "CATALYST",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 60,
+      "name": "CHAOS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 60,
+      "name": "CHAOS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 61,
+      "name": "CHARGE_BATTERY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 61,
+      "name": "CHARGE_BATTERY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 62,
+      "name": "CHILL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 62,
+      "name": "CHILL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 63,
+      "name": "CHOKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 63,
+      "name": "CHOKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 64,
+      "name": "CHRYSALIS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 64,
+      "name": "CHRYSALIS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 65,
+      "name": "CLASH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 65,
+      "name": "CLASH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 66,
+      "name": "CLAW",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 66,
+      "name": "CLAW",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 67,
+      "name": "CLEAVE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 67,
+      "name": "CLEAVE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 68,
+      "name": "CLOAK_AND_DAGGER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 68,
+      "name": "CLOAK_AND_DAGGER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 69,
+      "name": "CLOTHESLINE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 69,
+      "name": "CLOTHESLINE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 70,
+      "name": "CLUMSY",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 70,
+      "name": "CLUMSY",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 71,
+      "name": "COLD_SNAP",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 71,
+      "name": "COLD_SNAP",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 72,
+      "name": "COLLECT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 72,
+      "name": "COLLECT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 73,
+      "name": "COMBUST",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 73,
+      "name": "COMBUST",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 74,
+      "name": "COMPILE_DRIVER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 74,
+      "name": "COMPILE_DRIVER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 75,
+      "name": "CONCENTRATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 75,
+      "name": "CONCENTRATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 76,
+      "name": "CONCLUDE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 76,
+      "name": "CONCLUDE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 77,
+      "name": "CONJURE_BLADE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 77,
+      "name": "CONJURE_BLADE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 78,
+      "name": "CONSECRATE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 78,
+      "name": "CONSECRATE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 79,
+      "name": "CONSUME",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 79,
+      "name": "CONSUME",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 80,
+      "name": "COOLHEADED",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 80,
+      "name": "COOLHEADED",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 81,
+      "name": "CORE_SURGE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 81,
+      "name": "CORE_SURGE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 82,
+      "name": "CORPSE_EXPLOSION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 82,
+      "name": "CORPSE_EXPLOSION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 83,
+      "name": "CORRUPTION",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 83,
+      "name": "CORRUPTION",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 84,
+      "name": "CREATIVE_AI",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 84,
+      "name": "CREATIVE_AI",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 85,
+      "name": "CRESCENDO",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 85,
+      "name": "CRESCENDO",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 86,
+      "name": "CRIPPLING_CLOUD",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 86,
+      "name": "CRIPPLING_CLOUD",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 87,
+      "name": "CRUSH_JOINTS",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 87,
+      "name": "CRUSH_JOINTS",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 88,
+      "name": "CURSE_OF_THE_BELL",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 88,
+      "name": "CURSE_OF_THE_BELL",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 89,
+      "name": "CUT_THROUGH_FATE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 89,
+      "name": "CUT_THROUGH_FATE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 90,
+      "name": "DAGGER_SPRAY",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 90,
+      "name": "DAGGER_SPRAY",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 91,
+      "name": "DAGGER_THROW",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 91,
+      "name": "DAGGER_THROW",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 92,
+      "name": "DARKNESS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 92,
+      "name": "DARKNESS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 93,
+      "name": "DARK_EMBRACE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 93,
+      "name": "DARK_EMBRACE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 94,
+      "name": "DARK_SHACKLES",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 94,
+      "name": "DARK_SHACKLES",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 95,
+      "name": "DASH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 95,
+      "name": "DASH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 96,
+      "name": "DAZED",
+      "upgraded": false,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 96,
+      "name": "DAZED",
+      "upgraded": true,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 97,
+      "name": "DEADLY_POISON",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 97,
+      "name": "DEADLY_POISON",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 98,
+      "name": "DECAY",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 98,
+      "name": "DECAY",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 99,
+      "name": "DECEIVE_REALITY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 99,
+      "name": "DECEIVE_REALITY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 100,
+      "name": "DEEP_BREATH",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 100,
+      "name": "DEEP_BREATH",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 101,
+      "name": "DEFEND_BLUE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 101,
+      "name": "DEFEND_BLUE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 102,
+      "name": "DEFEND_GREEN",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 102,
+      "name": "DEFEND_GREEN",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 103,
+      "name": "DEFEND_PURPLE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 103,
+      "name": "DEFEND_PURPLE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 104,
+      "name": "DEFEND_RED",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 104,
+      "name": "DEFEND_RED",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 105,
+      "name": "DEFLECT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 105,
+      "name": "DEFLECT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 106,
+      "name": "DEFRAGMENT",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 106,
+      "name": "DEFRAGMENT",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 107,
+      "name": "DEMON_FORM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 107,
+      "name": "DEMON_FORM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 108,
+      "name": "DEUS_EX_MACHINA",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 108,
+      "name": "DEUS_EX_MACHINA",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 109,
+      "name": "DEVA_FORM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 109,
+      "name": "DEVA_FORM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 110,
+      "name": "DEVOTION",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 110,
+      "name": "DEVOTION",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 111,
+      "name": "DIE_DIE_DIE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 111,
+      "name": "DIE_DIE_DIE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 112,
+      "name": "DISARM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 112,
+      "name": "DISARM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 113,
+      "name": "DISCOVERY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 113,
+      "name": "DISCOVERY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 114,
+      "name": "DISTRACTION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 114,
+      "name": "DISTRACTION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 115,
+      "name": "DODGE_AND_ROLL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 115,
+      "name": "DODGE_AND_ROLL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 116,
+      "name": "DOOM_AND_GLOOM",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 116,
+      "name": "DOOM_AND_GLOOM",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 117,
+      "name": "DOPPELGANGER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 117,
+      "name": "DOPPELGANGER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 118,
+      "name": "DOUBLE_ENERGY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 118,
+      "name": "DOUBLE_ENERGY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 119,
+      "name": "DOUBLE_TAP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 119,
+      "name": "DOUBLE_TAP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 120,
+      "name": "DOUBT",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 120,
+      "name": "DOUBT",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 121,
+      "name": "DRAMATIC_ENTRANCE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 121,
+      "name": "DRAMATIC_ENTRANCE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 122,
+      "name": "DROPKICK",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 122,
+      "name": "DROPKICK",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 123,
+      "name": "DUALCAST",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 123,
+      "name": "DUALCAST",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 124,
+      "name": "DUAL_WIELD",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 124,
+      "name": "DUAL_WIELD",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 125,
+      "name": "ECHO_FORM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 125,
+      "name": "ECHO_FORM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 126,
+      "name": "ELECTRODYNAMICS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 126,
+      "name": "ELECTRODYNAMICS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 127,
+      "name": "EMPTY_BODY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 127,
+      "name": "EMPTY_BODY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 128,
+      "name": "EMPTY_FIST",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 128,
+      "name": "EMPTY_FIST",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 129,
+      "name": "EMPTY_MIND",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 129,
+      "name": "EMPTY_MIND",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 130,
+      "name": "ENDLESS_AGONY",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 130,
+      "name": "ENDLESS_AGONY",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 131,
+      "name": "ENLIGHTENMENT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 131,
+      "name": "ENLIGHTENMENT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 132,
+      "name": "ENTRENCH",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 132,
+      "name": "ENTRENCH",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 133,
+      "name": "ENVENOM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 133,
+      "name": "ENVENOM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 134,
+      "name": "EQUILIBRIUM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 134,
+      "name": "EQUILIBRIUM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 135,
+      "name": "ERUPTION",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 135,
+      "name": "ERUPTION",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 136,
+      "name": "ESCAPE_PLAN",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 136,
+      "name": "ESCAPE_PLAN",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 137,
+      "name": "ESTABLISHMENT",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 137,
+      "name": "ESTABLISHMENT",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 138,
+      "name": "EVALUATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 138,
+      "name": "EVALUATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 139,
+      "name": "EVISCERATE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 139,
+      "name": "EVISCERATE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 140,
+      "name": "EVOLVE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 140,
+      "name": "EVOLVE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 141,
+      "name": "EXHUME",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 141,
+      "name": "EXHUME",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 142,
+      "name": "EXPERTISE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 142,
+      "name": "EXPERTISE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 143,
+      "name": "EXPUNGER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 143,
+      "name": "EXPUNGER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 144,
+      "name": "FAME_AND_FORTUNE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 144,
+      "name": "FAME_AND_FORTUNE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 145,
+      "name": "FASTING",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 145,
+      "name": "FASTING",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 146,
+      "name": "FEAR_NO_EVIL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 146,
+      "name": "FEAR_NO_EVIL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 147,
+      "name": "FEED",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 147,
+      "name": "FEED",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 148,
+      "name": "FEEL_NO_PAIN",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 148,
+      "name": "FEEL_NO_PAIN",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 149,
+      "name": "FIEND_FIRE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 149,
+      "name": "FIEND_FIRE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 150,
+      "name": "FINESSE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 150,
+      "name": "FINESSE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 151,
+      "name": "FINISHER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 151,
+      "name": "FINISHER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 152,
+      "name": "FIRE_BREATHING",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 152,
+      "name": "FIRE_BREATHING",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 153,
+      "name": "FISSION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 153,
+      "name": "FISSION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 154,
+      "name": "FLAME_BARRIER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 154,
+      "name": "FLAME_BARRIER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 155,
+      "name": "FLASH_OF_STEEL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 155,
+      "name": "FLASH_OF_STEEL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 156,
+      "name": "FLECHETTES",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 156,
+      "name": "FLECHETTES",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 157,
+      "name": "FLEX",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 157,
+      "name": "FLEX",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 158,
+      "name": "FLURRY_OF_BLOWS",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 158,
+      "name": "FLURRY_OF_BLOWS",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 159,
+      "name": "FLYING_KNEE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 159,
+      "name": "FLYING_KNEE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 160,
+      "name": "FLYING_SLEEVES",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 160,
+      "name": "FLYING_SLEEVES",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 161,
+      "name": "FOLLOW_UP",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 161,
+      "name": "FOLLOW_UP",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 162,
+      "name": "FOOTWORK",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 162,
+      "name": "FOOTWORK",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 163,
+      "name": "FORCE_FIELD",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 163,
+      "name": "FORCE_FIELD",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 164,
+      "name": "FOREIGN_INFLUENCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 164,
+      "name": "FOREIGN_INFLUENCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 165,
+      "name": "FORESIGHT",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 165,
+      "name": "FORESIGHT",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 166,
+      "name": "FORETHOUGHT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 166,
+      "name": "FORETHOUGHT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 167,
+      "name": "FTL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 167,
+      "name": "FTL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 168,
+      "name": "FUSION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 168,
+      "name": "FUSION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 169,
+      "name": "GENETIC_ALGORITHM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 169,
+      "name": "GENETIC_ALGORITHM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 170,
+      "name": "GHOSTLY_ARMOR",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 170,
+      "name": "GHOSTLY_ARMOR",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 171,
+      "name": "GLACIER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 171,
+      "name": "GLACIER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 172,
+      "name": "GLASS_KNIFE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 172,
+      "name": "GLASS_KNIFE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 173,
+      "name": "GOOD_INSTINCTS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 173,
+      "name": "GOOD_INSTINCTS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 174,
+      "name": "GO_FOR_THE_EYES",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 174,
+      "name": "GO_FOR_THE_EYES",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 175,
+      "name": "GRAND_FINALE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 175,
+      "name": "GRAND_FINALE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 176,
+      "name": "HALT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 176,
+      "name": "HALT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 177,
+      "name": "HAND_OF_GREED",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 177,
+      "name": "HAND_OF_GREED",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 178,
+      "name": "HAVOC",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 178,
+      "name": "HAVOC",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 179,
+      "name": "HEADBUTT",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 179,
+      "name": "HEADBUTT",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 180,
+      "name": "HEATSINKS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 180,
+      "name": "HEATSINKS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 181,
+      "name": "HEAVY_BLADE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 181,
+      "name": "HEAVY_BLADE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 182,
+      "name": "HEEL_HOOK",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 182,
+      "name": "HEEL_HOOK",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 183,
+      "name": "HELLO_WORLD",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 183,
+      "name": "HELLO_WORLD",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 184,
+      "name": "HEMOKINESIS",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 184,
+      "name": "HEMOKINESIS",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 185,
+      "name": "HOLOGRAM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 185,
+      "name": "HOLOGRAM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 186,
+      "name": "HYPERBEAM",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 186,
+      "name": "HYPERBEAM",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 187,
+      "name": "IMMOLATE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 187,
+      "name": "IMMOLATE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 188,
+      "name": "IMPATIENCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 188,
+      "name": "IMPATIENCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 189,
+      "name": "IMPERVIOUS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 189,
+      "name": "IMPERVIOUS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 190,
+      "name": "INDIGNATION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 190,
+      "name": "INDIGNATION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 191,
+      "name": "INFERNAL_BLADE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 191,
+      "name": "INFERNAL_BLADE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 192,
+      "name": "INFINITE_BLADES",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 192,
+      "name": "INFINITE_BLADES",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 193,
+      "name": "INFLAME",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 193,
+      "name": "INFLAME",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 194,
+      "name": "INJURY",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 194,
+      "name": "INJURY",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 195,
+      "name": "INNER_PEACE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 195,
+      "name": "INNER_PEACE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 196,
+      "name": "INSIGHT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 196,
+      "name": "INSIGHT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 197,
+      "name": "INTIMIDATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 197,
+      "name": "INTIMIDATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 198,
+      "name": "IRON_WAVE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 198,
+      "name": "IRON_WAVE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 199,
+      "name": "JAX",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 199,
+      "name": "JAX",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 200,
+      "name": "JACK_OF_ALL_TRADES",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 200,
+      "name": "JACK_OF_ALL_TRADES",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 201,
+      "name": "JUDGMENT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 201,
+      "name": "JUDGMENT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 202,
+      "name": "JUGGERNAUT",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 202,
+      "name": "JUGGERNAUT",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 203,
+      "name": "JUST_LUCKY",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 203,
+      "name": "JUST_LUCKY",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 204,
+      "name": "LEAP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 204,
+      "name": "LEAP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 205,
+      "name": "LEG_SWEEP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 205,
+      "name": "LEG_SWEEP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 206,
+      "name": "LESSON_LEARNED",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 206,
+      "name": "LESSON_LEARNED",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 207,
+      "name": "LIKE_WATER",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 207,
+      "name": "LIKE_WATER",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 208,
+      "name": "LIMIT_BREAK",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 208,
+      "name": "LIMIT_BREAK",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 209,
+      "name": "LIVE_FOREVER",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 209,
+      "name": "LIVE_FOREVER",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 210,
+      "name": "LOOP",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 210,
+      "name": "LOOP",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 211,
+      "name": "MACHINE_LEARNING",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 211,
+      "name": "MACHINE_LEARNING",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 212,
+      "name": "MADNESS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 212,
+      "name": "MADNESS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 213,
+      "name": "MAGNETISM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 213,
+      "name": "MAGNETISM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 214,
+      "name": "MALAISE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 214,
+      "name": "MALAISE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 215,
+      "name": "MASTERFUL_STAB",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 215,
+      "name": "MASTERFUL_STAB",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 216,
+      "name": "MASTER_OF_STRATEGY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 216,
+      "name": "MASTER_OF_STRATEGY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 217,
+      "name": "MASTER_REALITY",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 217,
+      "name": "MASTER_REALITY",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 218,
+      "name": "MAYHEM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 2
+    },
+    {
+      "id": 218,
+      "name": "MAYHEM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 219,
+      "name": "MEDITATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 219,
+      "name": "MEDITATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 220,
+      "name": "MELTER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 220,
+      "name": "MELTER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 221,
+      "name": "MENTAL_FORTRESS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 221,
+      "name": "MENTAL_FORTRESS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 222,
+      "name": "METALLICIZE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 222,
+      "name": "METALLICIZE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 223,
+      "name": "METAMORPHOSIS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 223,
+      "name": "METAMORPHOSIS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 224,
+      "name": "METEOR_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 224,
+      "name": "METEOR_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 225,
+      "name": "MIND_BLAST",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 225,
+      "name": "MIND_BLAST",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 226,
+      "name": "MIRACLE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 226,
+      "name": "MIRACLE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 227,
+      "name": "MULTI_CAST",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 227,
+      "name": "MULTI_CAST",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 228,
+      "name": "NECRONOMICURSE",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 228,
+      "name": "NECRONOMICURSE",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 229,
+      "name": "NEUTRALIZE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 229,
+      "name": "NEUTRALIZE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 230,
+      "name": "NIGHTMARE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 230,
+      "name": "NIGHTMARE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 231,
+      "name": "NIRVANA",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 231,
+      "name": "NIRVANA",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 232,
+      "name": "NORMALITY",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 232,
+      "name": "NORMALITY",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 233,
+      "name": "NOXIOUS_FUMES",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 233,
+      "name": "NOXIOUS_FUMES",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 234,
+      "name": "OFFERING",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 234,
+      "name": "OFFERING",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 235,
+      "name": "OMEGA",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 235,
+      "name": "OMEGA",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 236,
+      "name": "OMNISCIENCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 236,
+      "name": "OMNISCIENCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 237,
+      "name": "OUTMANEUVER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 237,
+      "name": "OUTMANEUVER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 238,
+      "name": "OVERCLOCK",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 238,
+      "name": "OVERCLOCK",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 239,
+      "name": "PAIN",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 239,
+      "name": "PAIN",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 240,
+      "name": "PANACEA",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 240,
+      "name": "PANACEA",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 241,
+      "name": "PANACHE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 241,
+      "name": "PANACHE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 242,
+      "name": "PANIC_BUTTON",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 242,
+      "name": "PANIC_BUTTON",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 243,
+      "name": "PARASITE",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 243,
+      "name": "PARASITE",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 244,
+      "name": "PERFECTED_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 244,
+      "name": "PERFECTED_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 245,
+      "name": "PERSEVERANCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 245,
+      "name": "PERSEVERANCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 246,
+      "name": "PHANTASMAL_KILLER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 246,
+      "name": "PHANTASMAL_KILLER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 247,
+      "name": "PIERCING_WAIL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 247,
+      "name": "PIERCING_WAIL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 248,
+      "name": "POISONED_STAB",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 248,
+      "name": "POISONED_STAB",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 249,
+      "name": "POMMEL_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 249,
+      "name": "POMMEL_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 250,
+      "name": "POWER_THROUGH",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 250,
+      "name": "POWER_THROUGH",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 251,
+      "name": "PRAY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 251,
+      "name": "PRAY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 252,
+      "name": "PREDATOR",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 252,
+      "name": "PREDATOR",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 253,
+      "name": "PREPARED",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 253,
+      "name": "PREPARED",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 254,
+      "name": "PRESSURE_POINTS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 254,
+      "name": "PRESSURE_POINTS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 255,
+      "name": "PRIDE",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": 1
+    },
+    {
+      "id": 255,
+      "name": "PRIDE",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": 1
+    },
+    {
+      "id": 256,
+      "name": "PROSTRATE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 256,
+      "name": "PROSTRATE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 257,
+      "name": "PROTECT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 257,
+      "name": "PROTECT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 258,
+      "name": "PUMMEL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 258,
+      "name": "PUMMEL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 259,
+      "name": "PURITY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 259,
+      "name": "PURITY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 260,
+      "name": "QUICK_SLASH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 260,
+      "name": "QUICK_SLASH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 261,
+      "name": "RAGE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 261,
+      "name": "RAGE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 262,
+      "name": "RAGNAROK",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 262,
+      "name": "RAGNAROK",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 263,
+      "name": "RAINBOW",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 263,
+      "name": "RAINBOW",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 264,
+      "name": "RAMPAGE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 264,
+      "name": "RAMPAGE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 265,
+      "name": "REACH_HEAVEN",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 265,
+      "name": "REACH_HEAVEN",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 266,
+      "name": "REAPER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 266,
+      "name": "REAPER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 267,
+      "name": "REBOOT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 267,
+      "name": "REBOOT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 268,
+      "name": "REBOUND",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 268,
+      "name": "REBOUND",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 269,
+      "name": "RECKLESS_CHARGE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 269,
+      "name": "RECKLESS_CHARGE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 270,
+      "name": "RECURSION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 270,
+      "name": "RECURSION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 271,
+      "name": "RECYCLE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 271,
+      "name": "RECYCLE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 272,
+      "name": "REFLEX",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 272,
+      "name": "REFLEX",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 273,
+      "name": "REGRET",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 273,
+      "name": "REGRET",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 274,
+      "name": "REINFORCED_BODY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 274,
+      "name": "REINFORCED_BODY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 275,
+      "name": "REPROGRAM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 275,
+      "name": "REPROGRAM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 276,
+      "name": "RIDDLE_WITH_HOLES",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 276,
+      "name": "RIDDLE_WITH_HOLES",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 277,
+      "name": "RIP_AND_TEAR",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 277,
+      "name": "RIP_AND_TEAR",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 278,
+      "name": "RITUAL_DAGGER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 278,
+      "name": "RITUAL_DAGGER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 279,
+      "name": "RUPTURE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 279,
+      "name": "RUPTURE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 280,
+      "name": "RUSHDOWN",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 280,
+      "name": "RUSHDOWN",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 281,
+      "name": "SADISTIC_NATURE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 281,
+      "name": "SADISTIC_NATURE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 0
+    },
+    {
+      "id": 282,
+      "name": "SAFETY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 282,
+      "name": "SAFETY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 283,
+      "name": "SANCTITY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 283,
+      "name": "SANCTITY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 284,
+      "name": "SANDS_OF_TIME",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 284,
+      "name": "SANDS_OF_TIME",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 285,
+      "name": "SASH_WHIP",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 285,
+      "name": "SASH_WHIP",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 286,
+      "name": "SCRAPE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 286,
+      "name": "SCRAPE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 287,
+      "name": "SCRAWL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 287,
+      "name": "SCRAWL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 288,
+      "name": "SEARING_BLOW",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 288,
+      "name": "SEARING_BLOW",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 289,
+      "name": "SECOND_WIND",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 289,
+      "name": "SECOND_WIND",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 290,
+      "name": "SECRET_TECHNIQUE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 290,
+      "name": "SECRET_TECHNIQUE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 291,
+      "name": "SECRET_WEAPON",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 291,
+      "name": "SECRET_WEAPON",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 292,
+      "name": "SEEING_RED",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 292,
+      "name": "SEEING_RED",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 293,
+      "name": "SEEK",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 293,
+      "name": "SEEK",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 294,
+      "name": "SELF_REPAIR",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 294,
+      "name": "SELF_REPAIR",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 295,
+      "name": "SENTINEL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 295,
+      "name": "SENTINEL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 296,
+      "name": "SETUP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 296,
+      "name": "SETUP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 297,
+      "name": "SEVER_SOUL",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 297,
+      "name": "SEVER_SOUL",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 298,
+      "name": "SHAME",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 298,
+      "name": "SHAME",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 299,
+      "name": "SHIV",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 299,
+      "name": "SHIV",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 300,
+      "name": "SHOCKWAVE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 300,
+      "name": "SHOCKWAVE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 301,
+      "name": "SHRUG_IT_OFF",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 301,
+      "name": "SHRUG_IT_OFF",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 302,
+      "name": "SIGNATURE_MOVE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 302,
+      "name": "SIGNATURE_MOVE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 303,
+      "name": "SIMMERING_FURY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 303,
+      "name": "SIMMERING_FURY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 304,
+      "name": "SKEWER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 304,
+      "name": "SKEWER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 305,
+      "name": "SKIM",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 305,
+      "name": "SKIM",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 306,
+      "name": "SLICE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 306,
+      "name": "SLICE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 307,
+      "name": "SLIMED",
+      "upgraded": false,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 307,
+      "name": "SLIMED",
+      "upgraded": true,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 308,
+      "name": "SMITE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 308,
+      "name": "SMITE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 309,
+      "name": "SNEAKY_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 309,
+      "name": "SNEAKY_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 310,
+      "name": "SPIRIT_SHIELD",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 310,
+      "name": "SPIRIT_SHIELD",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 311,
+      "name": "SPOT_WEAKNESS",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 311,
+      "name": "SPOT_WEAKNESS",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 312,
+      "name": "STACK",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 312,
+      "name": "STACK",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 313,
+      "name": "STATIC_DISCHARGE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 313,
+      "name": "STATIC_DISCHARGE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 314,
+      "name": "STEAM_BARRIER",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 314,
+      "name": "STEAM_BARRIER",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 315,
+      "name": "STORM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 315,
+      "name": "STORM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 316,
+      "name": "STORM_OF_STEEL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 316,
+      "name": "STORM_OF_STEEL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 317,
+      "name": "STREAMLINE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 317,
+      "name": "STREAMLINE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 318,
+      "name": "STRIKE_BLUE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 318,
+      "name": "STRIKE_BLUE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 319,
+      "name": "STRIKE_GREEN",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 319,
+      "name": "STRIKE_GREEN",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 320,
+      "name": "STRIKE_PURPLE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 320,
+      "name": "STRIKE_PURPLE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 321,
+      "name": "STRIKE_RED",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 321,
+      "name": "STRIKE_RED",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 322,
+      "name": "STUDY",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 322,
+      "name": "STUDY",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 323,
+      "name": "SUCKER_PUNCH",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 323,
+      "name": "SUCKER_PUNCH",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 324,
+      "name": "SUNDER",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 324,
+      "name": "SUNDER",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 325,
+      "name": "SURVIVOR",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 325,
+      "name": "SURVIVOR",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 326,
+      "name": "SWEEPING_BEAM",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 326,
+      "name": "SWEEPING_BEAM",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 327,
+      "name": "SWIFT_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 327,
+      "name": "SWIFT_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 0
+    },
+    {
+      "id": 328,
+      "name": "SWIVEL",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 328,
+      "name": "SWIVEL",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 329,
+      "name": "SWORD_BOOMERANG",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 329,
+      "name": "SWORD_BOOMERANG",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 330,
+      "name": "TACTICIAN",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 330,
+      "name": "TACTICIAN",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 331,
+      "name": "TALK_TO_THE_HAND",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 331,
+      "name": "TALK_TO_THE_HAND",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 332,
+      "name": "TANTRUM",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 332,
+      "name": "TANTRUM",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 333,
+      "name": "TEMPEST",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 333,
+      "name": "TEMPEST",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 334,
+      "name": "TERROR",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 334,
+      "name": "TERROR",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 335,
+      "name": "THE_BOMB",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 335,
+      "name": "THE_BOMB",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 2
+    },
+    {
+      "id": 336,
+      "name": "THINKING_AHEAD",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 336,
+      "name": "THINKING_AHEAD",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 337,
+      "name": "THIRD_EYE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 337,
+      "name": "THIRD_EYE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 338,
+      "name": "THROUGH_VIOLENCE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 338,
+      "name": "THROUGH_VIOLENCE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 339,
+      "name": "THUNDERCLAP",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 339,
+      "name": "THUNDERCLAP",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 340,
+      "name": "THUNDER_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 340,
+      "name": "THUNDER_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 341,
+      "name": "TOOLS_OF_THE_TRADE",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 341,
+      "name": "TOOLS_OF_THE_TRADE",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 342,
+      "name": "TRANQUILITY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 342,
+      "name": "TRANQUILITY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 343,
+      "name": "TRANSMUTATION",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 343,
+      "name": "TRANSMUTATION",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": -1
+    },
+    {
+      "id": 344,
+      "name": "TRIP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 344,
+      "name": "TRIP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 345,
+      "name": "TRUE_GRIT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 345,
+      "name": "TRUE_GRIT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 346,
+      "name": "TURBO",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 346,
+      "name": "TURBO",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 347,
+      "name": "TWIN_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 347,
+      "name": "TWIN_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 348,
+      "name": "UNLOAD",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 348,
+      "name": "UNLOAD",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 349,
+      "name": "UPPERCUT",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 349,
+      "name": "UPPERCUT",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 2
+    },
+    {
+      "id": 350,
+      "name": "VAULT",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 350,
+      "name": "VAULT",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 351,
+      "name": "VIGILANCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 351,
+      "name": "VIGILANCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 352,
+      "name": "VIOLENCE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 352,
+      "name": "VIOLENCE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 353,
+      "name": "VOID",
+      "upgraded": false,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 353,
+      "name": "VOID",
+      "upgraded": true,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 354,
+      "name": "WALLOP",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 354,
+      "name": "WALLOP",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 355,
+      "name": "WARCRY",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 355,
+      "name": "WARCRY",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 0
+    },
+    {
+      "id": 356,
+      "name": "WAVE_OF_THE_HAND",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 356,
+      "name": "WAVE_OF_THE_HAND",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 357,
+      "name": "WEAVE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 357,
+      "name": "WEAVE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 358,
+      "name": "WELL_LAID_PLANS",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 358,
+      "name": "WELL_LAID_PLANS",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 1
+    },
+    {
+      "id": 359,
+      "name": "WHEEL_KICK",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 359,
+      "name": "WHEEL_KICK",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 360,
+      "name": "WHIRLWIND",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": -1
+    },
+    {
+      "id": 360,
+      "name": "WHIRLWIND",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": -1
+    },
+    {
+      "id": 361,
+      "name": "WHITE_NOISE",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 361,
+      "name": "WHITE_NOISE",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 362,
+      "name": "WILD_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 362,
+      "name": "WILD_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 363,
+      "name": "WINDMILL_STRIKE",
+      "upgraded": false,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 363,
+      "name": "WINDMILL_STRIKE",
+      "upgraded": true,
+      "type": "ATTACK",
+      "printed_cost": 1
+    },
+    {
+      "id": 364,
+      "name": "WISH",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 364,
+      "name": "WISH",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 365,
+      "name": "WORSHIP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 365,
+      "name": "WORSHIP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 366,
+      "name": "WOUND",
+      "upgraded": false,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 366,
+      "name": "WOUND",
+      "upgraded": true,
+      "type": "STATUS",
+      "printed_cost": null
+    },
+    {
+      "id": 367,
+      "name": "WRAITH_FORM",
+      "upgraded": false,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 367,
+      "name": "WRAITH_FORM",
+      "upgraded": true,
+      "type": "POWER",
+      "printed_cost": 3
+    },
+    {
+      "id": 368,
+      "name": "WREATH_OF_FLAME",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 368,
+      "name": "WREATH_OF_FLAME",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 369,
+      "name": "WRITHE",
+      "upgraded": false,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 369,
+      "name": "WRITHE",
+      "upgraded": true,
+      "type": "CURSE",
+      "printed_cost": -2
+    },
+    {
+      "id": 370,
+      "name": "ZAP",
+      "upgraded": false,
+      "type": "SKILL",
+      "printed_cost": 1
+    },
+    {
+      "id": 370,
+      "name": "ZAP",
+      "upgraded": true,
+      "type": "SKILL",
+      "printed_cost": 1
+    }
+  ],
+  "energy_relic_checks": [
+    {
+      "name": "MARK_OF_PAIN",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "ECTOPLASM",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "PHILOSOPHERS_STONE",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "RUNIC_DOME",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "SOZU",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "VELVET_CHOKER",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "BUSTED_CROWN",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "COFFEE_DRIPPER",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "CURSED_KEY",
+      "observed_energy_per_turn": 4
+    },
+    {
+      "name": "FUSION_HAMMER",
+      "observed_energy_per_turn": 4
+    }
+  ],
+  "controlled_metadata_fixtures": 741,
+  "new_games": 0,
+  "MCTS_calls": 0,
+  "optimizer_updates": 0,
+  "limits": "Printed base costs with starter relic only; not effective costs after Snecko, Corruption or other combat effects. Cost metadata for unused other-color cards is not an original-game alignment claim."
+}
