@@ -1,0 +1,296 @@
+{
+  "experiment": "E183",
+  "kind": "posthoc_descriptive_only",
+  "rounds": [
+    {
+      "round": 0,
+      "directions": [
+        {
+          "direction": 0,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 0,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 1,
+          "positive": 1,
+          "negative": 2,
+          "discordant": 3,
+          "net": -1,
+          "leave_one_out_can_zero": true,
+          "first_eight": 1,
+          "last_eight": -2,
+          "paired_p": 1
+        },
+        {
+          "direction": 2,
+          "positive": 2,
+          "negative": 0,
+          "discordant": 2,
+          "net": 2,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 2,
+          "paired_p": 0.5
+        },
+        {
+          "direction": 3,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 2,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 4,
+          "positive": 0,
+          "negative": 1,
+          "discordant": 1,
+          "net": -1,
+          "leave_one_out_can_zero": true,
+          "first_eight": -1,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 5,
+          "positive": 2,
+          "negative": 0,
+          "discordant": 2,
+          "net": 2,
+          "leave_one_out_can_zero": false,
+          "first_eight": 2,
+          "last_eight": 0,
+          "paired_p": 0.5
+        },
+        {
+          "direction": 6,
+          "positive": 1,
+          "negative": 4,
+          "discordant": 3,
+          "net": -3,
+          "leave_one_out_can_zero": false,
+          "first_eight": -3,
+          "last_eight": 0,
+          "paired_p": 0.25
+        },
+        {
+          "direction": 7,
+          "positive": 3,
+          "negative": 0,
+          "discordant": 3,
+          "net": 3,
+          "leave_one_out_can_zero": false,
+          "first_eight": 2,
+          "last_eight": 1,
+          "paired_p": 0.25
+        }
+      ],
+      "win_total": 20,
+      "discordant_total": 16
+    },
+    {
+      "round": 1,
+      "directions": [
+        {
+          "direction": 0,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 2,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": -1,
+          "last_eight": 1,
+          "paired_p": 1
+        },
+        {
+          "direction": 1,
+          "positive": 2,
+          "negative": 1,
+          "discordant": 1,
+          "net": 1,
+          "leave_one_out_can_zero": true,
+          "first_eight": 0,
+          "last_eight": 1,
+          "paired_p": 1
+        },
+        {
+          "direction": 2,
+          "positive": 2,
+          "negative": 1,
+          "discordant": 3,
+          "net": 1,
+          "leave_one_out_can_zero": true,
+          "first_eight": 1,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 3,
+          "positive": 1,
+          "negative": 3,
+          "discordant": 4,
+          "net": -2,
+          "leave_one_out_can_zero": false,
+          "first_eight": -1,
+          "last_eight": -1,
+          "paired_p": 0.625
+        },
+        {
+          "direction": 4,
+          "positive": 1,
+          "negative": 0,
+          "discordant": 1,
+          "net": 1,
+          "leave_one_out_can_zero": true,
+          "first_eight": 1,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 5,
+          "positive": 2,
+          "negative": 2,
+          "discordant": 4,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 1,
+          "last_eight": -1,
+          "paired_p": 1
+        },
+        {
+          "direction": 6,
+          "positive": 2,
+          "negative": 0,
+          "discordant": 2,
+          "net": 2,
+          "leave_one_out_can_zero": false,
+          "first_eight": 1,
+          "last_eight": 1,
+          "paired_p": 0.5
+        },
+        {
+          "direction": 7,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 0,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        }
+      ],
+      "win_total": 21,
+      "discordant_total": 17
+    },
+    {
+      "round": 2,
+      "directions": [
+        {
+          "direction": 0,
+          "positive": 0,
+          "negative": 1,
+          "discordant": 1,
+          "net": -1,
+          "leave_one_out_can_zero": true,
+          "first_eight": 0,
+          "last_eight": -1,
+          "paired_p": 1
+        },
+        {
+          "direction": 1,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 0,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 2,
+          "positive": 0,
+          "negative": 0,
+          "discordant": 0,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 3,
+          "positive": 0,
+          "negative": 1,
+          "discordant": 1,
+          "net": -1,
+          "leave_one_out_can_zero": true,
+          "first_eight": -1,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 4,
+          "positive": 0,
+          "negative": 2,
+          "discordant": 2,
+          "net": -2,
+          "leave_one_out_can_zero": false,
+          "first_eight": -1,
+          "last_eight": -1,
+          "paired_p": 0.5
+        },
+        {
+          "direction": 5,
+          "positive": 0,
+          "negative": 0,
+          "discordant": 0,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 0,
+          "last_eight": 0,
+          "paired_p": 1
+        },
+        {
+          "direction": 6,
+          "positive": 2,
+          "negative": 2,
+          "discordant": 2,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": 1,
+          "last_eight": -1,
+          "paired_p": 1
+        },
+        {
+          "direction": 7,
+          "positive": 1,
+          "negative": 1,
+          "discordant": 2,
+          "net": 0,
+          "leave_one_out_can_zero": false,
+          "first_eight": -1,
+          "last_eight": 1,
+          "paired_p": 1
+        }
+      ],
+      "win_total": 12,
+      "discordant_total": 8
+    }
+  ],
+  "limits": [
+    "Each direction has only sixteen paired families.",
+    "These exploratory tests are not candidate selection or a revised gate.",
+    "A small or unstable paired signal does not prove that all whole-policy learning methods fail."
+  ]
+}
