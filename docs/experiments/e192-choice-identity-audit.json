@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "experiment": "E192",
+  "retrospective": true,
+  "counts": {
+    "native_prefix_steps": 4245,
+    "first_interventions": 48,
+    "other_public_descriptor_changes": 48
+  },
+  "first_action_kinds": {
+    "REWARD_CARD": 16,
+    "CARD_SELECT": 12,
+    "SHOP_RELIC": 1,
+    "REWARD_SKIP": 9,
+    "SHOP_REMOVE": 4,
+    "SHOP_CARD": 3,
+    "BOSS_RELIC": 2,
+    "SHOP_POTION": 1
+  },
+  "aliases_by_kind": {},
+  "observed_full_policy_outcome_groups": {
+    "other:both_win": 10,
+    "other:both_fail": 34,
+    "other:baseline_only": 2,
+    "other:candidate_only": 2
+  },
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "source_completion_sha256": "8ea7cca37fd3ed954cca69e4e9846a357359eeec86b22fc6d1005e893cef31a7",
+  "auditor_sha256": "549732893ab94b909cce7f5fa2864d13744de7191e570b3da27c6d830585dda5",
+  "registration_sha256": "adc79625c6de2f8f33eed7033657908038b4698d298d8301837219fdc11608ca",
+  "limits": "First changed decision only. Equality after masking three raw-index descriptor coordinates is not complete game-state or RNG equivalence. Later decisions also differ; outcome groups do not isolate a causal effect of this first choice. No feature masking, action merging, new policy, or new continuation follows from this audit.",
+  "private_audit_sha256": "c7b13c6a3c825aff55ae25110ddeafef2b4c3fca62056fac63f5aad518924c91"
+}
