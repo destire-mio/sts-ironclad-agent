@@ -1,0 +1,17 @@
+{
+  "status": "launched",
+  "experiment": "E193",
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e193-cross-family-gradient-20260924-01",
+  "registration_sha256": "dbd86b3527e0cbb9cbc5414e1c4deefb23a7c96ecb06fdfbef8f89201a0535cc",
+  "auditor_sha256": "d2f4a828c67c82e36066618aa317e728f309b3e9ed5c96e7c8d815d9f7c862f8",
+  "started_at_shanghai": "2026-09-24T04:54:09.343313+08:00",
+  "owner_pid": 90700,
+  "execution_pid": 90714,
+  "process_group": 90714,
+  "timeout_seconds": 1800,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "focused_tests_passed": 3,
+  "luna_interval_minutes": 20,
+  "luna_configuration_readback_verified": true
+}
