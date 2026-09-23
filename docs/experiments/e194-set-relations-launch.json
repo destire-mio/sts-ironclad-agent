@@ -1,0 +1,16 @@
+{
+  "status": "launched",
+  "experiment": "E194",
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e194-candidate-inventory-relations-20260924-01",
+  "started_at_shanghai": "2026-09-24T05:41:25.911573+08:00",
+  "owner_pid": 8371,
+  "execution_pid": 8396,
+  "process_group": 8396,
+  "maximum_wrapper_seconds": 14520,
+  "registration_sha256": "f5ea3b0cdab111c032d6c4e145eeec389a89759341ddca4452cf27c8d5cc4170",
+  "execution_registration_sha256": "a422aa7472d67980d57782a27a29b26baa8128c458311975888d13007f0fa8bb",
+  "preflight_sha256": "3c22ddf1a223178a32f1c624db590b2fd59385b375531782b3e5af6cc2235e14",
+  "new_games": 0,
+  "luna_interval_minutes": 20,
+  "luna_configuration_readback_verified": true
+}
