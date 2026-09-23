@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "records": 256,
+  "comparisons": {
+    "production": {
+      "loss": 0.33333333333333326,
+      "gradient_norm": 0.073440538586079,
+      "loss_error": 0.0,
+      "maximum_gradient_error": 0.0,
+      "maximum_one_step_weight_error": 0.0,
+      "exact_gradient_match": true,
+      "exact_weight_match": true
+    },
+    "separate_logsumexp": {
+      "loss": 0.33333333333333326,
+      "gradient_norm": 0.07344053858607906,
+      "loss_error": 0.0,
+      "maximum_gradient_error": 2.2551405187698492e-17,
+      "maximum_one_step_weight_error": 2.3425705819590803e-14,
+      "exact_gradient_match": false,
+      "exact_weight_match": false
+    },
+    "separate_log_softmax": {
+      "loss": 0.33333333333333326,
+      "gradient_norm": 0.073440538586079,
+      "loss_error": 0.0,
+      "maximum_gradient_error": 0.0,
+      "maximum_one_step_weight_error": 0.0,
+      "exact_gradient_match": true,
+      "exact_weight_match": true
+    }
+  },
+  "discarded_probe_optimizer_updates": 3,
+  "new_games": 0,
+  "training_candidate_changed": false,
+  "source_candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+  "script_sha256": "3ffb1ce02781bd91c9eb0d077594cb2797862fa14e56e7efe400aefb4bcfc1d7",
+  "limits": "A local numeric probe of one existing mixed-family batch, not a policy or success-rate result. Full independent optimizer replay remains required at the unchanged1e-9 tolerance.",
+  "private_probe_report_sha256": "0728bff160882996e06132c7ef03ba5487c053c157287814ff5a06654593f818",
+  "retained_parameter_tolerance": 1e-09,
+  "original_review_failure_preserved": true,
+  "original_review_failure_log_sha256": "c60f90fa65255ec061b3fb4b5a6d77314d0c9833e2ae9f84372ad3cfc943d5b2"
+}

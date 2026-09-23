@@ -107,7 +107,11 @@ def replay_update(net, initial, records, recipe, iteration, temperature):
             residuals = (net(features).flatten() - reference).split(sizes)
             log_distributions = [(torch.as_tensor(row['base_scores'], dtype=torch.float64) + residual) / temperature
                                  for row, residual in zip(batch, residuals, strict=True)]
-            log_distributions = [values - torch.logsumexp(values, dim=0) for values in log_distributions]
+            # Use the same stable library normalization kernel to separate
+            # optimizer errors from accumulated roundoff in the algebraically
+            # equivalent `values - logsumexp(values)` form. The clipped loss and
+            # explicit q*(log(q)-log(p)) KL remain separately implemented.
+            log_distributions = [torch.log_softmax(values, dim=0) for values in log_distributions]
             selected = torch.stack([values[row['chosen_active']] for values, row in zip(log_distributions, batch, strict=True)])
             ratio = torch.exp(selected - torch.tensor([row['log_probability'] for row in batch], dtype=torch.float64))
             advantages = torch.tensor([row['advantage'] for row in batch], dtype=torch.float64)
@@ -142,7 +146,7 @@ def main(root):
     import heart_whole_policy_gradient as G
     E = G.E
     torch.set_num_threads(1)
-    bound = E.read(root/'review-registration.json')
+    bound = E.read(root/'review-registration-v2.json')
     assert bound['reviewer_sha256'] == E.sha(__file__)
     for path, digest in bound['hashes'].items():
         assert E.sha(path) == digest, path
@@ -409,7 +413,7 @@ def main(root):
         maximum_parameter_error=maximum_parameter_error, maximum_curve_error=maximum_curve_error,
         process_cleanup_verified=True, registration_sha256=E.sha(root/'registration.json'),
         completion_sha256=E.sha(out/'completion.json'), reviewer_sha256=E.sha(__file__),
-        review_registration_sha256=E.sha(root/'review-registration.json'), policy_adoption=False,
+        review_registration_sha256=E.sha(root/'review-registration-v2.json'), policy_adoption=False,
         limits=plan['limits'])
     E.write(root/'result-review.json', result)
     print(result, flush=True)

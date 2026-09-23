@@ -1,0 +1,141 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E191",
+  "result": {
+    "status": "complete",
+    "experiment": "E191",
+    "training_rounds": 4,
+    "optimizer_updates": 3444,
+    "parameter_updates": 4,
+    "trainable_parameters": 1061953,
+    "temperature": 1.0,
+    "stochastic_baseline_comparison": {
+      "assigned": 128,
+      "baseline_wins": 9,
+      "candidate_wins": 11,
+      "net_gain": 2,
+      "paired": {
+        "both_win": 7,
+        "both_fail": 115,
+        "candidate_only": 4,
+        "baseline_only": 2
+      },
+      "exact_p": 0.6875
+    },
+    "greedy_parent_comparison": {
+      "assigned": 128,
+      "baseline_wins": 20,
+      "candidate_wins": 11,
+      "net_gain": -9,
+      "paired": {
+        "both_win": 8,
+        "baseline_only": 12,
+        "both_fail": 105,
+        "candidate_only": 3
+      },
+      "exact_p": 0.03515625
+    },
+    "learning_gate_passed": false,
+    "new_games": 2485,
+    "base_games": 2308,
+    "winner_replans": 177,
+    "candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+    "zero_faults": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": "This is a bounded full-game learning experiment on historical families. Different policies across training rounds prevent interpreting raw per-round wins as a matched learning curve. Stochastic policy success differs from greedy success; deploy and evaluate the actual frozen sampling procedure. Auxiliary/optimizer checks do not replace policy gains. Final512/1024 unused-family goal remains unmet."
+  },
+  "rounds": [
+    {
+      "iteration": 0,
+      "mixed_families": 25,
+      "wins": 37,
+      "games": 512,
+      "optimizer_updates": 868,
+      "updated": true,
+      "nonzero_advantage_decisions": 15453
+    },
+    {
+      "iteration": 1,
+      "mixed_families": 18,
+      "wins": 33,
+      "games": 512,
+      "optimizer_updates": 860,
+      "updated": true,
+      "nonzero_advantage_decisions": 11091
+    },
+    {
+      "iteration": 2,
+      "mixed_families": 22,
+      "wins": 37,
+      "games": 512,
+      "optimizer_updates": 846,
+      "updated": true,
+      "nonzero_advantage_decisions": 13992
+    },
+    {
+      "iteration": 3,
+      "mixed_families": 27,
+      "wins": 50,
+      "games": 512,
+      "optimizer_updates": 870,
+      "updated": true,
+      "nonzero_advantage_decisions": 16577
+    }
+  ],
+  "independent_clipped_likelihood_kl_and_optimizer_recomputed": true,
+  "fit_evaluation_roles_disjoint": true,
+  "sampling_and_collecting_probabilities_recomputed": true,
+  "counts": {
+    "base_games": 2308,
+    "collecting_probabilities_recomputed": 1341921,
+    "native_routes_rechecked": 16,
+    "native_steps_rechecked": 2833,
+    "winner_replans": 177
+  },
+  "changes_by_action_kind": {
+    "16": 686,
+    "10": 588,
+    "12": 319,
+    "0": 1203,
+    "18": 1901,
+    "1": 211,
+    "3": 2147,
+    "22": 64,
+    "11": 518,
+    "2": 33,
+    "9": 21,
+    "15": 90,
+    "17": 52,
+    "14": 204,
+    "13": 64,
+    "4": 38,
+    "5": 15,
+    "8": 16
+  },
+  "maximum_probability_error": 1.0658141036401503e-14,
+  "maximum_parameter_error": 0.0,
+  "maximum_curve_error": 3.2526065174565133e-19,
+  "process_cleanup_verified": true,
+  "registration_sha256": "8b48aa6ab8dcc77c3dd5b534e0fe794f71726d94224db56313e7e22d4d7430e3",
+  "completion_sha256": "aefb9849f8a12af88d6c2a6fb16a35e3973ed360e066fea75409730699c2f8ba",
+  "reviewer_sha256": "76c180d8bd85a9d77d1e4e385ecb3dc5db0668aa6dd56b4410ddc1b737ab5e22",
+  "review_registration_sha256": "1fde3fae64c2b29ab1a41b4c93a7bc0fbb6490216974d1590ea7ea68a62095cd",
+  "policy_adoption": false,
+  "limits": "This is a bounded full-game learning experiment on historical families. Different policies across training rounds prevent interpreting raw per-round wins as a matched learning curve. Stochastic policy success differs from greedy success; deploy and evaluate the actual frozen sampling procedure. Auxiliary/optimizer checks do not replace policy gains. Final512/1024 unused-family goal remains unmet.",
+  "review_sha256": "f74e742bc2226e01a8add1c759d2ee9117504270240ecf8ac1fd1e6e615ca2cc",
+  "training_controller_exit_sha256": "5c77bd7f2579b62492625ddc540e5acd18277c2e13a2a3553030737bb8755a6b",
+  "training_owned_exit_sha256": "60f1d66cbaabb79aa64ceab0b5172c8cb400e03ddd0456575d83af09a7c869b1",
+  "review_owned_exit_sha256": "d4b6158952b2ff2fc7d87b021bf28310592d15db2b4bd2a6cb57bb686618eb77",
+  "review_controller_exit_sha256": "0ac2df1130e309b4400b031b36abf52ee4bd19f6b9fc8164e6831e98562ef74d",
+  "retained_failures": {
+    "owner_bootstrap": "fd8cad06e1e5c8bcc5c4f994a8fea5e077b0c91d97091b963f8873fdc7d5f60f",
+    "first_numeric_review_log": "c60f90fa65255ec061b3fb4b5a6d77314d0c9833e2ae9f84372ad3cfc943d5b2",
+    "first_numeric_review_exit": "32737155b25443ffb150b40f54800f334c80efb06b02076ec7277392ba27f00c",
+    "numeric_probe": "0728bff160882996e06132c7ef03ba5487c053c157287814ff5a06654593f818",
+    "parameter_tolerance_retained": 1e-09
+  },
+  "closure": "Close the four-round stochastic-execution recipe below both original gates, without a learning-rate, epoch, temperature or collection-size grid. E192 is a separately registered fixed-weight greedy execution check on 48 changed historical routes, with80 certified unchanged routes reused. It does not erase this failure or constitute unused-family acceptance.",
+  "luna_training_and_first_review_failure_delivered": true,
+  "luna_review_v2_delivery_received_after_root_verification": true
+}
