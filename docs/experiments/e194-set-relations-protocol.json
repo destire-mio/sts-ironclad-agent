@@ -1,0 +1,54 @@
+{
+  "experiment": "E194",
+  "registered_before_training": true,
+  "completed_data_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e182-joint-encoder-20260923-01",
+  "preceding_signal_audit": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e193-cross-family-gradient-20260924-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "arms": [
+    "pooled",
+    "attention"
+  ],
+  "recipe": {
+    "steps": 1000,
+    "checkpoints": [
+      0,
+      100,
+      250,
+      500,
+      1000
+    ],
+    "head_learning_rate": 0.03,
+    "relation_learning_rate": 0.0003,
+    "l2": 0.001,
+    "gradient_norm": 1.0,
+    "width": 32,
+    "seed": 20260924194,
+    "inner_namespace": "E182-joint-inner:",
+    "inner_modulus": 5,
+    "dtype": "float64"
+  },
+  "new_games": 0,
+  "maximum_formal_optimizer_updates": 4000,
+  "timeout_seconds": 14400,
+  "hypothesis": "Test a learned candidate-to-inventory relation path against a matched uniform-pooling path, while preserving the original frozen public encoding. Previous explicit tags/hand interactions, item-column sharing and copied dense-encoder learning failed; none of those results establish this architecture will succeed.",
+  "architecture": "Original frozen192 public hidden features plus32 relation features. Shared32-dimensional item embeddings for owned and candidate cards/relics; owned card unupgraded/upgraded counts and relic counters use existing normalized public observations. Candidate upgrade/misc/bottled attributes and original12 context scalars form the query. Two aggregation blocks use either uniform weights or candidate-conditioned dot-product softmax over the same item tokens. One always-present no-item sentinel, masked padding, no token positions. Original encoder retains all existing information including special-card arrays, potions and raw indices; new tokens do not add hidden information.",
+  "control": "Both arms have the same initial item and transform weights, two aggregation blocks, centered224-dimensional readouts and static option scores with original parent margin1. Pooling arm does not optimize unused key/query parameters. Both use the same expected terminal-tree objective, family split, fitting budget and stopping. Existing E182 frozen-readout93/1024 remains an additional sealed comparator; no rerun.",
+  "data": "Reuse the exact reviewed E182/E128 corpus:4608 fit and1024 historical label-holdout families,3602/786 complete first-boss trees and14380/3127 subsequent-card menus. Include all assigned early failures in denominators. No E133 expansion, new sampling, unused-family data or new MCTS.",
+  "scope": "First Act1 boss-relic decision and the last card offer at Act2 map row0, followed by the unchanged frozen parent. Unknown complete option menus and all other decisions use the original policy. This branch-complete two-decision scope has a historical hindsight ceiling217/1024 and cannot by itself fulfill512/1024.",
+  "objective": "Exact expected binary Heart return over both levels of the existing complete tree. Full-batch Adam, head learning rate.03, relation learning rate.0003, gradient norm1, L2.001 on learned readout weights and relation-parameter delta from initialization. Fit-only centered feature RMS floor.01. No floor or survival reward.",
+  "stopping": "Reuse E182 SHA family inner split mod5. At0/100/250/500/1000 choose most inner-validation deterministic wins, then fewer changed families, then earlier step; use0 if no improvement over original parent. Reinitialize and refit all4608 families for the selected count. Both final candidates must exist before scoring historical held labels.",
+  "gates": "Each arm must gain>=20/1024 with exact paired p<.025 against BOTH the original87-win parent and sealed93-win E182 frozen readout. An attention-specific claim additionally requires>=20 wins and p<.05 versus matched pooling. Historical repeated-use p-values are descriptive. No automatic adoption, new evaluation games or final acceptance follows.",
+  "verification": "Four pure new tests verify permutation/padding and candidate permutation contracts, NumPy forward scores, nonzero query/item gradients and public item projection. Run six existing complete-tree tests with the frozen runtime. Before training, reconstruct all fit public inventories and four whole-tree zero/nonzero arm scores; replay four original native games and twelve native scoped states, check inventory counts, deployment choices, continuation and state/RNG. Three discarded benchmark updates check actual attention learning, never a saved candidate. After training, independently reconstruct all ten inner checkpoints and four fit/held final outcomes, fit-only scales, stopping, original parent and complete tree assignments.",
+  "closure": "If both policy gates fail, close this fixed32-dimensional relation-path recipe without width/depth/learning-rate/regularization/budget grids. A passing arm requires result review and a separately designed prospective complete-game validation before any adoption.",
+  "reference": {
+    "title": "Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks",
+    "url": "https://proceedings.mlr.press/v97/lee19d.html",
+    "use": "Attention over unordered sets motivates the relational inductive bias; this custom candidate-query module is not an exact implementation or a claimed reproduction of that paper."
+  },
+  "limits": [
+    "Historical held families have been inspected before and are not untouched acceptance.",
+    "E193 diagnoses limited return contrast under its own whole-game recipe; it does not establish attention as the remedy.",
+    "This study estimates only the two registered interventions under fixed continuation. Successful held branch selection does not establish whole-game or unseen success.",
+    "Original-game parity remains deferred, Ironclad A20 keys/two Act3 bosses/Act4/Heart and Prismatic Shard exclusion remain."
+  ]
+}
