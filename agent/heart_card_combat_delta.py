@@ -135,13 +135,13 @@ def mse(model, data, ids, allowed):
     return (total/len(ids)).tolist(), (baseline/len(ids)).tolist()
 
 
-def train(root):
-    plan = registered(root)
+def train(root, *, registration=registered, data_factory=Data):
+    plan = registration(root)
     checked = E.read(root / 'data-review.json')
     E.require(checked['status'] == 'complete_reviewed'
               and checked['target_completion_sha256'] == E.sha(Path(plan['target_source']) / 'data/completion.json'), 'auxiliary data not reviewed')
     torch.set_num_threads(1); torch.set_num_interop_threads(1)
-    store = O.Store(Path(plan['learning_source']) / 'store'); data = Data(store, plan)
+    store = O.Store(Path(plan['learning_source']) / 'store'); data = data_factory(store, plan)
     source = Path(plan['value_source']); width = store.spec['width']+store.spec['descriptor_dim']
     out = root / 'learning'; out.mkdir(); reports = []
     for fold in range(3):
@@ -152,6 +152,9 @@ def train(root):
         roles = dict(inner_train=[f['seed'] for f in inner], inner_validation=[f['seed'] for f in valid],
                      fit=[f['seed'] for f in fit_families], held=[f['seed'] for f in held])
         E.require(all(roles[k] == old_roles[k] for k in roles), 'auxiliary warm roles changed')
+        if hasattr(data, 'coverage'):
+            roles['auxiliary_families'] = {k: [seed for seed in roles[k] if data.by_seed[seed]]
+                for k in ('inner_train', 'inner_validation', 'fit', 'held')}
         rng = np.random.default_rng(RECIPE['seed']+2000+fold)
         roles['validation_pairs'] = data.sample(valid, rng.random((RECIPE['validation_draws'], 3))).tolist()
         roles['held_pairs'] = data.sample(held, rng.random((RECIPE['validation_draws'], 3))).tolist()
@@ -177,11 +180,14 @@ def train(root):
     error = float(np.mean([r['held_mse'] for r in reports]))
     baseline = float(np.mean([r['zero_baseline_mse'] for r in reports]))
     passed = error <= RECIPE['relative_mse_gate']*baseline and all(np.mean(r['held_mse']) < np.mean(r['zero_baseline_mse']) for r in reports)
-    E.write(out / 'report.json', dict(status='complete', experiment='E178', folds=reports, held_mse=error,
+    result = dict(status='complete', experiment=plan['experiment'], folds=reports, held_mse=error,
         zero_baseline_mse=baseline, auxiliary_gate_passed=bool(passed),
         auxiliary_optimizer_updates=3*RECIPE['steps']+sum(r['selected_steps'] for r in reports),
         heart_optimizer_updates=0, new_games=0, policy_adoption=False,
-        limits='Auxiliary differences at the first subsequent audited mapped combat, not next-physical-fight, Heart policy, or unseen win rate. No deployment or automatic Heart fitting.'))
+        limits=plan.get('result_limits', 'Auxiliary differences at the first subsequent audited mapped combat, not next-physical-fight, Heart policy, or unseen win rate. No deployment or automatic Heart fitting.'))
+    if hasattr(data, 'coverage'):
+        result['auxiliary_scope'] = data.coverage
+    E.write(out / 'report.json', result)
     E.write(out / 'completion.json', dict(status='complete', hashes={str(p.relative_to(out)): E.sha(p) for p in out.rglob('*') if p.is_file()}))
 
 
