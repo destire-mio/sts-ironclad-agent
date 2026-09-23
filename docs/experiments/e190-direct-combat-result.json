@@ -1,0 +1,82 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E190",
+  "folds": [
+    {
+      "fold": 0,
+      "selected_steps": 250,
+      "candidate_mse": [
+        0.003377079211474991,
+        0.0016274540772661234
+      ],
+      "zero_mse": [
+        0.0033596894570530255,
+        0.0015869140625
+      ],
+      "old_all_pair_model_mse": [
+        0.0033596894570530255,
+        0.0015869140625
+      ]
+    },
+    {
+      "fold": 1,
+      "selected_steps": 0,
+      "candidate_mse": [
+        0.0027631296274306036,
+        0.0037841796875
+      ],
+      "zero_mse": [
+        0.0027631296274306036,
+        0.0037841796875
+      ],
+      "old_all_pair_model_mse": [
+        0.0027486951425957275,
+        0.003736526065506667
+      ]
+    },
+    {
+      "fold": 2,
+      "selected_steps": 500,
+      "candidate_mse": [
+        0.0027590844040880943,
+        0.0014643245656537386
+      ],
+      "zero_mse": [
+        0.0027659820320860406,
+        0.00146484375
+      ],
+      "old_all_pair_model_mse": [
+        0.0027659820320860406,
+        0.00146484375
+      ]
+    }
+  ],
+  "held_mse": 0.002629208595568925,
+  "zero_mse": 0.0026207897694282786,
+  "old_all_pair_model_mse": 0.002610441751623577,
+  "matched_auxiliary_gate_passed": false,
+  "auxiliary_optimizer_updates": 15750,
+  "scope": {
+    "pairs": 7667,
+    "families": 1244,
+    "original_families": 1536,
+    "menus": 2574,
+    "source": "E189 both-transparent mask; no prior fight, only reward exits, unchanged resources"
+  },
+  "inner_checkpoints_verified": 18,
+  "held_predictions_verified": 24576,
+  "maximum_numpy_error": 8.0073829338001e-10,
+  "learning_completion_sha256": "b984ad653d5fb8200a86914febeb135dbb884fb68d07774ecf6042090501868e",
+  "reviewer_sha256": "f408c66fc6f0013f50f9fa908d52ce9550caddd5dde24c5cd7af04350ae49598",
+  "controller_exit_sha256": "1be2c16b3911b1a1926531a843c22d6c84393938c455280372d0fba84bdb301d",
+  "new_games": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "limits": "Conditional auxiliary prediction on1244 historical families, not policy improvement or unused-seed win rate. The mask is defined from recorded pre-fight paths and resources, not combat outcomes, and never enters policy inputs. Remaining combat randomness is retained. Original failed studies remain failed; no new games, adoption or final acceptance.",
+  "training_review_sha256": "5af38750096342079c41f48155714066f02ed7c1410763fe7567d94b1e302e59",
+  "relative_error_increase_vs_zero": 0.0032123241012509407,
+  "relative_error_increase_vs_old_full": 0.007189144876983411,
+  "controller_and_execution_absent": true,
+  "luna_wait": "Root observed completion before the first20-minute callback and paused the existing heartbeat; no Luna delivery claimed.",
+  "decision": "Close fixed direct-subset recipe. No mask, threshold, budget or regularization grid; no Heart transfer, new games or adoption. Intermediate paths are not established as the sufficient cause of failed learning."
+}
