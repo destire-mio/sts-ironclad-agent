@@ -1,0 +1,31 @@
+{
+  "status": "launched",
+  "phase": "train",
+  "pid": 89639,
+  "at": "2026-09-23T16:19:01.480289+00:00",
+  "registration_sha256": "d1e6839e5e6c6fe6b1dc800cb8dfe61bf5e964a9e378788a76bde012b4624fb6",
+  "execution": {
+    "started_at": "2026-09-23T16:19:01.997850+00:00",
+    "wrapper_pid": 89639,
+    "pid": 89642,
+    "process_group": 89642,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e190-direct-combat-delta-20260924-01/program/heart_direct_combat_delta.py",
+      "train",
+      "--study",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e190-direct-combat-delta-20260924-01"
+    ],
+    "registration_sha256": "d1e6839e5e6c6fe6b1dc800cb8dfe61bf5e964a9e378788a76bde012b4624fb6",
+    "wrapper_seconds": 3720
+  },
+  "data_review_sha256": "e64e47b6885f4146b1b2b4120add1524f59358a8c832c8c8c9cacad70b226878",
+  "luna": {
+    "automation_id": "luna",
+    "target_thread_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+    "interval_minutes": 20,
+    "status": "ACTIVE",
+    "quiet_until_actionable": true
+  }
+}

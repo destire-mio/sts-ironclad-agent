@@ -1,0 +1,8 @@
+{
+  "experiment": "E189",
+  "target_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e177-combat-pair-targets-20260923-01",
+  "question": "How often do old E177 card/combat targets include intervening public decisions, resource changes, or earlier physical fights?",
+  "scope": "All25023 admitted afterstates and18759 comparisons. Follow exact frozen-parent graph edges to each recorded first direct mapped fight; count missing endpoints. No outcome-selected paths.",
+  "definition": "Transparent means zero prior recorded battles, only reward-skip actions (or zero actions), and unchanged HP, maxHP, gold, full deck representation, relics/counters and potions from immediate card afterstate to pre-map combat state. Full destination descriptor equality describes visible destinations, not hidden encounter identity.",
+  "limits": "Read-only diagnostic with no promotion gate. Parent continuation and resource changes are real consequences; presence does not make old targets invalid or prove why E178 failed. Counts are correlated pairs, not independent games. No actual encounter identity is inferred from matching visible descriptors. No filtering/relabeling, fitting, new games, native replay, MCTS changes, adoption or final unused acceptance authorized by these counts."
+}

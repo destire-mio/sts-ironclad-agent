@@ -1,0 +1,56 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E190",
+  "scope": {
+    "pairs": 7667,
+    "families": 1244,
+    "original_families": 1536,
+    "menus": 2574,
+    "source": "E189 both-transparent mask; no prior fight, only reward exits, unchanged resources"
+  },
+  "role_coverage": [
+    {
+      "fold": 0,
+      "inner_train": 637,
+      "inner_validation": 178,
+      "fit": 815,
+      "held": 429
+    },
+    {
+      "fold": 1,
+      "inner_train": 675,
+      "inner_validation": 183,
+      "fit": 858,
+      "held": 386
+    },
+    {
+      "fold": 2,
+      "inner_train": 646,
+      "inner_validation": 169,
+      "fit": 815,
+      "held": 429
+    }
+  ],
+  "targets_verified": 7667,
+  "unchanged_input_pairs": 128,
+  "warm_models_verified": 6,
+  "forbidden_target_rejections": 4,
+  "maximum_numpy_error": 2.9802322387695312e-08,
+  "optimizer_updates": 0,
+  "new_games": 0,
+  "target_completion_sha256": "cce98b5de9c5aed3f8a3f2a13c41015892a31b285b4900ee14f7d16910752937",
+  "path_review_sha256": "5f84f8401ad839b909934fb2f7b446410b8dbc34cab437da65cf20a3b5a3b3b6",
+  "reviewer_sha256": "f408c66fc6f0013f50f9fa908d52ce9550caddd5dde24c5cd7af04350ae49598",
+  "registration_sha256": "d1e6839e5e6c6fe6b1dc800cb8dfe61bf5e964a9e378788a76bde012b4624fb6",
+  "data_review_sha256": "e64e47b6885f4146b1b2b4120add1524f59358a8c832c8c8c9cacad70b226878",
+  "existing_regressions_passed": 16,
+  "source_bindings_strengthened_before_training": {
+    "status": "before_training",
+    "previous_registration_sha256": "62eb86584c67cfa2d1700c9043824d6b6b96721047c0f8474aa0ae1c9b0da7da",
+    "registration_sha256": "d1e6839e5e6c6fe6b1dc800cb8dfe61bf5e964a9e378788a76bde012b4624fb6",
+    "sources_unchanged": true,
+    "learning_or_recipe_changes": false,
+    "reason": "Bind inherited original E178 sources and exact E170 stopping reports/warm files directly before training."
+  },
+  "same_saved_source_code_as_workspace": true
+}
