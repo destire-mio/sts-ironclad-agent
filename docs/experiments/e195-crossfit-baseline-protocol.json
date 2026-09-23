@@ -1,0 +1,40 @@
+{
+  "experiment": "E195",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "recipe": {
+    "folds": 3,
+    "ridge": 0.01,
+    "minimum_scale": 0.01,
+    "feature_width": 204,
+    "hidden_width": 192,
+    "descriptor_width": 807,
+    "action_kinds": 24,
+    "scalar_count": 12,
+    "feature_batch": 128,
+    "minimum_brier_improvement": 0.1
+  },
+  "new_games": 0,
+  "actor_updates": 0,
+  "optimizer_updates": 0,
+  "timeout_seconds": 1800,
+  "question": "Can a state-only baseline predict complete stochastic returns across excluded seed families before using it for local action credit?",
+  "evidence": "E191 whole-game updates fail both execution gates; E193 finds only37/128 families with any within-cohort return contrast and weak later cross-family local alignment. Neither proves a baseline defect or that additional nonzero gradients improve policy. E194 inventory relations also fail its policy gates.",
+  "data": "Use only the first E191 cohort:128 original fit families,4 independent complete games each, all55473 nonforced decisions and37 Heart wins. The original initial actor collected all512 games before any E191 actor update. Exclude later adaptive cohorts and all128 evaluation families. Keep every valid death and Act3-without-Heart result as0; Heart1. No new labels or game execution.",
+  "inputs": "For each public active menu, probability-pool the192 hidden coordinates of the frozen original actor using its recorded pre-sampling probabilities, then append12 shared public scalars recovered from action-kind cross-products. Dim204. No chosen action, terminal outcome, seed, RNG, family index, path, future state or raw trace metadata enters the predictor. Pooling is invariant to candidate order. This input still lacks omitted raw map and Boss fields; it is not a complete observation repair.",
+  "fitting": "Three fixed SHA256(E195-state-baseline:seed) modulo3 folds. For each fold exclude every state and repeat of its families. Give each fit family equal weight, each of its4 games equal weight, each nonforced decision equal weight within that game. Fit-only mean/std normalization with scale floor.01. Centered linear ridge regression with unpenalized intercept and fixed penalty.01, solve once in double precision, clip predictions to[0,1]. All204 features retained; no tuning, selected checkpoint or fitted encoder.",
+  "control": "Compare against the scalar mean return fitted from the same excluding-family data with the same weights. It is a prediction control, not the original within-family leave-one-out policy-gradient baseline.",
+  "prediction_gate": "Family-equal cross-fitted Brier must improve at least10% over its fit-only constant and improve in every fold. Keep all folds and families. Passing only permits design of an existing-data action-credit comparison; it does not authorize collection, deployment, policy gain or acceptance. Failure closes this fixed predictor without ridge/feature/budget grid.",
+  "verification": "Verify source completion/review and all512 raw episode/checkpoint hashes. Independently rebuild every204-dimensional input with Torch and action-kind block selection, compare to NumPy pooled features at absolute1e-10. Recompute all3 family-excluded models by augmented least squares rather than covariance solve, keeping absolute1e-9 coefficient and prediction tolerance. Reconstruct family weights, labels, folds, all held predictions and the gate. Reject invalid sources before learning.",
+  "next_hypothesis": "A state-dependent baseline or fixed generalized-advantage estimator could assign different credit within a complete trajectory, while current same-family terminal subtraction is constant along each game. Prediction evidence alone does not show variance reduction, unbiased credit or Heart gains. GAE with lambda<1 introduces bias for an imperfect critic; no such actor is implemented or adopted by E195.",
+  "references": {
+    "GAE": "https://arxiv.org/abs/1506.02438",
+    "control_variate_caution": "https://proceedings.mlr.press/v80/tucker18a/tucker18a.pdf"
+  },
+  "limits": [
+    "Historical families and frozen original encoder are reused; excluding families from these new baseline fits is not untouched end-to-end acceptance.",
+    "The first-cohort prediction target follows its stochastic actor, not the original greedy parent or any subsequent actor.",
+    "Return prediction is not causal action value, gradient variance evidence, or policy improvement.",
+    "E154 bootstrapped IQL collapse and E169-E190 parent-value/action-transfer failures remain recorded. This is a separate state-baseline feasibility test on current stochastic trajectories, not a repeated parent-action ranker.",
+    "Ironclad A20 Heart chain, Prismatic Shard exclusion, frozen engine and combat budget remain. Original-game parity is deferred. Final512/1024 unused-family goal remains unmet."
+  ]
+}

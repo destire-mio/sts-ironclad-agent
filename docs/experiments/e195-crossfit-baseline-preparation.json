@@ -1,0 +1,14 @@
+{
+  "status": "prepared",
+  "experiment": "E195",
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e195-crossfit-return-baseline-20260924-01",
+  "registration_sha256": "1872cb353653a00ece3061a2e9aa37d2edd199c07ddbb161c67d5f338bc8820b",
+  "runner_sha256": "dcb70e7819c6c195b0aeb8979375a40f91e28f75dd12a47b5fb2624f6f6727fb",
+  "reviewer_sha256": "b9f38b06010d756078a0c1ac5569bca9c0d66ee92e0f11ca922946a04413cc2c",
+  "focused_tests_passed": 3,
+  "real_episode_feature_probe_decisions": 143,
+  "feature_width": 204,
+  "formal_fitted_models": 0,
+  "new_games": 0,
+  "actor_updates": 0
+}
