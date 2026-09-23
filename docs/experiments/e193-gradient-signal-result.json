@@ -1,0 +1,106 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E193",
+  "retrospective": true,
+  "rounds": [
+    {
+      "counts": {
+        "positive": 17,
+        "negative": 8,
+        "numerically_zero": 0,
+        "zero_gradient": 103
+      },
+      "full_gradient_squared_norm": 5.394857934924827e-05,
+      "sum_family_squared_norms": 3.210185025220434e-05,
+      "aggregate_energy_over_self_energy": 1.6805442342235017,
+      "cross_terms_over_self_energy": 0.6805442342235017,
+      "mean_leave_one_family_out_cosine": 0.10571245611464555,
+      "median_leave_one_family_out_cosine": 0.1483377079014181,
+      "iteration": 0,
+      "families": 128,
+      "mixed_families": 25,
+      "decisions": 55473,
+      "nonzero_advantage_decisions": 15453,
+      "sampled_wins": 37,
+      "collecting_actor_sha256": "cdd87e895d5eb3577df446cdf5db2d66ca7fed09d09be1a7e42f46d7798b20fb"
+    },
+    {
+      "counts": {
+        "positive": 10,
+        "negative": 8,
+        "numerically_zero": 0,
+        "zero_gradient": 110
+      },
+      "full_gradient_squared_norm": 2.119502106257357e-05,
+      "sum_family_squared_norms": 2.33594218446195e-05,
+      "aggregate_energy_over_self_energy": 0.9073435637044901,
+      "cross_terms_over_self_energy": -0.0926564362955099,
+      "mean_leave_one_family_out_cosine": -0.005205937775921654,
+      "median_leave_one_family_out_cosine": 0.01313096331599006,
+      "iteration": 1,
+      "families": 128,
+      "mixed_families": 18,
+      "decisions": 54947,
+      "nonzero_advantage_decisions": 11091,
+      "sampled_wins": 33,
+      "collecting_actor_sha256": "af8a16dcc3b1c86510396a3a01aa79fc3378632e7b315c102de3f3fff182e817"
+    },
+    {
+      "counts": {
+        "positive": 11,
+        "negative": 11,
+        "numerically_zero": 0,
+        "zero_gradient": 106
+      },
+      "full_gradient_squared_norm": 2.557262697466582e-05,
+      "sum_family_squared_norms": 2.987033888071851e-05,
+      "aggregate_energy_over_self_energy": 0.8561210864324379,
+      "cross_terms_over_self_energy": -0.14387891356756216,
+      "mean_leave_one_family_out_cosine": -0.026245327705689412,
+      "median_leave_one_family_out_cosine": 0.0009074884205101485,
+      "iteration": 2,
+      "families": 128,
+      "mixed_families": 22,
+      "decisions": 54018,
+      "nonzero_advantage_decisions": 13992,
+      "sampled_wins": 37,
+      "collecting_actor_sha256": "2b614de0eab79a4420ca19e27f7b4ac3013f16ff294a46a0930a1b7dc1f2c050"
+    },
+    {
+      "counts": {
+        "positive": 15,
+        "negative": 12,
+        "numerically_zero": 0,
+        "zero_gradient": 101
+      },
+      "full_gradient_squared_norm": 3.0072367754572372e-05,
+      "sum_family_squared_norms": 2.9459888180721248e-05,
+      "aggregate_energy_over_self_energy": 1.020790288479504,
+      "cross_terms_over_self_energy": 0.02079028847950397,
+      "mean_leave_one_family_out_cosine": -0.0025699763683649716,
+      "median_leave_one_family_out_cosine": 0.028825382634825265,
+      "iteration": 3,
+      "families": 128,
+      "mixed_families": 27,
+      "decisions": 55658,
+      "nonzero_advantage_decisions": 16577,
+      "sampled_wins": 50,
+      "collecting_actor_sha256": "15b8a2fd1f6077c5d1ccc49712ed1d882e6df2c3fd437d29c1ac5e96ef755671"
+    }
+  ],
+  "unique_mixed_families": 37,
+  "maximum_manual_autograd_gradient_error": 1.0436096431476471e-14,
+  "maximum_numpy_collecting_probability_error": 7.771561172376096e-15,
+  "all_nonzero_family_gradients_checked_with_autograd": true,
+  "zero_return_contrast_families_retained_in_denominators": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "limits": "Euclidean local slopes of the recorded return-weighted likelihood objective are not causal Heart effects, a population signal-to-noise estimate, a guarantee for finite steps, or a reconstruction of clipped AdamW minibatch dynamics. Four stochastic returns per family make directions noisy. Families recur across cohorts and later policies depend on earlier training. Positive cross-family alignment does not prove generalization; negative alignment does not prove all useful learning impossible. No policy adoption or unused acceptance.",
+  "root_review_sha256": "fef39744a9c5f96e4989629364f539d65917b25b81fde0aea85a51cc48dbc661",
+  "completion_sha256": "7f004f1a4940cc4dc2fa22d7a7c8033222b081723134a454fb5f941a803e3bab",
+  "registration_sha256": "dbd86b3527e0cbb9cbc5414e1c4deefb23a7c96ecb06fdfbef8f89201a0535cc",
+  "luna_completion_delivered": true,
+  "closure": "This fixed four-cohort recipe provides nonzero return contrasts for37/128 distinct families. Later cohort directions lack the positive alignment seen in the first cohort. This does not identify population variance or justify extending this failed recipe, a hyperparameter grid, or more collection. Preserve these data for a separately designed learning change."
+}
