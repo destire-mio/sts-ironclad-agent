@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "experiment": "E192",
+  "counts": {
+    "outside_queries": 13622,
+    "native_steps": 15459,
+    "changed_routes": 48,
+    "unchanged_complete_routes": 80
+  },
+  "actual_adapter_and_independent_numpy_actions_match": true,
+  "maximum_logit_error": 5.684341886080802e-14,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+  "registration_sha256": "3731ed36ae00604c2741bfe2ad642dd02de2aab7bbd60918033af2e2c3bee922",
+  "reviewer_sha256": "9864e58d3a3d86f38f951dc3f3b92f45e1869f519b2af4a29eb85b56c871891d",
+  "limits": "Native replay to the first changed choice, or full original terminal for unchanged paths. No unknown continuation is executed or labelled.",
+  "focused_execution_tests_passed": 2,
+  "same_saved_source_code_as_workspace": true
+}

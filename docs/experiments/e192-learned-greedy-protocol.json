@@ -1,0 +1,30 @@
+{
+  "experiment": "E192",
+  "learning_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "candidate": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/learning/candidate.pt",
+  "candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "timeout_seconds": 1200,
+  "budget": {
+    "changed_routes": 48,
+    "controls": 4,
+    "base_games_max": 52,
+    "winner_replans_max": 48,
+    "total_games_max": 100,
+    "workers": 8
+  },
+  "question": "Do the already trained final E191 weights improve complete games when deployed with deterministic highest-score actions and original-parent tie handling?",
+  "completed_learning_evidence": "E191 completed3444 updates; independent optimizer replay matches every tensor. Its stochastic execution failed9->11 versus initial sampling and20->11 versus greedy parent. E36/37 greedy-conversion failures remain recorded.",
+  "data_gap": "A no-new-game native audit identifies48 historical evaluation routes whose learned greedy action differs and80 full unchanged routes. Outcomes after those48 first divergences are unknown. Complete those fixed48 runs, plus4 unchanged controls; this is evaluation of frozen weights, not seed hunting or extra training.",
+  "execution": "Use the exact frozen E191 final network and original full-parent scores. Choose maximum learned score among original finite support, preferring original parent within1e-9 ties. Consume no policy-sampling RNG. The older greedy=True control flag would force the original parent and must not be used for this variant.",
+  "roles": "Use the same128 E191 historical evaluation families, which were disjoint from its128 gradient families but are not untouched development or final acceptance. Assign48 changed,80 unchanged from the sealed prior path audit. Controls are the first two unchanged parent wins and first two unchanged parent losses in assigned order.",
+  "reused_results": "For each of80 unchanged routes the actual new adapter must replay all original decisions and terminal state/RNG before reuse. Four of these routes get fresh NN/MCTS controls. Report80 reused results separately from52 new base games.",
+  "gate": "One frozen execution rule and checkpoint. Need net>=8/128 and exact paired two-sided p<.025 against the original greedy parent. All48 changed outcomes must complete; no stopping on successful seeds, best-of-N selection, checkpoint selection or temperature sweep. Historical repeated development p-values are descriptive. Passing permits a separately designed prospective validation, never automatic adoption or final acceptance.",
+  "verification": "Bind completed E191 learning/review, native path certificate, actor, runtime, source, assignments and all old references. Native-check actual adapter on128 old prefixes before launch. Fresh games begin at natural A20 start. Verify every outside score and action using independent NumPy, every state/RNG and full terminal. Replan every newly evaluated changed-route winner with fresh MCTS. Root rechecks every52 new base routes and all reused roles.",
+  "faults": "Any error, timeout, truncated or incomplete result stops the study without substituting a death label. Keep partial runs when available, all failure evidence and process cleanup receipts. No automatic restarts or additional sampling.",
+  "closure": "If the gate fails, close this fixed-weight deterministic deployment together with the failed stochastic recipe; no temperature, mixture, learning-rate, epoch or batch-count grid follows.",
+  "constraints": "Ironclad A20 to Heart, all keys, two Act3 bosses, Act4; Prismatic Shard excluded. Same engine and MCTS8000/Bossx3/native256-replan guard. No original-game parity work, automatic adoption, changed acceptance seeds or unbounded sampling.",
+  "limits": "Post-hoc deterministic interpretation of a policy learned through stochastic returns. This study measures its actual frozen deployment, not that the learning objective was greedy.48 changed continuations need new outcomes;80 unchanged results are reused with native evidence. A historical128-family gate is not the final512/1024 unused-family objective. No policy adoption or acceptance games are authorized by this protocol."
+}
