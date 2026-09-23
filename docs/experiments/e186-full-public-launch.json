@@ -1,0 +1,11 @@
+{
+  "status": "launched",
+  "pid": 58007,
+  "at": "2026-09-23T14:25:26.764081+00:00",
+  "registration_sha256": "2061cf98600093cf489364a9fc655af597769ffe0eea565523004ecf6ed16e88",
+  "owned_pid": 58013,
+  "owned_process_group": 58013,
+  "preflight_sha256": "e9469a67e6ccc6c132a03ea96dfa77f9bb21195f8e5842c56724674b1102fbad",
+  "new_games": 0,
+  "policy_adoption": false
+}

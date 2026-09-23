@@ -70,11 +70,22 @@ def registered(root):
     for path, digest in registration['hashes'].items():
         E.require(E.sha(path) == digest, 'bound source changed: '+path)
     plan = E.read(root/'protocol.json')
-    E.require(plan['experiment'] == 'E185' and plan['recipe'] == V.EXTENDED_RECIPE
+    E.require(plan['experiment'] in ('E185', 'E186') and plan['recipe'] == V.EXTENDED_RECIPE
               and plan['new_training_rollouts'] == 0 and plan['normalization'] == VERSION, 'recipe differs')
     source = Path(plan['preceding_study']); old = V.registered(source)
-    for key in ('learning_source', 'diagnosis', 'encoder_source', 'runtime', 'natural_source', 'input_columns'):
+    for key in ('learning_source', 'diagnosis', 'encoder_source', 'runtime', 'natural_source'):
         E.require(plan[key] == old[key], 'control changed '+key)
+    if plan['experiment'] == 'E185':
+        E.require(plan['input_columns'] == old['input_columns'], 'normalization control changed its public columns')
+    else:
+        spec = E.read(Path(plan['learning_source'])/'store/metadata.json')['spec']
+        E.require(plan['input_columns'] == list(range(spec['state_width'])), 'full public observation differs')
+        previous = Path(plan['normalization_study'])
+        review = E.read(previous/'training-review.json')
+        E.require(review['status'] == 'complete_reviewed' and not review['eligible_for_policy_design']
+                  and review['learning_completion_sha256'] == E.sha(previous/'learning/completion.json'),
+                  'normalization learning evidence differs')
+        E.require((root/'data').resolve() == (previous/'data').resolve(), 'full-input control must reuse the admitted rows')
     review = E.read(source/'training-review.json')
     E.require(review['status'] == 'complete_reviewed' and not review['prediction_gate_passed'], 'preceding result differs')
     E.require(review['learning_completion_sha256'] == E.sha(source/'learning/completion.json'), 'preceding proof differs')
@@ -183,7 +194,7 @@ def train(root):
         reports.append(report); print(report, flush=True)
     error = float(np.mean([r['held_brier'] for r in reports])); baseline = float(np.mean([r['baseline_brier'] for r in reports]))
     passed = error <= recipe['relative_brier_gate']*baseline and all(r['held_brier'] < r['baseline_brier'] for r in reports)
-    E.write(out/'report.json', dict(status='complete', experiment='E185', folds=reports,
+    E.write(out/'report.json', dict(status='complete', experiment=plan['experiment'], folds=reports,
         held_brier=error, baseline_brier=baseline, prediction_gate_passed=passed,
         value_optimizer_updates=3*recipe['steps']+sum(r['selected_steps'] for r in reports),
         auxiliary_optimizer_updates=0, actor_optimizer_updates=0, new_games=0, policy_adoption=False,
