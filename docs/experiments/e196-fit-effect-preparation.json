@@ -1,0 +1,12 @@
+{
+  "status": "registered_pending_route_certificate",
+  "experiment": "E196",
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e196-last-update-fit-effect-20260924-01",
+  "registration_sha256": "6175c479da56c1ada831f14fed7d0c83da9a380fb559d75e445c98bb7d1d42fa",
+  "runner_sha256": "1a2497bccac18d64448338ff1f416fa8830216aa6dfdf94abdaa06231a632bca",
+  "reviewer_sha256": "8daca74d44e60b3b6326735227b9831bf5d8efd4c6d004493ab7ad6434656b16",
+  "mechanism_tests_passed": 3,
+  "new_games": 0,
+  "actor_updates": 0,
+  "preexecution_scoring_shape_fix": "Before any certificate or new game, match the deployed per-menu Torch matrix shape to avoid a batched GEMM rounding ambiguity. Original source and registration retained as before-shape-fix files. Targets, actors, streams and budgets unchanged."
+}
