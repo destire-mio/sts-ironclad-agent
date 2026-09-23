@@ -1,0 +1,200 @@
+{
+  "experiment": "E191",
+  "status": "calibration_distribution_reviewed",
+  "checked_at": "2026-09-23T17:19:52.858520+00:00",
+  "families": 32,
+  "outside_menus": 4695,
+  "temperature": 1.0,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "expected_departures_per_complete_old_route": 3.9202693115571248,
+  "mean_probability_of_matching_all_old_outside_choices": 0.10351281731157705,
+  "by_parent_action_kind": [
+    {
+      "parent_action_kind": "MAP",
+      "menus": 1209,
+      "multiple_active_menus": 820,
+      "expected_departures_on_old_menus": 18.84398471020901,
+      "departure_fraction": 0.015586422423663367,
+      "share_of_departure_mass": 0.15021277248938072,
+      "mean_entropy_nats": 0.06254212758727312
+    },
+    {
+      "parent_action_kind": "REST",
+      "menus": 229,
+      "multiple_active_menus": 216,
+      "expected_departures_on_old_menus": 2.670461931301535,
+      "departure_fraction": 0.01166140581354382,
+      "share_of_departure_mass": 0.021287296540355792,
+      "mean_entropy_nats": 0.05471839330505979
+    },
+    {
+      "parent_action_kind": "EVENT",
+      "menus": 277,
+      "multiple_active_menus": 263,
+      "expected_departures_on_old_menus": 0.8221883523689771,
+      "departure_fraction": 0.002968188997721939,
+      "share_of_departure_mass": 0.006553984935622998,
+      "mean_entropy_nats": 0.008109704656422578
+    },
+    {
+      "parent_action_kind": "REWARD_CARD",
+      "menus": 497,
+      "multiple_active_menus": 497,
+      "expected_departures_on_old_menus": 31.039065279039043,
+      "departure_fraction": 0.06245284764394174,
+      "share_of_departure_mass": 0.24742452951139196,
+      "mean_entropy_nats": 0.15889807032820566
+    },
+    {
+      "parent_action_kind": "REWARD_SINGING_BOWL",
+      "menus": 3,
+      "multiple_active_menus": 3,
+      "expected_departures_on_old_menus": 0.4842829400630827,
+      "departure_fraction": 0.16142764668769424,
+      "share_of_departure_mass": 0.0038604087306849323,
+      "mean_entropy_nats": 0.40655107343630514
+    },
+    {
+      "parent_action_kind": "REWARD_GOLD",
+      "menus": 643,
+      "multiple_active_menus": 643,
+      "expected_departures_on_old_menus": 0.15659952241159936,
+      "departure_fraction": 0.00024354513594338934,
+      "share_of_departure_mass": 0.0012483160432206878,
+      "mean_entropy_nats": 0.0012693686170947818
+    },
+    {
+      "parent_action_kind": "REWARD_GREEN_KEY",
+      "menus": 29,
+      "multiple_active_menus": 29,
+      "expected_departures_on_old_menus": 1.5971246547508144e-09,
+      "departure_fraction": 5.5073263956924635e-11,
+      "share_of_departure_mass": 1.273130529931341e-11,
+      "mean_entropy_nats": 1.2788881825458558e-09
+    },
+    {
+      "parent_action_kind": "REWARD_BLUE_KEY",
+      "menus": 30,
+      "multiple_active_menus": 30,
+      "expected_departures_on_old_menus": 2.9789464228713314e-09,
+      "departure_fraction": 9.929821409571105e-11,
+      "share_of_departure_mass": 2.374634707883196e-11,
+      "mean_entropy_nats": 2.31638111073923e-09
+    },
+    {
+      "parent_action_kind": "REWARD_POTION",
+      "menus": 264,
+      "multiple_active_menus": 264,
+      "expected_departures_on_old_menus": 0.06134013325623888,
+      "departure_fraction": 0.00023234898960696547,
+      "share_of_departure_mass": 0.0004889661938802066,
+      "mean_entropy_nats": 0.001134159326049265
+    },
+    {
+      "parent_action_kind": "REWARD_RELIC",
+      "menus": 192,
+      "multiple_active_menus": 192,
+      "expected_departures_on_old_menus": 0.3568341134041093,
+      "departure_fraction": 0.0018585110073130694,
+      "share_of_departure_mass": 0.0028444642848909863,
+      "mean_entropy_nats": 0.007092287911883253
+    },
+    {
+      "parent_action_kind": "REWARD_SKIP",
+      "menus": 712,
+      "multiple_active_menus": 383,
+      "expected_departures_on_old_menus": 11.67573356677724,
+      "departure_fraction": 0.01639850220052983,
+      "share_of_departure_mass": 0.09307183893875502,
+      "mean_entropy_nats": 0.03830407641258084
+    },
+    {
+      "parent_action_kind": "SHOP_CARD",
+      "menus": 66,
+      "multiple_active_menus": 66,
+      "expected_departures_on_old_menus": 9.454051192584279,
+      "departure_fraction": 0.1432431998876406,
+      "share_of_departure_mass": 0.07536193977727279,
+      "mean_entropy_nats": 0.3388872715979531
+    },
+    {
+      "parent_action_kind": "SHOP_RELIC",
+      "menus": 33,
+      "multiple_active_menus": 33,
+      "expected_departures_on_old_menus": 3.055846349733862,
+      "departure_fraction": 0.09260140453738976,
+      "share_of_departure_mass": 0.0243593464733811,
+      "mean_entropy_nats": 0.27402140741715647
+    },
+    {
+      "parent_action_kind": "SHOP_POTION",
+      "menus": 7,
+      "multiple_active_menus": 7,
+      "expected_departures_on_old_menus": 1.2818697071427554,
+      "departure_fraction": 0.18312424387753648,
+      "share_of_departure_mass": 0.010218284807657758,
+      "mean_entropy_nats": 0.5014652425595999
+    },
+    {
+      "parent_action_kind": "SHOP_REMOVE",
+      "menus": 26,
+      "multiple_active_menus": 26,
+      "expected_departures_on_old_menus": 2.0361491230689603,
+      "departure_fraction": 0.07831342781034463,
+      "share_of_departure_mass": 0.016230941049973788,
+      "mean_entropy_nats": 0.20446015093187783
+    },
+    {
+      "parent_action_kind": "SHOP_LEAVE",
+      "menus": 86,
+      "multiple_active_menus": 52,
+      "expected_departures_on_old_menus": 0.17388523814911305,
+      "departure_fraction": 0.002021921373826896,
+      "share_of_departure_mass": 0.0013861072442498705,
+      "mean_entropy_nats": 0.007811241034790262
+    },
+    {
+      "parent_action_kind": "BOSS_RELIC",
+      "menus": 48,
+      "multiple_active_menus": 48,
+      "expected_departures_on_old_menus": 11.023262999284114,
+      "departure_fraction": 0.22965131248508572,
+      "share_of_departure_mass": 0.08787074084734318,
+      "mean_entropy_nats": 0.5471288415783947
+    },
+    {
+      "parent_action_kind": "CARD_SELECT",
+      "menus": 251,
+      "multiple_active_menus": 251,
+      "expected_departures_on_old_menus": 31.857814038977992,
+      "departure_fraction": 0.12692356190827886,
+      "share_of_departure_mass": 0.25395109611044264,
+      "mean_entropy_nats": 0.38268974615170404
+    },
+    {
+      "parent_action_kind": "TREASURE_OPEN",
+      "menus": 90,
+      "multiple_active_menus": 90,
+      "expected_departures_on_old_menus": 5.395683899678261e-14,
+      "departure_fraction": 5.995204332975846e-16,
+      "share_of_departure_mass": 4.301110675428877e-16,
+      "mean_entropy_nats": 1.9528495025938002e-14
+    },
+    {
+      "parent_action_kind": "POTION_DRINK",
+      "menus": 3,
+      "multiple_active_menus": 3,
+      "expected_departures_on_old_menus": 0.45524876748008447,
+      "departure_fraction": 0.15174958916002815,
+      "share_of_departure_mass": 0.0036289659850184852,
+      "mean_entropy_nats": 0.35342368077730907
+    }
+  ],
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/calibration/report.json": "454fa68a57bcc44bb352005daa528b6aa349b2954826e499f2b0f424c35706b8",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/calibration/menus-private.json": "f884530ac5655ae01ea92b7701a3a9cff396880d36fc55c601acffcfaf55cfae",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime/source/armG_train.py": "582ebb743571fb3bce500d59d84bd79a26e7eb957eba01222f8d408fd892e8f7"
+  },
+  "limits": "These are probabilities on 32 preassigned old fitting routes, grouped by the action the greedy parent would take. They do not measure new-policy state visitation, actual chosen-action types, winning probability, or outcome-based temperature selection. No recipe or sampling budget changes follow from this analysis."
+}
