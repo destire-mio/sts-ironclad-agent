@@ -1,5 +1,5 @@
 {
-  "status": "registered_pending_route_certificate",
+  "status": "complete_prepared",
   "experiment": "E196",
   "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e196-last-update-fit-effect-20260924-01",
   "registration_sha256": "6175c479da56c1ada831f14fed7d0c83da9a380fb559d75e445c98bb7d1d42fa",
@@ -8,5 +8,30 @@
   "mechanism_tests_passed": 3,
   "new_games": 0,
   "actor_updates": 0,
-  "preexecution_scoring_shape_fix": "Before any certificate or new game, match the deployed per-menu Torch matrix shape to avoid a batched GEMM rounding ambiguity. Original source and registration retained as before-shape-fix files. Targets, actors, streams and budgets unchanged."
+  "preexecution_scoring_shape_fix": "Before any certificate or new game, match the deployed per-menu Torch matrix shape to avoid a batched GEMM rounding ambiguity. Original source and registration retained as before-shape-fix files. Targets, actors, streams and budgets unchanged.",
+  "certificate_report": {
+    "status": "prepared",
+    "experiment": "E196",
+    "assigned_games": 512,
+    "families": 128,
+    "source_baseline_wins": 50,
+    "changed_routes": 170,
+    "certified_unchanged_routes": 342,
+    "control_routes": 4,
+    "outside_choices": 66191,
+    "maximum_numpy_probability_error": 1.0547118733938987e-14,
+    "observational_alias_counts": {
+      "nonforced_menus": 55658,
+      "menus_with_public_feature_aliases": 4424,
+      "alias_groups": 10333,
+      "chosen_in_alias_group": 1675,
+      "selected_parent_difference_with_only_raw_indices": 94
+    },
+    "new_games": 0,
+    "actor_updates": 0,
+    "maximum_new_base_games": 174
+  },
+  "preparation_completion_sha256": "edb2cc0eeabfdf541c808364ebd106ffa9573447cda38dbc419dae78ca5c5b86",
+  "preparation_receipt_sha256": "4982768d6b08bef0d8266dfa59323fec949af264f788fe7c1e4a303b3573b2cc",
+  "luna_completion_delivered": true
 }

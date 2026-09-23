@@ -1,0 +1,20 @@
+{
+  "status": "launched",
+  "experiment": "E196",
+  "study": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e196-last-update-fit-effect-20260924-01",
+  "started_at_shanghai": "2026-09-24T07:31:02.522062+08:00",
+  "owner_pid": 48804,
+  "execution_pid": 48816,
+  "process_group": 48816,
+  "registration_sha256": "6175c479da56c1ada831f14fed7d0c83da9a380fb559d75e445c98bb7d1d42fa",
+  "preparation_completion_sha256": "edb2cc0eeabfdf541c808364ebd106ffa9573447cda38dbc419dae78ca5c5b86",
+  "assigned_games": 512,
+  "changed_routes": 170,
+  "unchanged_routes": 342,
+  "control_routes": 4,
+  "new_base_games_planned": 174,
+  "actor_updates": 0,
+  "luna_interval_minutes": 20,
+  "luna_configuration_readback_verified": true,
+  "results_pending": true
+}
