@@ -1,0 +1,25 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E185",
+  "data_completion_sha256": "fe6251ee2e3691d86445e02c3dccd162ca29209eb9de4c9b3e74ca4931282c0b",
+  "normalized_states": 173019,
+  "checked_equivalent_feature_pairs": 4096,
+  "native_checks": {
+    "outside_choices": 502,
+    "unchanged": 454,
+    "steps": 575,
+    "normalized": 48,
+    "routes": 4
+  },
+  "maximum_public_feature_error": 0.0,
+  "state_rng_unchanged_by_queries": true,
+  "identical_targets_and_cells": true,
+  "fitting_family_guard_verified": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "runner_sha256": "d895eb902a5db8d35ec1956a8453c2b0584cf6e06b5756240b0654c573dceb3f",
+  "reviewer_sha256": "6d3f1c2b1a4dc76edb6acc900eb529d6665c61911a47721026ff4fd79564e86f",
+  "unit_tests_passed": 3,
+  "unit_fixture_optimizer_updates": 0,
+  "registration_sha256": "8bc68901c9f51bff2b78ad243f6a28822b6cd0f0876e2ffb4c8c33a076719f6b"
+}
