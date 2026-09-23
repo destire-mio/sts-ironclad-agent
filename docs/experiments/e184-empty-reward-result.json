@@ -1,0 +1,91 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E184",
+  "initial": {
+    "states": 1536,
+    "parent_wins": 149,
+    "raw_wins": 144,
+    "canonical_wins": 144,
+    "gained": 38,
+    "lost": 43,
+    "changed_vs_raw": 304,
+    "gained_vs_raw": 11,
+    "lost_vs_raw": 11
+  },
+  "all": {
+    "states": 6264,
+    "parent_wins": 477,
+    "raw_wins": 492,
+    "canonical_wins": 511,
+    "gained": 156,
+    "lost": 122,
+    "changed_vs_raw": 1296,
+    "gained_vs_raw": 50,
+    "lost_vs_raw": 31
+  },
+  "initial_by_fold": {
+    "0": {
+      "states": 527,
+      "parent_wins": 59,
+      "raw_wins": 53,
+      "canonical_wins": 52,
+      "gained": 12,
+      "lost": 19,
+      "changed_vs_raw": 87,
+      "gained_vs_raw": 3,
+      "lost_vs_raw": 4
+    },
+    "1": {
+      "states": 485,
+      "parent_wins": 52,
+      "raw_wins": 42,
+      "canonical_wins": 43,
+      "gained": 8,
+      "lost": 17,
+      "changed_vs_raw": 133,
+      "gained_vs_raw": 5,
+      "lost_vs_raw": 4
+    },
+    "2": {
+      "states": 524,
+      "parent_wins": 38,
+      "raw_wins": 49,
+      "canonical_wins": 49,
+      "gained": 18,
+      "lost": 7,
+      "changed_vs_raw": 84,
+      "gained_vs_raw": 3,
+      "lost_vs_raw": 3
+    }
+  },
+  "candidate_successors": 25023,
+  "contracted_successors": 18750,
+  "exclusions": {
+    "already_outside_reward": 6264,
+    "parent_not_nonterminal_reward_exit": 9
+  },
+  "mean_absolute_screen_shift": 0.004463683178550878,
+  "mean_signed_screen_shift": -0.004463683178550878,
+  "max_absolute_screen_shift": 0.052314817905426025,
+  "native_checks": {
+    "prefix_steps": 92,
+    "observations": 28,
+    "reward_exits": 12
+  },
+  "independent_prediction_error": 1.1920928955078125e-07,
+  "state_targets_equal_across_all_exits": true,
+  "family_roles_verified": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "limits": [
+    "This diagnosis uses recorded public successors; no live action adapter exists.",
+    "Empty exits can expose optional potion operations. The contraction is fixed-parent outcome-equivalent, not a claim that every legal policy must exit.",
+    "E169/E170 and E171 retain their failed original gates. No automatic adoption or additional sampling follows any diagnostic result.",
+    "These are historically exposed families, not final unused acceptance."
+  ],
+  "runner_sha256": "3c58f2b557c359404e7be7bac42849199bb92dae95c38f11a0e45c059b0d53cb",
+  "registration_sha256": "6a1b10e0982aa8b4c8708bfa4ce5d8841f95891a22afc9e4184046059ce670c4",
+  "choices_sha256": "9fadfb1c4867e34d51654f85741ca76faa5a89a698acc8a9f5fc57817143db8a",
+  "completion_sha256": "3ec0f167d1fffec084ca01413f4c2d5e55f4bd4e9cc0d6902e85e09783cb30f7"
+}
