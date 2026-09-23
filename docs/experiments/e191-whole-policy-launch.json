@@ -1,0 +1,30 @@
+{
+  "status": "launched",
+  "pid": 99082,
+  "at": "2026-09-23T16:57:22.058086+00:00",
+  "registration_sha256": "8b48aa6ab8dcc77c3dd5b534e0fe794f71726d94224db56313e7e22d4d7430e3",
+  "phase": "train",
+  "execution": {
+    "started_at": "2026-09-23T16:57:22.574214+00:00",
+    "wrapper_pid": 99082,
+    "pid": 99084,
+    "process_group": 99084,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/program/heart_whole_policy_gradient.py",
+      "--study",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01"
+    ],
+    "registration_sha256": "8b48aa6ab8dcc77c3dd5b534e0fe794f71726d94224db56313e7e22d4d7430e3",
+    "wrapper_seconds": 10920
+  },
+  "preflight_sha256": "148e0eb3525c479ff46f0e197984bea5a607938c70c47c99386834ed7469d711",
+  "luna": {
+    "automation_id": "luna",
+    "target_thread_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+    "interval_minutes": 20,
+    "status": "ACTIVE",
+    "quiet_until_actionable": true
+  }
+}

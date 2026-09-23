@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "experiment": "E191",
+  "counts": {
+    "outside_queries": 4695,
+    "nonzero_probe_changes": 123,
+    "native_steps": 5340,
+    "families": 32
+  },
+  "temperature": 1.0,
+  "expected_changed_fraction": 0.02671962044085796,
+  "maximum_numpy_probability_error": 2.2898349882893854e-15,
+  "maximum_probe_probability_change": 0.0750777233666512,
+  "zero_and_nonzero_adapter_verified": true,
+  "original_reference_and_policy_copy_disjoint": true,
+  "game_rng_unmodified_by_sampling": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "registration_sha256": "8b48aa6ab8dcc77c3dd5b534e0fe794f71726d94224db56313e7e22d4d7430e3",
+  "reviewer_sha256": "e01ae749f4e734df777e0fa20d7a32c6570b62c351d773a7c7fafea926ebf331",
+  "limits": "This is a bounded full-game learning experiment on historical families. Different policies across training rounds prevent interpreting raw per-round wins as a matched learning curve. Stochastic policy success differs from greedy success; deploy and evaluate the actual frozen sampling procedure. Auxiliary/optimizer checks do not replace policy gains. Final512/1024 unused-family goal remains unmet.",
+  "existing_regressions_passed": 12,
+  "regression_scope": "6 terminal-gradient/sampling tests plus 6 existing whole-policy-search tests; no claim of a full simulator regression rerun.",
+  "calibration_report_sha256": "454fa68a57bcc44bb352005daa528b6aa349b2954826e499f2b0f424c35706b8",
+  "calibration_completion_sha256": "a221e12da2068ed1b4c9b803d554a3a2d2c62d538e6f6f5bcd9dda1124231b57",
+  "same_saved_source_code_as_workspace": true
+}
