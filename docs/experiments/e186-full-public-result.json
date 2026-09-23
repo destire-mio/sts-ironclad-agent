@@ -1,0 +1,111 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E186",
+  "result": {
+    "status": "complete",
+    "experiment": "E186",
+    "folds": [
+      {
+        "fold": 0,
+        "selected_steps": 250,
+        "held_brier": 0.09109152894234285,
+        "baseline_brier": 0.08773966570559676
+      },
+      {
+        "fold": 1,
+        "selected_steps": 500,
+        "held_brier": 0.07715952297439799,
+        "baseline_brier": 0.07488438081899318
+      },
+      {
+        "fold": 2,
+        "selected_steps": 250,
+        "held_brier": 0.06252877227962017,
+        "baseline_brier": 0.06367992394683741
+      }
+    ],
+    "held_brier": 0.07692660806545366,
+    "baseline_brier": 0.07543465682380912,
+    "prediction_gate_passed": false,
+    "value_optimizer_updates": 61000,
+    "auxiliary_optimizer_updates": 0,
+    "actor_optimizer_updates": 0,
+    "new_games": 0,
+    "policy_adoption": false,
+    "trainable_parameters": 795137,
+    "normalization": "empty_normal_combat_reward_to_map_v1",
+    "limits": "Predictor experiment; unchanged prior failed gates and no action policy or unseen success claim."
+  },
+  "inner_checkpoints_verified": 24,
+  "held_predictions_verified": 24576,
+  "maximum_brier_error": 1.9347039803552235e-09,
+  "initial": {
+    "states": 1536,
+    "parent": 149,
+    "candidate": 149,
+    "gained": 48,
+    "lost": 48,
+    "changed": 1175
+  },
+  "initial_paired": {
+    "assigned": 1536,
+    "baseline_wins": 149,
+    "candidate_wins": 149,
+    "net_gain": 0,
+    "paired": {
+      "both_fail": 1339,
+      "both_win": 101,
+      "baseline_only": 48,
+      "candidate_only": 48
+    },
+    "exact_p": 1.0
+  },
+  "initial_by_fold": {
+    "0": {
+      "states": 527,
+      "parent": 59,
+      "candidate": 48,
+      "gained": 11,
+      "lost": 22,
+      "changed": 446
+    },
+    "1": {
+      "states": 485,
+      "parent": 52,
+      "candidate": 49,
+      "gained": 14,
+      "lost": 17,
+      "changed": 363
+    },
+    "2": {
+      "states": 524,
+      "parent": 38,
+      "candidate": 52,
+      "gained": 23,
+      "lost": 9,
+      "changed": 366
+    }
+  },
+  "all_recorded_menus": {
+    "states": 6264,
+    "parent": 477,
+    "candidate": 513,
+    "gained": 156,
+    "lost": 120,
+    "changed": 4517
+  },
+  "action_gate_passed": false,
+  "eligible_for_policy_design": false,
+  "process_cleanup_verified": true,
+  "learning_completion_sha256": "db50a62a7fa6dc866153d84f0c636b108655a188b73fb0161d089afec0390d28",
+  "ranking_choices_sha256": "5146d76fa60256e71c7c5457dc796e0be50649106f6da4cdfc2be1b77f9bfbcf",
+  "reviewer_sha256": "638c0acd8101c5d4725636091619523f5a3c7a974868efbb731adc1bcfe76ecf",
+  "new_games": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "training_review_sha256": "dfe2f3f61c66d70144b0958da3fdf4a3190feeaf61c92e9d787ba6b693c5212c",
+  "preceding_held_brier": 0.06820746230854031,
+  "relative_brier_change_vs_e185": 0.12783272477535967,
+  "relative_brier_change_vs_table": 0.019778060966450184,
+  "decision": "Close the registered raw-map-restoration control; no mask, budget or regularization grid. Neither gate passes. No adoption, additional games or unused-family acceptance."
+}
