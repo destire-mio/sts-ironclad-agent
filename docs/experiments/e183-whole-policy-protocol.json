@@ -1,0 +1,73 @@
+{
+  "experiment": "E183",
+  "status": "registered_before_new_games",
+  "recipe": {
+    "rounds": 3,
+    "directions": 8,
+    "families_per_direction": 16,
+    "dimensions": 192,
+    "seed": 2026092383,
+    "calibration_families": 32,
+    "calibration_change_fraction": 0.02,
+    "calibration_sigmas": [
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0
+    ],
+    "minimum_scale": 0.01,
+    "evaluation_families": 128,
+    "control_families": 4
+  },
+  "runtime": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "natural_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01",
+  "learning_evidence": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e182-joint-encoder-20260923-01",
+  "behavior_evidence": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e180-parent-behavior-audit-20260923-01",
+  "selection_namespace": "E183-whole-policy:",
+  "fit_families": 128,
+  "evaluation_families": 128,
+  "policy": "Untouched complete parent scores plus a shared 192-parameter linear residual on a frozen public encoder; every legal noncombat choice is eligible, throughout the natural game.",
+  "initialization": "Residual zero; original NN, heuristic prior and learned first-boss relic ranking retain their exact starting choices.",
+  "calibration": "First32 assigned fit families, old natural menus only, no terminal-label selection. RMS of within-menu centered encoder features with floor .01. First registered dyadic sigma reaching mean2percent changes across16 probes; selected sigma4 gives3.797percent. Scale and sigma fixed thereafter.",
+  "training": "Three paired-parameter rounds at most. Eight independent Gaussian directions per round, 16 assigned fit families per direction, both signs on the same families. Rotate family blocks by one direction each round. All games use deterministic argmax. Only completed Heart wins count1; other legitimate terminals0.",
+  "update": "delta_i = mean Heart return of positive direction minus negative. If all delta_i are zero, stop. Otherwise theta += sigma * sum(delta_i * epsilon_i) / sum(abs(delta_i)). No trajectory length reward, critic, action-wise target, or selection of the best variant.",
+  "learning_gate": {
+    "minimum_net_gain_over_parent": 8,
+    "paired_exact_p_maximum": 0.025,
+    "evaluation_denominator": 128
+  },
+  "verification": "4 fresh zero-residual controls precede training. Every game gets independent native NN/state/RNG/terminal replay; every winning perturbed or final policy game gets a fresh NN/MCTS replan. Any fault stops the round before updating; faults never become zero rewards.",
+  "budgets": {
+    "maximum_training_games": 768,
+    "maximum_evaluation_games": 128,
+    "control_games": 4,
+    "maximum_winner_replans": 896,
+    "maximum_all_new_games": 1796,
+    "maximum_parameter_updates": 3
+  },
+  "timeout_seconds": 14400,
+  "owned_launcher": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e121-simulator-joint-labels-20260920-01/run_pipeline.py",
+  "sources": [
+    {
+      "title": "Evolution Strategies as a Scalable Alternative to Reinforcement Learning",
+      "url": "https://arxiv.org/abs/1703.03864"
+    },
+    {
+      "title": "Simple random search provides a competitive approach to reinforcement learning",
+      "url": "https://arxiv.org/abs/1803.07055"
+    }
+  ],
+  "limits": [
+    "The paired normalized update is an ES-inspired finite-direction rule, not a verbatim implementation or a benchmark performance claim.",
+    "Historical fit/evaluation families have prior exposure. They are disjoint within this experiment but are not final unused acceptance.",
+    "Existing E154/E156/E158 whole-run offline failures and E36/E37 late-suffix learning failures remain recorded; this is a different full-policy objective and sampling unit.",
+    "New outcomes are required for the changed whole policy because the existing complete alternative trees cover only early fixed-continuation decisions. E133 expansion stays closed.",
+    "Do not select intermediate policy variants or adjust sigma, direction count, update rule, thresholds or budget using results.",
+    "No automatic policy adoption, data expansion or final unseen acceptance follows. Failure closes this registered paired-parameter recipe."
+  ]
+}

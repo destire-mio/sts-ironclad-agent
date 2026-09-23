@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "experiment": "E183",
+  "native_preflight": {
+    "status": "passed",
+    "experiment": "E183",
+    "natural_recorded_families": 32,
+    "native_recorded_steps": 4834,
+    "nonzero_native_choices": 4240,
+    "changed_probe_choices": 153,
+    "calibration_queries": 67840,
+    "calibration_changes": 2576,
+    "calibration_sigma": 4.0,
+    "maximum_embedding_error": 0.0,
+    "family_roles_and_directions_verified": true,
+    "calibration_no_outcome_selection": true,
+    "zero_and_nonzero_deployment_verified": true,
+    "state_rng_queries_unchanged": true,
+    "new_games": 0,
+    "parameter_updates": 0,
+    "registration_sha256": "c3ea8480b35621f596e9723983ce1a26e42bb4ef2b5c8ecd760acade035b9ae5",
+    "preflight_sha256": "8a265327cda064b00473aa737e03081c7577ba122a2094322a0b2e89a1ada787"
+  },
+  "unit_checks": 6,
+  "unit_test_sha256": "fae7a505ee630ae72e8ce7b42f10431b22f1a850756d1e382641a0c91a4aff60",
+  "calibration_completion_sha256": "1efee359cdaf31b79d329e7ffa80252850992ec40e47bdb1aa9dbe757fd5d6a7",
+  "registration_sha256": "c3ea8480b35621f596e9723983ce1a26e42bb4ef2b5c8ecd760acade035b9ae5",
+  "new_games_before_launch": 0,
+  "parameter_updates_before_launch": 0
+}
