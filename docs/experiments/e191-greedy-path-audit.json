@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "experiment": "E191",
+  "retrospective": true,
+  "variant": "Learned final logits with deterministic argmax and parent-preserving ties; not the original-parent control flag.",
+  "counts": {
+    "outside_queries": 13622,
+    "native_steps": 15459,
+    "parent_wins": 20,
+    "changed_routes": 48,
+    "changed_parent_wins": 12,
+    "unchanged_complete_routes": 80,
+    "unchanged_wins": 8,
+    "changed_parent_losses": 36,
+    "unchanged_losses": 72
+  },
+  "first_new_action_kinds": {
+    "3": 16,
+    "18": 12,
+    "12": 1,
+    "10": 9,
+    "14": 4,
+    "11": 3,
+    "16": 2,
+    "13": 1
+  },
+  "maximum_probability_error": 4.385380947269368e-15,
+  "recorded_route_win_lower_bound": 8,
+  "recorded_route_win_upper_bound": 56,
+  "maximum_net_gain_over_parent": 36,
+  "can_reach_original_plus_8_development_gate_in_principle": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "candidate_sha256": "2f3866de33e34cb3720ca08acd7ca868b6392334e2f77b973b595e5e9dedcecd",
+  "source_completion_sha256": "aefb9849f8a12af88d6c2a6fb16a35e3973ed360e066fea75409730699c2f8ba",
+  "auditor_sha256": "d3d83d14204a38edfa60044ea75f92751d7466e9c27fe34331a5acf8d2aec9a8",
+  "registration_sha256": "d00dfe8595fa5f049ab691ab5d51ea016fdbcebd5f919c0c1775799be6554833",
+  "limits": "Only recorded parent routes on the same 128 historical evaluation families. Outcomes after a changed action are unknown; no changed path was executed. Bounds assume the frozen deterministic combat executor. Passing a loose upper bound would not prove improvement or authorize adopting the post-hoc variant.",
+  "private_route_report_sha256": "7e34afe5b009bfb33630007b676e6c41f5f9c1da079acda34fced5a32649a4b2"
+}
