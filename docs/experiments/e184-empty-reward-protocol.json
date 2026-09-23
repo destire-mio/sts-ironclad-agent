@@ -1,0 +1,17 @@
+{
+  "experiment": "E184",
+  "value_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e170-parent-value-budget-20260923-01",
+  "ranking_source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e171-card-value-ranking-20260923-01",
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "purpose": "Audit whether value scores change across empty reward exits and whether the artifact changes card ranking. Diagnose a public-state equivalence mechanism using existing data, without reopening ES or expanding samples.",
+  "scope": "All 6264 E171 card menus, including all 1536 initial families. Contract only a recorded nonterminal parent REWARD_SKIP whose next state is MAP and whose full admitted public observation differs solely in the REWARDS/MAP one-hot columns. Targets must match. Preserve every other successor and report exclusions.",
+  "scoring": "Use the same three family-excluding frozen E170 models, mask, independent NumPy computation and 1e-6 parent tie margin. No parameter, checkpoint, threshold or scope selection by outcome. Compare raw and canonical scores and outcomes; retain all families.",
+  "native": "First four source initial menus, all recorded alternatives, no selection by outcome. Reproduce acquisition and contracted exit using recorded legal native actions with state/RNG checks; require no unclaimed reward choices. No fresh MCTS game.",
+  "limits": [
+    "This diagnosis uses recorded public successors; no live action adapter exists.",
+    "Empty exits can expose optional potion operations. The contraction is fixed-parent outcome-equivalent, not a claim that every legal policy must exit.",
+    "E169/E170 and E171 retain their failed original gates. No automatic adoption or additional sampling follows any diagnostic result.",
+    "These are historically exposed families, not final unused acceptance."
+  ]
+}
