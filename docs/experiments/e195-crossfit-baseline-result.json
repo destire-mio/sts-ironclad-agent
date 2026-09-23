@@ -1,0 +1,115 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E195",
+  "result": {
+    "status": "complete",
+    "experiment": "E195",
+    "families": 128,
+    "complete_games": 512,
+    "decisions": 55473,
+    "sampled_heart_wins": 37,
+    "dimensions": 204,
+    "fitted_models": 3,
+    "folds": [
+      {
+        "fold": 0,
+        "fit_families": 90,
+        "held_families": 38,
+        "fit_brier": 0.059826121206063,
+        "held_brier": 0.03370340857372865,
+        "constant_brier": 0.029894005847953216,
+        "relative_improvement": -0.1274303198156448
+      },
+      {
+        "fold": 1,
+        "fit_families": 81,
+        "held_families": 47,
+        "fit_brier": 0.05379182585299801,
+        "held_brier": 0.04804850818064253,
+        "constant_brier": 0.05127068557919623,
+        "relative_improvement": 0.06284638799254005
+      },
+      {
+        "fold": 2,
+        "fit_families": 85,
+        "held_families": 43,
+        "fit_brier": 0.03243600069193429,
+        "held_brier": 0.10540580319042081,
+        "constant_brier": 0.12440412006115718,
+        "relative_improvement": 0.15271453116984213
+      }
+    ],
+    "cross_fitted_brier": 0.06305827302718736,
+    "fit_only_constant_brier": 0.0694927469302672,
+    "relative_improvement": 0.09259202128729416,
+    "prediction_gate_passed": false,
+    "new_games": 0,
+    "actor_updates": 0,
+    "optimizer_updates": 0,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": [
+      "Historical families and frozen original encoder are reused; excluding families from these new baseline fits is not untouched end-to-end acceptance.",
+      "The first-cohort prediction target follows its stochastic actor, not the original greedy parent or any subsequent actor.",
+      "Return prediction is not causal action value, gradient variance evidence, or policy improvement.",
+      "E154 bootstrapped IQL collapse and E169-E190 parent-value/action-transfer failures remain recorded. This is a separate state-baseline feasibility test on current stochastic trajectories, not a repeated parent-action ranker.",
+      "Ironclad A20 Heart chain, Prismatic Shard exclusion, frozen engine and combat budget remain. Original-game parity is deferred. Final512/1024 unused-family goal remains unmet."
+    ]
+  },
+  "raw_episodes_verified": 512,
+  "public_state_features_verified": 55473,
+  "independent_family_excluded_fits": 3,
+  "maximum_feature_error": 3.1086244689504383e-15,
+  "maximum_coefficient_or_normalization_error": 3.533770498442834e-13,
+  "maximum_prediction_error": 7.759348719105219e-13,
+  "completion_sha256": "221c2295d3a55a47b6045c7ecec05b5ead940000619e7d45b7a94585cefda67c",
+  "registration_sha256": "1872cb353653a00ece3061a2e9aa37d2edd199c07ddbb161c67d5f338bc8820b",
+  "reviewer_sha256": "b9f38b06010d756078a0c1ac5569bca9c0d66ee92e0f11ca922946a04413cc2c",
+  "new_games": 0,
+  "actor_updates": 0,
+  "policy_adoption": false,
+  "root_review_receipt_sha256": "38da70093fc052a271c0c6b52763f1eb48f5cd8dc45aa15c39cccd8ac34c14b7",
+  "owned_exit_sha256": "50065fe3fbaff12a75495c6d5f1e395aefe98550725a665df19d793acfe28a4f",
+  "controller_exit_sha256": "2445ab0e9e4cd13c7ca5761604e7e48545fe5f1cce26f4353598c33100152bbe",
+  "root_verified_at": "2026-09-24T06:46:12.843970+08:00",
+  "processes_absent": true,
+  "elapsed_seconds": 28.733682,
+  "luna_monitor_started": false,
+  "stage_diagnosis": {
+    "retrospective": true,
+    "stages": [
+      {
+        "act": 1,
+        "decisions": 27122,
+        "family_weight": 78.44915313091343,
+        "brier": 0.04085982269991735,
+        "constant_brier": 0.04194253916646202
+      },
+      {
+        "act": 2,
+        "decisions": 17760,
+        "family_weight": 33.275455609522965,
+        "brier": 0.07563618951421823,
+        "constant_brier": 0.0836497448164441
+      },
+      {
+        "act": 3,
+        "decisions": 9808,
+        "family_weight": 15.127167768587126,
+        "brier": 0.13602271604765198,
+        "constant_brier": 0.15997479978659798
+      },
+      {
+        "act": 4,
+        "decisions": 783,
+        "family_weight": 1.148223490976486,
+        "brier": 0.2539343161309794,
+        "constant_brier": 0.3494667431497391
+      }
+    ],
+    "limits": "All4 stage summaries; no changed gate, model, actor update or causal conclusion."
+  },
+  "closure": "Close this fixed204-dimensional ridge state-baseline recipe below its original prediction gate. Average improvement9.2592% is below10%, and fold0 is12.7430% worse than its control. No actor or GAE update, ridge/feature/budget grid, new game, deployment or unused acceptance follows. This does not reject every state-dependent baseline or measure its gradient variance.",
+  "native_replays_this_experiment": 0,
+  "input_validation_scope": "Independently recompute public feature transformations from recorded menus whose state/RNG and public inputs were verified by completed E191 native replay; no new simulator replay in E195."
+}
