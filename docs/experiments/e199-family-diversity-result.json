@@ -1,0 +1,186 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E199",
+  "result": {
+    "status": "complete",
+    "experiment": "E199",
+    "full_network_comparison": {
+      "assigned": 128,
+      "baseline_wins": 11,
+      "candidate_wins": 8,
+      "net_gain": -3,
+      "paired": {
+        "baseline_only": 5,
+        "both_fail": 115,
+        "both_win": 6,
+        "candidate_only": 2
+      },
+      "exact_p": 0.453125
+    },
+    "greedy_parent_comparison": {
+      "assigned": 128,
+      "baseline_wins": 20,
+      "candidate_wins": 8,
+      "net_gain": -12,
+      "paired": {
+        "baseline_only": 14,
+        "both_fail": 106,
+        "both_win": 6,
+        "candidate_only": 2
+      },
+      "exact_p": 0.004180908203125
+    },
+    "learning_gate_passed": false,
+    "counts": {
+      "assigned_games": 128,
+      "reused_whole_routes": 49,
+      "fresh_base_games": 79,
+      "winner_replans": 8
+    },
+    "newly_planned_evaluation_games": 87,
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "zero_faults": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": "Freeze final scheduled actor, then use the exact original128 evaluation families/streams. Compare complete wins against the completed E19111/128 full-network candidate and20/128 greedy parent; preserve net>=8 and paired p<.025 against both. Use independent source/update/state-RNG/deployment checks and fresh replans of new wins. These are repeatedly used historical development results, not unused acceptance; passing only supports separately registered prospective validation. Matching game assignments and passes does not match the endogenous optimizer-step count; report actual counts. No original-game parity claim. E133 stays closed; no follow-on grid or extra cohort after failure; final512/1024 goal remains unmet."
+  },
+  "counts": {
+    "native_outside_choices": 18403,
+    "native_steps": 20970,
+    "native_routes": 136
+  },
+  "maximum_numpy_probability_error": 3.6637359812630166e-15,
+  "completion_sha256": "36bf8b1471a9b656963e91ef80eca9914796cee0775bd9a223b205cebc213c2b",
+  "training_review_sha256": "060d8518c0a07a84d7d423e7cdfc48f22a9992853521ecbdf262602f71331ded",
+  "reviewer_sha256": "22ee1a20201b69681b4301c01c650814e5111ec7213da681675c12b5a0f06843",
+  "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+  "root_receipt": {
+    "status": "complete_root_checked",
+    "experiment": "E199",
+    "checked_at": "2026-09-24T04:59:49.008702+00:00",
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "training_completion_sha256": "097f52999c8812d507cf8c019486a045862ebfebd502620dd6ea98f2429a0b12",
+    "training_review_sha256": "060d8518c0a07a84d7d423e7cdfc48f22a9992853521ecbdf262602f71331ded",
+    "evaluation_completion_sha256": "36bf8b1471a9b656963e91ef80eca9914796cee0775bd9a223b205cebc213c2b",
+    "result_review_sha256": "333fc0103c1dc9258a2be563cccf15d7bce39063a621b8cdce7706737d8f7ea1",
+    "owned_exit_sha256": "54c50287de8f65cc8409686f78522bc8e16f7a776cc7b741388b776bf701328e",
+    "controller_sha256": "d0b0e4a9ae8643b247211a7b2ffc1c8f8c889d953d7e95f9a009beec161bb35c",
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "all_128_pairs_and_eight_replans_recounted": true,
+    "owner_and_group_absent": true,
+    "finished_at": "2026-09-24T04:50:24.553792+00:00",
+    "intervals": {
+      "full_network_comparison": {
+        "method": "descriptive paired family percentile bootstrap;100000 draws;NumPy seed20260924999;not selection-adjusted",
+        "net_percentage_points": -2.34375,
+        "lower_95_percentage_points": -6.25,
+        "upper_95_percentage_points": 1.5625
+      },
+      "greedy_parent_comparison": {
+        "method": "descriptive paired family percentile bootstrap;100000 draws;NumPy seed20260924999;not selection-adjusted",
+        "net_percentage_points": -9.375,
+        "lower_95_percentage_points": -15.625,
+        "upper_95_percentage_points": -3.90625
+      },
+      "candidate_win_rate": {
+        "method": "descriptive Wilson95;not selection-adjusted",
+        "point": 0.0625,
+        "lower": 0.03200692569506119,
+        "upper": 0.11848791104425865
+      }
+    },
+    "decision": "Close the completed fixed-budget comparison below both original gates; no extension, policy adoption or unused acceptance."
+  },
+  "root_receipt_sha256": "3750beaf21fa699190bcc72beb4721fa09b82928fe98905753db4f87f4ae367d",
+  "training": {
+    "status": "complete",
+    "experiment": "E199",
+    "source_training_games_reused": 512,
+    "source_optimizer_updates_reused": 868,
+    "new_cohorts": 3,
+    "full_schedule_completed": true,
+    "training_assignments": 2048,
+    "unique_training_families": 512,
+    "new_optimizer_updates": 2586,
+    "counts": {
+      "assigned_games": 1536,
+      "reused_whole_routes": 204,
+      "fresh_base_games": 1332,
+      "winner_replans": 139
+    },
+    "newly_planned_training_games": 1471,
+    "trainable_parameters": 1061953,
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "zero_faults": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "training_data_summary": {
+    "status": "training_data_root_checked_pending_numerical_review",
+    "experiment": "E199",
+    "checked_at": "2026-09-24T04:24:21.495611+00:00",
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "learning_completion_sha256": "097f52999c8812d507cf8c019486a045862ebfebd502620dd6ea98f2429a0b12",
+    "source_reuse_sha256": "ec89f2ab0b5745ce2f9a961617859fd3eb05dc8026721d37b69e2a00b36a86da",
+    "rounds": [
+      {
+        "iteration": 1,
+        "mixed_families": 32,
+        "collecting_wins": 51,
+        "nonforced_menus": 56189,
+        "nonzero_advantage_menus": 18943,
+        "optimizer_updates": 878,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 444,
+          "reused_whole_routes": 68,
+          "winner_replans": 51
+        }
+      },
+      {
+        "iteration": 2,
+        "mixed_families": 27,
+        "collecting_wins": 49,
+        "nonforced_menus": 54661,
+        "nonzero_advantage_menus": 15050,
+        "optimizer_updates": 856,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 451,
+          "winner_replans": 49,
+          "reused_whole_routes": 61
+        }
+      },
+      {
+        "iteration": 3,
+        "mixed_families": 23,
+        "collecting_wins": 39,
+        "nonforced_menus": 54417,
+        "nonzero_advantage_menus": 12715,
+        "optimizer_updates": 852,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 437,
+          "reused_whole_routes": 75,
+          "winner_replans": 39
+        }
+      }
+    ],
+    "counts": {
+      "assigned_games": 1536,
+      "fresh_base_games": 1332,
+      "reused_whole_routes": 204,
+      "winner_replans": 139
+    },
+    "distinct_training_families": 512,
+    "distinct_mixed_return_families": 107,
+    "source_mixed_return_families": 25,
+    "training_routes_checked": 1675,
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "seconds": 15.57669504196383,
+    "scope": "Source first-cohort hashes plus all new assignments and winner replan records, family order, streams, cached source equivalence, return labels, menu/update counts. No new simulation, learning or native replay in this root recount; independent full native and optimizer review is a separate prerequisite."
+  },
+  "all_newly_planned_games": 1561,
+  "scope": "Full scheduled budget completed. All statistics are historical development evidence, not final unused acceptance.",
+  "closure": "Close expansion and optimizer/network/temperature/epoch variants of whole-binary-return four-game-baseline shared-trajectory-advantage recipe. No proxy score can reopen that budget."
+}

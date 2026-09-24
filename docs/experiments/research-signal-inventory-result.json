@@ -1,0 +1,140 @@
+{
+  "status": "complete_inventory",
+  "question": "Can retained same-collector records independently recheck the sign of a root-action return contrast?",
+  "source_games": 3584,
+  "unique_families": 512,
+  "fixed_collectors": 6,
+  "collectors": [
+    {
+      "collector_tensor_identity": "f8d77aee761a69979336267936cc22f6891f559a9438c329d0fbebfc1749d85d",
+      "families": 128,
+      "batches": [
+        {
+          "source": "heart-e191-whole-policy-gradient-20260924-01",
+          "iteration": 0
+        }
+      ],
+      "factual_games": 512,
+      "one_discovery_pair_one_confirmation_pair_roots": 17,
+      "acts": {
+        "1": 17
+      },
+      "four_paired_continuation_roots": 0
+    },
+    {
+      "collector_tensor_identity": "29f48adebc47ee1232f26ac7ce82367391509f06280c6f406992c3625f832eb1",
+      "families": 256,
+      "batches": [
+        {
+          "source": "heart-e191-whole-policy-gradient-20260924-01",
+          "iteration": 1
+        },
+        {
+          "source": "heart-e199-family-diversity-20260924-01",
+          "iteration": 1
+        }
+      ],
+      "factual_games": 1024,
+      "one_discovery_pair_one_confirmation_pair_roots": 28,
+      "acts": {
+        "1": 28
+      },
+      "four_paired_continuation_roots": 0
+    },
+    {
+      "collector_tensor_identity": "3ed3d00c3a864af589833e6ac0b9bd34e08d1833de4f0d36364a81ec8bbe0cd2",
+      "families": 128,
+      "batches": [
+        {
+          "source": "heart-e191-whole-policy-gradient-20260924-01",
+          "iteration": 2
+        }
+      ],
+      "factual_games": 512,
+      "one_discovery_pair_one_confirmation_pair_roots": 16,
+      "acts": {
+        "1": 16
+      },
+      "four_paired_continuation_roots": 0
+    },
+    {
+      "collector_tensor_identity": "edfb41480c1a6e2f12124be4246b05d660004d52c30adf9fa87ef8d63d62ad53",
+      "families": 128,
+      "batches": [
+        {
+          "source": "heart-e191-whole-policy-gradient-20260924-01",
+          "iteration": 3
+        }
+      ],
+      "factual_games": 512,
+      "one_discovery_pair_one_confirmation_pair_roots": 13,
+      "acts": {
+        "1": 13
+      },
+      "four_paired_continuation_roots": 0
+    },
+    {
+      "collector_tensor_identity": "ebac06d43cc9b62b1849b88c6c88db868ffd2367ecf45aa7e4c8a4194714f37b",
+      "families": 128,
+      "batches": [
+        {
+          "source": "heart-e199-family-diversity-20260924-01",
+          "iteration": 2
+        }
+      ],
+      "factual_games": 512,
+      "one_discovery_pair_one_confirmation_pair_roots": 12,
+      "acts": {
+        "1": 12
+      },
+      "four_paired_continuation_roots": 0
+    },
+    {
+      "collector_tensor_identity": "6ec91aff19c19557551130709698fbcf8af001e70cf4cf5b6a923de371b1c9a7",
+      "families": 128,
+      "batches": [
+        {
+          "source": "heart-e199-family-diversity-20260924-01",
+          "iteration": 3
+        }
+      ],
+      "factual_games": 512,
+      "one_discovery_pair_one_confirmation_pair_roots": 9,
+      "acts": {
+        "1": 9
+      },
+      "four_paired_continuation_roots": 0
+    }
+  ],
+  "source_files_verified": 3599,
+  "maximum_factual_trajectories_per_family_collector": 4,
+  "required_for_two_actions_four_pairs": 8,
+  "complete_forced_common_random_number_counterfactual_pairs": 0,
+  "eligible_128_family_four_act_draft": false,
+  "new_games": 0,
+  "native_replays": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "outcome_based_root_filtering": false,
+  "return_sign_test_performed": false,
+  "decision": "Existing logs cannot run the proposed four-pair independent-confirmation design. Do not pool changed collectors, count deterministic replans as new samples, fabricate missing actions, or proceed to fitting. This coverage failure does not authorize extra sampling.",
+  "limits": "The smaller split-support count is factual coverage only: one observed action per stream, not forced CRN pairs. Roots/collectors are historical; no action-effect, natural-win or unseen-acceptance claim. Existing source-native review is inherited.",
+  "root_receipt": {
+    "status": "complete_root_checked",
+    "protocol_sha256": "c9933f79161e74a41d46c8489721c3e6f2c3c1bcb418e91917d85d0c8d37412f",
+    "completion_sha256": "c254f7ad0eac9787a0ccf888f8ee334fbff130354c73ecdabe794de5391734c2",
+    "selected_prefixes_independently_recounted": 95,
+    "selected_acts": {
+      "1": 95
+    },
+    "maximum_same_collector_split_supported_roots": 28,
+    "source_games": 3584,
+    "source_files_verified": 3599,
+    "collector_groups": 6,
+    "required_eight_branch_roots": 0,
+    "new_games": 0,
+    "new_updates": 0,
+    "native_replays": 0
+  },
+  "tests_passed": 3
+}

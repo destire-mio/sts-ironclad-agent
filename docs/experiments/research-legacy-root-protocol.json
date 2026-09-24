@@ -1,0 +1,40 @@
+{
+  "purpose": "Test whether existing E36 root-action observations can support an independent continuation-stream check of action-return direction; no new game or learning experiment.",
+  "registered_at": "2026-09-24T05:26:56.369551+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01",
+  "collector_iteration": 0,
+  "source_hashes": {
+    "plan.json": "857f28f7cbee89f045bead13d51fbd58996d1e86503f11c6a3e2a5e419aaf09c",
+    "roots.json": "dd0953e407a305cd320657068de43c1b48614e05a0c2a71c40888af39c7cf7f0",
+    "identity.json": "9d0727199a15041f214d69044f1031c6168608845385e04acac8198803573258",
+    "iterations/0/plan.json": "546e27296a9eb178c1ac8eb8aa1a54a468df8629003d57ef2cd463f375e2cd25",
+    "iterations/0/results-index.json": "a8599a411812a855946692e860c9f05deaf67a223eedc0a565b640eab66ba352",
+    "iterations/0/label-verification.json": "32a42a1d9e6a509fa67ba0ee3ffe46057ca6a3cb7a0d181336b57349f975c964"
+  },
+  "single_hypothesis": "A root-action preference estimated from one set of independent external policy streams retains positive return advantage in a separate set under the same frozen continuation policy.",
+  "selection": "Use all original 192 fit and 64 label-holdout families and their original natural root. No later node search, collector selection, return filter, replacement or pooling.",
+  "action_pair": "Greedy collecting-policy action and highest-probability different legal action, ties by original menu index. Zero probability means unsupported.",
+  "split": "Repeats 0..3 discovery and 4..7 confirmation. Greedy repeat -1 is a replay control, never an independent stochastic observation.",
+  "coverage_gate": {
+    "minimum_families": 128,
+    "minimum_original_label_holdout_families": 32,
+    "minimum_observations_per_action_per_half": 2,
+    "all_failed_roots_retained_in_coverage_denominator": true
+  },
+  "signal_analysis": "Only if coverage passes, require a separate review of an immutable analysis implementation before reading discovery/confirmation contrasts; no model or new rollout follows automatically. Coverage failure closes this archive-only implementation, not the scientific hypothesis.",
+  "budgets": {
+    "families": 256,
+    "stochastic_records": 2048,
+    "greedy_records": 256,
+    "new_rollouts": 0,
+    "native_replays": 0,
+    "training_updates": 0,
+    "natural_evaluation_games": 0,
+    "cpu_seconds": 180
+  },
+  "limits": [
+    "Different streams choose different observed actions; these are not forced common-random-number pairs.",
+    "Historical simulator/model and already exposed families; not current-runtime or unseen performance.",
+    "This coverage protocol makes no population effect or policy success claim."
+  ]
+}

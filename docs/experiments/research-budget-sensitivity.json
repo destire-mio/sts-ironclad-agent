@@ -1,0 +1,54 @@
+{
+  "status": "design_calculation_only",
+  "families": 128,
+  "unit": "one independent paired outcome per family; also represents perfectly correlated repeats",
+  "rows": [
+    {
+      "discordance": 0.1,
+      "true_net_gain": 0.025,
+      "probability_of_passing_net8_and_two_sided_p025": 0.05208724263728116
+    },
+    {
+      "discordance": 0.1,
+      "true_net_gain": 0.0625,
+      "probability_of_passing_net8_and_two_sided_p025": 0.42081110281657125
+    },
+    {
+      "discordance": 0.1,
+      "true_net_gain": 0.1,
+      "probability_of_passing_net8_and_two_sided_p025": 0.9490412368727353
+    },
+    {
+      "discordance": 0.25,
+      "true_net_gain": 0.025,
+      "probability_of_passing_net8_and_two_sided_p025": 0.033214420462220756
+    },
+    {
+      "discordance": 0.25,
+      "true_net_gain": 0.0625,
+      "probability_of_passing_net8_and_two_sided_p025": 0.16218785242684508
+    },
+    {
+      "discordance": 0.25,
+      "true_net_gain": 0.1,
+      "probability_of_passing_net8_and_two_sided_p025": 0.4588715289716336
+    },
+    {
+      "discordance": 0.5,
+      "true_net_gain": 0.025,
+      "probability_of_passing_net8_and_two_sided_p025": 0.025455647501906587
+    },
+    {
+      "discordance": 0.5,
+      "true_net_gain": 0.0625,
+      "probability_of_passing_net8_and_two_sided_p025": 0.08783644450706504
+    },
+    {
+      "discordance": 0.5,
+      "true_net_gain": 0.1,
+      "probability_of_passing_net8_and_two_sided_p025": 0.22649846014314715
+    }
+  ],
+  "assumptions": "Hypothetical iid family pairs with probabilities gain=(q+delta)/2,loss=(q-delta)/2,tie=1-q. No parameter estimated from a new experiment. This does not model teacher selection, act strata, a second comparator, cross-family policy learning or multiplicity; those can change power. It is not a policy result.",
+  "conclusion": "128 families do not establish adequate sensitivity to modest action gains without an effect/variance model; repeating deterministic continuations does not increase independent families."
+}
