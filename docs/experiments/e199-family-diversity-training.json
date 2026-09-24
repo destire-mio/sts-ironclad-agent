@@ -1,0 +1,205 @@
+{
+  "status": "training_complete_evaluation_running",
+  "experiment": "E199",
+  "training": {
+    "status": "complete",
+    "experiment": "E199",
+    "source_training_games_reused": 512,
+    "source_optimizer_updates_reused": 868,
+    "new_cohorts": 3,
+    "full_schedule_completed": true,
+    "training_assignments": 2048,
+    "unique_training_families": 512,
+    "new_optimizer_updates": 2586,
+    "counts": {
+      "assigned_games": 1536,
+      "reused_whole_routes": 204,
+      "fresh_base_games": 1332,
+      "winner_replans": 139
+    },
+    "newly_planned_training_games": 1471,
+    "trainable_parameters": 1061953,
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "zero_faults": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "experiment": "E199",
+    "result": {
+      "status": "complete",
+      "experiment": "E199",
+      "source_training_games_reused": 512,
+      "source_optimizer_updates_reused": 868,
+      "new_cohorts": 3,
+      "full_schedule_completed": true,
+      "training_assignments": 2048,
+      "unique_training_families": 512,
+      "new_optimizer_updates": 2586,
+      "counts": {
+        "assigned_games": 1536,
+        "reused_whole_routes": 204,
+        "fresh_base_games": 1332,
+        "winner_replans": 139
+      },
+      "newly_planned_training_games": 1471,
+      "trainable_parameters": 1061953,
+      "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+      "zero_faults": true,
+      "policy_adoption": false,
+      "unused_acceptance_games": 0
+    },
+    "rounds": [
+      {
+        "iteration": 1,
+        "mixed_families": 32,
+        "collecting_wins": 51,
+        "decisions": 56189,
+        "optimizer_updates": 878,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 444,
+          "reused_whole_routes": 68,
+          "winner_replans": 51
+        }
+      },
+      {
+        "iteration": 2,
+        "mixed_families": 27,
+        "collecting_wins": 49,
+        "decisions": 54661,
+        "optimizer_updates": 856,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 451,
+          "winner_replans": 49,
+          "reused_whole_routes": 61
+        }
+      },
+      {
+        "iteration": 3,
+        "mixed_families": 23,
+        "collecting_wins": 39,
+        "decisions": 54417,
+        "optimizer_updates": 852,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 437,
+          "reused_whole_routes": 75,
+          "winner_replans": 39
+        }
+      }
+    ],
+    "counts": {
+      "native_outside_choices": 225882,
+      "native_steps": 257138,
+      "native_routes": 1675
+    },
+    "maximum_parameter_error": 0.0,
+    "maximum_curve_error": 1.6263032587282567e-19,
+    "maximum_numpy_probability_error": 7.105427357601002e-15,
+    "completion_sha256": "097f52999c8812d507cf8c019486a045862ebfebd502620dd6ea98f2429a0b12",
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "reviewer_sha256": "22ee1a20201b69681b4301c01c650814e5111ec7213da681675c12b5a0f06843",
+    "source_first_cohort_update_reused": true
+  },
+  "root_data_audit": {
+    "status": "training_data_root_checked_pending_numerical_review",
+    "experiment": "E199",
+    "checked_at": "2026-09-24T04:24:21.495611+00:00",
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "learning_completion_sha256": "097f52999c8812d507cf8c019486a045862ebfebd502620dd6ea98f2429a0b12",
+    "source_reuse_sha256": "ec89f2ab0b5745ce2f9a961617859fd3eb05dc8026721d37b69e2a00b36a86da",
+    "rounds": [
+      {
+        "iteration": 1,
+        "mixed_families": 32,
+        "collecting_wins": 51,
+        "nonforced_menus": 56189,
+        "nonzero_advantage_menus": 18943,
+        "optimizer_updates": 878,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 444,
+          "reused_whole_routes": 68,
+          "winner_replans": 51
+        }
+      },
+      {
+        "iteration": 2,
+        "mixed_families": 27,
+        "collecting_wins": 49,
+        "nonforced_menus": 54661,
+        "nonzero_advantage_menus": 15050,
+        "optimizer_updates": 856,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 451,
+          "winner_replans": 49,
+          "reused_whole_routes": 61
+        }
+      },
+      {
+        "iteration": 3,
+        "mixed_families": 23,
+        "collecting_wins": 39,
+        "nonforced_menus": 54417,
+        "nonzero_advantage_menus": 12715,
+        "optimizer_updates": 852,
+        "execution": {
+          "assigned_games": 512,
+          "fresh_base_games": 437,
+          "reused_whole_routes": 75,
+          "winner_replans": 39
+        }
+      }
+    ],
+    "counts": {
+      "assigned_games": 1536,
+      "fresh_base_games": 1332,
+      "reused_whole_routes": 204,
+      "winner_replans": 139
+    },
+    "distinct_training_families": 512,
+    "distinct_mixed_return_families": 107,
+    "source_mixed_return_families": 25,
+    "training_routes_checked": 1675,
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "seconds": 15.57669504196383,
+    "scope": "Source first-cohort hashes plus all new assignments and winner replan records, family order, streams, cached source equivalence, return labels, menu/update counts. No new simulation, learning or native replay in this root recount; independent full native and optimizer review is a separate prerequisite."
+  },
+  "root_receipt": {
+    "status": "training_complete_root_checked",
+    "experiment": "E199",
+    "checked_at": "2026-09-24T04:43:52.384600+00:00",
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "completion_sha256": "097f52999c8812d507cf8c019486a045862ebfebd502620dd6ea98f2429a0b12",
+    "training_review_sha256": "060d8518c0a07a84d7d423e7cdfc48f22a9992853521ecbdf262602f71331ded",
+    "root_data_audit_sha256": "a33bf916f1ab9f3b44ff0d71ae8b34fb787e56fd4c419eb698a40bce1eb998b2",
+    "owned_exit_sha256": "942e5d436f980b1d8aba76a080149ff29d46192222f50ddd22c555ce50e2b7a6",
+    "controller_sha256": "5aa44db73314b74f7c5a6837ba28bad33f0f7daaca726aeb339d4b5b4469efab",
+    "candidate_sha256": "81b77a5c6a240da348a19cc86fb0570590213803d0d29d9f62f70a7d3cea20e1",
+    "owner_and_group_absent": true,
+    "full_schedule_completed": true,
+    "unused_acceptance_games": 0
+  },
+  "training_finished_at": "2026-09-24T04:26:48.431968+00:00",
+  "evaluation_process": {
+    "started_at": "2026-09-24T04:44:04.255865+00:00",
+    "wrapper_pid": 79912,
+    "pid": 79924,
+    "process_group": 79924,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e199-family-diversity-20260924-01/pipeline.py",
+      "evaluation"
+    ],
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "wrapper_seconds": 5400
+  },
+  "evaluation_admission_sha256": "9e231959b29d4c7bb3c0b9dffd0f34c0d876a593639e06d0fa1587e7c5bc1baf",
+  "luna_training_delivery_sha256": "2af0faf7a68800650ff094ea3d279366023ba32a56d739811540f38cf23e9ecc",
+  "limits": "No learned policy gain inferred from changing training cohorts. Compare final scheduled actor on the registered128 historical families. Not unused acceptance."
+}
