@@ -1,0 +1,49 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E199",
+  "report": {
+    "status": "complete",
+    "experiment": "E199",
+    "probe_routes": 5,
+    "selected": {
+      "diverged": 0,
+      "matched": 4
+    },
+    "assigned_validation_routes": 4,
+    "fresh_validation_games": 3,
+    "cache_policy_reset_verified": true,
+    "warm_start_sha256": "6bf5f49a6b7b652b77e13b43f50b05dff01d9ba0564c1faa9e1e2780154b139a",
+    "source_warm_start_sha256": "af8a16dcc3b1c86510396a3a01aa79fc3378632e7b315c102de3f3fff182e817",
+    "optimizer_updates": 0
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "experiment": "E199",
+    "completion_sha256": "e6aaa65e71fcfd2684026171092193f9d15f4624741a31df38dc9f9c0ced9398",
+    "source_warm_start_bitwise_equal": true,
+    "independent_probe_routes": 5,
+    "fresh_validation_games": 3,
+    "counts": {
+      "native_outside_choices": 480,
+      "native_steps": 546,
+      "native_routes": 4
+    },
+    "maximum_numpy_probability_error": 2.831068712794149e-15,
+    "reviewer_sha256": "22ee1a20201b69681b4301c01c650814e5111ec7213da681675c12b5a0f06843",
+    "warm_start_sha256": "6bf5f49a6b7b652b77e13b43f50b05dff01d9ba0564c1faa9e1e2780154b139a",
+    "optimizer_updates": 0
+  },
+  "root_receipt": {
+    "status": "preflight_complete_root_checked",
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "completion_sha256": "e6aaa65e71fcfd2684026171092193f9d15f4624741a31df38dc9f9c0ced9398",
+    "review_sha256": "c8476001dcca320ea8d9f6203d2220dba535ce7c5687d77485c7a25f85917f28",
+    "owned_exit_sha256": "ad6607f39fcc75f814428727081fc16c23b9a5dc3093547a02ee3b880fdcda1b",
+    "controller_sha256": "a7b68c6be740ef827d7d345350021548a48b4c21e58fdf7a1cc63149efb56664",
+    "all_file_hashes_and_four_route_pairs_verified": true,
+    "source_warm_tensors_identical": true,
+    "owner_and_group_absent": true
+  },
+  "finished_at": "2026-09-24T02:35:31.466255+00:00",
+  "duration_seconds": 19.62
+}

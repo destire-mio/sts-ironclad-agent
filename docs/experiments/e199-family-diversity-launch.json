@@ -1,7 +1,11 @@
 {
-  "status": "preflight_running",
+  "status": "training_and_review_running",
   "experiment": "E199",
-  "process": {
+  "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+  "new_training_assignments": 0,
+  "new_optimizer_updates": 0,
+  "unused_acceptance_games": 0,
+  "preflight_process": {
     "started_at": "2026-09-24T02:35:11.848822+00:00",
     "wrapper_pid": 18920,
     "pid": 18932,
@@ -15,8 +19,26 @@
     "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
     "wrapper_seconds": 1800
   },
-  "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
-  "new_training_assignments": 0,
-  "new_optimizer_updates": 0,
-  "unused_acceptance_games": 0
+  "process": {
+    "started_at": "2026-09-24T02:37:33.700388+00:00",
+    "wrapper_pid": 20013,
+    "pid": 20025,
+    "process_group": 20025,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e199-family-diversity-20260924-01/pipeline.py",
+      "training"
+    ],
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "wrapper_seconds": 14400
+  },
+  "preflight_review_sha256": "c8476001dcca320ea8d9f6203d2220dba535ce7c5687d77485c7a25f85917f28",
+  "training_admission_sha256": "dcc96ef12fa3a11b2acc05d346407fc1cdbfc863e2459fee98ceebf8191b3948",
+  "luna": {
+    "thread_id": "01a0c2f0-3541-7553-a32c-9d243f32008c",
+    "heartbeat": "luna",
+    "interval_minutes": 20,
+    "work": "Waiting and evidence delivery only"
+  }
 }
