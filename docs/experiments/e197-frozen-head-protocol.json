@@ -1,0 +1,53 @@
+{
+  "experiment": "E197",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "fit_comparator": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e196-last-update-fit-effect-20260924-01",
+  "recipe": {
+    "source_round": 3,
+    "trainable_parameters": 192,
+    "epochs": 2,
+    "batch_size": 128,
+    "learning_rate": 3e-05,
+    "weight_decay": 1e-05,
+    "clip_ratio": 0.2,
+    "reference_kl": 0.1,
+    "gradient_norm": 1.0,
+    "shuffle_seed": 20260925194,
+    "temperature": 1.0,
+    "calibration_doublings": 24,
+    "calibration_bisections": 60,
+    "calibration_absolute_tolerance": 1e-12,
+    "calibration_relative_tolerance": 1e-09
+  },
+  "preparation_timeout_seconds": 7200,
+  "evaluation_timeout_seconds": 14400,
+  "frozen_executor_sha256": "16636a0f8057a7024dbf6b11ef21a17390397446f9a9f5eecbb5fe32946fcc6d",
+  "question": "Does restricting the last E191 update to192 shared output weights improve complete-game transfer when the mean policy movement matches the completed full-network update?",
+  "evidence": "E196 compared the same512 round3 training assignments: final full-network870 steps changed50 to51 wins (gain7/loss6), despite mean old-winning-path likelihood ratio2.470995. This is a fitted-path versus last-increment outcome gap, not a unique capacity cause or the cumulative effect of all3444 steps. E193 cross-family gradients and E195 failed crossfit predictor do not resolve this mechanism.",
+  "prior_exclusions": "E183 already tried192-parameter whole-policy evolution strategies and failed. E128/E182 frozen readouts control only two decisions; E172 frozen value features failed. This experiment changes the estimator and scope relative to those records; it does not claim frozen heads have never been tested. E191/E192 full-network candidates and greedy conversion stay rejected.",
+  "source_scope": "Use all512 complete E191 round3 games (128 fit families x4 original independent policy streams), all50 wins and462 failures, all55658 nonforced decisions including16577 nonzero-advantage rows. Start actor-after-2, retaining its first3 learned cohorts. Labels, family order, leave-other3-out advantage, two epochs, batch128, shuffle seed, AdamW3e-5/1e-5, PPOclip.2, KL.1, norm1 and870 updates match E191. No new training sampling, replacement, truncation or trajectory length normalization.",
+  "actor": "Freeze5529->192 encoder weights/bias and final scalar bias bitwise. Optimize only the existing absolute192 final weights; initialize at actor-after-2, not zero, to preserve AdamW weight decay semantics. The deployed network remains1061953 parameters. Keep original parent logits, residual-to-initial, finite action mask, all public features, T1 and one uniform per outside choice including forced choices. No action merging, raw-index masking, family/seed/RNG/terminal metadata in model input.",
+  "cache": "Reconstruct each old public menu from hash-bound sparse features. Cache frozen hidden activations and exact before/after-full logits using deployed per-menu matrix shapes. Keep recorded old probabilities/log-likelihoods as the PPO reference. Validate each source status, checkpoint, stream, source audit and family. Flat ragged arrays avoid a padded all-menu tensor; roles and returns are accounting/targets only.",
+  "movement": "Compute the actual mean forward KL over all55658 old nonforced menus from actor-after-2 to the fixed actor-after-3, not an epoch-average loss. After870 head steps, calibrate one nonnegative scalar along that one learned head direction to this fixed movement. At most24 dyadic bracket doublings and60 bisections; choose the lower bracket, absolute1e-12 or relative1e-9 tolerance. No outcome is used; zero/invalid/unbracketable direction fails. This is update restriction plus movement matching, not a pure capacity causal isolation, temperature search or TRPO reproduction.",
+  "verification": "Before evaluation, independently reconstruct all512 input streams, family returns, hidden features and logits using NumPy; verify all870 updates with explicit PPO/KL gradients and AdamW, same stable log_softmax primitive, fixed1e-9 final parameter tolerance. Recompute calibration separately and frozen tensors exactly. No relaxed tolerances or failed-step substitutions. Training and certificate reviews must be sealed before root admits new complete games.",
+  "evaluation": "Assign512 fit games with exact E196/E191 round3 streams and128 historical held families with exact E191 evaluation streams. Comparator is completed E191 full-network actor-after-3:51/512 fit and11/128 held; original greedy parent20/128 is another held comparator. Recompute full-network probabilities on E196-reused paths rather than treating their stored collecting probabilities as updated ones. Held labels and public menus are read only after candidate and training review are frozen.",
+  "certificate": "Torch deployed per-menu and independent NumPy distributions must choose identical actions under all assigned uniforms. Reuse a whole existing outcome only if every new choice matches. Execute changed routes plus up to4 unchanged controls in each role, chosen by SHA256 E197-control:position independently of outcomes. Root reviews complete certificate before games. After execution independently replay all new base and winner-replan routes from natural seeds; compare first divergence, legal choices, public NN inputs, sampling uniforms, exposed state/RNG and terminal chain.",
+  "execution": "Freeze original simulator and MCTS8000/Bossx3/native256 replan guard,8 single-thread workers,300s game/360s child bounds. A20 three keys, two distinct Act3 bosses, Shield/Spear and Heart; Prismatic Shard excluded. Fresh NN/MCTS replan every newly executed winner; reused source winners keep their existing reviewed evidence. Fault aborts, never a death or permission to retry unregistered.",
+  "budget": {
+    "new_training_games": 0,
+    "optimizer_updates": 870,
+    "training_candidates": 1,
+    "evaluation_assignments": 640,
+    "new_base_games_max": 640,
+    "winner_replans_max": 640,
+    "unused_acceptance_games": 0
+  },
+  "gate": "Report paired fit outcomes and128 family win-count deltas; no independent512-game significance claim. Held candidate must gain>=8 and exact paired p<.025 against BOTH full-network11 and original greedy20. This repeatedly used historical development gate is not final generalization. Passing permits separate prospective design, not adoption or reopening a sampling/parameter grid. Failure closes this fixed restriction-plus-calibration recipe without LR/epoch/scale/dimension scans.",
+  "limits": [
+    "This tests only the final870 update steps, not training a head from scratch or the cumulative full training method.",
+    "Equal mean training-menu KL does not match each-state changes, max shift or off-distribution behavior; calibration modifies step magnitude as part of the intervention.",
+    "Training resubstitution and reused historical evaluation roles are not unused-family acceptance; repeated development p-values are descriptive.",
+    "All original source/native reviews are inherited for unchanged old paths. New replay verifies exposed canonical state/RNG, not every unexposed native field.",
+    "Original-game parity stays deferred, Prismatic Shard excluded. E133 remains closed. No policy adoption, winner-seed search or final512/1024 acceptance."
+  ]
+}

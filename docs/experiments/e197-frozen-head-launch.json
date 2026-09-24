@@ -1,0 +1,28 @@
+{
+  "status": "running_preparation",
+  "experiment": "E197",
+  "recorded_at": "2026-09-24T08:29:25.289575+08:00",
+  "owner": {
+    "started_at": "2026-09-24T00:27:55.935518+00:00",
+    "wrapper_pid": 70460,
+    "pid": 70472,
+    "process_group": 70472,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e197-frozen-head-update-20260924-01/pipeline.py",
+      "prepare"
+    ],
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+    "wrapper_seconds": 7200
+  },
+  "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+  "owner_receipt_sha256": "c7426106c06561eb4abdeb9b9eab0136c5928224159f78785f04d04c36769ac3",
+  "luna_automation": "luna",
+  "poll_interval_minutes": 20,
+  "role": "Root designs, implements, trains and reviews; existing Luna waits only.",
+  "optimizer_updates_at_registration": 0,
+  "new_training_games": 0,
+  "new_evaluation_games_at_launch": 0,
+  "unused_acceptance_games": 0
+}
