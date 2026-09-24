@@ -1,0 +1,29 @@
+{
+  "status": "registered_read_only_inventory",
+  "registered_at": "2026-09-24T05:08:43.411105+00:00",
+  "question": "Can already retained trajectories test whether a same-root action advantage selected from one set of outcomes repeats in another, under the same frozen continuation policy?",
+  "inputs": [
+    "E191 four cohorts,2048 factual games",
+    "E199 three NEW cohorts,1536 factual games; reused first512 deduplicated"
+  ],
+  "selection": "Per collector and family, exact complete-history fork; require both predefined repeat halves(0,1)/(2,3) to cover the same two actions, including parent. No terminal reward used. Group tensor-identical warm collectors despite different checkpoint metadata. Never pool different collecting weights.",
+  "limits": "Coverage inventory only; selected four factual trajectories supply at most one discovery comparison and one confirmation comparison, with different streams per action. The proposed2 actions x4 paired streams requires8 actual branches. Replans with the same stream are reproducibility only.",
+  "gate": "Any claimed128-family four-pair study needs128 distinct families under one frozen collector with all8 branches and registered act quotas. Failure stops reuse-only inference and fitting; it does not authorize collection or a new network.",
+  "budgets": {
+    "existing_factual_logs": 3584,
+    "seconds": 180,
+    "new_roots_sampled": 0,
+    "new_continuations": 0,
+    "training_updates": 0,
+    "native_replay": 0,
+    "natural_evaluation": 0,
+    "unused_acceptance": 0
+  },
+  "hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-failure-profile/docs/experiments/research-signal-inventory.py": "b65b5cad6d76bbf5b959c0c81d0562bc9ed47c291da1c9bd6c5c1a7760e6e23a",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-failure-profile/agent/heart_recorded_forks.py": "133461c9de71f7a4ee26ca5c44f898135f39fb38678ca91ee787e5531a96671e",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-failure-profile/tests/test_research_signal_inventory.py": "2dc2f3f9cf0f40f9f1a6457ac61ba130ad674094b63a097d9ce2c43685db4f7c",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/result-review.json": "f74e742bc2226e01a8add1c759d2ee9117504270240ecf8ac1fd1e6e615ca2cc",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e199-family-diversity-20260924-01/training-review.json": "060d8518c0a07a84d7d423e7cdfc48f22a9992853521ecbdf262602f71331ded"
+  }
+}

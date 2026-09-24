@@ -1,0 +1,60 @@
+{
+  "status": "complete_inventory",
+  "protocol_sha256": "c8d94856343f4b5f321b44e5ed1399e5f98a14d690176fa949d8a0c88cb525e5",
+  "runner_sha256": "a72f7ee7218a3f8838fd147ec5d6e7e3eb69af075d93eb37f7a5ba1e66c386ab",
+  "sources": {
+    "plan.json": "857f28f7cbee89f045bead13d51fbd58996d1e86503f11c6a3e2a5e419aaf09c",
+    "roots.json": "dd0953e407a305cd320657068de43c1b48614e05a0c2a71c40888af39c7cf7f0",
+    "identity.json": "9d0727199a15041f214d69044f1031c6168608845385e04acac8198803573258",
+    "iterations/0/plan.json": "546e27296a9eb178c1ac8eb8aa1a54a468df8629003d57ef2cd463f375e2cd25",
+    "iterations/0/results-index.json": "a8599a411812a855946692e860c9f05deaf67a223eedc0a565b640eab66ba352",
+    "iterations/0/label-verification.json": "32a42a1d9e6a509fa67ba0ee3ffe46057ca6a3cb7a0d181336b57349f975c964"
+  },
+  "native_audit_inherited": true,
+  "new_native_replays": 0,
+  "episodes_hashed": 2304,
+  "source_controls_hashed": 256,
+  "fixed_collectors": 1,
+  "engine_sha256": "62bcc5a7673b5e15e5b8f2362f800740ba2a2560361f9c075cc5ba61fc406385",
+  "actor_sha256": "50b8db11b26ff8fc438499ed5e93ed534495f3ae1748e4286d81d5ccdc27ad4b",
+  "original_root_acts": {
+    "2": 256
+  },
+  "original_root_floors": {
+    "33": 256
+  },
+  "original_root_screens": {
+    "ScreenState.REWARDS": 256
+  },
+  "root_parent_probability_min": 1.0,
+  "root_parent_probability_max": 1.0,
+  "coverage": {
+    "fit": {
+      "families": 192,
+      "any_root_action_changes": 0,
+      "both_actions_in_each_half": 0,
+      "two_observations_per_action_per_half": 0,
+      "all_eight_parent": 192
+    },
+    "label_holdout": {
+      "families": 64,
+      "any_root_action_changes": 0,
+      "both_actions_in_each_half": 0,
+      "two_observations_per_action_per_half": 0,
+      "all_eight_parent": 64
+    }
+  },
+  "coverage_gate_passed": false,
+  "root_action_return_test_performed": false,
+  "outcome_filter_used": false,
+  "new_rollouts": 0,
+  "optimizer_updates": 0,
+  "natural_evaluation_games": 0,
+  "policy_adoption": false,
+  "decision": "Close this archive-only root signal test for inadequate action coverage. Do not move roots, pool actors, select rewards or extend sampling. This does not disprove repeatable action effects elsewhere.",
+  "limits": [
+    "Different streams choose different observed actions; these are not forced common-random-number pairs.",
+    "Historical simulator/model and already exposed families; not current-runtime or unseen performance.",
+    "This coverage protocol makes no population effect or policy success claim."
+  ]
+}

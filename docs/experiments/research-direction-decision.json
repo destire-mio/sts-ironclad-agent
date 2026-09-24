@@ -1,0 +1,83 @@
+{
+  "status": "review_complete_no_new_learning_admitted",
+  "updated_at": "2026-09-24T05:35:21.620353+00:00",
+  "goal": {
+    "scope": "Ironclad A20 natural start to Heart, keys, double Act3 bosses, Act4; no Prismatic Shard; fixed existing MCTS and neural outside decisions",
+    "acceptance_families": 1024,
+    "minimum_heart_wins": 512,
+    "never_used_for_training_or_selection": true,
+    "acceptance_executed": false
+  },
+  "e199": {
+    "schedule_complete": true,
+    "training_assignments": 2048,
+    "distinct_training_families": 512,
+    "optimizer_updates": 3454,
+    "historical_evaluation_wins": 8,
+    "historical_evaluation_families": 128,
+    "gate_passed": false,
+    "newly_planned_games_including_rechecks": 1561
+  },
+  "closed_recipe": "binary whole-game Heart reward, four continuations per family, leave-other-three-out baseline, one terminal advantage on every nonforced trajectory decision",
+  "closed_extensions": [
+    "natural whole-game collection expansion",
+    "network size and layer-freezing scans",
+    "optimizer, learning-rate, temperature and epoch scans",
+    "proxy metric improvements used to reopen this recipe"
+  ],
+  "old_failed_scopes_remain_closed": [
+    "E133",
+    "E34/E35",
+    "E36/E37",
+    "E96",
+    "E162",
+    "E167",
+    "E175/E176",
+    "E178/E179",
+    "E183",
+    "E194",
+    "E197"
+  ],
+  "next_single_hypothesis": "A root-action preference derived from one set of independent policy streams retains positive Heart return difference in independent confirmation streams under the same frozen continuation policy.",
+  "archive_checks": {
+    "current_natural_logs": {
+      "source_games": 3584,
+      "fixed_collectors": 6,
+      "families": 512,
+      "draft_coverage_passed": false
+    },
+    "legacy_E36_initial_collector": {
+      "stochastic_records": 2048,
+      "greedy_controls": 256,
+      "families": 256,
+      "paired_root_coverage": 0,
+      "coverage_passed": false
+    }
+  },
+  "next_policy_experiment_admitted": false,
+  "proposed_1024_suffix_draft_admitted": false,
+  "budgets_after_review": {
+    "new_collection_games": 0,
+    "new_training_updates": 0,
+    "new_continuations": 0,
+    "new_native_replays": 0,
+    "natural_development_games": 0,
+    "final_acceptance_games": 0
+  },
+  "stop_rule": "Coverage failed before action-return testing. Stop archive-only implementations; no replacement states, pooled collectors, reward-based filtering, lowered gates or automatic expansion. Core action-effect hypothesis remains untested by these inventories.",
+  "future_admission_requirements": [
+    "one distinguishing prediction relative to old paired/root-action experiments",
+    "one exact continuation policy matching the intended interpretation",
+    "outcome-blind family/root/action rules and family separation",
+    "independent action-return test retaining zero/negative effects",
+    "fixed practical effect thresholds and family-based uncertainty",
+    "explicit total collection, learning, replay and full-game budgets",
+    "signal gate then public-policy family transfer then natural evaluation; failures stop the recipe"
+  ],
+  "source_reports": {
+    "e199-family-diversity-result.json": "e4a7c7895e2ac3eeecf4a108f52a5c81d18ad02bf60ce0775da3f45853a3731f",
+    "research-signal-inventory-result.json": "b9c29748383e0d84fe1d732b8ac8651eb0ca898ee5b5009bced7914552185791",
+    "research-legacy-root-result.json": "bb2a3198fb60268610be2690384c8ee87818eb84274e6c652bbf3655950f2e42",
+    "research-budget-sensitivity.json": "c5b9cd7c0c2127603900e93ba152b691d66028142bb5189301c061ae52681d81"
+  }
+}
