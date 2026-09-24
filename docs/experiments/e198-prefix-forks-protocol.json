@@ -1,0 +1,42 @@
+{
+  "experiment": "E198",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "timeout_seconds": 1800,
+  "question": "Can the existing E191 stochastic games supply same-state action comparisons across late-game decisions, instead of assigning one terminal advantage to every action?",
+  "status": "Retrospective coverage audit after one read-only exploratory pass; no prospective statistical or learning gate is claimed.",
+  "evidence": "E197 completed870 matched-movement head updates,48/512 fit and14/128 historical held, below20/128 parent. E196 full-network last update fitted old win-path probabilities but yielded50->51 actual matched wins. Neither identifies a unique credit-assignment cause. E180 found no natural map/campfire alternatives in its older deterministic graph; the later E191 stochastic data requires its own coverage check.",
+  "exploratory_counts": {
+    "games": 2048,
+    "shared_nonforced_states": 22738,
+    "forks": 1283,
+    "fork_action_samples": 3884,
+    "distinct_actions": 2622,
+    "return_contrast_forks": 202,
+    "unique_return_contrast_families": 37,
+    "return_contrast_acts": {
+      "1": 194,
+      "2": 8
+    }
+  },
+  "source_scope": "Read all4 completed E191 cohorts:128 fixed fitting families x4 independent full policy streams per cohort,2048 games. Preserve successes and failures. Do not read evaluation-role trajectories. Bind all2052 consumed source/checkpoint files to the completed learning manifest and independent review. Validate collecting actor, family, stream, engine, nonfault terminal and inherited native audit.",
+  "exact_prefix": "Group only identical complete preceding command records, including every battle/outside step and before-state/RNG fingerprint, with identical current state and public menus. Verify byte/history equality after hashing; current public-feature equality or a matching present fingerprint never merges different histories. A fork has at least2 actually observed legal actions. No resimulation, action identity collapse, feature masking or invented unobserved labels.",
+  "same_collector": "Within each four-game family/cohort, require identical collecting probabilities and compute empirical per-action Heart counts/means for description. Return-contrast means observed action groups have different empirical means, not that the branch action caused an individual win. Count shared states, physical forks, repeated outcomes, distinct families, acts and legal menu kinds. These prefixes come from the same stochastic continuation policy but different later policy draws.",
+  "cross_collector": "Separately combine each family's16 recorded histories across the4 collectors to inventory physical same-prefix action support. Require identical public feature/base/active menus but allow collector probabilities to differ. Strip return targets and wins from this inventory; do not conflate changed continuation policies with action effects. Count all fork acts and multi-collector presence. This inventory is not off-policy correction or a training dataset.",
+  "independent_review": "Use pairwise longest-common-prefix divergence across3072 within-cohort route pairs and15360 all16-history pairs, independently reconstruct every fork, action count, membership, context and all aggregates. Do not call the producer's grouping or context routines. Recheck every source digest, cohort/family role, policy stream and complete output manifest. Tests cover multi-level splits, balanced first-split means, matching public states after different histories, inconsistent state/menu rejection and cross-policy target exclusion.",
+  "decision": "Do not launch an early-prefix-only learner as a substitute for the full-policy credit problem. Use verified coverage to choose the next learning design; any later experiment needs a separate explicit data/estimator/budget decision. This audit alone grants no new collection or adoption.",
+  "budget": {
+    "new_games": 0,
+    "native_replays": 0,
+    "optimizer_updates": 0,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "limits": [
+    "The same-prefix criterion is sufficient for matching execution history, not a claim that different histories cannot reach an equivalent full game state.",
+    "Absent same-prefix late contrasts do not imply that terminal-return policy gradients cannot use late actions, or that every other retained project dataset lacks late information.",
+    "Observed action-conditioned return means have1-4 samples; later stochastic choices differ. They are not exact causal action values, learned-policy wins or independent observations across the same family.",
+    "Cross-cohort histories have different collecting and continuation policies; inventory support without pooling return targets.",
+    "The source engine/native review is inherited; this audit has zero new native replay and does not re-open original-game parity. Prismatic Shard remains excluded.",
+    "Historical fitting data and this audit do not satisfy the final512/1024 unused-family acceptance objective. E133 stays closed."
+  ]
+}
