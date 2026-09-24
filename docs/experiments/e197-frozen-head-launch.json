@@ -1,5 +1,5 @@
 {
-  "status": "running_preparation",
+  "status": "running_evaluation",
   "experiment": "E197",
   "recorded_at": "2026-09-24T08:29:25.289575+08:00",
   "owner": {
@@ -24,5 +24,109 @@
   "optimizer_updates_at_registration": 0,
   "new_training_games": 0,
   "new_evaluation_games_at_launch": 0,
-  "unused_acceptance_games": 0
+  "unused_acceptance_games": 0,
+  "evaluation_started_at": "2026-09-24T00:50:26.794325+00:00",
+  "evaluation_owner": {
+    "started_at": "2026-09-24T00:50:26.794325+00:00",
+    "wrapper_pid": 78715,
+    "pid": 78727,
+    "process_group": 78727,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e197-frozen-head-update-20260924-01/pipeline.py",
+      "run"
+    ],
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+    "wrapper_seconds": 14400
+  },
+  "evaluation_owner_sha256": "015674724731bf45fb1b59f3776d052bb0f0e4ee69e10fcc5954b8977a25dc3d",
+  "evaluation_admission_sha256": "75c920a123986d5d59cd7aa2c060764f7bd9f187e2ea40eed8aab1c96c37d454",
+  "learning": {
+    "status": "complete",
+    "experiment": "E197",
+    "optimizer_updates": 870,
+    "trainable_parameters": 192,
+    "inference_parameters": 1061953,
+    "decisions": 55658,
+    "source_games": 512,
+    "source_families": 128,
+    "sampled_training_wins": 50,
+    "new_training_games": 0,
+    "raw_head_kl": 1.6242924067642633e-06,
+    "full_network_target_kl": 0.0003650098625923955,
+    "calibrated_head_kl": 0.00036500986259239537,
+    "calibration_scale": 15.063463668305006,
+    "maximum_gradient_norm": 0.04291555211690924,
+    "curve": [
+      {
+        "epoch": 0,
+        "decisions": 55658,
+        "policy_loss": -0.013876421503697485,
+        "kl": 2.489763429978814e-07,
+        "clip_fraction": 0.0
+      },
+      {
+        "epoch": 1,
+        "decisions": 55658,
+        "policy_loss": -0.013880170045753296,
+        "kl": 1.2497800689482335e-06,
+        "clip_fraction": 0.0
+      }
+    ],
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b",
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "training_review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "completion_sha256": "adb5b6b05949645075f9e4114962f5e0730ceca3ca7cde044fb9d3a0c5bae986",
+    "source_games": 512,
+    "decisions": 55658,
+    "optimizer_updates": 870,
+    "maximum_source_numeric_error": 5.684341886080802e-14,
+    "maximum_raw_head_error": 2.220446049250313e-16,
+    "maximum_calibrated_head_error": 1.1102230246251565e-16,
+    "independently_matched_kl": 0.0003650098625923954,
+    "independent_target_kl": 0.00036500986259239564,
+    "maximum_gradient_norm": 0.042915552116909284,
+    "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b"
+  },
+  "certificate_review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "assigned_games": 640,
+    "counts": {
+      "fit_outside_choices": 66918,
+      "evaluation_outside_choices": 16941
+    },
+    "changed_routes": 260,
+    "controls": 8,
+    "maximum_new_base_games": 268,
+    "fit_changed": 211,
+    "held_changed": 49,
+    "completion_sha256": "ab52746ec971ad3572abcf0bd13f7091aeb3b533f28c895299fd05428bd2c12a",
+    "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+    "training_review_sha256": "4afde5e35ecc1564a079db9aecf4989a83d25a9e8158631da86f4cc6f91be111",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b"
+  },
+  "preparation_exit": {
+    "finished_at": "2026-09-24T00:32:56.121485+00:00",
+    "exit_code": 0,
+    "requested_signal": null,
+    "error": null,
+    "cleanup": {
+      "initial_members": [],
+      "remaining_members": [],
+      "clean": true,
+      "process_group": 70472
+    },
+    "log_sha256": "3da6be49e3978bd5e3e4c668450cc19d3a7dbb3b5137671a72053da90a32cc58",
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963"
+  },
+  "preparation_controller_sha256": "924185f7de105d82dce590525dbed9b2e810a10d917cc8f8c157e5622298b70a",
+  "luna_preparation_delivery_sha256": "d841341cc8829f025c330d0cf85aa119ff55adeae9ce722c0bc6c6acd91cec98",
+  "new_base_games": 268
 }
