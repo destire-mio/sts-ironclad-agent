@@ -1,6 +1,6 @@
 {
   "status": "review_complete_no_new_learning_admitted",
-  "updated_at": "2026-09-24T05:35:21.620353+00:00",
+  "updated_at": "2026-09-24T06:00:35.265238+00:00",
   "goal": {
     "scope": "Ironclad A20 natural start to Heart, keys, double Act3 bosses, Act4; no Prismatic Shard; fixed existing MCTS and neural outside decisions",
     "acceptance_families": 1024,
@@ -64,7 +64,7 @@
     "natural_development_games": 0,
     "final_acceptance_games": 0
   },
-  "stop_rule": "Coverage failed before action-return testing. Stop archive-only implementations; no replacement states, pooled collectors, reward-based filtering, lowered gates or automatic expansion. Core action-effect hypothesis remains untested by these inventories.",
+  "stop_rule": "Original archive-only four-forced-pair gate remains failed. The separately declared legacy observational root-preference test completes below its signal gate. No roots, collectors, repeats, thresholds or budgets are changed to rescue either result; no learning or new games are admitted.",
   "future_admission_requirements": [
     "one distinguishing prediction relative to old paired/root-action experiments",
     "one exact continuation policy matching the intended interpretation",
@@ -78,6 +78,23 @@
     "e199-family-diversity-result.json": "e4a7c7895e2ac3eeecf4a108f52a5c81d18ad02bf60ce0775da3f45853a3731f",
     "research-signal-inventory-result.json": "b9c29748383e0d84fe1d732b8ac8651eb0ca898ee5b5009bced7914552185791",
     "research-legacy-root-result.json": "bb2a3198fb60268610be2690384c8ee87818eb84274e6c652bbf3655950f2e42",
-    "research-budget-sensitivity.json": "c5b9cd7c0c2127603900e93ba152b691d66028142bb5189301c061ae52681d81"
+    "research-budget-sensitivity.json": "c5b9cd7c0c2127603900e93ba152b691d66028142bb5189301c061ae52681d81",
+    "research-legacy-suffix-coverage-result.json": "7512c7f1ad2715be239772c2948975a1f2945223e4330c4c382dc88544d0d0a7",
+    "research-legacy-action-repeatability-result.json": "3485649da16bbc4170e3da597eba421f239729d25a595d896d1f431f3f9d49fc"
+  },
+  "supplemental_legacy_suffix_review": {
+    "original_origin_gate_unchanged": true,
+    "observed_act3_forks": 1285,
+    "act3_families_with_observed_forks": 255,
+    "selected_observational_roots": 131,
+    "first_half_teacher_changes": 5,
+    "positive_confirmations": 2,
+    "zero_confirmations_among_changes": 3,
+    "mean_conditional_reward_difference": 0.005859375,
+    "conditional_randomization_p": 0.3333333333333333,
+    "support_gate_passed": false,
+    "four_forced_pair_protocol_passed": false,
+    "public_transfer_tested": false,
+    "interpretation": "Zero alternative coverage at the collection origin did not describe the entire suffix. A separately declared retrospective observational confirmation remains below its signal gate; it does not reopen the original gate or any learning recipe."
   }
 }

@@ -1,0 +1,66 @@
+{
+  "status": "complete_descriptive_inventory",
+  "protocol_sha256": "bf0795a53d49aede23d04fcb35e45424fb4d95d6cb0a8ed5ae8696c34a57e9ff",
+  "runner_sha256": "22b9ba578bd4fc85e674f158f7bb498305dc36b7463ee2d7c6b23c192fe78a61",
+  "source_hashes": {
+    "plan.json": "857f28f7cbee89f045bead13d51fbd58996d1e86503f11c6a3e2a5e419aaf09c",
+    "roots.json": "dd0953e407a305cd320657068de43c1b48614e05a0c2a71c40888af39c7cf7f0",
+    "identity.json": "9d0727199a15041f214d69044f1031c6168608845385e04acac8198803573258",
+    "manifest.json": "e3f53fc997324a13810e24b93230180888c0ebb57479ff01c729344c4698f84d",
+    "iterations/0/plan.json": "546e27296a9eb178c1ac8eb8aa1a54a468df8629003d57ef2cd463f375e2cd25",
+    "iterations/0/results-index.json": "a8599a411812a855946692e860c9f05deaf67a223eedc0a565b640eab66ba352",
+    "iterations/0/label-verification.json": "32a42a1d9e6a509fa67ba0ee3ffe46057ca6a3cb7a0d181336b57349f975c964"
+  },
+  "collector_iteration": 0,
+  "source_records": 2048,
+  "families": 256,
+  "by_act": {
+    "2": {
+      "counts": {
+        "shared_nodes": 1174,
+        "observed_forks": 186,
+        "all_eight_present": 143,
+        "split_minimum_one": 53
+      },
+      "unique_families": {
+        "observed_forks": 143,
+        "all_eight_present": 143,
+        "split_minimum_one": 52
+      }
+    },
+    "3": {
+      "counts": {
+        "shared_nodes": 7645,
+        "observed_forks": 1285,
+        "all_eight_present": 113,
+        "split_minimum_one": 93,
+        "split_minimum_two": 2
+      },
+      "unique_families": {
+        "observed_forks": 255,
+        "all_eight_present": 113,
+        "split_minimum_one": 85,
+        "split_minimum_two": 2
+      }
+    },
+    "4": {
+      "counts": {
+        "shared_nodes": 6,
+        "observed_forks": 2
+      },
+      "unique_families": {
+        "observed_forks": 2
+      }
+    }
+  },
+  "new_games": 0,
+  "native_replays": 0,
+  "training_updates": 0,
+  "natural_evaluation_games": 0,
+  "return_effect_test_performed": false,
+  "outcome_based_filter": false,
+  "admitted_learning_roots": 0,
+  "original_origin_gate_unchanged": true,
+  "sampling_or_training_admitted": false,
+  "interpretation": "Coverage after the origin does not amend the failed origin protocol. Observed actions on separate streams are not forced CRN pairs or independent family units; counts neither prove positive action effects nor authorize learning or collection."
+}

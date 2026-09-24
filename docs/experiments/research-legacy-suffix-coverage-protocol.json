@@ -1,0 +1,36 @@
+{
+  "question": "Does a zero alternative count at the E36 collection origin also describe the entire retained suffix? Descriptive falsification of a possible overgeneralization; no replacement root or return-effect test.",
+  "registered_at": "2026-09-24T05:45:24.582353+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01",
+  "collector_iteration": 0,
+  "source_hashes": {
+    "plan.json": "857f28f7cbee89f045bead13d51fbd58996d1e86503f11c6a3e2a5e419aaf09c",
+    "roots.json": "dd0953e407a305cd320657068de43c1b48614e05a0c2a71c40888af39c7cf7f0",
+    "identity.json": "9d0727199a15041f214d69044f1031c6168608845385e04acac8198803573258",
+    "manifest.json": "e3f53fc997324a13810e24b93230180888c0ebb57479ff01c729344c4698f84d",
+    "iterations/0/plan.json": "546e27296a9eb178c1ac8eb8aa1a54a468df8629003d57ef2cd463f375e2cd25",
+    "iterations/0/results-index.json": "a8599a411812a855946692e860c9f05deaf67a223eedc0a565b640eab66ba352",
+    "iterations/0/label-verification.json": "32a42a1d9e6a509fa67ba0ee3ffe46057ca6a3cb7a0d181336b57349f975c964"
+  },
+  "scope": "All eight stochastic suffixes of the original 256 families at the initial frozen collector, original full native-command history and state/RNG fingerprints. Different histories or collectors never merge. No root is chosen for training; inventory all forks.",
+  "counts": [
+    "all shared states and observed forks by act",
+    "forks reached by all eight histories",
+    "forks with both observed top-probability prechosen actions in discovery repeats0..3 and confirmation4..7",
+    "strict at least2 observations per prechosen action per half",
+    "repeat split groups with at least1 observation each, descriptive only"
+  ],
+  "action_identity": "At a shared node select the top two collecting probabilities with original menu-index tie break, before looking at which actions were sampled; list observed action coverage but never filter by rewards.",
+  "outcome_use": "Do not load status, target, winner metadata or terminal to select, count or rank forks; terminal outcomes remain absent from the output.",
+  "stop_rule": "Finish inventory once. Existing origin protocol remains failed. No node becomes a new admitted root, no return signs tested, no significance claims, no lowered origin gate, no learning, and no sampling follows these counts.",
+  "budget": {
+    "families": 256,
+    "source_stochastic_records": 2048,
+    "other_collectors": 0,
+    "maximum_wall_seconds": 180,
+    "new_games": 0,
+    "native_replays": 0,
+    "training_updates": 0,
+    "natural_evaluation_games": 0
+  }
+}
