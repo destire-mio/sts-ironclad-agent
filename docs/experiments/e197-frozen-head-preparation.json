@@ -1,0 +1,15 @@
+{
+  "status": "prepared",
+  "experiment": "E197",
+  "prepared_at": "2026-09-24T08:27:32.915287+08:00",
+  "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+  "runner_sha256": "69f851edd84d2905528357488f6f12d740671e07f1416ff5d20830677c01901e",
+  "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+  "mechanism_tests": 8,
+  "tests_passed": true,
+  "source_registration_verified": true,
+  "new_training_games": 0,
+  "optimizer_updates": 0,
+  "new_evaluation_games": 0,
+  "unused_acceptance_games": 0
+}
