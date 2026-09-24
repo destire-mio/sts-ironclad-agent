@@ -1,0 +1,79 @@
+{
+  "status": "completed_existing_evidence_reconciliation",
+  "at": "2026-09-24T06:44:35.569431+00:00",
+  "classification": "Old value propagation, observed-action weighting and parent-preserving teacher objectives are a previously tried mechanism family, not an untried response to E199.",
+  "scope": "No new experiment, model inference, source rollout, original-game comparison or causal attribution. Recount archived diagnostic rows and bind their earlier source reviews.",
+  "e154_first_divergences_recounted": 146,
+  "e154_losses": {
+    "cloning": {
+      "lost": 10,
+      "recorded_worse_parent_continuation": 10
+    },
+    "iql": {
+      "lost": 10,
+      "recorded_worse_parent_continuation": 9
+    }
+  },
+  "e159_raw_policy_rows_recounted": 4608,
+  "e159_held_families": 1536,
+  "e159_held_path_steps": 207298,
+  "e159_held_statuses": {
+    "known_nonwin": 1376,
+    "known_heart_win": 149,
+    "unknown_unrecorded_action": 11
+  },
+  "e159_inherited_all_changed_actions_unrecorded": true,
+  "e159_natural_coverage_inherited": {
+    "assigned": 128,
+    "checked_outside_actions": 17556,
+    "fully_covered": 126,
+    "unrecorded_choice": 2
+  },
+  "e154_to_e156_to_e158": {
+    "historical_same_128_family_parent": 13,
+    "cloning": 3,
+    "iql": 4,
+    "exact_graph_weights": 7,
+    "parent_preserving_teacher": 14,
+    "e158_unchanged": 126,
+    "e158_changed": 2,
+    "adopted": false
+  },
+  "source_result_sha256": {
+    "e144-continuous-learning-result.json": "f67b8645aab0ade84a2379e7f33b22f74170aa9f26afd5f59ef0c7aec7e42400",
+    "e146-continuous-diagnosis-result.json": "78fe275aa675fbc0a8dd75247d946ff17608dd329b07dc7bcfe303b85987c4d2",
+    "e147-continuous-branch-probe-result.json": "fd0680e2c794f2cb33332a45a69cf7db81c3b51ed8e3708b16f2f1b3677e0396",
+    "e154-offline-control-result.json": "dcaf7fde84fb5dbf29a03f5c4e7f13eb5417b374a6893faf5ec0f144018df856",
+    "e155-control-diagnosis-result.json": "6c9a73cfd7b1fc2b0311b90ad7dff8d305e6c3628836c96248721eb812b475b0",
+    "e156-exact-control-result.json": "d4405b3671136911cc68047a0b6044d9c7d881f85d09905b0f2ce3f5b436416d",
+    "e157-actor-target-diagnosis-result.json": "08e0673b0754407491e66d927c5ecb83b61b333ef4818e3876ae2f1362e052bd",
+    "e158-parent-preserving-result.json": "ad997aabf1e2b548bafb74e62a1ae382551c6e5a0574afcf60f88a3a362a9dd9",
+    "e159-recorded-policy-diagnosis-result.json": "3ccb17430f664b57870396e79da784d29b5e6faf719731fd3bddc5ddb0227e37",
+    "e159-target-consistency-probe.json": "b553b03d8ad5556022e825c4b7e0d830fb8bbf57b5ec56886fb34fdd8089e6fc",
+    "e160-expected-improvement-result.json": "3882cc8908b85d6ff22f1ee2dd1ff14c148fdf061587aab0b1203bc45f0773e7"
+  },
+  "archive_sha256": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01/completion.json": "b4ddc3ea315c5b36021951dfdc2dc1f02d7f2ef0149095f74af031988e050ede",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01/result-review.json": "04ffa1bfe166f14c274d986d2a9650f7a28f2ca6166e50de8c6224e2afb90478",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e155-control-diagnosis-20260922-01/first-divergence-private.json": "99552f7b7d19ef3181e26e612a11ada8407c6bff34ce108c70dd06b5ce90d3da",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02/completion.json": "b7981fdb1a764dfa7cfa5d466799cadd5e4d23da5b246a8c5a95e93d13f06885",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02/result-review.json": "be390b7a4088d9eb5de1d7afc20bcac9b2a440b3180ab42ee0f87a16c9fdc76c",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02/results-private.json": "60c265310a04fc2d8bbb460fcd47895de43471ddde9e93919b29e2b732bb41c8",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e159-recorded-policy-diagnosis-20260922-02/held-paths-private.json": "8b9cccda3724cf8b13f0872e1013373716ff8191689db70ede25952758e8964a"
+  },
+  "elapsed_seconds": 0.0572671249974519,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "new_native_replays": 0,
+  "model_forward_passes": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "decision": "Do not repeat E144/E154/E156/E158 using missing post-intervention support as the sole new rationale. Preserve policy-induced distribution shift as a competing explanation, not an established root cause. Replacing bootstrapped critic weights with exact graph weights and preserving parent choices on ties were already tried; neither supplies qualifying benefit over the parent.",
+  "limits": [
+    "An observed harmful first action under frozen parent continuation is counterevidence to exclusively unsupported decisions; it does not attribute the full learned-policy loss to that action.",
+    "Recorded-graph best outcomes use future terminal information and depend on a limited transition graph. They are not attainable public-policy wins or fixed-combat ceilings.",
+    "E159 fit rows count each family twice; held rows count once. Unknown graph actions remain unknown rather than assigned failure or success.",
+    "The E159 teacher-consistency counterexample is synthetic. It establishes a possible objective mismatch, not real public-state collision frequency or a measured cause. E160 already replaced imitation counts by P(gain)-P(loss), and E175 subsequently repaired continuation semantics.",
+    "Source neural inference and native replay are inherited from the archived reviews, not rerun during this reconciliation. No new mechanism or action-return effect is established."
+  ]
+}

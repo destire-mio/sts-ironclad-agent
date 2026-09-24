@@ -1,6 +1,6 @@
 {
   "status": "review_complete_no_new_learning_admitted",
-  "updated_at": "2026-09-24T06:31:38.557441+00:00",
+  "updated_at": "2026-09-24T06:47:38.284274+00:00",
   "goal": {
     "scope": "Ironclad A20 natural start to Heart, keys, double Act3 bosses, Act4; no Prismatic Shard; fixed existing MCTS and neural outside decisions",
     "acceptance_families": 1024,
@@ -36,7 +36,11 @@
     "E178/E179",
     "E183",
     "E194",
-    "E197"
+    "E197",
+    "E144",
+    "E154",
+    "E156",
+    "E158"
   ],
   "next_single_hypothesis": null,
   "archive_checks": {
@@ -81,7 +85,8 @@
     "research-budget-sensitivity.json": "c5b9cd7c0c2127603900e93ba152b691d66028142bb5189301c061ae52681d81",
     "research-legacy-suffix-coverage-result.json": "7512c7f1ad2715be239772c2948975a1f2945223e4330c4c382dc88544d0d0a7",
     "research-legacy-action-repeatability-result.json": "3485649da16bbc4170e3da597eba421f239729d25a595d896d1f431f3f9d49fc",
-    "research-baseline-variance-result.json": "79c69b8f4096a793d944e86737307221596ae9615898d98d4e0b3511517b87fb"
+    "research-baseline-variance-result.json": "79c69b8f4096a793d944e86737307221596ae9615898d98d4e0b3511517b87fb",
+    "research-offline-control-review.json": "b5cdfff148f5b03d0337174426042c313f29ea97c818e653470ba53c3f86bb58"
   },
   "supplemental_legacy_suffix_review": {
     "original_origin_gate_unchanged": true,
@@ -119,5 +124,26 @@
     "robust_support": false,
     "policy_adoption": false,
     "does_not_reopen_closed_recipe": true
+  },
+  "offline_control_reconciliation": {
+    "new_experiment": false,
+    "question_answered_by_existing_evidence": true,
+    "e154_known_harmful_first_actions_among_lost_parent_wins": {
+      "cloning": [
+        10,
+        10
+      ],
+      "iql": [
+        9,
+        10
+      ]
+    },
+    "e156_exact_graph_weights_wins": 7,
+    "e158_parent_preserving_wins": 14,
+    "same_historical_parent_wins": 13,
+    "e158_unchanged_families": 126,
+    "e159_held_graph_unknown_actions": 11,
+    "missing_support_is_not_established_as_unique_cause": true,
+    "retraining_admitted": false
   }
 }
