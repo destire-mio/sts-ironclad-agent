@@ -1,0 +1,84 @@
+{
+  "status": "complete_reviewed",
+  "experiment": "E196",
+  "result": {
+    "status": "complete",
+    "experiment": "E196",
+    "source_update": 3,
+    "source_optimizer_updates": 870,
+    "comparison": {
+      "families": 128,
+      "assigned_games": 512,
+      "baseline_wins": 50,
+      "candidate_wins": 51,
+      "net_gain": 1,
+      "both_win": 44,
+      "candidate_only": 7,
+      "baseline_only": 6,
+      "both_fail": 455,
+      "improved_families": 7,
+      "harmed_families": 6,
+      "unchanged_family_win_counts": 115,
+      "family_net_gain_histogram": {
+        "-1": 6,
+        "0": 115,
+        "1": 7
+      }
+    },
+    "changed_routes": 170,
+    "certified_unchanged_routes": 342,
+    "control_routes": 4,
+    "new_base_games": 174,
+    "winner_replans": 16,
+    "new_games": 190,
+    "source_routes_reused_without_rerun": 338,
+    "zero_faults": true,
+    "actor_updates": 0,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "candidate_sha256": "7decdb158e80c4a0c0f8c557facfc96dc15598c9e742c4d625cd738ab91e12f9",
+    "counts": {
+      "new_native_outside_choices": 28425,
+      "new_native_steps": 32304
+    },
+    "training_path_likelihood_diagnostic": {
+      "mean_weight": 1.0876536481581338,
+      "maximum_weight": 7.313881444735612,
+      "empirical_ess": 354.1345684495265,
+      "weighted_wins_sum": 123.5497438037966,
+      "limits": "In-sample path likelihood reweighting, not an unbiased or independent policy evaluation; actor fitted these paths."
+    },
+    "limits": [
+      "This measures only the last870 updates from actor-after-2 to actor-after-3, not the cumulative effect of all3444 updates. A flat last increment cannot prove that earlier updates learned nothing.",
+      "In-sample training-family outcomes do not establish held-family gains, population performance or the final512/1024 unused acceptance target.",
+      "A positive final increment alone cannot justify extending the closed E191 recipe, sampling budget or hyperparameter grid.",
+      "Original-game parity remains deferred; Prismatic Shard excluded. Source errors, missing inputs and replay faults are not death labels. No E133 restart, new seed search, actor training or candidate adoption."
+    ]
+  },
+  "counts": {
+    "certificate_outside_choices": 66191,
+    "native_outside_choices": 31693,
+    "native_steps": 36038
+  },
+  "independently_certified_routes": 512,
+  "native_new_routes": 174,
+  "native_replan_routes": 16,
+  "maximum_numpy_probability_error": 5.329070518200751e-15,
+  "maximum_path_log_likelihood_error": 2.842170943040401e-14,
+  "completion_sha256": "5ef5427adb26c350f2644b658789ea4b0413acfd4386ba60cefd770b8936eee0",
+  "registration_sha256": "6175c479da56c1ada831f14fed7d0c83da9a380fb559d75e445c98bb7d1d42fa",
+  "reviewer_sha256": "8daca74d44e60b3b6326735227b9831bf5d8efd4c6d004493ab7ad6434656b16",
+  "actor_updates": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "root_review_receipt_sha256": "2a29c9319e83fd0b6c846be5ef8c938d863a92a95fd47c44dbca90a613a87558",
+  "root_verified_at": "2026-09-24T07:58:20.898272+08:00",
+  "owned_exit_sha256": "9937fee4e50556c3a3df6d0d70ba55b4c10d7d320c2f7c05129b68d6a0cfcbad",
+  "controller_exit_sha256": "d422ff79b92c3b13c56957f75717b0af18b188e347303a1f17d9cdbef71671c2",
+  "finished_at_shanghai": "2026-09-24T07:44:21.067084+08:00",
+  "processes_absent": true,
+  "luna_preparation_and_evaluation_delivered": true,
+  "old_winning_path_mean_probability_ratio": 2.470994876075932,
+  "interpretation": "The final870 updates increase the probability of the50 recorded winning paths by a mean factor2.470995, but matched complete-game wins change50->51/512, gaining7 and losing6 in7 improved/6 harmed families. The weighted path-return sum123.549744 is an in-sample likelihood diagnostic, not123.55 simulated wins or an unbiased estimate. This locates a gap between fitting recorded successful paths and this final increment's complete-game gains; it does not establish a unique cause, prove every earlier update useless, or rule out data insufficiency.",
+  "closure": "Complete the one precommitted final-update diagnosis. No policy adoption, checkpoint selection, new training, sampling expansion, E133 restart or original E191 recipe extension follows. The eventual512/1024 unused-family target remains unmet."
+}
