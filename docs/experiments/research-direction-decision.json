@@ -1,6 +1,6 @@
 {
   "status": "review_complete_no_new_learning_admitted",
-  "updated_at": "2026-09-24T06:00:35.265238+00:00",
+  "updated_at": "2026-09-24T06:31:38.557441+00:00",
   "goal": {
     "scope": "Ironclad A20 natural start to Heart, keys, double Act3 bosses, Act4; no Prismatic Shard; fixed existing MCTS and neural outside decisions",
     "acceptance_families": 1024,
@@ -38,7 +38,7 @@
     "E194",
     "E197"
   ],
-  "next_single_hypothesis": "A root-action preference derived from one set of independent policy streams retains positive Heart return difference in independent confirmation streams under the same frozen continuation policy.",
+  "next_single_hypothesis": null,
   "archive_checks": {
     "current_natural_logs": {
       "source_games": 3584,
@@ -64,7 +64,7 @@
     "natural_development_games": 0,
     "final_acceptance_games": 0
   },
-  "stop_rule": "Original archive-only four-forced-pair gate remains failed. The separately declared legacy observational root-preference test completes below its signal gate. No roots, collectors, repeats, thresholds or budgets are changed to rescue either result; no learning or new games are admitted.",
+  "stop_rule": "Original archive-only four-forced-pair gate remains failed. The separately declared observational root-preference return test and fixed E195 baseline variance diagnostic both complete below their conditions. No family, root, collector, predictor, parameter subset, repetition count, threshold or budget is changed to rescue a result; no policy training or new games are admitted. Variance is diagnostic, not a substitute for action return or complete-game gain.",
   "future_admission_requirements": [
     "one distinguishing prediction relative to old paired/root-action experiments",
     "one exact continuation policy matching the intended interpretation",
@@ -80,7 +80,8 @@
     "research-legacy-root-result.json": "bb2a3198fb60268610be2690384c8ee87818eb84274e6c652bbf3655950f2e42",
     "research-budget-sensitivity.json": "c5b9cd7c0c2127603900e93ba152b691d66028142bb5189301c061ae52681d81",
     "research-legacy-suffix-coverage-result.json": "7512c7f1ad2715be239772c2948975a1f2945223e4330c4c382dc88544d0d0a7",
-    "research-legacy-action-repeatability-result.json": "3485649da16bbc4170e3da597eba421f239729d25a595d896d1f431f3f9d49fc"
+    "research-legacy-action-repeatability-result.json": "3485649da16bbc4170e3da597eba421f239729d25a595d896d1f431f3f9d49fc",
+    "research-baseline-variance-result.json": "79c69b8f4096a793d944e86737307221596ae9615898d98d4e0b3511517b87fb"
   },
   "supplemental_legacy_suffix_review": {
     "original_origin_gate_unchanged": true,
@@ -96,5 +97,27 @@
     "four_forced_pair_protocol_passed": false,
     "public_transfer_tested": false,
     "interpretation": "Zero alternative coverage at the collection origin did not describe the entire suffix. A separately declared retrospective observational confirmation remains below its signal gate; it does not reopen the original gate or any learning recipe."
+  },
+  "completed_hypothesis_checks": [
+    "The declared retrospective root-action preference confirmation ends below its return gate.",
+    "The fixed E195 baseline raw-gradient variance diagnostic ends below its robustness condition; positive point estimates are not policy evidence."
+  ],
+  "baseline_variance_diagnostic": {
+    "source_games": 512,
+    "source_families": 128,
+    "fixed_saved_predictors": 3,
+    "new_games": 0,
+    "new_fits": 0,
+    "actor_updates": 0,
+    "parameters": 1061953,
+    "aggregate_relative_variance_reduction_point_estimate": 0.16552776997889018,
+    "fold_relative_reduction_point_estimates": [
+      0.18032255239880746,
+      0.33948389555556013,
+      0.035839286455324304
+    ],
+    "robust_support": false,
+    "policy_adoption": false,
+    "does_not_reopen_closed_recipe": true
   }
 }

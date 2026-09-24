@@ -1,0 +1,157 @@
+{
+  "status": "complete",
+  "question": "Does the already fitted, family-excluded E195 state baseline reduce the full-parameter trace variance of the unclipped four-episode score-function estimator relative to the original leave-other-three-out estimator?",
+  "families": 128,
+  "reused_games": 512,
+  "decisions": 55473,
+  "reused_collection_wins": 37,
+  "parameters": 1061953,
+  "folds": [
+    {
+      "fold": 0,
+      "families": 38,
+      "loo_trace_variance": 25.50755536694996,
+      "state_trace_variance": 20.907967877727643,
+      "relative_reduction": 0.18032255239880746,
+      "mean_difference": 4.599587489222316,
+      "difference_bootstrap95": [
+        -7.998613722490456,
+        20.887116887268785
+      ],
+      "ten_percent_margin_bootstrap95": [
+        -8.56964890937632,
+        15.498979649669323
+      ],
+      "negative_loo_estimates": 0,
+      "zero_loo_estimates": 34,
+      "lower_state_estimates": 4,
+      "higher_state_estimates": 34
+    },
+    {
+      "fold": 1,
+      "families": 47,
+      "loo_trace_variance": 45.38367094599093,
+      "state_trace_variance": 29.976645538634237,
+      "relative_reduction": 0.33948389555556013,
+      "mean_difference": 15.407025407356691,
+      "difference_bootstrap95": [
+        0.5243092127394097,
+        33.48661346513846
+      ],
+      "ten_percent_margin_bootstrap95": [
+        -1.4961618518080686,
+        25.949145018583298
+      ],
+      "negative_loo_estimates": 0,
+      "zero_loo_estimates": 38,
+      "lower_state_estimates": 9,
+      "higher_state_estimates": 37
+    },
+    {
+      "fold": 2,
+      "families": 43,
+      "loo_trace_variance": 69.10915900221417,
+      "state_trace_variance": 66.63233605604727,
+      "relative_reduction": 0.035839286455324304,
+      "mean_difference": 2.476822946166905,
+      "difference_bootstrap95": [
+        -29.49410335529464,
+        29.22225328913311
+      ],
+      "ten_percent_margin_bootstrap95": [
+        -35.423241571071955,
+        20.404751731197365
+      ],
+      "negative_loo_estimates": 0,
+      "zero_loo_estimates": 31,
+      "lower_state_estimates": 9,
+      "higher_state_estimates": 31
+    }
+  ],
+  "aggregate_descriptive": {
+    "families": 128,
+    "loo_trace_variance": 47.45323027735063,
+    "state_trace_variance": 39.598402891246025,
+    "relative_reduction": 0.16552776997889018,
+    "mean_difference": 7.854827386104603,
+    "difference_bootstrap95": [
+      -4.971717617364757,
+      19.849661250777768
+    ],
+    "ten_percent_margin_bootstrap95": [
+      -8.929336460552015,
+      13.812342156577852
+    ],
+    "negative_loo_estimates": 0,
+    "zero_loo_estimates": 103,
+    "lower_state_estimates": 22,
+    "higher_state_estimates": 102
+  },
+  "diagnostic_support": false,
+  "elapsed_seconds": 59.058772790944204,
+  "maximum_gradient_error": 8.43769498715119e-15,
+  "maximum_probability_error": 2.1094237467877974e-15,
+  "maximum_prediction_error": 0.0,
+  "source_episode_hashes_verified": 512,
+  "new_games": 0,
+  "baseline_fits": 0,
+  "actor_updates": 0,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "limits": [
+    "Not clipped PPO, minibatch averaging, random menu-count normalization, AdamW, or causal policy improvement.",
+    "The original state baseline fits exclude each held family. Folds share fitting data, so their outputs are dependent; fold-conditional bootstraps are descriptive. The all-family aggregate interval is descriptive only and has no confirmatory population interpretation.",
+    "Historical data and earlier prediction results were already examined. This retrospective audit does not remove cross-experiment selection or quantify uncertainty from refitting nuisance predictors.",
+    "Conditional independence concerns four independent policy sampling streams under the same game family and fixed initial actor; hidden game RNG is unchanged.",
+    "An unbiased four-observation variance estimate can be negative. These values are retained without clipping or outcome-based exclusions.",
+    "This result cannot reopen binary whole-game/four-rollout/shared-advantage recipe or justify extra training using a proxy.",
+    "No change to policy adoption, current simulator scope, full-game scores, or unused 512/1024 acceptance."
+  ],
+  "gradient_comparison_pairs": 1024,
+  "scope": "Retrospective diagnostic of the existing E195 predictor; no new policy experiment.",
+  "protocol_sha256": "2cad32716bba315a4249857305092efa5e1e001d661b1f8e6f6d0d2ef17336b6",
+  "registration_sha256": "101ce2ed17e3aa9a39dc9edbd438733fa6dad65ee55703570a1f1094d8c67c4b",
+  "root_receipt": {
+    "status": "complete_reviewed",
+    "completion_sha256": "43ecef2bcb176f46267e95c4bc187341dccb87a9b522067ecf8d54cdd8601646",
+    "report_sha256": "2c32cb3c7edfd0e255ebb712f9f8d984993c8973198b5c3118f206703a092e0b",
+    "protocol_sha256": "2cad32716bba315a4249857305092efa5e1e001d661b1f8e6f6d0d2ef17336b6",
+    "all_family_gram_variances_recomputed": 128,
+    "all_source_rewards_recounted": 512,
+    "source_wins": 37,
+    "independent_formula": "squared norm of observed LOO mean minus average disjoint-pair kernel product; state score covariance from an 8x8 Gram transform",
+    "maximum_variance_error": 4.035882739117369e-12,
+    "elapsed_seconds": 3.127468541963026,
+    "new_games": 0,
+    "actor_updates": 0,
+    "acceptance_games": 0
+  },
+  "tests": {
+    "command": "python -m pytest -q tests/test_research_baseline_variance.py",
+    "passed": 4,
+    "coverage": [
+      "exact finite-distribution gradient means and variance estimates",
+      "better return prediction can increase score-function variance",
+      "negative variance estimates and all-failure groups retained",
+      "full-vector multi-outcome enumeration"
+    ]
+  },
+  "actual_budget": {
+    "reused_games": 512,
+    "saved_predictors": 3,
+    "new_model_fits": 0,
+    "new_games": 0,
+    "actor_updates": 0,
+    "native_replays": 0,
+    "complete_policy_evaluations": 0,
+    "manual_gradient_vectors": 1024,
+    "autograd_gradient_vectors": 1024,
+    "diagnostic_wall_seconds": 59.058772790944204,
+    "root_review_wall_seconds": 3.127468541963026
+  },
+  "decision": "Fixed diagnostic completes without its predeclared robust-variance support. Positive point estimates preserve the baseline hypothesis, but do not establish variance reduction or policy benefit. No predictor refit, gradient-variance grid, actor update, data expansion, or natural evaluation is admitted.",
+  "literature": {
+    "source": "https://www.jmlr.org/papers/v5/greensmith04a.html",
+    "use": "Baseline prediction accuracy and gradient-estimator variance are distinct. The cited paper studies average reward/GPOMDP; this finite-episodic audit uses its own four-rollout estimator and exact-enumeration tests, not an unqualified transfer of that theorem."
+  }
+}
