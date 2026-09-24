@@ -1,0 +1,13 @@
+{
+  "status": "prepared_not_launched",
+  "experiment": "E199",
+  "prepared_at": "2026-09-24T02:34:58.424416+00:00",
+  "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+  "runner_sha256": "2c7995a75d96c0dc5c005abd1c3c6594930193cb1c4912001a59b6a842b8289e",
+  "reviewer_sha256": "22ee1a20201b69681b4301c01c650814e5111ec7213da681675c12b5a0f06843",
+  "tests_passed": 24,
+  "new_mechanism_tests": 15,
+  "new_games": 0,
+  "new_optimizer_updates": 0,
+  "unused_acceptance_games": 0
+}

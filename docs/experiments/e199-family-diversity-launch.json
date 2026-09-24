@@ -1,0 +1,22 @@
+{
+  "status": "preflight_running",
+  "experiment": "E199",
+  "process": {
+    "started_at": "2026-09-24T02:35:11.848822+00:00",
+    "wrapper_pid": 18920,
+    "pid": 18932,
+    "process_group": 18932,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e199-family-diversity-20260924-01/pipeline.py",
+      "preflight"
+    ],
+    "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+    "wrapper_seconds": 1800
+  },
+  "registration_sha256": "5b42f7646a2ee762719be490a87130f3a0cdef6369b937f0125d13895eefe122",
+  "new_training_assignments": 0,
+  "new_optimizer_updates": 0,
+  "unused_acceptance_games": 0
+}
