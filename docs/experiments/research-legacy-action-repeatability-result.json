@@ -1,0 +1,109 @@
+{
+  "status": "complete_retrospective_signal_diagnostic",
+  "protocol_sha256": "3bc4beb3d262185589c2a420bdb752e7d8cc31290a64f57ae8feebafa8b7836c",
+  "runner_sha256": "be3044aa60451444abc2a38c43aecb09378d0224bf37e3916b0ec5b260865f0f",
+  "source_files_verified": 2048,
+  "original_families": 256,
+  "supported_families": 131,
+  "unsupported_families_retained": 125,
+  "source_stochastic_wins": 174,
+  "source_stochastic_episodes": 2048,
+  "collector_iteration": 0,
+  "by_original_role": {
+    "fit": {
+      "families": 192,
+      "supported_roots": 96,
+      "teacher_changes": 2,
+      "confirmation_positive": 1,
+      "confirmation_negative": 0,
+      "confirmation_zero": 95,
+      "sum_reward_difference": 0.5,
+      "unsupported_zero_improvement": 96
+    },
+    "label_holdout": {
+      "families": 64,
+      "supported_roots": 35,
+      "teacher_changes": 3,
+      "confirmation_positive": 1,
+      "confirmation_negative": 0,
+      "confirmation_zero": 34,
+      "sum_reward_difference": 1.0,
+      "unsupported_zero_improvement": 29
+    }
+  },
+  "by_act": {
+    "3": {
+      "supported_roots": 79,
+      "teacher_changes": 4,
+      "confirmation_positive": 2,
+      "confirmation_negative": 0,
+      "confirmation_zero": 77,
+      "sum_reward_difference": 1.5
+    },
+    "2": {
+      "supported_roots": 52,
+      "teacher_changes": 1,
+      "confirmation_positive": 0,
+      "confirmation_negative": 0,
+      "confirmation_zero": 52,
+      "sum_reward_difference": 0.0
+    }
+  },
+  "discovery_sign_to_confirmation_sign": {
+    "0:0": 112,
+    "-1:-1": 3,
+    "-1:0": 3,
+    "1:0": 3,
+    "-1:1": 4,
+    "0:-1": 3,
+    "0:1": 1,
+    "1:1": 2
+  },
+  "sum_confirmation_reward_difference": 1.5,
+  "mean_confirmation_reward_difference": 0.005859375,
+  "descriptive_family_bootstrap95": [
+    0.0,
+    0.015625
+  ],
+  "exact_one_sided_conditional_randomization_p": 0.3333333333333333,
+  "support_gate_passed": false,
+  "gate": {
+    "denominator_families": 256,
+    "minimum_sum_confirmation_reward_difference": 16,
+    "minimum_mean_reward_difference": 0.0625,
+    "maximum_one_sided_conditional_randomization_p": 0.025,
+    "maximum_budget_expansion_on_failure": 0
+  },
+  "new_games": 0,
+  "native_replays": 0,
+  "training_updates": 0,
+  "natural_evaluation_games": 0,
+  "policy_adoption": false,
+  "four_forced_pair_protocol_passed": false,
+  "public_policy_transfer_tested": false,
+  "limits": [
+    "deployable success rate",
+    "public-policy cross-family transfer",
+    "current-runtime efficacy",
+    "original four-forced-pair design result",
+    "unused-family acceptance"
+  ],
+  "decision": "Close this fixed legacy root-preference diagnostic. No resplitting, alternative roots/collectors, threshold changes, training or added sampling follows.",
+  "root_review": {
+    "status": "root_independently_recounted",
+    "report_sha256": "5c62b402f48fadecdaba3db09a05cadbc88c1ccd664a1c2a83fb587bda6f331e",
+    "family_rows": 256,
+    "raw_terminal_records_rechecked": 885,
+    "teacher_changes": 5,
+    "positive_confirmations": 2,
+    "negative_confirmations": 0,
+    "zero_confirmations_among_changes": 3,
+    "sum_reward_difference_fraction": "3/2",
+    "exact_randomization_p_fraction": "1/3",
+    "method": "Rechoose earliest qualifying nodes without returns; recompute per-family means with rational arithmetic from hashed raw terminals; enumerate Cartesian products of every conditional outcome assignment instead of producer convolution.",
+    "new_games": 0,
+    "native_replays": 0,
+    "policy_adoption": false
+  },
+  "root_review_sha256": "c8374930b5f253aa57de8d7bd94390f2576415cfac78b3d08c69ffde15d25c6c"
+}

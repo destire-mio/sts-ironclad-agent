@@ -1,0 +1,45 @@
+{
+  "status": "registered_retrospective_signal_diagnostic",
+  "registered_at": "2026-09-24T05:53:16.292805+00:00",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01",
+  "coverage": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/research-direction-review-20260924/legacy-suffix-coverage",
+  "question": "Does choosing the top-two root action with higher first-half terminal reward retain positive reward difference in independent second-half continuations, within the retained E36 collector?",
+  "novel_information": "E36 trained shared suffix advantages; this reuses its outcomes to test root preference repeatability without fitting. E175/176 used deterministic greedy continuations, not split independent streams under this stochastic collector. No claim that root-action learning itself is new.",
+  "design_history": "E36 aggregate outcomes were historically known. The origin-only gate remains failed. Full-suffix outcome-blind coverage found131 families with at leastone observation per prechosen action in each half. This explicitly retrospective diagnostic changes the analysis question; it is not a passed four-forced-pair gate and does not reopen a closed learning recipe.",
+  "source_hashes": {
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01/roots.json": "dd0953e407a305cd320657068de43c1b48614e05a0c2a71c40888af39c7cf7f0",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01/iterations/0/results-index.json": "a8599a411812a855946692e860c9f05deaf67a223eedc0a565b640eab66ba352",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-suffix-policy-20260917-01/iterations/0/label-verification.json": "32a42a1d9e6a509fa67ba0ee3ffe46057ca6a3cb7a0d181336b57349f975c964",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/research-direction-review-20260924/legacy-suffix-coverage/report.json": "7512c7f1ad2715be239772c2948975a1f2945223e4330c4c382dc88544d0d0a7",
+    "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/research-direction-review-20260924/legacy-suffix-coverage/forks-private.json": "22741bae51cf7d98e9facd49ae2fd74540f927eac7ae06d4a7cd70632ae42a77"
+  },
+  "selection": "All256 original families retained. For each family use the earliest full-history node (prefix index then history digest) at which both prechosen highest-probability actions appear in repeats0..3 and4..7. Root selection uses action histories/probabilities, never terminal rewards. No later node search after this test.",
+  "teacher": "Within repeats0..3 compare mean terminal reward of the two prechosen actions; choose the alternative only for a strict positive difference. Ties choose the collecting-policy top action. Families lacking a qualifying root contribute zero improvement and remain in the denominator.",
+  "confirmation": "For chosen alternatives, use repeats4..7 mean reward difference alternative minus original top action. Original-top teacher choices contribute zero. Conditional root reward contrast, not natural game wins or public-policy transfer. All negative and zero contrasts retained.",
+  "primary_support_gate": {
+    "denominator_families": 256,
+    "minimum_sum_confirmation_reward_difference": 16,
+    "minimum_mean_reward_difference": 0.0625,
+    "maximum_one_sided_conditional_randomization_p": 0.025,
+    "maximum_budget_expansion_on_failure": 0
+  },
+  "p_value": "Exact convolution of each selected root conditional hypergeometric reassignment of second-half binary outcomes across the two action groups, preserving each group count and total wins. Assumes exchangeability under equal action-return distributions; discovery choices remain fixed. Descriptive historical evidence, not selection-adjusted or final acceptance.",
+  "interval": "100000 family bootstrap resamples over256 per-family improvement values; seed20260924036; percentile95, descriptive without selection correction. No interval-based tuning.",
+  "stop": "If original input identities, complete source records or action-history independence fail, invalidate instead of counting losses. If the support gate fails, close this root-preference diagnostic without changing root/action rules, collector, repeat split, thresholds or sample size. If it passes, retain only signal evidence; another separately bounded public-family transfer design is required, no automatic games or learning.",
+  "budget": {
+    "source_stochastic_records": 2048,
+    "families": 256,
+    "maximum_wall_seconds": 180,
+    "new_games": 0,
+    "native_replays": 0,
+    "training_updates": 0,
+    "natural_evaluation_games": 0
+  },
+  "not_estimated": [
+    "deployable success rate",
+    "public-policy cross-family transfer",
+    "current-runtime efficacy",
+    "original four-forced-pair design result",
+    "unused-family acceptance"
+  ]
+}
