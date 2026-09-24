@@ -1,0 +1,40 @@
+{
+  "status": "design_only_not_registered_or_launched",
+  "experiment": "E199",
+  "prepared_at": "2026-09-24T10:06:39.877477+08:00",
+  "question": "At the same2048 complete training-game budget and four scheduled PPO cohorts, does visiting512 distinct fitting families instead of128 repeated families improve complete-game transfer?",
+  "rationale": "E191 and E197 complete learned updates yet fail historical complete-game gates. E193/E198 show only37 distinct families with within-cohort return contrast in the retained E191 data; final-update path fitting does not transfer. This motivates a bounded diversity-versus-repetition comparison, not a claim that diversity is the established cause or a promise of gains.",
+  "distinction": "E133 expanded labels for the same restricted early two-decision task and remains closed. This design changes the family schedule of a whole-run on-policy learner, holds the total complete-game training budget at2048, and reuses its exact first cohort rather than extending the failed repeated128-family training run.",
+  "reuse": {
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+    "first_cohort": "learning/round-0",
+    "warm_start": "learning/actor-after-0.pt",
+    "reused_training_games": 512,
+    "reused_optimizer_updates": 868,
+    "existing_baseline_final": "learning/actor-after-3.pt"
+  },
+  "proposed_roles": {
+    "original_first_cohort_families": 128,
+    "new_cohorts": 3,
+    "distinct_families_per_new_cohort": 128,
+    "games_per_family": 4,
+    "total_distinct_training_families": 512,
+    "retained_fitting_pool": 1536,
+    "eligible_after_original_fit_and_evaluation_exclusion": 1280,
+    "historical_evaluation_families": 128
+  },
+  "selection": "Before any new outcome, hash-select384 distinct families from the1280 retained fitting families outside all original E191 fit/evaluation roles; split into3 nonoverlapping128-family cohorts. Do not filter by parent status or seek winners. No final acceptance families enter.",
+  "data_gap": "Existing logged stochastic likelihoods under the adaptive E191 collectors cover only128 families. Deterministic parent/E183 perturbation records cannot supply a different stochastic collector's action support and outcomes by relabelling. Reuse every certified identical whole route when a separately tested implementation can prove equivalence; otherwise only assigned changed paths need new execution. Do not add prefix-caching changes to an unverified collection path.",
+  "unchanged": "Use the exact frozen parent,5529->192->1 full residual network,public inputs,T1,finite support,one uniform per outside choice including forced choices,return-minus-other3 baseline,two epochs,batch128,AdamW3e-5/1e-5,PPOclip.2,KL.1,norm1 and original per-round shuffle/stream assignments. Frozen engine,MCTS8000/Bossx3/native256 guard,A20 keys/two Act3 bosses/Act4/Heart; Prismatic Shard excluded. First actor-after-0 must remain tensor-identical to the source.",
+  "budget_basis": "Match2048 whole training assignments and2 passes per cohort. Visited-menu counts and hence exact optimizer-update counts can change as endogenous game outcomes; report those counts rather than claiming exactly matched optimizer work. Bound three new512-game cohorts (1536 assignments maximum), new winner replans, and128 historical held evaluation assignments plus replans. No additional round after a failed gate.",
+  "proposed_evaluation": "Freeze final scheduled actor, then use the exact original128 evaluation families/streams. Compare complete wins against the completed E19111/128 full-network candidate and20/128 greedy parent; preserve net>=8 and paired p<.025 against both. Use independent source/update/state-RNG/deployment checks and fresh replans of new wins. These are repeatedly used historical development results, not unused acceptance; passing only supports separately registered prospective validation.",
+  "required_before_launch": [
+    "Seal source/role/budget/protocol hashes and unchanged optimizer/sampling/combat semantics.",
+    "Implement and test the collection/training/evaluation provenance for the new role schedule without pretending it is the original E191 execution.",
+    "Confirm independent reviewer reconstructs new cohorts, actual complete return groups, all updates, first-cohort reuse and final evaluation.",
+    "Use the owned bounded process launcher. Existing Luna waits only on verified live long jobs every20 minutes."
+  ],
+  "new_sampling_launched": 0,
+  "new_optimizer_updates": 0,
+  "unused_acceptance_games": 0
+}
