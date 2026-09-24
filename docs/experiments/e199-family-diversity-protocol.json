@@ -1,0 +1,104 @@
+{
+  "experiment": "E199",
+  "registered_at": "2026-09-24T02:34:58.424416+00:00",
+  "question": "At the same2048 complete training-game budget and four scheduled PPO cohorts, does visiting512 distinct fitting families instead of128 repeated families improve complete-game transfer?",
+  "rationale": "E191 and E197 complete learned updates yet fail historical complete-game gates. E193/E198 show only37 distinct families with within-cohort return contrast in the retained E191 data; final-update path fitting does not transfer. This motivates a bounded diversity-versus-repetition comparison, not a claim that diversity is the established cause or a promise of gains.",
+  "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "training_recipe": {
+    "rounds": 4,
+    "fit_families": 128,
+    "evaluation_families": 128,
+    "repeats": 4,
+    "epochs": 2,
+    "batch_size": 128,
+    "learning_rate": 3e-05,
+    "weight_decay": 1e-05,
+    "clip_ratio": 0.2,
+    "reference_kl": 0.1,
+    "gradient_norm": 1.0,
+    "seed": 20260924191,
+    "initial_minimum_mixed": 16,
+    "later_minimum_mixed": 8,
+    "controls": 4,
+    "calibration_families": 32,
+    "calibration_change_fraction": 0.02,
+    "temperatures": [
+      0.03125,
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ]
+  },
+  "frozen_executor_sha256": "16636a0f8057a7024dbf6b11ef21a17390397446f9a9f5eecbb5fe32946fcc6d",
+  "source_evidence": {
+    "first_cohort_checkpoint_sha256": "af8a16dcc3b1c86510396a3a01aa79fc3378632e7b315c102de3f3fff182e817",
+    "source_learning_completion_sha256": "aefb9849f8a12af88d6c2a6fb16a35e3973ed360e066fea75409730699c2f8ba",
+    "source_result_review_sha256": "f74e742bc2226e01a8add1c759d2ee9117504270240ecf8ac1fd1e6e615ca2cc"
+  },
+  "family_schedule": {
+    "pool": 1536,
+    "excluded": 256,
+    "eligible": 1280,
+    "new_selected": 384,
+    "cohorts": 4,
+    "families_per_cohort": 128,
+    "games_per_family": 4,
+    "unique_training_families": 512,
+    "total_training_assignments": 2048,
+    "selection": "SHA256(E199-cohort:{seed}) ascending; no status filter; preserve source first cohort/evaluation order"
+  },
+  "sampling": "Use the exact frozen parent,5529->192->1 full residual network,public inputs,T1,finite support,one uniform per outside choice including forced choices,return-minus-other3 baseline,two epochs,batch128,AdamW3e-5/1e-5,PPOclip.2,KL.1,norm1 and original per-round shuffle/stream assignments. Frozen engine,MCTS8000/Bossx3/native256 guard,A20 keys/two Act3 bosses/Act4/Heart; Prismatic Shard excluded. First actor-after-0 must remain tensor-identical to the source.",
+  "budget_basis": "Match2048 whole training assignments and2 passes per cohort. Visited-menu counts and hence exact optimizer-update counts can change as endogenous game outcomes; report those counts rather than claiming exactly matched optimizer work. Bound three new512-game cohorts (1536 assignments maximum), new winner replans, and128 historical held evaluation assignments plus replans. No additional round after a failed gate.",
+  "data_gap": "Existing logged stochastic likelihoods under the adaptive E191 collectors cover only128 families. Deterministic parent/E183 perturbation records cannot supply a different stochastic collector's action support and outcomes by relabelling. Reuse every certified identical whole route when a separately tested implementation can prove equivalence; otherwise only assigned changed paths need new execution. Do not add prefix-caching changes to an unverified collection path.",
+  "reuse": {
+    "first_cohort_games": 512,
+    "first_cohort_updates": 868,
+    "whole_route": "Rebuild natural start and match all sampled outside actions, state/RNG fingerprints, recorded battle commands, and terminal. If any sampled action differs, discard probe game and policy and start fresh from the natural seed and the first policy uniform. No partial-prefix continuation; reconstruct training records under current collector. Replan every assigned winner from scratch, including reused winners."
+  },
+  "preflight": {
+    "maximum_reference_probes": 64,
+    "ordered": "First16 newly assigned cohort1 families, each4 preflight sampling streams; stop at first complete match and first outside-action divergence; selection never uses outcome.",
+    "validation_outputs": 4,
+    "fresh_validation_games": 3,
+    "requirements": "Default reuse/probe execution equals forced fresh full MCTS on both branches in all commands, terminal and policy samples. Independent NumPy/native checker verifies every probe and all4 outputs. Source first checkpoint tensors identical."
+  },
+  "learning": {
+    "new_cohorts_maximum": 3,
+    "new_assignments_maximum": 1536,
+    "minimum_mixed_per_new_cohort": 8,
+    "update": "Same frozen E191 fit function, 2 shuffled passes per complete512-game cohort, reset optimizer each cohort. All finite-support nonforced decisions, including zero-advantage records. Preserve frozen temperature1 and streams. No tuning/calibration from inherited recipe temperature candidates.",
+    "stop": "If any new cohort has fewer than8 mixed-return families, close partial schedule without final equal-schedule evaluation or replacement cohort."
+  },
+  "evaluation": {
+    "assignments": 128,
+    "streams": "Exact source E191 evaluation streams",
+    "baseline_full_wins": 11,
+    "baseline_greedy_parent_wins": 20,
+    "gate": "Net gain>=8 AND paired exact two-sided p<.025 against BOTH comparators.",
+    "candidate": "Final scheduled checkpoint only, copied bytes without reserialization. No checkpoint search.",
+    "role": "Repeatedly used historical development families, never final unused acceptance."
+  },
+  "verification": "Independent native route reconstruction/public feature and NumPy probability calculation for all new assigned routes and replans; independent grouped-return labels, order, clipped loss/KL and update loop. Uses same Torch stable log_softmax and AdamW primitives; parameter/curve absolute tolerance1e-9 unchanged. Reconstruct each cohort from exact saved collecting checkpoint; retain numerical errors. First512 source routes/868 updates inherit completed E191 native/update review and hashes.",
+  "budgets": {
+    "new_training_assignments_max": 1536,
+    "evaluation_assignments_max": 128,
+    "preflight_validation_outputs": 4,
+    "training_winner_replans_max": 1536,
+    "evaluation_winner_replans_max": 128,
+    "acceptance_games": 0
+  },
+  "preflight_timeout_seconds": 1800,
+  "training_timeout_seconds": 10800,
+  "evaluation_timeout_seconds": 5400,
+  "owner_timeouts": {
+    "preflight": 1800,
+    "training": 14400,
+    "evaluation": 5400
+  },
+  "limits": "Freeze final scheduled actor, then use the exact original128 evaluation families/streams. Compare complete wins against the completed E19111/128 full-network candidate and20/128 greedy parent; preserve net>=8 and paired p<.025 against both. Use independent source/update/state-RNG/deployment checks and fresh replans of new wins. These are repeatedly used historical development results, not unused acceptance; passing only supports separately registered prospective validation. Matching game assignments and passes does not match the endogenous optimizer-step count; report actual counts. No original-game parity claim. E133 stays closed; no follow-on grid or extra cohort after failure; final512/1024 goal remains unmet."
+}
