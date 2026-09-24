@@ -1,0 +1,22 @@
+{
+  "status": "running_audit",
+  "experiment": "E198",
+  "owner": {
+    "started_at": "2026-09-24T01:54:46.152875+00:00",
+    "wrapper_pid": 3401,
+    "pid": 3413,
+    "process_group": 3413,
+    "command": [
+      "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+      "-u",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/heart-e198-recorded-prefix-forks-20260924-01/pipeline.py"
+    ],
+    "registration_sha256": "be1974643161e51845eaa7419fa0338aba82e00dc7dc726f3926f47d2c22f41c",
+    "wrapper_seconds": 1800
+  },
+  "registration_sha256": "be1974643161e51845eaa7419fa0338aba82e00dc7dc726f3926f47d2c22f41c",
+  "owner_sha256": "388198d874428db0ad6438eec95ba4cd57f7898c7b6eda6562c1eeea2709bc81",
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "unused_acceptance_games": 0
+}

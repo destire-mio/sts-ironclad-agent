@@ -1,0 +1,13 @@
+{
+  "status": "prepared",
+  "experiment": "E198",
+  "registration_sha256": "be1974643161e51845eaa7419fa0338aba82e00dc7dc726f3926f47d2c22f41c",
+  "runner_sha256": "133461c9de71f7a4ee26ca5c44f898135f39fb38678ca91ee787e5531a96671e",
+  "reviewer_sha256": "312b54b5dcaa9d04395301cc70b5f4f5bbbaf8d90f09e6615018f89d7550c675",
+  "mechanism_tests": 5,
+  "tests_passed": true,
+  "source_registration_verified": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "unused_acceptance_games": 0
+}
