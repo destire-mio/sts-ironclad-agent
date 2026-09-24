@@ -1,0 +1,334 @@
+{
+  "status": "complete_rejected",
+  "experiment": "E197",
+  "recorded_at": "2026-09-24T09:36:32.807350+08:00",
+  "learning": {
+    "status": "complete",
+    "experiment": "E197",
+    "optimizer_updates": 870,
+    "trainable_parameters": 192,
+    "inference_parameters": 1061953,
+    "decisions": 55658,
+    "source_games": 512,
+    "source_families": 128,
+    "sampled_training_wins": 50,
+    "new_training_games": 0,
+    "raw_head_kl": 1.6242924067642633e-06,
+    "full_network_target_kl": 0.0003650098625923955,
+    "calibrated_head_kl": 0.00036500986259239537,
+    "calibration_scale": 15.063463668305006,
+    "maximum_gradient_norm": 0.04291555211690924,
+    "curve": [
+      {
+        "epoch": 0,
+        "decisions": 55658,
+        "policy_loss": -0.013876421503697485,
+        "kl": 2.489763429978814e-07,
+        "clip_fraction": 0.0
+      },
+      {
+        "epoch": 1,
+        "decisions": 55658,
+        "policy_loss": -0.013880170045753296,
+        "kl": 1.2497800689482335e-06,
+        "clip_fraction": 0.0
+      }
+    ],
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b",
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "training_review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "completion_sha256": "adb5b6b05949645075f9e4114962f5e0730ceca3ca7cde044fb9d3a0c5bae986",
+    "source_games": 512,
+    "decisions": 55658,
+    "optimizer_updates": 870,
+    "maximum_source_numeric_error": 5.684341886080802e-14,
+    "maximum_raw_head_error": 2.220446049250313e-16,
+    "maximum_calibrated_head_error": 1.1102230246251565e-16,
+    "independently_matched_kl": 0.0003650098625923954,
+    "independent_target_kl": 0.00036500986259239564,
+    "maximum_gradient_norm": 0.042915552116909284,
+    "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b"
+  },
+  "certificate_review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "assigned_games": 640,
+    "counts": {
+      "fit_outside_choices": 66918,
+      "evaluation_outside_choices": 16941
+    },
+    "changed_routes": 260,
+    "controls": 8,
+    "maximum_new_base_games": 268,
+    "fit_changed": 211,
+    "held_changed": 49,
+    "completion_sha256": "ab52746ec971ad3572abcf0bd13f7091aeb3b533f28c895299fd05428bd2c12a",
+    "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+    "training_review_sha256": "4afde5e35ecc1564a079db9aecf4989a83d25a9e8158631da86f4cc6f91be111",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b"
+  },
+  "evaluation": {
+    "status": "complete",
+    "experiment": "E197",
+    "fit_comparison": {
+      "families": 128,
+      "assigned_games": 512,
+      "baseline_wins": 51,
+      "candidate_wins": 48,
+      "net_gain": -3,
+      "both_win": 40,
+      "candidate_only": 8,
+      "baseline_only": 11,
+      "both_fail": 453,
+      "improved_families": 6,
+      "harmed_families": 9,
+      "unchanged_family_win_counts": 113,
+      "family_net_gain_histogram": {
+        "-2": 1,
+        "-1": 8,
+        "0": 113,
+        "1": 5,
+        "2": 1
+      }
+    },
+    "held_full_network_comparison": {
+      "assigned": 128,
+      "baseline_wins": 11,
+      "candidate_wins": 14,
+      "net_gain": 3,
+      "paired": {
+        "both_win": 10,
+        "both_fail": 113,
+        "candidate_only": 4,
+        "baseline_only": 1
+      },
+      "exact_p": 0.375
+    },
+    "held_greedy_parent_comparison": {
+      "assigned": 128,
+      "baseline_wins": 20,
+      "candidate_wins": 14,
+      "net_gain": -6,
+      "paired": {
+        "both_win": 7,
+        "baseline_only": 13,
+        "both_fail": 101,
+        "candidate_only": 7
+      },
+      "exact_p": 0.26317596435546875
+    },
+    "learning_gate_passed": false,
+    "new_base_games": 268,
+    "winner_replans": 30,
+    "new_games": 298,
+    "source_routes_reused_without_rerun": 372,
+    "zero_faults": true,
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b",
+    "new_training_games": 0,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0,
+    "limits": [
+      "This tests only the final870 update steps, not training a head from scratch or the cumulative full training method.",
+      "Equal mean training-menu KL does not match each-state changes, max shift or off-distribution behavior; calibration modifies step magnitude as part of the intervention.",
+      "Training resubstitution and reused historical evaluation roles are not unused-family acceptance; repeated development p-values are descriptive.",
+      "All original source/native reviews are inherited for unchanged old paths. New replay verifies exposed canonical state/RNG, not every unexposed native field.",
+      "Original-game parity stays deferred, Prismatic Shard excluded. E133 remains closed. No policy adoption, winner-seed search or final512/1024 acceptance."
+    ]
+  },
+  "review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "result": {
+      "status": "complete",
+      "experiment": "E197",
+      "fit_comparison": {
+        "families": 128,
+        "assigned_games": 512,
+        "baseline_wins": 51,
+        "candidate_wins": 48,
+        "net_gain": -3,
+        "both_win": 40,
+        "candidate_only": 8,
+        "baseline_only": 11,
+        "both_fail": 453,
+        "improved_families": 6,
+        "harmed_families": 9,
+        "unchanged_family_win_counts": 113,
+        "family_net_gain_histogram": {
+          "-2": 1,
+          "-1": 8,
+          "0": 113,
+          "1": 5,
+          "2": 1
+        }
+      },
+      "held_full_network_comparison": {
+        "assigned": 128,
+        "baseline_wins": 11,
+        "candidate_wins": 14,
+        "net_gain": 3,
+        "paired": {
+          "both_win": 10,
+          "both_fail": 113,
+          "candidate_only": 4,
+          "baseline_only": 1
+        },
+        "exact_p": 0.375
+      },
+      "held_greedy_parent_comparison": {
+        "assigned": 128,
+        "baseline_wins": 20,
+        "candidate_wins": 14,
+        "net_gain": -6,
+        "paired": {
+          "both_win": 7,
+          "baseline_only": 13,
+          "both_fail": 101,
+          "candidate_only": 7
+        },
+        "exact_p": 0.26317596435546875
+      },
+      "learning_gate_passed": false,
+      "new_base_games": 268,
+      "winner_replans": 30,
+      "new_games": 298,
+      "source_routes_reused_without_rerun": 372,
+      "zero_faults": true,
+      "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b",
+      "new_training_games": 0,
+      "policy_adoption": false,
+      "unused_acceptance_games": 0,
+      "limits": [
+        "This tests only the final870 update steps, not training a head from scratch or the cumulative full training method.",
+        "Equal mean training-menu KL does not match each-state changes, max shift or off-distribution behavior; calibration modifies step magnitude as part of the intervention.",
+        "Training resubstitution and reused historical evaluation roles are not unused-family acceptance; repeated development p-values are descriptive.",
+        "All original source/native reviews are inherited for unchanged old paths. New replay verifies exposed canonical state/RNG, not every unexposed native field.",
+        "Original-game parity stays deferred, Prismatic Shard excluded. E133 remains closed. No policy adoption, winner-seed search or final512/1024 acceptance."
+      ]
+    },
+    "counts": {
+      "outside_choices": 49582,
+      "native_steps": 56356
+    },
+    "certified_routes": 640,
+    "native_new_routes": 268,
+    "native_replan_routes": 30,
+    "maximum_numpy_probability_error": 4.218847493575595e-15,
+    "completion_sha256": "0db55237c07e15dad79a80bae9d51f04b5e092d944079a1de855056cf4983831",
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+    "reviewer_sha256": "b650752ad6dff8d3c321d8d64674f46b47f64784d525755e7d354dfd33abcdcd",
+    "training_review_sha256": "4afde5e35ecc1564a079db9aecf4989a83d25a9e8158631da86f4cc6f91be111",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b"
+  },
+  "root_review": {
+    "status": "complete_reviewed",
+    "experiment": "E197",
+    "reviewed_at": "2026-09-24T09:34:09.699778+08:00",
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+    "learning_completion_sha256": "adb5b6b05949645075f9e4114962f5e0730ceca3ca7cde044fb9d3a0c5bae986",
+    "training_review_sha256": "4afde5e35ecc1564a079db9aecf4989a83d25a9e8158631da86f4cc6f91be111",
+    "certificate_review_sha256": "109b9b3f266498984c776f21e57bb2be8afe1558f8cea1d130952cd6f8d66816",
+    "evaluation_completion_sha256": "0db55237c07e15dad79a80bae9d51f04b5e092d944079a1de855056cf4983831",
+    "result_review_sha256": "fa36026a10c853498251fe97def87d5fd7e2a242a3349904f171d5c8c6e241cc",
+    "controller_exit_sha256": "a7b85a894ac533ff938cf03d741e4df38fccd1ff9cf545663702ec921b489e08",
+    "owned_exit_sha256": "c13e891249b1a71e72c61fe0d74b5a64256d081371810df0289a6368af1d787a",
+    "fitting_diagnosis_sha256": "6adf925c75f7891d955fa3423dc5e04754e5fc1f30919cd9b398a6f6cf5f1c0f",
+    "candidate_sha256": "0712f649b8a5611c3910ccd859a9edea01cfbd488249f0a73d6a3847507c5e5b",
+    "root_raw_recounted_games": 640,
+    "fresh_replans": 30,
+    "processes_absent": true,
+    "failed_gate_preserved": true,
+    "policy_adoption": false,
+    "unused_acceptance_games": 0
+  },
+  "fitting_diagnosis": {
+    "status": "complete",
+    "experiment": "E197",
+    "purpose": "Retrospective in-sample path-fitting diagnosis; no candidate, threshold, training, or outcome change. These likelihood weights are not simulated wins or unbiased performance estimates.",
+    "training_path_diagnostics": {
+      "head": {
+        "mean_winning_path_likelihood_ratio": 1.0222697503845632,
+        "mean_losing_path_likelihood_ratio": 1.0051268603722714,
+        "mean_weight": 1.0068009707250343,
+        "maximum_weight": 3.0689338400274875,
+        "empirical_ess": 469.61120940212464,
+        "weighted_wins_sum": 51.11348751922816,
+        "policy_surrogate": -0.013938534817409828,
+        "mean_kl": 0.0003650098625923955,
+        "chosen_ratio_outside_clip_fraction": 0.0047252865715620394
+      },
+      "full": {
+        "mean_winning_path_likelihood_ratio": 2.470994876075933,
+        "mean_losing_path_likelihood_ratio": 0.9379413940544763,
+        "mean_weight": 1.0876536481581343,
+        "maximum_weight": 7.313881444735616,
+        "empirical_ess": 354.13456844952674,
+        "weighted_wins_sum": 123.54974380379664,
+        "policy_surrogate": -0.014623990197952273,
+        "mean_kl": 0.0003650098625923955,
+        "chosen_ratio_outside_clip_fraction": 0.005246325775270401
+      }
+    },
+    "collecting_vs_head": {
+      "families": 128,
+      "assigned_games": 512,
+      "baseline_wins": 50,
+      "candidate_wins": 48,
+      "net_gain": -2,
+      "both_win": 42,
+      "candidate_only": 6,
+      "baseline_only": 8,
+      "both_fail": 456,
+      "improved_families": 6,
+      "harmed_families": 8,
+      "unchanged_family_win_counts": 114,
+      "family_net_gain_histogram": {
+        "-1": 8,
+        "0": 114,
+        "1": 6
+      }
+    },
+    "source_game_count": 512,
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "owned_exit": {
+    "finished_at": "2026-09-24T01:11:25.245173+00:00",
+    "exit_code": 0,
+    "requested_signal": null,
+    "error": null,
+    "cleanup": {
+      "initial_members": [],
+      "remaining_members": [],
+      "clean": true,
+      "process_group": 78727
+    },
+    "log_sha256": "c073b680049beb405ab9f91e473bed4ec0de82550508fa29add9d3537ce3923c",
+    "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963"
+  },
+  "controller_exit": {
+    "exit_code": 0,
+    "cleanup": {
+      "initial_members": [],
+      "remaining_members": [],
+      "clean": true,
+      "process_group": 78727
+    },
+    "owned_exit_sha256": "c13e891249b1a71e72c61fe0d74b5a64256d081371810df0289a6368af1d787a",
+    "completion_sha256": "fa36026a10c853498251fe97def87d5fd7e2a242a3349904f171d5c8c6e241cc"
+  },
+  "registration_sha256": "4ebbc86b51ca72b5ee69906e668738a7949f1ac5e6192e94aff68e88ea295963",
+  "root_review_sha256": "c143ed32604698be6e500c6a15a12c9135a48a9d4158d0474e47149177211e5a",
+  "luna_evaluation_delivery_sha256": "81337fbdbc43facac413b6efbb6752bd8450840deeb28664461e8711e9224478",
+  "luna_status": "PAUSED",
+  "learning_gate_passed": false,
+  "policy_adoption": false,
+  "unused_acceptance_games": 0,
+  "conclusion": "The matched-movement192-weight last-update recipe fails both the original paired development gate and its fit comparison. The fixed head direction reduces old-winning-path fitting but supplies no qualifying complete-game gain. This is not a universal claim about frozen heads, a pure capacity causal test, or a test of all preceding updates.",
+  "closed": "Do not scan head width, scale, learning rate, epochs or add training sampling to this failed fixed recipe. Preserve models, all outcomes, unchanged-route proofs and raw records. Final512/1024 unused-family objective remains active."
+}
