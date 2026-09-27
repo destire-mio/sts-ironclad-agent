@@ -1,6 +1,6 @@
 {
   "base_commit": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
-  "purpose": "Persistent natural-run RNG export repair; policy and value tables not imported",
+  "purpose": "Persistent RNG export and original combat entry; full outside policy not imported",
   "imported_files": [
     {
       "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/__init__.py",
@@ -26,7 +26,7 @@
       "sha256": "847e02fb22550a7baf54d10cf9df21653f8363e950855b5ef9eb8f91f27ee7b5",
       "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
       "source_is_uncommitted": true,
-      "working_copy_sha256": "0aba332ea5c6526313bd3119a1b809ac087095304a90c8d17b02cf538a2f9449",
+      "working_copy_sha256": "d853637de98be52bae1b61f2b4051ac2d0c2b6c2cf9388199b4f8eb3a6b4f062",
       "modified_after_import": true
     },
     {
@@ -101,11 +101,47 @@
     },
     {
       "path": "docs/live-original-runbook.md",
-      "sha256": "b287840ddce47e63eb9ca17aff11c63812ffe70b8006d7f318dc45b9a50b9e80"
+      "sha256": "1c6daaee06237f27ad18e82e24d367281e96127f68ce630e059cb191888a04da"
     }
   ],
   "evidence_manifest": "runs/rng-preflight-20260927-installed/original/identity.json",
   "capture_script_manifest": "runs/rng-preflight-20260927-installed/capture-code.json",
   "repair_evidence_manifest": "runs/rng-fix-20260927-v1/original/identity.json",
-  "regression_fixture_manifest": "steam/tests/fixtures/provenance.json"
+  "regression_fixture_manifest": "steam/tests/fixtures/provenance.json",
+  "combat_entry_imports": "docs/live-original-search-imports.json",
+  "combat_entry_evidence": "docs/live-original-search-evidence.json",
+  "combat_entry_authored_files": [
+    {
+      "path": "steam/live_search.py",
+      "sha256": "4c2e6212ef2c7666fd89869b32844c7686c01e8e34b0f442205389a073bf46f8"
+    },
+    {
+      "path": "steam/live_battle.py",
+      "sha256": "e68a5e9ba4a749e2a8a6edfeb6c41d3777dc5674c790bec9b548bb8599d6afe2"
+    },
+    {
+      "path": "steam/prepare_live_runtime.py",
+      "sha256": "deec06fd45cfd0bf73452c5bddb23e4fc199e924097277f28164b679c9d62c9c"
+    },
+    {
+      "path": "steam/check_live_search.py",
+      "sha256": "4471b7cd8c51b9079b7650c2e9ffeee2411582e1f256b2846aa9b10ceeba0ef5"
+    },
+    {
+      "path": "steam/check_live_selections.py",
+      "sha256": "718c60c60efb7b3ebc9236717952878e6fef4a56a8cc9a254cfd85b5c97173b1"
+    },
+    {
+      "path": "steam/check_live_replay.py",
+      "sha256": "a8c2b1fb2f404c7fbc3456f9143e23fc77144531423e14d0b283c6c19613db96"
+    },
+    {
+      "path": "steam/native/live_combat_search.cpp",
+      "sha256": "03ff2043d0663de599a8dfe887586f6606ff5f976821cb788c3b5a5cfbbd2bd5"
+    },
+    {
+      "path": "docs/live-original-search-entry-20260927.md",
+      "sha256": "5358c91c55971bda9bda2eefeda7e8c6feb36b3935a4468da4450f95be5aa277"
+    }
+  ]
 }

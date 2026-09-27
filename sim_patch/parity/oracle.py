@@ -51,11 +51,13 @@ def configure_reference(instance: Path, profile: str) -> dict:
 
 
 class Original:
-    def __init__(self, oracle_root: Path, directory: Path, repo: Path, profile: str = "installed"):
+    def __init__(self, oracle_root: Path, directory: Path, repo: Path, profile: str = "installed",
+                 startup_timeout_seconds: float = 300):
         self.oracle_root = oracle_root.resolve()
         self.directory = directory.resolve()
         self.repo = repo.resolve()
         self.profile = profile
+        self.startup_timeout_seconds = startup_timeout_seconds
         self.instance = None
         self.rpc = []
         self.previous_signals = {}
@@ -169,7 +171,7 @@ class Original:
                 signal.signal(sig, self._interrupted)
             write_json(directory / "launch.json", Q.launch(instance))
             self.probe = Q.Probe(instance)
-            self.call("observe", timeout_seconds=90)
+            self.call("observe", timeout_seconds=self.startup_timeout_seconds)
             return self
         except BaseException:
             self.close()

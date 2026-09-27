@@ -1,8 +1,45 @@
-# RNG 导出与原版验证运行入口
+# RNG 导出与原版战斗验证运行入口
 
 工作目录：`/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original`。
 
-本入口没有运行 P300，不用于计算胜率。它从本机已有安装及采集工具创建独立原版实例，执行自然开局至首战的一段输入，保存响应并退出。每次采集目录必须不存在，旧证据不会被覆盖。
+RNG 检查和首战接入是两个入口。首战入口使用 P300 的 sims32/boss12/reuse 战斗策略，局外为固定诊断输入，不用于计算整局胜率。它们从本机已有安装及采集工具创建独立原版实例，保存响应并退出。每次采集目录必须不存在，旧证据不会被覆盖。
+
+## 构建战斗入口并运行首战
+
+使用原 runtime 的 Python 3.12 环境。构建脚本读取 arena 的配套头文件和静态库，将 runtime 复制到新目录，编译接收 BattleContext 的入口。
+
+```sh
+cd /Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original
+PYTHONDONTWRITEBYTECODE=1 \
+  /Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python \
+  steam/prepare_live_runtime.py \
+  --arena ../sts-rl-agent-tree-arena/runs/combat-tree-arena-20260927 \
+  --out runs/live-runtime-repeat-01
+
+PYTHONDONTWRITEBYTECODE=1 \
+  /Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python \
+  steam/live_battle.py \
+  --runtime runs/live-runtime-repeat-01 \
+  --oracle ../ironclad-alignment/oracle \
+  --seed 5100000000 --out runs/live-battle-repeat-01
+```
+
+普通战斗每轮预算默认为 32,000，Boss 倍率为 12。出现比较分歧时清空剩余动作，在原版正常出牌界面导入并重算；无法重建的选择状态作为接入错误记录。`--stop-on-divergence` 可在首次分歧处保留现场并退出。每条命令的前后原版状态、预测和比较写入 `step-*.json.gz`；完整 RPC 日志位于 `original/`。Python 源文件副本与哈希位于 `capture-sources/`、`capture-code.json`。
+
+故障恢复验证可增加 `--inject-prediction-fault-step 3` 并使用新输出目录。这只改错模拟器的 RNG 计数，不能把它记作自然规则分歧。退出码 0 表示首战获胜且没有非预期分歧；不代表完整状态或整局验收通过。
+
+对原版保存的夹具做离线回归：
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 \
+  /Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python \
+  steam/check_live_replay.py --runtime runs/live-runtime-20260927-v2 \
+  --out runs/live-replay-repeat-01.json
+```
+
+`steam/check_live_search.py` 对比原 GameContext 入口和新 BattleContext 入口；需要 `--runtime`、`--workloads`（arena 的 `workloads.json`）与新 `--out` 文件。`steam/check_live_selections.py` 在隔离原版进程中验证选牌命令，需要 `--runtime`、`--oracle` 与新 `--out` 目录。这些入口不启动进程池；并行运行数量由调用方控制在最多 3 个模拟器决策进程。
+
+本轮结果与覆盖缺口见 `docs/live-original-search-entry-20260927.md`。
 
 ## 重新运行有限采集
 
@@ -70,7 +107,7 @@ PY
 2. 绑定本机 JAR、运行时 Mod、父网络、P300 数据文件、`sv_choice`、阶段价值计算及实际加载的 native 模块哈希。
 3. 对照原版导出的状态验证模拟器导入；同一真实动作在两侧执行后，比较 RNG、牌堆顺序、血量、能力、遗物计数、怪物状态与选择状态。导入失败是接入错误，不是游戏失败。
 4. 验证房间存档与 SL 后的恢复边界，记录每次读取及实际分支，不将普通 SL 当作共享随机源快照。
-5. 用目标 arm 的 ScumSearch、boss 倍率、rest、reuse、svsel、svcard 接入自然整局；旧 `live_model_bridge.py` 的 Arm G + MCTS 不满足此项。
+5. 战斗已有 ScumSearch、boss 倍率和 reuse 接入；局外需要父网络、rest、svsel、svcard。旧 `live_model_bridge.py` 的候选编码与当前父网络不兼容，不满足目标 arm 的整局要求。
 6. 预注册 20 局种子，限制模拟器决策进程数不超过 3，每步落盘。遇到进程故障或无法映射的操作时，记录未完成局，不计入败局；自然终局单独计数。
 
-没有创建运行 20 局的入口，也没有设置后台任务或定时任务。当前可执行入口的职责止于 RNG 前置检查。
+20 局整局入口没有完成。当前可执行入口覆盖 RNG 前置检查、自然首战、分歧重同步和控制选牌夹具。

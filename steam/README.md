@@ -1,5 +1,12 @@
 # Real Steam bridge
 
+Current P300 combat integration: `prepare_live_runtime.py`, `live_battle.py`,
+and `live_search.py` run the frozen sims32/boss12/reuse policy from an original
+BattleContext and record every executed command and comparison. See
+`docs/live-original-search-entry-20260927.md` and the runbook. This is a bounded
+first-battle entry; the legacy outside-policy adapter below does not encode the
+current P300 parent network and is not a full-arm evaluation entry.
+
 This adapter drives the real Steam game through CommunicationMod:
 
 - Arm G or a random baseline handles non-combat choices.

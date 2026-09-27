@@ -1,0 +1,86 @@
+{
+  "scope": "original numeric decisions projected for live integration replay; no game code or assets",
+  "fixture_sha256": "f8f2d191ec0d53a81bf0d338da0f1c077a0c413c2e7a65ac940ec7f993694671",
+  "source_files": {
+    "runs/live-first-battle-20260927-v2/result.json": "15e51cd061c68e55114d33e73ea008972d248dab5cf1b177a96af36960601568",
+    "runs/live-first-battle-20260927-v2/initial.json": "3c2127892abb7ae3f66b594bc498ab6231a1f13ea01f11cfbae64f769c938e83",
+    "runs/live-first-battle-20260927-v2/step-0000.json.gz": "6683fa4afacc9f50b098eca894e8552c8511451fad15f251ebcea809e71562f4",
+    "runs/live-first-battle-20260927-v2/step-0001.json.gz": "ff249049aea83bc3eec1cc62207b4a6009b531859bac2326ae9ab0ba402dd36e",
+    "runs/live-first-battle-20260927-v2/step-0002.json.gz": "e121460b05bf335d8a75617e96f6e3e05f50d28e0376a9b95e8f29afea23faa4",
+    "runs/live-first-battle-20260927-v2/step-0003.json.gz": "c1818456975e39fbe0c569f80796fc08a83d3b2d59c2a169d51f9b42beaadb1a",
+    "runs/live-first-battle-20260927-v2/step-0004.json.gz": "548ac61510454ccc53f3bc056f04e7249fa1bd9ed841fc4029c95a25a0b0d644",
+    "runs/live-first-battle-20260927-v2/step-0005.json.gz": "750f550872e84a2b2ba76a425c1bafd4c37213108393302e857182a6a243de65",
+    "runs/live-first-battle-20260927-v2/step-0006.json.gz": "704d6f36c15da63234db0fceaa4d8c12d8549ab45aae1289c163dd70b1c1f707",
+    "runs/live-first-battle-20260927-v2/step-0007.json.gz": "f498c9e67523c99551c6b0a3df31486222e6114b841a90d4c734671081c6533b",
+    "runs/live-first-battle-20260927-v2/step-0008.json.gz": "720ee3e1caae74e58b8f89acd1b991fbf2ac78543bd8bb5bab72ec65d4099e13",
+    "runs/live-first-battle-20260927-v2/step-0009.json.gz": "93c1d7f035476391344f50f7bcdbea1ff7074497d9c6d1e8cde5ac145c3026b9",
+    "runs/live-first-battle-20260927-v2/step-0010.json.gz": "758c9da49556fb44221ea422ac54c09221ca19b54be932ccddba9ce88ea98a92",
+    "runs/live-first-battle-20260927-v2/step-0011.json.gz": "00fb6686f323f4356bf2b6a10d7b87480aa2b937c0463341f1fd19fa4aaba9e1",
+    "runs/live-first-battle-20260927-v2/step-0012.json.gz": "d1d7f7d7b6f61e311ab80a9c099215503721a6fae2b4176c71764edd638a884b",
+    "runs/live-first-battle-20260927-v2/step-0013.json.gz": "75c51c9bdf02768017846afcec2d6a69ccc87973ea2b9d0d044234587905a392",
+    "runs/live-first-battle-20260927-v2/step-0014.json.gz": "d36bb12eaf432b06ef64b1d6fcfd6888aab6542da560a80480de565825b01f07",
+    "runs/live-first-battle-20260927-v2/step-0015.json.gz": "51c8ea5eb903f5b89107551f5b1c43e81835493730d1b585ef12a5cdc824a45e",
+    "runs/live-first-battle-20260927-v2/step-0016.json.gz": "860fb19a8d6b3e02c711385ada5ecf9224ee4f15b0144456a155e75adeb7f312",
+    "runs/live-resync-20260927-v2/result.json": "f87ab0682e6d9020423917f2eadbc06f7fe58893fc67f307df8b8cef2769508a",
+    "runs/live-resync-20260927-v2/initial.json": "3d50733f189fdd92b8cd2cc6a6ef4329ec0e011c4fe618947f1de539960750a6",
+    "runs/live-resync-20260927-v2/step-0000.json.gz": "028d4e80085a7968c2ec5705f0e932951953c47e3bce9481cd09994f1fbbda8b",
+    "runs/live-resync-20260927-v2/step-0001.json.gz": "966b9fed63bbaf74e815c777564f8a3159bfc65466e6fad1bcaf00e6e2a9415c",
+    "runs/live-resync-20260927-v2/step-0002.json.gz": "d3cd94c3bf50aac070b1aa91a31812528390a3c2f0dff8e5a5cc041875a1cebb",
+    "runs/live-resync-20260927-v2/step-0003.json.gz": "7ff012b552f8ce7fc9eee4821b1ce04a4652ac76b9f7f32a66638f47edbc2789",
+    "runs/live-resync-20260927-v2/step-0004.json.gz": "965011a3777e1f815be1f28c3b035fc422e7e2453128dce852889bceb8fd005d",
+    "runs/live-resync-20260927-v2/step-0005.json.gz": "4d1819aaff65e124fabc0dae65ac86d59faafe275015a3925ceeb476cb16dad8",
+    "runs/live-resync-20260927-v2/step-0006.json.gz": "8a02481f5244a2cc8aa73873a11bc6fbb53c82e9d71bafce4363699bd50e9fcb",
+    "runs/live-resync-20260927-v2/step-0007.json.gz": "312029cdb6f22d84c95edb349f56842289a8d6537fa67877168197c18d173b77",
+    "runs/live-resync-20260927-v2/step-0008.json.gz": "c43a421df7f521d133c6c40450e3f9641c74101bfc737b43f6e73af08cfcb1c3",
+    "runs/live-resync-20260927-v2/step-0009.json.gz": "1668cfc80a1d6a25ea120b0f30fdc72a6a47f7dd1599b58bfdf8178b3ebb861b",
+    "runs/live-resync-20260927-v2/step-0010.json.gz": "a5b20c0b58b323208fa566dcb445eddab9af1ab8d54905ed8a1363503487af85",
+    "runs/live-resync-20260927-v2/step-0011.json.gz": "2b49a21aae0b53eef45e8a1a911e5982906608e297db0c43e3938b48a09be92d",
+    "runs/live-resync-20260927-v2/step-0012.json.gz": "12d27f83b9e4655a121153dbe85b64a0d4da87d92264e141fce7bb9256e4f386",
+    "runs/live-resync-20260927-v2/step-0013.json.gz": "dce4ddc45f6513dc291371dddfaa7d8114a619e7e2a1e820d0de6ab01f263503",
+    "runs/live-resync-20260927-v2/step-0014.json.gz": "6479cf8143458617afa3f4d014da8577d4c2d3c3032994855fd64d0a2dbad252",
+    "runs/live-resync-20260927-v2/step-0015.json.gz": "bee1f00dc5dffd34272cb7f510aeecc44ab6669572c080116e0938b774b5a498",
+    "runs/live-selections-20260927-v2/armaments_hand.json.gz": "c7fb95e5a17f7a74ee0b9d453594c9928f43bf2cb99a0b0719af1eeec1117436",
+    "runs/live-selections-20260927-v2/headbutt_discard.json.gz": "3bf4cf4a7bd5f54fa75829e96e0e13a80ca32bc5c4a47b5829aea1dca315220a",
+    "runs/live-selections-20260927-v2/burning_pact_hand.json.gz": "dd3d750ac5bf4690ec2afc8d1b29516efc9ae9cdde127ebf83e007d7de88d5e7",
+    "runs/live-selections-20260927-v2/gamblers_brew_multi.json.gz": "ec4f3c80f5225368f72cfe85d9145ca87ee10fa1e968e8be24a7ace919b7b1c9",
+    "runs/live-selections-20260927-v2/gamblers_brew_empty.json.gz": "0aab6fda109522d32271dd7580d5515556b6dea206915a4519740822e9541ac6"
+  },
+  "projection": "game fields used by battle import, all 16 RNG sources plus independent raw readings, legal actions, card UUIDs; presentation strings and unrelated run fields excluded",
+  "cases": [
+    {
+      "name": "natural_first_battle",
+      "commands": 17,
+      "kind": "natural_prefix"
+    },
+    {
+      "name": "synthetic_rng_recovery",
+      "commands": 16,
+      "kind": "natural_prefix"
+    },
+    {
+      "name": "armaments_hand",
+      "commands": 3,
+      "kind": "selection"
+    },
+    {
+      "name": "headbutt_discard",
+      "commands": 2,
+      "kind": "selection"
+    },
+    {
+      "name": "burning_pact_hand",
+      "commands": 3,
+      "kind": "selection"
+    },
+    {
+      "name": "gamblers_brew_multi",
+      "commands": 4,
+      "kind": "selection"
+    },
+    {
+      "name": "gamblers_brew_empty",
+      "commands": 2,
+      "kind": "selection"
+    }
+  ]
+}

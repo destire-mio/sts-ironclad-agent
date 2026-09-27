@@ -1,0 +1,16 @@
+[
+  {
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-tree-arena/agent/combat_search_reuse.h",
+    "sha256": "15cb7ce2d572d7558d02a87c5d1d5193c198125fb6c74ae38284f06b6ff3bb70",
+    "destination": "steam/native/combat_search_reuse.h",
+    "working_copy_sha256": "15cb7ce2d572d7558d02a87c5d1d5193c198125fb6c74ae38284f06b6ff3bb70",
+    "modified_after_import": false
+  },
+  {
+    "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/adapter.py",
+    "sha256": "69dfb20866e81992f704b2a2cde81275354b2631b82ed859434aecdc6d0ca18d",
+    "destination": "sim_patch/parity/adapter.py",
+    "working_copy_sha256": "3e1806e7dd316e9ee0bf1c260c003b6426fc70022cc13d94928792c64d78e982",
+    "modified_after_import": true
+  }
+]
