@@ -1,0 +1,111 @@
+{
+  "base_commit": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+  "purpose": "Persistent natural-run RNG export repair; policy and value tables not imported",
+  "imported_files": [
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/__init__.py",
+      "destination": "sim_patch/parity/__init__.py",
+      "sha256": "bef2add050678ac52290d291b3ff802b1d59c10daa4d3f7c479efd3b42386574",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "source_is_uncommitted": true,
+      "working_copy_sha256": "bef2add050678ac52290d291b3ff802b1d59c10daa4d3f7c479efd3b42386574",
+      "modified_after_import": false
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/core.py",
+      "destination": "sim_patch/parity/core.py",
+      "sha256": "f07278b2e6a4b68090625fb937d5f047bbc5f08dfac185ecbbd3b3fc93cfd399",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "source_is_uncommitted": true,
+      "working_copy_sha256": "f07278b2e6a4b68090625fb937d5f047bbc5f08dfac185ecbbd3b3fc93cfd399",
+      "modified_after_import": false
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/oracle.py",
+      "destination": "sim_patch/parity/oracle.py",
+      "sha256": "847e02fb22550a7baf54d10cf9df21653f8363e950855b5ef9eb8f91f27ee7b5",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "source_is_uncommitted": true,
+      "working_copy_sha256": "0aba332ea5c6526313bd3119a1b809ac087095304a90c8d17b02cf538a2f9449",
+      "modified_after_import": true
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java",
+      "destination": "sim_patch/parity/java/ParityAudit.java",
+      "sha256": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "source_is_uncommitted": true,
+      "working_copy_sha256": "2b7bf11853f2211ccff10fe648522668af00ecd13b98908c0c08f71400382c54",
+      "modified_after_import": true
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/live_model_bridge.py",
+      "destination": "steam/live_model_bridge.py",
+      "sha256": "85546c0cf88e850b1488af287daf97ddcc6787761d5ef6156d5366d2c07a1499",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "inherited_from_base_commit": true,
+      "working_copy_sha256": "85546c0cf88e850b1488af287daf97ddcc6787761d5ef6156d5366d2c07a1499",
+      "modified_after_import": false
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/steam_mcts.py",
+      "destination": "steam/steam_mcts.py",
+      "sha256": "4e79ee9228046a0607a19e1fae9dbaa9e3fe3376edb5eb2ea444e8132e19e752",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "inherited_from_base_commit": true,
+      "working_copy_sha256": "4e79ee9228046a0607a19e1fae9dbaa9e3fe3376edb5eb2ea444e8132e19e752",
+      "modified_after_import": false
+    },
+    {
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java",
+      "destination": "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java",
+      "sha256": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+      "source_worktree_head": "8f9d33ee83c23fb2c9989d0e2a090fd1e55eafe1",
+      "inherited_from_base_commit": true,
+      "working_copy_sha256": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+      "modified_after_import": false
+    }
+  ],
+  "authored_files": [
+    {
+      "path": "steam/rng_preflight.py",
+      "sha256": "5a1ba91be4fa9caee20fd2b077ab5f10db725fd29646f4a0a2b6d8cc3e93f25d"
+    },
+    {
+      "path": "steam/rng_contract.py",
+      "sha256": "1b4293fc0de41b488f56aab25f01151bea71705a2dde05693617a32bdfe747b8"
+    },
+    {
+      "path": "steam/tests/test_rng_contract.py",
+      "sha256": "f6faa6d536575beca283ae5169991a5e4365209b8f26c5166bd71a2261d83cd6"
+    },
+    {
+      "path": "steam/state_export_mod/src/steamstateexport/FullRngState.java",
+      "sha256": "14a440f827a9561856289ed8e9a515e4fd33216282ff00d27eec85dfff1df20d"
+    },
+    {
+      "path": "steam/state_export_mod/src/steamstateexport/GameRngPatch.java",
+      "sha256": "027c50f53949df616f4e5eeb7f6b0532a0b7801af782b7a2b60a3dfbb604b09d"
+    },
+    {
+      "path": "sim_patch/parity/java/FullRngProbe.java",
+      "sha256": "61319c587b61271add4e8958720f8155856d77f7edff55464397cf226f45a5ce"
+    },
+    {
+      "path": "docs/live-original-rng-gate-20260927.md",
+      "sha256": "897d6051ae3799194f1de21ca4b91506298d7559cfd270187f365a3de18c8c6c"
+    },
+    {
+      "path": "docs/live-original-rng-fix-20260927.md",
+      "sha256": "31d05877d1bbf4c5582778fdbf28e7abb8f544fafb963b5b5c337c5bac848180"
+    },
+    {
+      "path": "docs/live-original-runbook.md",
+      "sha256": "b287840ddce47e63eb9ca17aff11c63812ffe70b8006d7f318dc45b9a50b9e80"
+    }
+  ],
+  "evidence_manifest": "runs/rng-preflight-20260927-installed/original/identity.json",
+  "capture_script_manifest": "runs/rng-preflight-20260927-installed/capture-code.json",
+  "repair_evidence_manifest": "runs/rng-fix-20260927-v1/original/identity.json",
+  "regression_fixture_manifest": "steam/tests/fixtures/provenance.json"
+}
