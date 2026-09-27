@@ -1,0 +1,14 @@
+[
+  {"name":"basic_strike_defend_end","fixture":{"hand":["Strike_R","Defend_R"],"energy":3},"commands":["play 1 0","play 1","end"]},
+  {"name":"bash_vulnerable_strike","fixture":{"hand":["Bash","Strike_R"],"energy":3},"commands":["play 1 0","play 1 0","end"]},
+  {"name":"exhaust_block_draw","fixture":{"hand":["Feel No Pain","Dark Embrace","True Grit","Defend_R"],"energy":10},"commands":["play 1","play 1","play 1","end"]},
+  {"name":"combust_then_no_draw","fixture":{"hand":["Combust","Battle Trance"],"relic":"Runic Cube","energy":3},"commands":["play 1","play 1","end"]},
+  {"name":"no_draw_then_combust","fixture":{"hand":["Battle Trance","Combust"],"relic":"Runic Cube","energy":3},"commands":["play 1","play 1","end"]},
+  {"name":"anger_full_hand","fixture":{"hand":["Anger","Defend_R","Defend_R","Defend_R","Defend_R","Defend_R","Defend_R","Defend_R","Defend_R","Defend_R"],"energy":3},"commands":["play 1 0","end"]},
+  {"name":"shuffle_empty_draw","fixture":{"hand":["Pommel Strike"],"draw":[],"discard":["Strike_R","Defend_R"],"energy":3},"commands":["play 1 0","end"]},
+  {"name":"potion_use_and_end","fixture":{"potion":"Fire Potion","hand":["Defend_R"]},"commands":["potion use 0 0","play 1","end"]},
+  {"name":"potion_discard","fixture":{"potion":"Fire Potion","hand":["Defend_R"]},"commands":["potion discard 0","end"]},
+  {"name":"selection_burning_pact","fixture":{"hand":["Burning Pact","Strike_R","Defend_R"],"energy":3},"commands":["play 1","choose 0","confirm","end"]},
+  {"name":"duplicate_card_identity","fixture":{"hand":["Strike_R","Strike_R","Defend_R"],"energy":3},"commands":["play 2 0","play 1 0","play 1","end"]},
+  {"name":"block_damage_zero","fixture":{"hand":["Impervious"],"hp":100,"energy":3},"commands":["play 1","end","end"]}
+]

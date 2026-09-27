@@ -1,6 +1,19 @@
-# sts-rl-agent — 《杀戮尖塔》的学习型策略(基于 sts_lightspeed)
+# sts-ironclad-agent — 铁甲战士 A20 研究与模拟器一致性检验
 
 [English](README.md) | 中文
+
+本仓库基于 [Jialeiv/sts-rl-agent](https://github.com/Jialeiv/sts-rl-agent) 独立维护，
+底层模拟器为 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed)。
+仓库保留上游许可和提交历史，包含当前分支的铁甲战士 A20 研究记录，以及
+[原版与模拟器一致性检查器](sim_patch/parity/README.md)。
+
+**一致性状态（2026-09-27）：`INCOMPLETE`。** [第三轮检查报告](sim_patch/parity/RESULTS-20260927-ROUND3.md)
+记录两类新增规则差异及对照。原版捕获样本保存在 `sim_patch/parity/tests/fixtures/`；
+生成的 `runs/` 产物、native 二进制和原版游戏安装文件不随仓库上传。
+现场捕获依赖检查器 README 说明的本地原版测试环境。历史报告中的本地证据路径用于记录来源，
+对应文件不一定包含在仓库中。
+
+## 历史项目介绍与实验记录
 
 一个跑在 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) 模拟器上的《杀戮尖塔》混合 agent(A0 铁甲战士):
 

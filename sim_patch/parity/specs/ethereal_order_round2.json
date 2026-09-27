@@ -1,0 +1,6 @@
+[
+  {"name":"ethereal_repeat_a", "fixture":{"hand":["Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"ethereal_repeat_b", "fixture":{"hand":["Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"ethereal_repeat_c", "fixture":{"hand":["Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"single_ethereal_control", "fixture":{"hand":["Dazed"]}, "commands":["end"]}
+]

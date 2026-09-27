@@ -1,0 +1,5 @@
+[
+  {"name":"parasite_overkill_fairy","fixture":{"encounter":"Shell Parasite","monster_hp":20,"current_hp":5,"hand":["Impervious"],"potion":"FairyPotion"},"commands":["play 1","end","end"]},
+  {"name":"parasite_nonlethal_control","fixture":{"encounter":"Shell Parasite","monster_hp":20,"current_hp":50,"hand":["Impervious"],"potion":"FairyPotion"},"commands":["play 1","end","end"]},
+  {"name":"parasite_overkill_lizard_tail","fixture":{"encounter":"Shell Parasite","monster_hp":20,"current_hp":5,"hand":["Impervious"],"relic":"Lizard Tail"},"commands":["play 1","end","end"]}
+]

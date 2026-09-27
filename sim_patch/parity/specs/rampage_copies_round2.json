@@ -1,0 +1,6 @@
+[
+  {"name":"rampage_double_tap_and_duplication","fixture":{"hand":["Double Tap","Rampage"],"potion":"DuplicationPotion","energy":3},"commands":["play 1","potion use 0","play 1 0"]},
+  {"name":"rampage_upgraded_double_tap_and_duplication","fixture":{"hand":["Double Tap",{"card":"Rampage","upgrades":1}],"potion":"DuplicationPotion","energy":3},"commands":["play 1","potion use 0","play 1 0"]},
+  {"name":"rampage_double_tap_control","fixture":{"hand":["Double Tap","Rampage"],"energy":3},"commands":["play 1","play 1 0"]},
+  {"name":"rampage_duplication_control","fixture":{"hand":["Rampage"],"potion":"DuplicationPotion","energy":3},"commands":["potion use 0","play 1 0"]}
+]

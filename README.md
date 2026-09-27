@@ -1,6 +1,20 @@
-# sts-rl-agent — a learned policy for Slay the Spire (on sts_lightspeed)
+# sts-ironclad-agent — Ironclad A20 research and simulator parity
 
 English | [中文](README.zh-CN.md)
+
+This independent repository continues [Jialeiv/sts-rl-agent](https://github.com/Jialeiv/sts-rl-agent),
+using the [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) simulator.
+It retains the upstream license and commit history, the Ironclad A20 research records on this
+branch, and the [original-game/simulator consistency checker](sim_patch/parity/README.md).
+
+**Consistency status (2026-09-27): `INCOMPLETE`.** The [third investigation report](sim_patch/parity/RESULTS-20260927-ROUND3.md)
+records two additional rule differences and their controls. Captured original-game fixtures
+are versioned under `sim_patch/parity/tests/fixtures/`; generated `runs/` artifacts, native
+binaries, and the licensed game installation are excluded. Live capture requires the local
+original-game test runtime described in the checker README. Local evidence paths in historical
+reports are provenance references, not files bundled with this repository.
+
+## Historical project overview and experiment log
 
 A hybrid agent for **Slay the Spire** (A0 Ironclad) built on the
 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) simulator:

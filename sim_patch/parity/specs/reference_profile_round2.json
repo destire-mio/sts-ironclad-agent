@@ -1,0 +1,5 @@
+[
+  {"name":"ethereal_without_patch_a","original_profile":"without-consistent-ethereal","fixture":{"hand":["Dazed","AscendersBane","Ghostly"]},"commands":["end"]},
+  {"name":"ethereal_without_patch_b","original_profile":"without-consistent-ethereal","fixture":{"hand":["Dazed","AscendersBane","Ghostly"]},"commands":["end"]},
+  {"name":"single_ethereal_without_patch_control","original_profile":"without-consistent-ethereal","fixture":{"hand":["Dazed"]},"commands":["end"]}
+]

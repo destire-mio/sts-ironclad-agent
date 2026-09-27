@@ -1,0 +1,4 @@
+[
+  {"name":"duvu_battle_rng_owner","kind":"relic","id":"Du-Vu Doll","ops":[{"card":"Regret"},{"battle":true}],"battle_detail":true},
+  {"name":"tea_battle_rng_owner","kind":"relic","id":"Ancient Tea Set","ops":[{"room":"REST"},{"room":"SHOP"},{"battle":true}],"battle_detail":true}
+]

@@ -1,0 +1,5 @@
+[
+  {"name":"ethereal_dead_branch_dark_embrace", "fixture":{"hand":["Dark Embrace","Feel No Pain","Dazed","AscendersBane","Ghostly"],"relic":"Dead Branch","energy":10}, "commands":["play 1","play 1","end"]},
+  {"name":"strength_limit_break_cap_control", "fixture":{"hand":["Limit Break"],"player_strength":999,"energy":3}, "commands":["play 1"]},
+  {"name":"negative_strength_disarm_cap_control", "fixture":{"hand":["Disarm","Defend_R"],"monster_strength":-998,"energy":10}, "commands":["play 1 0","end"]}
+]

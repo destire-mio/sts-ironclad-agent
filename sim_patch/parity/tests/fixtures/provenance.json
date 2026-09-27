@@ -1,0 +1,581 @@
+{
+  "date": "2026-09-27",
+  "evidence": [
+    {
+      "file": "gamblers-brew-original.json.gz",
+      "sha256": "4989f5e0b9f0f835a1b3b39aa4961beef17a06a69df968c1424beea71775997c",
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-20260927/discard-counter-v1/original-sequences.json.gz",
+      "source_sha256": "4989f5e0b9f0f835a1b3b39aa4961beef17a06a69df968c1424beea71775997c"
+    },
+    {
+      "file": "bottle-order-original.json.gz",
+      "sha256": "311ff31170afe627d02d8ce85668947d10f3a9c6925df02d40a5410497c82137",
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-20260927/bottle-order-v1/original.json.gz",
+      "source_sha256": "311ff31170afe627d02d8ce85668947d10f3a9c6925df02d40a5410497c82137"
+    },
+    {
+      "file": "rampage-copies-original.json.gz",
+      "sha256": "91b34f3e4c982eb88e836db3ed4b5d0ab57c7f8ed40c87a70bc6add870ad9303",
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-20260927/round2-rampage-copies-v2/original-sequences.json.gz",
+      "source_sha256": "91b34f3e4c982eb88e836db3ed4b5d0ab57c7f8ed40c87a70bc6add870ad9303"
+    },
+    {
+      "file": "parasite-overkill-original.json.gz",
+      "sha256": "078d190e5817ce653ff8fe9249577de6a04ecadb83c2bfab2373b1b5499edf3e",
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-20260927/round3-parasite-v1/original-sequences.json.gz",
+      "source_sha256": "078d190e5817ce653ff8fe9249577de6a04ecadb83c2bfab2373b1b5499edf3e"
+    },
+    {
+      "file": "whirlwind-fan-original.json.gz",
+      "sha256": "a2ecd88ff011104ec889b236bd14ff301fca962b64847447969b60ca00d4a603",
+      "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-20260927/round3-whirlwind-fan-v2/original-sequences.json.gz",
+      "source_sha256": "a2ecd88ff011104ec889b236bd14ff301fca962b64847447969b60ca00d4a603"
+    }
+  ],
+  "gamblers_brew_original_identity": {
+    "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+    "source_files": {
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "e2431ef77de01e87dda708fe5cd0f20ce6b3a6c9dfe264be13e5d021df661ed0",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+    },
+    "compiled_probe_sha256": "16c6d1b6e78ec8e0fb8f4c1c2dc3385685af5b0b472eaf9dd58ffbc8b7eee668",
+    "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+    "copied_sources": {
+      "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+      "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+      "ParityAudit.java": "e2431ef77de01e87dda708fe5cd0f20ce6b3a6c9dfe264be13e5d021df661ed0",
+      "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+      "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5"
+    },
+    "instance_manifest_sha256": "263af7d9bb351c3c6449603b475e99a4301fb9be35860aa79eede98e270bbc28",
+    "runtime_scope": "existing isolated Java logic runtime; fixed logical frames"
+  },
+  "bottle_original_identity": {
+    "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+    "source_files": {
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+      "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "e2431ef77de01e87dda708fe5cd0f20ce6b3a6c9dfe264be13e5d021df661ed0",
+      "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+    },
+    "compiled_probe_sha256": "4c715d5f877b1a92e412c8ac3ad4a74178bcb523aeb74254726178201e4dded8",
+    "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+    "copied_sources": {
+      "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+      "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+      "ParityAudit.java": "e2431ef77de01e87dda708fe5cd0f20ce6b3a6c9dfe264be13e5d021df661ed0",
+      "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+      "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5"
+    },
+    "instance_manifest_sha256": "35c9e9d68eb3416b2feec93c66607a5d70fe6d9bd7ea51b8ed3476cd50238590",
+    "runtime_scope": "existing isolated Java logic runtime; fixed logical frames"
+  },
+  "claim": "Original observations captured in separate JVM/profile instances; simulator behavior is not a golden answer.",
+  "rampage_original_identities": [
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "db6c3b2d7664ef32ba33057a1392fbbeaa46567181c387e746c6ba8838d60580",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "db6c3b2d7664ef32ba33057a1392fbbeaa46567181c387e746c6ba8838d60580",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "65313dfa4fee2580df907ada77a67bf4d8d49ceb1997655099e738aace4f491c",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "bf42378adcf270c80944854c7b4aa6ef87c180cc0099437be677039baa59c546",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "bf42378adcf270c80944854c7b4aa6ef87c180cc0099437be677039baa59c546",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "19118c0d805780d51d1b80e779287f270f2843f28033857b36773cdc3e2bb806",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "30f4eccca15c4ae8d73adf3cdc1c7ff8f07a8888e4facf249272866dafdd35a3",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "30f4eccca15c4ae8d73adf3cdc1c7ff8f07a8888e4facf249272866dafdd35a3",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "d5a6689fcbece2c42aaa49932fed29eee1c7960b9fb5ec8f1ee7671502b6df70",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "9f75f55c0a55c21c7cf4fed420a03382d30acfdc2605370c3c16b8078992ea70",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "9f75f55c0a55c21c7cf4fed420a03382d30acfdc2605370c3c16b8078992ea70",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "b0b409d8f5e9f63556d7b5edb5b07abe00ca39cda63a565413cc285fc9be74d1",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "78d413d60bf691f3143fe8f976bff1c06e9f520b2ca2dda3a0b965928d5ec33a",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    }
+  ],
+  "parasite_original_identities": [
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "f8a32701c2c771ecd158678c7942fe88a4211e9ae50a369784d602477bba18b0",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "f8a32701c2c771ecd158678c7942fe88a4211e9ae50a369784d602477bba18b0",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "9e7fcd760ee3ad004b64059129c7184a9581d4dcc49fbce956cbe58af11d9cd1",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "c07196e0a4e1a5fd5c28f3f5d7c132b19b39ec1af3f714581b902a5b99d28e24",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "c07196e0a4e1a5fd5c28f3f5d7c132b19b39ec1af3f714581b902a5b99d28e24",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "b1aa4ab39797b91e19d81ee57f529015498568316644382afa6e68c64e06b656",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "3f839691c81f7a38c311b8432f2822e7797846d631a3b19727997eef936fef5b",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "3f839691c81f7a38c311b8432f2822e7797846d631a3b19727997eef936fef5b",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "0f6794cbae18208b3dc8f80c2009038da914d33c1db7562d42569d9f9f242cfc",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    }
+  ],
+  "whirlwind_fan_original_identities": [
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "ee94685d66e4635f363c15a614308d9821fb68f5889607bf867da5aaeb983197",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "ee94685d66e4635f363c15a614308d9821fb68f5889607bf867da5aaeb983197",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "9436e1ba2ed2f5bf0795336f07f1f50d9ecd6b0516d34f560f33c2397fbcdf98",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "b74b5fa431c985be25dba36fc5885453661434e1689b41a4513966b7f38b559e",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "b74b5fa431c985be25dba36fc5885453661434e1689b41a4513966b7f38b559e",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "49e7cd716ba3aaa3128ef428bab2fe9e791e9fe8cbc3cc35dfc67e58953fffe2",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "6f6717c011cb86060c4fa84a371e9880c9f3ee202d37e9f0e324d598d076eb3d",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "6f6717c011cb86060c4fa84a371e9880c9f3ee202d37e9f0e324d598d076eb3d",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "a02359ecedf78bfd5dae06f69b32a0bd21d6c911c0d07d8279404697e6676712",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    },
+    {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "enabled_mods": [
+        "basemod",
+        "CommunicationMod",
+        "spirelabobserver",
+        "spirelablogic",
+        "alignmentprobe"
+      ],
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "55c5d33cd45aadf609f83169fd08cb4d2d8cb375f3ef4294aea5dc2ea0b8e75a",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "source_files": {
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/AlignmentProbe.java": "9082c04d2e7063471b4b5abfdb7fb0961723640759f90c9f99baae2f0021d989",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/sim_patch/parity/java/ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a",
+        "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/oracle/run.py": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+        "/Users/destire/Documents/ChatGPT/sljt/acceptance-expanded/common.py": "4c55f4960f0f7a9f250ecc7743a23b8ccbaf3c51a6f59863686566e627ac25ec",
+        "/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/src/spire_lab/native/installation.py": "33d811b520e67de077d6c6ecc32c4a3006d459106635502a8beb948867ca6f57"
+      },
+      "compiled_probe_sha256": "55c5d33cd45aadf609f83169fd08cb4d2d8cb375f3ef4294aea5dc2ea0b8e75a",
+      "runner_sha256": "ee489a8a5d3bcd4dedde0a3a798eb71548f8dabf4e1ad876a2908c2546cfce14",
+      "copied_sources": {
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "0c7570fe06d0c4e5772270054e315a7c6e4026bcfbfe13a6acb8046a901739c9",
+        "AlignmentProbe.java": "a109bc2729b44a80642df1111a853f8e31aa54b965bbb22c5fdf4f3d9f3d2f6b",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "steamstateexport/CombatStatePatch.java": "6b8e09c4cb5d14a8ddde520ae2ab477925ea2d03bc55d9c5d89c5808e6f79e9a"
+      },
+      "instance_manifest_sha256": "e800c3c5132f6c0343bc12a2d7e3aa36b88e454819df85f937f6d3ea846568b9",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames"
+    }
+  ]
+}

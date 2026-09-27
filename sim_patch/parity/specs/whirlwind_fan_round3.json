@@ -1,0 +1,76 @@
+[
+  {
+    "name": "whirlwind_fan_thorns_three_energy",
+    "fixture": {
+      "encounter": "4 Shapes",
+      "hand": [
+        "Anger",
+        "Anger",
+        "Whirlwind"
+      ],
+      "relic": "Ornamental Fan",
+      "energy": 3,
+      "relic_counter": 0
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1"
+    ]
+  },
+  {
+    "name": "whirlwind_fan_thorns_one_energy",
+    "fixture": {
+      "encounter": "4 Shapes",
+      "hand": [
+        "Anger",
+        "Anger",
+        "Whirlwind"
+      ],
+      "relic": "Ornamental Fan",
+      "energy": 1,
+      "relic_counter": 0
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1"
+    ]
+  },
+  {
+    "name": "cleave_fan_thorns_control",
+    "fixture": {
+      "encounter": "4 Shapes",
+      "hand": [
+        "Anger",
+        "Anger",
+        "Cleave"
+      ],
+      "relic": "Ornamental Fan",
+      "energy": 3,
+      "relic_counter": 0
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1"
+    ]
+  },
+  {
+    "name": "whirlwind_without_fan_control",
+    "fixture": {
+      "encounter": "4 Shapes",
+      "hand": [
+        "Anger",
+        "Anger",
+        "Whirlwind"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1"
+    ]
+  }
+]

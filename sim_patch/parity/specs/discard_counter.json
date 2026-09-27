@@ -1,0 +1,3 @@
+[
+  {"name":"gamblers_brew_discard_four", "fixture":{"hand":["Strike_R","Defend_R","Bash","Anger"],"potion":"GamblersBrew","energy":3}, "commands":["potion use 0","choose 3","choose 2","choose 1","choose 0","confirm","end"]}
+]
