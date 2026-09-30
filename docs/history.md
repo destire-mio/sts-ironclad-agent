@@ -1,6 +1,8 @@
 # Project history and experiment log
 
 Older README content, kept for the record. Current status is in the [README](../README.md).
+Cleanup note: about 200 one-off experiment scripts, their tests and the A0 `combat_experiments/` were removed from the working tree. They remain in git history at tag `legacy-before-cleanup`; the experiment records in `docs/experiments/` were kept.
+
 
 English | [中文](history.zh-CN.md)
 

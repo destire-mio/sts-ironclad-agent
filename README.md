@@ -2,7 +2,7 @@
 
 # sts-ironclad-agent
 
-**A20 Ironclad agent for Slay the Spire: a frozen decision layer plus simulator combat search, about 50% on Heart runs.**
+**A20 Ironclad bot for Slay the Spire: decision rules plus simulator combat search, about 50% on Heart runs.**
 
 English | [中文](README.zh-CN.md)
 
@@ -54,7 +54,7 @@ do not establish the original-game win rate. A live bridge to the real game is k
 
 | Path | Contents |
 |---|---|
-| `agent/` | teacher drivers (`p300_play_v21.py`, `p300_play_v24.py`), shared helpers, distillation and Heart research tools |
+| `agent/` | bot code: teacher drivers (`p300_play_v21.py`, `p300_play_v24.py`), shared helpers, distillation and Heart research tools |
 | `combat_engine/` | combat engine source snapshot and the post-battle HP scoring report |
 | `sim_patch/` | simulator patches, native alignment tests, original-game parity checker |
 | `steam/` | real-game state export and live search |

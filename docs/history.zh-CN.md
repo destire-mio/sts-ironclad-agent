@@ -1,6 +1,8 @@
 # 项目历史与实验记录
 
 以下是旧版 README 内容，仅作记录。当前状态见 [README](../README.zh-CN.md)。
+清理说明：约 200 个一次性实验脚本、对应测试和 A0 时期的 `combat_experiments/` 已从工作区删除，仍可在 git 标签 `legacy-before-cleanup` 处找到；`docs/experiments/` 里的实验记录保留。
+
 
 [English](history.md) | 中文
 
