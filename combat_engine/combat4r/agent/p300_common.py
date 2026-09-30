@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FROZEN_RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/'
+FROZEN_RUNTIME = Path('<runs>/'
                       'heart-e143-continuous-transitions-20260922-01/runtime')
 # P300_ENGINE=opt: GPT's behaviour-identical optimized core (O3/M4/LTO/PGO + queue/status
 # patches; docs/simulator-performance-20260926.md in the sim-perf worktree). slaythespire and
@@ -24,28 +24,28 @@ if os.environ.get('P300_RUNTIME'):
 elif ENGINE == 'arena':
     # GPT's search-tree memory pool (sts-rl-agent-tree-arena, docs/combat-tree-arena-20260927.md):
     # ~5% faster than combat2, identical actions/RNG; reuse and refine included.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-tree-arena/runs/'
+    RUNTIME = Path('<runs>/'
                    'combat-tree-arena-20260927/runtime')
     FIGHTSIM_DIR = RUNTIME / 'engine'
 elif ENGINE == 'combat2':
     # Round 2 of GPT's combat-search work: ~2% faster equivalent search; refine mode 'refine-witness'.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
+    RUNTIME = Path('<runs>/'
                    'combat-search-20260926/round-2/runtime')
     FIGHTSIM_DIR = RUNTIME / 'engine'
 elif ENGINE == 'combat':
     # GPT's combat-search build (sts-rl-agent-combat-opt, docs/combat-search-optimization-20260926.md):
     # equivalent-speed core plus opt-in reuse / refine search policies; both modules in engine/.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
+    RUNTIME = Path('<runs>/'
                    'combat-search-20260926/final/runtime')
     FIGHTSIM_DIR = RUNTIME / 'engine'
 elif ENGINE == 'opt':
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/'
+    RUNTIME = Path('<runs>/'
                    'simulator-perf-20260926/runtime')
     FIGHTSIM_DIR = ROOT / 'build' / 'opt'
 else:
     RUNTIME = FROZEN_RUNTIME
     FIGHTSIM_DIR = ROOT / 'build'
-PYTHON = '/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python'
+PYTHON = 'python'
 
 os.environ.setdefault('STS_LIGHTSPEED_BUILD', str(RUNTIME / 'engine'))
 # fightsim first: the optimized runtime's engine dir also holds an older fightsim build.

@@ -234,7 +234,7 @@ def check(model_path):
     """Gate G1: do V differences track measured Heart intervention effects (D4, held-out decks)?"""
     import p300_heart_values as HV
     models = load(model_path)
-    rows = [json.loads(l) for l in open(C.ROOT / 'runs/p300-fight-decomposition/d4-heart-values.jsonl')]
+    rows = [json.loads(l) for l in open(C.ROOT / 'data/p300-fight-decomposition/d4-heart-values.jsonl')]
     pred_d, meas_d, keys = [], [], []
     per_key = collections.defaultdict(lambda: [[], []])
     for r in rows:

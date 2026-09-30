@@ -44,7 +44,7 @@ def heart_values():
     """Causal Heart value table (D4): add / up / rm effects on Heart win probability."""
     global _HV
     if _HV is None:
-        _HV = json.loads((C.ROOT / 'runs/p300-fight-decomposition/heart-value-table.json').read_text())
+        _HV = json.loads((C.ROOT / 'data/p300-fight-decomposition/heart-value-table.json').read_text())
     return _HV
 
 

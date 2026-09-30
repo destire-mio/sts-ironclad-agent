@@ -11,41 +11,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FROZEN_RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/'
-                      'heart-e143-continuous-transitions-20260922-01/runtime')
-# P300_ENGINE=opt: GPT's behaviour-identical optimized core (O3/M4/LTO/PGO + queue/status
-# patches; docs/simulator-performance-20260926.md in the sim-perf worktree). slaythespire and
-# fightsim must come from the same core, so fightsim is loaded from build/opt in that case.
-ENGINE = os.environ.get('P300_ENGINE', 'arena')  # opt, combat, combat2, arena all verified identical to frozen (6 games, 10 fight pairs)
-if os.environ.get('P300_RUNTIME'):
-    # Explicit runtime directory (e.g. a Linux rebuild); both modules live in its engine/.
-    RUNTIME = Path(os.environ['P300_RUNTIME'])
-    FIGHTSIM_DIR = RUNTIME / 'engine'
-elif ENGINE == 'arena':
-    # GPT's search-tree memory pool (sts-rl-agent-tree-arena, docs/combat-tree-arena-20260927.md):
-    # ~5% faster than combat2, identical actions/RNG; reuse and refine included.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-tree-arena/runs/'
-                   'combat-tree-arena-20260927/runtime')
-    FIGHTSIM_DIR = RUNTIME / 'engine'
-elif ENGINE == 'combat2':
-    # Round 2 of GPT's combat-search work: ~2% faster equivalent search; refine mode 'refine-witness'.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
-                   'combat-search-20260926/round-2/runtime')
-    FIGHTSIM_DIR = RUNTIME / 'engine'
-elif ENGINE == 'combat':
-    # GPT's combat-search build (sts-rl-agent-combat-opt, docs/combat-search-optimization-20260926.md):
-    # equivalent-speed core plus opt-in reuse / refine search policies; both modules in engine/.
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
-                   'combat-search-20260926/final/runtime')
-    FIGHTSIM_DIR = RUNTIME / 'engine'
-elif ENGINE == 'opt':
-    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/'
-                   'simulator-perf-20260926/runtime')
-    FIGHTSIM_DIR = ROOT / 'build' / 'opt'
-else:
-    RUNTIME = FROZEN_RUNTIME
-    FIGHTSIM_DIR = ROOT / 'build'
-PYTHON = '/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python'
+# The runtime directory holds the frozen parent network, its config, the Python runtime files and
+# the built engine (engine/slaythespire and engine/fightsim). Create it with
+# `python scripts/assemble_runtime.py`; override the location with P300_RUNTIME.
+RUNTIME = Path(os.environ.get('P300_RUNTIME', ROOT / 'runtime'))
+FIGHTSIM_DIR = RUNTIME / 'engine'
+ENGINE = 'arena'  # search variants of the later runtime; kept for the refine check below
+PYTHON = sys.executable
 
 os.environ.setdefault('STS_LIGHTSPEED_BUILD', str(RUNTIME / 'engine'))
 # fightsim first: the optimized runtime's engine dir also holds an older fightsim build.

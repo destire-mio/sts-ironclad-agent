@@ -59,6 +59,9 @@ do not establish the original-game win rate. A live bridge to the real game is k
 | `student/` | the distilled student network (17 MB weights, code, interface) |
 | `experiments/combat_value/` | combat value-network experiment (scripts only; not part of the teacher) |
 | `combat_engine/` | combat engine source snapshot and the post-battle HP scoring report |
+| `runtime/` | frozen parent network, config and runtime files (the engine is built into `runtime/engine/`) |
+| `data/` | stage value tables the teacher reads |
+| `scripts/` | `setup.sh`, `run_teacher.sh`, `assemble_runtime.py` |
 | `sim_patch/` | simulator patches, native alignment tests, original-game parity checker |
 | `steam/` | real-game state export and live search |
 | `experiments-archive/` | reports and results from P200-P212 and cloud runs c5-c52 |
@@ -66,16 +69,28 @@ do not establish the original-game win rate. A live bridge to the real game is k
 | `tests/` | regression tests (need the built `slaythespire` module and PyTorch) |
 | `weights/` | small historical model weights |
 
-## Getting started
+## Quick start
 
-Build the simulator with the patches in `sim_patch/` and put the built `slaythespire` module on `PYTHONPATH`, then run the teacher:
+Needs Python 3.12, `cmake` and a C++17 compiler (tested on macOS arm64). Everything else,
+including the engine source, the parent network and the value tables, is in this repository.
 
 ```bash
-python agent/p300_play_v21.py --help
+scripts/setup.sh                 # venv + numpy/torch/pybind11, builds the engine, writes runtime identity files
+scripts/run_teacher.sh 4 4       # play 4 games on 4 workers with the adopted teacher
 ```
 
-The environment used so far is macOS arm64 with Python 3.12 and PyTorch. The tests have not been rerun
-since the last reorganization. Reproduction details for the older A0 policy are in [`docs/history.md`](docs/history.md).
+`run_teacher.sh [GAMES] [WORKERS] [FIRST_SEED] [OUTPUT]` writes one JSON line per game and prints the win
+count. A game takes roughly a minute on one core. Runs resume if you repeat the command. Use a seed block
+that has not been used for tuning if you want an honest number (the development block is 3900012000+).
+
+Verified on the last cleanup: a fresh build played seed 3900012000 to the Heart (floor 56) in 45 s
+with no engine fault; the cloud teacher reached the same floor on that seed. Long-run win rates were
+not re-measured with this build.
+
+Not yet one click: the distilled student has no full-game driver in this repository (only the loading
+interface, `student/INTERFACE.md`), and the original-game bridge needs your own copy of the game plus mods
+([`docs/live-original-runbook.md`](docs/live-original-runbook.md)). The tests need the built engine and PyTorch.
+Reproduction details for the older A0 policy are in [`docs/history.md`](docs/history.md).
 
 ## Credits and license
 

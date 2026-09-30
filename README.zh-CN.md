@@ -51,6 +51,9 @@
 | `student/` | 蒸馏学生网络（17MB 权重、代码、接口说明） |
 | `experiments/combat_value/` | 战斗价值网络实验（仅脚本，不属于老师） |
 | `combat_engine/` | 战斗引擎源码快照，以及战后 HP 评分报告 |
+| `runtime/` | 冻结的父网络、配置和运行文件（引擎编译到 `runtime/engine/`） |
+| `data/` | 老师读取的阶段价值表 |
+| `scripts/` | `setup.sh`、`run_teacher.sh`、`assemble_runtime.py` |
 | `sim_patch/` | 模拟器补丁、原生对齐测试、原版一致性检查器 |
 | `steam/` | 真实游戏状态导出与在线搜索 |
 | `experiments-archive/` | P200-P212 与云端 c5-c52 的报告和结果 |
@@ -60,13 +63,22 @@
 
 ## 快速开始
 
-按 `sim_patch/` 里的补丁编译模拟器，把编好的 `slaythespire` 模块加入 `PYTHONPATH`，然后运行老师：
+需要 Python 3.12、`cmake` 和支持 C++17 的编译器（在 macOS arm64 上测试）。引擎源码、父网络、价值表都在本仓库里。
 
 ```bash
-python agent/p300_play_v21.py --help
+scripts/setup.sh                 # 建虚拟环境、装 numpy/torch/pybind11、编译引擎、生成运行包标识文件
+scripts/run_teacher.sh 4 4       # 用当前老师打 4 局，4 个进程
 ```
 
-目前的环境是 macOS arm64、Python 3.12 加 PyTorch。上次整理后测试没有重新跑过。旧版 A0 策略的复现方法见 [`docs/history.zh-CN.md`](docs/history.zh-CN.md)。
+`run_teacher.sh [局数] [进程数] [起始种子] [输出文件]` 每局写一行 JSON，并打印胜场。单核一局约一分钟，重复运行会续跑。
+想要可信的胜率，请用没调过参的种子块（开发块是 3900012000 起）。
+
+上次整理时验证：全新编译的引擎在种子 3900012000 上 45 秒打到了心脏（第 56 层），没有引擎故障；云端老师在同一种子上到了同一层。
+长跑胜率没有用这个构建重新测。
+
+还不是一键的部分：蒸馏学生在仓库里没有整局驱动（只有加载接口，见 `student/INTERFACE.md`）；
+接原版游戏需要你自己的游戏和 Mod（见 [`docs/live-original-runbook.md`](docs/live-original-runbook.md)）；测试需要编译好的引擎和 PyTorch。
+旧版 A0 策略的复现方法见 [`docs/history.zh-CN.md`](docs/history.zh-CN.md)。
 
 ## 致谢与协议
 

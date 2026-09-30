@@ -13,7 +13,7 @@ import hashlib
 import json
 from pathlib import Path
 
-RUNS = Path(__file__).resolve().parent.parent / 'runs' / 'p300-fight-decomposition'
+RUNS = Path(__file__).resolve().parent.parent / 'data' / 'p300-fight-decomposition'
 LEGACY_SEEDS = 4  # Historical D4-D6 files predate per-row battle_seeds.
 # d log P(next boss) / d(HP fraction), from the hp75/hp50 rows of the boss tables (~0.3).
 HP_WEIGHT = 0.3
