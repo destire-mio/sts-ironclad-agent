@@ -19,9 +19,10 @@ frozen network and only combat search is allowed to stay classical.
 |---|---|---:|---:|
 | P300 teacher (`agent/p300_play_v21.py`) | development block | 2,000 | **50.1%** |
 | P300 teacher | fresh block | 1,000 | **49.5%** |
+| Distilled student network ([`student/`](student/README.md)) | dev block 3900040000+ | 1,000 | 50.2% (teacher 54.7% on the same seeds) |
 
 All numbers are simulator measurements on fixed seeds, not original-game win rates. The final
-1,024-unseen-seed acceptance of the distilled student network has not been run yet.
+1,024-unseen-seed acceptance of the distilled student network has not been run yet; its 50.2% is a development-block number.
 
 Where the remaining losses come from (3,000 games, death rate among games reaching each stage):
 
@@ -55,6 +56,7 @@ do not establish the original-game win rate. A live bridge to the real game is k
 | Path | Contents |
 |---|---|
 | `agent/` | bot code: teacher drivers (`p300_play_v21.py`, `p300_play_v24.py`), shared helpers, distillation and Heart research tools |
+| `student/` | the distilled student network (17 MB weights, code, interface) |
 | `combat_engine/` | combat engine source snapshot and the post-battle HP scoring report |
 | `sim_patch/` | simulator patches, native alignment tests, original-game parity checker |
 | `steam/` | real-game state export and live search |
