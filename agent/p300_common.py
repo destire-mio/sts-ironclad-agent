@@ -11,19 +11,85 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/'
-               'heart-e143-continuous-transitions-20260922-01/runtime')
+FROZEN_RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-pr/runs/'
+                      'heart-e143-continuous-transitions-20260922-01/runtime')
+# P300_ENGINE=opt: GPT's behaviour-identical optimized core (O3/M4/LTO/PGO + queue/status
+# patches; docs/simulator-performance-20260926.md in the sim-perf worktree). slaythespire and
+# fightsim must come from the same core, so fightsim is loaded from build/opt in that case.
+ENGINE = os.environ.get('P300_ENGINE', 'arena')  # opt, combat, combat2, arena all verified identical to frozen (6 games, 10 fight pairs)
+if os.environ.get('P300_RUNTIME'):
+    # Explicit runtime directory (e.g. a Linux rebuild); both modules live in its engine/.
+    RUNTIME = Path(os.environ['P300_RUNTIME'])
+    FIGHTSIM_DIR = RUNTIME / 'engine'
+elif ENGINE == 'arena':
+    # GPT's search-tree memory pool (sts-rl-agent-tree-arena, docs/combat-tree-arena-20260927.md):
+    # ~5% faster than combat2, identical actions/RNG; reuse and refine included.
+    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-tree-arena/runs/'
+                   'combat-tree-arena-20260927/runtime')
+    FIGHTSIM_DIR = RUNTIME / 'engine'
+elif ENGINE == 'combat2':
+    # Round 2 of GPT's combat-search work: ~2% faster equivalent search; refine mode 'refine-witness'.
+    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
+                   'combat-search-20260926/round-2/runtime')
+    FIGHTSIM_DIR = RUNTIME / 'engine'
+elif ENGINE == 'combat':
+    # GPT's combat-search build (sts-rl-agent-combat-opt, docs/combat-search-optimization-20260926.md):
+    # equivalent-speed core plus opt-in reuse / refine search policies; both modules in engine/.
+    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-combat-opt/runs/'
+                   'combat-search-20260926/final/runtime')
+    FIGHTSIM_DIR = RUNTIME / 'engine'
+elif ENGINE == 'opt':
+    RUNTIME = Path('/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/'
+                   'simulator-perf-20260926/runtime')
+    FIGHTSIM_DIR = ROOT / 'build' / 'opt'
+else:
+    RUNTIME = FROZEN_RUNTIME
+    FIGHTSIM_DIR = ROOT / 'build'
 PYTHON = '/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python'
 
 os.environ.setdefault('STS_LIGHTSPEED_BUILD', str(RUNTIME / 'engine'))
-sys.path[:0] = [str(RUNTIME / 'engine'), str(RUNTIME / 'source'), str(ROOT / 'build')]
+# fightsim first: the optimized runtime's engine dir also holds an older fightsim build.
+sys.path[:0] = [str(FIGHTSIM_DIR), str(RUNTIME / 'engine'), str(RUNTIME / 'source')]
 
 import slaythespire as sts  # noqa: E402
 import heart_runtime as H  # noqa: E402
 import armG_train as A  # noqa: E402
-import fightsim as F  # noqa: E402
+# Load fightsim by path: armG_train puts the engine dir first on sys.path, and the
+# optimized runtime's engine dir holds an older fightsim build.
+import importlib.util  # noqa: E402
+import importlib.machinery  # noqa: E402
+_fightsim_file = next(FIGHTSIM_DIR / ('fightsim' + suffix) for suffix in importlib.machinery.EXTENSION_SUFFIXES
+                      if (FIGHTSIM_DIR / ('fightsim' + suffix)).exists())
+_spec = importlib.util.spec_from_file_location('fightsim', _fightsim_file)
+F = importlib.util.module_from_spec(_spec)
+sys.modules['fightsim'] = F
+_spec.loader.exec_module(F)
 
 CONFIG = json.loads((RUNTIME / 'config.json').read_text())
+_REFINER = None
+_REFINER_MODE = 'refine-ten'
+
+
+def resolve_refining(game, simulations, boss_multiplier):
+    """GPT's refine-ten policy: keep the original answer, spend 10% of the first budget refining.
+    Only available with P300_ENGINE=combat (the add-on is built against that core)."""
+    global _REFINER
+    if ENGINE not in ('combat', 'combat2', 'arena'):
+        raise RuntimeError('refine requires P300_ENGINE=combat, combat2 or arena')
+    if _REFINER is None:
+        import hashlib
+        addon = RUNTIME.parent / 'refiner'
+        manifest = json.loads((addon / 'manifest.json').read_text())
+        digest = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+        binary = addon / manifest['module']
+        if digest(sts.__file__) != manifest['engine_sha256'] or digest(binary) != manifest['module_sha256']:
+            raise RuntimeError('refinement module and active engine must match the recorded build')
+        spec = importlib.util.spec_from_file_location('combat_search_algorithms', binary)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        _REFINER = module
+        globals()['_REFINER_MODE'] = manifest.get('default_mode', 'refine-ten')
+    return _REFINER.resolve(game, simulations, boss_multiplier, _REFINER_MODE, 0.)
 E = sts.MonsterEncounter
 HEART_FLOOR_MIN = 50
 

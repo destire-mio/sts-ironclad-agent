@@ -585,47 +585,6 @@ def loss_fixes4(x, gc, actions, descriptors, chosen, parent):
     return None
 
 
-FIX5_RULES = ('neow_common_relic', 'elite_low_hp', 'flame_weak')
-FIX5_OUTPUT = frozenset(('ANGER', 'BLOOD_FOR_BLOOD', 'BLUDGEON', 'CARNAGE', 'CLEAVE', 'CLOTHESLINE', 'DROPKICK', 'FEED', 'FIEND_FIRE', 'HEADBUTT', 'HEAVY_BLADE', 'HEMOKINESIS', 'IMMOLATE', 'IRON_WAVE', 'PERFECTED_STRIKE', 'POMMEL_STRIKE', 'PUMMEL', 'RAMPAGE', 'RECKLESS_CHARGE', 'SEARING_BLOW', 'SEVER_SOUL', 'SWORD_BOOMERANG', 'THUNDERCLAP', 'TWIN_STRIKE', 'UPPERCUT', 'WHIRLWIND', 'WILD_STRIKE'))
-
-
-def loss_fixes5(x, gc, actions, descriptors, chosen, parent):
-    """Act-1 visible-state candidates from c42 deterministic full-game controls."""
-    sts = x.R.sts
-    if int(gc.act) != 1 or actions[chosen].is_potion_action:
-        return None
-    screen = gc.screen_state
-    output = sum(c.id.name in FIX5_OUTPUT for c in gc.deck)
-    if (screen == sts.ScreenState.EVENT_SCREEN and gc.event_id_string == 'NEOW'
-            and int(gc.floor_num) == 0 and tuple(gc.neow_options[int(actions[chosen].idx1)]) in ((2, 1), (3, 1))):
-        for i, a in enumerate(actions):
-            if not a.is_potion_action and tuple(gc.neow_options[int(a.idx1)]) == (7, 1):
-                return i, 'neow_common_relic'
-    if (screen == sts.ScreenState.MAP_SCREEN and gc.cur_hp <= 0.40 * gc.max_hp
-            and gc.potion_count == 0):
-        y = int(gc.cur_map_node_y) + 1
-        if y < 15 and x.R.kind(descriptors[chosen]) == x.A.AK_MAP:
-            room = lambda i: gc.map_node_room(int(actions[i].idx1), y).name
-            if room(chosen) == 'ELITE':
-                priority = ('REST', 'EVENT', 'MONSTER', 'SHOP')
-                safe = [i for i, a in enumerate(actions) if not a.is_potion_action
-                        and x.R.kind(descriptors[i]) == x.A.AK_MAP and room(i) in priority]
-                if safe:
-                    return min(safe, key=lambda i: priority.index(room(i))), 'elite_low_hp'
-    if (screen == sts.ScreenState.MAP_SCREEN and 0.40 * gc.max_hp < gc.cur_hp < 0.80 * gc.max_hp
-            and gc.potion_count == 0 and output <= 1):
-        y = int(gc.cur_map_node_y) + 1
-        if y < 15 and x.R.kind(descriptors[chosen]) == x.A.AK_MAP:
-            room = lambda i: gc.map_node_room(int(actions[i].idx1), y).name
-            if (int(actions[chosen].idx1), y) == tuple(gc.burning_elite[:2]) and room(chosen) == 'ELITE':
-                priority = ('REST', 'EVENT', 'MONSTER', 'SHOP')
-                safe = [i for i, a in enumerate(actions) if not a.is_potion_action
-                        and x.R.kind(descriptors[i]) == x.A.AK_MAP and room(i) in priority]
-                if safe:
-                    return min(safe, key=lambda i: priority.index(room(i))), 'flame_weak'
-    return None
-
-
 def rollout_arm(features):
     """The same policy without data-collection features (rollouts never branch or record)."""
     return '+'.join(sorted(f for f in features if not (f.startswith('branch') or f.startswith('explore')
@@ -649,22 +608,10 @@ def branch_options(x, gc, actions, descriptors, chosen, rng, cap=4):
     return [chosen] + sorted(rng.sample(others, min(cap - 1, len(others))))
 
 
-def heart_rest90(x, gc, actions, descriptors, chosen):
-    """Opt-in campfire hypothesis evaluated by same-root terminal forks."""
-    if int(gc.act) != 4 or gc.screen_state.name != 'REST_ROOM' or gc.cur_hp >= .9 * gc.max_hp:
-        return chosen
-    if {r.id.name for r in gc.relics} & {'MARK_OF_THE_BLOOM', 'COFFEE_DRIPPER'}:
-        return chosen
-    return next((i for i, a in enumerate(actions)
-                 if x.R.kind(descriptors[i]) == x.A.AK_REST and a.idx1 == 0), chosen)
-
-
 def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
     x, parent = runtime()
     sts, A, config = x.R.sts, x.A, x.config
     features = set(arm.split('+'))
-    if {'heart40', 'spear160'} & features and (not {'reuse', 'c4q'} <= features or {'refine', 'c4r'} & features):
-        raise ValueError('heart40/spear160 require the reuse+c4q combat policy')
     boss_multiplier = 12.0 if 'boss12' in features else config['boss_multiplier']
     boss_multiplier = next((float(f[4:]) for f in features if f.startswith('boss') and f[4:].isdigit()), boss_multiplier)
     # simsN: base search budget N thousand per decision (production 8).
@@ -698,12 +645,10 @@ def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
     strength_cache = {}
     fixes = 0
     fix3 = dict.fromkeys(FIX3_RULES, 0)
+    card_adjusts = 0
     fix3_log = []
     fix4 = dict.fromkeys(FIX4_RULES, 0)
     fix4_log = []
-    fix5 = dict.fromkeys(FIX5_RULES, 0)
-    fix5_log = []
-    heart_rest_overrides = 0
     route_params, route_cache = None, {}
     guide2_cache = {}
     map_forks = 0
@@ -730,26 +675,18 @@ def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
                 boss = C.is_boss(gc)
                 if 'refine' in features:
                     result = C.resolve_refining(gc, base_sims, boss_multiplier)
-                elif 'reuse' in features and 'c4s' in features:
-                    # combat4s: repaired mechanics and winning max-HP continuation value
+                elif 'reuse' in features and 'c4r' in features:
+                    # combat4r: repaired mechanics and winning max-HP continuation value
                     budget = 80000 if 'heart2' in features and int(gc.act) == 4 else 40000
                     # spearN: fixed larger budget for Shield and Spear (HP entering the Heart decides most Heart fights)
                     for f in features:
                         if f.startswith('spear') and f[5:].isdigit() and gc.encounter.name == 'SHIELD_AND_SPEAR':
                             budget = int(f[5:]) * 1000
-                    result = C.F.resolve_combat4s(gc, budget, boss_multiplier)
-                elif 'reuse' in features and 'c4r' in features:
-                    # combat4r: repaired mechanics and winning max-HP continuation value
-                    result = C.F.resolve_combat4r(gc, 80000 if 'heart2' in features and int(gc.act) == 4 else 40000,
-                                                  boss_multiplier)
+                    result = C.F.resolve_combat4r(gc, budget, boss_multiplier)
                 elif 'reuse' in features and 'c4q' in features:
-                    budget = 80000 if 'heart2' in features and int(gc.act) == 4 else 40000
-                    # Fixed Heart-only budget; Shield/Spear retains the heart2 budget.
-                    if 'heart40' in features and gc.encounter.name == 'THE_HEART':
-                        budget = 40000
-                    if 'spear160' in features and gc.encounter.name == 'SHIELD_AND_SPEAR':
-                        budget = 160000
-                    result = C.F.resolve_combat4q(gc, budget, boss_multiplier)
+                    # combat4q: combat4p with no death-node potion bonus and no no-op potion drinks (needs combat4q runtime)
+                    result = C.F.resolve_combat4q(gc, 80000 if 'heart2' in features and int(gc.act) == 4 else 40000,
+                                                  boss_multiplier)
                 elif 'reuse' in features and 'c4p' in features:
                     # combat4p: combat4 without potion discards in search (needs combat4p runtime)
                     result = C.F.resolve_combat4p(gc, 80000 if 'heart2' in features and int(gc.act) == 4 else 40000,
@@ -1139,21 +1076,29 @@ def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
                                          hp=int(gc.cur_hp), screen=gc.screen_state.name,
                                          before=int(actions[chosen].bits), after=int(actions[index].bits)))
                     chosen = index
-            if 'hrest90' in features and len(actions) > 1:
-                better = heart_rest90(x, gc, actions, descriptors, chosen)
-                heart_rest_overrides += better != chosen
-                chosen = better
-            if 'fix5' in features and len(actions) > 1:
-                better = loss_fixes5(x, gc, actions, descriptors, chosen, parent)
-                if better is not None:
-                    index, rule = better
-                    overrides += 1
-                    fixes += 1
-                    fix5[rule] += 1
-                    fix5_log.append(dict(rule=rule, act=int(gc.act), floor=int(gc.floor_num),
-                                         hp=int(gc.cur_hp), screen=gc.screen_state.name,
-                                         before=int(actions[chosen].bits), after=int(actions[index].bits)))
-                    chosen = index
+            if ('cardadj' in features and gc.screen_state == sts.ScreenState.REWARDS and int(gc.act) <= 3
+                    and len(actions) > 1
+                    and x.R.kind(descriptors[chosen]) in (x.A.AK_REWARD_CARD, x.A.AK_REWARD_SKIP)):
+                # cardadj (c39 card forks): taking Feed beat the actual pick (+4.6); a taken Immolate lost (-4.7).
+                before = T.deck_key(gc)
+                def took(i):
+                    c = C.F.copy_game(gc)
+                    actions[i].execute(c)
+                    added, _ = T.deck_delta(before, T.deck_key(c))
+                    return added[0].rstrip('+') if added else None
+                names = {i: took(i) for i, a in enumerate(actions) if not a.is_potion_action
+                         and x.R.kind(descriptors[i]) in (x.A.AK_REWARD_CARD, x.A.AK_REWARD_SKIP)}
+                keep = {'FEED', 'CORRUPTION', 'REAPER', 'OFFERING', 'FEEL_NO_PAIN', 'DARK_EMBRACE'}
+                feed = [i for i, n in names.items() if n == 'FEED']
+                if feed and names.get(chosen) not in keep:
+                    chosen = feed[0]
+                    card_adjusts += 1
+                elif names.get(chosen) == 'IMMOLATE':
+                    rest = [i for i in names if names[i] != 'IMMOLATE']
+                    if rest:
+                        j = parent.choose(gc, x.A.obs_vec(gc), [actions[i] for i in rest], [descriptors[i] for i in rest])
+                        chosen = rest[j]
+                        card_adjusts += 1
             if prefix is not None:
                 prefix.append(dict(kind='outside', action=int(actions[chosen].bits), explored=was_explored))
             actions[chosen].execute(gc)
@@ -1168,10 +1113,8 @@ def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
         row.update(fix3=fix3, fix3_log=fix3_log)
     if 'fix4' in features:
         row.update(fix4=fix4, fix4_log=fix4_log)
-    if 'hrest90' in features:
-        row['heart_rest_overrides'] = heart_rest_overrides
-    if 'fix5' in features:
-        row.update(fix5=fix5, fix5_log=fix5_log)
+    if 'cardadj' in features:
+        row['card_adjusts'] = card_adjusts
     if start is not None:
         import p300_vlate as V
         row['end_features'] = [float(v) for v in V.features(gc)] if int(gc.act) >= 3 and not row['error'] else None
@@ -1212,8 +1155,7 @@ def main():
     if out.exists():
         for line in out.read_text().splitlines():
             row = json.loads(line)
-            if not row.get('error'):  # failed games are replayed, not counted as done
-                done.add((row['seed'], row['arm']))
+            done.add((row['seed'], row['arm']))
     jobs = [(s, a) for s in seeds for a in args.arms.split(',') if (s, a) not in done]
     with ProcessPoolExecutor(args.workers) as pool, out.open('a') as handle:
         futures = [pool.submit(play, s, a, teacher_seeds, args.teacher_sims, args.record_dir) for s, a in jobs]

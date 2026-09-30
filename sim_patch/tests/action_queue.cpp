@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <array>
 #include <deque>
 #include <iostream>
 #include <stdexcept>
@@ -97,6 +98,29 @@ int main(int argc, char **argv) {
             queue.clear(); model.clear();
             add(queue, model, 1000);
             add(queue, model, 1001, true);
+        } else if (test == "heap_callback_survives_reuse") {
+            std::array<int, 128> payload{};
+            payload.fill(731);
+            queue.pushBack(sts::Action([payload](sts::BattleContext &recipient) {
+                recipient.observed.push_back(payload.front() + payload.back());
+            }));
+            auto extracted = queue.popFront();
+            for (int i=0; i<512; ++i) add(queue, model, i);
+            queue.clear(); model.clear();
+            extracted(context);
+            require(context.observed == std::vector<int>{1462});
+        } else if (test == "heap_copy_isolation") {
+            std::array<int, 128> payload{};
+            payload.fill(17);
+            queue.pushBack(sts::Action([payload, calls=0](sts::BattleContext &recipient) mutable {
+                recipient.observed.push_back(payload.front() + ++calls);
+            }));
+            Queue copied(queue);
+            auto first = queue.popFront();
+            auto second = copied.popFront();
+            first(context); first(context); second(context);
+            require(context.observed == std::vector<int>({18, 19, 18}));
+            require(queue.isEmpty() && copied.isEmpty());
         } else if (test == "executing_callback_grows_queue") {
             queue.pushBack(sts::Action([&queue](sts::BattleContext &recipient) {
                 for (int i=0; i<512; ++i)

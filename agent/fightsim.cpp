@@ -9,6 +9,7 @@
 #include "sim/search/ScumSearchAgent2.h"
 #include "constants/MonsterEncounters.h"
 #include "sim/search/BattleScumSearcher2.h"
+#include "combat_search_reuse.h"
 
 #include <algorithm>
 #include <atomic>
@@ -175,11 +176,9 @@ static std::int64_t adaptivePlayout(BattleContext &bc, int simulations, double b
 }
 
 // Production playoutBattle, except each replanning search runs in `chunks`
-// slices and stops early once it holds a "perfect" line: a victory that loses
-// no HP and uses no potion. The search score of a victory is
-// 100 * (35 + hp + 4 * potions - 0.01 * turn), so further search could only
-// shorten that line by a few turns. With chunks == 1 this is the production
-// resolver exactly.
+// slices and stops at an HP/score threshold. This is a heuristic: healing can
+// compensate for a spent potion, and later search may improve the result.
+// With chunks == 1 this is the production resolver exactly.
 static std::int64_t fastPlayout(BattleContext &bc, int simulations, double bossMultiplier, int chunks) {
     search::ScumSearchAgent2 agent;
     agent.simulationCountBase = simulations;
@@ -227,6 +226,27 @@ static std::int64_t fastPlayout(BattleContext &bc, int simulations, double bossM
 }
 
 PYBIND11_MODULE(fightsim, m) {
+    m.def("resolve_reusing", [](GameContext &gc, int simulations, double bossMultiplier) {
+        if (gc.screenState != ScreenState::BATTLE || gc.outcome != GameOutcome::UNDECIDED)
+            throw std::invalid_argument("resolve_reusing requires an active battle");
+        std::lock_guard<std::mutex> engineLock(g_engineMutex);
+        BattleContext battle;
+        battle.init(gc);
+        auto result = combat_search::playoutReusing(battle, simulations, bossMultiplier);
+        py::dict out;
+        out["actions"] = result.actions;
+        out["simulations"] = result.simulations;
+        out["outcome"] = static_cast<int>(battle.outcome);
+        out["turns"] = battle.turn + 1;
+        out["search_rounds"] = result.rounds;
+        out["reused_trees"] = result.reusedTrees;
+        out["reused_visits"] = result.reusedVisits;
+        out["best_hp"] = result.bestHp;
+        battle.exitBattle(gc);
+        return out;
+    }, py::arg("game"), py::arg("simulations") = 8000, py::arg("boss_multiplier") = 3.0,
+       "Resolve in place, preserving visited descendants of the executed plan. Changes search policy.");
+
     m.def("simulate", [](const GameContext &gc, int encounter, int simulations, double bossMultiplier,
                          std::uint64_t rngSeed, int hp) {
         FightResult result;
@@ -328,7 +348,7 @@ PYBIND11_MODULE(fightsim, m) {
         battle.exitBattle(gc);
         return out;
     }, py::arg("game"), py::arg("simulations") = 8000, py::arg("boss_multiplier") = 3.0, py::arg("chunks") = 16,
-       "Resolve the current battle in place; stop each search early once a no-damage, no-potion win is found.");
+       "Resolve in place with heuristic early stopping at an HP/score threshold.");
 
     m.def("copy_game", [](const GameContext &gc) { return GameContext(gc); },
           "Deep copy of a GameContext (value semantics, RNG included).");

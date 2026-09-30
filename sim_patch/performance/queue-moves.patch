@@ -1,0 +1,45 @@
+--- a/include/combat/ActionQueue.h
++++ b/include/combat/ActionQueue.h
+@@ -56,7 +56,7 @@
+         ActionFunction popFront() {
+             assert(size > 0);
+             // Return a separate callable: it may mutate or grow this queue.
+-            ActionFunction action = functionAt(front);
++            ActionFunction action = std::move(functionAt(front));
+             if (++front == getCapacity()) front = 0;
+             --size;
+             return action;
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -139,8 +139,8 @@
+         void onAfterUseCard();
+ 
+         void setState(InputState state);
+-        void addToTop(const Action &a);
+-        void addToBot(const Action &a);
++        void addToTop(Action a);
++        void addToBot(Action a);
+ 
+         void addToTopCard(CardQueueItem item);
+         void addToBotCard(CardQueueItem item);
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -678,12 +678,12 @@
+     inputState = s;
+ }
+ 
+-void BattleContext::addToTop(const Action &a) {
+-    actionQueue.pushFront(a);
+-}
+-
+-void BattleContext::addToBot(const Action &a) {
+-    actionQueue.pushBack(a);
++void BattleContext::addToTop(Action a) {
++    actionQueue.pushFront(std::move(a));
++}
++
++void BattleContext::addToBot(Action a) {
++    actionQueue.pushBack(std::move(a));
+ }
+ 
+ // todo remove or replace other method that does this

@@ -1,0 +1,65 @@
+cmake_minimum_required(VERSION 3.19)
+project(sts_performance LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_CXX_FLAGS_RELEASE "")
+
+set(STS_SIM_ROOT "" CACHE PATH "Immutable simulator source snapshot")
+set(STS_JSON_INCLUDE "" CACHE PATH "Snapshot containing nlohmann/json.hpp")
+set(STS_OPT_LEVEL "3" CACHE STRING "Compiler optimization level")
+set(STS_CPU "" CACHE STRING "Explicit CPU, empty for compiler default")
+option(STS_LTO "Optimize across core translation units and Python bindings" ON)
+set(STS_PGO "off" CACHE STRING "off, generate, or use")
+set(STS_PROFILE "" CACHE FILEPATH "Merged LLVM profile used by STS_PGO=use")
+
+add_compile_options("-O${STS_OPT_LEVEL}" -UNDEBUG)
+if(STS_CPU)
+  add_compile_options("-mcpu=${STS_CPU}")
+endif()
+if(STS_LTO)
+  include(CheckIPOSupported)
+  check_ipo_supported(RESULT ipo_ok OUTPUT ipo_error)
+  if(NOT ipo_ok)
+    message(FATAL_ERROR "LTO unavailable: ${ipo_error}")
+  endif()
+  set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
+endif()
+if(STS_PGO STREQUAL "generate")
+  add_compile_options(-fprofile-instr-generate)
+  add_link_options(-fprofile-instr-generate)
+elseif(STS_PGO STREQUAL "use")
+  if(NOT EXISTS "${STS_PROFILE}")
+    message(FATAL_ERROR "STS_PGO=use needs a merged profile")
+  endif()
+  add_compile_options("-fprofile-instr-use=${STS_PROFILE}")
+elseif(NOT STS_PGO STREQUAL "off")
+  message(FATAL_ERROR "Unknown STS_PGO mode")
+endif()
+
+file(GLOB_RECURSE core_sources CONFIGURE_DEPENDS "${STS_SIM_ROOT}/src/*.cpp")
+add_library(sts_core STATIC ${core_sources})
+target_include_directories(sts_core PUBLIC "${STS_SIM_ROOT}/include"
+  "${STS_SIM_ROOT}/bindings" "${STS_JSON_INCLUDE}")
+find_package(Python COMPONENTS Interpreter Development.Module REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
+pybind11_add_module(slaythespire NO_EXTRAS
+  "${STS_SIM_ROOT}/bindings/slaythespire.cpp"
+  "${STS_SIM_ROOT}/bindings/bindings-util.cpp")
+target_link_libraries(slaythespire PRIVATE sts_core)
+
+enable_testing()
+add_executable(combat_rules ../tests/combat_rules.cpp)
+target_link_libraries(combat_rules PRIVATE sts_core)
+foreach(case IN ITEMS blood_normal blood_bark blood_rounding blood_cap
+    iron_wave_base iron_wave_dex iron_wave_frail iron_wave_negative_dex
+    cardless_poison cardless_fire cardless_death poison_with_cards
+    poison_block poison_intangible poison_expiration poison_artifact poison_targets)
+  add_test(NAME combat_${case} COMMAND combat_rules ${case})
+endforeach()
+add_executable(action_queue ../tests/action_queue.cpp)
+target_include_directories(action_queue PRIVATE "${STS_SIM_ROOT}/include")
+foreach(case IN ITEMS normal_wrap growth_back growth_front growth_wrapped
+    growth_copy victory_wrapped clear_reuse executing_callback_grows_queue
+    heap_callback_survives_reuse heap_copy_isolation)
+  add_test(NAME queue_${case} COMMAND action_queue ${case})
+endforeach()
