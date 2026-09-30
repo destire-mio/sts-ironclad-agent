@@ -18,6 +18,9 @@ from .core import sha256, write_json
 
 
 ETHEREAL_PATCH = "basemod/patches/com/megacrit/cardcrawl/actions/common/DiscardAtEndOfTurnAction/ConsistentEtherealPatch"
+# Loading the game and applying its mods can exceed 90 seconds under local CPU
+# contention. Keep this startup deadline separate from individual game actions.
+STARTUP_TIMEOUT_SECONDS = 180
 
 
 def configure_reference(instance: Path, profile: str) -> dict:
@@ -92,6 +95,21 @@ class Original:
                 hashes[str(original)] = sha256(original)
             alignment = sources / "AlignmentProbe.java"
             text = alignment.read_text()
+            # GameActionManager.hasControl starts true and is cleared by its
+            # combat update. In a completed shop it can stay true with no work.
+            # Only inventory fixtures opt into the explicit queue/effect guard;
+            # notification changes CommunicationMod state, never game state.
+            marker = "   && !AbstractDungeon.actionManager.hasControl\n"
+            if text.count(marker) != 1:
+                raise ValueError("original quiet shop observer guard changed")
+            text = text.replace(marker,
+                "   && (!AbstractDungeon.actionManager.hasControl || ShopContinuationProbe.quietInventoryScreen())\n")
+            marker = "    observerNotifications.add(note);"
+            if text.count(marker) != 1:
+                raise ValueError("original shop observer notification changed")
+            text = text.replace(marker,
+                '    note.addProperty("has_control",AbstractDungeon.actionManager.hasControl);'
+                'note.addProperty("inventory_quiet",ShopContinuationProbe.quietInventoryScreen());\n' + marker)
             marker = "  }return out;\n }\n static AbstractCard card"
             if text.count(marker) != 1:
                 raise ValueError("local original observer changed; inspect view() before extending it")
@@ -111,6 +129,40 @@ class Original:
             audit = self.repo / "sim_patch/parity/java/ParityAudit.java"
             shutil.copy2(audit, sources / audit.name)
             hashes[str(audit)] = sha256(audit)
+            colosseum = self.repo / "sim_patch/parity/java/ColosseumProbe.java"
+            shutil.copy2(colosseum, sources / colosseum.name)
+            hashes[str(colosseum)] = sha256(colosseum)
+            event_entry = self.repo / "sim_patch/parity/java/EventEntryProbe.java"
+            shutil.copy2(event_entry, sources / event_entry.name)
+            hashes[str(event_entry)] = sha256(event_entry)
+            relic_acquire = self.repo / "sim_patch/parity/java/RelicAcquireProbe.java"
+            shutil.copy2(relic_acquire, sources / relic_acquire.name)
+            hashes[str(relic_acquire)] = sha256(relic_acquire)
+            event_rewards = self.repo / "sim_patch/parity/java/EventRewardsProbe.java"
+            shutil.copy2(event_rewards, sources / event_rewards.name)
+            hashes[str(event_rewards)] = sha256(event_rewards)
+            treasure = self.repo / "sim_patch/parity/java/TreasureProbe.java"
+            shutil.copy2(treasure, sources / treasure.name)
+            hashes[str(treasure)] = sha256(treasure)
+            shop_continuation = self.repo / "sim_patch/parity/java/ShopContinuationProbe.java"
+            shutil.copy2(shop_continuation, sources / shop_continuation.name)
+            hashes[str(shop_continuation)] = sha256(shop_continuation)
+            marker = '  else if(op.equals("outside_probe"))return OutsideProbe.run(req.getAsJsonObject("spec"));'
+            text = alignment.read_text()
+            if text.count(marker) != 1:
+                raise ValueError("original room fixture insertion point changed")
+            alignment.write_text(text.replace(marker, marker
+                + '\n  else if(op.equals("colosseum_fixture"))return ColosseumProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("event_entry_fixture"))return EventEntryProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("relic_acquire_fixture"))return RelicAcquireProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("relic_acquire_observe"))return RelicAcquireProbe.snapshot();'
+                + '\n  else if(op.equals("event_rewards_fixture"))return EventRewardsProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("event_rewards_observe"))return EventRewardsProbe.snapshot();'
+                + '\n  else if(op.equals("treasure_fixture"))return TreasureProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("treasure_observe"))return TreasureProbe.snapshot();'
+                + '\n  else if(op.equals("shop_continuation_fixture"))return ShopContinuationProbe.start(req.getAsJsonObject("spec"));'
+                + '\n  else if(op.equals("shop_continuation_observe"))return ShopContinuationProbe.snapshot();'
+                + '\n  else if(op.equals("shop_continuation_advance"))return ShopContinuationProbe.advanceTo(req);'))
             exporter = self.repo / "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java"
             hashes[str(exporter)] = sha256(exporter)
             copied_exporter = sources / "steamstateexport" / exporter.name
@@ -145,6 +197,7 @@ class Original:
             config = instance / "home/Library/Preferences/ModTheSpire/CommunicationMod/config.properties"
             config.write_text(config.read_text().replace("runAtGameStart=true", "runAtGameStart=false"))
             self.identity = {"original_game_sha256": sha256(instance / "desktop-1.0.jar"),
+                             "startup_timeout_seconds": STARTUP_TIMEOUT_SECONDS,
                              "reference_profile": reference_change,
                              "enabled_mods": manifest["enabled_mods"],
                              "runtime_mods": {str(p.relative_to(instance)): sha256(p)
@@ -160,7 +213,7 @@ class Original:
                 signal.signal(sig, self._interrupted)
             write_json(directory / "launch.json", Q.launch(instance))
             self.probe = Q.Probe(instance)
-            self.call("observe", timeout_seconds=90)
+            self.call("observe", timeout_seconds=STARTUP_TIMEOUT_SECONDS)
             return self
         except BaseException:
             self.close()

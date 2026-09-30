@@ -1,0 +1,22 @@
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -343,7 +343,8 @@
+     curHp = std::max(0, curHp-amount);
+ 
+     if (selfDamage && hasStatus<PS::RUPTURE>()) {
+-        buff<PS::STRENGTH>(getStatus<PS::RUPTURE>());
++        // Rupture applies after the current damage/revival action resolves.
++        bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(getStatus<PS::RUPTURE>()));
+     }
+ 
+     // todo - does order acquired matter with centennial/runic?
+@@ -774,8 +775,8 @@
+ 
+         switch (pair.first) {
+             case PS::BRUTALITY:
++                bc.addToBot( Actions::DrawCards(pair.second) );
+                 bc.addToBot( Actions::PlayerLoseHp(pair.second, true) );
+-                bc.addToBot( Actions::DrawCards(pair.second) );
+                 break;
+ 
+             case PS::DEMON_FORM:

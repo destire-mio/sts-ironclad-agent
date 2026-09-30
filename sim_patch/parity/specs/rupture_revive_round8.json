@@ -1,0 +1,30 @@
+[
+  {
+    "name": "rupture_red_skull_revive_at_strength_cap",
+    "fixture": {"hand": ["Rupture", "Offering"], "current_hp": 5,
+      "relics": ["Red Skull", "SacredBark"], "potion": "FairyPotion",
+      "player_strength": 999, "initialize_relics": true},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "rupture_plus_red_skull_revive_at_strength_cap",
+    "fixture": {"hand": [{"card": "Rupture", "upgrades": 1}, "Offering"], "current_hp": 5,
+      "relics": ["Red Skull", "SacredBark"], "potion": "FairyPotion",
+      "player_strength": 999, "initialize_relics": true},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "rupture_red_skull_revive_low_strength_control",
+    "fixture": {"hand": ["Rupture", "Offering"], "current_hp": 5,
+      "relics": ["Red Skull", "SacredBark"], "potion": "FairyPotion",
+      "player_strength": 10, "initialize_relics": true},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "rupture_revive_without_red_skull_control",
+    "fixture": {"hand": ["Rupture", "Offering"], "current_hp": 5,
+      "relic": "SacredBark", "potion": "FairyPotion",
+      "player_strength": 999, "initialize_relics": true},
+    "commands": ["play 1", "play 1"]
+  }
+]

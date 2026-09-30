@@ -1,0 +1,14 @@
+[
+  {
+    "name": "void_before_lethal_fire_breathing",
+    "fixture": {"hand": ["Fire Breathing", "Bloodletting"], "draw": ["Void"],
+      "energy": 3, "monster_hp": 6, "relic": "Runic Cube"},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "void_before_surviving_fire_breathing",
+    "fixture": {"hand": ["Fire Breathing", "Bloodletting"], "draw": ["Void"],
+      "energy": 3, "monster_hp": 12, "relic": "Runic Cube"},
+    "commands": ["play 1", "play 1"]
+  }
+]

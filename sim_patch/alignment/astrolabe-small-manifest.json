@@ -1,0 +1,64 @@
+{
+  "repair": "Preserve original master-deck order when Astrolabe transforms at most three candidates; adjust indices after preceding removals",
+  "apply_after": "innate_opening.patch",
+  "patch_sha256": "709e575f737f3b895a5fa3a7e8c446838754f38d62a5385e3e5c34ce4b3c5e6c",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87",
+      "after": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/game/GameContext.cpp": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87"
+      },
+      "after": {
+        "src/game/GameContext.cpp": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/optimized/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/game/GameContext.cpp": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87"
+      },
+      "after": {
+        "src/game/GameContext.cpp": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-astrolabe-small/portable/e121/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "astrolabe-small-original.json.gz": "3d3845426fffa56f27d06219e929be6bc6eafa54713272f67d25dbcb360b1e6f",
+    "astrolabe-lifecycle-original.json.gz": "6ddbc35cc5b04803e001042ff1254e1405a6bc534ca09fe1e6463a37164566e6"
+  },
+  "acceptance_boundary": "8 installed-Mod original cases; ordered deck and upgrades, HP/maxHP/gold, RNG and lifecycle fields matched; raw counters retained; exhaustive parity INCOMPLETE"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "urn_pain_at_full_hp",
+    "fixture": {"hand": ["Inflame", "Pain"], "relic": "Bird Faced Urn", "current_hp": 80},
+    "commands": ["play 1"]
+  },
+  {
+    "name": "urn_pain_one_below_full_hp",
+    "fixture": {"hand": ["Metallicize", "Pain"], "relic": "Bird Faced Urn", "current_hp": 79},
+    "commands": ["play 1"]
+  },
+  {
+    "name": "urn_pain_wounded_control",
+    "fixture": {"hand": ["Inflame", "Pain"], "relic": "Bird Faced Urn", "current_hp": 50},
+    "commands": ["play 1"]
+  },
+  {
+    "name": "urn_without_pain_full_hp_control",
+    "fixture": {"hand": ["Inflame"], "relic": "Bird Faced Urn", "current_hp": 80},
+    "commands": ["play 1"]
+  }
+]

@@ -22,7 +22,9 @@ public final class ParityAudit {
         if (object == null) return result;
         for (Class<?> type = object.getClass(); type != null; type = type.getSuperclass()) {
             for (Field field : type.getDeclaredFields()) {
-                if (Modifier.isStatic(field.getModifiers()) || field.isSynthetic()) continue;
+                boolean puzzleState = type.getName().equals("com.megacrit.cardcrawl.relics.CentennialPuzzle")
+                    && field.getName().equals("usedThisCombat");
+                if ((Modifier.isStatic(field.getModifiers()) && !puzzleState) || field.isSynthetic()) continue;
                 Class<?> valueType = field.getType();
                 if (!valueType.isPrimitive() && !valueType.isEnum()) continue;
                 field.setAccessible(true);
@@ -83,6 +85,7 @@ public final class ParityAudit {
         JsonObject raw = new JsonObject();
         raw.add("rng", rngs());
         raw.add("player", scalars(AbstractDungeon.player));
+        raw.addProperty("player_energy", com.megacrit.cardcrawl.ui.panels.EnergyPanel.totalCount);
         raw.add("powers", objects(AbstractDungeon.player.powers));
         raw.add("relics", objects(AbstractDungeon.player.relics));
         raw.add("hand", objects(AbstractDungeon.player.hand.group));
@@ -109,6 +112,7 @@ public final class ParityAudit {
         runtime.addProperty("game_seed", com.megacrit.cardcrawl.core.Settings.seed);
         runtime.addProperty("floor", AbstractDungeon.floorNum);
         runtime.addProperty("turn", com.megacrit.cardcrawl.actions.GameActionManager.turn);
+        runtime.addProperty("ethereal_shuffle_mode", (String)steamstateexport.CombatStatePatch.endTurnShuffleState().get("mode"));
         result.add("runtime", runtime);
         JsonObject before = rawState();
         result.add("raw_state", before);

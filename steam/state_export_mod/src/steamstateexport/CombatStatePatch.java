@@ -14,10 +14,39 @@ import communicationmod.GameStateConverter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Collections;
+import java.util.concurrent.atomic.AtomicLong;
 import java.lang.reflect.Field;
 
 @SpirePatch(clz = GameStateConverter.class, method = "getCombatState")
 public class CombatStatePatch {
+    // The installed BaseMod patch and the original Collections path use
+    // different random sources. Observe the profile and raw shared state;
+    // never instantiate or reseed the game's Random while exporting it.
+    public static HashMap<String, Object> endTurnShuffleState() {
+        HashMap<String, Object> state = new HashMap<>();
+        try {
+            boolean consistent = false;
+            ClassLoader loader = CombatStatePatch.class.getClassLoader();
+            try {
+                Class<?> base = Class.forName("basemod.BaseMod", false, loader);
+                Class.forName("basemod.patches.com.megacrit.cardcrawl.actions.common.DiscardAtEndOfTurnAction.ConsistentEtherealPatch", false, loader);
+                consistent = base.getField("fixesEnabled").getBoolean(null);
+            } catch (ClassNotFoundException absent) { }
+            state.put("mode", consistent ? "basemod_seeded" : "java_shared");
+            Field randomField = Collections.class.getDeclaredField("r");
+            randomField.setAccessible(true);
+            Object random = randomField.get(null);
+            state.put("shared_rng_initialized", random != null);
+            if (random != null) {
+                Field seed = java.util.Random.class.getDeclaredField("seed");
+                seed.setAccessible(true);
+                state.put("shared_seed48", ((AtomicLong) seed.get(random)).get());
+            }
+        } catch (ReflectiveOperationException error) { throw new IllegalStateException(error); }
+        return state;
+    }
+
     private static HashMap<String, Object> rng(Random rng) {
         HashMap<String, Object> state = new HashMap<>();
         state.put("counter", rng.counter);
@@ -36,9 +65,11 @@ public class CombatStatePatch {
         rngs.put("potion", rng(AbstractDungeon.potionRng));
         rngs.put("shuffle", rng(AbstractDungeon.shuffleRng));
         result.put("rngs", rngs);
+        result.put("end_turn_shuffle", endTurnShuffleState());
         result.put("frame_delta_seconds", com.badlogic.gdx.Gdx.graphics.getDeltaTime());
         result.put("energy_per_turn", AbstractDungeon.player.energy.energy);
         result.put("card_draw_per_turn", AbstractDungeon.player.gameHandSize);
+        result.put("is_bloodied", AbstractDungeon.player.isBloodied);
         result.put("cards_discarded_this_turn", GameActionManager.totalDiscardedThisTurn);
         int attacks = 0, skills = 0;
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
@@ -56,6 +87,20 @@ public class CombatStatePatch {
         result.put("facing_monster_index", facing);
         Map<String, Object> relicState = new HashMap<>();
         for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
+            if (relic.relicId.equals("Centennial Puzzle")) {
+                try {
+                    Field field = relic.getClass().getDeclaredField("usedThisCombat");
+                    field.setAccessible(true);
+                    relicState.put("centennial_puzzle_used", field.getBoolean(null));
+                } catch (ReflectiveOperationException error) { throw new IllegalStateException(error); }
+            }
+            if (relic.relicId.equals("Red Skull")) {
+                try {
+                    Field field = relic.getClass().getDeclaredField("isActive");
+                    field.setAccessible(true);
+                    relicState.put("red_skull_active", field.getBoolean(relic));
+                } catch (ReflectiveOperationException error) { throw new IllegalStateException(error); }
+            }
             if (relic.relicId.equals("Necronomicon")) relicState.put("necronomicon_used", !relic.checkTrigger());
             if (relic.relicId.equals("OrangePellets")) {
                 int mask = 0;

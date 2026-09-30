@@ -1,0 +1,94 @@
+{
+  "patch": "sim_patch/autoplay_exhaust.patch",
+  "patch_sha256": "c60f9afadd418a73eb20ebd41e21913906ba6a7607c75ab7d79d33233a4b30de",
+  "apply_after": "sim_patch/generated_x_cost.patch",
+  "scope": "intrinsic exhaustion on rejection; cleanup uses the queued card; copies precede pending autoplay",
+  "files": [
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "6263e1269a9e30eb0fc1afeba3d19853a5286b1e1825de6d3dc299667925fb27",
+      "after": "69ff63265f8823059d259fc57dfa1755c6401fbe686b6e70155d193d9583e632"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "44f141429bbfcba7ed46b6db42a086fe1e08deba62f65b9ef6baa4fac45c02d1",
+      "after": "3d368578d95da32c4f1a277d08baaaf0c278ce59bfb4a2b210e2e5bf3e3624e7"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/Actions.cpp": "6263e1269a9e30eb0fc1afeba3d19853a5286b1e1825de6d3dc299667925fb27",
+        "src/combat/BattleContext.cpp": "44f141429bbfcba7ed46b6db42a086fe1e08deba62f65b9ef6baa4fac45c02d1"
+      },
+      "after": {
+        "src/combat/Actions.cpp": "69ff63265f8823059d259fc57dfa1755c6401fbe686b6e70155d193d9583e632",
+        "src/combat/BattleContext.cpp": "3d368578d95da32c4f1a277d08baaaf0c278ce59bfb4a2b210e2e5bf3e3624e7"
+      },
+      "patch_output": "patching file 'src/combat/Actions.cpp'\npatching file 'src/combat/BattleContext.cpp'\n",
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/src/combat/Actions.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/optimized/src/combat/BattleContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/Actions.cpp": "6263e1269a9e30eb0fc1afeba3d19853a5286b1e1825de6d3dc299667925fb27",
+        "src/combat/BattleContext.cpp": "f2e93f9ef0244f2f25c5ae651c058d8073dfb6db6190dd8600a3a551ab53926b"
+      },
+      "after": {
+        "src/combat/Actions.cpp": "69ff63265f8823059d259fc57dfa1755c6401fbe686b6e70155d193d9583e632",
+        "src/combat/BattleContext.cpp": "d463907d50f732c58a0c0b8b342ad4059a6fa429cd748f009e3c5d4d5404ec02"
+      },
+      "patch_output": "patching file 'src/combat/Actions.cpp'\npatching file 'src/combat/BattleContext.cpp'\n",
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/src/combat/Actions.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-autoplay-exhaust/portable-complete/e121/src/combat/BattleContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2
+    }
+  ]
+}

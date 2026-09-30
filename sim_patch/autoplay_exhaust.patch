@@ -1,0 +1,47 @@
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -902,7 +902,7 @@
+ Action Actions::TimeEaterPlayCardQueueItem(const CardQueueItem &x) {
+     return {[=] (BattleContext &bc) {
+         auto item = x;
+-        item.exhaustOnUse |= bc.curCardQueueItem.card.doesExhaust();
++        item.exhaustOnUse |= item.card.doesExhaust();
+         item.triggerOnUse = false;
+         bc.curCardQueueItem = item;
+         bc.onAfterUseCard();
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -872,6 +872,8 @@
+     }
+ 
+ //    bool canPlayCard = false; // not really sure what this is used for
++    // UseCardAction captures intrinsic exhaustion even when autoplay is rejected.
++    item.exhaustOnUse |= c.doesExhaust();
+     // A duplicated/autoplay card still passes the original canUse checks.
+     // purgeOnUse controls its destination, not permission to bypass Choker,
+     // Normality, Entangled, or card-specific play restrictions.
+@@ -912,7 +914,6 @@
+     auto &item = curCardQueueItem;
+     auto &c = item.card;
+ 
+-    item.exhaustOnUse |= c.doesExhaust();
+     ++player.cardsPlayedThisTurn;
+ 
+     switch (c.getType()) {
+@@ -2853,14 +2854,8 @@
+ }
+ 
+ void BattleContext::addPurgeCardToCardQueue(const CardQueueItem &item) {
+-    if (cardQueue.size > 0) {
+-        auto temp = cardQueue.front();
+-        cardQueue.front() = item;
+-        cardQueue.pushFront(temp);
+-    } else {
+-        cardQueue.pushFront(item);
+-    }
+-
++    // Java inserts after the executing item, which native has already popped.
++    cardQueue.pushFront(item);
+ }
+ 
+ void BattleContext::noOpRollMove() {

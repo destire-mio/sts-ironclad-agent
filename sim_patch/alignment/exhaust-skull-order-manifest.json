@@ -1,0 +1,103 @@
+{
+  "repair": "acquisition-ordered exhaust powers and queued Red Skull Strength changes",
+  "apply_after": "aoe_urn_order.patch",
+  "patch_sha256": "cd1360120efeb43b512e198c34212297f8bcf18360a9a5ae19ed935e4c0b9c5b",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "include/combat/Player.h",
+      "before": "51aedb2db418063ff27e9fb9277067997aba0d9c58823545374f72b522c13117",
+      "after": "c8697eba269ea54750ea2262d59192d8d274e93008d6e9416e1ff53fd74c35d3"
+    },
+    {
+      "path": "src/combat/MonsterSpecific.cpp",
+      "before": "d4b681785043a190aa9259ae062928de580a2bb3477358ecfbf9e05a06be4e6b",
+      "after": "c996e0050c91928cddd1dac3ea049de21f52f9ec06dd44e33699b04e03354d9b"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "4187e2e433920077201d0df2b500de782e4246f520767b56af266cebbee623d7",
+      "after": "223ac975cc521a911cdb3b4df9fa1a9714f6bc0b5d84cc9a58c7fc632ccffa8d"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "dbc7c2e10f12d0a0e8fa04d98455596cd6b876552cdbe4cbd24282fa23a59ed7",
+      "after": "a815ba033d3f7547e7a2345c1c1824179284357e7c93de55e6a94c0a1352e17a"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba",
+      "after": "0099dea3efd8eb12f64087dd3cc353866f5ca70d9dd7c23c38063f661c453638"
+    }
+  ],
+  "acceptance_boundary": "finite original scenes and native regression suite; exhaustive parity INCOMPLETE",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "include/combat/Player.h": "51aedb2db418063ff27e9fb9277067997aba0d9c58823545374f72b522c13117",
+        "src/combat/MonsterSpecific.cpp": "d4b681785043a190aa9259ae062928de580a2bb3477358ecfbf9e05a06be4e6b",
+        "src/combat/Player.cpp": "4187e2e433920077201d0df2b500de782e4246f520767b56af266cebbee623d7",
+        "src/combat/BattleContext.cpp": "dbc7c2e10f12d0a0e8fa04d98455596cd6b876552cdbe4cbd24282fa23a59ed7",
+        "src/combat/Actions.cpp": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba"
+      },
+      "after": {
+        "include/combat/Player.h": "c8697eba269ea54750ea2262d59192d8d274e93008d6e9416e1ff53fd74c35d3",
+        "src/combat/MonsterSpecific.cpp": "c996e0050c91928cddd1dac3ea049de21f52f9ec06dd44e33699b04e03354d9b",
+        "src/combat/Player.cpp": "223ac975cc521a911cdb3b4df9fa1a9714f6bc0b5d84cc9a58c7fc632ccffa8d",
+        "src/combat/BattleContext.cpp": "a815ba033d3f7547e7a2345c1c1824179284357e7c93de55e6a94c0a1352e17a",
+        "src/combat/Actions.cpp": "0099dea3efd8eb12f64087dd3cc353866f5ca70d9dd7c23c38063f661c453638"
+      },
+      "patch_output": "patching file 'include/combat/Player.h'\npatching file 'src/combat/MonsterSpecific.cpp'\npatching file 'src/combat/Player.cpp'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Actions.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/src/combat/Player.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/src/combat/Actions.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/src/combat/BattleContext.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/optimized/src/combat/MonsterSpecific.cpp"
+      ],
+      "translation_units_syntax_checked": 4
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "include/combat/Player.h": "53cd4fa04d9465387517f324e83ec861e293e9b88a24292f61060077ba249781",
+        "src/combat/MonsterSpecific.cpp": "d4b681785043a190aa9259ae062928de580a2bb3477358ecfbf9e05a06be4e6b",
+        "src/combat/Player.cpp": "f518ea2a47deb03b9d8bc940e281c3fc14e96011b9927ecd8a8eb899343e6d5c",
+        "src/combat/BattleContext.cpp": "916a6783a3b033bbf15c28c73ca9c862685c04aac5a5239f39fae1508c5eca3f",
+        "src/combat/Actions.cpp": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba"
+      },
+      "after": {
+        "include/combat/Player.h": "bbb48b9de67a0728f9331c9131a4f7c0a91f8b17590a5a1869865783e98de488",
+        "src/combat/MonsterSpecific.cpp": "c996e0050c91928cddd1dac3ea049de21f52f9ec06dd44e33699b04e03354d9b",
+        "src/combat/Player.cpp": "a7e0b0809a6a10c6e6019a569982214e31df5179355630d97d4f83aab2eadf20",
+        "src/combat/BattleContext.cpp": "5c8b3bdee242affe4d3a6cdc29d29066427962d601d32aeb281e049d713f7daa",
+        "src/combat/Actions.cpp": "0099dea3efd8eb12f64087dd3cc353866f5ca70d9dd7c23c38063f661c453638"
+      },
+      "patch_output": "patching file 'include/combat/Player.h'\npatching file 'src/combat/MonsterSpecific.cpp'\npatching file 'src/combat/Player.cpp'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Actions.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/src/combat/Player.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/src/combat/Actions.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/src/combat/BattleContext.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-exhaust-skull/portable/e121/src/combat/MonsterSpecific.cpp"
+      ],
+      "translation_units_syntax_checked": 4
+    }
+  ],
+  "original_fixtures": {
+    "exhaust-power-order-original.json.gz": "f260772d0cb3860291d22442e57b46a746321b09eff3bccd3663d1889f640476",
+    "red-skull-revive-original.json.gz": "6e23cb0dfce528f087c6a27805b23d9c32bc77f02ea2b952d23a5110c53c43eb",
+    "exhaust-skull-repair-original.json.gz": "1df3f8a5bfcf47bc2ff4a1f285be4bd8011da04eda24cb4bae737d7550e72572"
+  }
+}

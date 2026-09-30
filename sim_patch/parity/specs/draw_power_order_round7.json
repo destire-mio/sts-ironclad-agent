@@ -1,0 +1,30 @@
+[
+  {
+    "name": "fire_breathing_before_evolve_horn_void_zero_energy",
+    "fixture": {"hand": ["Fire Breathing", "Evolve", "Finesse"],
+      "draw": ["Defend_R", "Bash", "Strike_R", "Void", "Burn"], "energy": 2,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion", "relic": "Gremlin Horn"},
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "evolve_before_fire_breathing_control",
+    "fixture": {"hand": ["Evolve", "Fire Breathing", "Finesse"],
+      "draw": ["Defend_R", "Bash", "Strike_R", "Void", "Burn"], "energy": 2,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion", "relic": "Gremlin Horn"},
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "draw_order_one_remaining_energy_control",
+    "fixture": {"hand": ["Fire Breathing", "Evolve", "Finesse"],
+      "draw": ["Defend_R", "Bash", "Strike_R", "Void", "Burn"], "energy": 3,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion", "relic": "Gremlin Horn"},
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "draw_order_without_gremlin_horn_control",
+    "fixture": {"hand": ["Fire Breathing", "Evolve", "Finesse"],
+      "draw": ["Defend_R", "Bash", "Strike_R", "Void", "Burn"], "energy": 2,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion"},
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1"]
+  }
+]

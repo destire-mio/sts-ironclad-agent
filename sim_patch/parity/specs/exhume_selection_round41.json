@@ -1,0 +1,198 @@
+[
+  {
+    "name": "exhume-selection:one-non-exhume",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:one-plus-exhume",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R",
+        "Exhume"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "choose 0",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:two-non-exhumes",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R",
+        "Defend_R"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "choose 0",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:only-exhumes",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Exhume",
+        "Exhume"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:one-plus-many-exhumes",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Exhume",
+        "Exhume",
+        "Strike_R",
+        "Exhume"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "choose 0",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:mixed-order",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R",
+        "Exhume",
+        "Defend_R"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "choose 0",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:mixed-order-reverse",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Exhume",
+        "Strike_R",
+        "Defend_R",
+        "Exhume"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "choose 1",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:corruption",
+    "fixture": {
+      "hand": [
+        "Corruption",
+        "Exhume"
+      ],
+      "exhaust": [
+        "Defend_R",
+        "Exhume"
+      ],
+      "energy": 4
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "choose 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:upgraded-and-repeat",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Exhume",
+          "upgrades": 1
+        },
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R",
+        "Exhume"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "choose 0",
+      "play 2 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "exhume-selection:duplicate-eligible",
+    "fixture": {
+      "hand": [
+        "Exhume"
+      ],
+      "exhaust": [
+        "Strike_R",
+        "Exhume",
+        {
+          "card": "Strike_R",
+          "upgrades": 1
+        },
+        "Exhume"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "choose 1",
+      "play 1 0",
+      "end"
+    ]
+  }
+]

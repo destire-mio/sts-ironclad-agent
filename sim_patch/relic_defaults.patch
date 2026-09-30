@@ -1,0 +1,38 @@
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1398,10 +1398,22 @@
+ 
+     relics.setHasRelic(r, true);
+ 
+-    int relicData = 0;
++    int relicData = -1; // AbstractRelic default: no persistent counter.
+     bool opensScreen = false;
+ 
+     switch (r) {
++
++        case RelicId::GIRYA:
++        case RelicId::HAPPY_FLOWER:
++        case RelicId::INCENSE_BURNER:
++        case RelicId::INK_BOTTLE:
++        case RelicId::INSERTER:
++        case RelicId::NUNCHAKU:
++        case RelicId::PEN_NIB:
++        case RelicId::SUNDIAL:
++        case RelicId::TINY_CHEST:
++            relicData = 0;
++            break;
+ 
+         case RelicId::CIRCLET:
+             relicData = 1;
+--- a/src/game/Game.cpp
++++ b/src/game/Game.cpp
+@@ -29,7 +29,8 @@
+ void RelicContainer::replaceRelic(RelicId o, RelicId r) {
+     for (auto & relic : relics) {
+         if (relic.id == o) {
+-            relic = {r, 0};
++            // Both replacement targets (Black Blood/Bloody Idol) inherit -1.
++            relic = {r, -1};
+             setHasRelic(o, false);
+             setHasRelic(r, true);
+             return;

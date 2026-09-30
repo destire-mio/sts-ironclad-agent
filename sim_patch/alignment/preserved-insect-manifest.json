@@ -1,0 +1,65 @@
+{
+  "repair": "Preserved Insect only lowers monster current HP to its cap; preserve reductions from Neow and earlier relics",
+  "apply_after": "astrolabe_small.patch",
+  "patch_sha256": "6a93091a15b7b60aa15dcd63d19784c37279fc0f93a566e7fcd9e07b8b1e93bb",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "dbef28f3437c36d29a617250eaf5d0d12712cd80f00e44e6a1de80a1d6e7b1c3",
+      "after": "cad73071caf355baa7e999b1ad1b7969b9ba0ef765c89c08fda36e112a734917"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "dbef28f3437c36d29a617250eaf5d0d12712cd80f00e44e6a1de80a1d6e7b1c3"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "cad73071caf355baa7e999b1ad1b7969b9ba0ef765c89c08fda36e112a734917"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/optimized/src/combat/BattleContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "b749e2bac87332b8ca04de01666abd3a86512e78c44c54f484cc29b5bb666b1f"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "18dceb72f4d8b0493d44007767c6c26258dfff7e73c77aef36536bdc223376bd"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-preserved-insect/portable/e121/src/combat/BattleContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "preserved-insect-original.json.gz": "215860c8b1f409891c6dc0dd07a623c8f6131dfa5ad46729d87f366f2e71fb67",
+    "event-entry-original.json.gz": "928366a1717eda1a486d8d7b64e4271d69d32c7d2ebe5983406a71ea84981690",
+    "save-entry-original.json.gz": "0cc592694f7c427598ebcc3e3d2bdfc297a718c0f6de0acbfc846f39dae6b5c9"
+  },
+  "acceptance_boundary": "8 original repair cases (3 counterexamples and 5 controls); 47 paired event/save entry cases; raw historical observations and gaps retained"
+}

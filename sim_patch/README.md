@@ -243,3 +243,99 @@ Apply `e121_power_order.patch` after E116 and rebuild core, search and Python bi
 [Manifest](alignment/e121-power-order-manifest.json), [preparation](../docs/experiments/e121-repair-preparation.json).
 
 [Completed E121 result](alignment/e121-power-order-report.json). The preparation link above is its historical pending checkpoint.
+
+### 疼痛与虚空的结算顺序
+
+`pain_void_order.patch` 接在 `e121_power_order.patch` 后应用，性能优化版可应用同一补丁，然后重编核心、搜索与 Python 绑定。疼痛失血标为玩家自身造成，以触发撕裂；虚空的扣能量放入队尾，在执行分支中结算，并遵循战斗结束后的动作清理。
+
+8 个原版场景回放的被比较字段吻合，284 个 CTest 入口通过，冻结基线上的 41 项检查器测试通过。其他已知差异和全量覆盖保持 `INCOMPLETE`。补丁应用位置、运行时身份及修复前后证据见[修复记录](parity/REPAIR-20260927-PAIN-VOID.md)和[源码清单](alignment/pain-void-order-manifest.json)。
+
+应用该补丁后的[第五轮检查](parity/RESULTS-20260928-ROUND5.md)记录两类待修差异：顺劈斩／死亡收割使用疼痛触发后增加的力量计算当前牌伤害，以及鸟面瓮在疼痛失血前回血。原版反例、对照和检测入口见报告；第五轮没有修改模拟器规则。
+
+### 群攻伤害快照与鸟面瓮回血
+
+`aoe_urn_order.patch` 接在 `pain_void_order.patch` 后应用，重编核心、搜索和 Python 绑定。顺劈斩、戏剧性开场、燔祭、死亡收割、闪电霹雳和旋风斩在出牌时保存各敌人的整型伤害；鸟面瓮通过队首回血动作结算。伤害数组按值复制，回血使用执行分支的玩家状态。
+
+12 个原版场景的被比较字段吻合，293 个 CTest 入口通过，冻结旧版的 41 项检查器测试通过。`slaythespire` 与 `fightsim` 使用新核心重建；8 次单次／批量战斗检查通过。补丁、运行时和证据见[修复记录](parity/REPAIR-20260928-AOE-URN.md)与[源码清单](alignment/aoe-urn-order-manifest.json)。其他规则差异与全量一致性验收保留为 `INCOMPLETE`。
+
+该修复版的[第六轮检查](parity/RESULTS-20260928-ROUND6.md)发现消耗牌忽略能力获得顺序、红头骨致命伤复活顺序两类差异。8 个原版场景包含 3 个反例、5 个对照；观察与生产构建结果吻合。本轮增加证据与检测测试，没有修改模拟器规则，两个发现待修复。
+
+后续 [exhaust_skull_order.patch](exhaust_skull_order.patch) 修复第六轮差异，接在 `aoe_urn_order.patch` 后应用。消耗牌复用玩家能力顺序；红头骨加减力量进入所属战斗的动作队列，回血及增加上限入口传递 `BattleContext`。12 个原版场景吻合，302 个 CTest 入口完成验证，细节与测试期望修正记录见[修复报告](parity/REPAIR-20260928-EXHAUST-SKULL.md)。
+
+[第七轮检查](parity/RESULTS-20260928-ROUND7.md)在此基础上确认抽牌回调顺序、增加生命上限误扣红头骨力量两类新差异；8 个原版场景包含 3 个反例、5 个对照。全量一致性状态为 `INCOMPLETE`。
+
+### 抽牌能力顺序与红头骨历史状态
+
+[draw_skull_state.patch](draw_skull_state.patch) 接在 `exhaust_skull_order.patch` 后应用。抽牌复用能力获得顺序，虚空自身回调在能力回调之前排队；玩家保存半血和红头骨生效历史，避免增加生命上限后误判。补丁改变 `Player` 布局，核心、搜索与 Python 绑定需一起重编。
+
+生产导出器与快照桥接新增 `is_bloodied`、`red_skull_active`。旧快照缺少字段时保留按生命推导的兼容行为，无法恢复历史；本轮更新导出器源码和隔离测试构建，没有部署到玩家安装目录。14 个原版场景的被比较字段吻合，311 个 CTest 入口完成验证；首次失败和原版证实后的测试预期修正见[修复报告](parity/REPAIR-20260928-DRAW-SKULL.md)，补丁身份见[清单](alignment/draw-skull-state-manifest.json)。
+
+[第八轮检查](parity/RESULTS-20260928-ROUND8.md)确认撕裂与复活、残暴与混乱的两类待修差异。8 个原版场景包含 4 个反例、4 个对照，全量一致性状态为 `INCOMPLETE`。
+
+### 撕裂与残暴的结算顺序
+
+[rupture_brutality_order.patch](rupture_brutality_order.patch) 接在 `draw_skull_state.patch` 后应用，重编核心、搜索与绑定。撕裂加力量进入队首，在当前伤害／复活动作结束后结算；残暴先排抽牌，再排失血。修改范围为 `Player.cpp` 的两处入队顺序，动作使用执行分支的玩家状态。
+
+第八轮 8 个原版场景的被比较字段吻合，累计修复验收覆盖 54 个原版场景，320 个 CTest 入口通过。[修复报告](parity/REPAIR-20260928-RUPTURE-BRUTALITY.md)记录新旧构建、分支隔离、可移植补丁和证据身份，[清单](alignment/rupture-brutality-order-manifest.json)记录分发文件。后续[第九轮检查](parity/RESULTS-20260928-ROUND9.md)确认负力量时突破极限绕过人工制品；复制暴走的四个受控场景吻合。全量一致性状态为 `INCOMPLETE`。
+
+[limit_backlog_rules.patch](limit_backlog_rules.patch) 接在 `rupture_brutality_order.patch` 后，修复突破极限、两种复制效果叠加的暴走、吸血过量回血、旋风斩队列顺序与手动弃牌计数。重编核心、搜索及绑定；16 个原版记录吻合，334 个 CTest 入口通过，累计修复验收覆盖 70 个原版场景。[修复报告](parity/REPAIR-20260928-LIMIT-BACKLOG.md)、[分发清单](alignment/limit-backlog-rules-manifest.json)和[持续排查清单](parity/CONTINUOUS-AUDIT.md)记录证据与剩余范围。
+
+[colosseum_enrage.patch](colosseum_enrage.patch) 接在 `limit_backlog_rules.patch` 后，遍历每只怪物的激怒并将加力量排入队首，修复斗技场第二个位置漏触发。重编核心、搜索及绑定；8 个原版场景吻合，343 个 CTest 入口通过，累计修复验收覆盖 78 个场景。[修复报告](parity/REPAIR-20260928-COLOSSEUM-ENRAGE.md)、[分发清单](alignment/colosseum-enrage-manifest.json)。
+
+[ethereal_profiles.patch](ethereal_profiles.patch) 接在 `colosseum_enrage.patch` 后，修复回合结束的虚无牌消耗顺序、共享 Java RNG 延续与牌位置变化后的身份查找。配置随战斗和整局状态复制，默认对应安装的 BaseMod；`java_shared` 需要原版观察到的 48 位随机状态。重编核心、搜索及绑定；8 个本轮原版场景吻合，355 个 CTest 入口通过，累计验收覆盖 86 个场景。[修复报告](parity/REPAIR-20260928-ETHEREAL-PROFILES.md)、[分发清单](alignment/ethereal-profiles-manifest.json)保留无 Mod 整局等边界。
+
+[ethereal_overrides.patch](ethereal_overrides.patch) 接在 `ethereal_profiles.patch` 后，补齐巩固、幽灵铠甲的批量虚无消耗回调，并在指定牌消耗后清除一次免费标志。核心、搜索及绑定重编通过；11 个原版场景吻合，366 个 CTest 入口通过，累计覆盖 97 个原版场景。[修复报告](parity/REPAIR-20260928-ETHEREAL-OVERRIDES.md)、[分发清单](alignment/ethereal-overrides-manifest.json)。
+
+[colosseum_rng.patch](colosseum_rng.patch) 接在 `ethereal_overrides.patch` 后，修复斗技场返回事件时漏掉准备牌组的随机消耗、第二场重置房间随机状态的问题。核心、绑定及搜索模块重编通过；6 个原版场景的被比较字段吻合，374 个 CTest 入口通过，累计覆盖 103 个场景。[修复报告](parity/REPAIR-20260928-COLOSSEUM-RNG.md)、[分发清单](alignment/colosseum-rng-manifest.json)。
+
+[bottle_choice.patch](bottle_choice.patch) 接在 `colosseum_rng.patch` 后，对齐三种瓶装遗物候选列表的顺序，保留选牌身份。10 个原版场景消除 7 个选牌反例，原始计数表示差异保留；383 个 CTest 入口通过，累计覆盖 113 个场景及状态合同。历史轨迹按牌组身份转换动作，重放 1002 条原版命令。[修复报告](parity/REPAIR-20260928-BOTTLE-CHOICE.md)、[分发清单](alignment/bottle-choice-manifest.json)。
+
+[innate_opening.patch](innate_opening.patch) 接在 `bottle_choice.patch` 后，把超出开局抽牌数的固有／瓶装牌补抽放在百科全书战前效果之后。6 个原版场景消除 3 个手牌顺序反例；391 个 CTest 入口通过，累计覆盖 119 个场景及状态合同。原始计数表示差异保留。[修复报告](parity/REPAIR-20260928-INNATE-OPENING.md)、[分发清单](alignment/innate-opening-manifest.json)。
+
+[astrolabe_small.patch](astrolabe_small.patch) 接在 `innate_opening.patch` 后，以原版顺序处理天体仪的小牌组候选，并修正删除后移动的下标。8 个原版场景消除 4 个变化结果反例；400 个 CTest 入口通过，累计覆盖 127 个场景及状态合同。914 个旧样本的完整观察比较相同。[修复报告](parity/REPAIR-20260928-ASTROLABE-SMALL.md)、[分发清单](alignment/astrolabe-small-manifest.json)。
+
+[preserved_insect.patch](preserved_insect.patch) 接在 `astrolabe_small.patch` 后，使昆虫标本只降低超过上限的生命，避免抬高涅奥留下的 1 血。8 个原版场景消除 3 个反例，另补足 47 个事件／存档入战配对；411 个 CTest 入口通过，累计覆盖 182 个场景及状态合同。原始差异和覆盖缺口保留。[修复报告](parity/REPAIR-20260928-PRESERVED-INSECT.md)、[分发清单](alignment/preserved-insect-manifest.json)。
+
+[relic_counters.patch](relic_counters.patch) 接在 `preserved_insect.patch` 后，修复小花／香炉从 −1 恢复时少算一回合及哀嚎耗尽后的计数标记。13 个原版场景消除 7 个反例；424 个 CTest 入口通过，累计覆盖 195 个场景及状态合同。茶具／哀嚎的战斗内计数表示差异保留。[修复报告](parity/REPAIR-20260928-RELIC-COUNTERS.md)、[分发清单](alignment/relic-counters-manifest.json)。
+
+[relic_defaults.patch](relic_defaults.patch) 接在 `relic_counters.patch` 后，修复遗物获得与替换的默认计数 −1，保留九种显式零及既有正计数／失效标记。15 个原版场景消除 9 个反例；435 个 CTest 入口通过，累计覆盖 210 个场景及状态合同。NN 读取的计数维度随修复变化，旧模型胜率未重测。[修复报告](parity/REPAIR-20260928-RELIC-DEFAULTS.md)、[分发清单](alignment/relic-defaults-manifest.json)。
+
+[shop_rewards.patch](shop_rewards.patch) 接在 `relic_defaults.patch` 后，恢复商店选牌后的同房间未领取奖励，并在进入下一地图房间时清理旧缓存。19 个原版场景的比较字段吻合；447 个 CTest 入口通过。[修复报告](parity/REPAIR-20260928-SHOP-REWARDS.md)、[分发清单](alignment/shop-rewards-manifest.json)。
+
+[shop_purge.patch](shop_purge.patch) 接在 `shop_rewards.patch` 后，修复商店存在未领奖励时删牌过早扣款、移除卡牌的问题。24 个原版场景包含四个反例；456 个 CTest 入口通过，九处药水动作域差异保留。[修复报告](parity/REPAIR-20260928-SHOP-PURGE.md)、[分发清单](alignment/shop-purge-manifest.json)。
+
+[shop_shared_rng.patch](shop_shared_rng.patch) 接在 `shop_purge.patch` 后，补充初始界面状态及声明帧时序下的共享随机数推进。14 个原版场景、58 个检查点消除 122 处规则字段分歧；457 个 CTest 入口通过。自然初态、其他界面操作和未附加状态路径保留缺口。[修复报告](parity/REPAIR-20260928-SHOP-SHARED-RNG.md)、[分发清单](alignment/shop-shared-rng-manifest.json)。
+
+[shop_other_rng.patch](shop_other_rng.patch) 接在 `shop_shared_rng.patch` 后，增加药水、瓶装遗物、蛋类与会员卡操作的初态和声明帧推进。18 个原版场景、87 个检查点，458 个 CTest 入口通过；14 处药水动作域差异及后续删牌共享 RNG 缺口保留。[报告](parity/REPAIR-20260928-SHOP-OTHER-RNG.md)、[分发清单](alignment/shop-other-rng-manifest.json)。
+
+[shop_purge_rng.patch](shop_purge_rng.patch) 接在 `shop_other_rng.patch` 后，增加删牌确认／取消、粒子与图标光效、第一幕离店背景的初态和按帧更新。23 个原版场景、124 个检查点消除 240 处规则字段差异；459 个 CTest 入口通过。奖励遗物返回商店后的三个补货反例列入待办。[报告](parity/REPAIR-20260928-SHOP-PURGE-RNG.md)、[分发清单](alignment/shop-purge-rng-manifest.json)。
+
+[shop_reward_rng.patch](shop_reward_rng.patch) 接在 `shop_purge_rng.patch` 后，补齐药水鼎／星系仪奖励、提示列表和 Collections、回血与药水粒子、返回商店及延迟删牌的声明帧推进。22 个原版场景、190 个检查点消除 381 处规则字段差异；460 个 CTest 入口通过，23 处药水点击选项差异保留。本轮验收后按用户要求暂停。[报告](parity/REPAIR-20260928-SHOP-REWARD-RNG.md)、[分发清单](alignment/shop-reward-rng-manifest.json)。
+
+[shop_obtain_rng.patch](shop_obtain_rng.patch) 接在 `shop_reward_rng.patch` 后，共用回血效果入口并补齐多利之镜的延迟获得、烟雾和隐藏图标更新顺序。23 个原版场景、120 个检查点消除 236 处规则字段差异；461 个 CTest 入口完成验证，首次选牌场景失败及修正后的单项重跑记录保留。本轮验收后按用户要求暂停。[报告](parity/REPAIR-20260929-SHOP-OBTAIN-RNG.md)、[分发清单](alignment/shop-obtain-rng-manifest.json)。
+
+[shop_upgrade_rng.patch](shop_upgrade_rng.patch) 接在 `shop_obtain_rng.patch` 后，补齐磨刀石／战纹升级展示、敲击、锤印和火花的时序与共享随机消费。20 个原版场景、109 个检查点的比较字段吻合；462 个 CTest 入口通过，累计 428 个场景及状态合同。三次随机轨迹上限导致的原版失败与关闭轨迹后的重跑证据保留。本轮按用户要求暂停。[报告](parity/REPAIR-20260929-SHOP-UPGRADE-RNG.md)、[分发清单](alignment/shop-upgrade-rng-manifest.json)。
+
+
+[card_obtain_callbacks.patch](card_obtain_callbacks.patch) 接在 `shop_upgrade_rng.patch` 后，修复买牌、奖励领牌、镜子复制时的遗物回调阶段及御守取消后的共享随机消费。18 个原版场景、95 个检查点；463 个 CTest 入口通过，累计 446 个场景及状态合同。用户撤销前轮暂停要求，goal 为 active。[报告](parity/REPAIR-20260929-CARD-OBTAIN-CALLBACKS.md)、[分发清单](alignment/card-obtain-callbacks-manifest.json)。
+
+
+[shop_click_domain.patch](shop_click_domain.patch) 接在 `card_obtain_callbacks.patch` 后，提供原版商店点击接口并保留搜索过滤。8 个新场景及 64 个历史场景的比较字段吻合，历史 46 处药水动作域差异消除。464 个测试入口验证完成，含两项测试修正后的复测。累计 454 个场景及状态合同。[报告](parity/REPAIR-20260929-SHOP-CLICK-DOMAIN.md)、[分发清单](alignment/shop-click-domain-manifest.json)。
+
+[reward_click_domain.patch](reward_click_domain.patch) 接在 `shop_click_domain.patch` 后，为满背包药水奖励提供校验过的点击入口，保留搜索过滤。10 个原版场景、70 个检查点吻合，7 个受阻路径获得覆盖。465 个测试入口验证完成；新夹具的两次修正及失败记录保留。累计 464 个场景及状态合同。[报告](parity/REPAIR-20260929-REWARD-CLICK-DOMAIN.md)、[分发清单](alignment/reward-click-domain-manifest.json)。
+
+[hp_loss_relic_order.patch](hp_loss_relic_order.patch) 接在 `reward_click_domain.patch` 后，保留百年积木与符文立方体掉血抽牌的获得顺序，修复日晷／虚无导致的能量及旋风斩伤害差异。10 个原版场景、42 个检查点，3 个反例消除、7 个对照保留；467 个 CTest 入口首轮通过，累计 474 个场景及状态合同。[报告](parity/REPAIR-20260929-HP-LOSS-RELIC-ORDER.md)、[分发清单](alignment/hp-loss-relic-order-manifest.json)。
+
+[百年积木恢复状态修复](parity/REPAIR-20260929-CENTENNIAL-RESTORE.md)导出并保留本场触发状态，受伤后缺少字段的快照拒绝导入。六个原版场景衍生 26 个恢复合同、70 个后续动作，消除 6 个差异合同。468 个 CTest 入口验证完成，首轮 467 个通过，一项历史缺失状态合同经明确分类后定向复测通过。累计 480 个场景及状态合同；[运行时](../runs/parity-repair-20260929-centennial-restore/runtime.json)，完整一致性为 `INCOMPLETE`，goal 为 active。
+
+[发掘选牌修复](parity/REPAIR-20260929-EXHUME-SELECTION.md)保留单候选但多张消耗牌时的选择步骤，并按原版暂存、归还其他发掘牌。十个原版场景、46 个检查点、8 个选择边界消除 7 个反例。469 个 CTest 入口首轮通过，累计 490 个场景及状态合同；[运行时](../runs/parity-repair-20260929-exhume-selection/runtime.json)，完整一致性为 `INCOMPLETE`，goal 为 active。
+
+[持续排查停止记录](parity/RESULTS-20260929-AUDIT-CLOSE.md)：R18 至 R23 六项修复／接口补全通过验收，交付沿用 R23。后续 18 个探索场景没有建立新的待修可达规则反例；人工输入差异与界面表示边界保留，候选费用补丁没有采纳。本次有限 goal 达到停止条件，完整一致性为 `INCOMPLETE`。
+
+[升级开悟免费效果修复](parity/REPAIR-20260930-ENLIGHTENMENT-FREE.md)补充木乃伊之手和液态记忆产生的可达反例：五个费用分歧消除，九个原版场景的比较字段吻合。生产／观察／搜索运行时与 470 个回归入口、六个邻近升级探索场景的证据见修复报告，完整一致性状态为 INCOMPLETE。
+
+[生成牌 X 费用修复](parity/REPAIR-20260930-GENERATED-X-COST.md)保留羽化生成旋风斩时的 X 费用；七个原版场景、75 个检查点消除五个反例，包含出牌、异蛇油和化学 X 后续。471 个回归入口通过；修复后四个邻近生成效果场景的比较字段吻合，完整一致性状态为 INCOMPLETE。
+
+[自动出牌消耗与复制顺序修复](parity/REPAIR-20260930-AUTOPLAY-EXHAUST.md)解决受限出牌丢失消耗属性、时间吞噬者清理读取上一张牌、复制牌落在后续自动出牌之后的三处规则差异。18 个原版场景、163 个检查点消除 12 个反例；472 个最终回归入口通过，累计场景及状态合同为 524。修复后的四个邻近场景比较字段吻合，完整一致性状态为 INCOMPLETE。
+
+[医疗箱／蓝蜡烛消耗标记修复](parity/REPAIR-20260930-PERSISTENT-EXHAUST.md)保留奇怪的勺子送回弃牌堆后的逐牌消耗属性，并修复结束回合移牌和中途快照恢复。12 个原版场景、98 个检查点消除七个反例，八个恢复位置的后续动作吻合。473 个回归入口通过，累计场景及状态合同为 536；修复后九个邻近场景的比较字段和逐牌属性吻合。补丁 `persistent_exhaust.patch` 接在 `autoplay_exhaust.patch` 后，快照桥接保留原版 `exhausts` 字段，完整一致性为 INCOMPLETE。

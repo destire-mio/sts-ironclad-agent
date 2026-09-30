@@ -1,0 +1,80 @@
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -107,7 +107,7 @@
+         void init(const GameContext &gc);
+         void init(const GameContext &gc, MonsterEncounter encounterToInit);
+ 
+-        void initRelics(const GameContext &gc);
++        void initRelics(const GameContext &gc, int extraOpeningDraw);
+ 
+         void exitBattle(GameContext &g) const;
+         void updateRelicsOnExit(GameContext &g) const;
+--- a/include/combat/CardManager.h
++++ b/include/combat/CardManager.h
+@@ -47,7 +47,7 @@
+         int drawPileBloodCardCount = 0;
+         int discardPileBloodCardCount = 0;
+ 
+-        void init(const GameContext &gc, BattleContext &bc); // returns count of innate cards
++        int init(const GameContext &gc, BattleContext &bc); // returns extra opening draws for innate/bottled cards
+ 
+         void createDeckCardInstanceInDrawPile(const Card &card, int deckIdx, int drawIdx);
+         void createTempCardInDrawPile(int insertIdx, CardInstance c);
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -82,16 +82,16 @@
+     }
+     //addToBot(Actions::DrawCards(player.cardDrawPerTurn));
+ 
+-    cards.init(gc, *this);
+-
+-    initRelics(gc);
++    const int extraOpeningDraw = cards.init(gc, *this);
++
++    initRelics(gc, extraOpeningDraw);
+     player.energy += player.energyPerTurn;
+ 
+     executeActions();
+ }
+ 
+ // this doesnt apply powers in order, so if that matters in the future all relics will have to be sorted
+-void BattleContext::initRelics(const GameContext &gc) {
++void BattleContext::initRelics(const GameContext &gc, int extraOpeningDraw) {
+     player.relicBits0 = gc.relics.relicBits0;
+     player.relicBits1 = gc.relics.relicBits1;
+     player.cardUseRelics.clear();
+@@ -379,6 +379,10 @@
+                 break;
+         }
+     }
++
++    // initializeDeck's preTurnActions run after atPreBattle actions (including
++    // Enchiridion), before the normal opening draw and atBattleStart actions.
++    if (extraOpeningDraw > 0) addToBot(Actions::DrawCards(extraOpeningDraw));
+ 
+     // todo maybe move this to proper place -nvm drawCards is added below this
+     for (auto r : atBattleStartPreDraw) {
+--- a/src/combat/CardManager.cpp
++++ b/src/combat/CardManager.cpp
+@@ -12,7 +12,7 @@
+ 
+ using namespace sts;
+ 
+-void CardManager::init(const sts::GameContext &gc, BattleContext &bc) {
++int CardManager::init(const sts::GameContext &gc, BattleContext &bc) {
+ 
+ //    masterDeckSize = gc.deck.size();
+     nextUniqueCardId = gc.deck.size();
+@@ -62,10 +62,8 @@
+         }
+     }
+ 
+-    int innateCount =  innateIdx - normalCount;
+-    if (innateCount  > bc.player.cardDrawPerTurn) {
+-        bc.addToBot( Actions::DrawCards(innateCount-bc.player.cardDrawPerTurn) );
+-    }
++    const int innateCount = innateIdx - normalCount;
++    return std::max(0, innateCount - bc.player.cardDrawPerTurn);
+ }
+ 
+ void CardManager::createDeckCardInstanceInDrawPile(const Card &card, int deckIdx, int drawIdx) {

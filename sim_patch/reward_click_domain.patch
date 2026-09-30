@@ -1,0 +1,92 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -465,6 +465,8 @@
+     gameContext.def(pybind11::init<CharacterClass, std::uint64_t, int>())
+         .def("pick_reward_card", &sts::py::pickRewardCard, "choose to obtain the card at the specified index in the card reward list")
+         .def("skip_reward_cards", &sts::py::skipRewardCards, "choose to skip the card reward (increases max_hp by 2 with singing bowl)")
++        .def("claim_potion_reward", &GameContext::claimPotionReward, pybind11::arg("index"),
++             "Click an offered potion reward; returns false and keeps the reward when inventory is full; Sozu removes it without obtaining")
+         .def("get_card_reward", &sts::py::getCardReward, "return the current card reward list")
+         .def_property_readonly("encounter", [](const GameContext &gc) { return gc.info.encounter; })
+         .def_property_readonly("burning_elite", [](const GameContext &gc) {
+--- a/include/game/GameContext.h
++++ b/include/game/GameContext.h
+@@ -301,6 +301,9 @@
+         void obtainGold(int amount);
+         void obtainKey(Key key);
+         void obtainPotion(Potion p);
++    // Click an offered potion reward; false means full slots kept the reward.
++    // Search action enumeration may omit this non-claiming click.
++    bool claimPotionReward(int index);
+         bool obtainRelic(RelicId r);
+ 
+         RelicId returnRandomRelic(RelicTier tier, bool shopRoom=false, bool fromFront=true);
+--- a/include/game/ShopPresentation.h
++++ b/include/game/ShopPresentation.h
+@@ -597,9 +597,9 @@
+         requireRewards();requireClock(timing.rewardPeek);
+         rewardsVisible=false;advance(rng,2);rewardsVisible=true;advance(rng,timing.rewardPeek-2);
+     }
+-    void claimRewardPotion(Random &rng,bool sozu) {
++    void finishRewardPotionClick(Random &rng,bool obtainedPotion) {
+         requireRewards();requireClock(timing.rewardPotion);
+-        update(rng);if (!sozu) rng.nextInt(3);finishFrame(rng);advance(rng,timing.rewardPotion-1);
++        update(rng);if (obtainedPotion) rng.nextInt(3);finishFrame(rng);advance(rng,timing.rewardPotion-1);
+     }
+     void beforeRewardBowl(Random &rng) {
+         requireRewards();requireClock(timing.rewardBowl);
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1332,6 +1332,36 @@
+ }
+ 
+ 
++bool GameContext::claimPotionReward(int index) {
++    if (outcome!=GameOutcome::UNDECIDED || screenState!=ScreenState::REWARDS ||
++        index<0 || index>=info.rewardsContainer.potionCount)
++        throw std::invalid_argument("illegal potion reward click");
++    const bool presentation=shopPresentation.active();
++    if (presentation) {
++        shopPresentation.requireRewards();
++        ShopPresentationState::requireClock(shopPresentation.timing.rewardPotion);
++    }
++    const bool sozu=hasRelic(RelicId::SOZU);
++    const bool full=!sozu && potionCount>=potionCapacity;
++    if (full) {
++        // CombatRewardScreen resets isDone and preserves the same reward.
++        // Its full-inventory tip is fixed text, not another random tip draw.
++        if (presentation) {
++            shopPresentation.tips.selected=shopPresentation.tips.potionFull;
++            shopPresentation.tips.hasSelected=true;
++            shopPresentation.finishRewardPotionClick(mathUtilRng,false);
++        }
++        return false;
++    }
++    obtainPotion(info.rewardsContainer.potions[index]);
++    info.rewardsContainer.removePotionReward(index);
++    if (presentation) {
++        shopPresentation.rewardPotions.erase(shopPresentation.rewardPotions.begin()+index);
++        shopPresentation.finishRewardPotionClick(mathUtilRng,!sozu);
++    }
++    return true;
++}
++
+ bool obtainBottleHelper(GameContext &gc, CardType bottleType) {
+     gc.info.toSelectCards.clear();
+     gc.deck.addMatchingToSelectList(
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -396,12 +396,7 @@
+             break;
+ 
+         case search::GameAction::RewardsActionType::POTION:
+-            gc.obtainPotion(r.potions[a.getIdx1()]);
+-            r.removePotionReward(a.getIdx1());
+-            if (presentation) {
+-                gc.shopPresentation.rewardPotions.erase(gc.shopPresentation.rewardPotions.begin()+a.getIdx1());
+-                gc.shopPresentation.claimRewardPotion(gc.mathUtilRng,gc.hasRelic(RelicId::SOZU));
+-            }
++            gc.claimPotionReward(a.getIdx1());
+             break;
+ 
+         case search::GameAction::RewardsActionType::RELIC: {

@@ -1,0 +1,283 @@
+[
+  {
+    "name": "overflow_enchiridion",
+    "kind": "relic",
+    "id": "Enchiridion",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Mind Blast",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "overflow_no_enchiridion_control",
+    "kind": "none",
+    "id": "none",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Mind Blast",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "threshold_enchiridion_control",
+    "kind": "relic",
+    "id": "Enchiridion",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "overflow_snecko_enchiridion",
+    "kind": "relic",
+    "id": "Enchiridion",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Mind Blast",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ],
+    "relics": [
+      "Snecko Eye"
+    ]
+  },
+  {
+    "name": "overflow_warped_tongs_control",
+    "kind": "none",
+    "id": "none",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Mind Blast",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ],
+    "relics": [
+      "WarpedTongs"
+    ]
+  },
+  {
+    "name": "bottle_overflow_enchiridion",
+    "kind": "relic",
+    "id": "Bottled Flame",
+    "deck": [
+      {
+        "id": "Dramatic Entrance"
+      },
+      {
+        "id": "Mind Blast"
+      },
+      {
+        "id": "Brutality",
+        "upgrades": 1
+      },
+      {
+        "id": "Dramatic Entrance",
+        "upgrades": 1
+      },
+      {
+        "id": "Writhe"
+      },
+      {
+        "id": "Bash"
+      },
+      {
+        "id": "Strike_R"
+      },
+      {
+        "id": "Defend_R"
+      }
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ],
+    "relics": [
+      "Enchiridion"
+    ],
+    "select": [
+      3
+    ],
+    "sim_select": [
+      3
+    ]
+  }
+]

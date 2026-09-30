@@ -1,0 +1,47 @@
+{
+  "patch": "sim_patch/shop_rewards.patch",
+  "patch_sha256": "79c651aa1079f1a604ed813dda18a3ff8ba383b5ad51dec46cffbde418211f58",
+  "apply_after": "sim_patch/relic_defaults.patch",
+  "files": [
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110",
+      "after": "ee0509bb0f5fc54f48813fa3fbc4392e24f5513ff285faddce4f4eb59a6e0304"
+    }
+  ],
+  "scope": "shop grid closes into same-room unclaimed rewards; next map room clears previous rewards; exit callbacks copied by value",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110",
+      "after": "ee0509bb0f5fc54f48813fa3fbc4392e24f5513ff285faddce4f4eb59a6e0304",
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/optimized/src/game/GameContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1
+    },
+    {
+      "variant": "e121",
+      "before": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110",
+      "after": "ee0509bb0f5fc54f48813fa3fbc4392e24f5513ff285faddce4f4eb59a6e0304",
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-shop-rewards/portable/e121/src/game/GameContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1
+    }
+  ]
+}

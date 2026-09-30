@@ -1,0 +1,246 @@
+--- a/bindings/shop-presentation-json.h
++++ b/bindings/shop-presentation-json.h
+@@ -19,7 +19,8 @@
+     throw std::invalid_argument("unsupported shop word effect");
+ }
+ inline ShopPresentationState shopPresentationFromJson(const nlohmann::json &j) {
+-    const bool rewardProfile=j.at("profile")=="installed-shop-v4";
++    const bool obtainProfile=j.at("profile")=="installed-shop-v5";
++    const bool rewardProfile=obtainProfile || j.at("profile")=="installed-shop-v4";
+     const bool purgeProfile=rewardProfile || j.at("profile")=="installed-shop-v3";
+     const bool extended=purgeProfile || j.at("profile")=="installed-shop-v2";
+     if ((!extended && j.at("profile")!="installed-shop-card-v1") || !j.at("fast_mode").get<bool>() ||
+@@ -28,7 +29,7 @@
+         throw std::invalid_argument("unsupported shop presentation environment");
+     ShopPresentationState s;
+     s.delta=j.at("delta");s.frame=j.at("frame");s.timing.card=j.at("purchase_frames");
+-    s.saidWelcome=j.value("said_welcome",true);s.trackPurge=purgeProfile;s.trackRewards=rewardProfile;
++    s.saidWelcome=j.value("said_welcome",true);s.trackPurge=purgeProfile;s.trackRewards=rewardProfile;s.trackObtain=obtainProfile;
+     if (rewardProfile) {
+         if (j.at("debug_mode").get<bool>() || !j.at("healing").at("lines").empty() || !j.at("healing").at("numbers").empty())
+             throw std::invalid_argument("unsupported initial reward environment or healing effects");
+@@ -64,7 +65,7 @@
+                 key!="RELIC" && key!="GRID" && key!="DISCARD" &&
+                 !(purgeProfile && (key=="REMOVE" || key=="PURGE_CONFIRM" || key=="PURGE_CANCEL")) &&
+                 !(rewardProfile && (key=="REWARD_CARD" || key=="REWARD_POTION" || key=="REWARD_PEEK" ||
+-                    key=="REWARD_BOWL" || key=="REWARD_RETURN")))
++                    key=="REWARD_BOWL" || key=="REWARD_RETURN")) && !(obtainProfile && key=="MIRROR"))
+                 throw std::invalid_argument("unknown shop action clock");
+             if (!item.value().is_number_integer() || item.value()<0 || item.value()>240)
+                 throw std::invalid_argument("shop action clock must be an integer in range");
+@@ -75,6 +76,7 @@
+             throw std::invalid_argument("unsupported shop timing or hovered dialogue");
+         s.timing.potion=clock.value("POTION",0);s.timing.blockedPotion=clock.value("BLOCKED_POTION",0);
+         s.timing.relic=clock.value("RELIC",0);s.timing.grid=clock.value("GRID",0);s.timing.discard=clock.value("DISCARD",0);
++        if (obtainProfile) s.timing.mirror=clock.value("MIRROR",0);
+         if (rewardProfile) {
+             s.timing.rewardCard=clock.value("REWARD_CARD",0);s.timing.rewardPotion=clock.value("REWARD_POTION",0);
+             s.timing.rewardPeek=clock.value("REWARD_PEEK",0);s.timing.rewardBowl=clock.value("REWARD_BOWL",0);
+--- a/include/game/ShopPresentation.h
++++ b/include/game/ShopPresentation.h
+@@ -31,7 +31,7 @@
+     } dialog;
+ 
+     bool configured=false, closed=false, characterWords=true, shopVisible=true, saidWelcome=true;
+-    bool trackPurge=false, trackRewards=false, disableEffects=false;
++    bool trackPurge=false, trackRewards=false, trackObtain=false, disableEffects=false;
+     struct Tips {
+         std::vector<std::string> remaining,refill;
+         std::string selected,potionFull;
+@@ -61,7 +61,7 @@
+     std::int64_t frame=0;
+     struct Timing { int card=0,potion=0,blockedPotion=0,relic=0,grid=0,discard=0;
+         int purgeOpen=0,purgeConfirm=0,purgeCancel=0;
+-        int rewardCard=0,rewardPotion=0,rewardPeek=0,rewardBowl=0,rewardReturn=0; } timing;
++        int rewardCard=0,rewardPotion=0,rewardPeek=0,rewardBowl=0,rewardReturn=0,mirror=0; } timing;
+     float delta=1.0f/60.0f, speechTimer=0;
+     std::array<std::vector<Token>,5> buyMessages;
+     std::vector<Token> welcomeMessage,fullPotionMessage;
+@@ -139,7 +139,7 @@
+             throw std::invalid_argument("unsupported shop presentation clock or lifecycle");
+         for (int n:{timing.potion,timing.blockedPotion,timing.relic,timing.grid,timing.discard,
+                     timing.purgeOpen,timing.purgeConfirm,timing.purgeCancel,
+-                    timing.rewardCard,timing.rewardPotion,timing.rewardPeek,timing.rewardBowl,timing.rewardReturn})
++                    timing.rewardCard,timing.rewardPotion,timing.rewardPeek,timing.rewardBowl,timing.rewardReturn,timing.mirror})
+             if (n<0 || n>240) throw std::invalid_argument("shop action clock outside bound");
+         if ((timing.grid && timing.grid<2) || (timing.relic && timing.relic<2) ||
+             (timing.blockedPotion && timing.blockedPotion<121))
+@@ -154,6 +154,8 @@
+             throw std::invalid_argument("reward clock precedes installed decision boundary");
+         if ((timing.rewardCard || timing.rewardPotion || timing.rewardPeek || timing.rewardBowl || timing.rewardReturn) && !trackRewards)
+             throw std::invalid_argument("reward timing requires its presentation profile");
++        if ((trackObtain && !trackRewards) || (timing.mirror && (!trackObtain || timing.mirror<61)))
++            throw std::invalid_argument("mirror timing requires its obtain profile and settled decision boundary");
+         if (trackRewards && (!trackPurge || tips.remaining.empty() || tips.remaining.size()>128 ||
+             tips.refill.empty() || tips.refill.size()>128 || tips.potionFull.empty() || tips.initialCollectionsSeed>0xffffffffffffULL ||
+             !healLines.empty() || !pendingHealLines.empty() || !healNumbers.empty() || !pendingHealNumbers.empty()))
+@@ -397,12 +399,14 @@
+         potionParticles.push_back(particle);
+         p.timer=sample(rng,particle.rare?.35f:.25f,particle.rare?.5f:.3f);
+     }
+-    void finishFrame(Random &rng,bool obtainsCard=false) {
+-        updateEffects(rng);
++    void finishAfterEffects(Random &rng,bool obtainsCard=false) {
+         // FastCardObtainEffect updates in effectList, after topLevelEffects.
+         // A purge's fade-out particles can therefore precede the Soul draws.
+         if (obtainsCard) {sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);}
+         updatePanels(rng);renderHeal(rng);render(rng);renderEffects(rng);
++    }
++    void finishFrame(Random &rng,bool obtainsCard=false) {
++        updateEffects(rng);finishAfterEffects(rng,obtainsCard);
+     }
+     void advance(Random &rng,int frames) {for (int i=0;i<frames;++i) {update(rng);finishFrame(rng);}}
+     void beforeCardPurchase(Random &rng) { update(rng); }
+@@ -427,6 +431,42 @@
+         // GRID closes during its update; openPreviousScreen(SHOP) calls open().
+         ++frame;if (returnsToShop) reopenShop();else rewardsVisible=true;finishFrame(rng);advance(rng,timing.grid-1);
+     }
++    void requireObtain() const {
++        if (!trackObtain) throw std::invalid_argument("on-equip obtain callbacks outside shop presentation scope");
++    }
++    void requireMirror() const {
++        requireObtain();
++        if (timing.mirror<61 || timing.mirror>240)
++            throw std::invalid_argument("mirror action requires a declared settled frame boundary");
++    }
++    int beforeMirrorObtain(Random &rng,bool returnsToShop) {
++        requireMirror();
++        // GRID closes first. OverlayMenu updates the hidden pile panels before
++        // Dolly constructs the effect; effectList has already updated this frame.
++        ++frame;if (returnsToShop) reopenShop();else rewardsVisible=true;
++        updateEffects(rng);updatePanels(rng);
++        // ShowCardAndObtainEffect queues 50 CardPoofParticles. Their later
++        // update/render has no RNG, and all have expired at the settled boundary.
++        for (int i=0;i<50;++i) {
++            rng.nextBoolean();rng.nextBoolean();rng.nextInt(3);
++            for (int field=0;field<9;++field) rng.nextFloat();
++        }
++        renderHeal(rng);render(rng);renderEffects(rng);
++        float duration=.5f;int elapsed=1;
++        for (;;) {
++            update(rng);
++            ++elapsed;duration=add(duration,-delta);
++            if (duration<0) {
++                // Old effectList entries precede the newly appended obtain
++                // effect. Execute its deck callback and Soul after their update.
++                updateEffects(rng);return elapsed;
++            }
++            finishFrame(rng);
++        }
++    }
++    void afterMirrorObtain(Random &rng,int elapsed) {
++        finishAfterEffects(rng,true);advance(rng,timing.mirror-elapsed);
++    }
+     void requirePurge() const {
+         requireClock(timing.purgeOpen);requireClock(timing.purgeConfirm);requireClock(timing.purgeCancel);
+         if (!trackPurge) throw std::invalid_argument("purge outside shop presentation scope");
+@@ -492,10 +532,12 @@
+         requireRewards();requireClock(timing.rewardPotion);
+         update(rng);if (!sozu) rng.nextInt(3);finishFrame(rng);advance(rng,timing.rewardPotion-1);
+     }
+-    void claimRewardBowl(Random &rng) {
++    void beforeRewardBowl(Random &rng) {
+         requireRewards();requireClock(timing.rewardBowl);
+         rewardsVisible=false;advance(rng,2);rewardsVisible=true;
+         rng.nextFloat(); // The installed command invokes onClick before frame 3.
++    }
++    void createHealing(Random &rng) {
+         rng.nextInt(3); // HealEffect sound
+         rng.nextFloat();rng.nextBoolean();rng.nextFloat(); // HealNumberEffect
+         pendingHealNumbers.push_back(1.2f);
+@@ -505,8 +547,8 @@
+             rng.nextFloat();rng.nextBoolean();line.behind=rng.nextFloat()<.3f;
+             pendingHealLines.push_back(line);
+         }
+-        advance(rng,timing.rewardBowl-2);
+-    }
++    }
++    void afterRewardBowl(Random &rng) {advance(rng,timing.rewardBowl-2);}
+     void beforeRewardReturn(Random &rng) {
+         requireRewards();
+         update(rng);rewardsVisible=false;finishFrame(rng); // Overlay cancel, before render.
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -2374,6 +2374,10 @@
+         return;
+     }
+     curHp = std::min(curHp + amount, maxHp);
++    // AbstractCreature creates healing effects for a positive requested heal,
++    // including an overheal. The shop owns the presentation state once attached.
++    if (amount>0 && shopPresentation.active() && shopPresentation.trackRewards)
++        shopPresentation.createHealing(mathUtilRng);
+ }
+ 
+ void GameContext::playerIncreaseMaxHp(int amount) {
+@@ -3900,6 +3904,9 @@
+ }
+ 
+ void GameContext::chooseSelectCardScreenOption(int idx) {
++    if (shopPresentation.active() && info.selectScreenType==CardSelectScreenType::DUPLICATE) {
++        shopPresentation.requireMirror();
++    }
+     if (shopPresentation.active() && info.selectScreenType==CardSelectScreenType::REMOVE &&
+         info.selectCancelReturn==ScreenState::SHOP_ROOM && info.rewardsContainer.getTotalCount()>0 &&
+         shopPresentation.timing.purgeConfirm<123)
+@@ -3958,7 +3965,18 @@
+             break;
+         }
+ 
+-        case CardSelectScreenType::DUPLICATE:
++        case CardSelectScreenType::DUPLICATE: {
++            if (shopPresentation.active()) {
++                // Reopen the previous screen before the delayed obtain callback.
++                regainControl();
++                const int elapsed=shopPresentation.beforeMirrorObtain(mathUtilRng,screenState==ScreenState::SHOP_ROOM);
++                for (const auto &c:info.haveSelectedCards) deck.obtain(*this,c.card,1);
++                shopPresentation.afterMirrorObtain(mathUtilRng,elapsed);
++                break;
++            }
++            for (const auto &c:info.haveSelectedCards) deck.obtain(*this,c.card,1);
++            regainControl();break;
++        }
+         case CardSelectScreenType::OBTAIN:
+             for (const auto &c : info.haveSelectedCards) {
+                 deck.obtain(*this, c.card, 1);
+@@ -4231,6 +4249,9 @@
+         case RelicId::SINGING_BOWL:
+             if (!state.trackRewards) throw std::invalid_argument("Singing Bowl requires reward presentation profile");
+             break;
++        case RelicId::MARK_OF_THE_BLOOM: case RelicId::LEES_WAFFLE: case RelicId::DOLLYS_MIRROR:
++        case RelicId::STRAWBERRY: case RelicId::PEAR: case RelicId::MANGO:
++            state.requireObtain();break;
+         default: throw std::invalid_argument("shop presentation relic callback outside modeled scope");
+     }
+     if (state.trackRewards) for (int i=0;i<3;++i)
+--- a/src/game/Shop.cpp
++++ b/src/game/Shop.cpp
+@@ -131,6 +131,10 @@
+                 gc.shopPresentation.requireRewards();
+                 ShopPresentationState::requireClock(r==RelicId::ORRERY?gc.shopPresentation.timing.rewardCard:gc.shopPresentation.timing.rewardPotion);
+                 break;
++            case RelicId::LEES_WAFFLE: case RelicId::STRAWBERRY: case RelicId::PEAR: case RelicId::MANGO:
++                gc.shopPresentation.requireObtain();break;
++            case RelicId::DOLLYS_MIRROR:
++                gc.shopPresentation.requireMirror();break;
+             default: throw std::invalid_argument("shop relic on-equip outside presentation scope");
+         }
+         gc.shopPresentation.beginShopFrame(gc.mathUtilRng);
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -352,6 +352,7 @@
+ 
+         case search::GameAction::RewardsActionType::CARD:
+             if (a.getIdx2() == 5) { // singing bowl
++                if (presentation) gc.shopPresentation.beforeRewardBowl(gc.mathUtilRng);
+                 if (gc.hasRelic(sts::RelicId::SINGING_BOWL)) {
+                     gc.playerIncreaseMaxHp(2);
+                 }
+@@ -360,7 +361,7 @@
+             }
+             r.removeCardReward(a.getIdx1());
+             if (presentation) {
+-                if (a.getIdx2()==5) gc.shopPresentation.claimRewardBowl(gc.mathUtilRng);
++                if (a.getIdx2()==5) gc.shopPresentation.afterRewardBowl(gc.mathUtilRng);
+                 else gc.shopPresentation.claimRewardCard(gc.mathUtilRng);
+             }
+             break;

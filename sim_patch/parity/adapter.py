@@ -89,11 +89,34 @@ class Comparator:
         game = copy.deepcopy(view["game"])
         game["combat_state"]["rngs"] = {k: view["rng"][name] for k, name in RNG_NAMES.items()}
         snapshot = self.bridge.build_snapshot(game)
+        # Historical captures already contain the original private flags in the
+        # audit record. Use them only at the initial import, never during replay.
+        for name, (value, _) in self.health_flags(view).items():
+            snapshot["player"][name] = value
         return self.sts.BattleContext.from_snapshot(snapshot, int(snapshot["seed"]))
+
+    @staticmethod
+    def health_flags(view: dict) -> dict:
+        raw = view.get("parity", {}).get("raw_state", {})
+        combat = view.get("game", {}).get("combat_state", {})
+        result = {}
+        if "AbstractCreature.isBloodied" in raw.get("player", {}):
+            result["is_bloodied"] = (raw["player"]["AbstractCreature.isBloodied"],
+                                    "/parity/raw_state/player/AbstractCreature.isBloodied")
+        elif "is_bloodied" in combat:
+            result["is_bloodied"] = (combat["is_bloodied"], "/game/combat_state/is_bloodied")
+        for index, relic in enumerate(raw.get("relics", [])):
+            if relic.get("class", "").endswith(".RedSkull") and "RedSkull.isActive" in relic.get("fields", {}):
+                result["red_skull_active"] = (relic["fields"]["RedSkull.isActive"],
+                    f"/parity/raw_state/relics/{index}/fields/RedSkull.isActive")
+        if "red_skull_active" not in result and "red_skull_active" in combat.get("relic_combat_state", {}):
+            result["red_skull_active"] = (combat["relic_combat_state"]["red_skull_active"],
+                                        "/game/combat_state/relic_combat_state/red_skull_active")
+        return result
 
     def simulator_state(self, battle) -> dict:
         p = battle.player
-        return {"player": {"hp": p.cur_hp, "max_hp": p.max_hp, "block": p.block,
+        state = {"player": {"hp": p.cur_hp, "max_hp": p.max_hp, "block": p.block,
                            "energy": p.energy, "gold": p.gold,
                            "energy_per_turn": p.energy_per_turn, "card_draw_per_turn": p.card_draw_per_turn},
                 "turn": battle.turn + 1,
@@ -104,6 +127,11 @@ class Comparator:
                 "potions": [int(p) for p in battle.potions], "rng": dict(battle.rng_states),
                 "relic_counters": dict(battle.snapshot_counters),
                 "bomb_instances": [list(pair) for pair in p.bomb_instances]}
+        if hasattr(p, "is_bloodied"):
+            state["health_flags"] = {"is_bloodied": p.is_bloodied, "red_skull_active": p.red_skull_active}
+        if hasattr(battle, "end_turn_shuffle"):
+            state["end_turn_shuffle"] = dict(battle.end_turn_shuffle)
+        return state
 
     def legal_simulator(self, battle, view: dict) -> list[str]:
         """All normal-turn validator inputs, separate from search pruning."""
@@ -153,10 +181,22 @@ class Comparator:
         actual = self.simulator_state(battle)
         expected = {}
         gaps = []
+        if "end_turn_shuffle" in combat and "end_turn_shuffle" in actual:
+            expected["end_turn_shuffle"] = observation.consume("/game/combat_state/end_turn_shuffle")
+        else:
+            actual.pop("end_turn_shuffle", None)
+            gaps.append({"kind": "missing_end_turn_shuffle_observation" if "end_turn_shuffle" not in combat
+                         else "unmapped_simulator_field", "path": "/end_turn_shuffle"})
         mapping = {"hp": "current_hp", "max_hp": "max_hp", "block": "block", "energy": "energy"}
         expected["player"] = {name: observation.consume("/game/combat_state/player/" + raw)
                               for name, raw in mapping.items()}
         expected["player"]["gold"] = observation.consume("/game/gold")
+        if "health_flags" in actual:
+            flags = self.health_flags(view)
+            expected["health_flags"] = {name: observation.consume(path) for name, (_, path) in flags.items()}
+            actual["health_flags"] = {name: actual["health_flags"][name] for name in flags}
+            if "is_bloodied" not in flags:
+                gaps.append({"kind": "missing_observation", "path": "/game/combat_state/is_bloodied"})
         # Berserk is stored as a power by Java and folded into native energy.
         for field in ("energy_per_turn", "card_draw_per_turn"):
             if field not in combat:
@@ -192,7 +232,11 @@ class Comparator:
         for index in range(len(game["potions"])):
             observation.consume(f"/game/potions/{index}/id")
         expected["rng"] = {name: rng_bits(observation.consume("/rng/" + raw)) for name, raw in RNG_NAMES.items()}
-        wanted_counters = combat.get("relic_combat_state", {})
+        wanted_counters = dict(combat.get("relic_combat_state", {}))
+        for key in list(wanted_counters):
+            if key not in actual["relic_counters"]:
+                gaps.append({"kind": "unmapped_simulator_field", "path": "/relic_counters/" + key})
+                del wanted_counters[key]
         expected["relic_counters"] = wanted_counters
         actual["relic_counters"] = {key: actual["relic_counters"].get(key) for key in wanted_counters}
         if "relic_combat_state" in combat:
@@ -210,7 +254,12 @@ class Comparator:
         diff = differences(expected, actual)
         # Retain the established detailed status/move checks as supplemental
         # evidence; their shared alias tables are not an independent proof.
-        extras = importlib.import_module("compare_powers").extras(game, battle)
+        legacy_game = game
+        if wanted_counters != combat.get("relic_combat_state", {}):
+            # The legacy helper indexes every supplied counter. Unsupported
+            # counters were recorded as gaps above, not comparison failures.
+            legacy_game = {**game, "combat_state": {**combat, "relic_combat_state": wanted_counters}}
+        extras = importlib.import_module("compare_powers").extras(legacy_game, battle)
         diff += [{"path": "/legacy/" + key, "kind": "value", **value} for key, value in extras.items()]
         gaps.append({"kind": "unobserved_internal_state", "fields": ["pending_actions", "card_identity_links",
                  "all_monster_private_fields", "all_card_private_fields"]})

@@ -1,0 +1,47 @@
+{
+  "repair": "Pain self-damage and queued Void energy loss",
+  "apply_after": "e121_power_order.patch",
+  "patch_sha256": "283b4841f6ad574db8a98e922e2b5c4d666459a01215aeb29f32b3adbd466da2",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "fcbfc9848cb8bc812df2e6e05bb8a965f051eb8c0bd8f81f87446e950d57a974",
+      "after": "a2637b5b9bdfeb4e72f85299124b0671934df19d44482f94a52d1a2c2856756e"
+    },
+    {
+      "path": "src/combat/CardManager.cpp",
+      "before": "ba85cc826ab010210e3b86e0389b9c952d1388cb8cc71dba9dd225356d7b432f",
+      "after": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a"
+    }
+  ],
+  "baseline": "hash-verified optimized-queue source used for the fourth parity investigation",
+  "scope": "two rule sites; previous rule discrepancies and full parity remain outside this repair",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "fcbfc9848cb8bc812df2e6e05bb8a965f051eb8c0bd8f81f87446e950d57a974",
+        "src/combat/CardManager.cpp": "ba85cc826ab010210e3b86e0389b9c952d1388cb8cc71dba9dd225356d7b432f"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "a2637b5b9bdfeb4e72f85299124b0671934df19d44482f94a52d1a2c2856756e",
+        "src/combat/CardManager.cpp": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a"
+      },
+      "applied": true
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "8d36394faf14a5d57a0a0434aee8d135524c9f1603b1a03c6d598d04b0777beb",
+        "src/combat/CardManager.cpp": "ba85cc826ab010210e3b86e0389b9c952d1388cb8cc71dba9dd225356d7b432f"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "4371d5608735dacb1458502b8147bc9b39e03088a7f242140f7840390e478a4e",
+        "src/combat/CardManager.cpp": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a"
+      },
+      "applied": true,
+      "compile_check": "Both modified translation units pass C++17 syntax compilation against archived E121 headers; no E121 runtime claim."
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+[
+  {
+    "name": "flame_ordered_candidates",
+    "kind": "relic",
+    "id": "Bottled Flame",
+    "deck": [
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      }
+    ]
+  },
+  {
+    "name": "lightning_ordered_candidates",
+    "kind": "relic",
+    "id": "Bottled Lightning",
+    "deck": [
+      {
+        "id": "True Grit",
+        "upgrades": 0
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      }
+    ]
+  },
+  {
+    "name": "tornado_ordered_candidates",
+    "kind": "relic",
+    "id": "Bottled Tornado",
+    "deck": [
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "Feel No Pain",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      }
+    ]
+  },
+  {
+    "name": "flame_choose_0_then_battle",
+    "kind": "relic",
+    "id": "Bottled Flame",
+    "deck": [
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      0
+    ],
+    "sim_select": [
+      0
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "flame_choose_2_then_battle",
+    "kind": "relic",
+    "id": "Bottled Flame",
+    "deck": [
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      2
+    ],
+    "sim_select": [
+      2
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "lightning_choose_0_then_battle",
+    "kind": "relic",
+    "id": "Bottled Lightning",
+    "deck": [
+      {
+        "id": "True Grit",
+        "upgrades": 0
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      0
+    ],
+    "sim_select": [
+      0
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "tornado_choose_0_then_battle",
+    "kind": "relic",
+    "id": "Bottled Tornado",
+    "deck": [
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "Feel No Pain",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      0
+    ],
+    "sim_select": [
+      0
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "flame_choose_1_then_battle",
+    "kind": "relic",
+    "id": "Bottled Flame",
+    "deck": [
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      1
+    ],
+    "sim_select": [
+      1
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "lightning_single_control",
+    "kind": "relic",
+    "id": "Bottled Lightning",
+    "deck": [
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      }
+    ],
+    "select": [
+      0
+    ],
+    "sim_select": [
+      0
+    ],
+    "battle_detail": true,
+    "ops": [
+      {
+        "battle": true
+      }
+    ]
+  },
+  {
+    "name": "tornado_empty_control",
+    "kind": "relic",
+    "id": "Bottled Tornado",
+    "deck": [
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      }
+    ]
+  }
+]

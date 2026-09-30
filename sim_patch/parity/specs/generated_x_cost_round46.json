@@ -1,0 +1,346 @@
+[
+  {
+    "name": "generated-draw:metamorphosis-empty",
+    "fixture": {
+      "hand": [
+        "Metamorphosis"
+      ],
+      "draw": [],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "generated-draw:chrysalis-mixed",
+    "fixture": {
+      "hand": [
+        "Chrysalis",
+        "Master of Strategy"
+      ],
+      "draw": [
+        "Strike_R",
+        "Defend_R",
+        "Bash"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "generated-draw:x-cost-ordinary-prefix",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 0
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Metamorphosis",
+          "upgrades": 1
+        }
+      ],
+      "draw": [],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "generated-draw:unupgraded-play",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 0
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Metamorphosis",
+          "upgrades": 0
+        },
+        "Secret Weapon"
+      ],
+      "draw": [],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "choose 1",
+      "play 1 0",
+      "end"
+    ],
+    "selection_policy": "select Whirlwind by original card ID, then optional potion, play and end"
+  },
+  {
+    "name": "generated-draw:upgraded-play",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 0
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Metamorphosis",
+          "upgrades": 1
+        },
+        "Secret Weapon"
+      ],
+      "draw": [],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "choose 4",
+      "play 1 0",
+      "end"
+    ],
+    "selection_policy": "select Whirlwind by original card ID, then optional potion, play and end"
+  },
+  {
+    "name": "generated-draw:snecko-oil",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 0
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Metamorphosis",
+          "upgrades": 1
+        },
+        "Secret Weapon"
+      ],
+      "draw": [],
+      "energy": 3,
+      "potion": "SneckoOil"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "choose 4",
+      "potion use 0",
+      "play 1 0",
+      "end"
+    ],
+    "selection_policy": "select Whirlwind by original card ID, then optional potion, play and end"
+  },
+  {
+    "name": "generated-draw:zero-energy-chemical-x",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 0
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Chrysalis",
+          "upgrades": 1
+        },
+        {
+          "card": "Metamorphosis",
+          "upgrades": 1
+        },
+        "Secret Weapon"
+      ],
+      "draw": [],
+      "energy": 2,
+      "relics": [
+        "Chemical X"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "choose 4",
+      "play 1 0",
+      "end"
+    ],
+    "selection_policy": "select Whirlwind by original card ID, then optional potion, play and end"
+  }
+]

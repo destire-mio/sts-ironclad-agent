@@ -1,0 +1,5 @@
+[
+  {"name":"enlightenment_fiend_fire_cost", "fixture":{"hand":["Enlightenment","Fiend Fire","Carnage"],"energy":3}, "commands":["play 1","play 1 0","end"]},
+  {"name":"enlightenment_true_grit_cost", "fixture":{"hand":["Enlightenment","True Grit","Carnage"],"energy":3}, "commands":["play 1","play 1"]},
+  {"name":"fiend_fire_base_cost_control", "fixture":{"hand":["Fiend Fire","Carnage"],"energy":3}, "commands":["play 1 0","end"]}
+]

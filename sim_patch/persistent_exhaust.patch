@@ -1,0 +1,140 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -69,6 +69,9 @@
+         if (src.contains("cost")) card.costForTurn = static_cast<std::int8_t>(py::cast<int>(src["cost"]));
+         if (src.contains("base_cost")) card.cost = py::cast<int>(src["base_cost"]);
+         if (src.contains("free_to_play_once")) card.freeToPlayOnce = py::cast<bool>(src["free_to_play_once"]);
++        if (src.contains("exhausts")) {
++            card.exhaustAdded = py::cast<bool>(src["exhausts"]) && !card.doesExhaust();
++        }
+         return card;
+     }
+ 
+@@ -1493,6 +1496,7 @@
+         .def_readonly("unique_id", &CardInstance::uniqueId)
+         .def_readonly("base_cost", &CardInstance::cost)
+         .def_readonly("free_to_play_once", &CardInstance::freeToPlayOnce)
++        .def_property_readonly("exhausts", &CardInstance::doesExhaust)
+         .def_readonly("cost", &CardInstance::cost)
+         .def_readonly("cost_for_turn", &CardInstance::costForTurn)
+         .def_property_readonly("requires_target", &CardInstance::requiresTarget)
+--- a/include/combat/Actions.h
++++ b/include/combat/Actions.h
+@@ -91,7 +91,6 @@
+         static Action MakeTempCardInDiscard(const CardInstance &c, int amount = 1);
+         static Action MakeTempCardsInHand(std::vector<CardInstance> cards);
+ 
+-        static Action DiscardNoTriggerCard(); // for doubt, shame, etc, discards the BattleContext.curCard
+ 
+ 
+         static Action ClearCardQueue();
+--- a/include/combat/CardInstance.h
++++ b/include/combat/CardInstance.h
+@@ -34,6 +34,9 @@
+         bool upgraded = false;
+         bool freeToPlayOnce = false;
+         bool retain = false;
++        // Blue Candle / Medical Kit can add exhaustion to this combat object.
++        // Movement and battle cloning retain it; stat-equivalent cards do not.
++        bool exhaustAdded = false;
+ 
+         CardInstance() = default;
+         CardInstance(CardId id, bool upgraded=false);
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -213,6 +213,7 @@
+     return {[=](BattleContext &bc) {
+         for (int i = 0; i < amount; ++i) {
+             CardInstance c(card);
++            c.exhaustAdded = false;
+             c.uniqueId = bc.cards.nextUniqueCardId++;
+             bc.cards.notifyAddCardToCombat(c);
+             if (bc.cards.cardsInHand == 10) {
+@@ -262,14 +263,6 @@
+     }};
+ }
+ 
+-
+-Action Actions::DiscardNoTriggerCard() {
+-    return {[](BattleContext &bc) {
+-        const auto &c = bc.curCardQueueItem.card;
+-        bc.cards.notifyRemoveFromHand(c);
+-        bc.cards.moveToDiscardPile(c);
+-    }};
+-}
+ 
+ Action Actions::ClearCardQueue() {
+     return {[](BattleContext &bc) {
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -993,7 +993,9 @@
+     }
+ 
+     cards.removeFromHandById(c.uniqueId);
+-    addToBot(Actions::DiscardNoTriggerCard()); // todo what if havoc plays one of these
++    // UseCardAction skips use hooks but still honors the card's exhaustion and
++    // Strange Spoon, including a persistent Blue Candle / Medical Kit change.
++    addToBot(Actions::OnAfterCardUsed());
+ }
+ 
+ void BattleContext::useAttackCard() {
+@@ -1958,11 +1960,13 @@
+     if (c.getType() == CardType::CURSE) {
+         if (p.hasRelic<R::BLUE_CANDLE>()) {
+             addToBot( Actions::PlayerLoseHp(1, true) );
++            c.exhaustAdded = true;
+             item.exhaustOnUse = true;
+         }
+ 
+     } else if (c.getType() == CardType::STATUS) {
+         if (p.hasRelic<R::MEDICAL_KIT>()) {
++            c.exhaustAdded = true;
+             item.exhaustOnUse = true;
+         }
+     }
+@@ -2844,6 +2848,8 @@
+ void BattleContext::queuePurgeCard(const CardInstance &c, int target) {
+     CardQueueItem item;
+     item.card = c;
++    // makeSameInstanceOf copies stats and UUID, but not card.exhaust changes.
++    item.card.exhaustAdded = false;
+     item.purgeOnUse = true;
+     item.target = target;
+     item.energyOnUse = curCardQueueItem.energyOnUse;
+--- a/src/combat/CardInstance.cpp
++++ b/src/combat/CardInstance.cpp
+@@ -68,7 +68,7 @@
+ }
+ 
+ bool CardInstance::doesExhaust() const {
+-    return doesCardExhaust(id, upgraded);
++    return exhaustAdded || doesCardExhaust(id, upgraded);
+ }
+ 
+ bool CardInstance::hasSelfRetain() const {
+--- a/src/combat/CardManager.cpp
++++ b/src/combat/CardManager.cpp
+@@ -83,6 +83,7 @@
+ }
+ 
+ void CardManager::createTempCardInDrawPile(int idx, CardInstance c) {
++    c.exhaustAdded = false; // makeStatEquivalentCopy starts from makeCopy.
+ #ifdef sts_asserts
+     if (c.getId() == CardId::INVALID) {
+         std::cerr << *g_debug_bc << '\n';
+@@ -99,6 +100,7 @@
+ }
+ 
+ void CardManager::createTempCardInDiscard(CardInstance c) {
++    c.exhaustAdded = false;
+     c.uniqueId = static_cast<std::int16_t>(nextUniqueCardId++);
+ #ifdef sts_asserts
+     if (c.getId() == CardId::INVALID) {
+@@ -114,6 +116,7 @@
+ }
+ 
+ void CardManager::createTempCardInHand(CardInstance c) {
++    c.exhaustAdded = false;
+     c.uniqueId = static_cast<std::int16_t>(nextUniqueCardId++);
+ #ifdef sts_asserts
+     if (c.getId() == CardId::INVALID) {

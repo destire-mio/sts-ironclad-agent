@@ -45,6 +45,10 @@ def build(source: Path, source_manifest: Path, json_include: Path, output: Path)
     probe_copy = inputs / "alignment/tests/outside_probe.cpp"
     probe_copy.parent.mkdir(parents=True)
     shutil.copy2(here.parent / "alignment/tests/outside_probe.cpp", probe_copy)
+    shutil.copy2(here.parent / "alignment/tests/colosseum_rng_probe.cpp",
+                 probe_copy.parent / "colosseum_rng_probe.cpp")
+    for name in ("event_entry_probe.cpp", "event_rewards_probe.cpp", "treasure_probe.cpp", "shop_continuation_probe.cpp", "reward_observation.h", "save_entry_probe.cpp", "relic_lifecycle_probe.cpp", "relic_acquire_probe.cpp"):
+        shutil.copy2(here.parent / "alignment/tests" / name, probe_copy.parent / name)
     shutil.copy2(here / "native_audit.inc", inputs / "parity/native_audit.inc")
     import pybind11
     command = ["cmake", "-S", str(cmake_copy.parent.resolve()), "-B", str(output / "build"), "-DCMAKE_BUILD_TYPE=Release",

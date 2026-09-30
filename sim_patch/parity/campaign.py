@@ -275,7 +275,7 @@ def natural_replay(comparator: Comparator, source: Path, directory: Path,
                     runner.combat(row)
                 else:
                     for raw in row["actions"]:
-                        runner.outside(comparator.sts.GameAction(raw & 0xffffffff))
+                        runner.recorded_outside(raw, row)
             runner.align()
             runner.check()
             value = {"status": "natural_prefix_checked", "floor": runner.gc.floor_num}
@@ -306,6 +306,7 @@ def natural_replay(comparator: Comparator, source: Path, directory: Path,
                                      for c in divergent]
     if runner:
         result["commands"] = runner.rows
+        result["action_translations"] = runner.action_translations
         stop = divergent[0]["index"] + 1 if divergent else len(runner.rows)
         result["replay_prefix"] = [row["command"] for row in runner.rows[:stop]]
     brief = finish_case(directory, 0, result, {"path": str(source.resolve()), "sha256": sha256(source)})

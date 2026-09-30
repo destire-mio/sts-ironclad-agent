@@ -1,0 +1,961 @@
+[
+  {
+    "commands": [
+      "play 2",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "potion": "DistilledChaos"
+    },
+    "name": "rejected-autoplay:normality-intrinsic-exhaust"
+  },
+  {
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "initialize_relics": true,
+      "potion": "DistilledChaos",
+      "relics": [
+        "Velvet Choker"
+      ]
+    },
+    "name": "rejected-autoplay:choker-initialized-intrinsic-exhaust"
+  },
+  {
+    "commands": [
+      "play 1",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        "Feel No Pain",
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "potion": "DistilledChaos"
+    },
+    "name": "rejected-autoplay:normality-feel-no-pain"
+  },
+  {
+    "commands": [
+      "play 2",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "potion": "DistilledChaos",
+      "relics": [
+        "Strange Spoon"
+      ]
+    },
+    "name": "rejected-autoplay:normality-strange-spoon"
+  },
+  {
+    "commands": [
+      "play 2",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Defend_R",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "energy": 3,
+      "hand": [
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "potion": "DistilledChaos"
+    },
+    "name": "rejected-autoplay:normality-non-exhaust-control"
+  },
+  {
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "potion": "DistilledChaos"
+    },
+    "name": "rejected-autoplay:unrestricted-intrinsic-control"
+  },
+  {
+    "commands": [
+      "play 1",
+      "play 2",
+      "play 2",
+      "end"
+    ],
+    "fixture": {
+      "discard": [],
+      "draw": [
+        "Impervious"
+      ],
+      "energy": 3,
+      "hand": [
+        "Feel No Pain",
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Havoc",
+          "upgrades": 1
+        }
+      ]
+    },
+    "name": "rejected-autoplay:havoc-forced-exhaust-control"
+  },
+  {
+    "name": "time-eater-cleanup:pending-exhaust",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "time-eater-cleanup:pending-non-exhaust",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Defend_R",
+        "Impervious",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "time-eater-cleanup:pending-exhaust-feel-no-pain",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        "Feel No Pain"
+      ],
+      "draw": [
+        "Impervious",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "time-eater-cleanup:both-non-exhaust-control",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Defend_R",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "time-eater-cleanup:both-exhaust-control",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "time-eater-cleanup:no-interruption-control",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "encounter": "Time Eater",
+      "hp": 80,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "autoplay-neighbor:corruption-rejected-mixed-skills",
+    "fixture": {
+      "hand": [
+        "Corruption",
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Defend_R",
+        "Impervious",
+        "Defend_R"
+      ],
+      "discard": [],
+      "energy": 3,
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ]
+  },
+  {
+    "name": "autoplay-neighbor:normality-dead-branch-feel-no-pain",
+    "fixture": {
+      "hand": [
+        "Feel No Pain",
+        "Normality",
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Impervious",
+        "Impervious"
+      ],
+      "discard": [],
+      "energy": 3,
+      "potion": "DistilledChaos",
+      "relics": [
+        "Dead Branch"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "play 2",
+      "play 2",
+      "potion use 0",
+      "end"
+    ]
+  },
+  {
+    "name": "autoplay-neighbor:time-eater-strange-spoon",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Defend_R",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "encounter": "Time Eater",
+      "potion": "DistilledChaos",
+      "relics": [
+        "Strange Spoon"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "autoplay-neighbor:time-eater-double-tap",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        "Double Tap"
+      ],
+      "draw": [
+        "Defend_R",
+        "Impervious",
+        "Strike_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "encounter": "Time Eater",
+      "potion": "DistilledChaos"
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  },
+  {
+    "name": "autoplay-neighbor:time-eater-sacred-bark-six-cards",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        },
+        {
+          "card": "Seeing Red",
+          "upgrades": 1
+        }
+      ],
+      "draw": [
+        "Impervious",
+        "Defend_R",
+        "Impervious",
+        "Defend_R",
+        "Impervious",
+        "Defend_R"
+      ],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "encounter": "Time Eater",
+      "potion": "DistilledChaos",
+      "relics": [
+        "SacredBark"
+      ]
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "potion use 0"
+    ]
+  }
+]

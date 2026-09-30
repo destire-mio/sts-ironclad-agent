@@ -1,0 +1,22 @@
+[
+  {
+    "name": "repair_pain_rupture_dramatic_entrance",
+    "fixture": {"hand": ["Rupture", "Dramatic Entrance", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "repair_pain_rupture_immolate",
+    "fixture": {"hand": ["Rupture", "Immolate", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "repair_pain_rupture_thunderclap",
+    "fixture": {"hand": ["Rupture", "Thunderclap", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "repair_pain_rupture_whirlwind",
+    "fixture": {"hand": ["Rupture", "Whirlwind", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  }
+]

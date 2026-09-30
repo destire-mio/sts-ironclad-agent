@@ -1,0 +1,108 @@
+{
+  "repair": "Schedule excess innate/bottled opening draws after pre-battle Enchiridion creation, before normal opening effects",
+  "apply_after": "bottle_choice.patch",
+  "patch_sha256": "bcaeecc482c5938d5b1be90a548432b0429318d9d72d7592688929cb36535e9b",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "3b62d38f395965d27190861007bf22cfa77c9e7051789a17be5b640b1909ed0d",
+      "after": "dba0dd87a6621494999e630fc037fd141911ed9d331e978593ee8e75d762de0f"
+    },
+    {
+      "path": "include/combat/CardManager.h",
+      "before": "6f693f58a9b2b21bb0b40266fcd74ffc9d2891fb8636ea878d4e57af82ab943e",
+      "after": "e74a6c3828830a993c0e28c87a2c84aae5a0abc80907068861eb775e452ac3ce"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "cdfaa3a1a04ac808a153e0e8d2f3facda1f939a15288e30c50d4713f0d1e38d3",
+      "after": "dbef28f3437c36d29a617250eaf5d0d12712cd80f00e44e6a1de80a1d6e7b1c3"
+    },
+    {
+      "path": "src/combat/CardManager.cpp",
+      "before": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779",
+      "after": "4563a0c1991f809eb05c54b2034d4e5c6cbcf28bf8854bbb7771c8a0f97af196"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "include/combat/BattleContext.h": "3b62d38f395965d27190861007bf22cfa77c9e7051789a17be5b640b1909ed0d",
+        "include/combat/CardManager.h": "6f693f58a9b2b21bb0b40266fcd74ffc9d2891fb8636ea878d4e57af82ab943e",
+        "src/combat/BattleContext.cpp": "cdfaa3a1a04ac808a153e0e8d2f3facda1f939a15288e30c50d4713f0d1e38d3",
+        "src/combat/CardManager.cpp": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779"
+      },
+      "after": {
+        "include/combat/BattleContext.h": "dba0dd87a6621494999e630fc037fd141911ed9d331e978593ee8e75d762de0f",
+        "include/combat/CardManager.h": "e74a6c3828830a993c0e28c87a2c84aae5a0abc80907068861eb775e452ac3ce",
+        "src/combat/BattleContext.cpp": "dbef28f3437c36d29a617250eaf5d0d12712cd80f00e44e6a1de80a1d6e7b1c3",
+        "src/combat/CardManager.cpp": "4563a0c1991f809eb05c54b2034d4e5c6cbcf28bf8854bbb7771c8a0f97af196"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/optimized/src/combat/CardManager.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'include/combat/BattleContext.h'\npatching file 'include/combat/CardManager.h'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/CardManager.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "include/combat/BattleContext.h": "5623ecf89a375173e6b906f25effa630e0d5e47fefa8ff2bc3dd3674d54aa747",
+        "include/combat/CardManager.h": "6f693f58a9b2b21bb0b40266fcd74ffc9d2891fb8636ea878d4e57af82ab943e",
+        "src/combat/BattleContext.cpp": "34765cc94aa4e55ba8dd32fb0c3e53e4c2922fb4c072f1f8e2363fa47bc3771e",
+        "src/combat/CardManager.cpp": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779"
+      },
+      "after": {
+        "include/combat/BattleContext.h": "4fcc703e17bb8432677bfc42dcf85d2fe1729fd548f52546addf5d274ccec769",
+        "include/combat/CardManager.h": "e74a6c3828830a993c0e28c87a2c84aae5a0abc80907068861eb775e452ac3ce",
+        "src/combat/BattleContext.cpp": "b749e2bac87332b8ca04de01666abd3a86512e78c44c54f484cc29b5bb666b1f",
+        "src/combat/CardManager.cpp": "4563a0c1991f809eb05c54b2034d4e5c6cbcf28bf8854bbb7771c8a0f97af196"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-innate-opening/portable/e121/src/combat/CardManager.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'include/combat/BattleContext.h'\npatching file 'include/combat/CardManager.h'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/CardManager.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "innate-opening-original.json.gz": "69c40d960d2b56414bd25e71794e05f8bcf36d6bd34caea99c2145e8c44583e9"
+  },
+  "acceptance_boundary": "6 installed-Mod original opening scenes; observed ordered hand, combat fields, deck and RNG match, raw counter sentinels retained; exhaustive parity INCOMPLETE"
+}

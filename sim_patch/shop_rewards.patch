@@ -1,0 +1,33 @@
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -832,6 +832,9 @@
+ }
+ 
+ void GameContext::enterMapRoom() {
++    // AbstractDungeon.nextRoomTransition clears the previous reward screen.
++    // Keep unclaimed rewards within their room, not across later shop grids.
++    info.rewardsContainer.clear();
+     regainControlAction = returnToMapAction;
+     if (curMapNodeY == 15) {
+         curRoom = Room::BOSS;
+@@ -4162,7 +4165,19 @@
+ 
+ void GameContext::regainControl() {
+     if (!regainControlAction) throw std::logic_error("missing GameContext continuation");
++    const bool shopGridWithRewards = screenState == ScreenState::CARD_SELECT &&
++        curRoom == Room::SHOP && info.rewardsContainer.getTotalCount() > 0;
+     // The continuation may replace itself while it runs.
+     const auto continuation = regainControlAction;
+     continuation(*this);
+-}
++    if (shopGridWithRewards && screenState == ScreenState::SHOP_ROOM) {
++        // Closing the original grid prioritizes unclaimed rewards, including
++        // rewards left behind before reopening this shop. Preserve its exit.
++        const auto exitShop = regainControlAction;
++        screenState = ScreenState::REWARDS;
++        regainControlAction = [exitShop](GameContext &next) {
++            next.screenState = ScreenState::SHOP_ROOM;
++            next.regainControlAction = exitShop;
++        };
++    }
++}

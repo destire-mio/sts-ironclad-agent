@@ -1,0 +1,4090 @@
+[
+  {
+    "name": "card-obtain-callback:fish-only",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-darkstone",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "Darkstone Periapt"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 11
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-omamori",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      {
+        "id": "Omamori",
+        "counter": 2
+      },
+      "Darkstone Periapt",
+      "CeramicFish"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 11
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-darkstone-curse",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "Darkstone Periapt"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-omamori-charged-curse",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      {
+        "id": "Omamori",
+        "counter": 2
+      },
+      "Darkstone Periapt",
+      "CeramicFish",
+      "Bloody Idol",
+      {
+        "id": "Du-Vu Doll",
+        "counter": 2
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-omamori-exhausted-curse",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      {
+        "id": "Omamori",
+        "counter": 0
+      },
+      "Darkstone Periapt",
+      "CeramicFish",
+      "Bloody Idol",
+      {
+        "id": "Du-Vu Doll",
+        "counter": 2
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-darkstone-fish-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "Darkstone Periapt",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:mirror-fish-darkstone-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      },
+      {
+        "id": "Pain",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Darkstone Periapt",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "DollysMirror",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "grid_pick": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody-bloom",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol",
+      "Mark of the Bloom"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody-ectoplasm",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol",
+      "Ectoplasm"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody-full",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 80,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:reward-fish-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Orrery",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "id": "Orrery",
+        "reward_plan": [
+          {
+            "type": "CARD",
+            "index": 0,
+            "pick": 0
+          },
+          {
+            "type": "CARD",
+            "index": 0,
+            "pick": 1
+          }
+        ]
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:reward-fish-only",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Orrery",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 2,
+        "id": "Orrery",
+        "reward_plan": [
+          {
+            "type": "CARD",
+            "index": 0,
+            "pick": 0
+          },
+          {
+            "type": "CARD",
+            "index": 0,
+            "pick": 1
+          }
+        ]
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:upgrade-before-fish-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "slot": 1,
+        "id": "Whetstone"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:purge-before-fish-bloody",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "REMOVE",
+        "grid_pick": 1
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 1
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 79,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody-traced",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  },
+  {
+    "name": "card-obtain-callback:fish-bloody-untraced",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "CeramicFish",
+      "Bloody Idol"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Whetstone",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Lee's Waffle",
+          "price": 220
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "collections_seed48": 123456789,
+    "initial_tip_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "action_frames": {
+      "CARD": 31,
+      "POTION": 1,
+      "BLOCKED_POTION": 121,
+      "RELIC": 2,
+      "GRID": 2,
+      "DISCARD": 1,
+      "LEAVE": 4,
+      "REMOVE": 2,
+      "PURGE_CONFIRM": 4,
+      "PURGE_CANCEL": 2,
+      "REWARD_CARD": 34,
+      "REWARD_POTION": 1,
+      "REWARD_PEEK": 4,
+      "REWARD_BOWL": 4,
+      "REWARD_RETURN": 4,
+      "MIRROR": 61,
+      "UPGRADE": 2
+    },
+    "disable_effects": false
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "patch": "sim_patch/hp_loss_relic_order.patch",
+  "patch_sha256": "0ca712f687449bc58ac7bcb49ecbd4519fd7454869dc3d39c8ed1003c56668c7",
+  "apply_after": "sim_patch/reward_click_domain.patch",
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "c08ea39cab41a6ae67f99bfeff09e5e5ce6b23da391d25df6cf9a0aa40afde0b",
+      "after": "96f2ad948e178ab045460cfa1a04533886e852ec710e906a61df8162877231bf"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "980d6c9b2bd857078912e9a02fa9f545dbcadfaac6de74efbcff976a9ccf5681",
+      "after": "72498bf42366b28572f4450e56f48d8f9cd9e642f064df3b9acfa6cb5842577a"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "c9f8c94c45412c43fa60c72ecfe2ffc84a2832949d0a2b403d7bf78f0b80faf3",
+      "after": "44f141429bbfcba7ed46b6db42a086fe1e08deba62f65b9ef6baa4fac45c02d1"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "d61976b54e44f5950e35482e71d28e3f31efcb3b5bb2cde27b2ee02410018469",
+      "after": "a76e8352328f634462be75621f76afdf9d790c0c08735a913b7374a37e581540"
+    }
+  ],
+  "scope": "HP-loss draw relic order, run initialization, snapshot import and owned battle copies",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "bindings/slaythespire.cpp": "c08ea39cab41a6ae67f99bfeff09e5e5ce6b23da391d25df6cf9a0aa40afde0b",
+        "include/combat/Player.h": "980d6c9b2bd857078912e9a02fa9f545dbcadfaac6de74efbcff976a9ccf5681",
+        "src/combat/BattleContext.cpp": "c9f8c94c45412c43fa60c72ecfe2ffc84a2832949d0a2b403d7bf78f0b80faf3",
+        "src/combat/Player.cpp": "d61976b54e44f5950e35482e71d28e3f31efcb3b5bb2cde27b2ee02410018469"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/Player.h'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Player.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "96f2ad948e178ab045460cfa1a04533886e852ec710e906a61df8162877231bf",
+        "include/combat/Player.h": "72498bf42366b28572f4450e56f48d8f9cd9e642f064df3b9acfa6cb5842577a",
+        "src/combat/BattleContext.cpp": "44f141429bbfcba7ed46b6db42a086fe1e08deba62f65b9ef6baa4fac45c02d1",
+        "src/combat/Player.cpp": "a76e8352328f634462be75621f76afdf9d790c0c08735a913b7374a37e581540"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/src/combat/Player.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/optimized/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "bindings/slaythespire.cpp": "fddbb5f33e4e4792bd34944cba541e790f6ed4f425d60f7fb1e93bc2ae01048a",
+        "include/combat/Player.h": "cf604e53627779dfeba7abb82313b9309d6c8dcdecd7ad55536fab2e873a0951",
+        "src/combat/BattleContext.cpp": "a90ce2ce73bbbb3392390fa695540d2b257d6fe0b26d7cf4c2c9c8a19125f462",
+        "src/combat/Player.cpp": "4d340021f3648c990c59359b3ff8791ac63dc215443511d9292339b2fdafd911"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/Player.h'\npatching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Player.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "a5f6ec8755c1761b63de747b343ab5d86cb64adcb7253b7b95ccae162f0db95e",
+        "include/combat/Player.h": "ccba48f4b4109085966a6d7fa1dc667dbcefc3db0560d08c2d8e6e11bb6cc370",
+        "src/combat/BattleContext.cpp": "f2e93f9ef0244f2f25c5ae651c058d8073dfb6db6190dd8600a3a551ab53926b",
+        "src/combat/Player.cpp": "290745aa5970c6e73ce349a8a811419e15c666580de6030cc5dd16ea786687cd"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/src/combat/Player.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-hp-loss-relic-order/portable/e121/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4
+    }
+  ]
+}

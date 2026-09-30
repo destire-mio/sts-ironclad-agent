@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from sim_patch.parity.adapter import Comparator, replay_sequence
+from sim_patch.parity.adapter import ActionMapper, Comparator, replay_sequence
 from sim_patch.parity.core import read_json, write_json
 from sim_patch.parity.campaign import isolated_replay, natural_replay, new_run
 from sim_patch.parity.outside import outside_files
@@ -173,6 +173,64 @@ class NativeDetectionTests(unittest.TestCase):
                 row = rows[index]
                 player = row["trace"][-1]["after"]["game"]["combat_state"]["player"]
                 self.assertEqual((player["current_hp"], player["block"]), (hp, block))
+                control = replay_sequence(self.comparator, row)
+                self.assertEqual(control["status"], "coverage_gap")
+                self.assertTrue(control["observed_match"])
+
+    def test_pain_does_not_trigger_rupture_but_other_self_damage_and_no_rupture_match(self):
+        rows = read_json(REPO / "sim_patch/parity/tests/fixtures/pain-rupture-original.json.gz")
+        self.assertEqual(len(rows), 4)
+        for index, gain, final_enemy_hp in ((0, 1, 287), (1, 2, 286)):
+            with self.subTest(index=index):
+                row = rows[index]
+                result = replay_sequence(self.comparator, row)
+                self.assertEqual(result["status"], "mismatch")
+                first = result["first_divergence"]
+                self.assertEqual(first["index"], 1)
+                self.assertEqual([d["path"] for d in first["differences"]], ["/legacy/player_powers"])
+                powers = first["differences"][0]
+                self.assertEqual(powers["original"]["STRENGTH"], gain)
+                self.assertEqual(powers["simulator"].get("STRENGTH", 0), 0)
+                self.assertEqual(powers["original"]["RUPTURE"], powers["simulator"]["RUPTURE"])
+
+                # Continue from the same native state without importing again.
+                # The later damage difference is a consequence of lost strength.
+                battle = self.comparator.import_battle(row["before"])
+                mapper = ActionMapper(self.comparator, battle, row["before"])
+                previous = row["before"]
+                for step in row["trace"]:
+                    action = mapper.action(step["command"], previous, battle)
+                    self.assertTrue(action.is_valid(battle))
+                    action.execute(battle)
+                    previous = step["after"]
+                original = previous["game"]["combat_state"]
+                strength = next(p["amount"] for p in original["player"]["powers"] if p["id"] == "Strength")
+                self.assertEqual(strength, gain * 2)
+                self.assertEqual(battle.player.get_status(self.comparator.sts.PlayerStatus.STRENGTH), 0)
+                self.assertEqual((original["player"]["current_hp"], battle.player.cur_hp), (47, 47))
+                self.assertEqual(original["monsters"][0]["current_hp"], final_enemy_hp)
+                self.assertEqual(battle.monsters[0].cur_hp, 288)
+        for row in rows[2:]:
+            with self.subTest(name=row["spec"]["name"]):
+                control = replay_sequence(self.comparator, row)
+                self.assertEqual(control["status"], "coverage_gap")
+                self.assertTrue(control["observed_match"])
+
+    def test_void_energy_loss_precedes_queued_energy_gain_only_in_native(self):
+        rows = read_json(REPO / "sim_patch/parity/tests/fixtures/void-energy-original.json.gz")
+        self.assertEqual(len(rows), 4)
+        for row in rows[:2]:
+            with self.subTest(name=row["spec"]["name"]):
+                self.assertEqual(row["before"]["game"]["combat_state"]["player"]["energy"], 0)
+                result = replay_sequence(self.comparator, row)
+                self.assertEqual(result["status"], "mismatch")
+                self.assertEqual(result["first_divergence"]["index"], 0)
+                self.assertEqual(result["first_divergence"]["differences"], [
+                    {"path": "/player/energy", "kind": "value", "original": 1, "simulator": 2}])
+        for index, energy in ((2, 1), (3, 2)):
+            with self.subTest(index=index):
+                row = rows[index]
+                self.assertEqual(row["trace"][-1]["after"]["game"]["combat_state"]["player"]["energy"], energy)
                 control = replay_sequence(self.comparator, row)
                 self.assertEqual(control["status"], "coverage_gap")
                 self.assertTrue(control["observed_match"])

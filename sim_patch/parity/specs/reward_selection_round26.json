@@ -1,0 +1,1111 @@
+[
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Flame:0",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Flame"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Flame",
+        "grid_pick": 0
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Flame:last",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Flame"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Flame",
+        "grid_pick": "last"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Lightning:0",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Lightning"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Lightning",
+        "grid_pick": 0
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Lightning:last",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Lightning"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Lightning",
+        "grid_pick": "last"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Tornado:0",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Tornado"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Tornado",
+        "grid_pick": 0
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:Bottled Tornado:last",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Tornado"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Bottled Tornado",
+        "grid_pick": "last"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 0
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:card-before-bottle",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Bottled Flame"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "CARD",
+        "pick": 1
+      },
+      {
+        "type": "RELIC",
+        "id": "Bottled Flame",
+        "grid_pick": "last"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:ordinary-relic-control",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "id": "Shuriken"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": 2
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:bowl",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "Singing Bowl"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "CARD",
+        "pick": "bowl"
+      },
+      {
+        "type": "RELIC",
+        "id": "Shuriken"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:bowl-mark",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "Singing Bowl",
+      "Mark of the Bloom"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "CARD",
+        "pick": "bowl"
+      },
+      {
+        "type": "RELIC",
+        "id": "Shuriken"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:skip-reopen-card",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "CARD_SKIP"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "RELIC",
+        "id": "Shuriken"
+      },
+      {
+        "type": "CARD",
+        "pick": 2
+      }
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0
+    ],
+    "name": "reward-selection:skip-reopen-bowl",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "Singing Bowl"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "pool_overrides": {
+      "common": [
+        "Anchor"
+      ],
+      "uncommon": [
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "CARD_SKIP"
+      },
+      {
+        "type": "RELIC",
+        "id": "Shuriken"
+      },
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "CARD",
+        "pick": "bowl"
+      }
+    ]
+  }
+]

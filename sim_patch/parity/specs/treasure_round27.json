@@ -1,0 +1,1435 @@
+[
+  {
+    "name": "treasure:extra-then-key",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:key-then-extra",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:bonus-bottle-then-key",
+    "seed": 13,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Bottled Flame",
+        "grid_pick": "last"
+      },
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:base-bottle-removes-key",
+    "seed": 27,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 1,
+        "id": "Bottled Flame",
+        "grid_pick": 0
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:no-extra-key",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:no-extra-relic",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:mask-only",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "NlothsMask"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:mask-extra",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      "NlothsMask"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:last-extra-charge",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      {
+        "id": "Matryoshka",
+        "counter": 1
+      }
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:inactive-mask",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      {
+        "id": "NlothsMask",
+        "counter": -2
+      }
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 1,
+        "id": "Vajra"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:key-already-owned",
+    "seed": 1,
+    "floor": 26,
+    "act": 2,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": true,
+    "relics": [
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "RELIC",
+        "index": 1,
+        "id": "Vajra"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:cursed-key-omamori",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      "Cursed Key",
+      {
+        "id": "Omamori",
+        "counter": 1
+      }
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:cursed-key-obtain-effects",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      "Cursed Key",
+      "Darkstone Periapt",
+      "CeramicFish"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:inactive-extra-leave",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      {
+        "id": "Matryoshka",
+        "counter": -2
+      }
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": []
+  },
+  {
+    "name": "treasure:mask-extra-reversed-order",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "NlothsMask",
+      "Matryoshka"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "GOLD"
+      }
+    ]
+  },
+  {
+    "name": "treasure:golden-idol",
+    "seed": 1,
+    "floor": 9,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      "Golden Idol"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      }
+    ]
+  },
+  {
+    "name": "treasure:bloody-idol",
+    "seed": 1,
+    "floor": 26,
+    "act": 2,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "relics": [
+      "Matryoshka",
+      "Bloody Idol"
+    ],
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "pool_overrides": {
+      "common": [
+        "Anchor",
+        "Vajra"
+      ],
+      "uncommon": [
+        "Bottled Flame",
+        "Shuriken"
+      ],
+      "rare": [
+        "Mango"
+      ]
+    },
+    "reward_plan": [
+      {
+        "type": "GOLD"
+      },
+      {
+        "type": "SAPPHIRE_KEY"
+      },
+      {
+        "type": "RELIC",
+        "index": 0,
+        "id": "Anchor"
+      }
+    ]
+  }
+]

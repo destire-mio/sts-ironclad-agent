@@ -1,0 +1,5 @@
+[
+  {"name":"forethought_ghostly_armor_exhaust", "fixture":{"hand":["Forethought","Ghostly Armor"],"draw":[],"discard":[]}, "commands":["play 1","end","end"]},
+  {"name":"forethought_carnage_exhaust", "fixture":{"hand":["Forethought","Carnage"],"draw":[],"discard":[]}, "commands":["play 1","end","end"]},
+  {"name":"forethought_strike_discard_control", "fixture":{"hand":["Forethought","Strike_R"],"draw":[],"discard":[]}, "commands":["play 1","end","end"]}
+]

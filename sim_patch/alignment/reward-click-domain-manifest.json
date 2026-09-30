@@ -1,0 +1,165 @@
+{
+  "patch": "sim_patch/reward_click_domain.patch",
+  "patch_sha256": "61ac88e61b0b04d6dc9130f02ea6c73fc2fadb087ca1ab7d5e0097e4a9d8f274",
+  "apply_after": "sim_patch/shop_click_domain.patch",
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "c96032f1d4c129dee71808fa74850ab921a78101e7389fab82186288ebb784ed",
+      "after": "c08ea39cab41a6ae67f99bfeff09e5e5ce6b23da391d25df6cf9a0aa40afde0b"
+    },
+    {
+      "path": "include/game/GameContext.h",
+      "before": "f21f8b92022d95dd1c0798fe6e42557752a236a49bc701c83051a841cb0a1f4d",
+      "after": "13e18b7a6df45bb7d514b7a32bcb2efa2e1c9ad3a4dd37022c51524d96166a8f"
+    },
+    {
+      "path": "include/game/ShopPresentation.h",
+      "before": "d7dbfb3954ac2db26318f3e460cda19ff92ee466bf2b29bab9823d4f606ae858",
+      "after": "75eb69cffb942a7430847fcc311c4721f14989d0d8b2d8187e2ff6d4f82ab923"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "f60584f0b1e42d552b83f63b6f70ad5b9b22d84d4b26d74ffe6bacb612eb7c09",
+      "after": "232f7ba00855e61edc4687699a4a13801ea531a9a6bfa1237a846292b2c70ac5"
+    },
+    {
+      "path": "src/sim/search/GameAction.cpp",
+      "before": "b4a11c0a5e563d974772e1d200750226b847f385182dfc247b96c801242869ca",
+      "after": "a56ee0a1e673dc7f9606ee4b9e006db0d6d5709d42eb08526638f42d717ea3d5"
+    }
+  ],
+  "scope": "validated potion reward click shared with policy execution; full slots preserve reward and set fixed tip; Sozu removes reward; presentation clocks unchanged",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "bindings/slaythespire.cpp": "c96032f1d4c129dee71808fa74850ab921a78101e7389fab82186288ebb784ed",
+        "include/game/GameContext.h": "f21f8b92022d95dd1c0798fe6e42557752a236a49bc701c83051a841cb0a1f4d",
+        "include/game/ShopPresentation.h": "d7dbfb3954ac2db26318f3e460cda19ff92ee466bf2b29bab9823d4f606ae858",
+        "src/game/GameContext.cpp": "f60584f0b1e42d552b83f63b6f70ad5b9b22d84d4b26d74ffe6bacb612eb7c09",
+        "src/sim/search/GameAction.cpp": "b4a11c0a5e563d974772e1d200750226b847f385182dfc247b96c801242869ca"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/game/GameContext.h'\npatching file 'include/game/ShopPresentation.h'\npatching file 'src/game/GameContext.cpp'\npatching file 'src/sim/search/GameAction.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "c08ea39cab41a6ae67f99bfeff09e5e5ce6b23da391d25df6cf9a0aa40afde0b",
+        "include/game/GameContext.h": "13e18b7a6df45bb7d514b7a32bcb2efa2e1c9ad3a4dd37022c51524d96166a8f",
+        "include/game/ShopPresentation.h": "75eb69cffb942a7430847fcc311c4721f14989d0d8b2d8187e2ff6d4f82ab923",
+        "src/game/GameContext.cpp": "232f7ba00855e61edc4687699a4a13801ea531a9a6bfa1237a846292b2c70ac5",
+        "src/sim/search/GameAction.cpp": "a56ee0a1e673dc7f9606ee4b9e006db0d6d5709d42eb08526638f42d717ea3d5"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/src/game/Shop.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/src/sim/search/GameAction.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/optimized/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "bindings/slaythespire.cpp": "b380217ce7c74355ccf5859ddee4d8139459ce22f927304a1a2942e5ad0d2056",
+        "include/game/GameContext.h": "f21f8b92022d95dd1c0798fe6e42557752a236a49bc701c83051a841cb0a1f4d",
+        "include/game/ShopPresentation.h": "d7dbfb3954ac2db26318f3e460cda19ff92ee466bf2b29bab9823d4f606ae858",
+        "src/game/GameContext.cpp": "f60584f0b1e42d552b83f63b6f70ad5b9b22d84d4b26d74ffe6bacb612eb7c09",
+        "src/sim/search/GameAction.cpp": "b4a11c0a5e563d974772e1d200750226b847f385182dfc247b96c801242869ca"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/game/GameContext.h'\npatching file 'include/game/ShopPresentation.h'\npatching file 'src/game/GameContext.cpp'\npatching file 'src/sim/search/GameAction.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "fddbb5f33e4e4792bd34944cba541e790f6ed4f425d60f7fb1e93bc2ae01048a",
+        "include/game/GameContext.h": "13e18b7a6df45bb7d514b7a32bcb2efa2e1c9ad3a4dd37022c51524d96166a8f",
+        "include/game/ShopPresentation.h": "75eb69cffb942a7430847fcc311c4721f14989d0d8b2d8187e2ff6d4f82ab923",
+        "src/game/GameContext.cpp": "232f7ba00855e61edc4687699a4a13801ea531a9a6bfa1237a846292b2c70ac5",
+        "src/sim/search/GameAction.cpp": "a56ee0a1e673dc7f9606ee4b9e006db0d6d5709d42eb08526638f42d717ea3d5"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/src/game/Shop.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/src/sim/search/GameAction.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-reward-click-domain/portable/e121/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4
+    }
+  ]
+}

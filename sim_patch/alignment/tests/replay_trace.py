@@ -7,13 +7,14 @@ from compare_cards import *
 from winner_ui import event_action_order
 from replay_run import outside_differences
 from compare_powers import extras
+from trace_selection import recorded_game_action
 
 def write_progress(path,value):
  if os.environ.get('ALIGNMENT_QUIET_PROGRESS')!='1':path.write_text(json.dumps(value)+'\n')
 
 class TraceReplay:
  def __init__(self,p,trace,d):
-  self.p=p;self.trace=trace;self.d=d;self.rows=[];self.view={};self.event_steps={};self.shop_slots={}
+  self.p=p;self.trace=trace;self.d=d;self.rows=[];self.view={};self.event_steps={};self.shop_slots={};self.action_translations=[]
   self.gc=sts.GameContext(sts.CharacterClass.IRONCLAD,trace['seed'],20)
  def call(self,command):
   self.view=self.p.call('command',command=command)
@@ -105,6 +106,10 @@ class TraceReplay:
    self.call('choose '+str(choice));self.event_steps[key]=step+1
   else:raise ValueError('unmapped original '+screen)
   a.execute(self.gc)
+ def recorded_outside(self,raw,row):
+  action,note=recorded_game_action(sts,self.gc,raw,row)
+  if note is not None:self.action_translations.append(note)
+  self.outside(action)
  def combat(self,row):
   self.align();b=sts.BattleContext();b.init(self.gc);self.check(b)
   for raw in row['actions']:
@@ -135,7 +140,7 @@ class TraceReplay:
    if (self.gc.floor_num,self.gc.cur_hp,int(self.gc.screen_state))!=(row['floor'],row['hp'],row['screen']):raise ValueError('recorded trace state mismatch at row '+str(n))
    if row['screen']==9:self.combat(row)
    else:
-    for raw in row['actions']:self.outside(sts.GameAction(raw&0xffffffff))
+    for raw in row['actions']:self.recorded_outside(raw,row)
    write_progress(self.d/'progress.json',{'row':n,'floor':self.gc.floor_num,'hp':self.gc.cur_hp,'commands':len(self.rows)})
   for _ in range(10):
    if self.view['game']['screen_type']=='GAME_OVER':break
@@ -164,6 +169,6 @@ if __name__=='__main__':
   result=runner.run()
   if p.position!=len(p.rows):raise ValueError('unconsumed original commands')
  except Exception as e:result={'status':'mismatch_or_adapter_error','error':str(e),'record':p.position}
- result.update(evidence_identity(source));result.update(resynchronized=False,controlled_fixture=False,commands=len(runner.rows),steps=runner.rows)
+ result.update(evidence_identity(source));result.update(resynchronized=False,controlled_fixture=False,commands=len(runner.rows),steps=runner.rows,action_translations=runner.action_translations)
  destination=Path(os.environ.get('ALIGNMENT_REPORT_DIR',str(ROOT/'evidence')))/'natural-trace-comparison.json';destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(json.dumps(result,indent=2)+'\n')
  print(json.dumps({k:v for k,v in result.items() if k!='steps'}));sys.exit(0 if result['status']=='natural_trace_replayed' else 1)

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "void_cube_offering_zero_energy",
+    "fixture": {
+      "hand": [
+        "Offering"
+      ],
+      "draw": [
+        "Bash",
+        "Strike_R",
+        "Defend_R",
+        "Strike_R",
+        "Void"
+      ],
+      "relic": "Runic Cube",
+      "energy": 0
+    },
+    "commands": [
+      "play 1"
+    ]
+  },
+  {
+    "name": "void_cube_bloodletting_zero_energy",
+    "fixture": {
+      "hand": [
+        "Bloodletting"
+      ],
+      "draw": [
+        "Bash",
+        "Strike_R",
+        "Defend_R",
+        "Strike_R",
+        "Void"
+      ],
+      "relic": "Runic Cube",
+      "energy": 0
+    },
+    "commands": [
+      "play 1"
+    ]
+  },
+  {
+    "name": "void_offering_without_cube_control",
+    "fixture": {
+      "hand": [
+        "Offering"
+      ],
+      "draw": [
+        "Bash",
+        "Strike_R",
+        "Defend_R",
+        "Strike_R",
+        "Void"
+      ],
+      "energy": 0
+    },
+    "commands": [
+      "play 1"
+    ]
+  },
+  {
+    "name": "void_cube_offering_one_energy_control",
+    "fixture": {
+      "hand": [
+        "Offering"
+      ],
+      "draw": [
+        "Bash",
+        "Strike_R",
+        "Defend_R",
+        "Strike_R",
+        "Void"
+      ],
+      "relic": "Runic Cube",
+      "energy": 1
+    },
+    "commands": [
+      "play 1"
+    ]
+  }
+]

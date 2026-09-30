@@ -1,0 +1,156 @@
+[
+  {
+    "name": "save:MonsterRoom",
+    "kind": "save",
+    "room_type": "MonsterRoom",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "relics": [
+      "Ancient Tea Set"
+    ],
+    "counters": [
+      "Ancient Tea Set"
+    ]
+  },
+  {
+    "name": "save:MonsterRoomElite",
+    "kind": "save",
+    "room_type": "MonsterRoomElite",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "relics": [
+      "Ancient Tea Set"
+    ],
+    "counters": [
+      "Ancient Tea Set"
+    ]
+  },
+  {
+    "name": "save:MonsterRoomBoss",
+    "kind": "save",
+    "room_type": "MonsterRoomBoss",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "relics": [
+      "Ancient Tea Set"
+    ],
+    "counters": [
+      "Ancient Tea Set"
+    ]
+  },
+  {
+    "name": "save:act3-boss:1",
+    "kind": "save",
+    "room_type": "MonsterRoomBoss",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "saved_overrides": {
+      "act_num": 3,
+      "level_name": "TheBeyond",
+      "floor_num": 50,
+      "room_x": -1,
+      "room_y": 15,
+      "current_room": "com.megacrit.cardcrawl.rooms.MonsterRoomBoss",
+      "boss": "Donu and Deca",
+      "boss_list": [
+        "Donu and Deca",
+        "Time Eater",
+        "Awakened One"
+      ]
+    }
+  },
+  {
+    "name": "save:act3-boss:2",
+    "kind": "save",
+    "room_type": "MonsterRoomBoss",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "saved_overrides": {
+      "act_num": 3,
+      "level_name": "TheBeyond",
+      "floor_num": 51,
+      "room_x": -1,
+      "room_y": 15,
+      "current_room": "com.megacrit.cardcrawl.rooms.MonsterRoomBoss",
+      "boss": "Time Eater",
+      "boss_list": [
+        "Time Eater",
+        "Awakened One"
+      ]
+    }
+  },
+  {
+    "name": "save:act4:MonsterRoomElite",
+    "kind": "save",
+    "room_type": "MonsterRoomElite",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "saved_overrides": {
+      "act_num": 4,
+      "level_name": "TheEnding",
+      "floor_num": 55,
+      "room_x": 3,
+      "room_y": 2,
+      "current_room": "com.megacrit.cardcrawl.rooms.MonsterRoomElite",
+      "boss": "The Heart",
+      "boss_list": [
+        "The Heart"
+      ],
+      "monster_list": [],
+      "elite_monster_list": [
+        "Shield and Spear"
+      ]
+    }
+  },
+  {
+    "name": "save:act4:MonsterRoomBoss",
+    "kind": "save",
+    "room_type": "MonsterRoomBoss",
+    "rng": [
+      "cardRng",
+      "potionRng",
+      "relicRng",
+      "merchantRng"
+    ],
+    "saved_overrides": {
+      "act_num": 4,
+      "level_name": "TheEnding",
+      "floor_num": 56,
+      "room_x": -1,
+      "room_y": 15,
+      "current_room": "com.megacrit.cardcrawl.rooms.MonsterRoomBoss",
+      "boss": "The Heart",
+      "boss_list": [
+        "The Heart"
+      ],
+      "monster_list": [],
+      "elite_monster_list": [
+        "Shield and Spear"
+      ]
+    }
+  }
+]

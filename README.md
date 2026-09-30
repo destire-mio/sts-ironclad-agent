@@ -7,12 +7,90 @@ using the [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed) simulat
 It retains the upstream license and commit history, the Ironclad A20 research records on this
 branch, and the [original-game/simulator consistency checker](sim_patch/parity/README.md).
 
-**Consistency status (2026-09-27): `INCOMPLETE`.** The [third investigation report](sim_patch/parity/RESULTS-20260927-ROUND3.md)
-records two additional rule differences and their controls. Captured original-game fixtures
+**Consistency status (2026-09-28): `INCOMPLETE`.** The [AoE/Urn repair](sim_patch/parity/REPAIR-20260928-AOE-URN.md)
+fixes the damage calculation and healing-order differences from the [fifth investigation](sim_patch/parity/RESULTS-20260928-ROUND5.md).
+Twelve original-game scenarios match the compared fields, and 293 regression entries pass.
+The [exhaust/Red Skull repair](sim_patch/parity/REPAIR-20260928-EXHAUST-SKULL.md) fixes the two
+sixth-round differences and matches the compared fields in 12 original-game scenarios.
+The [draw/Red Skull state repair](sim_patch/parity/REPAIR-20260928-DRAW-SKULL.md) fixes the
+seventh-round findings, with 14 original-game scenarios matching the compared fields.
+The [Rupture/Brutality repair](sim_patch/parity/REPAIR-20260928-RUPTURE-BRUTALITY.md) fixes
+the eighth-round differences: eight original-game scenarios match the compared fields,
+and 320 regression entries pass. The [ninth investigation](sim_patch/parity/RESULTS-20260928-ROUND9.md)
+finds a Limit Break/Artifact difference at negative Strength. Eight scenes provide
+two counterexamples, two targeted controls, and four matching Rampage/copy probes.
+The [Limit Break and backlog repair](sim_patch/parity/REPAIR-20260928-LIMIT-BACKLOG.md)
+addresses five defect classes from rounds one through three and nine: 16 recorded scenes
+match the compared fields, and 334 regression entries pass. Follow the
+[continuous audit queue](sim_patch/parity/CONTINUOUS-AUDIT.md) for remaining work.
+The [Colosseum Enrage repair](sim_patch/parity/REPAIR-20260928-COLOSSEUM-ENRAGE.md)
+fixes the skill callback skipping Gremlin Nob in the second monster slot. Eight original
+scenes match, 343 regression entries pass, and cumulative repair contracts cover 78 scenes.
+The [Ethereal shuffle repair](sim_patch/parity/REPAIR-20260928-ETHEREAL-PROFILES.md)
+supports the installed BaseMod and shared Java RNG combat profiles and fixes shifted-card
+identity lookup. Eight scenes match the compared fields; 355 regression entries pass,
+with cumulative repair contracts covering 86 original scenes. Vanilla whole-run RNG
+coverage and exhaustive parity remain `INCOMPLETE`.
+The [Ethereal callback repair](sim_patch/parity/REPAIR-20260928-ETHEREAL-OVERRIDES.md)
+adds Entrench/Ghostly Armor callbacks and clears one-use free state after specific
+exhaustion. Eleven original scenes match; 366 regression entries pass and cumulative
+repair contracts cover 97 original scenes.
+The [Colosseum RNG repair](sim_patch/parity/REPAIR-20260928-COLOSSEUM-RNG.md)
+preserves room RNG across both fights and accounts for deck preparation and Enchiridion
+when returning to the event. Six original scenes match the compared fields; 374 regression
+entries pass and cumulative repair contracts cover 103 original scenes.
+
+The [bottled relic choice repair](sim_patch/parity/REPAIR-20260928-BOTTLE-CHOICE.md)
+aligns candidate order and selected card identity. Ten original scenes cover seven
+counterexamples and three controls; raw relic counter discrepancies remain visible.
+383 regression entries pass, with 113 original scenes in cumulative repair contracts.
+
+The [innate opening repair](sim_patch/parity/REPAIR-20260928-INNATE-OPENING.md)
+places excess innate/bottled draws after Enchiridion's pre-battle card creation.
+Six original scenes cover three counterexamples and three controls; 391 regression
+entries pass and cumulative contracts cover 119 scenes. Raw counter differences remain.
+
+The [small-deck Astrolabe repair](sim_patch/parity/REPAIR-20260928-ASTROLABE-SMALL.md)
+preserves transformation order across colorless cards, curses and class cards.
+Eight original cases cover four counterexamples and four controls; 400 regression
+entries pass, with 127 scenes in cumulative contracts. The 914 historical outside
+observations are unchanged, including their remaining gaps and raw discrepancies.
+Captured original-game fixtures
 are versioned under `sim_patch/parity/tests/fixtures/`; generated `runs/` artifacts, native
 binaries, and the licensed game installation are excluded. Live capture requires the local
 original-game test runtime described in the checker README. Local evidence paths in historical
 reports are provenance references, not files bundled with this repository.
+
+The [Preserved Insect HP-cap repair](sim_patch/parity/REPAIR-20260928-PRESERVED-INSECT.md)
+prevents the relic from raising enemies above the 1 HP left by Neow. Eight original
+cases cover three counterexamples and five controls; 47 event/save entry cases
+pair initial inputs and active combat observations. All 411 regression entries
+pass, with 182 scenes in cumulative contracts.
+
+The [relic counter lifecycle repair](sim_patch/parity/REPAIR-20260928-RELIC-COUNTERS.md)
+handles restored -1 Flower/Burner counters and Neow's spent sentinel after combat.
+Thirteen original cases eliminate seven counterexamples; 424 regression entries
+pass, with 195 scenes in cumulative contracts. Active Tea/Neow representation gaps
+remain visible.
+
+The [default relic counter repair](sim_patch/parity/REPAIR-20260928-RELIC-DEFAULTS.md)
+uses -1 for default acquisition/replacement counters and preserves nine explicit-zero
+initializers. Fifteen original cases eliminate nine counterexamples; 435 regression
+entries pass, with 210 scenes in cumulative contracts. Legacy outside cases with
+differences fall from 317 to 51 of 914; active counter differences and coverage gaps
+remain visible. NN counter inputs change, with no old-model win-rate claim. Natural
+event victories and reward collection are covered by the following audit.
+
+The [event reward audit](sim_patch/parity/RESULTS-20260928-EVENT-REWARDS.md) adds
+26 original captures through victory, reward generation, collection and leaving.
+Compared behavior fields match; raw active counters and vanished Slime Boss metadata
+remain visible. Two new contract tests include ten rejected corruptions, and the
+affected event-entry contract passes. Cumulative contracts cover 236 scenes; relic
+reward selection screens and return to unclaimed rewards remain on the audit queue.
+
+The [Pain/Void repair](sim_patch/parity/REPAIR-20260927-PAIN-VOID.md) fixes the two fourth-round
+rule differences and matches all compared fields in the same eight original-game scenarios.
+Other known differences and coverage gaps remain open.
 
 ## Historical project overview and experiment log
 

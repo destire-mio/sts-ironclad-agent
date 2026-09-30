@@ -1,0 +1,377 @@
+[
+  {
+    "name": "reused-status:burn-kit-spoon",
+    "fixture": {
+      "hand": [
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Medical Kit",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status:regret-candle-spoon",
+    "fixture": {
+      "hand": [
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Blue Candle",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status:doubt-candle-spoon",
+    "fixture": {
+      "hand": [
+        "Doubt",
+        "Doubt",
+        "Doubt",
+        "Doubt",
+        "Doubt"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Blue Candle",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status:burn-kit-no-spoon-control",
+    "fixture": {
+      "hand": [
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Medical Kit"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status:regret-candle-no-spoon-control",
+    "fixture": {
+      "hand": [
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Blue Candle"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status:unplayed-burn-spoon-control",
+    "fixture": {
+      "hand": [
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:burn-kit-feel-no-pain",
+    "fixture": {
+      "hand": [
+        "Feel No Pain",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Medical Kit",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:regret-candle-feel-no-pain",
+    "fixture": {
+      "hand": [
+        "Feel No Pain",
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret",
+        "Regret"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Blue Candle",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:doubt-candle-feel-no-pain",
+    "fixture": {
+      "hand": [
+        "Feel No Pain",
+        "Doubt",
+        "Doubt",
+        "Doubt",
+        "Doubt",
+        "Doubt"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Blue Candle",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:unplayed-same-id-control",
+    "fixture": {
+      "hand": [
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Medical Kit",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:slimed-no-end-trigger-control",
+    "fixture": {
+      "hand": [
+        "Slimed",
+        "Slimed",
+        "Slimed",
+        "Slimed",
+        "Slimed"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 5,
+      "hp": 80,
+      "relics": [
+        "Medical Kit",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "reused-status-continuation:kit-unplayed-control",
+    "fixture": {
+      "hand": [
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn",
+        "Burn"
+      ],
+      "draw": [],
+      "discard": [],
+      "exhaust": [],
+      "energy": 3,
+      "hp": 80,
+      "relics": [
+        "Medical Kit",
+        "Strange Spoon"
+      ],
+      "initialize_relics": true
+    },
+    "commands": [
+      "end",
+      "end",
+      "end"
+    ]
+  }
+]

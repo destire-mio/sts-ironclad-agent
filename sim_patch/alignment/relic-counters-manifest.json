@@ -1,0 +1,88 @@
+{
+  "patch": "sim_patch/relic_counters.patch",
+  "patch_sha256": "6dcb9062f744af6e18185ff7d8311578aaa4f523a922c7048a0a687d21f11966",
+  "apply_after": "sim_patch/preserved_insect.patch",
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "cad73071caf355baa7e999b1ad1b7969b9ba0ef765c89c08fda36e112a734917",
+      "after": "c9f8c94c45412c43fa60c72ecfe2ffc84a2832949d0a2b403d7bf78f0b80faf3"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "ec68049bfc2e86d7b33e26077986b40d070f5e716fca901b20311cc4e3a0711f",
+      "after": "d61976b54e44f5950e35482e71d28e3f31efcb3b5bb2cde27b2ee02410018469"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "cad73071caf355baa7e999b1ad1b7969b9ba0ef765c89c08fda36e112a734917",
+        "src/combat/Player.cpp": "ec68049bfc2e86d7b33e26077986b40d070f5e716fca901b20311cc4e3a0711f"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "c9f8c94c45412c43fa60c72ecfe2ffc84a2832949d0a2b403d7bf78f0b80faf3",
+        "src/combat/Player.cpp": "d61976b54e44f5950e35482e71d28e3f31efcb3b5bb2cde27b2ee02410018469"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/optimized/src/combat/Player.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Player.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "18dceb72f4d8b0493d44007767c6c26258dfff7e73c77aef36536bdc223376bd",
+        "src/combat/Player.cpp": "6ecd3d5cf918735f2e49876cef4e12e484600fc09c3fafba67127e8fcae64b09"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "a90ce2ce73bbbb3392390fa695540d2b257d6fe0b26d7cf4c2c9c8a19125f462",
+        "src/combat/Player.cpp": "4d340021f3648c990c59359b3ff8791ac63dc215443511d9292339b2fdafd911"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-counters/portable/e121/src/combat/Player.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\npatching file 'src/combat/Player.cpp'\n"
+    }
+  ],
+  "original_fixture": "sim_patch/parity/tests/fixtures/relic-counters-original.json.gz",
+  "original_fixture_sha256": "dd913bc17a64c41025772df01a6d862bc0ed3603327706eb3ec2141a39a54e52",
+  "scope": "three counter lifecycle repairs, 13 independent modded-original scenes; active raw counter ownership gaps retained"
+}

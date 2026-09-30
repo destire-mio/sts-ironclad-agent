@@ -1,0 +1,22 @@
+[
+  {
+    "name": "limit_break_negative_strength_with_artifact",
+    "fixture": {"hand": ["Panacea", "Limit Break"], "player_strength": -3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "upgraded_limit_break_negative_strength_with_artifact",
+    "fixture": {"hand": ["Panacea", {"card": "Limit Break", "upgrades": 1}], "player_strength": -3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "limit_break_negative_strength_without_artifact_control",
+    "fixture": {"hand": ["Limit Break"], "player_strength": -3},
+    "commands": ["play 1"]
+  },
+  {
+    "name": "limit_break_positive_strength_with_artifact_control",
+    "fixture": {"hand": ["Panacea", "Limit Break"], "player_strength": 3},
+    "commands": ["play 1", "play 1"]
+  }
+]

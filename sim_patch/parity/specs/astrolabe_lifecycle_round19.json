@@ -1,0 +1,75 @@
+[
+  {
+    "kind": "relic",
+    "id": "Astrolabe",
+    "hp": 79,
+    "max_hp": 80,
+    "name": "astrolabe_small_darkstone_fish",
+    "deck": [
+      "Bite",
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ],
+    "relics": [
+      "Darkstone Periapt",
+      "CeramicFish",
+      "Bloody Idol"
+    ]
+  },
+  {
+    "kind": "relic",
+    "id": "Astrolabe",
+    "hp": 79,
+    "max_hp": 80,
+    "name": "astrolabe_small_double_parasite_control",
+    "deck": [
+      "Parasite",
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ],
+    "relics": [
+      "Darkstone Periapt"
+    ]
+  },
+  {
+    "kind": "relic",
+    "id": "Astrolabe",
+    "hp": 79,
+    "max_hp": 80,
+    "name": "astrolabe_small_omamori_control",
+    "deck": [
+      "Parasite",
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ],
+    "relics": [
+      "Darkstone Periapt",
+      {
+        "id": "Omamori",
+        "counter": 1
+      }
+    ]
+  },
+  {
+    "kind": "relic",
+    "id": "Astrolabe",
+    "hp": 79,
+    "max_hp": 80,
+    "name": "astrolabe_small_bottled_mixed",
+    "deck": [
+      {
+        "id": "Bash",
+        "bottled": true
+      },
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ],
+    "relics": [
+      "Bottled Flame"
+    ]
+  }
+]

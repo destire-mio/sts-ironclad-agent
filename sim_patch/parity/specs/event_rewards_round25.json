@@ -1,0 +1,1864 @@
+[
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Dead Adventurer:rewards:[]",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:[]",
+    "legacy_spec_sha256": "128a0b066d9927e54630490d47423bd62e323c0e7204cd5d798c3c7b3c595523",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol']",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "71c709d489cc2646db073fc67d72e7a84b7ddccad2759abec1dad02f98bb4502",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol', 'Sozu']",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "b8d737e56db774ccffcbc9bc9e9f45cb9cfac612a34d60efbd6e6df8fc657ef5",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Masked Bandits",
+    "choices": [
+      1
+    ],
+    "name": "natural-reward:original-event-rewards-03:Masked Bandits:rewards:[]",
+    "seed": 123,
+    "floor": 6,
+    "act": 2,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      1
+    ],
+    "legacy_name": "original-event-rewards-03:Masked Bandits:rewards:[]",
+    "legacy_spec_sha256": "d30555e7accccc938029da9b9e2dc6deeed925e3a0a6882f49f3370ffbd9a4d0",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Masked Bandits",
+    "choices": [
+      1
+    ],
+    "name": "natural-reward:original-event-rewards-03:Masked Bandits:rewards:['Golden Idol']",
+    "seed": 123,
+    "floor": 6,
+    "act": 2,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      1
+    ],
+    "legacy_name": "original-event-rewards-03:Masked Bandits:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "52b7cb9185b63cf16017fae40327c5ac8d97bc60bfcbb5fe9cb3a296b867beb1",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Masked Bandits",
+    "choices": [
+      1
+    ],
+    "name": "natural-reward:original-event-rewards-03:Masked Bandits:rewards:['Golden Idol', 'Sozu']",
+    "seed": 123,
+    "floor": 6,
+    "act": 2,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      1
+    ],
+    "legacy_name": "original-event-rewards-03:Masked Bandits:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "fe969d3c1d546fe3f40d72f97ee656cf9432ef9927e7f7e145e0b8f3570cb66c",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mysterious Sphere",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mysterious Sphere:rewards:[]",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mysterious Sphere:rewards:[]",
+    "legacy_spec_sha256": "ec42ec5a6b0539919d747e5258d518cf2b160693d6e6ae85d107129a95f50efc",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mysterious Sphere",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mysterious Sphere:rewards:['Golden Idol']",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mysterious Sphere:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "83867918633980ae89fc42f60420bb940f0e84b1ba0aab9a7f22e06d979be661",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mysterious Sphere",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mysterious Sphere:rewards:['Golden Idol', 'Sozu']",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mysterious Sphere:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "81395c125b4478bb2e971b93fcbd357e4a3a19f03468d82d297d67d3b6410eb8",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "MindBloom",
+    "choices": [
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:MindBloom:rewards:[]",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:MindBloom:rewards:[]",
+    "legacy_spec_sha256": "a0c61ede09b27e872916650b2c0e517da3e0dc1cba1997340eb9bd4775e211d2",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "MindBloom",
+    "choices": [
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:MindBloom:rewards:['Golden Idol']",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:MindBloom:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "d82e700febf1d7148067e3da9491e94ec2deaf58e20ba2c3e2d3c03ae1380632",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "MindBloom",
+    "choices": [
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:MindBloom:rewards:['Golden Idol', 'Sozu']",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:MindBloom:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "84eda3040d03c614e1aeaae6a3b647610641b9c6cfbb44c132def05fc400e8ec",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mushrooms:rewards:[]",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:[]",
+    "legacy_spec_sha256": "45e1d0d2f92637a2584ab41d4f75e1ecfc75ce6f1c90f41d9097f02eca2d8358",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mushrooms:rewards:['Golden Idol']",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "212ec160b9db28d749b2b2b84bcac2ec458f4002fd06241058a7d62ca48daa4a",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mushrooms:rewards:['Golden Idol', 'Sozu']",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "64961b39284f18bdef05d87e6b8f946257d8ef4cfbba097c8533cfb100da9ddc",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:original-event-rewards-03:Mushrooms:duplicate",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Odd Mushroom",
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:duplicate",
+    "legacy_spec_sha256": "2527b859286757f763fcfe2b1dca9f9786425a649e2c91cec59e26c8366e2faf",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:control:shuriken-0",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "Shuriken"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:[]",
+    "legacy_spec_sha256": "128a0b066d9927e54630490d47423bd62e323c0e7204cd5d798c3c7b3c595523",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:control:shuriken-1",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "NeowsBlessing",
+      "Shuriken"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol']",
+    "legacy_spec_sha256": "71c709d489cc2646db073fc67d72e7a84b7ddccad2759abec1dad02f98bb4502",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:control:shuriken-2",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Golden Idol",
+      "Sozu",
+      "NeowsBlessing",
+      "Shuriken"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:['Golden Idol', 'Sozu']",
+    "legacy_spec_sha256": "b8d737e56db774ccffcbc9bc9e9f45cb9cfac612a34d60efbd6e6df8fc657ef5",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:control:potion",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "White Beast Statue"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:[]",
+    "legacy_spec_sha256": "45e1d0d2f92637a2584ab41d4f75e1ecfc75ce6f1c90f41d9097f02eca2d8358",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:control:potion-sozu",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "White Beast Statue",
+      "Sozu"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:[]",
+    "legacy_spec_sha256": "45e1d0d2f92637a2584ab41d4f75e1ecfc75ce6f1c90f41d9097f02eca2d8358",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Mushrooms",
+    "choices": [
+      0,
+      0
+    ],
+    "name": "natural-reward:control:potion-bloody-idol",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing",
+      "White Beast Statue",
+      "Bloody Idol"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Mushrooms:rewards:[]",
+    "legacy_spec_sha256": "45e1d0d2f92637a2584ab41d4f75e1ecfc75ce6f1c90f41d9097f02eca2d8358",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect"
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "natural-reward:control:no-neow-Dead Adventurer",
+    "seed": 123,
+    "floor": 6,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Shuriken"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:Dead Adventurer:rewards:[]",
+    "legacy_spec_sha256": "128a0b066d9927e54630490d47423bd62e323c0e7204cd5d798c3c7b3c595523",
+    "deck": [
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "combat_card": "Searing Blow"
+  },
+  {
+    "id": "Masked Bandits",
+    "choices": [
+      1
+    ],
+    "name": "natural-reward:control:no-neow-Masked Bandits",
+    "seed": 123,
+    "floor": 6,
+    "act": 2,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Shuriken"
+    ],
+    "sim_choices": [
+      1
+    ],
+    "legacy_name": "original-event-rewards-03:Masked Bandits:rewards:[]",
+    "legacy_spec_sha256": "d30555e7accccc938029da9b9e2dc6deeed925e3a0a6882f49f3370ffbd9a4d0",
+    "deck": [
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "combat_card": "Searing Blow"
+  },
+  {
+    "id": "MindBloom",
+    "choices": [
+      0
+    ],
+    "name": "natural-reward:control:no-neow-MindBloom",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "Shuriken"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:MindBloom:rewards:[]",
+    "legacy_spec_sha256": "a0c61ede09b27e872916650b2c0e517da3e0dc1cba1997340eb9bd4775e211d2",
+    "deck": [
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "Searing Blow",
+        "upgrades": 10
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "collect",
+    "combat_card": "Searing Blow"
+  },
+  {
+    "id": "MindBloom",
+    "choices": [
+      0
+    ],
+    "name": "natural-reward:control:skip-all",
+    "seed": 123,
+    "floor": 6,
+    "act": 3,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "NeowsBlessing"
+    ],
+    "sim_choices": [
+      0
+    ],
+    "legacy_name": "original-event-rewards-03:MindBloom:rewards:[]",
+    "legacy_spec_sha256": "a0c61ede09b27e872916650b2c0e517da3e0dc1cba1997340eb9bd4775e211d2",
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "reward_policy": "skip"
+  }
+]

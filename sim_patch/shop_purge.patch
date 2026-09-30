@@ -1,0 +1,38 @@
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -3921,12 +3921,29 @@
+ 
+         case CardSelectScreenType::REMOVE: {
+             if (info.selectCancelReturn == ScreenState::SHOP_ROOM) {
+-                loseGold(info.shop.removeCost, true);
+-                info.shop.removeCost = -1;
+-                ++shopRemoveCount;
+-            }
+-            deck.removeSelected(*this, info.haveSelectedCards);
+-            regainControl();
++                // The original ShopScreen consumes the selection on its next
++                // update, after any unclaimed rewards have been closed.
++                const auto selected = info.haveSelectedCards;
++                const auto finishPurge = [selected](GameContext &next) {
++                    next.loseGold(next.info.shop.removeCost, true);
++                    next.info.shop.removeCost = -1;
++                    ++next.shopRemoveCount;
++                    next.deck.removeSelected(next, selected);
++                };
++                regainControl();
++                if (screenState == ScreenState::REWARDS) {
++                    const auto returnToShop = regainControlAction;
++                    regainControlAction = [finishPurge, returnToShop](GameContext &next) {
++                        finishPurge(next);
++                        returnToShop(next);
++                    };
++                } else {
++                    finishPurge(*this);
++                }
++            } else {
++                deck.removeSelected(*this, info.haveSelectedCards);
++                regainControl();
++            }
+             break;
+         }
+ 

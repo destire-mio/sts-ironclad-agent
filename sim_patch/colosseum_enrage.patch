@@ -1,0 +1,20 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -1770,9 +1770,14 @@
+     // ********* Enemy Powers onUseCard *********
+     // todo Choke Power
+ 
+-    auto &m = monsters.arr[0];
+-    if (m.hasStatus<MS::ENRAGE>()) {
+-        m.buff<MS::STRENGTH>(m.getStatus<MS::ENRAGE>());
++    for (int i = 0; i < monsters.monsterCount; ++i) {
++        const auto &m = monsters.arr[i];
++        if (!m.hasStatus<MS::ENRAGE>()) continue;
++        const int amount = m.getStatus<MS::ENRAGE>();
++        addToTop({[i, amount](BattleContext &state) {
++            auto &target = state.monsters.arr[i];
++            if (target.isTargetable()) target.buff<MS::STRENGTH>(amount);
++        }});
+     }
+ }
+ 
