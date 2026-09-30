@@ -57,6 +57,7 @@ do not establish the original-game win rate. A live bridge to the real game is k
 |---|---|
 | `agent/` | bot code: teacher drivers (`p300_play_v21.py`, `p300_play_v24.py`), shared helpers, distillation and Heart research tools |
 | `student/` | the distilled student network (17 MB weights, code, interface) |
+| `experiments/combat_value/` | combat value-network experiment (scripts only; not part of the teacher) |
 | `combat_engine/` | combat engine source snapshot and the post-battle HP scoring report |
 | `sim_patch/` | simulator patches, native alignment tests, original-game parity checker |
 | `steam/` | real-game state export and live search |
