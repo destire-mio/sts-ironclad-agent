@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 import communicationmod.CommandExecutor;
 import communicationmod.GameStateConverter;
 
@@ -117,6 +118,24 @@ public class CombatStatePatch {
         String[] fields = {"dmgThreshold", "isOpen", "thornsCount", "usedMegaDebuff", "stolenGold", "orbActiveCount", "numTurns", "currentCharge", "debuffTurnCount", "isOut", "biteDamage", "nipDmg", "stabCount", "idleCount", "asleep", "usedEntangle", "forgeTimes", "thresholdReached", "usedHaste", "usedStasis", "scytheCooldown"};
         for (int i = 0; i < rows.size(); i++) {
             AbstractMonster monster = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            // CommunicationMod hides these fields with Runic Dome. The live
+            // search contract includes internal state, regardless of UI intent.
+            try {
+                Field field = AbstractMonster.class.getDeclaredField("move");
+                field.setAccessible(true);
+                EnemyMoveInfo move = (EnemyMoveInfo) field.get(monster);
+                Map<String, Object> row = rows.get(i);
+                if (move != null) {
+                    row.put("move_id", move.nextMove);
+                    row.put("move_base_damage", move.baseDamage);
+                    row.put("move_adjusted_damage", move.baseDamage > 0 ? monster.getIntentDmg() : move.baseDamage);
+                    row.put("move_hits", move.isMultiDamage ? move.multiplier : 1);
+                }
+                row.put("move_history", new java.util.ArrayList<Byte>(monster.moveHistory));
+                int count = monster.moveHistory.size();
+                row.put("last_move_id", count >= 2 ? monster.moveHistory.get(count - 2) : -1);
+                row.put("second_last_move_id", count >= 3 ? monster.moveHistory.get(count - 3) : -1);
+            } catch (ReflectiveOperationException error) { throw new IllegalStateException(error); }
             Map<String, Object> internal = new HashMap<>();
             for (String name : fields) {
                 try { Field field = monster.getClass().getDeclaredField(name); field.setAccessible(true); internal.put(name, field.get(monster)); }

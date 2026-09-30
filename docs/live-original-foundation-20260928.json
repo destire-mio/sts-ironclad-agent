@@ -1,0 +1,1123 @@
+{
+  "scope": "基础接入和三局自然开局通路；不是20局统计或策略胜率评测",
+  "arm": "sims32+boss12+rest+reuse+svsel+svcard",
+  "workers": 1,
+  "runs": [
+    {
+      "seed": 5100000000,
+      "status": "loss",
+      "completed": 1,
+      "floor": 8,
+      "steps": 143,
+      "divergences": 3,
+      "SL": 0,
+      "resynchronizations": 1,
+      "seconds": 67.21146279200184,
+      "exit_checks": [
+        {
+          "step": 20,
+          "floor": 1,
+          "passed": true
+        },
+        {
+          "step": 47,
+          "floor": 3,
+          "passed": true
+        },
+        {
+          "step": 64,
+          "floor": 4,
+          "passed": true
+        },
+        {
+          "step": 85,
+          "floor": 5,
+          "passed": true
+        },
+        {
+          "step": 119,
+          "floor": 6,
+          "passed": true
+        },
+        {
+          "step": 142,
+          "floor": 8,
+          "passed": true
+        }
+      ],
+      "reward_checks": [
+        {
+          "step": 20,
+          "passed": true
+        },
+        {
+          "step": 21,
+          "passed": true
+        },
+        {
+          "step": 23,
+          "passed": true
+        },
+        {
+          "step": 47,
+          "passed": true
+        },
+        {
+          "step": 48,
+          "passed": true
+        },
+        {
+          "step": 50,
+          "passed": true
+        },
+        {
+          "step": 64,
+          "passed": true
+        },
+        {
+          "step": 65,
+          "passed": true
+        },
+        {
+          "step": 66,
+          "passed": true
+        },
+        {
+          "step": 68,
+          "passed": true
+        },
+        {
+          "step": 85,
+          "passed": true
+        },
+        {
+          "step": 86,
+          "passed": true
+        },
+        {
+          "step": 87,
+          "passed": true
+        },
+        {
+          "step": 89,
+          "passed": true
+        },
+        {
+          "step": 119,
+          "passed": true
+        },
+        {
+          "step": 120,
+          "passed": true
+        },
+        {
+          "step": 121,
+          "passed": true
+        },
+        {
+          "step": 122,
+          "passed": true
+        },
+        {
+          "step": 124,
+          "passed": true
+        }
+      ],
+      "difference_paths": {
+        "/run/rng/aiRng/counter": 2,
+        "/run/rng/monsterHpRng/seed1": 2,
+        "/run/rng/aiRng/seed1": 2,
+        "/run/rng/aiRng/seed0": 2,
+        "/run/rng/monsterHpRng/seed0": 2,
+        "/run/rng/monsterHpRng/counter": 2,
+        "/piles/exhaust_pile/2/id": 1,
+        "/piles/exhaust_pile/3/id": 1
+      },
+      "error": null,
+      "replay_prefix": null,
+      "result": "runs/live-foundation-smoke-20260928-v1/5100000000/result.json",
+      "sha256": "02b7ce29c57611bd8468e338e595af8e2e5e37770070f4f554bc813c928ad675",
+      "capture_code_sha256": "cbbe2759c58bb9e8ed208696d085e5c8c6f6fff2d2b9ec78485d45df71b507a8"
+    },
+    {
+      "seed": 5100000001,
+      "status": "loss",
+      "completed": 1,
+      "floor": 14,
+      "steps": 228,
+      "divergences": 6,
+      "SL": 0,
+      "resynchronizations": 0,
+      "seconds": 94.45882408300531,
+      "exit_checks": [
+        {
+          "step": 16,
+          "floor": 1,
+          "passed": true
+        },
+        {
+          "step": 31,
+          "floor": 2,
+          "passed": true
+        },
+        {
+          "step": 50,
+          "floor": 3,
+          "passed": true
+        },
+        {
+          "step": 72,
+          "floor": 5,
+          "passed": true
+        },
+        {
+          "step": 101,
+          "floor": 7,
+          "passed": true
+        },
+        {
+          "step": 128,
+          "floor": 10,
+          "passed": true
+        },
+        {
+          "step": 173,
+          "floor": 12,
+          "passed": true
+        },
+        {
+          "step": 217,
+          "floor": 13,
+          "passed": true
+        }
+      ],
+      "reward_checks": [
+        {
+          "step": 16,
+          "passed": true
+        },
+        {
+          "step": 17,
+          "passed": true
+        },
+        {
+          "step": 18,
+          "passed": true
+        },
+        {
+          "step": 20,
+          "passed": true
+        },
+        {
+          "step": 31,
+          "passed": true
+        },
+        {
+          "step": 32,
+          "passed": true
+        },
+        {
+          "step": 34,
+          "passed": true
+        },
+        {
+          "step": 50,
+          "passed": true
+        },
+        {
+          "step": 51,
+          "passed": true
+        },
+        {
+          "step": 53,
+          "passed": true
+        },
+        {
+          "step": 72,
+          "passed": true
+        },
+        {
+          "step": 73,
+          "passed": true
+        },
+        {
+          "step": 101,
+          "passed": true
+        },
+        {
+          "step": 102,
+          "passed": true
+        },
+        {
+          "step": 103,
+          "passed": true
+        },
+        {
+          "step": 105,
+          "passed": true
+        },
+        {
+          "step": 107,
+          "passed": true
+        },
+        {
+          "step": 113,
+          "passed": true
+        },
+        {
+          "step": 114,
+          "passed": true
+        },
+        {
+          "step": 128,
+          "passed": true
+        },
+        {
+          "step": 129,
+          "passed": true
+        },
+        {
+          "step": 130,
+          "passed": true
+        },
+        {
+          "step": 131,
+          "passed": true
+        },
+        {
+          "step": 133,
+          "passed": true
+        },
+        {
+          "step": 173,
+          "passed": true
+        },
+        {
+          "step": 174,
+          "passed": true
+        },
+        {
+          "step": 176,
+          "passed": true
+        },
+        {
+          "step": 217,
+          "passed": true
+        },
+        {
+          "step": 218,
+          "passed": true
+        },
+        {
+          "step": 219,
+          "passed": true
+        },
+        {
+          "step": 221,
+          "passed": true
+        }
+      ],
+      "difference_paths": {
+        "/run/rng/aiRng/counter": 5,
+        "/run/rng/monsterHpRng/seed1": 6,
+        "/run/rng/aiRng/seed1": 6,
+        "/run/rng/aiRng/seed0": 6,
+        "/run/rng/monsterHpRng/seed0": 6,
+        "/run/rng/monsterHpRng/counter": 5
+      },
+      "error": null,
+      "replay_prefix": null,
+      "result": "runs/live-foundation-smoke-20260928-v1/5100000001/result.json",
+      "sha256": "4948f3565364855bff7147af802a84209449b8033359f4c295f3ca7f2b2bc68c",
+      "capture_code_sha256": "cbbe2759c58bb9e8ed208696d085e5c8c6f6fff2d2b9ec78485d45df71b507a8"
+    },
+    {
+      "seed": 5100000002,
+      "status": "loss",
+      "completed": 1,
+      "floor": 56,
+      "steps": 1438,
+      "divergences": 44,
+      "SL": 0,
+      "resynchronizations": 10,
+      "seconds": 483.45391141699656,
+      "exit_checks": [
+        {
+          "step": 18,
+          "floor": 1,
+          "passed": true
+        },
+        {
+          "step": 48,
+          "floor": 5,
+          "passed": true
+        },
+        {
+          "step": 70,
+          "floor": 7,
+          "passed": true
+        },
+        {
+          "step": 84,
+          "floor": 8,
+          "passed": true
+        },
+        {
+          "step": 109,
+          "floor": 10,
+          "passed": true
+        },
+        {
+          "step": 151,
+          "floor": 11,
+          "passed": true
+        },
+        {
+          "step": 176,
+          "floor": 12,
+          "passed": true
+        },
+        {
+          "step": 191,
+          "floor": 13,
+          "passed": true
+        },
+        {
+          "step": 246,
+          "floor": 16,
+          "passed": true
+        },
+        {
+          "step": 279,
+          "floor": 18,
+          "passed": true
+        },
+        {
+          "step": 325,
+          "floor": 20,
+          "passed": true
+        },
+        {
+          "step": 364,
+          "floor": 22,
+          "passed": true
+        },
+        {
+          "step": 429,
+          "floor": 28,
+          "passed": true
+        },
+        {
+          "step": 480,
+          "floor": 30,
+          "passed": true
+        },
+        {
+          "step": 517,
+          "floor": 31,
+          "passed": true
+        },
+        {
+          "step": 619,
+          "floor": 33,
+          "passed": false
+        },
+        {
+          "step": 647,
+          "floor": 35,
+          "passed": true
+        },
+        {
+          "step": 681,
+          "floor": 36,
+          "passed": true
+        },
+        {
+          "step": 754,
+          "floor": 38,
+          "passed": true
+        },
+        {
+          "step": 821,
+          "floor": 41,
+          "passed": true
+        },
+        {
+          "step": 878,
+          "floor": 46,
+          "passed": true
+        },
+        {
+          "step": 908,
+          "floor": 47,
+          "passed": true
+        },
+        {
+          "step": 957,
+          "floor": 48,
+          "passed": true
+        },
+        {
+          "step": 1241,
+          "floor": 50,
+          "passed": false
+        },
+        {
+          "step": 1322,
+          "floor": 51,
+          "passed": false
+        },
+        {
+          "step": 1380,
+          "floor": 55,
+          "passed": true
+        },
+        {
+          "step": 1437,
+          "floor": 56,
+          "passed": true
+        }
+      ],
+      "reward_checks": [
+        {
+          "step": 18,
+          "passed": true
+        },
+        {
+          "step": 19,
+          "passed": true
+        },
+        {
+          "step": 20,
+          "passed": true
+        },
+        {
+          "step": 22,
+          "passed": true
+        },
+        {
+          "step": 48,
+          "passed": true
+        },
+        {
+          "step": 49,
+          "passed": true
+        },
+        {
+          "step": 70,
+          "passed": true
+        },
+        {
+          "step": 71,
+          "passed": true
+        },
+        {
+          "step": 72,
+          "passed": true
+        },
+        {
+          "step": 74,
+          "passed": true
+        },
+        {
+          "step": 84,
+          "passed": true
+        },
+        {
+          "step": 85,
+          "passed": true
+        },
+        {
+          "step": 87,
+          "passed": true
+        },
+        {
+          "step": 90,
+          "passed": true
+        },
+        {
+          "step": 91,
+          "passed": true
+        },
+        {
+          "step": 92,
+          "passed": true
+        },
+        {
+          "step": 109,
+          "passed": true
+        },
+        {
+          "step": 110,
+          "passed": true
+        },
+        {
+          "step": 111,
+          "passed": true
+        },
+        {
+          "step": 113,
+          "passed": true
+        },
+        {
+          "step": 151,
+          "passed": true
+        },
+        {
+          "step": 152,
+          "passed": true
+        },
+        {
+          "step": 153,
+          "passed": true
+        },
+        {
+          "step": 154,
+          "passed": true
+        },
+        {
+          "step": 176,
+          "passed": true
+        },
+        {
+          "step": 177,
+          "passed": true
+        },
+        {
+          "step": 178,
+          "passed": true
+        },
+        {
+          "step": 180,
+          "passed": true
+        },
+        {
+          "step": 191,
+          "passed": true
+        },
+        {
+          "step": 192,
+          "passed": true
+        },
+        {
+          "step": 193,
+          "passed": true
+        },
+        {
+          "step": 195,
+          "passed": true
+        },
+        {
+          "step": 246,
+          "passed": true
+        },
+        {
+          "step": 247,
+          "passed": true
+        },
+        {
+          "step": 249,
+          "passed": true
+        },
+        {
+          "step": 279,
+          "passed": true
+        },
+        {
+          "step": 280,
+          "passed": true
+        },
+        {
+          "step": 282,
+          "passed": true
+        },
+        {
+          "step": 325,
+          "passed": true
+        },
+        {
+          "step": 326,
+          "passed": true
+        },
+        {
+          "step": 364,
+          "passed": true
+        },
+        {
+          "step": 365,
+          "passed": true
+        },
+        {
+          "step": 366,
+          "passed": true
+        },
+        {
+          "step": 380,
+          "passed": true
+        },
+        {
+          "step": 381,
+          "passed": true
+        },
+        {
+          "step": 382,
+          "passed": true
+        },
+        {
+          "step": 429,
+          "passed": true
+        },
+        {
+          "step": 430,
+          "passed": true
+        },
+        {
+          "step": 432,
+          "passed": true
+        },
+        {
+          "step": 436,
+          "passed": true
+        },
+        {
+          "step": 438,
+          "passed": true
+        },
+        {
+          "step": 440,
+          "passed": true
+        },
+        {
+          "step": 442,
+          "passed": true
+        },
+        {
+          "step": 444,
+          "passed": true
+        },
+        {
+          "step": 446,
+          "passed": true
+        },
+        {
+          "step": 480,
+          "passed": true
+        },
+        {
+          "step": 481,
+          "passed": true
+        },
+        {
+          "step": 483,
+          "passed": true
+        },
+        {
+          "step": 517,
+          "passed": true
+        },
+        {
+          "step": 518,
+          "passed": true
+        },
+        {
+          "step": 519,
+          "passed": true
+        },
+        {
+          "step": 619,
+          "passed": true
+        },
+        {
+          "step": 620,
+          "passed": true
+        },
+        {
+          "step": 621,
+          "passed": true
+        },
+        {
+          "step": 623,
+          "passed": true
+        },
+        {
+          "step": 647,
+          "passed": true
+        },
+        {
+          "step": 648,
+          "passed": true
+        },
+        {
+          "step": 649,
+          "passed": true
+        },
+        {
+          "step": 651,
+          "passed": true
+        },
+        {
+          "step": 681,
+          "passed": true
+        },
+        {
+          "step": 682,
+          "passed": true
+        },
+        {
+          "step": 683,
+          "passed": true
+        },
+        {
+          "step": 685,
+          "passed": true
+        },
+        {
+          "step": 754,
+          "passed": true
+        },
+        {
+          "step": 755,
+          "passed": true
+        },
+        {
+          "step": 757,
+          "passed": true
+        },
+        {
+          "step": 760,
+          "passed": true
+        },
+        {
+          "step": 761,
+          "passed": true
+        },
+        {
+          "step": 821,
+          "passed": true
+        },
+        {
+          "step": 822,
+          "passed": true
+        },
+        {
+          "step": 823,
+          "passed": true
+        },
+        {
+          "step": 825,
+          "passed": true
+        },
+        {
+          "step": 833,
+          "passed": true
+        },
+        {
+          "step": 834,
+          "passed": true
+        },
+        {
+          "step": 878,
+          "passed": true
+        },
+        {
+          "step": 879,
+          "passed": true
+        },
+        {
+          "step": 881,
+          "passed": true
+        },
+        {
+          "step": 908,
+          "passed": true
+        },
+        {
+          "step": 909,
+          "passed": true
+        },
+        {
+          "step": 910,
+          "passed": true
+        },
+        {
+          "step": 912,
+          "passed": true
+        },
+        {
+          "step": 957,
+          "passed": true
+        },
+        {
+          "step": 958,
+          "passed": true
+        },
+        {
+          "step": 959,
+          "passed": true
+        },
+        {
+          "step": 961,
+          "passed": true
+        },
+        {
+          "step": 1380,
+          "passed": true
+        },
+        {
+          "step": 1381,
+          "passed": true
+        },
+        {
+          "step": 1382,
+          "passed": true
+        },
+        {
+          "step": 1384,
+          "passed": true
+        }
+      ],
+      "difference_paths": {
+        "/run/rng/aiRng/counter": 15,
+        "/run/rng/monsterHpRng/seed1": 28,
+        "/run/rng/aiRng/seed1": 28,
+        "/run/rng/aiRng/seed0": 28,
+        "/run/rng/monsterHpRng/seed0": 28,
+        "/run/rng/monsterHpRng/counter": 12,
+        "/card_identity/3403d535-2a84-469d-9eb3-3e8306816f2e": 1,
+        "/card_identity/5b59eaf1-6344-4897-8d63-d963c5ecf064": 1,
+        "/card_identity/06a23c0c-60e4-4738-9309-bf162019f5c7": 1,
+        "/card_identity/ace273c3-c4f4-45d7-a9ae-aaf0c7a55087": 1,
+        "/run/rng/miscRng/counter": 4,
+        "/run/rng/miscRng/seed0": 4,
+        "/run/rng/miscRng/seed1": 4,
+        "/piles/exhaust_pile/1/cost": 1,
+        "/piles/exhaust_pile/1/base_cost": 1,
+        "/piles/exhaust_pile/0/id": 1,
+        "/piles/exhaust_pile/0/base_cost": 1,
+        "/piles/exhaust_pile/1/id": 1,
+        "/piles/exhaust_pile/0/cost": 1,
+        "/card_identity/887a9c01-fae7-4c88-8626-b8adb8f41855": 1,
+        "/card_identity/c2a19d9a-9928-4b4c-a736-8439cce493d1": 1,
+        "/piles/exhaust_pile/5/id": 1,
+        "/piles/exhaust_pile/4/cost": 1,
+        "/piles/exhaust_pile/5/cost": 1,
+        "/piles/exhaust_pile/4/id": 1,
+        "/piles/exhaust_pile/4/base_cost": 1,
+        "/piles/exhaust_pile/5/base_cost": 1,
+        "/run/screen": 1,
+        "/run/rng/shuffleRng/counter": 2,
+        "/run/rng/shuffleRng/seed1": 2,
+        "/run/rng/shuffleRng/seed0": 2,
+        "/piles/exhaust_pile/8/id": 1,
+        "/piles/exhaust_pile/6/id": 1,
+        "/run/floor": 2,
+        "/run/rng/cardRandomRng/seed1": 1,
+        "/run/rng/cardRandomRng/counter": 1,
+        "/run/rng/cardRandomRng/seed0": 1,
+        "/run/act": 1,
+        "/run/potion_chance": 1,
+        "/run/rng/cardRng/seed1": 1,
+        "/run/hp": 1,
+        "/run/rng/cardRng/counter": 1,
+        "/run/rng/cardRng/seed0": 1,
+        "/piles/exhaust_pile/15/upgrades": 1,
+        "/piles/exhaust_pile/15/cost": 1,
+        "/piles/exhaust_pile/15/base_cost": 1,
+        "/piles/exhaust_pile/16/cost": 1,
+        "/piles/exhaust_pile/16/upgrades": 1,
+        "/piles/exhaust_pile/16/id": 1,
+        "/piles/exhaust_pile/15/id": 1,
+        "/piles/exhaust_pile/16/base_cost": 1
+      },
+      "error": null,
+      "replay_prefix": {
+        "source": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original/runs/live-foundation-smoke-20260928-v2/5100000002",
+        "result_sha256": "153d66a111def3517f1ed8655bac7c11ad674b954ae5d6e2838687d0009072a7",
+        "requested_commands": 1328,
+        "verified_commands": 1328,
+        "shared_rng_divergent_steps": 0
+      },
+      "result": "runs/live-foundation-smoke-20260928-v3/5100000002/result.json",
+      "sha256": "e3b1199c16a9416fcf7198c77f9f6f9cbd93c4dfa76883e44a23523e8fc347db",
+      "capture_code_sha256": "0131dd90a6b8cdde2c8dceadaf4c3f9cd5d0276291d6dee075e87d9333387d82"
+    }
+  ],
+  "attempts": [
+    {
+      "seed": 5100000000,
+      "status": "loss",
+      "path": "runs/live-foundation-smoke-20260928-v1/5100000000/result.json",
+      "sha256": "02b7ce29c57611bd8468e338e595af8e2e5e37770070f4f554bc813c928ad675",
+      "error": null
+    },
+    {
+      "seed": 5100000001,
+      "status": "loss",
+      "path": "runs/live-foundation-smoke-20260928-v1/5100000001/result.json",
+      "sha256": "4948f3565364855bff7147af802a84209449b8033359f4c295f3ca7f2b2bc68c",
+      "error": null
+    },
+    {
+      "seed": 5100000002,
+      "status": "fault",
+      "path": "runs/live-foundation-smoke-20260928-v1/5100000002/result.json",
+      "sha256": "0babe135fc95190e548a9e1ba5e8ebfccf4b79b02e0888df2114f635dc418b6a",
+      "error": "ValueError('unhandled original policy screen: COMPLETE')"
+    },
+    {
+      "seed": 5100000002,
+      "status": "fault",
+      "path": "runs/live-foundation-smoke-20260928-v2/5100000002/result.json",
+      "sha256": "153d66a111def3517f1ed8655bac7c11ad674b954ae5d6e2838687d0009072a7",
+      "error": "KeyError('VictoryRoom')"
+    },
+    {
+      "seed": 5100000002,
+      "status": "loss",
+      "path": "runs/live-foundation-smoke-20260928-v3/5100000002/result.json",
+      "sha256": "e3b1199c16a9416fcf7198c77f9f6f9cbd93c4dfa76883e44a23523e8fc347db",
+      "error": null
+    }
+  ],
+  "state_check": {
+    "passed": true,
+    "checks": [
+      {
+        "step": 2,
+        "screen": "MAP",
+        "differences": []
+      },
+      {
+        "step": 3,
+        "screen": "NONE",
+        "differences": []
+      },
+      {
+        "step": 20,
+        "screen": "COMBAT_REWARD",
+        "differences": []
+      },
+      {
+        "step": 21,
+        "screen": "COMBAT_REWARD",
+        "differences": []
+      },
+      {
+        "step": 23,
+        "screen": "COMBAT_REWARD",
+        "differences": []
+      },
+      {
+        "step": 24,
+        "screen": "MAP",
+        "differences": []
+      }
+    ],
+    "negative_controls": [
+      "reward_gold",
+      "reward_card_upgrade",
+      "post_battle_hp",
+      "floor",
+      "potion_chance",
+      "wrong_screen_cannot_skip_reward_comparison",
+      "replay_remaining_relic_pool",
+      "recorded_boss_complete_continues",
+      "recorded_act4_first_map_enters_rest_and_preserves_heart_node",
+      "cached_plan_rejects_changed_hp_root"
+    ],
+    "policy_decisions": 0,
+    "original_commands": 25,
+    "fixture_sha256": "3a85fa617269b4eec994d61ee21e33dc82bc7111eb3a269fb2dc777a5ff8c32f",
+    "boss_fixture_sha256": "8416f20c9e88cdf83183dc08d952c5cfdf059079657e07dad060b430854cc831",
+    "act4_fixture_sha256": "ecde4ef1eb8d3aa8a719e3f799bb98b663d1faf6602524779fdf9bd849d28180",
+    "plan_fixture_sha256": "ccc16c9072ab59e86c9b88415003796239b0c32ed4495800fe63c3eaf919865d",
+    "runtime_manifest_sha256": "5e4b27f9e2036863f5973be5244f951b4d024b3676433eb1d43934cbc412be8c"
+  },
+  "save_check": {
+    "passed": true,
+    "cases": [
+      "natural",
+      "cached_gaussians"
+    ],
+    "malformed_restore_unchanged": true,
+    "uninitialized_shuffle_roundtrip": true,
+    "future_values_per_case": 240,
+    "shuffle_permutations_per_case": 12,
+    "save_load_count": 4,
+    "completed_natural_runs": 0,
+    "policy_decisions": 0,
+    "prefix_sha256": "3a85fa617269b4eec994d61ee21e33dc82bc7111eb3a269fb2dc777a5ff8c32f",
+    "scope": "natural pre-combat autosave; second case injects cached Gaussian values for recovery coverage",
+    "source_sha256": "5ea599ab66e5af345ffe8c8c97725a8a9d089268405ec47f8504b80f1253f172",
+    "runtime_manifest_sha256": "5e4b27f9e2036863f5973be5244f951b4d024b3676433eb1d43934cbc412be8c"
+  },
+  "replay": {
+    "passed": true,
+    "commands": 143,
+    "rule_replay_passed": true,
+    "all_rng_replay_passed": false,
+    "shared_rng_divergent_steps": 85,
+    "strict_all_rng": false,
+    "requested_limit": 0,
+    "completed_natural_runs": 0,
+    "source": "runs/live-foundation-smoke-20260928-v1/5100000000",
+    "projection_sha256": "f8c87b2935395cd01995cb3ba3fe2b7693785c507c7ba64f6c0283ed1e5b3ae7",
+    "coverage": "rule state, rewards, map, pools, encounter/event lists, selections and all persistent RNGs",
+    "gaps": [
+      "cross-JVM card UUIDs",
+      "all event/monster/card private fields",
+      "frame-by-frame visual equivalence"
+    ]
+  },
+  "evidence_hashes": {
+    "runs/live-foundation-smoke-20260928-v1/5100000000/result.json": "02b7ce29c57611bd8468e338e595af8e2e5e37770070f4f554bc813c928ad675",
+    "runs/live-foundation-smoke-20260928-v1/5100000001/result.json": "4948f3565364855bff7147af802a84209449b8033359f4c295f3ca7f2b2bc68c",
+    "runs/live-foundation-smoke-20260928-v3/5100000002/result.json": "e3b1199c16a9416fcf7198c77f9f6f9cbd93c4dfa76883e44a23523e8fc347db",
+    "runs/live-foundation-state-20260928-v4.json": "5b772143df1a578e46aad63dfbb0b8727778ef6b59c1839fa5e7a933327a0471",
+    "runs/live-foundation-sl-20260928-v3/result.json": "827adfc3a07effa5a5b57e322c65e7f1debe30eb13960b93c3e6a9999850163b",
+    "runs/live-foundation-command-replay-20260928-v1/result.json": "f74ee662f6b8aaa7877ffb638f9c6862a9bc3edd26e01fd1dd43c26440633be5",
+    "runs/live-foundation-smoke-20260928-v1/manifest.json": "4563177510cf05f4b1b712ee0cc0b69e7d9ccd810ff8b94a7c9cccbc0c507c6d",
+    "steam/tests/fixtures/live-foundation-original-sources.json": "22346839ad40e088073cf39f46b21ffdc9febcdfc0e066f974adce9c3ef203fd",
+    "steam/tests/fixtures/live-boss-complete-sources.json": "a7a097f712a282f2a40206529e1b6917fb14f86ca0cf626ed2ec4d88ba21072f",
+    "runs/live-foundation-smoke-20260928-v2/manifest.json": "cc6df10b46056328b5150f8315e5da35e23ca9d99f5fc5071c8facf4be1b23e2",
+    "runs/live-foundation-smoke-20260928-v3/manifest.json": "6c97c26147d5e19c3b3f045aedf9492e5020133e5c45ecb9343e642b0f241960",
+    "steam/tests/fixtures/live-act4-map-sources.json": "2b233b17cf634d5c8ab4808709a81124f204a2e18ab1e30cb49068215bde9404",
+    "steam/tests/fixtures/live-plan-original-sources.json": "6082832e376245e832055d49e5ef614b54cccd6dad32f769c274a632b3f42f23",
+    "runs/live-foundation-prefix-reject-20260928-v1/result.json": "83688c05393a088d82339e2a781ec5a9a79af66085d5cb299d76053e2f39a1d3",
+    "runs/live-foundation-smoke-20260928-v1/5100000000/original/identity.json": "e2a8bee3b66e6bea0a6d7da1dc6d1725497519a324682557662218af5d502a83",
+    "runs/live-foundation-smoke-20260928-v1/5100000000/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-foundation-smoke-20260928-v1/5100000000/capture-code.json": "cbbe2759c58bb9e8ed208696d085e5c8c6f6fff2d2b9ec78485d45df71b507a8",
+    "runs/live-foundation-smoke-20260928-v1/5100000001/original/identity.json": "2ca3c7c07b66e7c7007615093499efd1829f85859ec3837407876245c5ff965c",
+    "runs/live-foundation-smoke-20260928-v1/5100000001/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-foundation-smoke-20260928-v1/5100000001/capture-code.json": "cbbe2759c58bb9e8ed208696d085e5c8c6f6fff2d2b9ec78485d45df71b507a8",
+    "runs/live-foundation-smoke-20260928-v3/5100000002/original/identity.json": "b61fef38f7c246101209136ed3648d5acd3251965357ac6d9156d160b79d82f6",
+    "runs/live-foundation-smoke-20260928-v3/5100000002/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-foundation-smoke-20260928-v3/5100000002/capture-code.json": "0131dd90a6b8cdde2c8dceadaf4c3f9cd5d0276291d6dee075e87d9333387d82"
+  },
+  "delivery_source_hashes": {
+    "sim_patch/parity/oracle.py": "a67f37b2f9921bc34ec5a82d37d190753a6b66b4fd8ef3cc4774a5b0ecc2435b",
+    "sim_patch/parity/java/LiveSaveState.java": "d337a11f1488277d9e396c6aab152a2792342b30228ff5b1609b9a33385bd3cd",
+    "sim_patch/parity/java/FullRngProbe.java": "e75c03e8b1e157ec7edd205c7aea8dad8cec7d18168733f3c6c9670dc9979fd3",
+    "steam/live_state.py": "7ea259a71dcdb3a2a767c210b725d9c1fd663bc026b8ea2df71124d077fdacc8",
+    "steam/live_policy.py": "c083d4dfd2a0c6d40e960af95d813a924ccf86523227680fa993291711b5ec01",
+    "steam/live_run.py": "1508e96ce6e9776197122480bc3bb2004248cceac18d9e02d07c8d2474b33746",
+    "steam/live_batch.py": "090d2ffe69ba1b3ef8a212377b7cbe782a0c9d46b6fc5d65abf03138994320ee",
+    "steam/check_live_save.py": "5ea599ab66e5af345ffe8c8c97725a8a9d089268405ec47f8504b80f1253f172",
+    "steam/check_live_foundation.py": "ceb406f1744fd0f94515f4b4b30eaf6ea6f54d7a867886d89d7da7970d2676b9",
+    "steam/replay_original.py": "f8c87b2935395cd01995cb3ba3fe2b7693785c507c7ba64f6c0283ed1e5b3ae7",
+    "steam/live_search.py": "d31454a1691e5f497da1419925b0feaf3b548360a026fd7599ab5259193bc2b3",
+    "steam/check_live_policy.py": "d353327457853e40903af4fd7782e33c274d57b075dfd0b4bca49dfcff8770cc"
+  },
+  "total_commands": 1809,
+  "total_divergence_checkpoints": 53,
+  "scope_note": "Three unique seeds reached terminal states; third seed used verified prefix replay after two adapter faults. Not three independent fresh acceptance runs.",
+  "owned_cleanup": {
+    "runs/live-foundation-smoke-20260928-v1/5100000000/original/cleanup.json": [],
+    "runs/live-foundation-smoke-20260928-v1/5100000001/original/cleanup.json": [],
+    "runs/live-foundation-smoke-20260928-v1/5100000002/original/cleanup.json": [],
+    "runs/live-foundation-smoke-20260928-v2/5100000002/original/cleanup.json": [],
+    "runs/live-foundation-smoke-20260928-v3/5100000002/original/cleanup.json": [],
+    "runs/live-foundation-sl-20260928-v3/original/cleanup.json": [],
+    "runs/live-foundation-command-replay-20260928-v1/original/cleanup.json": []
+  }
+}

@@ -171,10 +171,18 @@ class Comparator:
         observation = Observation(view)
         S = self.sts
         game = view["game"]
+        if game.get("current_hp", 1) <= 0:
+            diff = differences("PLAYER_LOSS", battle.outcome.name, "/outcome")
+            return {"differences": diff, "gaps": [], "observed_match": not diff,
+                    "expected": {"outcome": "PLAYER_LOSS"}, "actual": {"outcome": battle.outcome.name}}
         if "combat_state" not in game:
             return {"differences": [], "gaps": [{"kind": "battle_exit_requires_run_context"}],
                     "observed_match": False, "field_audit": observation.audit()}
         combat = game["combat_state"]
+        if battle.outcome != S.Outcome.UNDECIDED:
+            return {"differences": differences("UNDECIDED", battle.outcome.name, "/outcome"),
+                    "gaps": [{"kind": "original_combat_continues_after_predicted_terminal"}],
+                    "observed_match": False, "field_audit": observation.audit()}
         # A choice is a real decision boundary. Never silently count it as checked.
         if game["screen_type"] != "NONE" or battle.input_state != S.InputState.PLAYER_NORMAL:
             return self.compare_selection(view, battle, observation)
@@ -260,7 +268,13 @@ class Comparator:
             # counters were recorded as gaps above, not comparison failures.
             legacy_game = {**game, "combat_state": {**combat, "relic_combat_state": wanted_counters}}
         extras = importlib.import_module("compare_powers").extras(legacy_game, battle)
-        diff += [{"path": "/legacy/" + key, "kind": "value", **value} for key, value in extras.items()]
+        for key, value in extras.items():
+            # Most legacy checks return one pair; attacks return one pair per
+            # monster. Preserve each finding rather than crashing the audit.
+            rows = value if isinstance(value, list) else [value]
+            for index, row in enumerate(rows):
+                diff.append({"path": "/legacy/" + key + ("/" + str(index) if isinstance(value, list) else ""),
+                             "kind": "value", **row})
         gaps.append({"kind": "unobserved_internal_state", "fields": ["pending_actions", "card_identity_links",
                  "all_monster_private_fields", "all_card_private_fields"]})
         if "parity" in view and view["parity"].get("legal_complete"):

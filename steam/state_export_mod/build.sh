@@ -9,7 +9,7 @@ rm -rf "$OUT"
 mkdir -p "$OUT/classes"
 javac -source 8 -target 8 -encoding UTF-8 \
   -cp "$RES/desktop-1.0.jar:$RES/mods/BaseMod.jar:$RES/mods/CommunicationMod.jar:$MTS" \
-  -d "$OUT/classes" "$(dirname "$0")/src/steamstateexport/CombatStatePatch.java"
+  -d "$OUT/classes" "$(dirname "$0")"/src/steamstateexport/*.java
 cp "$(dirname "$0")/ModTheSpire.json" "$OUT/classes/"
 jar cf "$OUT/SteamStateExport.jar" -C "$OUT/classes" .
 if [ "${STS_INSTALL_MOD:-1}" = "1" ]; then

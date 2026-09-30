@@ -1,0 +1,25 @@
+{
+  "fixture": "original-rng-prefix.json.gz",
+  "sha256": "81e8760a51776750a989ce20e102d66c83f8a45421c75e1779b55886351b0597",
+  "projection": "Preserve seed, position, RNG exports, independent RNG observations and observer mutation flag. Drop other game fields. No JAR or decompiled code.",
+  "sources": {
+    "before": {
+      "path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original/runs/rng-preflight-20260927-installed/original/observations.json.gz",
+      "sha256": "97862859770471232d8f1d33e57c5b789899488fd4849eaad0857040890c94f4"
+    },
+    "after": {
+      "path": "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original/runs/rng-fix-20260927-v1/original/observations.json.gz",
+      "sha256": "8389389744bd500bdc6376d1dec1a139a520625389cd9f195bb2af4b45f1ac9e"
+    }
+  },
+  "original_jar_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+  "seed": 5100000000,
+  "commands": [
+    "start ironclad 20 2S3KFAQ",
+    "choose 0",
+    "choose 0",
+    "choose 0",
+    "choose 0",
+    "end"
+  ]
+}

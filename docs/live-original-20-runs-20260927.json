@@ -1,0 +1,586 @@
+{
+  "completed": 2,
+  "wins": 0,
+  "losses": 2,
+  "act3_only": 0,
+  "commands": 371,
+  "divergences": 9,
+  "save_load_count": 0,
+  "runs": [
+    {
+      "seed": 5100000000,
+      "status": "loss",
+      "floor": 8,
+      "act": 1,
+      "steps": 143,
+      "divergences": 3,
+      "types": {
+        "idle_floor_rng": 2,
+        "exhaust_order": 1
+      },
+      "save_load_count": 0,
+      "resynchronizations": 1,
+      "hp_shortfall": 0,
+      "impact": "被测资源未检出损失，胜负因果未验证",
+      "baseline_status": "death",
+      "path": "runs/live-cohort-20260927-v2/5100000000/result.json",
+      "sha256": "00c8ceaf732cb5651aafd35c7a63a29ba7d7698d87c51387266a9961cabe5482",
+      "capture_code_sha256": "dbd6d82879e020644f099a48cc4eec3aedae4807ada10462bb9097ba6be4ac63",
+      "runtime_manifest_sha256": "9551b1c8900b7903fe06f94afa7e7a07a492b65ab8d2658d3868bfee37127122"
+    },
+    {
+      "seed": 5100000001,
+      "status": "loss",
+      "floor": 14,
+      "act": 1,
+      "steps": 228,
+      "divergences": 6,
+      "types": {
+        "outside_rng": 1,
+        "idle_floor_rng": 5
+      },
+      "save_load_count": 0,
+      "resynchronizations": 0,
+      "hp_shortfall": 0,
+      "impact": "被测资源未检出损失，胜负因果未验证",
+      "baseline_status": "death",
+      "path": "runs/live-cohort-20260927-v2/5100000001/result.json",
+      "sha256": "bafc8263c40688f134934e70be4207af46205e9f0c3c0579a4811ec7d2562889",
+      "capture_code_sha256": "dbd6d82879e020644f099a48cc4eec3aedae4807ada10462bb9097ba6be4ac63",
+      "runtime_manifest_sha256": "9551b1c8900b7903fe06f94afa7e7a07a492b65ab8d2658d3868bfee37127122"
+    }
+  ],
+  "ranking": [
+    {
+      "type": "exhaust_order",
+      "label": "虚无牌消耗顺序",
+      "events": 1,
+      "runs": 1,
+      "potential_impact_grade": 1,
+      "priority": 1
+    },
+    {
+      "type": "outside_rng",
+      "label": "局外 RNG",
+      "events": 1,
+      "runs": 1,
+      "potential_impact_grade": 1,
+      "priority": 1
+    },
+    {
+      "type": "idle_floor_rng",
+      "label": "非战斗楼层重置 RNG",
+      "events": 7,
+      "runs": 2,
+      "potential_impact_grade": 0,
+      "priority": 0
+    }
+  ],
+  "attempts": [
+    {
+      "seed": 5100000000,
+      "status": "loss",
+      "terminal": true,
+      "path": "runs/live-cohort-20260927-v2/5100000000/result.json",
+      "sha256": "00c8ceaf732cb5651aafd35c7a63a29ba7d7698d87c51387266a9961cabe5482"
+    },
+    {
+      "seed": 5100000001,
+      "status": "loss",
+      "terminal": true,
+      "path": "runs/live-cohort-20260927-v2/5100000001/result.json",
+      "sha256": "bafc8263c40688f134934e70be4207af46205e9f0c3c0579a4811ec7d2562889"
+    },
+    {
+      "seed": 5100000002,
+      "status": "running",
+      "terminal": false,
+      "path": "runs/live-cohort-20260927-v2/5100000002/result.json",
+      "sha256": "b4021aa49639d9119674065a6f4946a705088e80bbcb1a7eb02acbb5545d3e11"
+    },
+    {
+      "seed": 5100000003,
+      "status": "running",
+      "terminal": false,
+      "path": "runs/live-cohort-20260927-v2/5100000003/result.json",
+      "sha256": "cb293f87024187fe15d66457476c18652eac7f33176d081d43137f328856bdb5"
+    }
+  ],
+  "evidence": [
+    {
+      "seed": 5100000000,
+      "step": 25,
+      "floor": 2,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000000/step-00025.json.gz",
+      "sha256": "bae677b8718c89cacf53b685f879c6e52413127e55081324e9b9d061d2390b36",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 6
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 813913656206148292,
+          "simulator": 13286154519156105398
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 10998844684800286005,
+          "simulator": 5396455410628699535
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 2
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 813913656206148292,
+          "simulator": 12851913514549034436
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 10998844684800286005,
+          "simulator": 7754416853515505271
+        }
+      ]
+    },
+    {
+      "seed": 5100000000,
+      "step": 105,
+      "floor": 6,
+      "command": "end",
+      "categories": [
+        "exhaust_order"
+      ],
+      "hp_shortfall": 0,
+      "cards": [
+        "AscendersBane",
+        "Dazed",
+        "Dazed",
+        "Dazed"
+      ],
+      "monsters": [
+        "Sentry",
+        "Sentry",
+        "Sentry"
+      ],
+      "relics": [
+        "Burning Blood"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000000/step-00105.json.gz",
+      "sha256": "5550ded07f24e64fa976f074d81fdd1a044ec6a4cd33bed05f5cfa102f572311",
+      "differences": [
+        {
+          "path": "/piles/exhaust_pile/2/id",
+          "kind": "value",
+          "original": "ASCENDERS_BANE",
+          "simulator": "DAZED"
+        },
+        {
+          "path": "/piles/exhaust_pile/3/id",
+          "kind": "value",
+          "original": "DAZED",
+          "simulator": "ASCENDERS_BANE"
+        }
+      ]
+    },
+    {
+      "seed": 5100000000,
+      "step": 126,
+      "floor": 7,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood",
+        "Darkstone Periapt"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000000/step-00126.json.gz",
+      "sha256": "9e8fc2441815189b7a9e1918c1c5e750ebfc22bd929a651db3a5af2c3538e5e5",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 15
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 9508886801777087986,
+          "simulator": 12998654588700687926
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 3856900540407114801,
+          "simulator": 5849139102577210447
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 3
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 9508886801777087986,
+          "simulator": 4106814475456288014
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 3856900540407114801,
+          "simulator": 8162145363901770115
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 56,
+      "floor": 4,
+      "command": "choose 0",
+      "categories": [
+        "outside_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00056.json.gz",
+      "sha256": "f9ad54c7eed3c6705b584ee418c86f80b02f1a6939df5bcd488d797fca6678b0",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 4
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 10287095637804118848,
+          "simulator": 8075021872277069319
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 1321683612248129927,
+          "simulator": 2205539359312566374
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 2
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 10287095637804118848,
+          "simulator": 12531937976884694188
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 1321683612248129927,
+          "simulator": 4993362064620756467
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 75,
+      "floor": 6,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00075.json.gz",
+      "sha256": "b776fda76314bdc090b69df2cb97ceec28b3d68be54a8bd28f128729150aa119",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 4
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 9508886801777087986,
+          "simulator": 8162145363901770115
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 3856900540407114801,
+          "simulator": 5288221513961642662
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 1
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 9508886801777087986,
+          "simulator": 9489981623787911980
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 3856900540407114801,
+          "simulator": 13515383726815674713
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 109,
+      "floor": 8,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood",
+        "Bottled Flame"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00109.json.gz",
+      "sha256": "aeaa9cc8b1d6390d366eadfd6c0f7fd0461e5b6f448eb5163c6ff5312c2f9bc8",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 7
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 7680042056538237942,
+          "simulator": 10618874386245184369
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 7837529963818331625,
+          "simulator": 11687946882387008005
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 1
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 7680042056538237942,
+          "simulator": 7862677127376923119
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 7837529963818331625,
+          "simulator": 11683065275357407544
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 112,
+      "floor": 9,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood",
+        "Bottled Flame"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00112.json.gz",
+      "sha256": "92b2513c2c4aa7ab7a1784d32a2bcf2509dd6c5b9d3d33e0bd9cda9b25494b81",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 5887570865758182297,
+          "simulator": 7680042056538237942
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 1168167104402205622,
+          "simulator": 7837529963818331625
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 5887570865758182297,
+          "simulator": 7680042056538237942
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 1168167104402205622,
+          "simulator": 7837529963818331625
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 135,
+      "floor": 11,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood",
+        "Bottled Flame",
+        "Question Card"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00135.json.gz",
+      "sha256": "c3356c1767764cad355a827bb405cb3c2629e30fb1ba4b1b61155c3e5a99ec58",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 4
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 12866710394288276845,
+          "simulator": 4962666001534149477
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 9493107792940623017,
+          "simulator": 18321168762485116619
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 1
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 12866710394288276845,
+          "simulator": 1900516194336702929
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 9493107792940623017,
+          "simulator": 10871020816202816143
+        }
+      ]
+    },
+    {
+      "seed": 5100000001,
+      "step": 223,
+      "floor": 14,
+      "command": "choose 0",
+      "categories": [
+        "idle_floor_rng"
+      ],
+      "hp_shortfall": 0,
+      "cards": [],
+      "monsters": [],
+      "relics": [
+        "Burning Blood",
+        "Bottled Flame",
+        "Question Card"
+      ],
+      "path": "runs/live-cohort-20260927-v2/5100000001/step-00223.json.gz",
+      "sha256": "4fbdb3519bc09a88b54803f8091d44dcbbd45f77970b1c48ae335b833bef4b2b",
+      "differences": [
+        {
+          "path": "/run/rng/aiRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 15
+        },
+        {
+          "path": "/run/rng/aiRng/seed0",
+          "kind": "value",
+          "original": 3880904626885232038,
+          "simulator": 17087453364011148301
+        },
+        {
+          "path": "/run/rng/aiRng/seed1",
+          "kind": "value",
+          "original": 2329827796451443216,
+          "simulator": 13965275683180257061
+        },
+        {
+          "path": "/run/rng/monsterHpRng/counter",
+          "kind": "value",
+          "original": 0,
+          "simulator": 1
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed0",
+          "kind": "value",
+          "original": 3880904626885232038,
+          "simulator": 8130234781635428212
+        },
+        {
+          "path": "/run/rng/monsterHpRng/seed1",
+          "kind": "value",
+          "original": 2329827796451443216,
+          "simulator": 4977327528860880029
+        }
+      ]
+    }
+  ]
+}

@@ -18,9 +18,6 @@ from .core import sha256, write_json
 
 
 ETHEREAL_PATCH = "basemod/patches/com/megacrit/cardcrawl/actions/common/DiscardAtEndOfTurnAction/ConsistentEtherealPatch"
-# Loading the game and applying its mods can exceed 90 seconds under local CPU
-# contention. Keep this startup deadline separate from individual game actions.
-STARTUP_TIMEOUT_SECONDS = 180
 
 
 def configure_reference(instance: Path, profile: str) -> dict:
@@ -54,11 +51,13 @@ def configure_reference(instance: Path, profile: str) -> dict:
 
 
 class Original:
-    def __init__(self, oracle_root: Path, directory: Path, repo: Path, profile: str = "installed"):
+    def __init__(self, oracle_root: Path, directory: Path, repo: Path, profile: str = "installed",
+                 startup_timeout_seconds: float = 300):
         self.oracle_root = oracle_root.resolve()
         self.directory = directory.resolve()
         self.repo = repo.resolve()
         self.profile = profile
+        self.startup_timeout_seconds = startup_timeout_seconds
         self.instance = None
         self.rpc = []
         self.previous_signals = {}
@@ -114,7 +113,18 @@ class Original:
             if text.count(marker) != 1:
                 raise ValueError("local original observer changed; inspect view() before extending it")
             alignment.write_text(text.replace(marker,
-                '   out.add("parity",ParityAudit.snapshot());\n  }return out;\n }\n static AbstractCard card'))
+                '   out.add("parity",ParityAudit.snapshot());\n   out.add("live_run",LiveRunState.snapshot());\n  }return out;\n }\n static AbstractCard card'))
+            text = alignment.read_text()
+            marker = '  else if(op.equals("fixture"))fixture(req);'
+            if text.count(marker) != 1:
+                raise ValueError("original RPC extension point changed")
+            alignment.write_text(text.replace(marker,
+                '  else if(op.equals("rng_roundtrip"))return FullRngProbe.run();\n'
+                '  else if(op.equals("shared_rng_sequence"))return FullRngProbe.sharedSequence();\n'
+                '  else if(op.equals("live_checkpoint"))return LiveSaveState.checkpoint();\n'
+                '  else if(op.equals("live_reload"))LiveSaveState.reload();\n' + marker))
+            alignment.write_text(alignment.read_text().replace(marker,
+                '  else if(op.equals("live_rng_restore"))LiveSaveState.restoreEnvelope(req.getAsJsonObject("state"));\n' + marker))
             # Add an explicit starting-HP fixture option without reducing max HP.
             # This touches setup only, never an original damage/healing method.
             marker = "  AbstractDungeon.player.damagedThisCombat=0;"
@@ -163,11 +173,20 @@ class Original:
                 + '\n  else if(op.equals("shop_continuation_fixture"))return ShopContinuationProbe.start(req.getAsJsonObject("spec"));'
                 + '\n  else if(op.equals("shop_continuation_observe"))return ShopContinuationProbe.snapshot();'
                 + '\n  else if(op.equals("shop_continuation_advance"))return ShopContinuationProbe.advanceTo(req);'))
-            exporter = self.repo / "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java"
-            hashes[str(exporter)] = sha256(exporter)
-            copied_exporter = sources / "steamstateexport" / exporter.name
-            copied_exporter.parent.mkdir()
-            shutil.copy2(exporter, copied_exporter)
+            rng_probe = self.repo / "sim_patch/parity/java/FullRngProbe.java"
+            shutil.copy2(rng_probe, sources / rng_probe.name)
+            hashes[str(rng_probe)] = sha256(rng_probe)
+            live_run = self.repo / "sim_patch/parity/java/LiveRunState.java"
+            shutil.copy2(live_run, sources / live_run.name)
+            hashes[str(live_run)] = sha256(live_run)
+            live_save = self.repo / "sim_patch/parity/java/LiveSaveState.java"
+            shutil.copy2(live_save, sources / live_save.name)
+            hashes[str(live_save)] = sha256(live_save)
+            exporter_root = self.repo / "steam/state_export_mod/src/steamstateexport"
+            (sources / "steamstateexport").mkdir()
+            for exporter in sorted(exporter_root.glob("*.java")):
+                hashes[str(exporter)] = sha256(exporter)
+                shutil.copy2(exporter, sources / "steamstateexport" / exporter.name)
             for helper in (Path(Q.__file__), Path(Q.common.__file__), Path(inspect.getsourcefile(Q.launch))):
                 hashes[str(helper)] = sha256(helper)
             classes = directory / "classes"
@@ -197,7 +216,7 @@ class Original:
             config = instance / "home/Library/Preferences/ModTheSpire/CommunicationMod/config.properties"
             config.write_text(config.read_text().replace("runAtGameStart=true", "runAtGameStart=false"))
             self.identity = {"original_game_sha256": sha256(instance / "desktop-1.0.jar"),
-                             "startup_timeout_seconds": STARTUP_TIMEOUT_SECONDS,
+                             "startup_timeout_seconds": self.startup_timeout_seconds,
                              "reference_profile": reference_change,
                              "enabled_mods": manifest["enabled_mods"],
                              "runtime_mods": {str(p.relative_to(instance)): sha256(p)
@@ -213,7 +232,7 @@ class Original:
                 signal.signal(sig, self._interrupted)
             write_json(directory / "launch.json", Q.launch(instance))
             self.probe = Q.Probe(instance)
-            self.call("observe", timeout_seconds=STARTUP_TIMEOUT_SECONDS)
+            self.call("observe", timeout_seconds=self.startup_timeout_seconds)
             return self
         except BaseException:
             self.close()
@@ -223,9 +242,13 @@ class Original:
         raise KeyboardInterrupt(f"original run interrupted by signal {signum}")
 
     def call(self, op, **arguments):
-        result = self.probe.call(op, **arguments)
-        self.rpc.append({"request": {"op": op, **{k: v for k, v in arguments.items() if k != "timeout_seconds"}},
-                         "response": {"ok": True, "result": result}})
+        request = {"op": op, **{k: v for k, v in arguments.items() if k != "timeout_seconds"}}
+        try:
+            result = self.probe.call(op, **arguments)
+        except BaseException as error:
+            self.rpc.append({"request": request, "response": {"ok": False, "error": repr(error)}})
+            raise
+        self.rpc.append({"request": request, "response": {"ok": True, "result": result}})
         return result
 
     def close(self):

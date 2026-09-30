@@ -1,0 +1,74 @@
+{
+  "inputs": {
+    "neow": {
+      "path": "runs/live-run-export-20260927-v1/view-1.json",
+      "sha256": "4ab6a02bb129d0110af16a11ff14e72e0324373394116c61cb4c4c2fc4c86ec9"
+    },
+    "cleric_disabled": {
+      "path": "runs/live-full-pilot-seed3-20260927-v1/fault-view.json.gz",
+      "sha256": "048bfc381b55fa13f0045f452e347c2925392e724bf26020936d1c28f6f2dd9b"
+    },
+    "wing_disabled": {
+      "path": "runs/live-full-pilot-seed4-20260927-v1/fault-view.json.gz",
+      "sha256": "13e35c52aa8a1b2579ea069d3e5d0c39407551e16cd972b429f1c44faad38caa"
+    },
+    "shop_purchase": {
+      "path": "runs/live-full-pilot-seed1-20260927-v1/step-00057.json.gz",
+      "sha256": "79eeab49d1477277b142ea8f70b24ddd505fe80768044d43a33630da5b734cd8"
+    },
+    "death": {
+      "path": "runs/live-full-pilot-20260927-v3/step-00142.json.gz",
+      "sha256": "2821c8950a313cad220dcaff5aa94995070d93e33a0c4df1f4bfdd199dc06fa7"
+    },
+    "entrance_difference": {
+      "path": "runs/live-full-pilot-20260927-v3/step-00070.json.gz",
+      "sha256": "b37e3b0c13ac66f63d72369482d49829c49755d4efd17dccc402f4ec6b1be16d"
+    },
+    "smith_confirmation": {
+      "path": "runs/live-full-pilot-seed1-20260927-v2/step-00077.json.gz",
+      "sha256": "69c840b226c73b7d378a777ee4386e2f158594ff367c047f386347179ff604ab"
+    },
+    "serpent_confirmation": {
+      "path": "runs/live-full-pilot-seed1-20260927-v2/step-00136.json.gz",
+      "sha256": "01165659efbb8f3c364c90b873074466153da00b4bbabb05a430846ecdbe6043"
+    },
+    "sl": {
+      "path": "runs/live-sl-gate-20260927-v1/result.json.gz",
+      "sha256": "697e5adaf83ca7033489ae9a42a5974091828c040083656eef42e24b46ac5cf4"
+    },
+    "nest_intro": {
+      "path": "runs/live-cohort-20260927-v1/5100000004/step-00379.json.gz",
+      "sha256": "d9c73a560e957a275867bab1b296bc8499518867c269c92470a4af57bb176574"
+    },
+    "boss_chest": {
+      "path": "runs/live-cohort-20260927-v1/5100000002/step-00250.json.gz",
+      "sha256": "a5f6e3d3b1d20a68ad4f5f46b02e0601053969f03be0ee36491f1ffcb7696d5c"
+    },
+    "dome_missing_move": {
+      "path": "runs/live-cohort-20260927-v1/5100000002/step-00254.json.gz",
+      "sha256": "32ab71c2991be722796bf30a038714eb13adccfba960341534080e6d5cc0e48f"
+    },
+    "astrolabe_first_selected": {
+      "path": "runs/live-cohort-20260927-v1/5100000006/step-00314.json.gz",
+      "sha256": "cc5343b9345fb621e7974c99fb2a16043523b9a17ca90463dbd996d5a35a7613"
+    },
+    "combat_winning_confirmation": {
+      "path": "runs/live-cohort-20260927-v1/5100000007/step-00257.json.gz",
+      "sha256": "6e2807c17f1a7962d258a367e2a2c931c0369954575e22c291530b457928ad0d"
+    },
+    "designer_intro": {
+      "path": "runs/live-full-pilot-seed6-20260927-v2/step-00333.json.gz",
+      "sha256": "57595ab513b0e36ea021866fd1baab522389ce1054b6498be0a1d6a2b5a45c12"
+    },
+    "vampires_buttons": {
+      "path": "runs/live-cohort-20260927-v2/5100000003/step-00459.json.gz",
+      "sha256": "56ee3fe2271c676d105de2eb469cdd6e350a9b41f7abd10e834d9592944da977"
+    },
+    "act3_first_map": {
+      "path": "runs/live-cohort-20260927-v2/5100000002/step-00614.json.gz",
+      "sha256": "73a2781b8d35cdbebfe68ac2f113c424d7b4c4e230a798be62b2c5e969173bf8"
+    }
+  },
+  "fixture_sha256": "2f52f60e520aae03ec211c9c057d65c56860a30d4991263a110795a5f7c3d41b",
+  "scope": "numeric original observations and legal UI labels; no game assets"
+}

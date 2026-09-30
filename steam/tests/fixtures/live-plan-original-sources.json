@@ -1,0 +1,6 @@
+{
+  "source": "runs/live-foundation-smoke-20260928-v1/5100000000/plan-0001.json",
+  "sha256": "c058cf143f6062382faed354d2c84e2c4efdbffdb056539dd30388646217787c",
+  "fixture_sha256": "ccc16c9072ab59e86c9b88415003796239b0c32ed4495800fe63c3eaf919865d",
+  "scope": "Search plan at the actual natural first-battle root of seed 5100000000; no rescoring in the test"
+}

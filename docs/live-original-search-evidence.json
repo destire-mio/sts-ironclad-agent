@@ -1,0 +1,81 @@
+{
+  "status": "combat_entry_verified_with_documented_coverage_gaps",
+  "completed_natural_runs": 0,
+  "natural_win_rate": null,
+  "natural_divergence_impact": null,
+  "save_load_count": 0,
+  "verified": {
+    "native_equivalent_roots": 2,
+    "first_battle_commands": 17,
+    "first_battle_normal_checkpoints": 16,
+    "first_battle_hp_after": 60,
+    "first_battle_observed_field_differences": 0,
+    "synthetic_divergences": 1,
+    "resynchronizations": 1,
+    "selection_fixtures_after_fix": 5,
+    "recorded_original_replay_cases": 7,
+    "rng_unit_tests": 12
+  },
+  "evidence": {
+    "native_entry": {
+      "path": "runs/live-search-entry-check-20260927-v2.json",
+      "sha256": "ae4dbde25a2c9733b48847731ec7f1d1a2eb98a579da4fa0d81ac31f86df28d4"
+    },
+    "first_battle": {
+      "path": "runs/live-first-battle-20260927-v2/result.json",
+      "sha256": "15e51cd061c68e55114d33e73ea008972d248dab5cf1b177a96af36960601568"
+    },
+    "resync": {
+      "path": "runs/live-resync-20260927-v2/result.json",
+      "sha256": "f87ab0682e6d9020423917f2eadbc06f7fe58893fc67f307df8b8cef2769508a"
+    },
+    "selection_before": {
+      "path": "runs/live-selections-20260927-v1/result.json",
+      "sha256": "8ee48843ccf473bd3ea4f745362967dff0606065658228ed2ddd1a174b0ecf09"
+    },
+    "selection_after": {
+      "path": "runs/live-selections-20260927-v2/result.json",
+      "sha256": "339cfea25ebb13dbd0cfb48a4d08af4298bb545a650046166d773b6607f3ade1"
+    },
+    "replay": {
+      "path": "runs/live-search-replay-20260927-v1.json",
+      "sha256": "2de3151327306d2afa7a1c657d0b3db9b0e3245139d5d5051ef4c9209ec52220"
+    },
+    "negative_order": {
+      "path": "runs/live-selection-order-regression-20260927.json",
+      "sha256": "1256c9f50b8a5f498442561b9d25270fbdf644b12fb842278b941f9966449d48"
+    },
+    "outside_blocker": {
+      "path": "runs/live-outside-entry-audit-20260927.json",
+      "sha256": "32e6585db41ce220f9197aa7915dde25ee76c75656cbab847d2ba1d6088d01af"
+    },
+    "fixture": {
+      "path": "steam/tests/fixtures/live-search-original.json.gz",
+      "sha256": "f8f2d191ec0d53a81bf0d338da0f1c077a0c413c2e7a65ac940ec7f993694671"
+    },
+    "fixture_provenance": {
+      "path": "steam/tests/fixtures/live-search-provenance.json",
+      "sha256": "873cbbfc5fd6b4cb2b81bee9bc33ea118581a1709e55967bcb3fce1b9ba2e27e"
+    },
+    "unit_log": {
+      "path": "runs/live-search-unit-tests-20260927.log",
+      "sha256": "fba2fca10f60764f9f012ed111779078116750f2c3c717d57c030e17f0fb2fc0"
+    }
+  },
+  "owned_instance_cleanup": {
+    "runs/live-first-battle-20260927-v1/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-first-battle-20260927-v2/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-resync-20260927-v1/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-resync-20260927-v2/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-selections-20260927-v1/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "runs/live-selections-20260927-v2/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6"
+  },
+  "remaining": [
+    "P300 outside policy encoding and execution",
+    "battle exit and rewards with GameContext",
+    "shared RNG future-state prediction",
+    "pending selection/queue reimport",
+    "SL restore proof",
+    "20 complete natural runs"
+  ]
+}

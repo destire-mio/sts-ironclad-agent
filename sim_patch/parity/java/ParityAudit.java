@@ -57,6 +57,16 @@ public final class ParityAudit {
             value.addProperty("seed1", rng.random.getState(1));
             result.add(field.getName(), value);
         }
+        // Independent legacy observation, used to check the production exporter.
+        Random neow = com.megacrit.cardcrawl.neow.NeowEvent.rng;
+        JsonObject neowState = new JsonObject();
+        neowState.addProperty("initialized", neow != null);
+        if (neow != null) {
+            neowState.addProperty("counter", neow.counter);
+            neowState.addProperty("seed0", neow.random.getState(0));
+            neowState.addProperty("seed1", neow.random.getState(1));
+        }
+        result.add("NeowEvent.rng", neowState);
         if (MathUtils.random instanceof RandomXS128) {
             RandomXS128 rng = (RandomXS128)MathUtils.random;
             JsonObject value = new JsonObject();
