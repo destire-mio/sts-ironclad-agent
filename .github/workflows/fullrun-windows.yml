@@ -1,0 +1,41 @@
+name: Full-run Windows pilot
+on:
+  push:
+    branches: ['codex/full-run-ppo-windows-*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-windows:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Build native simulator and check rule interfaces
+        shell: pwsh
+        run: ./scripts/setup_fullrun.ps1 -Jobs 2
+      - name: Check learning, replay, seed isolation and frozen behavior contracts
+        shell: pwsh
+        run: |
+          & .venv/Scripts/python.exe -m unittest discover -s tests -p test_fullrun_ppo.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Smoke full collection, PPO update, checkpoint reload and development evaluation
+        shell: pwsh
+        run: |
+          & .venv/Scripts/python.exe scripts/fullrun.py train --config configs/fullrun_smoke.json --run runs/windows-ci-smoke
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Preserve smoke reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-smoke-evidence
+          path: |
+            .runtime/runtime.json
+            .runtime/patched-source.json
+            runs/windows-ci-smoke/**/*.json
+            runs/windows-ci-smoke/metrics.jsonl
+          retention-days: 14
