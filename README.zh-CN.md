@@ -48,7 +48,8 @@
 | 路径 | 内容 |
 |---|---|
 | `agent/` | 程序代码：老师驱动（`p300_play_v21.py`、`p300_play_v24.py`）、公共函数、蒸馏与心脏研究工具 |
-| `student/` | 蒸馏学生网络（17MB 权重、代码、接口说明） |
+| `student/` | 蒸馏学生网络（17MB 权重、代码、接口说明、`play_student.py`） |
+| `live_original/` | 在真实游戏里跑老师和学生的脚本（尚不可移植） |
 | `experiments/combat_value/` | 战斗价值网络实验（仅脚本，不属于老师） |
 | `combat_engine/` | 战斗引擎源码快照，以及战后 HP 评分报告 |
 | `runtime/` | 冻结的父网络、配置和运行文件（引擎编译到 `runtime/engine/`） |
@@ -68,6 +69,7 @@
 ```bash
 scripts/setup.sh                 # 建虚拟环境、装 numpy/torch/pybind11、编译引擎、生成运行包标识文件
 scripts/run_teacher.sh 4 4       # 用当前老师打 4 局，4 个进程
+scripts/run_student.sh 4 4       # 同样，但局外决策由蒸馏学生网络做
 ```
 
 `run_teacher.sh [局数] [进程数] [起始种子] [输出文件]` 每局写一行 JSON，并打印胜场。单核一局约一分钟，重复运行会续跑。
@@ -76,8 +78,8 @@ scripts/run_teacher.sh 4 4       # 用当前老师打 4 局，4 个进程
 上次整理时验证：全新编译的引擎在种子 3900012000 上 45 秒打到了心脏（第 56 层），没有引擎故障；云端老师在同一种子上到了同一层。
 长跑胜率没有用这个构建重新测。
 
-还不是一键的部分：蒸馏学生在仓库里没有整局驱动（只有加载接口，见 `student/INTERFACE.md`）；
-接原版游戏需要你自己的游戏和 Mod（见 [`docs/live-original-runbook.md`](docs/live-original-runbook.md)）；测试需要编译好的引擎和 PyTorch。
+学生驱动在一局测试里把种子 3900040000 打到了心脏（第 56 层），没有引擎故障；这只是冒烟测试，不是评估。
+原版游戏运行脚本在 [`live_original/`](live_original/PORTING.md)（保持运行时的样子，路径待适配；需要你自己的游戏和 Mod）。测试需要编译好的引擎和 PyTorch。
 旧版 A0 策略的复现方法见 [`docs/history.zh-CN.md`](docs/history.zh-CN.md)。
 
 ## 致谢与协议

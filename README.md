@@ -56,7 +56,8 @@ do not establish the original-game win rate. A live bridge to the real game is k
 | Path | Contents |
 |---|---|
 | `agent/` | bot code: teacher drivers (`p300_play_v21.py`, `p300_play_v24.py`), shared helpers, distillation and Heart research tools |
-| `student/` | the distilled student network (17 MB weights, code, interface) |
+| `student/` | the distilled student network (17 MB weights, code, interface, `play_student.py`) |
+| `live_original/` | scripts that ran the teacher and student in the real game (not portable yet) |
 | `experiments/combat_value/` | combat value-network experiment (scripts only; not part of the teacher) |
 | `combat_engine/` | combat engine source snapshot and the post-battle HP scoring report |
 | `runtime/` | frozen parent network, config and runtime files (the engine is built into `runtime/engine/`) |
@@ -77,6 +78,7 @@ including the engine source, the parent network and the value tables, is in this
 ```bash
 scripts/setup.sh                 # venv + numpy/torch/pybind11, builds the engine, writes runtime identity files
 scripts/run_teacher.sh 4 4       # play 4 games on 4 workers with the adopted teacher
+scripts/run_student.sh 4 4       # same, with the distilled student network deciding outside combat
 ```
 
 `run_teacher.sh [GAMES] [WORKERS] [FIRST_SEED] [OUTPUT]` writes one JSON line per game and prints the win
@@ -87,9 +89,9 @@ Verified on the last cleanup: a fresh build played seed 3900012000 to the Heart 
 with no engine fault; the cloud teacher reached the same floor on that seed. Long-run win rates were
 not re-measured with this build.
 
-Not yet one click: the distilled student has no full-game driver in this repository (only the loading
-interface, `student/INTERFACE.md`), and the original-game bridge needs your own copy of the game plus mods
-([`docs/live-original-runbook.md`](docs/live-original-runbook.md)). The tests need the built engine and PyTorch.
+The student driver played seed 3900040000 to the Heart (floor 56) in one test game with no engine fault; that
+is a smoke test, not an evaluation. The original-game runner is in [`live_original/`](live_original/PORTING.md) (as it was run,
+paths still to adapt; needs your own copy of the game plus mods). The tests need the built engine and PyTorch.
 Reproduction details for the older A0 policy are in [`docs/history.md`](docs/history.md).
 
 ## Credits and license

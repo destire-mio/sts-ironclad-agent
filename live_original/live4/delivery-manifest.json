@@ -1,0 +1,28 @@
+{
+  "files": {
+    "cli.py": "0cfae1e76115e5d4361de1f0dcc879f4934ce6601fd0416d3848b3e9630a75b7",
+    "runner.py": "00fa53bbbe0547ad55cdfd0caba2cbbde2f7a053469b0df0d68e7c8143c7c9b9",
+    "student.py": "9be7f931bf220e6baa4a637686eef49d4e4d0c7e5c9f65432cd5ee9422252c00",
+    "runtime-history.json": "2a456fa97b702630702566799df7e2d221866b37578bfc36bd8795726b1a1392",
+    "runtime/live-manifest.json": "cf4cfd77a34c1e3a75b4ef5a776abc6c059fd70a381a5d85397fc17b1708a4d7",
+    "top-candidate/BattleContext.cpp": "a2616f7363c6c28fce55b49d0f36d0ac878b29a98a18d71529f22732a32b4dd8",
+    "student-code/distill2_analyze.py": "37e6af463a3fa4633bc6b7e1e64447a2f222b4b053c19e9f0d2d0ba0920eb257",
+    "student-code/distill2_base.py": "957aa49f389b56df1ccc182f45394c14d983cd34a5743e4c8f5b945c24c3d76b",
+    "student-code/distill2_data.py": "826ee2f3986e64444572b11899305767274542d8e5409d3563105f17d8a74753",
+    "student-code/distill2_extract.py": "06d5e5060777848c8001385f05de602e891a6c95a6a764b1a39d8e6d6a4b9e51",
+    "student-code/distill2_features.py": "508c0f4287a8077f1dfe57d4b44dcec3a3596023f7a3c1ced6e084904dd30606",
+    "student-code/distill2_model.py": "7b9bedefc23e344aacb07717627dd627a695c8e13a227cfaac59e0083b2612b1",
+    "student-code/distill2_parity.py": "827dca777a9ab331c11b9a1e4b1e504c0abef4eb8d2087d4444e70c8a2907204",
+    "student-code/distill2_pipeline.py": "aaf966af857a5c888f469e906269be2d13694788d039ff1645ab63d69e2986c1",
+    "student-code/distill2_provenance.py": "d738d6745adc4a064328b8909b1d6370ae99c96b03dd5632f70789d0b9081872",
+    "student-code/distill2_run.py": "d2683fa66677084b851e6286ee92425d155beb30c0e7f777564574a11d868847",
+    "student-code/distill2_teacher.py": "0ebc1322aa4b48c7325f4c459131fcc70e2dd3f8228a327a42a837c2bc62d701",
+    "student-code/distill2_train.py": "a12368421e4e49d6522b585813526a7e38bd5dde1820c77b4af34d469869f1a1",
+    "runtime/engine/fightsim.cpython-312-darwin.so": "c8f6848d6793e41e0b9267a2f4d93058c250d44bbeb49c40ab2504bfe8b51b27",
+    "runtime/engine/live_combat_search.cpython-312-darwin.so": "cf947a0ef2024cda08e04782f4245f877492c244522b1eeb151eceb20846a800",
+    "runtime/engine/slaythespire.cpython-312-darwin.so": "96dacb0c1de865b49a7854b2a22af5acb4c71b73265cb2da378281dd3fbf55bf"
+  },
+  "runtime": "live4 Top/TimeWarp correction; same teacher source and search configuration",
+  "student_format": "distill2-v1",
+  "minimum_disk": 3000000000
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "5df348729821f42b3d81471fcfeab251809c5cbe419101840797e25c97f7de68",
+  "repaired": "cf4cfd77a34c1e3a75b4ef5a776abc6c059fd70a381a5d85397fc17b1708a4d7",
+  "teacher_old_seeds": [
+    3900012000,
+    3900012014
+  ],
+  "teacher_next_seed": 3900012015,
+  "student_inherited": [
+    3900016000,
+    3900016015
+  ],
+  "student_next_seed": 3900016016
+}
