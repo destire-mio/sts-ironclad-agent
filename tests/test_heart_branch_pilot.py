@@ -1,4 +1,8 @@
 """Intervention labels require frozen-policy continuation and natural replay."""
+import pytest as _pytest
+from pathlib import Path as _Path
+if not (_Path(__file__).resolve().parents[1] / 'runs/heart-training-set-evaluation-20260915-01/config.json').exists():
+    _pytest.skip('needs recorded history not shipped with the repository: runs/heart-training-set-evaluation-20260915-01/config.json', allow_module_level=True)
 from pathlib import Path
 import random
 import sys

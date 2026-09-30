@@ -14,7 +14,8 @@ spec.loader.exec_module(bridge)
 
 def monster(identifier, hp=20, gone=False):
     return {'id': identifier, 'current_hp': hp, 'max_hp': 80 if 'Boss' in identifier else 40,
-            'block': 0, 'is_gone': gone, 'half_dead': False, 'move_id': -1, 'powers': []}
+            'block': 0, 'is_gone': gone, 'half_dead': False,
+            'move_id': -1 if gone or hp <= 0 else 1, 'powers': []}
 
 
 class SlimeTargetTest(unittest.TestCase):

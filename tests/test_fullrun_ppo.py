@@ -8,6 +8,9 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+if not (ROOT / '.runtime/runtime.json').exists():
+    import pytest
+    pytest.skip('needs .runtime/runtime.json from scripts/bootstrap_fullrun.py', allow_module_level=True)
 runtime = json.loads((ROOT / '.runtime/runtime.json').read_text(encoding='utf-8'))
 os.environ['STS_LIGHTSPEED_BUILD'] = str(Path(runtime['module']).parent)
 sys.path.insert(0, str(ROOT / 'agent'))

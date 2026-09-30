@@ -1,4 +1,8 @@
 """Family isolation, cached-score fidelity, and full-run evaluation accounting."""
+import pytest as _pytest
+from pathlib import Path as _Path
+if not (_Path(__file__).resolve().parents[1] / 'runs/heart-branch-pilot-20260916-01/roots.json.gz').exists():
+    _pytest.skip('needs recorded history not shipped with the repository: runs/heart-branch-pilot-20260916-01/roots.json.gz', allow_module_level=True)
 from collections import Counter
 from pathlib import Path
 import random

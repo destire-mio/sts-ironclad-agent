@@ -48,3 +48,7 @@ CMakeCache.txt
 runtime/engine/
 runtime/identity.json
 runtime/manifest.json
+
+# macOS resource-fork junk
+._*
+.DS_Store
