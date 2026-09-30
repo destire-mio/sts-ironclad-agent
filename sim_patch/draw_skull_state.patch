@@ -1,0 +1,177 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -198,6 +198,9 @@
+         bc.player.cc = CharacterClass::IRONCLAD;
+         bc.player.curHp = py::cast<int>(player["current_hp"]);
+         bc.player.maxHp = py::cast<int>(player["max_hp"]);
++        // Legacy snapshots lack these flags; current exporters preserve history.
++        bc.player.isBloodied = player.contains("is_bloodied") ? py::cast<bool>(player["is_bloodied"])
++            : bc.player.curHp <= bc.player.maxHp / 2;
+         bc.player.block = py::cast<int>(player["block"]);
+         bc.player.energy = py::cast<int>(player["energy"]);
+         bc.player.gold = player.contains("gold") ? py::cast<int>(player["gold"]) : 0;
+@@ -331,6 +334,8 @@
+                 }
+             }
+         }
++        bc.player.redSkullActive = player.contains("red_skull_active") ? py::cast<bool>(player["red_skull_active"])
++            : bc.player.hasRelic<RelicId::RED_SKULL>() && bc.player.isBloodied;
+         return bc;
+     }
+ }
+@@ -1446,6 +1451,8 @@
+     pybind11::class_<Player>(m, "Player")
+         .def_readonly("cur_hp", &Player::curHp)
+         .def_readonly("max_hp", &Player::maxHp)
++        .def_readonly("is_bloodied", &Player::isBloodied)
++        .def_readonly("red_skull_active", &Player::redSkullActive)
+         .def_readonly("block", &Player::block)
+         .def_readonly("energy", &Player::energy)
+         .def_readonly("strength", &Player::strength)
+@@ -1616,6 +1623,7 @@
+             values["sundial"] = bc.player.sundialCounter;
+             values["necronomicon_used"] = bc.player.haveUsedNecronomiconThisTurn;
+             values["orange_pellets_mask"] = bc.player.orangePelletsCardTypesPlayed.to_ulong();
++            values["red_skull_active"] = bc.player.redSkullActive;
+             return values;
+         })
+         .def("__repr__", [](const BattleContext &bc) {
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -39,6 +39,9 @@
+         int16_t gold = 0;
+         int curHp = 80;
+         int maxHp = 80;
++        // Historical transitions, not predicates recomputed after max HP changes.
++        bool isBloodied = false;
++        bool redSkullActive = false;
+         int energy = 0;
+         int8_t energyPerTurn = 3;
+         int8_t cardDrawPerTurn = 5; // AbstractPlayer gameHandSize
+--- a/src/combat/CardManager.cpp
++++ b/src/combat/CardManager.cpp
+@@ -398,11 +398,15 @@
+ // **************** BEGIN SPECIAL HELPERS ****************
+ 
+ void CardManager::draw(BattleContext &bc, int amount) {
+-    int evolve = bc.player.getStatus<PS::EVOLVE>();
+-    int fireBreathing = bc.player.getStatus<PS::FIRE_BREATHING>();
+-
+     for (int i = 0; i < amount; i++) {
+         auto c = popFromDrawPile();
++
++        // triggerWhenDrawn runs before the player's ordered onCardDraw hooks.
++        if (c.getId() == CardId::VOID) {
++            bc.addToBot(Action{[](BattleContext &ctx) {
++                ctx.player.energy = std::max(0, ctx.player.energy-1);
++            }});
++        }
+ 
+         if (bc.player.hasStatus<PS::CONFUSED>()) {
+             if (c.cost >= 0) {  // todo status and curses affected by this?
+@@ -420,25 +424,16 @@
+                 c.setCostForTurn(-9);
+             }
+ 
+-        } else if (c.getType() == CardType::STATUS) {
+-            if (evolve) {
+-                bc.addToBot( Actions::DrawCards(evolve) );
++        }
++
++        for (const auto &power : bc.player.powerOrder) {
++            if (power.status == PS::EVOLVE && c.getType() == CardType::STATUS &&
++                    !bc.player.hasStatus<PS::NO_DRAW>()) {
++                bc.addToBot(Actions::DrawCards(bc.player.getStatus<PS::EVOLVE>()));
++            } else if (power.status == PS::FIRE_BREATHING &&
++                    (c.getType() == CardType::STATUS || c.getType() == CardType::CURSE)) {
++                bc.addToBot(Actions::DamageAllEnemy(bc.player.getStatus<PS::FIRE_BREATHING>()));
+             }
+-            if (fireBreathing) {
+-                bc.addToBot( Actions::DamageAllEnemy(fireBreathing) );
+-            }
+-            if (c.getId() == CardId::VOID) {
+-                // Void loses energy after actions already queued, such as Offering's gain.
+-                bc.addToBot(Action{[](BattleContext &ctx) {
+-                    ctx.player.energy = std::max(0, ctx.player.energy-1);
+-                }});
+-            }
+-
+-        } else if (c.getType() == CardType::CURSE) {
+-            if (fireBreathing) {
+-                bc.addToBot( Actions::DamageAllEnemy(fireBreathing) );
+-            }
+-
+         }
+ 
+         // do we need to check this?
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -218,14 +218,15 @@
+         amount = (amount * 3 + 1) / 2;
+     }
+ 
+-    bool wasBloodied = curHp <= maxHp/2;
+-
+     curHp = std::min(static_cast<int>(maxHp), curHp + amount);
+ 
+-    if (triggerRedSkull && wasBloodied && curHp > maxHp/2 && hasRelic<RelicId::RED_SKULL>()) {
+-        // Healing may run inside the same damage action as Red Skull's gain.
+-        // Queue at top so the later loss resolves before that pending gain.
+-        bc.addToTop(Actions::DebuffPlayer<PS::STRENGTH>(-3, false));
++    if (isBloodied && curHp > maxHp/2) {
++        isBloodied = false;
++        if (triggerRedSkull && redSkullActive && hasRelic<RelicId::RED_SKULL>()) {
++            // A pending gain can follow this loss during revival.
++            bc.addToTop(Actions::DebuffPlayer<PS::STRENGTH>(-3, false));
++        }
++        redSkullActive = false;
+     }
+ }
+ 
+@@ -338,8 +339,6 @@
+ 
+ void Player::hpWasLost(BattleContext &bc, int amount, bool selfDamage) {
+     assert(amount > 0);
+-
+-    bool wasBloodied = curHp <= maxHp/2;
+ 
+     curHp = std::max(0, curHp-amount);
+ 
+@@ -371,9 +370,12 @@
+         bc.addToTop( Actions::DrawCards(1) );
+     }
+ 
+-    if (hasRelic<RelicId::RED_SKULL>() && !wasBloodied && curHp <= maxHp/2) {
+-        // The original applies this after the damage/revival action finishes.
+-        bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(3));
++    if (!isBloodied && curHp <= maxHp/2) {
++        isBloodied = true;
++        if (hasRelic<RelicId::RED_SKULL>() && !redSkullActive) {
++            bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(3));
++            redSkullActive = true;
++        }
+     }
+ 
+     bc.cards.onTookDamage();
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -54,6 +54,8 @@
+     player.cc = gc.cc;
+     player.curHp = gc.curHp;
+     player.maxHp = gc.maxHp;
++    player.isBloodied = player.curHp <= player.maxHp / 2;
++    player.redSkullActive = false;
+     player.gold = gc.gold;
+ 
+     monsters.init(*this, encounterToInit);
+@@ -444,8 +446,9 @@
+         addToBot( Actions::DamageAllEnemy(3) );
+     }
+ 
+-    if (gc.hasRelic(R::RED_SKULL) && p.curHp <= p.maxHp / 2) {
++    if (gc.hasRelic(R::RED_SKULL) && p.isBloodied) {
+         p.buff<PS::STRENGTH>(3);
++        p.redSkullActive = true;
+     }
+ 
+     for (auto r : atTurnStartPostDraw) {

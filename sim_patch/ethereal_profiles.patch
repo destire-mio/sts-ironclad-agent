@@ -1,0 +1,226 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -142,6 +142,33 @@
+         return rng;
+     }
+ 
++    EndTurnShuffleState endTurnShuffleFromSnapshot(const py::dict &src) {
++        EndTurnShuffleState value;
++        const auto mode = py::cast<std::string>(src["mode"]);
++        if (mode == "basemod_seeded") value.mode = EndTurnShuffleMode::BASEMOD_SEEDED;
++        else if (mode == "java_shared") value.mode = EndTurnShuffleMode::JAVA_SHARED;
++        else throw std::invalid_argument("unknown end-turn shuffle mode");
++        if (!py::isinstance<py::bool_>(src["shared_rng_initialized"]))
++            throw std::invalid_argument("shared_rng_initialized must be boolean");
++        value.sharedRngInitialized = py::cast<bool>(src["shared_rng_initialized"]);
++        if (value.sharedRngInitialized) {
++            if (!py::isinstance<py::int_>(src["shared_seed48"]) || py::isinstance<py::bool_>(src["shared_seed48"]))
++                throw std::invalid_argument("shared_seed48 must be an integer");
++            value.sharedRng.setRawSeed(py::cast<std::uint64_t>(src["shared_seed48"]));
++        }
++        else if (src.contains("shared_seed48"))
++            throw std::invalid_argument("uninitialized shared RNG cannot have a seed");
++        return value;
++    }
++
++    py::dict endTurnShuffleSnapshot(const EndTurnShuffleState &value) {
++        py::dict result;
++        result["mode"] = value.mode == EndTurnShuffleMode::BASEMOD_SEEDED ? "basemod_seeded" : "java_shared";
++        result["shared_rng_initialized"] = value.sharedRngInitialized;
++        if (value.sharedRngInitialized) result["shared_seed48"] = value.sharedRng.rawSeed();
++        return result;
++    }
++
+     void setRelicCounter(Player &player, RelicId id, int counter) {
+         switch (id) {
+             case RelicId::HAPPY_FLOWER: player.happyFlowerCounter = counter; break;
+@@ -164,6 +191,8 @@
+             ? static_cast<MonsterEncounter>(py::cast<int>(snapshot["encounter"]))
+             : MonsterEncounter::INVALID;
+         bc.turn = std::max(0, py::cast<int>(snapshot["turn"]) - 1);
++        if (snapshot.contains("end_turn_shuffle"))
++            bc.endTurnShuffle = endTurnShuffleFromSnapshot(py::cast<py::dict>(snapshot["end_turn_shuffle"]));
+         if (snapshot.contains("frame_delta_seconds")) bc.actionFrameDelta = py::cast<float>(snapshot["frame_delta_seconds"]);
+         bc.outcome = Outcome::UNDECIDED;
+         bc.inputState = InputState::PLAYER_NORMAL;
+@@ -649,6 +678,10 @@
+         .def_readwrite("screen_state", &GameContext::screenState)
+ 
+         .def_readwrite("seed", &GameContext::seed)
++        .def_property("end_turn_shuffle",
++             [](const GameContext &gc) { return endTurnShuffleSnapshot(gc.endTurnShuffle); },
++             [](GameContext &gc, const pybind11::dict &value) { gc.endTurnShuffle = endTurnShuffleFromSnapshot(value); },
++             "reference profile and observed shared Java RNG, preserved across battles")
+         .def_readwrite("cur_map_node_x", &GameContext::curMapNodeX)
+         .def_readwrite("cur_map_node_y", &GameContext::curMapNodeY)
+         .def_readwrite("cur_room", &GameContext::curRoom)
+@@ -1570,6 +1603,9 @@
+         .def_readonly("outcome", &BattleContext::outcome)
+         .def_readonly("input_state", &BattleContext::inputState)
+         .def_readonly("turn", &BattleContext::turn)
++        .def_property_readonly("end_turn_shuffle", [](const BattleContext &bc) {
++            return endTurnShuffleSnapshot(bc.endTurnShuffle);
++        }, "branch-local end-turn shuffle profile and shared Java RNG state")
+         .def_readonly("encounter", &BattleContext::encounter)
+         .def_readonly("player", &BattleContext::player)
+         .def_property_readonly("monsters", [](const BattleContext &bc) {
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -69,6 +69,7 @@
+         Random monsterHpRng;
+         Random potionRng;
+         Random shuffleRng;
++        EndTurnShuffleState endTurnShuffle;
+ 
+         int ascension = 0;
+         Outcome outcome = Outcome::UNDECIDED;
+--- a/include/game/GameContext.h
++++ b/include/game/GameContext.h
+@@ -177,6 +177,7 @@
+         Random potionRng;
+         Random relicRng;
+         Random shuffleRng;
++        EndTurnShuffleState endTurnShuffle;
+         Random treasureRng;
+ 
+         // todo change these to fixed lists
+--- a/include/game/Random.h
++++ b/include/game/Random.h
+@@ -4,6 +4,10 @@
+ 
+ #ifndef STS_LIGHTSPEED_RANDOM_H
+ #define STS_LIGHTSPEED_RANDOM_H
++
++#include <cstdint>
++#include <stdexcept>
++#include <utility>
+ 
+ namespace java {
+ 
+@@ -22,6 +26,12 @@
+     public:
+         Random(std::uint64_t seed) : seed(initialScramble(seed)) {}
+ 
++        [[nodiscard]] std::uint64_t rawSeed() const { return seed; }
++        void setRawSeed(std::uint64_t value) {
++            if (value > mask) throw std::invalid_argument("Java Random state exceeds 48 bits");
++            seed = value;
++        }
++
+         std::int32_t next(std::int32_t bits) {
+             seed = (seed * multiplier + addend) & mask;
+             return static_cast<std::int32_t>(seed >> (48 - bits));
+@@ -32,13 +42,14 @@
+         }
+ 
+         int32_t nextInt(int32_t bound) {
++            if (bound <= 0) throw std::invalid_argument("Java Random bound must be positive");
+             int r = next(31);
+             int m = bound - 1;
+             if ((bound & m) == 0)  // i.e., bound is a power of 2
+                 r = static_cast<int32_t>( ((bound * static_cast<std::uint64_t>(r)) >> 31) );
+             else {
+                 for (int32_t u = r;
+-                     u - (r = u % bound) + m < 0;
++                     static_cast<std::uint32_t>(u) - (r = u % bound) + static_cast<std::uint32_t>(m) >= (1U << 31);
+                      u = next(31))
+                     ;
+             }
+@@ -49,7 +60,7 @@
+     namespace Collections {
+ 
+         template <typename ForwardIterator>
+-        void shuffle(ForwardIterator begin, ForwardIterator end, java::Random rnd) {
++        void shuffleWithState(ForwardIterator begin, ForwardIterator end, java::Random &rnd) {
+             auto size = static_cast<int32_t>(end-begin);
+ 
+             for (int i=size; i>1; i--) {
+@@ -57,11 +68,26 @@
+             }
+         }
+ 
++        template <typename ForwardIterator>
++        void shuffle(ForwardIterator begin, ForwardIterator end, java::Random rnd) {
++            shuffleWithState(begin, end, rnd);
++        }
++
+     }
+ }
+ 
+ 
+ namespace sts {
++
++    enum class EndTurnShuffleMode { BASEMOD_SEEDED, JAVA_SHARED };
++
++    // The project's installed reference uses BaseMod's seed-derived shuffle.
++    // The unpatched Java path requires the independently captured shared RNG.
++    struct EndTurnShuffleState {
++        EndTurnShuffleMode mode = EndTurnShuffleMode::BASEMOD_SEEDED;
++        bool sharedRngInitialized = false;
++        java::Random sharedRng{0};
++    };
+ 
+     class Random {
+     public:
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -33,6 +33,7 @@
+     cardRandomRng = startRandom;
+     miscRng = gc.miscRng;
+     potionRng = gc.potionRng;
++    endTurnShuffle = gc.endTurnShuffle;
+ 
+     ascension = gc.ascension;
+     outcome = Outcome::UNDECIDED;
+@@ -492,6 +493,7 @@
+     g.monsterHpRng = monsterHpRng;
+     g.potionRng = potionRng;
+     g.shuffleRng = shuffleRng;
++    g.endTurnShuffle = endTurnShuffle;
+ 
+     g.curHp = player.curHp;
+     g.maxHp = player.maxHp;
+@@ -2488,6 +2490,8 @@
+ }
+ 
+ void BattleContext::discardAtEndOfTurn() {
++    if (endTurnShuffle.mode == EndTurnShuffleMode::JAVA_SHARED && !endTurnShuffle.sharedRngInitialized)
++        throw std::runtime_error("shared Java end-turn shuffle requires observed RNG state");
+     int retainCount = 0;
+     for (int i = 0; i < cards.cardsInHand; ++i) {
+         auto c = cards.hand[i];
+@@ -2514,7 +2518,19 @@
+         addToTop(Actions::DiscardAtEndOfTurnHelper());
+     }
+ 
+-    for (int i = 0; i < cards.cardsInHand; ++i) {
++    // The Java action shuffles a copy of every non-retained card, not just
++    // Ethereal cards. The hand itself keeps its order for ordinary discards.
++    std::array<int, CardManager::MAX_HAND_SIZE> order{};
++    for (int i = 0; i < cards.cardsInHand; ++i) order[i] = i;
++    if (endTurnShuffle.mode == EndTurnShuffleMode::BASEMOD_SEEDED) {
++        java::Collections::shuffle(order.begin(), order.begin() + cards.cardsInHand,
++                java::Random(seed + static_cast<std::uint64_t>(floorNum) * 55ULL + turn + 1));
++    } else {
++        java::Collections::shuffleWithState(order.begin(), order.begin() + cards.cardsInHand,
++                endTurnShuffle.sharedRng);
++    }
++    for (int j = 0; j < cards.cardsInHand; ++j) {
++        const int i = order[j];
+         const auto &c = cards.hand[i];
+         if (c.isEthereal()) {
+             addToTop(Actions::ExhaustSpecificCardInHand(i, c.uniqueId)); // c.triggerOnEndOfPlayerTurn
+@@ -2569,11 +2585,11 @@
+ 
+     int foundIdx = -1;
+ 
+-    if (idx < cards.cardsInHand && cards.hand[idx].uniqueId == uniqueId) {
++    if (idx >= 0 && idx < cards.cardsInHand && cards.hand[idx].uniqueId == uniqueId) {
+         foundIdx = idx;
+     } else {
+         for (int i = 0; i < cards.cardsInHand; ++i) {
+-            if (cards.hand[idx].uniqueId == uniqueId) {
++            if (cards.hand[i].uniqueId == uniqueId) {
+                foundIdx = i;
+                break;
+             }

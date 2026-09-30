@@ -1,0 +1,97 @@
+--- a/include/combat/Actions.h
++++ b/include/combat/Actions.h
+@@ -173,7 +173,6 @@
+         static Action SpotWeaknessAction(int target, int strength); // Spot Weakness
+         static Action WhirlwindAction(DamageMatrix damageMatrix, int energy, bool useEnergy);
+ 
+-        static Action AttackAllMonsterRecursive(DamageMatrix matrix, int timesRemaining);
+     };
+ 
+ }
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -300,7 +300,7 @@
+     }
+ 
+     if (damage > 0) {
+-        lastAttackUnblockedDamage = damage;
++        lastAttackUnblockedDamage = std::min(damage, curHp);
+ 
+         if (hasStatus<PS::PLATED_ARMOR>()) {
+             decrementStatus<PS::PLATED_ARMOR>();
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -1132,12 +1132,19 @@
+             break;
+         }
+ 
+-        case CardId::RAMPAGE: { // todo doubled card damage is changed by the first
++        case CardId::RAMPAGE: {
+             const int damage = calculateCardDamage(c, t, 8+c.specialData);
+             addToBot( Actions::AttackEnemy(t, damage) );
+ 
+             if (item.purgeOnUse) {
+                 cards.findAndUpgradeSpecialData(c.uniqueId, up ? 8 : 5);
++                // Copies share the original card's identity, including pending copies.
++                for (int i = 0; i < cardQueue.size; ++i) {
++                    auto &pending = cardQueue.arr[(cardQueue.frontIdx + i) % CardQueue::capacity];
++                    if (!pending.isEndTurn && pending.card.uniqueId == c.uniqueId) {
++                        pending.card.specialData += up ? 8 : 5;
++                    }
++                }
+             }
+             c.specialData += up ? 8 : 5;
+ 
+@@ -3146,6 +3153,7 @@
+         auto c = cards.hand[handIdx];
+         cards.removeFromHandAtIdx(handIdx);
+         cards.moveToDiscardPile(c);
++        ++player.cardsDiscardedThisTurn;
+         onManualDiscard(c);
+     }
+ }
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -1141,7 +1141,12 @@
+ 
+ Action Actions::LimitBreakAction() {
+     return {[] (BattleContext &bc) {
+-        bc.player.buff<PS::STRENGTH>(bc.player.getStatus<PS::STRENGTH>());
++        const int amount = bc.player.getStatus<PS::STRENGTH>();
++        if (amount < 0) {
++            bc.addToTop(Actions::DebuffPlayer<PS::STRENGTH>(amount, false));
++        } else if (amount > 0) {
++            bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(amount));
++        }
+     }};
+ }
+ 
+@@ -1258,22 +1263,9 @@
+         }
+ 
+         const auto effectAmount = energy + (bc.player.hasRelic<R::CHEMICAL_X>() ? 2 : 0);
+-        if (effectAmount > 0) {
+-            Actions::AttackAllMonsterRecursive(damageMatrix, effectAmount).actFunc(bc);
+-        }
+-    }};
+-}
+-
+-Action Actions::AttackAllMonsterRecursive(DamageMatrix matrix, int timesRemaining) {
+-    return {[=] (BattleContext &bc) {
+-        if (timesRemaining <= 0) {
+-            return;
+-        }
+-
+-        Actions::AttackAllEnemy(matrix).actFunc(bc);
+-
+-        if (timesRemaining > 1) {
+-            bc.addToTop(AttackAllMonsterRecursive(matrix, timesRemaining-1)); // todo should this be to the top? test with
+-        }
+-    }};
+-}
++        // Whirlwind appends its hits after already queued on-use effects.
++        for (int i = 0; i < effectAmount; ++i) {
++            bc.addToBot(Actions::AttackAllEnemy(damageMatrix));
++        }
++    }};
++}

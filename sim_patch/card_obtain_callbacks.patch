@@ -1,0 +1,187 @@
+--- a/include/game/ShopPresentation.h
++++ b/include/game/ShopPresentation.h
+@@ -375,7 +375,7 @@
+             else ++i;
+         }
+     }
+-    void updateEffects(Random &rng) {
++    void updateTopEffects(Random &rng) {
+         // New particles enter their queues after this frame's updates. Existing
+         // particles have no RNG consumers; their lifetimes remain value-owned.
+         updateLifetimes(topParticles);updateLifetimes(regularParticles);
+@@ -404,6 +404,8 @@
+         if (purge.present && purge.duration<0) purge=Purge{};
+         updateUpgrades(rng,hadPurge,false);
+         updateTorchParticles();
++    }
++    void updateRegularEffects(Random &rng) {
+         // Existing effectList entries update before its queue is drained. A
+         // newly constructed heal line renders this frame but updates next frame.
+         updateLifetimes(healNumbers);
+@@ -413,9 +415,12 @@
+             else {line.duration=add(line.duration,-delta);rng.nextFloat();}
+             if (line.duration<0) healLines.erase(healLines.begin()+i);else ++i;
+         }
++    }
++    void drainHealingQueues() {
+         healLines.insert(healLines.end(),pendingHealLines.begin(),pendingHealLines.end());pendingHealLines.clear();
+         healNumbers.insert(healNumbers.end(),pendingHealNumbers.begin(),pendingHealNumbers.end());pendingHealNumbers.clear();
+     }
++    void updateEffects(Random &rng) {updateTopEffects(rng);updateRegularEffects(rng);}
+     void renderHeal(Random &rng) {
+         // Both effectList passes precede the screen (merchant speech) and
+         // topLevelEffects (purge). Preserve each line's renderBehind identity.
+@@ -451,10 +456,12 @@
+         potionParticles.push_back(particle);
+         p.timer=sample(rng,particle.rare?.35f:.25f,particle.rare?.5f:.3f);
+     }
++    void obtainSoul(Random &rng) {sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);}
+     void finishAfterEffects(Random &rng,bool obtainsCard=false) {
+-        // FastCardObtainEffect updates in effectList, after topLevelEffects.
+-        // A purge's fade-out particles can therefore precede the Soul draws.
+-        if (obtainsCard) {sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);}
++        if (obtainsCard) obtainSoul(rng);
++        // A regular-effect callback can add healing after older lines update.
++        // All queued lines render now and start lifetime updates next frame.
++        drainHealingQueues();
+         updatePanels(rng);renderHeal(rng);render(rng);renderEffects(rng);
+     }
+     void finishFrame(Random &rng,bool obtainsCard=false) {
+@@ -462,12 +469,15 @@
+     }
+     void advance(Random &rng,int frames) {for (int i=0;i<frames;++i) {update(rng);finishFrame(rng);}}
+     void beforeCardPurchase(Random &rng) { update(rng); }
+-    void afterCardPurchase(Random &rng) {
+-        // ShopScreen.purchaseCard -> createSpeech -> FastCardObtainEffect ->
+-        // Soul.setSharedVariables -> render. The first word is parsed next frame.
++    void beforeShopCardObtain(Random &rng) {
++        // Shop cards enter topLevelEffects after the existing top-level effects,
++        // following purchase speech and before regular healing updates.
+         speechTimer=sample(rng,40,60);
+         buySpeech(rng);
+-        finishFrame(rng,true);
++        updateTopEffects(rng);
++    }
++    void afterShopCardObtain(Random &rng) {
++        obtainSoul(rng);updateRegularEffects(rng);finishAfterEffects(rng);
+         // Frame count is declared before the action, never obtained from an
+         // original post-state or trace. Fast-mode Soul callbacks finish by 31.
+         advance(rng,timing.card-1);
+@@ -500,7 +510,7 @@
+         // GRID closes first. OverlayMenu updates the hidden pile panels before
+         // Dolly constructs the effect; effectList has already updated this frame.
+         ++frame;if (returnsToShop) reopenShop();else rewardsVisible=true;
+-        updateEffects(rng);updatePanels(rng);
++        updateEffects(rng);drainHealingQueues();updatePanels(rng);
+         // ShowCardAndObtainEffect queues 50 CardPoofParticles. Their later
+         // update/render has no RNG, and all have expired at the settled boundary.
+         for (int i=0;i<50;++i) {
+@@ -520,8 +530,8 @@
+             finishFrame(rng);
+         }
+     }
+-    void afterMirrorObtain(Random &rng,int elapsed) {
+-        finishAfterEffects(rng,true);advance(rng,timing.mirror-elapsed);
++    void afterMirrorObtain(Random &rng,int elapsed,bool obtained) {
++        finishAfterEffects(rng,obtained);advance(rng,timing.mirror-elapsed);
+     }
+     void requirePurge() const {
+         requireClock(timing.purgeOpen);requireClock(timing.purgeConfirm);requireClock(timing.purgeCancel);
+@@ -573,12 +583,15 @@
+             java::Collections::shuffleWithState(tips.remaining.begin(),tips.remaining.end(),collections);
+         }
+     }
+-    void claimRewardCard(Random &rng) {
++    void beforeRewardCardObtain(Random &rng) {
+         requireRewards();requireClock(timing.rewardCard);
+         // Open CARD_REWARD for two frames, click on the third. The queued
+         // FastCardObtainEffect reaches Soul on the fourth frame.
+         rewardsVisible=false;advance(rng,2);rewardsVisible=true;advance(rng,1);
+-        update(rng);finishFrame(rng,true);advance(rng,timing.rewardCard-4);
++        update(rng);updateEffects(rng);
++    }
++    void afterRewardCardObtain(Random &rng) {
++        finishAfterEffects(rng,true);advance(rng,timing.rewardCard-4);
+     }
+     void peekReward(Random &rng) {
+         requireRewards();requireClock(timing.rewardPeek);
+@@ -616,11 +629,11 @@
+     }
+     void leave(Random &rng) {
+         // CancelButton closes SHOP after its update and before its render.
+-        update(rng);updateEffects(rng);updatePanels(rng);shopVisible=false;renderHeal(rng);renderEffects(rng);
++        update(rng);updateEffects(rng);drainHealingQueues();updatePanels(rng);shopVisible=false;renderHeal(rng);renderEffects(rng);
+         // Global purge effects keep updating/rendering across SHOP close and
+         // MAP open. Map sound occurs in the overlay update after global effects.
+         ++frame;updateScene(rng);finishFrame(rng);
+-        ++frame;updateScene(rng);updateEffects(rng);updatePanels(rng);
++        ++frame;updateScene(rng);updateEffects(rng);drainHealingQueues();updatePanels(rng);
+         rng.nextBoolean();rng.nextFloat();renderHeal(rng);renderEffects(rng);
+         ++frame;finishFrame(rng);closed=true;
+     }
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -3978,11 +3978,18 @@
+ 
+         case CardSelectScreenType::DUPLICATE: {
+             if (shopPresentation.active()) {
++                shopPresentation.requireMirror();
++                // ShowCardAndObtainEffect consumes Omamori in its constructor;
++                // a cancelled effect never reaches onObtainCard or Soul.
++                const auto &selected=info.haveSelectedCards.front().card;
++                const bool blocked=selected.getType()==CardType::CURSE && hasRelic(RelicId::OMAMORI) &&
++                    relics.getRelicValue(RelicId::OMAMORI)>0;
+                 // Reopen the previous screen before the delayed obtain callback.
+                 regainControl();
++                if (blocked) --relics.getRelicValueRef(RelicId::OMAMORI);
+                 const int elapsed=shopPresentation.beforeMirrorObtain(mathUtilRng,screenState==ScreenState::SHOP_ROOM);
+-                for (const auto &c:info.haveSelectedCards) deck.obtain(*this,c.card,1);
+-                shopPresentation.afterMirrorObtain(mathUtilRng,elapsed);
++                if (!blocked) for (const auto &c:info.haveSelectedCards) deck.obtain(*this,c.card,1,false);
++                shopPresentation.afterMirrorObtain(mathUtilRng,elapsed,!blocked);
+                 break;
+             }
+             for (const auto &c:info.haveSelectedCards) deck.obtain(*this,c.card,1);
+@@ -4265,6 +4272,12 @@
+         case RelicId::MARK_OF_THE_BLOOM: case RelicId::LEES_WAFFLE: case RelicId::DOLLYS_MIRROR:
+         case RelicId::STRAWBERRY: case RelicId::PEAR: case RelicId::MANGO:
+             state.requireObtain();break;
++        case RelicId::OMAMORI:
++            if (relic.data<0 || relic.data>2) throw std::invalid_argument("Omamori charges outside initial shop scope");
++            state.requireObtain();break;
++        case RelicId::CERAMIC_FISH: case RelicId::DARKSTONE_PERIAPT:
++        case RelicId::BLOODY_IDOL: case RelicId::ECTOPLASM: case RelicId::DU_VU_DOLL:
++            state.requireObtain();break;
+         default: throw std::invalid_argument("shop presentation relic callback outside modeled scope");
+     }
+     if (state.trackRewards) for (int i=0;i<3;++i)
+--- a/src/game/Shop.cpp
++++ b/src/game/Shop.cpp
+@@ -112,8 +112,9 @@
+     }
+     if (presentation) {
+         // The purchased card has left the stock; keep its value across restock.
++        gc.shopPresentation.beforeShopCardObtain(gc.mathUtilRng);
+         gc.deck.obtain(gc, purchased, 1);
+-        gc.shopPresentation.afterCardPurchase(gc.mathUtilRng);
++        gc.shopPresentation.afterShopCardObtain(gc.mathUtilRng);
+     }
+ }
+ 
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -357,12 +357,13 @@
+                     gc.playerIncreaseMaxHp(2);
+                 }
+             } else {
++                if (presentation) gc.shopPresentation.beforeRewardCardObtain(gc.mathUtilRng);
+                 gc.obtainCard(r.cardRewards[a.getIdx1()][a.getIdx2()]);
+             }
+             r.removeCardReward(a.getIdx1());
+             if (presentation) {
+                 if (a.getIdx2()==5) gc.shopPresentation.afterRewardBowl(gc.mathUtilRng);
+-                else gc.shopPresentation.claimRewardCard(gc.mathUtilRng);
++                else gc.shopPresentation.afterRewardCardObtain(gc.mathUtilRng);
+             }
+             break;
+ 

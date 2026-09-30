@@ -1,0 +1,26 @@
+[
+  {
+    "name": "red_skull_feed_inactive_at_shifted_half_hp",
+    "fixture": {"hand": ["Feed"], "current_hp": 41, "encounter": "2 Orb Walkers",
+      "monster_hp": 10, "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["play 1 1"]
+  },
+  {
+    "name": "red_skull_fruit_juice_inactive_at_shifted_half_hp",
+    "fixture": {"hand": ["Defend_R"], "current_hp": 41, "potion": "Fruit Juice",
+      "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["potion use 0"]
+  },
+  {
+    "name": "red_skull_feed_above_new_half_hp_control",
+    "fixture": {"hand": ["Feed"], "current_hp": 42, "encounter": "2 Orb Walkers",
+      "monster_hp": 10, "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["play 1 1"]
+  },
+  {
+    "name": "red_skull_feed_already_active_control",
+    "fixture": {"hand": ["Feed"], "current_hp": 40, "encounter": "2 Orb Walkers",
+      "monster_hp": 10, "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["play 1 1"]
+  }
+]

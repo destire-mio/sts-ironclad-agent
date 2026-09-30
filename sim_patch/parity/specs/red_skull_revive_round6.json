@@ -1,0 +1,42 @@
+[
+  {
+    "name": "red_skull_bark_fairy_at_strength_cap",
+    "fixture": {
+      "hand": ["Defend_R"], "current_hp": 50,
+      "player_strength": 999, "monster_strength": 100,
+      "relics": ["Red Skull", "SacredBark"],
+      "potion": "FairyPotion", "initialize_relics": true
+    },
+    "commands": ["end", "end"]
+  },
+  {
+    "name": "red_skull_bark_fairy_low_strength_control",
+    "fixture": {
+      "hand": ["Defend_R"], "current_hp": 50,
+      "player_strength": 10, "monster_strength": 100,
+      "relics": ["Red Skull", "SacredBark"],
+      "potion": "FairyPotion", "initialize_relics": true
+    },
+    "commands": ["end", "end"]
+  },
+  {
+    "name": "red_skull_fairy_without_bark_control",
+    "fixture": {
+      "hand": ["Defend_R"], "current_hp": 50,
+      "player_strength": 999, "monster_strength": 100,
+      "relics": ["Red Skull"],
+      "potion": "FairyPotion", "initialize_relics": true
+    },
+    "commands": ["end", "end"]
+  },
+  {
+    "name": "bark_fairy_without_red_skull_control",
+    "fixture": {
+      "hand": ["Defend_R"], "current_hp": 50,
+      "player_strength": 999, "monster_strength": 100,
+      "relics": ["SacredBark"],
+      "potion": "FairyPotion", "initialize_relics": true
+    },
+    "commands": ["end", "end"]
+  }
+]

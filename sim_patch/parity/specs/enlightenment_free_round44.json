@@ -1,0 +1,193 @@
+[
+  {
+    "name": "enlightenment-free:upgraded-mummified",
+    "fixture": {
+      "hand": [
+        "Inflame",
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bludgeon"
+      ],
+      "relics": [
+        "Mummified Hand"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:upgraded-zero-energy",
+    "fixture": {
+      "hand": [
+        "Inflame",
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bludgeon"
+      ],
+      "relics": [
+        "Mummified Hand"
+      ],
+      "energy": 1
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:unupgraded-control",
+    "fixture": {
+      "hand": [
+        "Inflame",
+        "Enlightenment",
+        "Bludgeon"
+      ],
+      "relics": [
+        "Mummified Hand"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:normal-upgraded-control",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bludgeon"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:pyramid-next-turn",
+    "fixture": {
+      "hand": [
+        "Inflame",
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bludgeon"
+      ],
+      "relics": [
+        "Mummified Hand",
+        "Runic Pyramid"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "end",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:mixed-reductions",
+    "fixture": {
+      "hand": [
+        "Inflame",
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bash",
+        "Bludgeon"
+      ],
+      "relics": [
+        "Mummified Hand"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:madness-permanent-control",
+    "fixture": {
+      "hand": [
+        "Madness",
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        },
+        "Bludgeon"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:normal-unupgraded-control",
+    "fixture": {
+      "hand": [
+        "Enlightenment",
+        "Bludgeon"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  },
+  {
+    "name": "enlightenment-free:liquid-memories",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Enlightenment",
+          "upgrades": 1
+        }
+      ],
+      "discard": [
+        "Bludgeon"
+      ],
+      "potion": "LiquidMemories",
+      "energy": 3
+    },
+    "commands": [
+      "potion use 0",
+      "play 1",
+      "play 1 0",
+      "end"
+    ]
+  }
+]

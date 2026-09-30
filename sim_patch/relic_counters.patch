@@ -1,0 +1,55 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -165,7 +165,7 @@
+             }
+ 
+             case R::HAPPY_FLOWER:
+-                player.happyFlowerCounter = r.data + 1;
++                player.happyFlowerCounter = r.data == -1 ? 1 : r.data + 1;
+                 if (player.happyFlowerCounter == 3) {
+                     ++player.energy;
+                     player.happyFlowerCounter = 0;
+@@ -173,8 +173,8 @@
+                 break;
+ 
+             case R::INCENSE_BURNER:
+-                p.incenseBurnerCounter = r.data;
+-                if (++p.incenseBurnerCounter == 6) {
++                p.incenseBurnerCounter = r.data == -1 ? 1 : r.data + 1;
++                if (p.incenseBurnerCounter == 6) {
+                     p.incenseBurnerCounter = 0;
+                     p.buff<PS::INTANGIBLE>(1);
+                 }
+@@ -586,8 +586,8 @@
+                 break;
+ 
+             case RelicId::NEOWS_LAMENT:
+-                if (r.data > 0) {
+-                    --r.data;
++                if (r.data > 0 && --r.data == 0) {
++                    r.data = -2; // Original spent sentinel after the last charge.
+                 }
+                 break;
+ 
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -605,7 +605,8 @@
+     }
+ 
+     if (hasRelic<R::HAPPY_FLOWER>()) {
+-        if (++happyFlowerCounter == 3) {
++        happyFlowerCounter = happyFlowerCounter == -1 ? 1 : happyFlowerCounter + 1;
++        if (happyFlowerCounter == 3) {
+             happyFlowerCounter = 0;
+             bc.addToBot( Actions::GainEnergy(1) );
+         }
+@@ -618,7 +619,8 @@
+     }
+ 
+     if (hasRelic<R::INCENSE_BURNER>()) {
+-        if (++incenseBurnerCounter == 6) {
++        incenseBurnerCounter = incenseBurnerCounter == -1 ? 1 : incenseBurnerCounter + 1;
++        if (incenseBurnerCounter == 6) {
+             incenseBurnerCounter = 0;
+             bc.addToBot( Actions::BuffPlayer<PS::INTANGIBLE>(1) );
+         }

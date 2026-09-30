@@ -1,0 +1,67 @@
+{
+  "repair": "Bottled relic candidates use original reversed type-group order; preserve selected card identity",
+  "apply_after": "colosseum_rng.patch",
+  "patch_sha256": "67c9345b0bb6402c722fd5c63b8dfa2677561beab99ce2d92323a188a4870a37",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6",
+      "after": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/game/GameContext.cpp": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6"
+      },
+      "after": {
+        "src/game/GameContext.cpp": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/optimized/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/game/GameContext.cpp": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6"
+      },
+      "after": {
+        "src/game/GameContext.cpp": "e1c514f8ec17f2ffee9d25241af8e7a40bce74a58f3261d8403f9b9beada0d87"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-bottle-choice/portable/e121/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "bottle-choice-original.json.gz": "bb71d954b255d1aa7960edff329f2d868557b84a8254b79c2b83a5ffd30212b2"
+  },
+  "acceptance_boundary": "10 controlled installed-Mod original scenes; bottle choice and following hand compared; raw relic counter remains -1 versus 0; exhaustive parity INCOMPLETE"
+}

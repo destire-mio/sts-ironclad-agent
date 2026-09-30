@@ -1,0 +1,12 @@
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1334,6 +1334,9 @@
+             gc.info.toSelectCards,
+             [=](auto c) {return c.getType() == bottleType;}
+     );
++    // CardGroup.getCardsOfType inserts each match with addToBottom (index 0).
++    // Preserve that original choice order, including distinct duplicate cards.
++    std::reverse(gc.info.toSelectCards.begin(), gc.info.toSelectCards.end());
+     if (gc.info.toSelectCards.empty()) {
+         return false;
+     } else {

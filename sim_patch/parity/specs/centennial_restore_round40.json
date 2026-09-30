@@ -1,0 +1,1176 @@
+[
+  {
+    "name": "centennial-restore:cube-first:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:cube-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:cube-first:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:cube-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:cube-first:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:cube-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:cube-first:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:cube-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-first:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-first:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-first:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-first:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-first",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-only:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-only",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-only:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-only",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-only:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-only",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:puzzle-only:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:puzzle-only",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-puzzle-control:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:no-puzzle-control",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 3,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-puzzle-control:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:no-puzzle-control",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 3,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-puzzle-control:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:no-puzzle-control",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 3,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-puzzle-control:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:no-puzzle-control",
+      "fixture": {
+        "hand": [
+          "Hemokinesis",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 3,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1 0",
+        "play 1 0",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:prevented-hp-loss-control:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:prevented-hp-loss-control",
+      "fixture": {
+        "hand": [
+          "Ghostly",
+          "Bloodletting",
+          "Bloodletting",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "TungstenRod",
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1",
+        "play 1",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:prevented-hp-loss-control:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:prevented-hp-loss-control",
+      "fixture": {
+        "hand": [
+          "Ghostly",
+          "Bloodletting",
+          "Bloodletting",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "TungstenRod",
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1",
+        "play 1",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:prevented-hp-loss-control:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:prevented-hp-loss-control",
+      "fixture": {
+        "hand": [
+          "Ghostly",
+          "Bloodletting",
+          "Bloodletting",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "TungstenRod",
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1",
+        "play 1",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:prevented-hp-loss-control:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:prevented-hp-loss-control",
+      "fixture": {
+        "hand": [
+          "Ghostly",
+          "Bloodletting",
+          "Bloodletting",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "TungstenRod",
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1",
+        "play 1",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:prevented-hp-loss-control:restore-4",
+    "source_spec": {
+      "name": "centennial-restore:prevented-hp-loss-control",
+      "fixture": {
+        "hand": [
+          "Ghostly",
+          "Bloodletting",
+          "Bloodletting",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "TungstenRod",
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1",
+        "play 1",
+        "play 1",
+        "end"
+      ]
+    },
+    "restore_boundary": 4,
+    "commands": [
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-draw:restore-0",
+    "source_spec": {
+      "name": "centennial-restore:no-draw",
+      "fixture": {
+        "hand": [
+          "Battle Trance",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1 0",
+        "play 1",
+        "end",
+        "end"
+      ]
+    },
+    "restore_boundary": 0,
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-draw:restore-1",
+    "source_spec": {
+      "name": "centennial-restore:no-draw",
+      "fixture": {
+        "hand": [
+          "Battle Trance",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1 0",
+        "play 1",
+        "end",
+        "end"
+      ]
+    },
+    "restore_boundary": 1,
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-draw:restore-2",
+    "source_spec": {
+      "name": "centennial-restore:no-draw",
+      "fixture": {
+        "hand": [
+          "Battle Trance",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1 0",
+        "play 1",
+        "end",
+        "end"
+      ]
+    },
+    "restore_boundary": 2,
+    "commands": [
+      "play 1",
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-draw:restore-3",
+    "source_spec": {
+      "name": "centennial-restore:no-draw",
+      "fixture": {
+        "hand": [
+          "Battle Trance",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1 0",
+        "play 1",
+        "end",
+        "end"
+      ]
+    },
+    "restore_boundary": 3,
+    "commands": [
+      "end",
+      "end"
+    ]
+  },
+  {
+    "name": "centennial-restore:no-draw:restore-4",
+    "source_spec": {
+      "name": "centennial-restore:no-draw",
+      "fixture": {
+        "hand": [
+          "Battle Trance",
+          "Hemokinesis",
+          "Whirlwind"
+        ],
+        "draw": [
+          "Bash",
+          "Void"
+        ],
+        "discard": [
+          "Strike_R",
+          "Defend_R",
+          "Armaments",
+          "Anger"
+        ],
+        "relics": [
+          "Centennial Puzzle",
+          "Runic Cube",
+          {
+            "id": "Sundial",
+            "counter": 2
+          }
+        ],
+        "energy": 1,
+        "current_hp": 40
+      },
+      "commands": [
+        "play 1",
+        "play 1 0",
+        "play 1",
+        "end",
+        "end"
+      ]
+    },
+    "restore_boundary": 4,
+    "commands": [
+      "end"
+    ]
+  }
+]

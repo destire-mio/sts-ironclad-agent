@@ -1,0 +1,28 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -363,6 +363,16 @@
+                     const int counter = py::cast<int>(relic["counter"]);
+                     if (counter >= 0) setRelicCounter(bc.player, static_cast<RelicId>(id), counter);
+                 }
++            }
++        }
++        if (bc.player.hasRelic<RelicId::CENTENNIAL_PUZZLE>()) {
++            if (player.contains("centennial_puzzle_used")) {
++                if (!py::isinstance<py::bool_>(player["centennial_puzzle_used"]))
++                    throw std::invalid_argument("Centennial Puzzle snapshot requires a boolean centennial_puzzle_used");
++                if (py::cast<bool>(player["centennial_puzzle_used"]))
++                    bc.player.setHasRelic<RelicId::CENTENNIAL_PUZZLE>(false);
++            } else if (bc.player.timesDamagedThisCombat > 0) {
++                throw std::invalid_argument("Centennial Puzzle snapshot requires centennial_puzzle_used after HP loss");
+             }
+         }
+         bc.player.redSkullActive = player.contains("red_skull_active") ? py::cast<bool>(player["red_skull_active"])
+@@ -1671,6 +1681,8 @@
+             values["necronomicon_used"] = bc.player.haveUsedNecronomiconThisTurn;
+             values["orange_pellets_mask"] = bc.player.orangePelletsCardTypesPlayed.to_ulong();
+             values["red_skull_active"] = bc.player.redSkullActive;
++            // Read only when the observed inventory contains Centennial Puzzle.
++            values["centennial_puzzle_used"] = !bc.player.hasRelic<RelicId::CENTENNIAL_PUZZLE>();
+             return values;
+         })
+         .def("__repr__", [](const BattleContext &bc) {

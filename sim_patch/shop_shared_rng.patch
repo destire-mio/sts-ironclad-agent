@@ -1,0 +1,385 @@
+--- /dev/null
++++ b/bindings/shop-presentation-json.h
+@@ -0,0 +1,54 @@
++#ifndef STS_SHOP_PRESENTATION_JSON_H
++#define STS_SHOP_PRESENTATION_JSON_H
++#include <nlohmann/json.hpp>
++#include "game/ShopPresentation.h"
++namespace sts {
++inline ShopPresentationState::Effect shopWordEffect(const std::string &s) {
++    using E=ShopPresentationState::Effect;
++    if (s=="NONE") return E::NONE;if (s=="WAVY") return E::WAVY;if (s=="SHAKY") return E::SHAKY;
++    throw std::invalid_argument("unsupported shop word effect");
++}
++inline const char *shopWordEffectName(ShopPresentationState::Effect e) {
++    using E=ShopPresentationState::Effect;
++    switch(e) {case E::NONE:return "NONE";case E::WAVY:return "WAVY";case E::SHAKY:return "SHAKY";}
++    throw std::invalid_argument("unsupported shop word effect");
++}
++inline ShopPresentationState shopPresentationFromJson(const nlohmann::json &j) {
++    if (j.at("profile")!="installed-shop-card-v1" || !j.at("fast_mode").get<bool>() ||
++        j.at("backgrounded").get<bool>() || !j.at("initial_effects_settled").get<bool>() ||
++        j.at("touch_screen").get<bool>() || j.at("controller").get<bool>() || !j.at("effects").empty())
++        throw std::invalid_argument("unsupported shop presentation environment");
++    ShopPresentationState s;
++    s.delta=j.at("delta");s.frame=j.at("frame");s.purchaseFrames=j.at("purchase_frames");
++    s.characterWords=j.at("character_words");s.speechTimer=j.at("speech_timer");
++    const auto &f=j.at("floaty");
++    s.floaty={f.at("x"),f.at("y"),f.at("vx"),f.at("vy"),f.at("min_v"),f.at("max_v"),f.at("threshold"),f.at("speed_scale")};
++    const auto &d=j.at("dialog");
++    if (!d.is_null()) {
++        s.dialog.present=true;s.dialog.duration=d.at("duration");s.dialog.wordTimer=d.at("word_timer");
++        s.dialog.textDone=d.at("text_done");
++        for (const auto &w:d.at("words")) s.dialog.words.push_back({shopWordEffect(w.at("effect")),w.at("characters"),w.at("timer")});
++    }
++    if (j.at("buy_messages").size()!=5) throw std::invalid_argument("five shop buy messages required");
++    for (int i=0;i<5;++i) s.buyMessages[i]=ShopPresentationState::parseMessage(j.at("buy_messages").at(i));
++    s.validateInitial();return s;
++}
++inline nlohmann::json shopPresentationToJson(const ShopPresentationState &s) {
++    using J=nlohmann::json;
++    if (!s.configured) return nullptr;
++    const auto &f=s.floaty;
++    J result={{"frame",s.frame},{"active",s.active()},{"character_words",s.characterWords},
++        {"speech_timer",s.speechTimer},{"floaty",{{"x",f.x},{"y",f.y},{"vx",f.vx},{"vy",f.vy},
++            {"min_v",f.minV},{"max_v",f.maxV},{"threshold",f.threshold},{"speed_scale",f.speedScale}}},
++        {"dialog",nullptr}};
++    if (s.dialog.present) {
++        J words=J::array();
++        for (const auto &w:s.dialog.words) words.push_back({{"effect",shopWordEffectName(w.effect)},
++            {"characters",w.characters},{"timer",w.timer}});
++        result["dialog"]={{"duration",s.dialog.duration},{"word_timer",s.dialog.wordTimer},
++            {"text_done",s.dialog.textDone},{"words",words}};
++    }
++    return result;
++}
++}
++#endif
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -33,6 +33,7 @@
+ #include "constants/MonsterStatusEffects.h"
+ 
+ #include "slaythespire.h"
++#include "shop-presentation-json.h"
+ 
+ 
+ using namespace sts;
+@@ -469,6 +470,13 @@
+         .def_property_readonly("burning_elite", [](const GameContext &gc) {
+             return gc.map ? std::vector<int>{gc.map->burningEliteX, gc.map->burningEliteY, gc.map->burningEliteBuff}
+                           : std::vector<int>{-1, -1, -1};
++        })
++        .def("attach_shop_presentation", [](GameContext &gc, const pybind11::dict &state, std::uint64_t seed0, std::uint64_t seed1) {
++            const auto value=nlohmann::json::parse(pybind11::cast<std::string>(pybind11::module_::import("json").attr("dumps")(state)));
++            gc.attachShopPresentation(shopPresentationFromJson(value),seed0,seed1);
++        }, "Attach initial presentation state and MathUtils once; fixed-frame card purchases and leave only")
++        .def_property_readonly("shop_presentation", [](const GameContext &gc) {
++            return pybind11::module_::import("json").attr("loads")(shopPresentationToJson(gc.shopPresentation).dump());
+         })
+         .def("set_play_time", [](GameContext &gc, double seconds) {
+             if (!std::isfinite(seconds) || seconds < 0) throw std::invalid_argument("play time must be finite and nonnegative");
+--- a/include/game/GameContext.h
++++ b/include/game/GameContext.h
+@@ -29,6 +29,7 @@
+ #include "game/Rewards.h"
+ #include "game/Deck.h"
+ #include "game/Shop.h"
++#include "game/ShopPresentation.h"
+ 
+ namespace sts {
+ 
+@@ -169,6 +170,8 @@
+         Random cardRng;
+         Random eventRng;
+         Random mathUtilRng;
++        ShopPresentationState shopPresentation;
++        void attachShopPresentation(const ShopPresentationState &state, std::uint64_t seed0, std::uint64_t seed1);
+         Random merchantRng;
+         Random miscRng;
+         Random monsterHpRng;
+--- /dev/null
++++ b/include/game/ShopPresentation.h
+@@ -0,0 +1,194 @@
++#ifndef STS_SHOP_PRESENTATION_H
++#define STS_SHOP_PRESENTATION_H
++
++#include <array>
++#include <cmath>
++#include <cstdint>
++#include <stdexcept>
++#include <string>
++#include <vector>
++#include "game/Random.h"
++
++namespace sts {
++
++// RNG-relevant presentation state for the installed fixed-frame shop protocol.
++// This is external input, just like elapsed play time: a run seed cannot infer it.
++// No state or random draws are imported after attaching the initial snapshot.
++struct ShopPresentationState {
++    enum class Effect { NONE, WAVY, SHAKY };
++    struct Word { Effect effect=Effect::NONE; int characters=0; float timer=0; };
++    struct Token { Effect effect=Effect::NONE; int characters=0; bool newline=false; };
++    struct Floaty {
++        float x=0, y=0, vx=0, vy=0, minV=0, maxV=0, threshold=0, speedScale=0;
++    } floaty;
++    struct Dialog {
++        bool present=false, textDone=true;
++        float duration=0, wordTimer=0;
++        std::vector<Word> words;
++        std::vector<Token> tokens;
++        std::size_t nextToken=0;
++    } dialog;
++
++    bool configured=false, closed=false, characterWords=true;
++    std::int64_t frame=0;
++    int purchaseFrames=0;
++    float delta=1.0f/60.0f, speechTimer=0;
++    std::array<std::vector<Token>,5> buyMessages;
++
++    bool active() const { return configured && !closed; }
++
++    // Java float operations round separately; prevent fused multiply-add on ARM.
++    static float add(float a,float b) { volatile float x=a+b; return x; }
++    static float multiply(float a,float b) { volatile float x=a*b; return x; }
++    static float sample(Random &rng,float lo,float hi) {
++        return add(lo,multiply(rng.nextFloat(),add(hi,-lo)));
++    }
++
++    static bool space(char16_t c) {
++        return c==u' ' || (c>=u'\t' && c<=u'\r');
++    }
++    static std::u16string utf16(const std::string &text) {
++        std::u16string result;
++        for (std::size_t i=0;i<text.size();) {
++            const unsigned char first=text[i++];std::uint32_t cp=0;int extra=0;
++            if (first<0x80) cp=first;
++            else if (first>=0xc2 && first<=0xdf) {cp=first&31;extra=1;}
++            else if (first>=0xe0 && first<=0xef) {cp=first&15;extra=2;}
++            else if (first>=0xf0 && first<=0xf4) {cp=first&7;extra=3;}
++            else throw std::invalid_argument("invalid UTF-8 shop message");
++            if (i+extra>text.size()) throw std::invalid_argument("truncated UTF-8 shop message");
++            for (int n=0;n<extra;++n) {
++                const unsigned char next=text[i++];
++                if ((next&0xc0)!=0x80) throw std::invalid_argument("invalid UTF-8 continuation");
++                cp=(cp<<6)|(next&63);
++            }
++            if ((extra==1 && cp<0x80) || (extra==2 && cp<0x800) || (extra==3 && cp<0x10000) ||
++                (cp>=0xd800 && cp<=0xdfff) || cp>0x10ffff)
++                throw std::invalid_argument("invalid UTF-8 scalar");
++            if (cp<0x10000) result.push_back(static_cast<char16_t>(cp));
++            else {cp-=0x10000;result.push_back(static_cast<char16_t>(0xd800+(cp>>10)));result.push_back(static_cast<char16_t>(0xdc00+(cp&1023)));}
++        }
++        return result;
++    }
++    static std::vector<Token> parseMessage(const std::string &utf8) {
++        const auto text=utf16(utf8);
++        if (text.empty() || text.size()>512) throw std::invalid_argument("shop message outside supported size");
++        std::vector<Token> result;
++        for (std::size_t start=0;start<text.size();) {
++            if (space(text[start])) {++start;continue;}
++            auto end=start;
++            while (end<text.size() && !space(text[end])) {
++                // The shipped ENG/ZHS messages use ASCII whitespace. Do not
++                // silently replace Java Scanner's wider whitespace semantics.
++                const auto c=text[end];
++                if ((c>=0x2000 && c<=0x200a) || c==0x2028 || c==0x2029 || c==0x205f || c==0x3000)
++                    throw std::invalid_argument("unsupported shop message whitespace");
++                ++end;
++            }
++            auto word=text.substr(start,end-start);start=end;
++            Token token;
++            if (word==u"NL") token.newline=true;
++            else {
++                if (word.size()>1 && word[0]==u'#' &&
++                    (word[1]==u'r' || word[1]==u'g' || word[1]==u'b' || word[1]==u'y')) word.erase(0,2);
++                if (word.size()>2 && word.front()==word.back() && (word[0]==u'~' || word[0]==u'@')) {
++                    token.effect=word[0]==u'~'?Effect::WAVY:Effect::SHAKY;
++                    word=word.substr(1,word.size()-2);
++                }
++                token.characters=static_cast<int>(word.size());
++            }
++            result.push_back(token);
++        }
++        return result;
++    }
++
++    void validateInitial() const {
++        if (configured || closed || frame!=0 || delta!=1.0f/60.0f || purchaseFrames<31 || purchaseFrames>240)
++            throw std::invalid_argument("unsupported shop presentation clock or lifecycle");
++        const float values[]={floaty.x,floaty.y,floaty.vx,floaty.vy,floaty.minV,floaty.maxV,
++            floaty.threshold,floaty.speedScale,speechTimer,dialog.duration,dialog.wordTimer};
++        for (float v:values) if (!std::isfinite(v)) throw std::invalid_argument("non-finite shop presentation state");
++        if (floaty.minV<0 || floaty.maxV<floaty.minV || floaty.threshold<=0 || floaty.speedScale<0 || speechTimer<=delta)
++            throw std::invalid_argument("shop presentation requires a waiting merchant and valid Floaty state");
++        if (!dialog.textDone || (dialog.present && dialog.duration<=0))
++            throw std::invalid_argument("unfinished initial shop dialogue needs Scanner state");
++        if (!dialog.present && !dialog.words.empty()) throw std::invalid_argument("words without shop dialogue");
++        if (dialog.words.size()>512) throw std::invalid_argument("shop dialogue outside supported size");
++        for (const auto &word:dialog.words)
++            if (!std::isfinite(word.timer) || word.characters<0 || word.characters>512)
++                throw std::invalid_argument("invalid shop word state");
++        for (const auto &msg:buyMessages) if (msg.empty() || msg.size()>64)
++            throw std::invalid_argument("missing or oversized shop buy message");
++    }
++
++    void updateFloaty(Random &rng) {
++        auto &f=floaty;
++        f.x=add(f.x,multiply(f.vx,delta));f.y=add(f.y,multiply(f.vy,delta));
++        const float lo=multiply(f.minV,f.speedScale),hi=multiply(f.maxV,f.speedScale);
++        if (f.y>f.threshold) f.vy=-sample(rng,lo,hi);
++        else if (f.y< -f.threshold) f.vy=sample(rng,lo,hi);
++        if (f.x>f.threshold) f.vx=-sample(rng,lo,hi);
++        else if (f.x< -f.threshold) f.vx=sample(rng,lo,hi);
++    }
++
++    void updateDialog(Random &rng) {
++        if (!dialog.present) return;
++        dialog.wordTimer=add(dialog.wordTimer,-delta);
++        if (dialog.wordTimer<0 && !dialog.textDone) {
++            dialog.wordTimer=.03f;
++            if (dialog.nextToken==dialog.tokens.size()) dialog.textDone=true;
++            else {
++                const auto &token=dialog.tokens[dialog.nextToken++];
++                if (!token.newline) for (int i=0;i<(characterWords?token.characters:1);++i) {
++                    Word word;word.effect=token.effect;word.characters=characterWords?1:token.characters;
++                    if (word.effect==Effect::WAVY) word.timer=multiply(rng.nextFloat(),1.5707964f);
++                    dialog.words.push_back(word);
++                }
++            }
++        }
++        for (auto &word:dialog.words) {
++            if (word.effect==Effect::SHAKY) {
++                word.timer=add(word.timer,-delta);
++                if (word.timer<0) {rng.nextFloat();rng.nextFloat();word.timer=.02f;}
++            } else if (word.effect==Effect::WAVY) word.timer=add(word.timer,multiply(delta,5.0f));
++        }
++        dialog.duration=add(dialog.duration,-delta);
++        if (dialog.duration<0) dialog=Dialog{};
++    }
++
++    void update(Random &rng) {
++        ++frame;updateFloaty(rng);updateDialog(rng);speechTimer=add(speechTimer,-delta);
++        // Each purchase resets this to 40..60 s, the declared wait is <=4 s.
++        // Initial idle/welcome expiration is rejected by validateInitial().
++        if (speechTimer<=0) throw std::runtime_error("shop idle speech outside declared presentation scope");
++    }
++    void render(Random &rng) {
++        if (dialog.present) for (const auto &word:dialog.words) if (word.effect==Effect::SHAKY)
++            for (int i=0;i<word.characters;++i) {rng.nextFloat();rng.nextFloat();}
++    }
++    void beforeCardPurchase(Random &rng) { update(rng); }
++    void afterCardPurchase(Random &rng) {
++        // ShopScreen.purchaseCard -> createSpeech -> FastCardObtainEffect ->
++        // Soul.setSharedVariables -> render. The first word is parsed next frame.
++        speechTimer=sample(rng,40,60);
++        rng.nextInt(3); // voice selection, not a pitch-randomized sound
++        const int message=rng.nextInt(5);
++        rng.nextBoolean();sample(rng,660,1260);
++        dialog=Dialog{};dialog.present=true;dialog.textDone=false;dialog.duration=4;
++        dialog.tokens=buyMessages[message];
++        sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);
++        render(rng);
++        // Frame count is declared before the action, never obtained from an
++        // original post-state or trace. Fast-mode Soul callbacks finish by 31.
++        for (int i=1;i<purchaseFrames;++i) {update(rng);render(rng);}
++    }
++    void leave(Random &rng) {
++        // CancelButton closes SHOP after its update and before its render.
++        update(rng);
++        // Original installed protocol: leave + proceed, two frames each.
++        // DungeonMapScreen.open chooses its sound, then randomizes its pitch.
++        rng.nextBoolean();rng.nextFloat();frame+=3;closed=true;
++    }
++};
++}
++#endif
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -832,6 +832,7 @@
+ }
+ 
+ void GameContext::enterMapRoom() {
++    shopPresentation = ShopPresentationState{};
+     // AbstractDungeon.nextRoomTransition clears the previous reward screen.
+     // Keep unclaimed rewards within their room, not across later shop grids.
+     info.rewardsContainer.clear();
+@@ -4198,3 +4199,20 @@
+         };
+     }
+ }
++
++// Attach one independently captured shop boundary; never resynchronize a live sequence.
++void GameContext::attachShopPresentation(const ShopPresentationState &state, std::uint64_t seed0, std::uint64_t seed1) {
++    state.validateInitial();
++    if (shopPresentation.configured || screenState != ScreenState::SHOP_ROOM || curRoom != Room::SHOP || (!seed0 && !seed1)
++        || info.rewardsContainer.getTotalCount()!=0)
++        throw std::invalid_argument("shop presentation requires a fresh shop decision and nonzero RNG state");
++    // Other relic callbacks can create additional RNG-consuming effects. The
++    // initial contract refuses them until their state and ordering are modeled.
++    for (const auto &relic : relics.relics) switch (relic.id) {
++        case RelicId::BURNING_BLOOD: case RelicId::THE_COURIER: case RelicId::MEMBERSHIP_CARD:
++        case RelicId::MOLTEN_EGG: case RelicId::TOXIC_EGG: case RelicId::FROZEN_EGG: break;
++        default: throw std::invalid_argument("shop presentation relic callback outside modeled scope");
++    }
++    shopPresentation=state;shopPresentation.configured=true;
++    mathUtilRng.seed0=seed0;mathUtilRng.seed1=seed1;mathUtilRng.counter=0;
++}
+--- a/src/game/Shop.cpp
++++ b/src/game/Shop.cpp
+@@ -84,8 +84,11 @@
+ }
+ 
+ void Shop::buyCard(GameContext &gc, int idx) {
++    const bool presentation=gc.shopPresentation.active();
++    const Card purchased=cards[idx];
++    if (presentation) gc.shopPresentation.beforeCardPurchase(gc.mathUtilRng);
+     gc.loseGold(cardPrice(idx), true);
+-    gc.deck.obtain(gc, cards[idx], 1);
++    if (!presentation) gc.deck.obtain(gc, purchased, 1);
+     // SHOP_PURCHASE samples its pitch from the same unseeded MathUtils RNG
+     // that the Courier uses to choose the replacement colored card.
+     gc.mathUtilRng.random();
+@@ -107,9 +110,15 @@
+     } else {
+         cardPrice(idx) = -1;
+     }
++    if (presentation) {
++        // The purchased card has left the stock; keep its value across restock.
++        gc.deck.obtain(gc, purchased, 1);
++        gc.shopPresentation.afterCardPurchase(gc.mathUtilRng);
++    }
+ }
+ 
+ void Shop::buyRelic(GameContext &gc, int idx) {
++    if (gc.shopPresentation.active()) throw std::invalid_argument("shop action outside presentation scope");
+     const RelicId r = relics[idx];
+ 
+     gc.loseGold(relicPrice(idx), true);
+@@ -143,6 +152,7 @@
+ }
+ 
+ void Shop::buyPotion(GameContext &gc, int idx) {
++    if (gc.shopPresentation.active()) throw std::invalid_argument("shop action outside presentation scope");
+     if (gc.hasRelic(RelicId::SOZU) || gc.potionCount >= gc.potionCapacity) return;
+ //    if (gc.hasRelic(RelicId::SOZU)) { // just dont call this with sozu or without enough slots
+ //        return;
+@@ -158,6 +168,7 @@
+ }
+ 
+ void Shop::buyCardRemove(GameContext &gc) {
++    if (gc.shopPresentation.active()) throw std::invalid_argument("shop action outside presentation scope");
+     const auto exitShop = gc.regainControlAction;
+     gc.regainControlAction = [exitShop](GameContext &g) {
+         g.screenState = ScreenState::SHOP_ROOM;
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -424,6 +424,7 @@
+             break;
+ 
+         case search::GameAction::RewardsActionType::SKIP:
++            if (gc.shopPresentation.active()) gc.shopPresentation.leave(gc.mathUtilRng);
+             gc.regainControl();
+             break;
+ 

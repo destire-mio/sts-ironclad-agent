@@ -1,0 +1,228 @@
+diff --git a/include/combat/Actions.h b/include/combat/Actions.h
+--- a/include/combat/Actions.h
++++ b/include/combat/Actions.h
+@@ -26,7 +26,7 @@
+     class CardInstance;
+     class CardQueueItem;
+ 
+-    typedef std::array<std::uint16_t,5> DamageMatrix;
++    using DamageMatrix = std::array<int, 5>;
+ 
+     struct Actions {
+         static Action SetState(InputState state);
+@@ -46,10 +46,7 @@
+         // todo, action and damage actions should clear certain actions from the queue if the player kills all enemies
+         static Action AttackEnemy(int idx, int damage);
+ 
+-        // for cards that do one hit, like cleave
+-        static Action AttackAllEnemy(int baseDamage);
+-
+-        // for cards like whirlwind, where damage is calculated once
++        // Per-target damage is captured when the card is used.
+         static Action AttackAllEnemy(DamageMatrix damageMatrix);
+ 
+         static Action DamageEnemy(int idx, int damage);
+@@ -169,12 +166,12 @@
+         static Action FeedAction(int idx, int damage, bool upgraded);
+         static Action HandOfGreedAction(int idx, int damage, bool upgraded);
+         static Action LimitBreakAction();
+-        static Action ReaperAction(int baseDamage);
++        static Action ReaperAction(DamageMatrix damageMatrix);
+         static Action RitualDaggerAction(int idx, int damage);
+         static Action SecondWindAction(int blockPerCard);
+         static Action SeverSoulExhaustAction();
+         static Action SpotWeaknessAction(int target, int strength); // Spot Weakness
+-        static Action WhirlwindAction(int baseDamage, int energy, bool useEnergy);
++        static Action WhirlwindAction(DamageMatrix damageMatrix, int energy, bool useEnergy);
+ 
+         static Action AttackAllMonsterRecursive(DamageMatrix matrix, int timesRemaining);
+     };
+diff --git a/include/combat/BattleContext.h b/include/combat/BattleContext.h
+--- a/include/combat/BattleContext.h
++++ b/include/combat/BattleContext.h
+@@ -187,6 +187,7 @@
+         void debuffEnemy(int idx, int amount, bool isSourceMonster=true);
+ 
+         [[nodiscard]] int calculateCardDamage(const CardInstance &card, int targetIdx, int baseDamage) const;
++        [[nodiscard]] DamageMatrix calculateCardDamageMatrix(const CardInstance &card, int baseDamage) const;
+         [[nodiscard]] int calculateCardBlock(int baseBlock) const;
+ 
+         void queuePurgeCard(const CardInstance &c, int target);
+diff --git a/src/combat/Actions.cpp b/src/combat/Actions.cpp
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -25,34 +25,11 @@
+     }};
+ }
+ 
+-Action Actions::AttackAllEnemy(int baseDamage) {
+-    return {[=] (BattleContext &bc) {
+-        // assume bc.curCard is the card being used
+-
+-        int damageMatrix[5];
+-        for (int i = 0; i < bc.monsters.monsterCount; ++i) {
+-            if (!bc.monsters.arr[i].isDeadOrEscaped()) {
+-                damageMatrix[i] = bc.calculateCardDamage(bc.curCardQueueItem.card, i, baseDamage);
+-            }
+-        }
+-
++Action Actions::AttackAllEnemy(DamageMatrix damageMatrix) {
++    return {[=] (BattleContext &bc) {
+         for (int i = 0; i < bc.monsters.monsterCount; ++i) {
+             if (!bc.monsters.arr[i].isDeadOrEscaped()) {
+                 bc.monsters.arr[i].attacked(bc, damageMatrix[i]);
+-            }
+-        }
+-
+-        bc.checkCombat();
+-    }};
+-}
+-
+-Action Actions::AttackAllEnemy(DamageMatrix damageMatrix) {
+-    return {[=] (BattleContext &bc) {
+-        // assume bc.curCard is the card being used
+-
+-        for (int i = 0; i < bc.monsters.monsterCount; ++i) {
+-            if (!bc.monsters.arr[i].isDeadOrEscaped()) {
+-                bc.monsters.arr[i].attacked(bc, static_cast<int>(damageMatrix[i]));
+             }
+         }
+ 
+@@ -1168,7 +1145,7 @@
+     }};
+ }
+ 
+-Action Actions::ReaperAction(int baseDamage) {
++Action Actions::ReaperAction(DamageMatrix damageMatrix) {
+     return {[=] (BattleContext &bc) {
+ 
+         int healAmount = 0;
+@@ -1178,7 +1155,7 @@
+                 continue;
+             }
+             int preDamageHp = m.curHp;
+-            m.attacked(bc, bc.calculateCardDamage(bc.curCardQueueItem.card, i, baseDamage));
++            m.attacked(bc, damageMatrix[i]);
+             healAmount += preDamageHp-m.curHp;
+         }
+ 
+@@ -1274,26 +1251,10 @@
+     }};
+ }
+ 
+-Action Actions::WhirlwindAction(int baseDamage, int energy, bool useEnergy) {
+-    return {[=] (BattleContext &bc) {
+-        // assume bc.curCard is the card being used
+-
++Action Actions::WhirlwindAction(DamageMatrix damageMatrix, int energy, bool useEnergy) {
++    return {[=] (BattleContext &bc) {
+         if (useEnergy) {
+             bc.player.useEnergy(bc.player.energy);
+-        }
+-
+-        DamageMatrix damageMatrix {0};
+-        for (int i = 0; i < bc.monsters.monsterCount; ++i) {
+-            if (!bc.monsters.arr[i].isDeadOrEscaped()) {
+-                const auto calcDamage = bc.calculateCardDamage(bc.curCardQueueItem.card, i, baseDamage);
+-
+-                damageMatrix[i] = static_cast<std::uint16_t>( // fit damage into uint16
+-                    std::min(
+-                        static_cast<int>(std::numeric_limits<std::uint16_t>::max()),
+-                        calcDamage
+-                    )
+-                );
+-            }
+         }
+ 
+         const auto effectAmount = energy + (bc.player.hasRelic<R::CHEMICAL_X>() ? 2 : 0);
+diff --git a/src/combat/BattleContext.cpp b/src/combat/BattleContext.cpp
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -1028,8 +1028,7 @@
+             break;
+ 
+         case CardId::CLEAVE:  {
+-            int baseDamage = (up ? 11 : 8) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::AttackAllEnemy(baseDamage) );
++            addToBot(Actions::AttackAllEnemy(calculateCardDamageMatrix(c, up ? 11 : 8)));
+             break;
+         }
+ 
+@@ -1039,8 +1038,7 @@
+             break;
+ 
+         case CardId::DRAMATIC_ENTRANCE: {
+-            int baseDamage = (up ? 12 : 8) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::AttackAllEnemy(baseDamage) );
++            addToBot(Actions::AttackAllEnemy(calculateCardDamageMatrix(c, up ? 12 : 8)));
+             break;
+         }
+ 
+@@ -1087,8 +1085,7 @@
+             break;
+ 
+         case CardId::IMMOLATE: {
+-            int baseDamage = (up ? 28 : 21) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::AttackAllEnemy(baseDamage) );
++            addToBot(Actions::AttackAllEnemy(calculateCardDamageMatrix(c, up ? 28 : 21)));
+             addToBot( Actions::MakeTempCardInDiscard({CardId::BURN}, 1) );
+             break;
+         }
+@@ -1145,8 +1142,7 @@
+         }
+ 
+         case CardId::REAPER: {
+-            const auto baseDamage = (up ? 5 : 4) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::ReaperAction(baseDamage) );
++            addToBot(Actions::ReaperAction(calculateCardDamageMatrix(c, up ? 5 : 4)));
+             break;
+         }
+ 
+@@ -1182,8 +1178,7 @@
+             break;
+ 
+         case CardId::THUNDERCLAP: {
+-            int baseDamage = (up ? 7 : 4) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::AttackAllEnemy(baseDamage));
++            addToBot(Actions::AttackAllEnemy(calculateCardDamageMatrix(c, up ? 7 : 4)));
+             addToBot( Actions::DebuffAllEnemy<MS::VULNERABLE>(1, false) );
+             break;
+         }
+@@ -1205,8 +1200,8 @@
+             if (!item.ignoreEnergyTotal && player.energy < item.energyOnUse) {
+                 item.energyOnUse = player.energy;
+             }
+-            const auto baseDamage = (up ? 8 : 5) + player.getStatus<PS::VIGOR>();
+-            addToBot( Actions::WhirlwindAction(baseDamage, item.energyOnUse, !(item.freeToPlay || c.freeToPlayOnce)));
++            addToBot(Actions::WhirlwindAction(calculateCardDamageMatrix(c, up ? 8 : 5),
++                    item.energyOnUse, !(item.freeToPlay || c.freeToPlayOnce)));
+             break;
+         }
+ 
+@@ -1883,7 +1878,7 @@
+                     addToBot(Actions::DamageAllEnemy(5));
+                 break;
+             case R::BIRD_FACED_URN:
+-                if (power) p.heal(2);
++                if (power) addToTop(Actions::HealPlayer(2));
+                 break;
+             case R::MUMMIFIED_HAND:
+                 if (power) mummifiedHandOnUsePower();
+@@ -2684,6 +2679,17 @@
+     }
+ }
+ 
++DamageMatrix BattleContext::calculateCardDamageMatrix(const CardInstance &card, int baseDamage) const {
++    // AbstractPlayer.useCard captures multiDamage before on-use and Pain callbacks.
++    DamageMatrix damage{};
++    for (int i = 0; i < monsters.monsterCount; ++i) {
++        if (!monsters.arr[i].isDeadOrEscaped()) {
++            damage[i] = calculateCardDamage(card, i, baseDamage);
++        }
++    }
++    return damage;
++}
++
+ int BattleContext::calculateCardDamage(const CardInstance &card, int targetIdx, int baseDamage) const {
+ 
+     auto damage = static_cast<float>(baseDamage);

@@ -1,0 +1,18 @@
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1475,11 +1475,12 @@
+ 
+             if (info.toSelectCards.size() <= 3) {
+                 // Astrolabe handles a small deck without opening a selection.
+-                // Its temporary CardGroup reverses the master deck order.
++                // Its temporary CardGroup preserves the master deck order.
+                 const auto candidates = info.toSelectCards;
+                 std::vector<Card> transformed;
+-                for (int i = candidates.size()-1; i >= 0; --i) {
+-                    deck.remove(*this, candidates[i].deckIdx);
++                for (int i = 0; i < candidates.size(); ++i) {
++                    // Earlier removals shift each later candidate's deck index.
++                    deck.remove(*this, candidates[i].deckIdx - i);
+                     transformed.push_back(getTransformedCard(miscRng, candidates[i].card.id, true));
+                 }
+                 for (auto card : transformed) deck.obtain(*this, card);

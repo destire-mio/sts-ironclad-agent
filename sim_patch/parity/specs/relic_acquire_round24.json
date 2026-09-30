@@ -1,0 +1,1043 @@
+[
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": false,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "starter_only",
+    "acquire": []
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "passive_hp",
+    "acquire": [
+      "Strawberry",
+      "Pear",
+      "Mango"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "zero_turn",
+    "acquire": [
+      "Happy Flower",
+      "Incense Burner"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": false,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "replace_black_blood",
+    "acquire": [
+      "Black Blood"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "replace_bloody_idol",
+    "acquire": [
+      "Golden Idol"
+    ],
+    "altar": true
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "passive_economy",
+    "acquire": [
+      "Old Coin",
+      "CeramicFish",
+      "Bloody Idol"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "passive_entry",
+    "acquire": [
+      "Lantern",
+      "Anchor",
+      "Vajra",
+      "Oddly Smooth Stone"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "transient_attack",
+    "acquire": [
+      "Kunai",
+      "Shuriken",
+      "Ornamental Fan",
+      "Letter Opener",
+      "Velvet Choker"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 2,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "transient_turn",
+    "acquire": [
+      "CaptainsWheel",
+      "HornCleat",
+      "Pocketwatch",
+      "StoneCalendar"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "zero_attack",
+    "acquire": [
+      "InkBottle",
+      "Nunchaku",
+      "Pen Nib"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 2,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "zero_room",
+    "acquire": [
+      "Girya",
+      "Tiny Chest",
+      "Sundial"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "positive_counters",
+    "acquire": [
+      "Matryoshka",
+      "WingedGreaves",
+      "NlothsMask",
+      "Omamori",
+      "Du-Vu Doll",
+      "Circlet",
+      "Circlet"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": true,
+    "fight": true,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "inactive_controls",
+    "acquire": [
+      "Lizard Tail",
+      "MawBank",
+      "Ancient Tea Set"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": false,
+    "fight": false,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "empty_cage_small",
+    "acquire": [
+      "Empty Cage"
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 180,
+    "max_hp": 200,
+    "drop_starter": true,
+    "support_neow": false,
+    "fight": false,
+    "first_wait": 1,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "zero_inserter_control",
+    "acquire": [
+      "Inserter"
+    ]
+  }
+]

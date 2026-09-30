@@ -1,0 +1,98 @@
+{
+  "repair": "Colosseum room RNG continuity, return-to-event deck preparation and Enchiridion RNG consumption",
+  "apply_after": "ethereal_overrides.patch",
+  "patch_sha256": "2d97f2e9e7703b03a031e1caf9c528e8926507eb8c0167e28641f8f834aab94d",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "346d2f797799ddd558545b5d8551f0ca8a230b0a41087956947a64b059f00a9e",
+      "after": "cdfaa3a1a04ac808a153e0e8d2f3facda1f939a15288e30c50d4713f0d1e38d3"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "401a856ddeb04ede7fac8c689f6a4791151d71f0c36903ff8c7d14abc5a37c1d",
+      "after": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "346d2f797799ddd558545b5d8551f0ca8a230b0a41087956947a64b059f00a9e",
+        "src/game/GameContext.cpp": "401a856ddeb04ede7fac8c689f6a4791151d71f0c36903ff8c7d14abc5a37c1d"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "cdfaa3a1a04ac808a153e0e8d2f3facda1f939a15288e30c50d4713f0d1e38d3",
+        "src/game/GameContext.cpp": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/optimized/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\npatching file 'src/game/GameContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "c644ec6e8b02713b24b8cea34ef3d024708df90654abda2e912463a47d52fdbd",
+        "src/game/GameContext.cpp": "401a856ddeb04ede7fac8c689f6a4791151d71f0c36903ff8c7d14abc5a37c1d"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "34765cc94aa4e55ba8dd32fb0c3e53e4c2922fb4c072f1f8e2363fa47bc3771e",
+        "src/game/GameContext.cpp": "26e7cb1b2ea4d39dae457e506b743d7710a2acbb1c0b280b816a5cc5ef92def6"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-rng/portable/e121/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\npatching file 'src/game/GameContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "colosseum-rng-original.json.gz": "210fded2a662431c0ba1f7b073f9eaae91966d534e36ba64ffe13f680beda1c3"
+  },
+  "acceptance_boundary": "6 controlled original scenes including normal commands through two combat entries; exhaustive parity INCOMPLETE"
+}

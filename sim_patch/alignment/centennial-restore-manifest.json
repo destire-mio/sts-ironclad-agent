@@ -1,0 +1,80 @@
+{
+  "patch": "sim_patch/centennial_restore.patch",
+  "patch_sha256": "66ed1025a8dbfde9b9e1e1c53b919458e0ea6be924ac13759be79a1496e39ccf",
+  "apply_after": "sim_patch/hp_loss_relic_order.patch",
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "96f2ad948e178ab045460cfa1a04533886e852ec710e906a61df8162877231bf",
+      "after": "86122360033f82ee7ffcba70851cd4e6290614d46d1a15dada0730f327d4862b"
+    }
+  ],
+  "repo_changes": [
+    {
+      "path": "steam/steam_mcts.py",
+      "before": "b3e691af1b9789756a692cf4171a5501b485300c07df729075d172b47d2f7c79",
+      "after": "09bd67e273000ff0bf028a003f73df63ac16c7bffc4ba3632cbc03c0fe3051a5"
+    },
+    {
+      "path": "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java",
+      "before": "df585738a102780110ed6c065175ddac872654ef4251edbaacb2fdf147e896c6",
+      "after": "fa63402cea62a1b13b3fc3cc620906afb017285b32ccb344f61fd6e4f7100e9f"
+    },
+    {
+      "path": "sim_patch/parity/java/ParityAudit.java",
+      "before": "5f1b50c590c4b416fc6d6e6fceea17f695fe2c905a6c2f1886554fc8fa14ce55",
+      "after": "03ab67cfd355e61d877c8f654334fe91c30d1186bccf00002372f6117849288f"
+    }
+  ],
+  "scope": "observe and import Centennial Puzzle spent flag; refuse unknown spent state after observed HP loss",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "bindings/slaythespire.cpp": "96f2ad948e178ab045460cfa1a04533886e852ec710e906a61df8162877231bf"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "86122360033f82ee7ffcba70851cd4e6290614d46d1a15dada0730f327d4862b"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/optimized/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "bindings/slaythespire.cpp": "a5f6ec8755c1761b63de747b343ab5d86cb64adcb7253b7b95ccae162f0db95e"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\n",
+      "after": {
+        "bindings/slaythespire.cpp": "8abbf3a9c1fc6f3829e1a703f7d38922b27afc2520887f9972ed9daea5a6a67c"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260929-centennial-restore/portable/e121/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1
+    }
+  ]
+}

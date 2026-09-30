@@ -1,0 +1,35 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -31,6 +31,15 @@
+     monsterHpRng = startRandom;
+     shuffleRng = startRandom;
+     cardRandomRng = startRandom;
++    // Colosseum's second fight stays in the same room. The original only
++    // reseeds these streams on a room transition, not on battle entry.
++    if (gc.curRoom == Room::EVENT && gc.curEvent == Event::COLOSSEUM &&
++            encounterToInit == MonsterEncounter::COLOSSEUM_EVENT_NOBS) {
++        aiRng = gc.aiRng;
++        monsterHpRng = gc.monsterHpRng;
++        shuffleRng = gc.shuffleRng;
++        cardRandomRng = gc.cardRandomRng;
++    }
+     miscRng = gc.miscRng;
+     potionRng = gc.potionRng;
+     endTurnShuffle = gc.endTurnShuffle;
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -2759,6 +2759,14 @@
+                 regainControlAction = [](GameContext &gc) {
+                     Rewards hiddenRewards;
+                     gc.addPotionRewards(hiddenRewards);
++                    // Colosseum.reopen calls preBattlePrep before returning to
++                    // the event: initializeDeck shuffles even if we then flee.
++                    gc.shuffleRng.randomLong();
++                    // Enchiridion.atPreBattle also chooses a temporary power.
++                    // The next battle discards that prepared combat deck, but
++                    // must retain the RNG consumed here.
++                    if (gc.hasRelic(RelicId::ENCHIRIDION))
++                        getTrulyRandomCardInCombat(gc.cardRandomRng, gc.cc, CardType::POWER);
+                     gc.info.eventData = 1;
+                     gc.screenState = ScreenState::EVENT_SCREEN;
+                     gc.regainControlAction = returnToMapAction;

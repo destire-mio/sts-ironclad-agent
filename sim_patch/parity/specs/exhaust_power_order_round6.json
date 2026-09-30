@@ -1,0 +1,38 @@
+[
+  {
+    "name": "feel_no_pain_before_dark_embrace_fire_breathing",
+    "fixture": {
+      "hand": ["Feel No Pain", "Dark Embrace", "Juggernaut", "Fire Breathing", "Panacea"],
+      "draw": ["Burn"], "energy": 6,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion"
+    },
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "feel_no_pain_before_dark_embrace_upgraded_juggernaut",
+    "fixture": {
+      "hand": ["Feel No Pain", "Dark Embrace", {"card": "Juggernaut", "upgrades": 1}, "Fire Breathing", "Panacea"],
+      "draw": ["Burn"], "energy": 6,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion"
+    },
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "dark_embrace_before_feel_no_pain_control",
+    "fixture": {
+      "hand": ["Dark Embrace", "Feel No Pain", "Juggernaut", "Fire Breathing", "Panacea"],
+      "draw": ["Burn"], "energy": 6,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion"
+    },
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1", "play 1", "play 1"]
+  },
+  {
+    "name": "exhaust_order_without_draw_damage_control",
+    "fixture": {
+      "hand": ["Feel No Pain", "Dark Embrace", "Juggernaut", "Fire Breathing", "Panacea"],
+      "draw": ["Strike_R"], "energy": 6,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion"
+    },
+    "commands": ["potion use 0 1", "play 1", "play 1", "play 1", "play 1", "play 1"]
+  }
+]

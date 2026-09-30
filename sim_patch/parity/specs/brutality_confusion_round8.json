@@ -1,0 +1,26 @@
+[
+  {
+    "name": "brutality_draw_blood_for_blood_after_snecko_glare",
+    "fixture": {"hand": ["Brutality"], "encounter": "Snecko", "monster_hp": 120,
+      "draw": ["Blood for Blood", "Wound", "Wound", "Wound", "Wound", "Wound"]},
+    "commands": ["play 1", "end", "play 6 0"]
+  },
+  {
+    "name": "brutality_draw_upgraded_blood_for_blood_after_snecko_glare",
+    "fixture": {"hand": ["Brutality"], "encounter": "Snecko", "monster_hp": 120,
+      "draw": [{"card": "Blood for Blood", "upgrades": 1}, "Wound", "Wound", "Wound", "Wound", "Wound"]},
+    "commands": ["play 1", "end", "play 6 0"]
+  },
+  {
+    "name": "brutality_blood_for_blood_without_confusion_control",
+    "fixture": {"hand": ["Brutality"],
+      "draw": ["Blood for Blood", "Wound", "Wound", "Wound", "Wound", "Wound"]},
+    "commands": ["play 1", "end", "play 6 0"]
+  },
+  {
+    "name": "brutality_blood_for_blood_prevented_loss_control",
+    "fixture": {"hand": ["Brutality"], "encounter": "Snecko", "monster_hp": 120,
+      "relic": "TungstenRod", "draw": ["Blood for Blood", "Wound", "Wound", "Wound", "Wound", "Wound"]},
+    "commands": ["play 1", "end", "play 6 0"]
+  }
+]

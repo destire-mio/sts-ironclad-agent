@@ -11,6 +11,64 @@ target_compile_options(sts_core PRIVATE -O2 -UNDEBUG)
 add_executable(alignment_tests tests/alignment.cpp "${SIM_ROOT}/bindings/bindings-util.cpp")
 target_link_libraries(alignment_tests PRIVATE sts_core)
 enable_testing()
+add_executable(preserved_insect_tests tests/preserved_insect.cpp)
+target_link_libraries(preserved_insect_tests PRIVATE sts_core)
+foreach(case IN ITEMS order multiple event reverse_control nonelite_control inactive_control insect_only_control copy)
+    add_test(NAME preserved_insect_${case} COMMAND preserved_insect_tests ${case})
+    set_tests_properties(preserved_insect_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(event_entry_probe tests/event_entry_probe.cpp)
+target_link_libraries(event_entry_probe PRIVATE sts_core)
+add_executable(event_rewards_probe tests/event_rewards_probe.cpp)
+target_link_libraries(event_rewards_probe PRIVATE sts_core)
+add_executable(treasure_probe tests/treasure_probe.cpp)
+target_link_libraries(treasure_probe PRIVATE sts_core)
+add_executable(shop_continuation_probe tests/shop_continuation_probe.cpp)
+target_link_libraries(shop_continuation_probe PRIVATE sts_core)
+add_executable(shop_presentation_guard tests/shop_presentation_guard.cpp)
+target_link_libraries(shop_presentation_guard PRIVATE sts_core)
+add_executable(card_obtain_presentation_guard tests/card_obtain_presentation_guard.cpp)
+target_link_libraries(card_obtain_presentation_guard PRIVATE sts_core)
+add_executable(shop_rewards_tests tests/shop_rewards.cpp)
+target_link_libraries(shop_rewards_tests PRIVATE sts_core)
+foreach(case IN ITEMS pending_card pending_potion empty_control screenless_control purge cancel_purge new_room copy)
+    add_test(NAME shop_rewards_${case} COMMAND shop_rewards_tests ${case})
+    set_tests_properties(shop_rewards_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(shop_purge_tests tests/shop_purge.cpp)
+target_link_libraries(shop_purge_tests PRIVATE sts_core)
+foreach(case IN ITEMS deferred parasite claim_before_resume duplicate_identity empty_control cancel_control nonshop_control copy)
+    add_test(NAME shop_purge_${case} COMMAND shop_purge_tests ${case})
+    set_tests_properties(shop_purge_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(save_entry_probe tests/save_entry_probe.cpp)
+target_link_libraries(save_entry_probe PRIVATE sts_core)
+add_executable(astrolabe_small_tests tests/astrolabe_small.cpp)
+target_link_libraries(astrolabe_small_tests PRIVATE sts_core)
+foreach(case IN ITEMS three_types two_types bottled protected_gaps lifecycle_control single_empty_control manual_control copy)
+    add_test(NAME astrolabe_small_${case} COMMAND astrolabe_small_tests ${case})
+    set_tests_properties(astrolabe_small_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(innate_opening_tests tests/innate_opening.cpp)
+target_link_libraries(innate_opening_tests PRIVATE sts_core)
+foreach(case IN ITEMS order snecko bottled hand_limit threshold_control no_enchiridion_control copy)
+    add_test(NAME innate_opening_${case} COMMAND innate_opening_tests ${case})
+    set_tests_properties(innate_opening_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(bottle_choice_tests tests/bottle_choice.cpp)
+target_link_libraries(bottle_choice_tests PRIVATE sts_core)
+foreach(case IN ITEMS order selected_identity battle_draw upgraded_control single_empty_control copy non_bottle_control)
+    add_test(NAME bottle_choice_${case} COMMAND bottle_choice_tests ${case})
+    set_tests_properties(bottle_choice_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_executable(colosseum_rng_tests tests/colosseum_rng.cpp)
+target_link_libraries(colosseum_rng_tests PRIVATE sts_core)
+add_executable(colosseum_rng_probe tests/colosseum_rng_probe.cpp)
+target_link_libraries(colosseum_rng_probe PRIVATE sts_core)
+foreach(case IN ITEMS reopen leave second enchiridion copy first_control next_floor_control)
+    add_test(NAME colosseum_rng_${case} COMMAND colosseum_rng_tests ${case})
+    set_tests_properties(colosseum_rng_${case} PROPERTIES TIMEOUT 15)
+endforeach()
 set(CASES deck_raw_counts curse_event bottle_curse bottle_all remove_selected remove_all searing_upgrade falling_bottled golden_minimum rng_boundary heart_route missing_keys gamble elixir potion_bounds sapphire_trade potion_outside potion_full_reward shop_a20 designer colosseum match_keep darkstone smoke_escape smoke_illegal fairy_outside forethought toy_ornithopter console_forethought liquid_memories rewards_count map_isolation sozu_outside monster_stacks temporary_cost darkling_chomp red_entangle hexaghost_burns bomb_stacks ritual_permanent)
 list(APPEND CASES book_stab_count emerald_elite_buffs potion_discard_description lab_rewards relic_rng_restore bottle_reward_return campfire_toke stolen_reward_order victory_heal_order mad_gremlin_rng original_event_ids heart_victory_floor surrounded_death mugger_death_rng awakened_pending_rebirth monster_hp_ranges portal_time stat_caps buffer_hp_loss mummified_candidates generated_blood_cost havoc_unplayable true_grit_rng violence_sparse)
 list(APPEND CASES training_observation training_all_decisions untargetable_card_bounds)
@@ -35,6 +93,70 @@ foreach(case IN ITEMS escaped_rewards eggs mausoleum colosseum event_collar red_
 endforeach()
 find_package(Python COMPONENTS Interpreter Development.Module REQUIRED)
 find_package(pybind11 CONFIG REQUIRED)
+add_test(NAME event_rewards_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_event_rewards_original.py" -v)
+set_tests_properties(event_rewards_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_EVENT_REWARDS_EXECUTABLE=$<TARGET_FILE:event_rewards_probe>")
+add_test(NAME reward_selection_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_reward_selection_original.py" -v)
+set_tests_properties(reward_selection_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_EVENT_REWARDS_EXECUTABLE=$<TARGET_FILE:event_rewards_probe>")
+add_test(NAME treasure_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_treasure_original.py" -v)
+set_tests_properties(treasure_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_TREASURE_EXECUTABLE=$<TARGET_FILE:treasure_probe>")
+add_test(NAME shop_continuation_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_continuation_original.py" -v)
+set_tests_properties(shop_continuation_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>")
+add_test(NAME shop_inventory_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_inventory_original.py" -v)
+set_tests_properties(shop_inventory_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>")
+add_test(NAME shop_purge_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_purge_rng_original.py" -v)
+set_tests_properties(shop_purge_rng_original_contract PROPERTIES TIMEOUT 90
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_PRESENTATION_GUARD=$<TARGET_FILE:shop_presentation_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME shop_reward_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_reward_rng_original.py" -v)
+set_tests_properties(shop_reward_rng_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_PRESENTATION_GUARD=$<TARGET_FILE:shop_presentation_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME shop_obtain_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_obtain_rng_original.py" -v)
+set_tests_properties(shop_obtain_rng_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_PRESENTATION_GUARD=$<TARGET_FILE:shop_presentation_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME shop_upgrade_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_upgrade_rng_original.py" -v)
+set_tests_properties(shop_upgrade_rng_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_PRESENTATION_GUARD=$<TARGET_FILE:shop_presentation_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME card_obtain_callbacks_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_card_obtain_callbacks_original.py" -v)
+set_tests_properties(card_obtain_callbacks_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_CARD_OBTAIN_GUARD=$<TARGET_FILE:card_obtain_presentation_guard>")
+add_test(NAME shop_other_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_other_rng_original.py" -v)
+set_tests_properties(shop_other_rng_original_contract PROPERTIES TIMEOUT 90
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_PRESENTATION_GUARD=$<TARGET_FILE:shop_presentation_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME shop_shared_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_shared_rng_original.py" -v)
+set_tests_properties(shop_shared_rng_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME astrolabe_small_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_astrolabe_small_original.py" -v)
+set_tests_properties(astrolabe_small_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME innate_opening_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_innate_opening_original.py" -v)
+set_tests_properties(innate_opening_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME bottle_choice_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_bottle_choice_original.py" -v)
+set_tests_properties(bottle_choice_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+add_test(NAME colosseum_rng_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_colosseum_rng_original.py" -v)
+set_tests_properties(colosseum_rng_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
 pybind11_add_module(slaythespire "${SIM_ROOT}/bindings/slaythespire.cpp" "${SIM_ROOT}/bindings/bindings-util.cpp")
 target_link_libraries(slaythespire PRIVATE sts_core)
 target_compile_options(slaythespire PRIVATE -O2 -UNDEBUG)
@@ -128,8 +250,10 @@ set_tests_properties(repair_original_parity_followup PROPERTIES TIMEOUT 300 ENVI
 
 add_test(NAME repair_original_natural_trace COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/replay_trace.py" "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/original-natural-trace.json.gz")
 set_tests_properties(repair_original_natural_trace PROPERTIES TIMEOUT 120 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1;ALIGNMENT_REPORT_DIR=${CMAKE_CURRENT_BINARY_DIR}/original-comparisons")
+add_test(NAME repair_trace_selection_identity COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_trace_selection.py" -v)
+set_tests_properties(repair_trace_selection_identity PROPERTIES TIMEOUT 120 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1")
 
-add_test(NAME repair_original_e62_boundaries COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/compare_sequences.py" "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/original-e62-boundaries.json.gz" --check)
+add_test(NAME repair_original_e62_boundaries COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/check_e62_snapshot_boundaries.py")
 set_tests_properties(repair_original_e62_boundaries PROPERTIES TIMEOUT 300 ENVIRONMENT "ALIGNMENT_BUILD=${CMAKE_CURRENT_BINARY_DIR};ALIGNMENT_STRICT=1;ALIGNMENT_REPORT_DIR=${CMAKE_CURRENT_BINARY_DIR}/original-comparisons")
 
 add_executable(e75_rules_tests tests/e75_rules.cpp)
@@ -248,3 +372,191 @@ add_test(NAME e121_snapshot_contract COMMAND "${Python_EXECUTABLE}"
     "${CMAKE_CURRENT_SOURCE_DIR}/tests/e121_power_snapshot.py" -v)
 set_tests_properties(e121_snapshot_contract PROPERTIES TIMEOUT 30
     ENVIRONMENT "STS_LIGHTSPEED_BUILD=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(pain_void_order_tests tests/pain_void_order.cpp)
+target_link_libraries(pain_void_order_tests PRIVATE sts_core)
+foreach(case pain_blocked void_queued_copy void_lethal_fire_breathing void_surviving_fire_breathing)
+    add_test(NAME pain_void_${case} COMMAND pain_void_order_tests ${case})
+    set_tests_properties(pain_void_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+add_test(NAME pain_void_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_pain_void_original.py" -v)
+set_tests_properties(pain_void_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(aoe_urn_order_tests tests/aoe_urn_order.cpp)
+target_link_libraries(aoe_urn_order_tests PRIVATE sts_core)
+foreach(case aoe_pain aoe_modifiers aoe_queued_copy aoe_wide_damage urn_queued_copy
+        urn_lethal_pain urn_heal_blocked reaper_terminal)
+    add_test(NAME aoe_urn_${case} COMMAND aoe_urn_order_tests ${case})
+    set_tests_properties(aoe_urn_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+add_test(NAME aoe_urn_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_aoe_urn_original.py" -v)
+set_tests_properties(aoe_urn_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(exhaust_skull_order_tests tests/exhaust_skull_order.cpp)
+target_link_libraries(exhaust_skull_order_tests PRIVATE sts_core)
+foreach(case IN ITEMS exhaust_order exhaust_reapply exhaust_controls exhaust_queued_copy
+        skull_caps skull_queued_copy skull_heal_controls skull_loss_control)
+    add_test(NAME exhaust_skull_${case} COMMAND exhaust_skull_order_tests ${case})
+    set_tests_properties(exhaust_skull_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME exhaust_skull_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_exhaust_skull_original.py" -v)
+set_tests_properties(exhaust_skull_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(draw_skull_state_tests tests/draw_skull_state.cpp)
+target_link_libraries(draw_skull_state_tests PRIVATE sts_core)
+foreach(case IN ITEMS draw_order draw_reapply draw_copy draw_controls
+        max_hp_inactive max_hp_active max_hp_blocked max_hp_copy)
+    add_test(NAME draw_skull_${case} COMMAND draw_skull_state_tests ${case})
+    set_tests_properties(draw_skull_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME draw_skull_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_draw_skull_original.py" -v)
+set_tests_properties(draw_skull_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(rupture_brutality_order_tests tests/rupture_brutality_order.cpp)
+target_link_libraries(rupture_brutality_order_tests PRIVATE sts_core)
+foreach(case IN ITEMS rupture_revive rupture_copy rupture_amount rupture_controls
+        brutality_cost brutality_controls brutality_copy brutality_stacked)
+    add_test(NAME rupture_brutality_${case} COMMAND rupture_brutality_order_tests ${case})
+    set_tests_properties(rupture_brutality_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME rupture_brutality_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rupture_brutality_original.py" -v)
+set_tests_properties(rupture_brutality_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(limit_backlog_rules_tests tests/limit_backlog_rules.cpp)
+target_link_libraries(limit_backlog_rules_tests PRIVATE sts_core)
+foreach(case IN ITEMS limit_artifact limit_controls limit_copy rampage_copies rampage_copy rampage_ring
+        parasite_overkill parasite_controls whirlwind_fan whirlwind_large_copy whirlwind_controls
+        gamble_counter_copy gamble_empty)
+    add_test(NAME limit_backlog_${case} COMMAND limit_backlog_rules_tests ${case})
+    set_tests_properties(limit_backlog_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME limit_backlog_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_limit_backlog_original.py" -v)
+set_tests_properties(limit_backlog_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(colosseum_enrage_tests tests/colosseum_enrage.cpp)
+target_link_libraries(colosseum_enrage_tests PRIVATE sts_core)
+foreach(case IN ITEMS second_slot disarm_order all_slots copy captured_amount dead_guard non_skill first_slot_control)
+    add_test(NAME colosseum_enrage_${case} COMMAND colosseum_enrage_tests ${case})
+    set_tests_properties(colosseum_enrage_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME colosseum_enrage_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_colosseum_enrage_original.py" -v)
+set_tests_properties(colosseum_enrage_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(ethereal_profiles_tests tests/ethereal_profiles.cpp)
+target_link_libraries(ethereal_profiles_tests PRIVATE sts_core)
+foreach(case IN ITEMS installed_order identity_shift queued_copy retained pyramid jre_random
+        shared_order_copy no_ethereal_rng seeded_rng_control game_transfer invalid_rng)
+    add_test(NAME ethereal_profiles_${case} COMMAND ethereal_profiles_tests ${case}
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/ethereal-jre-reference.json")
+    set_tests_properties(ethereal_profiles_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME ethereal_profiles_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_ethereal_profiles_original.py" -v)
+set_tests_properties(ethereal_profiles_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(ethereal_overrides_tests tests/ethereal_overrides.cpp)
+target_link_libraries(ethereal_overrides_tests PRIVATE sts_core)
+foreach(case IN ITEMS entrench_order armor_order queued_copy current_hand duplicate_callbacks
+        retained_control pyramid_control generic_control free_flag discard_flag_control)
+    add_test(NAME ethereal_overrides_${case} COMMAND ethereal_overrides_tests ${case})
+    set_tests_properties(ethereal_overrides_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+add_test(NAME ethereal_overrides_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_ethereal_overrides_original.py" -v)
+set_tests_properties(ethereal_overrides_original_contract PROPERTIES TIMEOUT 60
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(relic_lifecycle_probe tests/relic_lifecycle_probe.cpp)
+target_link_libraries(relic_lifecycle_probe PRIVATE sts_core)
+add_executable(relic_counters_tests tests/relic_counters.cpp)
+target_link_libraries(relic_counters_tests PRIVATE sts_core)
+foreach(case IN ITEMS flower flower_control flower_restore copy burner burner_control
+        burner_restore neow escape death inactive_control tea_control)
+    add_test(NAME relic_counters_${case} COMMAND relic_counters_tests ${case})
+    set_tests_properties(relic_counters_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+add_executable(relic_acquire_probe tests/relic_acquire_probe.cpp)
+target_link_libraries(relic_acquire_probe PRIVATE sts_core)
+add_executable(relic_defaults_tests tests/relic_defaults.cpp)
+target_link_libraries(relic_defaults_tests PRIVATE sts_core)
+foreach(case IN ITEMS starter passive zero_controls positive_controls inactive_controls
+        black_blood bloody_idol copy transient_exit combat_controls)
+    add_test(NAME relic_defaults_${case} COMMAND relic_defaults_tests ${case})
+    set_tests_properties(relic_defaults_${case} PROPERTIES TIMEOUT 15)
+endforeach()
+
+foreach(contract IN ITEMS event_entry preserved_insect save_entry relic_counters relic_defaults)
+    add_test(NAME ${contract}_original_contract COMMAND "${Python_EXECUTABLE}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_${contract}_original.py" -v)
+    set_tests_properties(${contract}_original_contract PROPERTIES TIMEOUT 60
+        ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+endforeach()
+
+add_executable(shop_click_guard tests/shop_click_guard.cpp)
+target_link_libraries(shop_click_guard PRIVATE sts_core)
+add_test(NAME shop_click_domain_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_shop_click_domain_original.py" -v)
+set_tests_properties(shop_click_domain_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_SHOP_CLICK_GUARD=$<TARGET_FILE:shop_click_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(reward_click_guard tests/reward_click_guard.cpp)
+target_link_libraries(reward_click_guard PRIVATE sts_core)
+add_test(NAME reward_click_domain_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_reward_click_domain_original.py" -v)
+set_tests_properties(reward_click_domain_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_SHOP_CONTINUATION_EXECUTABLE=$<TARGET_FILE:shop_continuation_probe>;PARITY_REWARD_CLICK_GUARD=$<TARGET_FILE:reward_click_guard>;PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_executable(hp_loss_relic_order_tests tests/hp_loss_relic_order.cpp)
+target_link_libraries(hp_loss_relic_order_tests PRIVATE sts_core)
+add_test(NAME hp_loss_relic_order_native_contract COMMAND hp_loss_relic_order_tests)
+set_tests_properties(hp_loss_relic_order_native_contract PROPERTIES TIMEOUT 15)
+add_test(NAME hp_loss_relic_order_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_hp_loss_relic_order_original.py" -v)
+set_tests_properties(hp_loss_relic_order_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_test(NAME centennial_restore_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_centennial_restore_original.py" -v)
+set_tests_properties(centennial_restore_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_test(NAME exhume_selection_original_contract COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_exhume_selection_original.py" -v)
+set_tests_properties(exhume_selection_original_contract PROPERTIES TIMEOUT 120 ENVIRONMENT "PARITY_REPAIRED_ENGINE=${CMAKE_CURRENT_BINARY_DIR}")
+
+add_test(NAME enlightenment_free_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_enlightenment_free_original.py" -v)
+set_tests_properties(enlightenment_free_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_test(NAME generated_x_cost_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_generated_x_cost_original.py" -v)
+set_tests_properties(generated_x_cost_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_test(NAME autoplay_exhaust_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_autoplay_exhaust_original.py" -v)
+set_tests_properties(autoplay_exhaust_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")
+
+add_test(NAME persistent_exhaust_original_contract COMMAND "${Python_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_persistent_exhaust_original.py" -v)
+set_tests_properties(persistent_exhaust_original_contract PROPERTIES TIMEOUT 120
+    ENVIRONMENT "PARITY_REPAIRED_ENGINE=$<TARGET_FILE_DIR:slaythespire>")

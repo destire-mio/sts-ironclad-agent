@@ -1,0 +1,360 @@
+--- a/bindings/shop-presentation-json.h
++++ b/bindings/shop-presentation-json.h
+@@ -14,21 +14,23 @@
+     throw std::invalid_argument("unsupported shop word effect");
+ }
+ inline ShopPresentationState shopPresentationFromJson(const nlohmann::json &j) {
+-    const bool extended=j.at("profile")=="installed-shop-v2";
++    const bool purgeProfile=j.at("profile")=="installed-shop-v3";
++    const bool extended=purgeProfile || j.at("profile")=="installed-shop-v2";
+     if ((!extended && j.at("profile")!="installed-shop-card-v1") || !j.at("fast_mode").get<bool>() ||
+         j.at("backgrounded").get<bool>() || !j.at("initial_effects_settled").get<bool>() ||
+         j.at("touch_screen").get<bool>() || j.at("controller").get<bool>() || !j.at("effects").empty())
+         throw std::invalid_argument("unsupported shop presentation environment");
+     ShopPresentationState s;
+     s.delta=j.at("delta");s.frame=j.at("frame");s.timing.card=j.at("purchase_frames");
+-    s.saidWelcome=j.value("said_welcome",true);
++    s.saidWelcome=j.value("said_welcome",true);s.trackPurge=purgeProfile;
+     if (extended) {
+         const auto &clock=j.at("action_frames");
+         if (!clock.is_object()) throw std::invalid_argument("shop action clocks must be an object");
+         for (const auto &item:clock.items()) {
+             const auto &key=item.key();
+             if (key!="CARD" && key!="LEAVE" && key!="POTION" && key!="BLOCKED_POTION" &&
+-                key!="RELIC" && key!="GRID" && key!="DISCARD")
++                key!="RELIC" && key!="GRID" && key!="DISCARD" &&
++                !(purgeProfile && (key=="REMOVE" || key=="PURGE_CONFIRM" || key=="PURGE_CANCEL")))
+                 throw std::invalid_argument("unknown shop action clock");
+             if (!item.value().is_number_integer() || item.value()<0 || item.value()>240)
+                 throw std::invalid_argument("shop action clock must be an integer in range");
+@@ -39,6 +41,30 @@
+             throw std::invalid_argument("unsupported shop timing or hovered dialogue");
+         s.timing.potion=clock.value("POTION",0);s.timing.blockedPotion=clock.value("BLOCKED_POTION",0);
+         s.timing.relic=clock.value("RELIC",0);s.timing.grid=clock.value("GRID",0);s.timing.discard=clock.value("DISCARD",0);
++        if (purgeProfile) {
++            s.timing.purgeOpen=clock.value("REMOVE",0);s.timing.purgeConfirm=clock.value("PURGE_CONFIRM",0);
++            s.timing.purgeCancel=clock.value("PURGE_CANCEL",0);s.disableEffects=j.at("disable_effects");
++            if (!j.at("purge_effect").is_null() || !j.at("purge_particles").at("top").is_array() ||
++                !j.at("purge_particles").at("regular").is_array() || !j.at("purge_particles").at("top").empty() ||
++                !j.at("purge_particles").at("regular").empty())
++                throw std::invalid_argument("initial purge effects must be empty");
++            const auto &glows=j.at("panel_glows");
++            s.drawGlows=glows.at("draw").get<std::vector<float>>();
++            s.discardAboveGlows=glows.at("discard_above").get<std::vector<float>>();
++            s.discardBelowGlows=glows.at("discard_below").get<std::vector<float>>();
++            const auto &scene=j.at("scene");
++            if (scene.at("type")!="TheBottomScene" || !scene.at("width").is_number_integer())
++                throw std::invalid_argument("unsupported shop leave scene");
++            s.scene.width=scene.at("width");
++            s.scene.dust=scene.at("dust").get<std::vector<float>>();s.scene.fog=scene.at("fog").get<std::vector<float>>();
++            s.scene.torchParticles=scene.at("torch_particles").get<std::vector<float>>();
++            s.scene.lightFlares=scene.at("light_flares").get<std::vector<float>>();
++            if (!scene.at("torches").is_array()) throw std::invalid_argument("invalid shop scene torches");
++            for (const auto &torch:scene.at("torches")) {
++                if (torch.at("hovered").get<bool>()) throw std::invalid_argument("hovered shop scene torch outside scope");
++                s.scene.torches.push_back({torch.at("size"),torch.at("activated"),torch.at("timer")});
++            }
++        }
+         s.welcomeMessage=ShopPresentationState::parseMessage(j.at("welcome_message"));
+         s.fullPotionMessage=ShopPresentationState::parseMessage(j.at("full_potion_message"));
+         for (const auto &message:j.at("idle_messages")) s.idleMessages.push_back(ShopPresentationState::parseMessage(message));
+@@ -73,6 +99,18 @@
+         result["dialog"]={{"duration",s.dialog.duration},{"word_timer",s.dialog.wordTimer},
+             {"text_done",s.dialog.textDone},{"words",words}};
+     }
++    if (s.trackPurge) {
++        result["disable_effects"]=s.disableEffects;
++        result["purge_effect"]=nullptr;
++        if (s.purge.present) result["purge_effect"]={{"duration",s.purge.duration},{"fading",s.purge.fading}};
++        result["purge_particles"]={{"top",s.topParticles},{"regular",s.regularParticles}};
++        result["panel_glows"]={{"draw",s.drawGlows},{"discard_above",s.discardAboveGlows},{"discard_below",s.discardBelowGlows}};
++        J torches=J::array();
++        for (const auto &torch:s.scene.torches) torches.push_back({{"size",torch.size},{"activated",torch.activated},
++            {"timer",torch.timer},{"hovered",false}});
++        result["scene"]={{"type","TheBottomScene"},{"width",s.scene.width},{"dust",s.scene.dust},{"fog",s.scene.fog},
++            {"torches",torches},{"torch_particles",s.scene.torchParticles},{"light_flares",s.scene.lightFlares}};
++    }
+     return result;
+ }
+ }
+--- a/include/game/ShopPresentation.h
++++ b/include/game/ShopPresentation.h
+@@ -30,8 +30,19 @@
+     } dialog;
+ 
+     bool configured=false, closed=false, characterWords=true, shopVisible=true, saidWelcome=true;
++    bool trackPurge=false, disableEffects=false;
++    struct Purge { bool present=false,fading=false; float duration=0; } purge;
++    std::vector<float> topParticles,regularParticles;
++    std::vector<float> drawGlows,discardAboveGlows,discardBelowGlows;
++    struct Torch { std::string size; bool activated=true; float timer=0; };
++    struct Scene {
++        int width=0;
++        std::vector<float> dust,fog,torchParticles,lightFlares;
++        std::vector<Torch> torches;
++    } scene;
+     std::int64_t frame=0;
+-    struct Timing { int card=0,potion=0,blockedPotion=0,relic=0,grid=0,discard=0; } timing;
++    struct Timing { int card=0,potion=0,blockedPotion=0,relic=0,grid=0,discard=0;
++        int purgeOpen=0,purgeConfirm=0,purgeCancel=0; } timing;
+     float delta=1.0f/60.0f, speechTimer=0;
+     std::array<std::vector<Token>,5> buyMessages;
+     std::vector<Token> welcomeMessage,fullPotionMessage;
+@@ -107,11 +118,35 @@
+     void validateInitial() const {
+         if (configured || closed || !shopVisible || frame!=0 || delta!=1.0f/60.0f || timing.card<31 || timing.card>240)
+             throw std::invalid_argument("unsupported shop presentation clock or lifecycle");
+-        for (int n:{timing.potion,timing.blockedPotion,timing.relic,timing.grid,timing.discard})
++        for (int n:{timing.potion,timing.blockedPotion,timing.relic,timing.grid,timing.discard,
++                    timing.purgeOpen,timing.purgeConfirm,timing.purgeCancel})
+             if (n<0 || n>240) throw std::invalid_argument("shop action clock outside bound");
+         if ((timing.grid && timing.grid<2) || (timing.relic && timing.relic<2) ||
+             (timing.blockedPotion && timing.blockedPotion<121))
+             throw std::invalid_argument("shop action clock precedes installed decision boundary");
++        if ((timing.purgeOpen && timing.purgeOpen<2) || (timing.purgeConfirm && timing.purgeConfirm<4) ||
++            (timing.purgeCancel && timing.purgeCancel<2) || purge.present || !topParticles.empty() || !regularParticles.empty())
++            throw std::invalid_argument("unsupported initial purge effects or clock");
++        if ((timing.purgeOpen || timing.purgeConfirm || timing.purgeCancel) && !trackPurge)
++            throw std::invalid_argument("purge timing requires its presentation profile");
++        for (const auto *group:{&drawGlows,&discardAboveGlows,&discardBelowGlows}) {
++            const bool draw=group==&drawGlows;
++            if (group->size()>(draw?25u:9u)) throw std::invalid_argument("shop panel glow count outside bound");
++            for (float duration:*group) if (!std::isfinite(duration) || duration<0 || duration>(draw?5.0f:.9f))
++                throw std::invalid_argument("invalid shop panel glow lifetime");
++        }
++        if (trackPurge) {
++            if (scene.width<=0 || scene.width>16384 || scene.dust.size()>96 || scene.fog.size()>50 || scene.torches.size()>32 ||
++                !scene.torchParticles.empty() || !scene.lightFlares.empty())
++                throw std::invalid_argument("unsupported initial shop scene");
++            for (const auto *group:{&scene.dust,&scene.fog}) for (float duration:*group)
++                if (!std::isfinite(duration) || duration<0 || duration>(group==&scene.dust?14.0f:12.0f))
++                    throw std::invalid_argument("invalid shop scene effect lifetime");
++            for (const auto &torch:scene.torches)
++                if ((torch.size!="S" && torch.size!="M" && torch.size!="L") ||
++                    !std::isfinite(torch.timer) || torch.timer<0 || torch.timer>.1f)
++                    throw std::invalid_argument("invalid shop scene torch");
++        }
+         const float values[]={floaty.x,floaty.y,floaty.vx,floaty.vy,floaty.minV,floaty.maxV,
+             floaty.threshold,floaty.speedScale,speechTimer,dialog.duration,dialog.wordTimer};
+         for (float v:values) if (!std::isfinite(v)) throw std::invalid_argument("non-finite shop presentation state");
+@@ -197,15 +232,103 @@
+     static void requireClock(int n) {
+         if (!n) throw std::invalid_argument("shop action outside declared presentation timing scope");
+     }
+-    void advance(Random &rng,int frames) {for (int i=0;i<frames;++i) {update(rng);render(rng);}}
++    void updateLifetimes(std::vector<float> &group) {
++        for (std::size_t i=0;i<group.size();) {
++            group[i]=add(group[i],-delta);
++            if (group[i]<0) group.erase(group.begin()+i);else ++i;
++        }
++    }
++    void updatePanels(Random &rng) {
++        if (!trackPurge) return;
++        // OverlayMenu updates these panels even when hidden. BaseMod's pool
++        // calls the original constructor body as setup(), preserving draw order.
++        updateLifetimes(drawGlows);
++        if (!disableEffects && drawGlows.size()<25) {
++            const float duration=sample(rng,2,5);
++            rng.nextFloat();rng.nextFloat();rng.nextBoolean();rng.nextBoolean();
++            rng.nextFloat();rng.nextInt(6);rng.nextFloat();rng.nextFloat();rng.nextFloat();
++            drawGlows.push_back(duration);
++        }
++        updateLifetimes(discardAboveGlows);updateLifetimes(discardBelowGlows);
++        for (auto *group:{&discardAboveGlows,&discardBelowGlows}) if (!disableEffects && group->size()<9) {
++            rng.nextInt(6);rng.nextInt(10); // image, then perimeter position
++            const float duration=sample(rng,.4f,.9f);
++            for (int field=0;field<5;++field) rng.nextFloat();
++            rng.nextBoolean();rng.nextFloat();
++            group->push_back(duration);
++        }
++    }
++    void updateScene(Random &rng) {
++        if (!trackPurge) return;
++        // TheBottomScene runs only while the dungeon screen is NONE. During
++        // the installed leave protocol this is the second and third frame.
++        updateLifetimes(scene.dust);
++        if (!disableEffects && scene.dust.size()<96) {
++            const float duration=sample(rng,5,14);
++            rng.nextInt(6);rng.nextFloat();rng.nextInt(scene.width+1);
++            for (int field=0;field<6;++field) rng.nextFloat();
++            scene.dust.push_back(duration);
++        }
++        if (!disableEffects && scene.fog.size()<50) {
++            rng.nextBoolean();rng.nextBoolean();
++            const float duration=sample(rng,10,12);rng.nextInt(3);
++            for (int field=0;field<8;++field) rng.nextFloat();
++            scene.fog.push_back(duration);
++        }
++        updateLifetimes(scene.fog); // Newly added fog updates in its spawn frame.
++        for (auto &torch:scene.torches) if (torch.activated && !disableEffects) {
++            torch.timer=add(torch.timer,-delta);
++            if (torch.timer<0) {
++                torch.timer=.1f;
++                const float particle=sample(rng,1.5f,3);rng.nextInt(3);
++                for (int field=0;field<7;++field) rng.nextFloat();
++                const float flare=sample(rng,2,3);rng.nextInt(2);
++                for (int field=0;field<5;++field) rng.nextFloat();
++                // They join effectsQueue, which is drained after global updates.
++                scene.torchParticles.push_back(particle);scene.lightFlares.push_back(flare);
++            }
++        }
++    }
++    void updateTorchParticles() {
++        updateLifetimes(scene.torchParticles);updateLifetimes(scene.lightFlares);
++    }
++    void updateEffects(Random &rng) {
++        // New particles enter their queues after this frame's updates. Existing
++        // particles have no RNG consumers; their lifetimes remain value-owned.
++        updateLifetimes(topParticles);updateLifetimes(regularParticles);
++        if (!purge.present) return;
++        purge.duration=add(purge.duration,-delta);
++        if (purge.duration<.5f && !purge.fading) {
++            purge.fading=true;
++            if (!disableEffects) for (int i=0;i<24;++i) {
++                const float duration=sample(rng,.8f,1.1f);
++                // DamageImpactCurvyEffect: duration, speed, target speed,
++                // rotation, wave intensity, wave speed and final target speed.
++                for (int field=0;field<6;++field) rng.nextFloat();
++                (i<16?topParticles:regularParticles).push_back(duration);
++            }
++        }
++        if (purge.duration<0) purge=Purge{};
++    }
++    void renderEffects(Random &rng) {
++        // PurgeCardEffect.renderVfx samples two scales for each of three layers.
++        if (purge.present) for (int layer=0;layer<3;++layer) {rng.nextFloat();rng.nextFloat();}
++    }
++    void finishFrame(Random &rng,bool obtainsCard=false) {
++        updateEffects(rng);
++        // FastCardObtainEffect updates in effectList, after topLevelEffects.
++        // A purge's fade-out particles can therefore precede the Soul draws.
++        if (obtainsCard) {sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);}
++        updatePanels(rng);render(rng);renderEffects(rng);
++    }
++    void advance(Random &rng,int frames) {for (int i=0;i<frames;++i) {update(rng);finishFrame(rng);}}
+     void beforeCardPurchase(Random &rng) { update(rng); }
+     void afterCardPurchase(Random &rng) {
+         // ShopScreen.purchaseCard -> createSpeech -> FastCardObtainEffect ->
+         // Soul.setSharedVariables -> render. The first word is parsed next frame.
+         speechTimer=sample(rng,40,60);
+         buySpeech(rng);
+-        sample(rng,4,6);sample(rng,1,1.5f);rng.nextBoolean();rng.nextInt(360);
+-        render(rng);
++        finishFrame(rng,true);
+         // Frame count is declared before the action, never obtained from an
+         // original post-state or trace. Fast-mode Soul callbacks finish by 31.
+         advance(rng,timing.card-1);
+@@ -213,23 +336,54 @@
+     void finishEarlyPurchase(Random &rng,int frames,bool opensGrid=false) {
+         // Relic/potion updates run before ShopScreen.updateSpeech. Even a relic
+         // opening GRID finishes the current shop update, but GRID is rendered.
+-        updateSpeech(rng);shopVisible=!opensGrid;render(rng);advance(rng,frames-1);
+-    }
++        updateSpeech(rng);shopVisible=!opensGrid;finishFrame(rng);advance(rng,frames-1);
++    }
++    void reopenShop() {shopVisible=true;dialog=Dialog{};speechTimer=1.5f;}
+     void finishBottleSelection(Random &rng) {
+         requireClock(timing.grid);
+         // GRID closes during its update; openPreviousScreen(SHOP) calls open().
+-        ++frame;shopVisible=true;dialog=Dialog{};speechTimer=1.5f;
+-        render(rng);advance(rng,timing.grid-1);
++        ++frame;reopenShop();finishFrame(rng);advance(rng,timing.grid-1);
++    }
++    void requirePurge() const {
++        requireClock(timing.purgeOpen);requireClock(timing.purgeConfirm);requireClock(timing.purgeCancel);
++        if (!trackPurge) throw std::invalid_argument("purge outside shop presentation scope");
++    }
++    void openPurge(Random &rng,std::size_t candidates) {
++        requirePurge();
++        // Installed CommunicationMod opens the grid directly in its command,
++        // before the next frame; it does not click ShopScreen.updatePurgeCard.
++        for (std::size_t i=0;i<candidates;++i) rng.nextFloat();
++        shopVisible=false;advance(rng,timing.purgeOpen);
++    }
++    void beforePurgeSettlement(Random &rng) {
++        requirePurge();
++        // One preview frame, then GRID closes during the confirm frame. Two
++        // following shop frames satisfy the installed purge notification.
++        advance(rng,1);++frame;reopenShop();finishFrame(rng);
++        beginShopFrame(rng);
++    }
++    void createPurgeEffect(Random &rng) {
++        rng.nextFloat(); // SHOP_PURCHASE pitch; CARD_BURN has no randomized pitch
++        purge={true,false,2.0f};
++    }
++    void afterPurgeSettlement(Random &rng) {
++        updateSpeech(rng);finishFrame(rng);advance(rng,timing.purgeConfirm-3);
++    }
++    void cancelPurge(Random &rng) {
++        requirePurge();++frame;reopenShop();finishFrame(rng);advance(rng,timing.purgeCancel-1);
+     }
+     void discard(Random &rng) {
+         requireClock(timing.discard);advance(rng,timing.discard);
+     }
+     void leave(Random &rng) {
+         // CancelButton closes SHOP after its update and before its render.
+-        update(rng);
+-        // Original installed protocol: leave + proceed, two frames each.
+-        // DungeonMapScreen.open chooses its sound, then randomizes its pitch.
+-        rng.nextBoolean();rng.nextFloat();frame+=3;closed=true;
++        update(rng);updateEffects(rng);updatePanels(rng);shopVisible=false;renderEffects(rng);
++        // Global purge effects keep updating/rendering across SHOP close and
++        // MAP open. Map sound occurs in the overlay update after global effects.
++        ++frame;updateTorchParticles();updateScene(rng);finishFrame(rng);
++        ++frame;updateTorchParticles();updateScene(rng);updateEffects(rng);updatePanels(rng);
++        rng.nextBoolean();rng.nextFloat();renderEffects(rng);
++        ++frame;updateTorchParticles();finishFrame(rng);closed=true;
+     }
+ };
+ }
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -3927,10 +3927,14 @@
+                 // update, after any unclaimed rewards have been closed.
+                 const auto selected = info.haveSelectedCards;
+                 const auto finishPurge = [selected](GameContext &next) {
++                    const bool presentation=next.shopPresentation.active();
++                    if (presentation) next.shopPresentation.beforePurgeSettlement(next.mathUtilRng);
+                     next.loseGold(next.info.shop.removeCost, true);
++                    if (presentation) next.shopPresentation.createPurgeEffect(next.mathUtilRng);
+                     next.info.shop.removeCost = -1;
+                     ++next.shopRemoveCount;
+                     next.deck.removeSelected(next, selected);
++                    if (presentation) next.shopPresentation.afterPurgeSettlement(next.mathUtilRng);
+                 };
+                 regainControl();
+                 if (screenState == ScreenState::REWARDS) {
+@@ -4176,12 +4180,14 @@
+     const auto destination = info.selectCancelReturn;
+     if (screenState != ScreenState::CARD_SELECT || destination == ScreenState::INVALID)
+         throw std::logic_error("card selection cannot be cancelled");
++    if (destination==ScreenState::SHOP_ROOM && shopPresentation.active()) shopPresentation.requirePurge();
+     info.toSelectCards.clear();
+     info.haveSelectedCards.clear();
+     info.toSelectCount = 0;
+     info.selectCancelReturn = ScreenState::INVALID;
+     if (destination == ScreenState::SHOP_ROOM) regainControl();
+     else screenState = destination;
++    if (destination==ScreenState::SHOP_ROOM && shopPresentation.active()) shopPresentation.cancelPurge(mathUtilRng);
+ }
+ 
+ void GameContext::regainControl() {
+--- a/src/game/Shop.cpp
++++ b/src/game/Shop.cpp
+@@ -198,7 +198,7 @@
+ }
+ 
+ void Shop::buyCardRemove(GameContext &gc) {
+-    if (gc.shopPresentation.active()) throw std::invalid_argument("shop action outside presentation scope");
++    if (gc.shopPresentation.active()) gc.shopPresentation.requirePurge();
+     const auto exitShop = gc.regainControlAction;
+     gc.regainControlAction = [exitShop](GameContext &g) {
+         g.screenState = ScreenState::SHOP_ROOM;
+@@ -206,6 +206,7 @@
+     };
+     gc.openCardSelectScreen(CardSelectScreenType::REMOVE, 1);
+     gc.info.selectCancelReturn = ScreenState::SHOP_ROOM;
++    if (gc.shopPresentation.active()) gc.shopPresentation.openPurge(gc.mathUtilRng,gc.info.toSelectCards.size());
+ }
+ 
+ int &Shop::cardPrice(int idx) {

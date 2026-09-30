@@ -1,0 +1,241 @@
+[
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "neow_insect_dead_seed8",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "insect_neow_dead_control",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "PreservedInsect",
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "inactive_neow_insect_control",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 0
+      },
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "insect_alone_control",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "neow_insect_dead_seed0",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 1
+      },
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "neow_insect_dead_seed10",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 10,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 2
+      },
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Masked Bandits",
+    "choices": [
+      1
+    ],
+    "name": "neow_insect_nonelite_control",
+    "seed": 123,
+    "floor": 8,
+    "act": 2,
+    "misc_seed": 0,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      "PreservedInsect"
+    ],
+    "sim_choices": [
+      1
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  },
+  {
+    "id": "Dead Adventurer",
+    "choices": [
+      0,
+      0,
+      0
+    ],
+    "name": "neow_alone_control",
+    "seed": 123,
+    "floor": 8,
+    "act": 1,
+    "misc_seed": 8,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "relics": [
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ],
+    "sim_choices": [
+      0,
+      0,
+      0
+    ],
+    "combat_commands": [
+      "play 2 0"
+    ]
+  }
+]

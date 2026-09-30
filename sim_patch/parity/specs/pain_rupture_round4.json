@@ -1,0 +1,70 @@
+[
+  {
+    "name": "pain_rupture_strength",
+    "fixture": {
+      "hand": [
+        "Rupture",
+        "Anger",
+        "Anger",
+        "Pain"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "play 1 0"
+    ]
+  },
+  {
+    "name": "pain_upgraded_rupture_strength",
+    "fixture": {
+      "hand": [
+        {
+          "card": "Rupture",
+          "upgrades": 1
+        },
+        "Anger",
+        "Anger",
+        "Pain"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1 0",
+      "play 1 0"
+    ]
+  },
+  {
+    "name": "rupture_bloodletting_control",
+    "fixture": {
+      "hand": [
+        "Rupture",
+        "Bloodletting",
+        "Anger"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1",
+      "play 1",
+      "play 1 0"
+    ]
+  },
+  {
+    "name": "pain_without_rupture_control",
+    "fixture": {
+      "hand": [
+        "Anger",
+        "Anger",
+        "Pain"
+      ],
+      "energy": 3
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0"
+    ]
+  }
+]

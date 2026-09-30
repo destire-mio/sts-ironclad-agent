@@ -1,0 +1,135 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -1718,6 +1718,9 @@
+         .def_property_readonly("rewards_action_type", &search::GameAction::getRewardsActionType,
+                                "only meaningful on REWARDS / SHOP screens (CARD/RELIC/POTION/CARD_REMOVE/SKIP)")
+         .def("is_valid", &search::GameAction::isValidAction)
++        .def("is_valid_shop_click", &search::GameAction::isValidShopClick)
++        .def("execute_shop_click", &search::GameAction::executeShopClick,
++             "Apply an installed shop choice, including a blocked potion click; reject invalid screen/stock/payment before mutation")
+         .def("execute", &search::GameAction::execute, "apply this choice to the GameContext")
+         .def("__repr__", [](const search::GameAction &a) {
+             std::ostringstream os;
+@@ -1726,9 +1729,12 @@
+             return os.str();
+         });
+ 
++    m.def("get_shop_clicks", &search::GameAction::getShopClicks,
++          "Enumerate installed CommunicationMod shop choices including blocked potion clicks and leaving the shop");
++
+     m.def("get_legal_game_actions",
+           [](const GameContext &gc) { return search::GameAction::getAllActionsInState(gc); },
+-          "enumerate all legal out-of-combat game actions in the current screen state");
++          "enumerate out-of-combat search actions; shop potion clicks with no purchase are filtered (use get_shop_clicks for UI replay)");
+ 
+ #ifdef VERSION_INFO
+     m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
+--- a/include/sim/search/GameAction.h
++++ b/include/sim/search/GameAction.h
+@@ -48,6 +48,13 @@
+ 
+         [[nodiscard]] bool isValidAction(const sts::GameContext &gc) const;
+ 
++        // Installed CommunicationMod shop choices include affordable potion
++        // clicks even when Sozu/full slots prevent obtaining the potion.
++        // Search actions retain their existing purchase-effect filter.
++        [[nodiscard]] bool isValidShopClick(const sts::GameContext &gc) const;
++        void executeShopClick(GameContext &gc) const;
++        static std::vector<GameAction> getShopClicks(const sts::GameContext &gc);
++
+         void execute(GameContext &gc) const;
+         static std::vector<GameAction> getAllActionsInState(const sts::GameContext &gc);
+         static int getValidEventSelectBits(const sts::GameContext &gc);
+--- a/src/sim/search/GameAction.cpp
++++ b/src/sim/search/GameAction.cpp
+@@ -3,7 +3,9 @@
+ //
+ 
+ #include <cassert>
++#include <algorithm>
+ #include <bitset>
++#include <stdexcept>
+ 
+ #include "sim/search/GameAction.h"
+ 
+@@ -219,7 +221,7 @@
+     }
+ }
+ 
+-bool isValidShopAction(const GameContext &gc, const search::GameAction a) {
++bool isValidShopAction(const GameContext &gc, const search::GameAction a, bool includeBlockedPotions=false) {
+     const auto &s = gc.info.shop;
+ 
+     const auto select = a.getIdx1();
+@@ -234,7 +236,8 @@
+             if (select > 2) {
+                 return false;
+             }
+-            return !gc.hasRelic(RelicId::SOZU) && s.potionPrice(select) != -1 && gc.gold >= s.potionPrice(select) && gc.potionCount < gc.potionCapacity;
++            return s.potionPrice(select) != -1 && gc.gold >= s.potionPrice(select) &&
++                (includeBlockedPotions || (!gc.hasRelic(RelicId::SOZU) && gc.potionCount < gc.potionCapacity));
+ 
+ 
+         case search::GameAction::RewardsActionType::RELIC:
+@@ -287,6 +290,11 @@
+         return gc.info.selectCancelReturn != ScreenState::INVALID;
+     if (a.getRewardsActionType() != search::GameAction::RewardsActionType::CARD) return false;
+     return a.getIdx1() >= 0 && a.getIdx1() < gc.info.toSelectCards.size();
++}
++
++bool search::GameAction::isValidShopClick(const sts::GameContext &gc) const {
++    return gc.outcome==GameOutcome::UNDECIDED && gc.screenState==ScreenState::SHOP_ROOM &&
++        !isPotionAction() && isValidShopAction(gc,*this,true);
+ }
+ 
+ bool search::GameAction::isValidAction(const sts::GameContext &gc) const {
+@@ -460,6 +468,12 @@
+     }
+ }
+ 
++void search::GameAction::executeShopClick(GameContext &gc) const {
++    // Reject invalid clicks before frame, gold, inventory or RNG changes.
++    if (!isValidShopClick(gc)) throw std::invalid_argument("illegal shop click");
++    executeShopAction(gc,*this);
++}
++
+ void search::GameAction::execute(GameContext &gc) const {
+ #ifdef sts_asserts
+     if (!isValidAction(gc)) {
+@@ -546,7 +560,7 @@
+     return actions;
+ }
+ 
+-std::vector<search::GameAction> getAllShopActions(const sts::GameContext &gc) {
++std::vector<search::GameAction> getAllShopActions(const sts::GameContext &gc, bool includeBlockedPotions=false) {
+     std::vector<search::GameAction> actions;
+ 
+     const auto &s = gc.info.shop;
+@@ -567,7 +581,8 @@
+ 
+     for (int i = 0; i < 3; ++i) {
+         auto price = s.potionPrice(i);
+-        if (!gc.hasRelic(RelicId::SOZU) && price != -1 && gc.gold >= price && gc.potionCount < gc.potionCapacity) {
++        if (price != -1 && gc.gold >= price &&
++                (includeBlockedPotions || (!gc.hasRelic(RelicId::SOZU) && gc.potionCount < gc.potionCapacity))) {
+             actions.emplace_back(search::GameAction::RewardsActionType::POTION, i);
+         }
+     }
+@@ -577,6 +592,17 @@
+     }
+ 
+     actions.emplace_back(search::GameAction::RewardsActionType::SKIP);
++    return actions;
++}
++
++std::vector<search::GameAction> search::GameAction::getShopClicks(const sts::GameContext &gc) {
++    if (gc.outcome!=GameOutcome::UNDECIDED || gc.screenState!=ScreenState::SHOP_ROOM) return {};
++    auto actions=getAllShopActions(gc,true);
++    // CommunicationMod lists the purge service before cards and other stock.
++    auto remove=std::find_if(actions.begin(),actions.end(),[](const auto &a) {
++        return a.getRewardsActionType()==RewardsActionType::CARD_REMOVE;
++    });
++    if (remove!=actions.end()) std::rotate(actions.begin(),remove,remove+1);
+     return actions;
+ }
+ 

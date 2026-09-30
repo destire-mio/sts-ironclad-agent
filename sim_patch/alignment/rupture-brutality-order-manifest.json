@@ -1,0 +1,64 @@
+{
+  "repair": "queued Rupture strength and draw-before-loss Brutality",
+  "apply_after": "draw_skull_state.patch",
+  "patch_sha256": "a367295d6a458b17988acd2ef37cc15e23b0327dd23e2d7985228afbefb92091",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "c2aedef25eb7d04eb9d75dd9e0ae3d3e282dafaf57eb7e6b727ccb433f8a0a87",
+      "after": "70a441f160f30c265bacf2b1b6a5e74edce4e83b19bc6e8df11c135202332da7"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/Player.cpp": "c2aedef25eb7d04eb9d75dd9e0ae3d3e282dafaf57eb7e6b727ccb433f8a0a87"
+      },
+      "after": {
+        "src/combat/Player.cpp": "70a441f160f30c265bacf2b1b6a5e74edce4e83b19bc6e8df11c135202332da7"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/optimized/src/combat/Player.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/Player.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/Player.cpp": "3f66c53922d5a8be089bcfe758b8ccf83d1156cdb3c50e9fedb345a44085b084"
+      },
+      "after": {
+        "src/combat/Player.cpp": "db81710b67a2048471b994873fbfa8fd261b91c705fa67788e926127f811bf21"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-rupture-brutality/portable/e121/src/combat/Player.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/Player.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "rupture-revive-original.json.gz": "f763db0f5dd93e5b649d80a57b73584e156f39774042d050c9b2f5d5a1bf93f5",
+    "brutality-confusion-original.json.gz": "55b894c66b412b74166609d3213fdfd8d40340018379d0cf2628f4997e58ff72"
+  },
+  "acceptance_boundary": "finite controlled modded-original scenes; exhaustive parity INCOMPLETE"
+}

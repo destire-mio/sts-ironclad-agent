@@ -390,7 +390,7 @@ int main(int argc,char**argv) {try {
         BattleContext b;b.init(g,MonsterEncounter::CULTIST);b.player.curHp=50;b.player.buff<PS::BUFFER>(1);
         b.player.loseHp(b,6,true);check(b.player.curHp==50 && !b.player.hasStatus<PS::BUFFER>(),"Offering bypassed Buffer");
         b.player.loseHp(b,6,true);check(b.player.curHp==44,"Buffer prevented a second HP loss");
-        b.player.setHasRelic<RelicId::MAGIC_FLOWER>(true);b.player.heal(3);check(b.player.curHp==49,"Magic Flower failed original rounding");
+        b.player.setHasRelic<RelicId::MAGIC_FLOWER>(true);Actions::HealPlayer(3).actFunc(b);check(b.player.curHp==49,"Magic Flower failed original rounding");
     } else if(mode=="mummified_candidates") {
         BattleContext b;b.init(g,MonsterEncounter::CULTIST);b.cards=CardManager();
         for(auto id:{CardId::INFLAME,CardId::DEFEND_RED,CardId::STRIKE_RED,CardId::STRIKE_RED,CardId::STRIKE_RED,CardId::BASH,CardId::OFFERING,CardId::STRIKE_RED,CardId::STRIKE_RED,CardId::DEFEND_RED})add(b,id);

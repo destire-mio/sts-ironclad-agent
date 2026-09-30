@@ -1,0 +1,64 @@
+{
+  "repair": "Enrage applies to every monster through queued per-target Strength",
+  "apply_after": "limit_backlog_rules.patch",
+  "patch_sha256": "11ed5f6725dd9ff364b07da5bc52279de2772384db2eef8c04353a749eb569f8",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "729abeed8d7d230150eaf8785dcdb60bb19921dc3fb09fe835e8021173f78acd",
+      "after": "ead8d2eb51f810ca996f81069764b0e2a4a7a3f09c849525ad71143298768103"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "729abeed8d7d230150eaf8785dcdb60bb19921dc3fb09fe835e8021173f78acd"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "ead8d2eb51f810ca996f81069764b0e2a4a7a3f09c849525ad71143298768103"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/optimized/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "bdc87d75884f442df7380045cee69c40dd739117129b8108639ef8bad9e255eb"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "652eb389a07fbf4f1e91f5455cf400c41a7b7281c1cca739df731ef01c7ae969"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-colosseum-enrage/portable/e121/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "colosseum-enrage-original.json.gz": "ac14b4236ab6e257ac4744c7b1dd2031fad5dfa4b14ee2ac9532de143070163b",
+    "enrage-disarm-control-original.json.gz": "c760771f64eb33efc2a13cf69fb5002448f8336afc6f800082ad12cb6da50430"
+  },
+  "acceptance_boundary": "8 controlled modded-original scenes; exhaustive parity INCOMPLETE"
+}

@@ -1,0 +1,10 @@
+[
+  {"name":"installed_three_ethereal", "fixture":{"hand":["Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"installed_mixed_hand", "fixture":{"hand":["Dazed","Defend_R","AscendersBane","Strike_R","Ghostly"]}, "commands":["end"]},
+  {"name":"installed_pyramid_two_turns", "fixture":{"hand":["Dazed","Defend_R","AscendersBane","Strike_R","Ghostly"],"relic":"Runic Pyramid"}, "commands":["end","end"]},
+  {"name":"installed_exhaust_effects", "fixture":{"hand":["Dark Embrace","Feel No Pain","Dazed","AscendersBane","Ghostly"],"relic":"Dead Branch","energy":10}, "commands":["play 1","play 1","end"]},
+  {"name":"shared_three_ethereal", "original_profile":"without-consistent-ethereal", "fixture":{"hand":["Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"shared_mixed_hand", "original_profile":"without-consistent-ethereal", "fixture":{"hand":["Dazed","Defend_R","AscendersBane","Strike_R","Ghostly"]}, "commands":["end"]},
+  {"name":"shared_pyramid_two_turns", "original_profile":"without-consistent-ethereal", "fixture":{"hand":["Dazed","Defend_R","AscendersBane","Strike_R","Ghostly"],"relic":"Runic Pyramid"}, "commands":["end","end"]},
+  {"name":"shared_no_ethereal_rng_control", "original_profile":"without-consistent-ethereal", "fixture":{"hand":["Defend_R","Strike_R"],"relic":"Runic Pyramid"}, "commands":["end","end"]}
+]

@@ -1,0 +1,102 @@
+--- a/bindings/slaythespire.cpp
++++ b/bindings/slaythespire.cpp
+@@ -352,6 +352,7 @@
+                 const auto relic = py::cast<py::dict>(item);
+                 const int id = py::cast<int>(relic["id"]);
+                 bc.player.updateCardUseRelic(static_cast<RelicId>(id), true);
++                bc.player.updateHpLossDrawRelic(static_cast<RelicId>(id), true);
+                 if (id < 64) bc.player.relicBits0 |= 1ULL << id;
+                 else if (id < 128) bc.player.relicBits1 |= 1ULL << (id - 64);
+                 if (static_cast<RelicId>(id) == RelicId::LIZARD_TAIL) {
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -76,6 +76,9 @@
+         // Inline storage is copied with each independent MCTS battle state.
+         fixed_list<RelicId, 12> cardUseRelics;
+         void updateCardUseRelic(RelicId relic, bool present);
++        // These two HP-loss callbacks push draws to the top in relic order.
++        fixed_list<RelicId, 2> hpLossDrawRelics;
++        void updateHpLossDrawRelic(RelicId relic, bool present);
+ 
+         // special info
+         int8_t  happyFlowerCounter = 0;
+@@ -490,6 +493,7 @@
+     template <RelicId r>
+     void Player::setHasRelic(bool value) {
+         updateCardUseRelic(r, value);
++        updateHpLossDrawRelic(r, value);
+         if (value) {
+             if ((int) r < 64) {
+                 relicBits0 |= 1ULL << (int)r;
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -95,6 +95,7 @@
+     player.relicBits0 = gc.relics.relicBits0;
+     player.relicBits1 = gc.relics.relicBits1;
+     player.cardUseRelics.clear();
++    player.hpLossDrawRelics.clear();
+ 
+     fixed_list<RelicId, 4> atBattleStartPreDraw;
+     fixed_list<RelicId, 8> atBattleStart;
+@@ -108,6 +109,7 @@
+ 
+     for (const auto &r : gc.relics.relics) {
+         player.updateCardUseRelic(r.id, true);
++        player.updateHpLossDrawRelic(r.id, true);
+         switch (r.id) {
+ 
+             case R::HOLY_WATER:
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -68,6 +68,13 @@
+ }
+ 
+ 
++void Player::updateHpLossDrawRelic(RelicId relic, bool present) {
++    if (relic != RelicId::CENTENNIAL_PUZZLE && relic != RelicId::RUNIC_CUBE) return;
++    const auto found = std::find(hpLossDrawRelics.begin(), hpLossDrawRelics.end(), relic);
++    if (present && found == hpLossDrawRelics.end()) hpLossDrawRelics.push_back(relic);
++    else if (!present && found != hpLossDrawRelics.end()) hpLossDrawRelics.erase(found);
++}
++
+ bool Player::hasRelicRuntime(RelicId r) const {
+     if ((int) r < 64) {
+         return relicBits0 & (1ULL << (int)r);
+@@ -347,16 +354,16 @@
+         bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(getStatus<PS::RUPTURE>()));
+     }
+ 
+-    // todo - does order acquired matter with centennial/runic?
+-    // relics wasHpLost
+-    // -centennial-puzzle
+-    // -emotion chip
+-    // -runic cube
+-    // -self forming clay
+-
+-    if (hasRelic<RelicId::CENTENNIAL_PUZZLE>()) {
+-        setHasRelic<RelicId::CENTENNIAL_PUZZLE>(false);
+-        bc.addToTop( Actions::DrawCards(3) );
++    // Copy the order because consuming Puzzle removes its enabled callback.
++    // Each queued draw owns its amount and acts on its executing battle copy.
++    const auto drawRelics = hpLossDrawRelics;
++    for (auto relic : drawRelics) {
++        if (relic == RelicId::CENTENNIAL_PUZZLE) {
++            setHasRelic<RelicId::CENTENNIAL_PUZZLE>(false);
++            bc.addToTop(Actions::DrawCards(3));
++        } else {
++            bc.addToTop(Actions::DrawCards(1));
++        }
+     }
+ 
+     if (hasRelic<RelicId::EMOTION_CHIP>()) {
+@@ -365,10 +372,6 @@
+ 
+     if (hasRelic<RelicId::SELF_FORMING_CLAY>()) {
+         buff<PS::NEXT_TURN_BLOCK>(3);
+-    }
+-
+-    if (hasRelic<RelicId::RUNIC_CUBE>()) {
+-        bc.addToTop( Actions::DrawCards(1) );
+     }
+ 
+     if (!isBloodied && curHp <= maxHp/2) {

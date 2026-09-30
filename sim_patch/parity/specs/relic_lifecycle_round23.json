@@ -1,0 +1,1059 @@
+[
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "neow_last_charge",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 1
+      }
+    ],
+    "second_opening_only": true
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "flower_restored_minus_one",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Happy Flower",
+        "counter": -1
+      }
+    ],
+    "first_wait": 2
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "burner_restored_minus_one",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Incense Burner",
+        "counter": -1
+      }
+    ],
+    "first_wait": 5
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "tea_rest_shop",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Ancient Tea Set",
+        "counter": -1
+      }
+    ],
+    "before_rooms": [
+      "REST",
+      "SHOP"
+    ],
+    "first_wait": 1,
+    "second_wait": 1
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "tea_uncharged",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Ancient Tea Set",
+        "counter": -1
+      }
+    ],
+    "first_wait": 1
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "flower_threshold",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Happy Flower",
+        "counter": 2
+      }
+    ],
+    "first_wait": 1,
+    "second_wait": 1
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "burner_threshold",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Incense Burner",
+        "counter": 5
+      }
+    ],
+    "first_wait": 1,
+    "second_wait": 1
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "neow_two_charges",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 2
+      }
+    ]
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "neow_inactive_zero",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 0
+      }
+    ],
+    "opening_only": true
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "neow_spent_minus_two",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": -2
+      }
+    ],
+    "opening_only": true
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "all_counters_two_fights",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 2
+      },
+      {
+        "id": "Ancient Tea Set",
+        "counter": -1
+      },
+      {
+        "id": "Happy Flower",
+        "counter": 0
+      },
+      {
+        "id": "Incense Burner",
+        "counter": 4
+      }
+    ],
+    "before_rooms": [
+      "REST",
+      "SHOP"
+    ],
+    "first_wait": 1,
+    "second_wait": 1
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 200,
+    "max_hp": 200,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "all_counters_escape",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 1
+      },
+      {
+        "id": "Ancient Tea Set",
+        "counter": -1
+      },
+      {
+        "id": "Happy Flower",
+        "counter": 2
+      },
+      {
+        "id": "Incense Burner",
+        "counter": 5
+      }
+    ],
+    "before_rooms": [
+      "REST"
+    ],
+    "potions": [
+      "SmokeBomb"
+    ],
+    "escape": true,
+    "second_opening_only": true
+  },
+  {
+    "seed": 123,
+    "floor": 24,
+    "hp": 1,
+    "max_hp": 80,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "name": "all_counters_death",
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 1
+      },
+      {
+        "id": "Ancient Tea Set",
+        "counter": -1
+      },
+      {
+        "id": "Happy Flower",
+        "counter": 2
+      },
+      {
+        "id": "Incense Burner",
+        "counter": 4
+      }
+    ],
+    "before_rooms": [
+      "REST"
+    ],
+    "first_wait": 1,
+    "death": true
+  }
+]

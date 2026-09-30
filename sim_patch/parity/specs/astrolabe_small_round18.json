@@ -1,0 +1,51 @@
+[
+  {
+    "name": "astrolabe_small_three_types",
+    "kind": "relic",
+    "id": "Astrolabe",
+    "deck": [
+      "Bite",
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ]
+  },
+  {
+    "name": "astrolabe_small_two_types",
+    "kind": "relic",
+    "id": "Astrolabe",
+    "deck": [
+      "Finesse",
+      "Parasite",
+      "AscendersBane"
+    ]
+  },
+  {
+    "name": "astrolabe_small_basic_control",
+    "kind": "relic",
+    "id": "Astrolabe",
+    "deck": [
+      "Bash",
+      "Strike_R",
+      "Defend_R",
+      "AscendersBane"
+    ]
+  },
+  {
+    "name": "astrolabe_manual_types_control",
+    "kind": "relic",
+    "id": "Astrolabe",
+    "deck": [
+      "Bite",
+      "Finesse",
+      "Parasite",
+      "Strike_R",
+      "AscendersBane"
+    ],
+    "select_ids": [
+      "Bite",
+      "Finesse",
+      "Parasite"
+    ]
+  }
+]

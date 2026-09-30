@@ -1,0 +1,169 @@
+{
+  "repair": "Reference-profile end-turn shuffle, shared Java RNG continuation, and shifted card identity",
+  "apply_after": "colosseum_enrage.patch",
+  "patch_sha256": "efb73f3ed1e4f35c868a42667ed6c35959f4c51c319e5f8f8c843786aa1e3a13",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "8c24a31b83d41789075f5178c78f5fba0c75f5d312db5f6d9514edd0f4af8391",
+      "after": "17ea8a5365b9ff2c13d6e229785d240ebae431192314b0025af061793b09079a"
+    },
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "efde30ce10403ae39a974310ea3aedb736135b25615b4d21dde832af984c4cdd",
+      "after": "3b62d38f395965d27190861007bf22cfa77c9e7051789a17be5b640b1909ed0d"
+    },
+    {
+      "path": "include/game/GameContext.h",
+      "before": "26cdc95480ef8f744eee7e063e7fc4e88d367b3f1291d42d47f57b0fe66a4212",
+      "after": "3a1fdf10f49cdb7af9873a120d1d7fec44df8603b5afe5b61c7cfc6b58e81248"
+    },
+    {
+      "path": "include/game/Random.h",
+      "before": "aad8ec018e54798c7d305a909554e516cca0990d5a14e2d22392c2a7a973f2e5",
+      "after": "f7f2d18b05a8f3ef1235a89a7653cb7a8857c3e380bc6f25a8a40d00827ded3d"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "ead8d2eb51f810ca996f81069764b0e2a4a7a3f09c849525ad71143298768103",
+      "after": "3bd48d86a17907bf94206be153b803379bb8c8952e4f8d6e829a34c140e9ad5a"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "bindings/slaythespire.cpp": "8c24a31b83d41789075f5178c78f5fba0c75f5d312db5f6d9514edd0f4af8391",
+        "include/combat/BattleContext.h": "efde30ce10403ae39a974310ea3aedb736135b25615b4d21dde832af984c4cdd",
+        "include/game/GameContext.h": "26cdc95480ef8f744eee7e063e7fc4e88d367b3f1291d42d47f57b0fe66a4212",
+        "include/game/Random.h": "aad8ec018e54798c7d305a909554e516cca0990d5a14e2d22392c2a7a973f2e5",
+        "src/combat/BattleContext.cpp": "ead8d2eb51f810ca996f81069764b0e2a4a7a3f09c849525ad71143298768103"
+      },
+      "after": {
+        "bindings/slaythespire.cpp": "17ea8a5365b9ff2c13d6e229785d240ebae431192314b0025af061793b09079a",
+        "include/combat/BattleContext.h": "3b62d38f395965d27190861007bf22cfa77c9e7051789a17be5b640b1909ed0d",
+        "include/game/GameContext.h": "3a1fdf10f49cdb7af9873a120d1d7fec44df8603b5afe5b61c7cfc6b58e81248",
+        "include/game/Random.h": "f7f2d18b05a8f3ef1235a89a7653cb7a8857c3e380bc6f25a8a40d00827ded3d",
+        "src/combat/BattleContext.cpp": "3bd48d86a17907bf94206be153b803379bb8c8952e4f8d6e829a34c140e9ad5a"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/src/sim/search/BattleScumSearcher2.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/optimized/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4,
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/BattleContext.h'\npatching file 'include/game/GameContext.h'\npatching file 'include/game/Random.h'\npatching file 'src/combat/BattleContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "bindings/slaythespire.cpp": "8846bd9bbf0e19208f94ec5a5c39df53c59ae0a0d12d6396b40962bb21f5ac79",
+        "include/combat/BattleContext.h": "f65987baf4600176b4e5fa984fcf01af276ff23c04483ddcd50c7eac6b45993d",
+        "include/game/GameContext.h": "26cdc95480ef8f744eee7e063e7fc4e88d367b3f1291d42d47f57b0fe66a4212",
+        "include/game/Random.h": "aad8ec018e54798c7d305a909554e516cca0990d5a14e2d22392c2a7a973f2e5",
+        "src/combat/BattleContext.cpp": "652eb389a07fbf4f1e91f5455cf400c41a7b7281c1cca739df731ef01c7ae969"
+      },
+      "after": {
+        "bindings/slaythespire.cpp": "acc41d20b0bc4cf8f988ceb3955a8cbe4934ee167d93caa2a2869088d7828e94",
+        "include/combat/BattleContext.h": "5623ecf89a375173e6b906f25effa630e0d5e47fefa8ff2bc3dd3674d54aa747",
+        "include/game/GameContext.h": "3a1fdf10f49cdb7af9873a120d1d7fec44df8603b5afe5b61c7cfc6b58e81248",
+        "include/game/Random.h": "f7f2d18b05a8f3ef1235a89a7653cb7a8857c3e380bc6f25a8a40d00827ded3d",
+        "src/combat/BattleContext.cpp": "38beb0562a1cdd85bd2a88e33ba598f41d6a05440897cfcdf27927e0627c1c45"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/src/combat/BattleContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/src/game/GameContext.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/src/sim/search/BattleScumSearcher2.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-profiles/portable/e121/bindings/slaythespire.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 4,
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/BattleContext.h'\npatching file 'include/game/GameContext.h'\npatching file 'include/game/Random.h'\npatching file 'src/combat/BattleContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "ethereal-profiles-original.json.gz": "96a40b684d4515b816e7dc0ea7aae1c9c866382fa01b58d0648b41e61959859a"
+  },
+  "acceptance_boundary": "8 controlled original scenes, 4 installed and 4 without ConsistentEthereal; not a vanilla full-run parity proof"
+}

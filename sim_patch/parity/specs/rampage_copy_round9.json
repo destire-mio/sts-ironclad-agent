@@ -1,0 +1,22 @@
+[
+  {
+    "name": "double_tap_rampage_damage_growth",
+    "fixture": {"hand": ["Double Tap", "Rampage"]},
+    "commands": ["play 1", "play 1 0"]
+  },
+  {
+    "name": "double_tap_upgraded_rampage_damage_growth",
+    "fixture": {"hand": ["Double Tap", {"card": "Rampage", "upgrades": 1}]},
+    "commands": ["play 1", "play 1 0"]
+  },
+  {
+    "name": "rampage_without_copy_control",
+    "fixture": {"hand": ["Rampage"]},
+    "commands": ["play 1 0"]
+  },
+  {
+    "name": "double_tap_strike_control",
+    "fixture": {"hand": ["Double Tap", "Strike_R"]},
+    "commands": ["play 1", "play 1 0"]
+  }
+]

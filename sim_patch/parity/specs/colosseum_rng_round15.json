@@ -1,0 +1,444 @@
+[
+  {
+    "name": "colosseum_seed123",
+    "seed": 123,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ]
+  },
+  {
+    "name": "colosseum_seed1",
+    "seed": 1,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ]
+  },
+  {
+    "name": "colosseum_enchiridion",
+    "seed": 987654321,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "Enchiridion",
+        "counter": -1
+      }
+    ]
+  },
+  {
+    "name": "colosseum_warped_tongs",
+    "seed": 73,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      },
+      {
+        "id": "WarpedTongs",
+        "counter": -1
+      }
+    ]
+  },
+  {
+    "name": "colosseum_leave",
+    "seed": 123,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ],
+    "leave": true
+  },
+  {
+    "name": "colosseum_first_opening_control",
+    "seed": 123,
+    "floor": 24,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0,
+        "bottled": true
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Pommel Strike",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Anger",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Clothesline",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "True Grit",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "Iron Wave",
+        "upgrades": 0,
+        "bottled": false
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0,
+        "bottled": false
+      }
+    ],
+    "relics": [
+      {
+        "id": "Burning Blood",
+        "counter": -1
+      },
+      {
+        "id": "NeowsBlessing",
+        "counter": 3
+      }
+    ],
+    "opening_only": true
+  }
+]

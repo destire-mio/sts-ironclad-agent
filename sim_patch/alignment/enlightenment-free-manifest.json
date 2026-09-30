@@ -1,0 +1,63 @@
+{
+  "patch": "sim_patch/enlightenment_free.patch",
+  "patch_sha256": "c0927b92d6515708dae570d284fac6280cf55687b23e8de2a5590b9ad11c52ce",
+  "apply_after": "sim_patch/exhume_selection.patch",
+  "files": [
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "78efb73fcfc2110f794cfeef36343a18813c57d57667abee2ef0803a04319d05",
+      "after": "f976913916c1edfdb532a615dfcdb275576cee6cc438ff2e43b88a0108abf9d1"
+    }
+  ],
+  "scope": "upgraded Enlightenment lowers base cost without raising an existing zero turn cost",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/Actions.cpp": "78efb73fcfc2110f794cfeef36343a18813c57d57667abee2ef0803a04319d05"
+      },
+      "patch_output": "patching file 'src/combat/Actions.cpp'\n",
+      "after": {
+        "src/combat/Actions.cpp": "f976913916c1edfdb532a615dfcdb275576cee6cc438ff2e43b88a0108abf9d1"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/optimized/src/combat/Actions.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/Actions.cpp": "78efb73fcfc2110f794cfeef36343a18813c57d57667abee2ef0803a04319d05"
+      },
+      "patch_output": "patching file 'src/combat/Actions.cpp'\n",
+      "after": {
+        "src/combat/Actions.cpp": "f976913916c1edfdb532a615dfcdb275576cee6cc438ff2e43b88a0108abf9d1"
+      },
+      "commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+          "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260930-enlightenment-free/portable/e121/src/combat/Actions.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 1
+    }
+  ]
+}

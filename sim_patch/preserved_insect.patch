@@ -1,0 +1,12 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -333,7 +333,8 @@
+                 if (eliteTrigger) {
+                     for (int i = 0; i < monsters.monsterCount; ++i) {
+                         Monster &m = monsters.arr[i];
+-                        m.curHp = static_cast<int>(m.maxHp * .75);
++                        // Earlier relics can leave the monster below this cap (Neow).
++                        m.curHp = std::min(m.curHp, static_cast<int>(m.maxHp * .75));
+                     }
+                 }
+                 break;

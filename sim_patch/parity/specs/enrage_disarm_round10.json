@@ -1,0 +1,22 @@
+[
+  {
+    "name": "enrage_disarm_at_strength_cap",
+    "fixture": {"encounter": "Gremlin Nob", "hand": ["Disarm"], "relic": "Runic Pyramid", "monster_strength": 998},
+    "commands": ["end", "play 1 0"]
+  },
+  {
+    "name": "enrage_upgraded_disarm_at_strength_cap",
+    "fixture": {"encounter": "Gremlin Nob", "hand": [{"card": "Disarm", "upgrades": 1}], "relic": "Runic Pyramid", "monster_strength": 998},
+    "commands": ["end", "play 1 0"]
+  },
+  {
+    "name": "enrage_disarm_low_strength_control",
+    "fixture": {"encounter": "Gremlin Nob", "hand": ["Disarm"], "relic": "Runic Pyramid", "monster_strength": 3},
+    "commands": ["end", "play 1 0"]
+  },
+  {
+    "name": "enrage_defend_at_strength_cap_control",
+    "fixture": {"encounter": "Gremlin Nob", "hand": ["Defend_R"], "relic": "Runic Pyramid", "monster_strength": 998},
+    "commands": ["end", "play 1"]
+  }
+]

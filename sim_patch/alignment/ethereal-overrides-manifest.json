@@ -1,0 +1,64 @@
+{
+  "repair": "Entrench and Ghostly Armor queued bulk callbacks; specific exhaustion clears one-use free state",
+  "apply_after": "ethereal_profiles.patch",
+  "patch_sha256": "f675813ba9a54a4ee7328d8f7b1093afe22b239be2fa1f113fdfea568bffc28d",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "3bd48d86a17907bf94206be153b803379bb8c8952e4f8d6e829a34c140e9ad5a",
+      "after": "346d2f797799ddd558545b5d8551f0ca8a230b0a41087956947a64b059f00a9e"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/combat/BattleContext.cpp": "3bd48d86a17907bf94206be153b803379bb8c8952e4f8d6e829a34c140e9ad5a"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "346d2f797799ddd558545b5d8551f0ca8a230b0a41087956947a64b059f00a9e"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/optimized/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/combat/BattleContext.cpp": "38beb0562a1cdd85bd2a88e33ba598f41d6a05440897cfcdf27927e0627c1c45"
+      },
+      "after": {
+        "src/combat/BattleContext.cpp": "c644ec6e8b02713b24b8cea34ef3d024708df90654abda2e912463a47d52fdbd"
+      },
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-ethereal-overrides/portable/e121/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 1,
+      "patch_output": "patching file 'src/combat/BattleContext.cpp'\n"
+    }
+  ],
+  "original_fixtures": {
+    "ethereal-overrides-original.json.gz": "7612730e8cfaa9e9cb2b56ce29f0296a439b6da3b184d79685cd2ebbda332797",
+    "free-ethereal-original.json.gz": "19a8728427bfbfb7a08a250854e2832e34b281f361db6f32bb62202bceed04cd"
+  },
+  "acceptance_boundary": "11 controlled original scenes, immutable captures and independent continuation; exhaustive parity INCOMPLETE"
+}

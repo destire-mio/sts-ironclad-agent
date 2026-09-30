@@ -1,0 +1,347 @@
+[
+  {
+    "name": "hp-loss-relic-order:cube-first",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        "Centennial Puzzle",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 2,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:puzzle-first-control",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Centennial Puzzle",
+        "Runic Cube",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 2,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:cube-first-no-trigger-control",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        "Centennial Puzzle",
+        {
+          "id": "Sundial",
+          "counter": 0
+        }
+      ],
+      "energy": 2,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:cube-only-control",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 2,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:cube-first:zero-after-hemokinesis",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        "Centennial Puzzle",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 1,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:puzzle-first-control:zero-after-hemokinesis",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Centennial Puzzle",
+        "Runic Cube",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 1,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:cube-first:repeat",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        "Centennial Puzzle",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 1,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:cube-first:pain",
+    "fixture": {
+      "hand": [
+        "Finesse",
+        "Pain",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Runic Cube",
+        "Centennial Puzzle",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 0,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1",
+      "play 2",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:puzzle-first-control:repeat",
+    "fixture": {
+      "hand": [
+        "Hemokinesis",
+        "Hemokinesis",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Centennial Puzzle",
+        "Runic Cube",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 1,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1 0",
+      "play 1 0",
+      "play 1",
+      "end"
+    ]
+  },
+  {
+    "name": "hp-loss-relic-order:puzzle-first-control:pain",
+    "fixture": {
+      "hand": [
+        "Finesse",
+        "Pain",
+        "Whirlwind"
+      ],
+      "draw": [
+        "Bash",
+        "Void"
+      ],
+      "discard": [
+        "Strike_R",
+        "Defend_R",
+        "Armaments",
+        "Anger"
+      ],
+      "relics": [
+        "Centennial Puzzle",
+        "Runic Cube",
+        {
+          "id": "Sundial",
+          "counter": 2
+        }
+      ],
+      "energy": 0,
+      "current_hp": 40
+    },
+    "commands": [
+      "play 1",
+      "play 2",
+      "end"
+    ]
+  }
+]

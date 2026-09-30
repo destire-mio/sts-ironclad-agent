@@ -1,0 +1,2322 @@
+[
+  {
+    "name": "shop-math:paired-attack-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:paired-untraced-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": false,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:paired-idle-600",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 31,
+    "setup_extra_frames": 600
+  },
+  {
+    "name": "shop-math:power-frozen-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "Frozen Egg 2"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 1,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 4,
+        "id": "Inflame"
+      },
+      {
+        "type": "CARD",
+        "slot": 4
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 111,
+      "seed1": 222
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:no-courier-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 28
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 55
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 55
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 55
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 83
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 99
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 198
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Molten Egg 2",
+          "price": 275
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 165
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 165
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 55
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 55
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 83
+        }
+      ],
+      "remove_cost": 75
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 1,
+        "id": "Twin Strike"
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:attack-wait-64",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 64
+  },
+  {
+    "name": "shop-math:shaky-short-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 7001,
+      "seed1": 1
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:shaky-delayed-31",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 7001,
+      "seed1": 18
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:shaky-short-64",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 7001,
+      "seed1": 1
+    },
+    "trace_math": true,
+    "presentation_frames": 64
+  },
+  {
+    "name": "shop-math:first-frame-x-crossing",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 31,
+    "setup_extra_frames": 32
+  },
+  {
+    "name": "shop-math:first-frame-y-crossing",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 0,
+        "id": "Sword Boomerang"
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 12345,
+      "seed1": 67890
+    },
+    "trace_math": true,
+    "presentation_frames": 31,
+    "setup_extra_frames": 856
+  },
+  {
+    "name": "shop-math:skill-then-attack",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 2
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 2
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 90001,
+      "seed1": 2222
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:colorless-then-attack",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 0,
+          "price": 44
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 66
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 79
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 158
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 220
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 132
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 132
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 44
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 44
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 66
+        }
+      ],
+      "remove_cost": 60
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 5
+      },
+      {
+        "type": "CARD",
+        "slot": 0
+      },
+      {
+        "type": "CARD",
+        "slot": 5
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 839,
+      "seed1": 294
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  },
+  {
+    "name": "shop-math:skill-discount-upgrade",
+    "seed": 5,
+    "floor": 6,
+    "act": 1,
+    "hp": 40,
+    "max_hp": 80,
+    "gold": 1000,
+    "blue_key": false,
+    "deck": [
+      {
+        "id": "Whirlwind",
+        "upgrades": 0
+      },
+      {
+        "id": "Whirlwind",
+        "upgrades": 1
+      },
+      {
+        "id": "Bash",
+        "upgrades": 0
+      },
+      {
+        "id": "Strike_R",
+        "upgrades": 1
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 0
+      },
+      {
+        "id": "Shrug It Off",
+        "upgrades": 1
+      },
+      {
+        "id": "Defend_R",
+        "upgrades": 0
+      },
+      {
+        "id": "Armaments",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 0
+      },
+      {
+        "id": "Inflame",
+        "upgrades": 1
+      },
+      {
+        "id": "AscendersBane",
+        "upgrades": 0
+      }
+    ],
+    "relics": [
+      "The Courier",
+      "Membership Card",
+      "Toxic Egg 2"
+    ],
+    "pool_overrides": {
+      "common": [
+        "Bag of Marbles",
+        "Oddly Smooth Stone"
+      ],
+      "uncommon": [
+        "Shuriken",
+        "Kunai"
+      ],
+      "rare": [
+        "Mango",
+        "Calipers"
+      ]
+    },
+    "stock": {
+      "cards": [
+        {
+          "id": "Sword Boomerang",
+          "upgrades": 0,
+          "price": 11
+        },
+        {
+          "id": "Twin Strike",
+          "upgrades": 0,
+          "price": 22
+        },
+        {
+          "id": "Shrug It Off",
+          "upgrades": 1,
+          "price": 22
+        },
+        {
+          "id": "Armaments",
+          "upgrades": 1,
+          "price": 22
+        },
+        {
+          "id": "Inflame",
+          "upgrades": 0,
+          "price": 33
+        },
+        {
+          "id": "Finesse",
+          "upgrades": 0,
+          "price": 40
+        },
+        {
+          "id": "Apotheosis",
+          "upgrades": 0,
+          "price": 79
+        }
+      ],
+      "relics": [
+        {
+          "slot": 0,
+          "id": "Bottled Flame",
+          "price": 110
+        },
+        {
+          "slot": 1,
+          "id": "Vajra",
+          "price": 66
+        },
+        {
+          "slot": 2,
+          "id": "Medical Kit",
+          "price": 66
+        }
+      ],
+      "potions": [
+        {
+          "slot": 0,
+          "id": "Fire Potion",
+          "price": 22
+        },
+        {
+          "slot": 1,
+          "id": "Block Potion",
+          "price": 22
+        },
+        {
+          "slot": 2,
+          "id": "BloodPotion",
+          "price": 33
+        }
+      ],
+      "remove_cost": 38
+    },
+    "purchases": [
+      {
+        "type": "CARD",
+        "slot": 2
+      },
+      {
+        "type": "CARD",
+        "slot": 2
+      }
+    ],
+    "inventory_audit": true,
+    "math_rng": {
+      "seed0": 82587,
+      "seed1": 74939
+    },
+    "trace_math": true,
+    "presentation_frames": 31
+  }
+]

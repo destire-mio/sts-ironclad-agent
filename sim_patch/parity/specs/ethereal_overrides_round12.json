@@ -1,0 +1,10 @@
+[
+  {"name":"entrench_last", "fixture":{"hand":["Dazed","AscendersBane","Ghostly","Entrench"]}, "commands":["end"]},
+  {"name":"entrench_first", "fixture":{"hand":["Entrench","Dazed","AscendersBane","Ghostly"]}, "commands":["end"]},
+  {"name":"ghostly_armor_first", "fixture":{"hand":["Ghostly Armor","Dazed","AscendersBane"]}, "commands":["end"]},
+  {"name":"ghostly_armor_middle", "fixture":{"hand":["Dazed","Ghostly Armor","AscendersBane"]}, "commands":["end"]},
+  {"name":"ghostly_armor_exhaust_effects", "fixture":{"hand":["Dark Embrace","Feel No Pain","Ghostly Armor","Dazed","AscendersBane"],"relic":"Dead Branch","energy":10}, "commands":["play 1","play 1","end"]},
+  {"name":"entrench_no_ethereal_control", "fixture":{"hand":["Entrench","Defend_R","Strike_R"],"relic":"Runic Pyramid"}, "commands":["end","end"]},
+  {"name":"shared_overrides", "original_profile":"without-consistent-ethereal", "fixture":{"hand":["Dazed","Ghostly Armor","AscendersBane","Entrench"]}, "commands":["end"]},
+  {"name":"generic_ethereal_spoon_control", "fixture":{"hand":["Dazed","Ghostly","AscendersBane"],"relic":"Strange Spoon"}, "commands":["end"]}
+]

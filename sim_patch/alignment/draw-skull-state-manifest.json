@@ -1,0 +1,108 @@
+{
+  "repair": "ordered onCardDraw and persisted bloodied/Red Skull state",
+  "apply_after": "exhaust_skull_order.patch",
+  "patch_sha256": "169ae2dd99db926d2a0c655b50700aaa2834be3f20c8742111da2919792e85f7",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "bindings/slaythespire.cpp",
+      "before": "6bb177844e6e1bff3dce938e584f590928d4abfbcbb42158289cb41a80b19b3e",
+      "after": "8c24a31b83d41789075f5178c78f5fba0c75f5d312db5f6d9514edd0f4af8391"
+    },
+    {
+      "path": "include/combat/Player.h",
+      "before": "c8697eba269ea54750ea2262d59192d8d274e93008d6e9416e1ff53fd74c35d3",
+      "after": "980d6c9b2bd857078912e9a02fa9f545dbcadfaac6de74efbcff976a9ccf5681"
+    },
+    {
+      "path": "src/combat/CardManager.cpp",
+      "before": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a",
+      "after": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779"
+    },
+    {
+      "path": "src/combat/Player.cpp",
+      "before": "223ac975cc521a911cdb3b4df9fa1a9714f6bc0b5d84cc9a58c7fc632ccffa8d",
+      "after": "c2aedef25eb7d04eb9d75dd9e0ae3d3e282dafaf57eb7e6b727ccb433f8a0a87"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "a815ba033d3f7547e7a2345c1c1824179284357e7c93de55e6a94c0a1352e17a",
+      "after": "c0c7822165f0e44fba07a519e940f9391790dd0e9d8b224dfb407f03ff8dc989"
+    }
+  ],
+  "acceptance_boundary": "finite controlled modded-original scenes; exhaustive parity INCOMPLETE",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "bindings/slaythespire.cpp": "6bb177844e6e1bff3dce938e584f590928d4abfbcbb42158289cb41a80b19b3e",
+        "include/combat/Player.h": "c8697eba269ea54750ea2262d59192d8d274e93008d6e9416e1ff53fd74c35d3",
+        "src/combat/CardManager.cpp": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a",
+        "src/combat/Player.cpp": "223ac975cc521a911cdb3b4df9fa1a9714f6bc0b5d84cc9a58c7fc632ccffa8d",
+        "src/combat/BattleContext.cpp": "a815ba033d3f7547e7a2345c1c1824179284357e7c93de55e6a94c0a1352e17a"
+      },
+      "after": {
+        "bindings/slaythespire.cpp": "8c24a31b83d41789075f5178c78f5fba0c75f5d312db5f6d9514edd0f4af8391",
+        "include/combat/Player.h": "980d6c9b2bd857078912e9a02fa9f545dbcadfaac6de74efbcff976a9ccf5681",
+        "src/combat/CardManager.cpp": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779",
+        "src/combat/Player.cpp": "c2aedef25eb7d04eb9d75dd9e0ae3d3e282dafaf57eb7e6b727ccb433f8a0a87",
+        "src/combat/BattleContext.cpp": "c0c7822165f0e44fba07a519e940f9391790dd0e9d8b224dfb407f03ff8dc989"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/Player.h'\npatching file 'src/combat/CardManager.cpp'\npatching file 'src/combat/Player.cpp'\npatching file 'src/combat/BattleContext.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/bindings/slaythespire.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/src/combat/CardManager.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/src/combat/Player.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/optimized/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 4
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "bindings/slaythespire.cpp": "37a034c2e8fa0c1eb2df990895f21b8042ae5714dcf549250bde02400290d4c9",
+        "include/combat/Player.h": "bbb48b9de67a0728f9331c9131a4f7c0a91f8b17590a5a1869865783e98de488",
+        "src/combat/CardManager.cpp": "4989b7b26abb6b4ee9b3e9009cfb36799cf9de5ad69ba100d5839ca5ab77982a",
+        "src/combat/Player.cpp": "a7e0b0809a6a10c6e6019a569982214e31df5179355630d97d4f83aab2eadf20",
+        "src/combat/BattleContext.cpp": "5c8b3bdee242affe4d3a6cdc29d29066427962d601d32aeb281e049d713f7daa"
+      },
+      "after": {
+        "bindings/slaythespire.cpp": "8846bd9bbf0e19208f94ec5a5c39df53c59ae0a0d12d6396b40962bb21f5ac79",
+        "include/combat/Player.h": "cf604e53627779dfeba7abb82313b9309d6c8dcdecd7ad55536fab2e873a0951",
+        "src/combat/CardManager.cpp": "60712aa726576defcd6969ac7d2ff5510b2b47b0f883c0e4e44ec21b937ae779",
+        "src/combat/Player.cpp": "3f66c53922d5a8be089bcfe758b8ccf83d1156cdb3c50e9fedb345a44085b084",
+        "src/combat/BattleContext.cpp": "d84eadb7b55b2845ff359a80e50ad5e7c31b51fe6ace1a222a7f6debf06577e7"
+      },
+      "patch_output": "patching file 'bindings/slaythespire.cpp'\npatching file 'include/combat/Player.h'\npatching file 'src/combat/CardManager.cpp'\npatching file 'src/combat/Player.cpp'\npatching file 'src/combat/BattleContext.cpp'\n",
+      "syntax_command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-fsyntax-only",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/include",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/bindings",
+        "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+        "-I/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include",
+        "-I/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/bindings/slaythespire.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/src/combat/CardManager.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/src/combat/Player.cpp",
+        "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-draw-skull/portable-final/e121/src/combat/BattleContext.cpp"
+      ],
+      "translation_units_syntax_checked": 4
+    }
+  ],
+  "original_fixtures": {
+    "draw-power-order-original.json.gz": "a0edc3ff5098d577fd6edb5e00074aa07c96f3ee2bf331ad0cd75ca2402471e3",
+    "red-skull-max-hp-original.json.gz": "cd8f5a782e687f6967d3d2b79f66e026502c344bbdfb0e54d0a4b9ac17bbacb9",
+    "draw-skull-repair-original.json.gz": "8d55c1da7ce9c5d2b395971e8fb65a8ca98bae5584f88b3df693bbdcf25fae99",
+    "void-terminal-original.json.gz": "839f6a36e8ed292f04505347f9a4a62ebb20976b36677fde463c42bf5aed7230"
+  }
+}

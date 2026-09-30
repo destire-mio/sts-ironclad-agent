@@ -1,0 +1,247 @@
+--- a/bindings/shop-presentation-json.h
++++ b/bindings/shop-presentation-json.h
+@@ -19,7 +19,8 @@
+     throw std::invalid_argument("unsupported shop word effect");
+ }
+ inline ShopPresentationState shopPresentationFromJson(const nlohmann::json &j) {
+-    const bool obtainProfile=j.at("profile")=="installed-shop-v5";
++    const bool upgradeProfile=j.at("profile")=="installed-shop-v6";
++    const bool obtainProfile=upgradeProfile || j.at("profile")=="installed-shop-v5";
+     const bool rewardProfile=obtainProfile || j.at("profile")=="installed-shop-v4";
+     const bool purgeProfile=rewardProfile || j.at("profile")=="installed-shop-v3";
+     const bool extended=purgeProfile || j.at("profile")=="installed-shop-v2";
+@@ -29,7 +30,11 @@
+         throw std::invalid_argument("unsupported shop presentation environment");
+     ShopPresentationState s;
+     s.delta=j.at("delta");s.frame=j.at("frame");s.timing.card=j.at("purchase_frames");
+-    s.saidWelcome=j.value("said_welcome",true);s.trackPurge=purgeProfile;s.trackRewards=rewardProfile;s.trackObtain=obtainProfile;
++    s.saidWelcome=j.value("said_welcome",true);s.trackPurge=purgeProfile;s.trackRewards=rewardProfile;s.trackObtain=obtainProfile;s.trackUpgrade=upgradeProfile;
++    if (upgradeProfile) for (const auto *key:{"shines","briefs","hammers","sparks"}) {
++        const auto &effects=j.at("upgrade_effects").at(key);
++        if (!effects.is_array() || !effects.empty()) throw std::invalid_argument("initial upgrade effects must be empty");
++    }
+     if (rewardProfile) {
+         if (j.at("debug_mode").get<bool>() || !j.at("healing").at("lines").empty() || !j.at("healing").at("numbers").empty())
+             throw std::invalid_argument("unsupported initial reward environment or healing effects");
+@@ -65,7 +70,7 @@
+                 key!="RELIC" && key!="GRID" && key!="DISCARD" &&
+                 !(purgeProfile && (key=="REMOVE" || key=="PURGE_CONFIRM" || key=="PURGE_CANCEL")) &&
+                 !(rewardProfile && (key=="REWARD_CARD" || key=="REWARD_POTION" || key=="REWARD_PEEK" ||
+-                    key=="REWARD_BOWL" || key=="REWARD_RETURN")) && !(obtainProfile && key=="MIRROR"))
++                    key=="REWARD_BOWL" || key=="REWARD_RETURN")) && !(obtainProfile && key=="MIRROR") && !(upgradeProfile && key=="UPGRADE"))
+                 throw std::invalid_argument("unknown shop action clock");
+             if (!item.value().is_number_integer() || item.value()<0 || item.value()>240)
+                 throw std::invalid_argument("shop action clock must be an integer in range");
+@@ -77,6 +82,7 @@
+         s.timing.potion=clock.value("POTION",0);s.timing.blockedPotion=clock.value("BLOCKED_POTION",0);
+         s.timing.relic=clock.value("RELIC",0);s.timing.grid=clock.value("GRID",0);s.timing.discard=clock.value("DISCARD",0);
+         if (obtainProfile) s.timing.mirror=clock.value("MIRROR",0);
++        if (upgradeProfile) s.timing.upgrade=clock.value("UPGRADE",0);
+         if (rewardProfile) {
+             s.timing.rewardCard=clock.value("REWARD_CARD",0);s.timing.rewardPotion=clock.value("REWARD_POTION",0);
+             s.timing.rewardPeek=clock.value("REWARD_PEEK",0);s.timing.rewardBowl=clock.value("REWARD_BOWL",0);
+@@ -170,6 +176,14 @@
+             {"behind",p.behind},{"before_purge",s.purge.present && p.order<s.purgeOrder}});
+         result["potion_displays"]={{"shop",stock},{"rewards",rewards}};result["potion_particles"]=particles;
+     }
++    if (s.trackUpgrade) {
++        J shines=J::array(),briefs=J::array();
++        for (const auto &e:s.upgradeShines) shines.push_back({{"duration",e.duration},{"clang1",e.clang1},{"clang2",e.clang2},
++            {"before_purge",s.purge.present && e.order<s.purgeOrder}});
++        for (const auto &e:s.upgradeBriefs) briefs.push_back({{"id",e.id},{"upgrades",e.upgrades},{"misc",e.misc},
++            {"duration",e.duration},{"fading",e.duration<.6f}});
++        result["upgrade_effects"]={{"shines",shines},{"briefs",briefs},{"hammers",s.upgradeHammers},{"sparks",s.upgradeSparks}};
++    }
+     return result;
+ }
+ }
+--- a/include/game/ShopPresentation.h
++++ b/include/game/ShopPresentation.h
+@@ -31,7 +31,12 @@
+     } dialog;
+ 
+     bool configured=false, closed=false, characterWords=true, shopVisible=true, saidWelcome=true;
+-    bool trackPurge=false, trackRewards=false, trackObtain=false, disableEffects=false;
++    bool trackPurge=false, trackRewards=false, trackObtain=false, trackUpgrade=false, disableEffects=false;
++    struct UpgradeShine { float duration=.8f; bool clang1=false,clang2=false; std::uint64_t order=0; };
++    struct UpgradeBrief { std::string id; int upgrades=0,misc=0; float duration=2.5f; };
++    std::vector<UpgradeShine> upgradeShines;
++    std::vector<UpgradeBrief> upgradeBriefs;
++    std::vector<float> upgradeHammers,upgradeSparks;
+     struct Tips {
+         std::vector<std::string> remaining,refill;
+         std::string selected,potionFull;
+@@ -61,7 +66,7 @@
+     std::int64_t frame=0;
+     struct Timing { int card=0,potion=0,blockedPotion=0,relic=0,grid=0,discard=0;
+         int purgeOpen=0,purgeConfirm=0,purgeCancel=0;
+-        int rewardCard=0,rewardPotion=0,rewardPeek=0,rewardBowl=0,rewardReturn=0,mirror=0; } timing;
++        int rewardCard=0,rewardPotion=0,rewardPeek=0,rewardBowl=0,rewardReturn=0,mirror=0,upgrade=0; } timing;
+     float delta=1.0f/60.0f, speechTimer=0;
+     std::array<std::vector<Token>,5> buyMessages;
+     std::vector<Token> welcomeMessage,fullPotionMessage;
+@@ -139,7 +144,7 @@
+             throw std::invalid_argument("unsupported shop presentation clock or lifecycle");
+         for (int n:{timing.potion,timing.blockedPotion,timing.relic,timing.grid,timing.discard,
+                     timing.purgeOpen,timing.purgeConfirm,timing.purgeCancel,
+-                    timing.rewardCard,timing.rewardPotion,timing.rewardPeek,timing.rewardBowl,timing.rewardReturn,timing.mirror})
++                    timing.rewardCard,timing.rewardPotion,timing.rewardPeek,timing.rewardBowl,timing.rewardReturn,timing.mirror,timing.upgrade})
+             if (n<0 || n>240) throw std::invalid_argument("shop action clock outside bound");
+         if ((timing.grid && timing.grid<2) || (timing.relic && timing.relic<2) ||
+             (timing.blockedPotion && timing.blockedPotion<121))
+@@ -156,6 +161,9 @@
+             throw std::invalid_argument("reward timing requires its presentation profile");
+         if ((trackObtain && !trackRewards) || (timing.mirror && (!trackObtain || timing.mirror<61)))
+             throw std::invalid_argument("mirror timing requires its obtain profile and settled decision boundary");
++        if ((trackUpgrade && !trackObtain) || (timing.upgrade && (!trackUpgrade || timing.upgrade<2)) ||
++            !upgradeShines.empty() || !upgradeBriefs.empty() || !upgradeHammers.empty() || !upgradeSparks.empty())
++            throw std::invalid_argument("unsupported initial upgrade state or timing");
+         if (trackRewards && (!trackPurge || tips.remaining.empty() || tips.remaining.size()>128 ||
+             tips.refill.empty() || tips.refill.size()>128 || tips.potionFull.empty() || tips.initialCollectionsSeed>0xffffffffffffULL ||
+             !healLines.empty() || !pendingHealLines.empty() || !healNumbers.empty() || !pendingHealNumbers.empty()))
+@@ -336,14 +344,52 @@
+         scene.lightFlares.insert(scene.lightFlares.end(),scene.pendingLightFlares.begin(),scene.pendingLightFlares.end());
+         scene.pendingTorchParticles.clear();scene.pendingLightFlares.clear();
+     }
++    void createUpgrade(const std::vector<UpgradeBrief> &cards) {
++        requireUpgrade();
++        if (cards.empty()) return;
++        upgradeBriefs.insert(upgradeBriefs.end(),cards.begin(),cards.end());
++        upgradeShines.push_back({.8f,false,false,nextTopOrder++});
++    }
++    void upgradeClank(Random &rng) {
++        // The hammer exists even with effects disabled. New queued particles
++        // render this frame and start their lifetime updates next frame.
++        rng.nextFloat();rng.nextFloat();upgradeHammers.push_back(.7f);
++        if (!disableEffects) for (int i=0;i<30;++i) {
++            rng.nextFloat();rng.nextFloat(); // spawn position, before constructor
++            rng.nextBoolean();
++            const float duration=sample(rng,.5f,1);
++            for (int field=0;field<8;++field) rng.nextFloat();
++            upgradeSparks.push_back(duration);
++        }
++    }
++    void updateUpgrades(Random &rng,bool hadPurge,bool beforePurge) {
++        for (std::size_t i=0;i<upgradeShines.size();) {
++            auto &e=upgradeShines[i];
++            if ((!hadPurge || e.order<purgeOrder)!=beforePurge) {++i;continue;}
++            // Original tests the first two thresholds before subtracting delta,
++            // and the last threshold afterwards. Keep Java float32 rounding.
++            if (e.duration<.6f && !e.clang1) {e.clang1=true;upgradeClank(rng);}
++            if (e.duration<.2f && !e.clang2) {e.clang2=true;upgradeClank(rng);}
++            e.duration=add(e.duration,-delta);
++            if (e.duration<0) {upgradeClank(rng);upgradeShines.erase(upgradeShines.begin()+i);}
++            else ++i;
++        }
++    }
+     void updateEffects(Random &rng) {
+         // New particles enter their queues after this frame's updates. Existing
+         // particles have no RNG consumers; their lifetimes remain value-owned.
+         updateLifetimes(topParticles);updateLifetimes(regularParticles);
++        updateLifetimes(upgradeHammers);updateLifetimes(upgradeSparks);
++        for (std::size_t i=0;i<upgradeBriefs.size();) {
++            auto &e=upgradeBriefs[i];e.duration=add(e.duration,-delta);
++            if (e.duration<0) upgradeBriefs.erase(upgradeBriefs.begin()+i);else ++i;
++        }
+         for (std::size_t i=0;i<potionParticles.size();) {
+             potionParticles[i].duration=add(potionParticles[i].duration,-delta);
+             if (potionParticles[i].duration<0) potionParticles.erase(potionParticles.begin()+i);else ++i;
+         }
++        const bool hadPurge=purge.present;
++        updateUpgrades(rng,hadPurge,true);
+         if (purge.present) purge.duration=add(purge.duration,-delta);
+         if (purge.present && purge.duration<.5f && !purge.fading) {
+             purge.fading=true;
+@@ -356,6 +402,7 @@
+             }
+         }
+         if (purge.present && purge.duration<0) purge=Purge{};
++        updateUpgrades(rng,hadPurge,false);
+         updateTorchParticles();
+         // Existing effectList entries update before its queue is drained. A
+         // newly constructed heal line renders this frame but updates next frame.
+@@ -384,6 +431,11 @@
+         // PurgeCardEffect.renderVfx samples two scales for each of three layers.
+         if (purge.present) for (int layer=0;layer<3;++layer) {rng.nextFloat();rng.nextFloat();}
+         particles(false);
++        // Each remaining top-level effect only samples render coordinates or
++        // scales here. Their pure float draws do not alter stored lifetime state.
++        for (std::size_t i=0;i<upgradeHammers.size();++i) {rng.nextFloat();rng.nextFloat();}
++        for (std::size_t i=0;i<upgradeSparks.size();++i)
++            for (int field=0;field<4;++field) rng.nextFloat();
+     }
+     void sparkle(Random &rng,PotionDisplay &p) {
+         if (disableEffects || p.id==Potion::INVALID) return;
+@@ -431,6 +483,10 @@
+         // GRID closes during its update; openPreviousScreen(SHOP) calls open().
+         ++frame;if (returnsToShop) reopenShop();else rewardsVisible=true;finishFrame(rng);advance(rng,timing.grid-1);
+     }
++    void requireUpgrade() const {
++        if (!trackUpgrade || timing.upgrade<2 || timing.upgrade>240)
++            throw std::invalid_argument("upgrade relic requires its presentation scope and clock");
++    }
+     void requireObtain() const {
+         if (!trackObtain) throw std::invalid_argument("on-equip obtain callbacks outside shop presentation scope");
+     }
+--- a/src/game/GameContext.cpp
++++ b/src/game/GameContext.cpp
+@@ -1351,6 +1351,8 @@
+ 
+ 
+ void upgradeRandomCardsMatching(GameContext &gc, CardType type) {
++    const bool presentation=gc.shopPresentation.active();
++    if (presentation) gc.shopPresentation.requireUpgrade();
+     auto list = gc.deck.getIdxsMatching([=](const auto &c){ return c.canUpgrade() && c.getType() == type; });
+     java::Collections::shuffle(list.begin(), list.end(), java::Random(gc.miscRng.randomLong()));
+     if (list.size() == 1) {
+@@ -1358,6 +1360,15 @@
+     } else if (list.size() >= 2) {
+         gc.deck.upgrade(list[0]);
+         gc.deck.upgrade(list[1]);
++    }
++    if (presentation) {
++        std::vector<ShopPresentationState::UpgradeBrief> shown;
++        for (std::size_t i=0;i<std::min<std::size_t>(2,list.size());++i) {
++            const auto &c=gc.deck.cards[list[i]];
++            shown.push_back({cardStringIds[static_cast<int>(c.id)],c.getUpgraded(),
++                c.id==CardId::RITUAL_DAGGER?c.misc:0,2.5f});
++        }
++        gc.shopPresentation.createUpgrade(shown);
+     }
+ }
+ 
+@@ -4246,6 +4257,8 @@
+         case RelicId::SOZU: case RelicId::BOTTLED_FLAME: case RelicId::BOTTLED_LIGHTNING: case RelicId::BOTTLED_TORNADO:
+             if (state.idleMessages.empty()) throw std::invalid_argument("relic requires extended shop presentation profile");
+             break;
++        case RelicId::WHETSTONE: case RelicId::WAR_PAINT:
++            state.requireUpgrade();break;
+         case RelicId::SINGING_BOWL:
+             if (!state.trackRewards) throw std::invalid_argument("Singing Bowl requires reward presentation profile");
+             break;
+--- a/src/game/Shop.cpp
++++ b/src/game/Shop.cpp
+@@ -120,9 +120,13 @@
+ void Shop::buyRelic(GameContext &gc, int idx) {
+     const bool presentation=gc.shopPresentation.active();
+     const RelicId r = relics[idx];
++    const bool upgrading=r==RelicId::WHETSTONE || r==RelicId::WAR_PAINT;
++    const int frames=upgrading?gc.shopPresentation.timing.upgrade:gc.shopPresentation.timing.relic;
+     if (presentation) {
+-        ShopPresentationState::requireClock(gc.shopPresentation.timing.relic);
++        ShopPresentationState::requireClock(frames);
+         switch (r) {
++            case RelicId::WHETSTONE: case RelicId::WAR_PAINT:
++                gc.shopPresentation.requireUpgrade();break;
+             case RelicId::MEMBERSHIP_CARD: case RelicId::MOLTEN_EGG: case RelicId::TOXIC_EGG:
+             case RelicId::FROZEN_EGG: break;
+             case RelicId::BOTTLED_FLAME: case RelicId::BOTTLED_LIGHTNING: case RelicId::BOTTLED_TORNADO:
+@@ -183,7 +187,7 @@
+             c = gc.previewObtainCard(c);
+         }
+     }
+-    if (presentation) gc.shopPresentation.finishEarlyPurchase(gc.mathUtilRng,gc.shopPresentation.timing.relic,openedScreen);
++    if (presentation) gc.shopPresentation.finishEarlyPurchase(gc.mathUtilRng,frames,openedScreen);
+ }
+ 
+ void Shop::buyPotion(GameContext &gc, int idx) {

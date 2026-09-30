@@ -1,0 +1,11 @@
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -1081,7 +1081,7 @@
+                 c.costForTurn = 1;
+             }
+             if (upgraded && c.cost > 1) {
+-                c.costForTurn = 1;
++                // Permanent reduction preserves a lower current-turn cost.
+                 c.cost = 1;
+             }
+         }

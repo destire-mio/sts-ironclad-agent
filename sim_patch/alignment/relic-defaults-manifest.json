@@ -1,0 +1,88 @@
+{
+  "patch": "sim_patch/relic_defaults.patch",
+  "patch_sha256": "378b643a29ba9c93a9176336a15f467127f43f2a8311df56e81445bec355b67d",
+  "apply_after": "sim_patch/relic_counters.patch",
+  "files": [
+    {
+      "path": "src/game/Game.cpp",
+      "before": "a4248e38eb3496c61403f4efaf572919fd7a88f1cea3948b98c0207aab18357d",
+      "after": "c0d433658f8146d7fd22143cfb8df93c056df2895cd19f6c51f64f92ae30ced2"
+    },
+    {
+      "path": "src/game/GameContext.cpp",
+      "before": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398",
+      "after": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110"
+    }
+  ],
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "src/game/Game.cpp": "a4248e38eb3496c61403f4efaf572919fd7a88f1cea3948b98c0207aab18357d",
+        "src/game/GameContext.cpp": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398"
+      },
+      "after": {
+        "src/game/Game.cpp": "c0d433658f8146d7fd22143cfb8df93c056df2895cd19f6c51f64f92ae30ced2",
+        "src/game/GameContext.cpp": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/src/game/Game.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/optimized/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\npatching file 'src/game/Game.cpp'\n"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "src/game/Game.cpp": "a4248e38eb3496c61403f4efaf572919fd7a88f1cea3948b98c0207aab18357d",
+        "src/game/GameContext.cpp": "a1ea0759d45fa6f481d13ae1c88810631d972e28ca2b04780b41bc127d672398"
+      },
+      "after": {
+        "src/game/Game.cpp": "c0d433658f8146d7fd22143cfb8df93c056df2895cd19f6c51f64f92ae30ced2",
+        "src/game/GameContext.cpp": "f0d238a11d04e497b659bbc2ba8f7fe3b7911ddb8d0bff740e89278763027110"
+      },
+      "syntax_commands": [
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/src/game/Game.cpp"
+        ],
+        [
+          "/usr/bin/c++",
+          "-std=c++17",
+          "-fsyntax-only",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/include",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/bindings",
+          "-I/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-sim-perf/runs/simulator-perf-20260926/json",
+          "/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-parity/runs/parity-repair-20260928-relic-defaults/portable/e121/src/game/GameContext.cpp"
+        ]
+      ],
+      "translation_units_syntax_checked": 2,
+      "patch_output": "patching file 'src/game/GameContext.cpp'\npatching file 'src/game/Game.cpp'\n"
+    }
+  ],
+  "original_fixture": "sim_patch/parity/tests/fixtures/relic-defaults-original.json.gz",
+  "original_fixture_sha256": "446da1f77e1bf65f2f64e9795e75fb050ce2441da983c6409e5aecaecb5c3dac",
+  "scope": "inactive acquisition/replacement counters, with nine explicit zero initializers; raw active counters not normalized; NN data dimensions change"
+}

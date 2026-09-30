@@ -1,0 +1,22 @@
+[
+  {
+    "name": "pain_rupture_cleave_damage_snapshot",
+    "fixture": {"hand": ["Rupture", "Cleave", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "pain_rupture_reaper_damage_snapshot",
+    "fixture": {"hand": ["Rupture", "Reaper", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "rupture_cleave_without_pain_control",
+    "fixture": {"hand": ["Rupture", "Cleave"], "energy": 3},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "pain_rupture_anger_snapshot_control",
+    "fixture": {"hand": ["Rupture", "Anger", "Pain"], "energy": 3},
+    "commands": ["play 1", "play 1 0"]
+  }
+]

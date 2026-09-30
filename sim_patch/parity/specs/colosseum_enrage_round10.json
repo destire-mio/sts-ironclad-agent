@@ -1,0 +1,22 @@
+[
+  {
+    "name": "colosseum_second_monster_enrage_defend",
+    "fixture": {"encounter": "Colosseum Nobs", "hand": ["Defend_R"], "relic": "Runic Pyramid"},
+    "commands": ["end", "play 1"]
+  },
+  {
+    "name": "colosseum_second_monster_enrage_disarm",
+    "fixture": {"encounter": "Colosseum Nobs", "hand": ["Disarm"], "relic": "Runic Pyramid"},
+    "commands": ["end", "play 1 1"]
+  },
+  {
+    "name": "colosseum_second_monster_enrage_upgraded_disarm",
+    "fixture": {"encounter": "Colosseum Nobs", "hand": [{"card": "Disarm", "upgrades": 1}], "relic": "Runic Pyramid"},
+    "commands": ["end", "play 1 1"]
+  },
+  {
+    "name": "colosseum_second_monster_attack_control",
+    "fixture": {"encounter": "Colosseum Nobs", "hand": ["Strike_R"], "relic": "Runic Pyramid"},
+    "commands": ["end", "play 1 1"]
+  }
+]

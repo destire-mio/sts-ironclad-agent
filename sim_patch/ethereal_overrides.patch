@@ -1,0 +1,38 @@
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -2532,7 +2532,17 @@
+     for (int j = 0; j < cards.cardsInHand; ++j) {
+         const int i = order[j];
+         const auto &c = cards.hand[i];
+-        if (c.isEthereal()) {
++        if (c.id == CardId::ENTRENCH || c.id == CardId::GHOSTLY_ARMOR) {
++            // These two Java cards override the generic Ethereal callback.
++            // Inspect the executing branch's current hand when the action runs.
++            addToTop(Action{[](BattleContext &ctx) {
++                for (int idx = 0; idx < ctx.cards.cardsInHand; ++idx) {
++                    const auto &card = ctx.cards.hand[idx];
++                    if (card.isEthereal())
++                        ctx.addToTop(Actions::ExhaustSpecificCardInHand(idx, card.uniqueId));
++                }
++            }});
++        } else if (c.isEthereal()) {
+             addToTop(Actions::ExhaustSpecificCardInHand(i, c.uniqueId)); // c.triggerOnEndOfPlayerTurn
+         }
+     }
+@@ -2597,12 +2607,15 @@
+     }
+ 
+     if (foundIdx == -1) {
+-        std::cerr << "exhaustSpecificCardInHand: card not found in hand\n";
++        // An earlier ExhaustAllEtherealAction may already have removed it.
+         return;
+     }
+ 
+     cards.notifyRemoveFromHand(cards.hand[foundIdx]);
+     triggerAndMoveToExhaustPile(cards.hand[foundIdx]);
++    // ExhaustSpecificCardAction clears the target's one-use free flag after
++    // its onExhaust hooks and movement, including after a bulk callback.
++    cards.exhaustPile.back().freeToPlayOnce = false;
+     --cards.cardsInHand;
+ 
+     for (int i = foundIdx; i < cards.cardsInHand; ++i) {

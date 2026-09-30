@@ -303,7 +303,7 @@ def card_snapshot(card):
             "upgrades": int(card.get("upgrades") or 0),
             "cost": int(card.get("cost") if card.get("cost") is not None else 0),
             "misc": int(card.get("misc") or 0)}
-    for field in ("base_cost", "free_to_play_once"):
+    for field in ("base_cost", "free_to_play_once", "exhausts"):
         if field in card:
             result[field] = card[field]
     if key == "RAMPAGE" and "base_damage" in card:
@@ -577,6 +577,18 @@ def build_snapshot(game_state, counters=None):
             for potion in game_state.get("potions") or []],
     }
     relic_state = dict(combat.get("relic_combat_state") or {})
+    if any(r.get("id") == "Centennial Puzzle" for r in game_state.get("relics") or []):
+        if "centennial_puzzle_used" in relic_state:
+            used = relic_state["centennial_puzzle_used"]
+            if type(used) is not bool:
+                raise ValueError("Centennial Puzzle snapshot requires a boolean centennial_puzzle_used")
+            snapshot["player"]["centennial_puzzle_used"] = used
+        elif combat.get("times_damaged", 0):
+            raise ValueError("Centennial Puzzle snapshot requires centennial_puzzle_used after HP loss")
+    if "is_bloodied" in combat:
+        snapshot["player"]["is_bloodied"] = bool(combat["is_bloodied"])
+    if "red_skull_active" in relic_state:
+        snapshot["player"]["red_skull_active"] = bool(relic_state["red_skull_active"])
     for identifier, field in [("Necronomicon", "necronomicon_used"), ("OrangePellets", "orange_pellets_mask")]:
         if any(r.get("id")==identifier for r in game_state.get("relics") or []):
             if field not in relic_state and combat.get("cards_played_this_turn", 0):
@@ -585,6 +597,21 @@ def build_snapshot(game_state, counters=None):
     snapshot["player"]["orange_pellets_mask"] = int(relic_state.get("orange_pellets_mask", 0))
     if combat.get("rngs"):
         snapshot["rngs"] = {name: rng_snapshot(rng) for name, rng in combat["rngs"].items()}
+    if "end_turn_shuffle" in combat:
+        shuffle = combat["end_turn_shuffle"]
+        if shuffle.get("mode") not in ("basemod_seeded", "java_shared"):
+            raise ValueError("unsupported end-turn shuffle reference profile")
+        if type(shuffle.get("shared_rng_initialized")) is not bool:
+            raise ValueError("end-turn shuffle requires shared_rng_initialized")
+        value = {"mode": shuffle["mode"], "shared_rng_initialized": shuffle["shared_rng_initialized"]}
+        if value["shared_rng_initialized"]:
+            seed48 = shuffle["shared_seed48"]
+            if type(seed48) is not int or not 0 <= seed48 < (1 << 48):
+                raise ValueError("shared Java RNG state must fit 48 bits")
+            value["shared_seed48"] = seed48
+        elif "shared_seed48" in shuffle:
+            raise ValueError("uninitialized shared RNG cannot have a seed")
+        snapshot["end_turn_shuffle"] = value
     if any(p.get("id") == "Surrounded" for p in player_powers):
         facing = combat.get("facing_monster_index")
         if facing not in target_map:

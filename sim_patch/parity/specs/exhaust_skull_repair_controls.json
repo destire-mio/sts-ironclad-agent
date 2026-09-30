@@ -1,0 +1,28 @@
+[
+  {
+    "name": "red_skull_bark_fairy_at_negative_strength_cap",
+    "fixture": {"hand": ["Defend_R"], "current_hp": 50, "player_strength": -999,
+      "monster_strength": 100, "relics": ["Red Skull", "SacredBark"],
+      "potion": "FairyPotion", "initialize_relics": true},
+    "commands": ["end", "end"]
+  },
+  {
+    "name": "red_skull_lizard_tail_magic_flower_at_strength_cap",
+    "fixture": {"hand": ["Defend_R"], "current_hp": 50, "player_strength": 999,
+      "monster_strength": 100, "relics": ["Red Skull", "Lizard Tail", "Magic Flower"],
+      "initialize_relics": true},
+    "commands": ["end", "end"]
+  },
+  {
+    "name": "red_skull_heal_artifact_control",
+    "fixture": {"hand": ["Panacea", "Bandage Up"], "current_hp": 39,
+      "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["play 1", "play 1"]
+  },
+  {
+    "name": "red_skull_heal_without_artifact_control",
+    "fixture": {"hand": ["Bandage Up"], "current_hp": 39,
+      "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["play 1"]
+  }
+]

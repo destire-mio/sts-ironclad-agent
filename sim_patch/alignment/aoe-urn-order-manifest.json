@@ -1,0 +1,72 @@
+{
+  "repair": "AoE card-use damage snapshots and queued Bird-Faced Urn healing",
+  "apply_after": "pain_void_order.patch",
+  "patch_sha256": "d047bbd7cd91a4ce76eea1cd1c13d12c646d0b530ee6cd6ccc7278f0b77f224b",
+  "full_rebuild_required": true,
+  "files": [
+    {
+      "path": "include/combat/Actions.h",
+      "before": "afaa36b3f7bb059315160c43407be21ad69edd3e478165faddbd78955dce0b33",
+      "after": "a81b5b3ad4f4b4667548244bf34044cffdf78bda1057c4b004b73aa0565e869f"
+    },
+    {
+      "path": "include/combat/BattleContext.h",
+      "before": "18a5dba1755fe2c92b6c03b3c65d446c7faa9a4f0ee385e227bec6f956ed2e2d",
+      "after": "efde30ce10403ae39a974310ea3aedb736135b25615b4d21dde832af984c4cdd"
+    },
+    {
+      "path": "src/combat/BattleContext.cpp",
+      "before": "a2637b5b9bdfeb4e72f85299124b0671934df19d44482f94a52d1a2c2856756e",
+      "after": "dbc7c2e10f12d0a0e8fa04d98455596cd6b876552cdbe4cbd24282fa23a59ed7"
+    },
+    {
+      "path": "src/combat/Actions.cpp",
+      "before": "bd495ac8a2d561dee843e907efdda2175537e52b546b1bb192c679b3c00f6072",
+      "after": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba"
+    }
+  ],
+  "baseline": "hash-verified optimized-queue source with the Pain/Void repair",
+  "scope": "six AoE cards capture per-target int damage at use time; Urn queues existing HealPlayer action at top",
+  "portable_applications": [
+    {
+      "variant": "optimized",
+      "before": {
+        "include/combat/Actions.h": "afaa36b3f7bb059315160c43407be21ad69edd3e478165faddbd78955dce0b33",
+        "include/combat/BattleContext.h": "18a5dba1755fe2c92b6c03b3c65d446c7faa9a4f0ee385e227bec6f956ed2e2d",
+        "src/combat/Actions.cpp": "bd495ac8a2d561dee843e907efdda2175537e52b546b1bb192c679b3c00f6072",
+        "src/combat/BattleContext.cpp": "a2637b5b9bdfeb4e72f85299124b0671934df19d44482f94a52d1a2c2856756e"
+      },
+      "after": {
+        "include/combat/Actions.h": "a81b5b3ad4f4b4667548244bf34044cffdf78bda1057c4b004b73aa0565e869f",
+        "include/combat/BattleContext.h": "efde30ce10403ae39a974310ea3aedb736135b25615b4d21dde832af984c4cdd",
+        "src/combat/Actions.cpp": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba",
+        "src/combat/BattleContext.cpp": "dbc7c2e10f12d0a0e8fa04d98455596cd6b876552cdbe4cbd24282fa23a59ed7"
+      },
+      "applied": true,
+      "compile_check": "Both modified translation units pass C++17 syntax compilation; archived E121 runtime not tested"
+    },
+    {
+      "variant": "e121",
+      "before": {
+        "include/combat/Actions.h": "afaa36b3f7bb059315160c43407be21ad69edd3e478165faddbd78955dce0b33",
+        "include/combat/BattleContext.h": "7ade51f90f81ea3849f557ca46ecb3c01178bb77229937080cc767f1eff2b22f",
+        "src/combat/Actions.cpp": "bd495ac8a2d561dee843e907efdda2175537e52b546b1bb192c679b3c00f6072",
+        "src/combat/BattleContext.cpp": "4371d5608735dacb1458502b8147bc9b39e03088a7f242140f7840390e478a4e"
+      },
+      "after": {
+        "include/combat/Actions.h": "a81b5b3ad4f4b4667548244bf34044cffdf78bda1057c4b004b73aa0565e869f",
+        "include/combat/BattleContext.h": "f65987baf4600176b4e5fa984fcf01af276ff23c04483ddcd50c7eac6b45993d",
+        "src/combat/Actions.cpp": "8181ce9b51d962b20f08cd2f68b974d9dedefe02c2e40ca7463b0aea7809e0ba",
+        "src/combat/BattleContext.cpp": "916a6783a3b033bbf15c28c73ca9c862685c04aac5a5239f39fae1508c5eca3f"
+      },
+      "applied": true,
+      "compile_check": "Both modified translation units pass C++17 syntax compilation; archived E121 runtime not tested"
+    }
+  ],
+  "original_fixtures": {
+    "pain-aoe-original.json.gz": "407d7c2ea76263ccbce1f07f12e265f15589d6bcf5353014a76aa78b8f38ad88",
+    "urn-pain-original.json.gz": "8c339c2b543edf5903a336e46f90c4e524d16d50eada8ca9ee71b3a409f5d400",
+    "aoe-urn-repair-original.json.gz": "71643572f136e83c19d3ca655a4a9717d926af6c7afcf71b9c09364c887ea14b"
+  },
+  "acceptance_boundary": "finite original cases and native regression suite; exhaustive parity INCOMPLETE"
+}

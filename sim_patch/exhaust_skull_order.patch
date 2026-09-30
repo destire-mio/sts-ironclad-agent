@@ -1,0 +1,172 @@
+--- a/include/combat/Player.h
++++ b/include/combat/Player.h
+@@ -139,8 +139,8 @@
+         template <Stance> void changeStance();
+ 
+         void removeDebuffs();
+-        void increaseMaxHp(int amount);
+-        void heal(int amount, bool triggerRedSkull = true);
++        void increaseMaxHp(BattleContext &bc, int amount);
++        void heal(BattleContext &bc, int amount, bool triggerRedSkull = true);
+         void damage(BattleContext &bc, int damage, bool selfDamage=false);
+         void attacked(BattleContext &bc, int enemyIdx, int calculatedDamage);
+         void loseHp(BattleContext &bc, int amount, bool selfDamage); // called by cards like offering, bloodletting
+--- a/src/combat/MonsterSpecific.cpp
++++ b/src/combat/MonsterSpecific.cpp
+@@ -1508,7 +1508,7 @@
+             miscInfo = true;
+             if (!bc.player.hasRelic<R::OMAMORI>()) {
+                 if (bc.player.hasRelic<R::DARKSTONE_PERIAPT>()) {
+-                    bc.player.increaseMaxHp(6);
++                    bc.player.increaseMaxHp(bc, 6);
+                 }
+                 if (bc.player.hasRelic<R::CERAMIC_FISH>()) {
+                     bc.player.gainGold(bc, 9);
+--- a/src/combat/Player.cpp
++++ b/src/combat/Player.cpp
+@@ -146,7 +146,7 @@
+ 
+     gold += amount;
+     if (hasRelic<R::BLOODY_IDOL>()) {
+-        heal(5);
++        heal(bc, 5);
+     }
+ }
+ 
+@@ -204,12 +204,12 @@
+     removeStatus<PS::WRAITH_FORM>();
+ }
+ 
+-void Player::increaseMaxHp(int amount) {
++void Player::increaseMaxHp(BattleContext &bc, int amount) {
+     maxHp += amount;
+-    heal(amount);
+-}
+-
+-void Player::heal(int amount, bool triggerRedSkull) {
++    heal(bc, amount);
++}
++
++void Player::heal(BattleContext &bc, int amount, bool triggerRedSkull) {
+     if (hasRelic<RelicId::MARK_OF_THE_BLOOM>()) {
+         return;
+     }
+@@ -223,7 +223,9 @@
+     curHp = std::min(static_cast<int>(maxHp), curHp + amount);
+ 
+     if (triggerRedSkull && wasBloodied && curHp > maxHp/2 && hasRelic<RelicId::RED_SKULL>()) {
+-        debuff<PS::STRENGTH>(-3);
++        // Healing may run inside the same damage action as Red Skull's gain.
++        // Queue at top so the later loss resolves before that pending gain.
++        bc.addToTop(Actions::DebuffPlayer<PS::STRENGTH>(-3, false));
+     }
+ }
+ 
+@@ -370,7 +372,8 @@
+     }
+ 
+     if (hasRelic<RelicId::RED_SKULL>() && !wasBloodied && curHp <= maxHp/2) {
+-        buff<PS::STRENGTH>(3);
++        // The original applies this after the damage/revival action finishes.
++        bc.addToTop(Actions::BuffPlayer<PS::STRENGTH>(3));
+     }
+ 
+     bc.cards.onTookDamage();
+@@ -392,14 +395,14 @@
+                         1,
+                         static_cast<int>(static_cast<float>(maxHp) * (hasRelic<R::SACRED_BARK>() ? 0.6f : 0.3f))
+                 );
+-                heal(healAmount);
++                heal(bc, healAmount);
+                 return;
+             }
+         }
+ 
+         if (hasRelic<RelicId::LIZARD_TAIL>()) {
+             setHasRelic<RelicId::LIZARD_TAIL>(false);
+-            heal(std::max(1, maxHp/2));
++            heal(bc, std::max(1, maxHp/2));
+             return;
+         }
+     }
+@@ -987,4 +990,3 @@
+ 
+ 
+ 
+-
+--- a/src/combat/BattleContext.cpp
++++ b/src/combat/BattleContext.cpp
+@@ -243,7 +243,7 @@
+             case R::BLOOD_VIAL:
+                 // Original opening heals run before Red Skull's queued
+                 // activation, so there is no active strength bonus to remove.
+-                p.heal(2, false);
++                p.heal(*this, 2, false);
+                 break;
+ 
+             case R::BRONZE_SCALES:
+@@ -313,7 +313,7 @@
+ 
+             case R::PANTOGRAPH:
+                 if (isBossEncounter(encounter)) {
+-                    p.heal(25, false);
++                    p.heal(*this, 25, false);
+                 }
+                 break;
+ 
+@@ -2354,7 +2354,7 @@
+             break;
+ 
+         case Potion::FRUIT_JUICE:
+-            player.increaseMaxHp(hasBark ? 10 : 5);
++            player.increaseMaxHp(*this, hasBark ? 10 : 5);
+             break;
+ 
+         case Potion::GAMBLERS_BREW:
+@@ -2850,12 +2850,20 @@
+         addToBot(Actions::MakeTempCardInHand(generated));
+     }
+ 
+-    if (!monsters.areMonstersBasicallyDead() && player.hasStatus<PS::DARK_EMBRACE>()) {
+-        addToBot(Actions::DrawCards(player.getStatus<PS::DARK_EMBRACE>()));
+-    }
+-
+-    if (player.hasStatus<PS::FEEL_NO_PAIN>()) {
+-        addToBot(Actions::GainBlock(player.getStatus<PS::FEEL_NO_PAIN>()));
++    // Equal-priority powers trigger in acquisition order, as on the player.
++    for (const auto &power : player.powerOrder) {
++        switch (power.status) {
++            case PS::DARK_EMBRACE:
++                if (!monsters.areMonstersBasicallyDead()) {
++                    addToBot(Actions::DrawCards(player.getStatus<PS::DARK_EMBRACE>()));
++                }
++                break;
++            case PS::FEEL_NO_PAIN:
++                addToBot(Actions::GainBlock(player.getStatus<PS::FEEL_NO_PAIN>()));
++                break;
++            default:
++                break;
++        }
+     }
+ 
+     if (c.getId() == CardId::NECRONOMICURSE) {
+--- a/src/combat/Actions.cpp
++++ b/src/combat/Actions.cpp
+@@ -92,7 +92,7 @@
+ 
+ Action Actions::HealPlayer(int amount) {
+     return {[=] (BattleContext &bc) {
+-        bc.player.heal(amount);
++        bc.player.heal(bc, amount);
+     }, false};
+ }
+ 
+@@ -1099,7 +1099,7 @@
+                 && !(m.hasStatus<MS::REGROW>() && bc.monsters.monstersAlive > 0);
+ 
+         if (effectTriggered) {
+-            bc.player.increaseMaxHp(upgraded ? 4 : 3);
++            bc.player.increaseMaxHp(bc, upgraded ? 4 : 3);
+         }
+ 
+         bc.checkCombat();

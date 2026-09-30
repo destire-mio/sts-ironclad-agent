@@ -6,7 +6,22 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <algorithm>
 using namespace sts;using namespace sts::search;using json=nlohmann::json;
+std::vector<int> selectionIndices(const GameContext &g){
+ std::vector<int> indices;for(const auto &card:g.info.toSelectCards)indices.push_back(card.deckIdx);return indices;
+}
+GameAction recordedOutside(const GameContext &g,std::uint32_t raw,const json &row){
+ GameAction action(raw);
+ if(g.screenState!=ScreenState::CARD_SELECT||g.info.selectScreenType!=CardSelectScreenType::BOTTLE||action.isPotionAction()||action.getRewardsActionType()==GameAction::RewardsActionType::SKIP)return action;
+ const auto current=selectionIndices(g);auto sorted=current;std::sort(sorted.begin(),sorted.end());
+ if(row.contains("selection_deck_indices")){if(!row.at("selection_deck_indices").is_array())throw std::runtime_error("recorded bottle candidates must be an array");for(const auto &i:row.at("selection_deck_indices"))if(!i.is_number_integer())throw std::runtime_error("recorded bottle candidate index must be an integer");}
+ auto recorded=row.contains("selection_deck_indices")?row.at("selection_deck_indices").get<std::vector<int>>():sorted;
+ auto check=recorded;std::sort(check.begin(),check.end());
+ if(check!=sorted||std::adjacent_find(check.begin(),check.end())!=check.end()||(!check.empty()&&check.front()<0))throw std::runtime_error("recorded bottle candidate identities differ");
+ if(action.getIdx1()>=recorded.size()||action.bits!=GameAction(action.getIdx1()).bits)throw std::runtime_error("invalid recorded bottle choice");
+ return GameAction(static_cast<int>(std::find(current.begin(),current.end(),recorded.at(action.getIdx1()))-current.begin()));
+}
 bool reaches(const GameContext&g,int x,int y){
  if(y==g.map->burningEliteY)return x==g.map->burningEliteX;
  if(y>g.map->burningEliteY || y>=14)return false;
@@ -36,7 +51,7 @@ int main(int argc,char**argv){
     if(g.floorNum>=fromFloor)break;
     if(g.floorNum!=row.at("floor")||g.curHp!=row.at("hp"))throw std::runtime_error("recorded prefix state mismatch");
     if(g.screenState==ScreenState::BATTLE){BattleContext b;b.init(g);for(auto raw:row.at("actions")){search::Action action(static_cast<std::uint32_t>(raw.get<std::int64_t>()));if(!action.isValidAction(b))throw std::runtime_error("recorded combat action invalid");action.execute(b);}if(static_cast<int>(b.outcome)!=row.at("battle_outcome"))throw std::runtime_error("recorded combat outcome mismatch");b.exitBattle(g);}
-    else for(auto raw:row.at("actions")){GameAction action(static_cast<std::uint32_t>(raw.get<std::int64_t>()));if(!action.isValidAction(g))throw std::runtime_error("recorded outside action invalid");action.execute(g);}
+    else {const auto recorded=row;row["actions"]=json::array();if(g.screenState==ScreenState::CARD_SELECT)row["selection_deck_indices"]=selectionIndices(g);for(auto raw:recorded.at("actions")){auto action=recordedOutside(g,static_cast<std::uint32_t>(raw.get<std::int64_t>()),recorded);if(!action.isValidAction(g))throw std::runtime_error("recorded outside action invalid");action.execute(g);row["actions"].push_back(action.bits);}if(row.contains("bits")&&row["actions"].size()==1)row["bits"]=row["actions"][0];}
     result["steps"].push_back(row);
    }
    result["replayed_prefix"]=path;result["replan_floor"]=fromFloor;
@@ -44,6 +59,7 @@ int main(int argc,char**argv){
   int count=0;for(;count<1500 && g.outcome==GameOutcome::UNDECIDED;++count){
    const auto historyStart=agent.gameActionHistory.size();
    json row={{"floor",g.floorNum},{"act",g.act},{"screen",(int)g.screenState},{"hp",g.curHp},{"keys",{g.redKey,g.greenKey,g.blueKey}}};
+   if(g.screenState==ScreenState::CARD_SELECT)row["selection_deck_indices"]=selectionIndices(g);
    if(progress)progress<<row.dump()<<std::endl;
    if(g.screenState==ScreenState::BATTLE){
     BattleContext b;b.init(g);row["encounter"]=(int)g.info.encounter;row["monsters"]=json::array();for(int i=0;i<b.monsters.monsterCount;++i)row["monsters"].push_back(monsterIdStrings[(int)b.monsters.arr[i].id]);

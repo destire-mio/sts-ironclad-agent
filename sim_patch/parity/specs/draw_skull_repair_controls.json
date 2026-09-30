@@ -1,0 +1,27 @@
+[
+  {
+    "name": "red_skull_blocked_max_hp_heal_then_hp_loss",
+    "fixture": {"hand": ["Bloodletting"], "current_hp": 41, "potion": "Fruit Juice",
+      "relics": ["Red Skull", "Mark of the Bloom"], "initialize_relics": true},
+    "commands": ["potion use 0", "play 1"]
+  },
+  {
+    "name": "red_skull_max_hp_heal_then_hp_loss_control",
+    "fixture": {"hand": ["Bloodletting"], "current_hp": 41, "potion": "Fruit Juice",
+      "relic": "Red Skull", "initialize_relics": true},
+    "commands": ["potion use 0", "play 1"]
+  },
+  {
+    "name": "red_skull_active_bark_max_hp_heal",
+    "fixture": {"hand": ["Defend_R"], "current_hp": 40, "potion": "Fruit Juice",
+      "relics": ["Red Skull", "SacredBark"], "initialize_relics": true},
+    "commands": ["potion use 0"]
+  },
+  {
+    "name": "void_before_fire_breathing_horn",
+    "fixture": {"hand": ["Fire Breathing", "Finesse"],
+      "draw": ["Defend_R", "Strike_R", "Void"], "energy": 1,
+      "encounter": "2 Orb Walkers", "monster_hp": 26, "potion": "Fire Potion", "relic": "Gremlin Horn"},
+    "commands": ["potion use 0 1", "play 1", "play 1"]
+  }
+]
