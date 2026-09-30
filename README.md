@@ -14,6 +14,30 @@ binaries, and the licensed game installation are excluded. Live capture requires
 original-game test runtime described in the checker README. Local evidence paths in historical
 reports are provenance references, not files bundled with this repository.
 
+## Current status (2026-09-30)
+
+The best current system is the **P300 teacher**: a frozen decision layer plus simulator combat search,
+driven by [`agent/p300_play_v21.py`](agent/p300_play_v21.py). It wins **50.1%** of 2,000 development
+games and **49.5%** of 1,000 fresh-seed games (A20 Ironclad, three keys and Heart, simulator).
+These are simulator measurements, not original-game win rates. The 1,024-unseen-seed acceptance
+of the final distilled network has not been run. Details, death-rate breakdown and rejected
+experiments: [`docs/status-2026-09-30.md`](docs/status-2026-09-30.md).
+
+Where to look:
+
+| Path | Contents |
+|---|---|
+| `agent/p300_play_v21.py` | adopted teacher driver (v24 adds the act-1 elite-seeking switches, experimental) |
+| `agent/p300_teacher.py`, `p300_common.py`, `fightsim.cpp` | teacher policy, shared helpers, native fight simulator |
+| `agent/distill_*.py` | distilling the teacher into one network |
+| `agent/heart_*.py`, `p300_stage_values.py` | Heart research, per-stage value tables |
+| `sim_patch/` | simulator patches, alignment and original-game parity checker |
+| `tests/` | regression tests (need the built `slaythespire` module and PyTorch) |
+| `docs/` | status, experiment records, lessons learned |
+
+Evaluation rule used throughout: fixed seeds only, no reseeding or retrying, and unseen seeds for
+any acceptance number.
+
 ## Historical project overview and experiment log
 
 A hybrid agent for **Slay the Spire** (A0 Ironclad) built on the
