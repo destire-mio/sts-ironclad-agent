@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 import time
 
-from sim_patch.parity.adapter import Comparator, ActionMapper
-from sim_patch.parity.core import sha256
+from sim_patch.parity.adapter import Comparator, ActionMapper, IdentityDifference
+from sim_patch.parity.core import sha256, differences
 from steam.rng_contract import validate
 
 
@@ -31,7 +31,7 @@ class LiveSearch:
         self.pending_multi = None
         self.plans = 0
 
-    def replan(self, view):
+    def replan(self, view, recorded_plan=None):
         # Discard all state from the stale plan before importing the authority.
         self.actions.clear()
         self.battle = None
@@ -48,7 +48,13 @@ class LiveSearch:
             raise ValueError("import does not reproduce original: " + repr(comparison["differences"]))
         before = self.comparator.clone_fingerprint(battle)
         started = time.monotonic()
-        plan = dict(self.native.plan_reusing(battle, self.simulations, self.boss_multiplier))
+        if recorded_plan is None:
+            plan = dict(self.native.plan_reusing(battle, self.simulations, self.boss_multiplier))
+        else:
+            root_diff=differences(recorded_plan['import_comparison']['actual'],comparison['actual'])
+            if root_diff:raise ValueError('recorded plan root differs: '+repr(root_diff[:8]))
+            plan={k:v for k,v in recorded_plan.items() if k not in ('import_comparison','seconds')}
+            plan['replayed_plan']=True
         if before != self.comparator.clone_fingerprint(battle):
             raise RuntimeError("search mutated the caller's battle")
         self.battle = battle
@@ -63,8 +69,7 @@ class LiveSearch:
         game, available = view["game"], view["available_commands"]
         # A Java hand picker may need confirmation after the native selection
         # has resolved. This is a UI acknowledgement, not another search action.
-        if (game["screen_type"] in ("HAND_SELECT", "GRID") and
-                self.battle.input_state == self.sts.InputState.PLAYER_NORMAL):
+        if self.confirmation(view):
             if "confirm" not in available:
                 raise ValueError("original selection still pending after native resolution")
             return None, "confirm"
@@ -145,9 +150,24 @@ class LiveSearch:
         return self._compare(view)
 
     def _compare(self, view):
+        if self.confirmation(view):
+            return {'differences': [], 'observed_match': False,
+                    'gaps': [{'kind': 'original_selection_confirmation_pending'}]}
         comparison = self.comparator.compare_battle(view, self.battle)
         if comparison["differences"]:
             self.actions.clear()
         elif view["game"].get("screen_type") == "NONE" and self.battle.input_state == self.sts.InputState.PLAYER_NORMAL:
-            self.mapper.refresh(self.battle, view)
+            try:
+                self.mapper.refresh(self.battle, view)
+            except IdentityDifference as error:
+                comparison["differences"].append(error.difference)
+                comparison["observed_match"] = False
+                self.actions.clear()
         return comparison
+
+    def confirmation(self, view):
+        return (self.battle is not None and self.pending_multi is None and
+                view['game']['screen_type'] in ('HAND_SELECT','GRID') and
+                'confirm' in view['available_commands'] and
+                (self.battle.input_state == self.sts.InputState.PLAYER_NORMAL or
+                 self.battle.outcome != self.sts.Outcome.UNDECIDED))

@@ -98,13 +98,18 @@ class Original:
             if text.count(marker) != 1:
                 raise ValueError("local original observer changed; inspect view() before extending it")
             alignment.write_text(text.replace(marker,
-                '   out.add("parity",ParityAudit.snapshot());\n  }return out;\n }\n static AbstractCard card'))
+                '   out.add("parity",ParityAudit.snapshot());\n   out.add("live_run",LiveRunState.snapshot());\n  }return out;\n }\n static AbstractCard card'))
             text = alignment.read_text()
             marker = '  else if(op.equals("fixture"))fixture(req);'
             if text.count(marker) != 1:
                 raise ValueError("original RPC extension point changed")
             alignment.write_text(text.replace(marker,
-                '  else if(op.equals("rng_roundtrip"))return FullRngProbe.run();\n' + marker))
+                '  else if(op.equals("rng_roundtrip"))return FullRngProbe.run();\n'
+                '  else if(op.equals("shared_rng_sequence"))return FullRngProbe.sharedSequence();\n'
+                '  else if(op.equals("live_checkpoint"))return LiveSaveState.checkpoint();\n'
+                '  else if(op.equals("live_reload"))LiveSaveState.reload();\n' + marker))
+            alignment.write_text(alignment.read_text().replace(marker,
+                '  else if(op.equals("live_rng_restore"))LiveSaveState.restoreEnvelope(req.getAsJsonObject("state"));\n' + marker))
             # Add an explicit starting-HP fixture option without reducing max HP.
             # This touches setup only, never an original damage/healing method.
             marker = "  AbstractDungeon.player.damagedThisCombat=0;"
@@ -122,6 +127,12 @@ class Original:
             rng_probe = self.repo / "sim_patch/parity/java/FullRngProbe.java"
             shutil.copy2(rng_probe, sources / rng_probe.name)
             hashes[str(rng_probe)] = sha256(rng_probe)
+            live_run = self.repo / "sim_patch/parity/java/LiveRunState.java"
+            shutil.copy2(live_run, sources / live_run.name)
+            hashes[str(live_run)] = sha256(live_run)
+            live_save = self.repo / "sim_patch/parity/java/LiveSaveState.java"
+            shutil.copy2(live_save, sources / live_save.name)
+            hashes[str(live_save)] = sha256(live_save)
             exporter_root = self.repo / "steam/state_export_mod/src/steamstateexport"
             (sources / "steamstateexport").mkdir()
             for exporter in sorted(exporter_root.glob("*.java")):
@@ -181,9 +192,13 @@ class Original:
         raise KeyboardInterrupt(f"original run interrupted by signal {signum}")
 
     def call(self, op, **arguments):
-        result = self.probe.call(op, **arguments)
-        self.rpc.append({"request": {"op": op, **{k: v for k, v in arguments.items() if k != "timeout_seconds"}},
-                         "response": {"ok": True, "result": result}})
+        request = {"op": op, **{k: v for k, v in arguments.items() if k != "timeout_seconds"}}
+        try:
+            result = self.probe.call(op, **arguments)
+        except BaseException as error:
+            self.rpc.append({"request": request, "response": {"ok": False, "error": repr(error)}})
+            raise
+        self.rpc.append({"request": request, "response": {"ok": True, "result": result}})
         return result
 
     def close(self):

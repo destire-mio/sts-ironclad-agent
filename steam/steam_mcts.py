@@ -354,6 +354,8 @@ def monster_key(monster):
 
 def move_id(monster, raw_key="move_id"):
     raw = monster.get(raw_key)
+    if raw_key == "move_id" and (raw is None or int(raw) < 0) and (monster.get("current_hp", 0) > 0 or monster.get("half_dead")) and not monster.get("is_gone"):
+        raise ValueError(f"living monster lacks internal move state: {monster.get('id')}")
     if raw is None or int(raw) < 0:
         return sts.monster_move_id_from_name("INVALID")
     key = monster_key(monster)
@@ -402,6 +404,10 @@ def monster_snapshot(monster):
     elif key == "TIME_EATER": misc = int(internal.get("usedHaste", False))
     elif key == "AWAKENED_ONE": misc = 0 if monster.get("half_dead") or any(p.get("id")=="Unawakened" for p in powers) else 1
     mapped = [power_snapshot(power, "monster") for power in powers if (power.get("id") or power.get("name")) not in IGNORED_MONSTER_POWERS]
+    # Java encodes leader death in the monster class, rather than a visible
+    # power. Native die() needs this derived flag to end the minion encounter.
+    if key in {'GREMLIN_LEADER','BRONZE_AUTOMATON','REPTOMANCER','THE_COLLECTOR'}:
+        mapped.append({'id':sts.monster_status_id_from_name('MINION_LEADER'),'amount':1,'just_applied':False})
     if key == "LAGAVULIN" and (monster.get("move_id") in {5,6} and internal.get("asleep", True)):
         mapped.append({"id":sts.monster_status_id_from_name("ASLEEP"),"amount":1,"just_applied":False})
     return {

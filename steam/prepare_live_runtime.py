@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 from sim_patch.parity.core import sha256, write_json
 
 
-def prepare(arena: Path, out: Path) -> dict:
+def prepare(arena: Path, out: Path, p300: Path | None = None) -> dict:
     import pybind11
     arena, out = arena.resolve(), out.resolve()
     if out.exists():
@@ -60,6 +60,16 @@ def prepare(arena: Path, out: Path) -> dict:
         "engine_files": {p.name: sha256(p) for p in (out / "engine").glob("*.so")},
         "scope": "same arena core and unmodified reuse search, new BattleContext entry",
     }
+    if p300 is not None:
+        p300 = p300.resolve()
+        inputs = [p300 / "agent" / name for name in ("p300_play.py", "p300_teacher.py", "p300_stage_values.py")]
+        inputs += sorted((p300 / "runs/p300-fight-decomposition").glob("d[4-8]-*.jsonl*"))
+        manifest["p300_inputs"] = {}
+        for path in inputs:
+            target = out / "p300" / path.relative_to(p300)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target)
+            manifest["p300_inputs"][str(path)] = {"path": str(target.relative_to(out)), "sha256": sha256(target)}
     write_json(out / "live-manifest.json", manifest)
     return manifest
 
@@ -68,6 +78,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--arena", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--p300", type=Path)
     args = parser.parse_args()
-    result = prepare(args.arena, args.out)
+    result = prepare(args.arena, args.out, args.p300)
     print(json.dumps({"runtime": str(args.out), "engine_files": result["engine_files"]}, indent=2))

@@ -143,6 +143,10 @@ class Comparator:
         observation = Observation(view)
         S = self.sts
         game = view["game"]
+        if game.get("current_hp", 1) <= 0:
+            diff = differences("PLAYER_LOSS", battle.outcome.name, "/outcome")
+            return {"differences": diff, "gaps": [], "observed_match": not diff,
+                    "expected": {"outcome": "PLAYER_LOSS"}, "actual": {"outcome": battle.outcome.name}}
         if "combat_state" not in game:
             hp = observation.consume("/game/current_hp")
             expected = "PLAYER_VICTORY" if hp > 0 else "PLAYER_LOSS"
@@ -220,7 +224,13 @@ class Comparator:
         # Retain the established detailed status/move checks as supplemental
         # evidence; their shared alias tables are not an independent proof.
         extras = importlib.import_module("compare_powers").extras(game, battle)
-        diff += [{"path": "/legacy/" + key, "kind": "value", **value} for key, value in extras.items()]
+        for key, value in extras.items():
+            # Most legacy checks return one pair; attacks return one pair per
+            # monster. Preserve each finding rather than crashing the audit.
+            rows = value if isinstance(value, list) else [value]
+            for index, row in enumerate(rows):
+                diff.append({"path": "/legacy/" + key + ("/" + str(index) if isinstance(value, list) else ""),
+                             "kind": "value", **row})
         gaps.append({"kind": "unobserved_internal_state", "fields": ["pending_actions", "card_identity_links",
                  "all_monster_private_fields", "all_card_private_fields"]})
         if "parity" in view and view["parity"].get("legal_complete"):

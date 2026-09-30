@@ -146,4 +146,32 @@ public final class FullRngProbe {
         result.addProperty("scope", "RNG next-value roundtrip only; not game-state reload or SL replay");
         return result;
     }
+
+    /** Observe real future shared-RNG outputs, then roll back independent raw state. */
+    public static JsonObject sharedSequence() throws Exception {
+        JsonObject before = AlignmentProbe.JSON.toJsonTree(FullRngState.capture()).getAsJsonObject();
+        java.util.Random math = MathUtils.random;
+        java.util.Random collections = (java.util.Random) field(Collections.class, "r").get(null);
+        if (collections == null) throw new IllegalStateException("shuffle RNG is uninitialized; no deterministic next shuffle exists yet");
+        Saved savedMath = new Saved(math), savedCollections = new Saved(collections);
+        JsonObject result = new JsonObject();
+        try {
+            result.add("math_samples", samples(math));
+            result.add("java_samples", samples(collections));
+            JsonArray shuffles = new JsonArray();
+            for (int i = 0; i < 12; i++) {
+                List<Integer> values = new ArrayList<>();
+                for (int j = 0; j < 19; j++) values.add(j);
+                Collections.shuffle(values);
+                shuffles.add(AlignmentProbe.JSON.toJsonTree(values));
+            }
+            result.add("shuffles", shuffles);
+        } finally {
+            savedMath.restore(); savedCollections.restore();
+        }
+        JsonObject after = AlignmentProbe.JSON.toJsonTree(FullRngState.capture()).getAsJsonObject();
+        if (!before.equals(after)) throw new IllegalStateException("shared sequence probe changed RNG state");
+        result.add("before", before); result.add("after", after);
+        return result;
+    }
 }

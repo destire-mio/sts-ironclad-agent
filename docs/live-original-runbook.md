@@ -1,6 +1,55 @@
-# RNG 导出与原版战斗验证运行入口
+# 原版接入运行入口
 
 工作目录：`/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original`。
+
+## 2026-09-28：基础检查与三局通路验证
+
+本轮入口使用冻结的 `sims32+boss12+rest+reuse+svsel+svcard`，不改变父网络、P300 价值表或搜索规则。状态比较位于 `steam/live_state.py`；它不执行策略评分。后续更换策略时，这部分检查可以沿用。
+
+以下命令按顺序运行，输出目录或输出文件必须是新路径。`live_batch.py --workers 1 --games 3` 是三局自然开局通路检查，死亡算正常终局，故障不算败局；不用于估计胜率。省略参数会沿用历史默认值，因此请保留显式的 `--workers 1 --games 3`。
+
+批次退出码 `0` 表示请求的自然局完成，退出码 `2` 表示存在接入故障。逐局原因见 `summary.json`、各局 `result.json` 和保留的现场。不要把一次故障重启计为战斗读档，也不要用故障填充败局数。
+
+```sh
+cd /Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original
+export PYTHONDONTWRITEBYTECODE=1
+LIVE_PY=/Users/destire/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python
+LIVE_RUNTIME=runs/live-runtime-full-20260927-v7
+
+# 固定原版动作：战后回血、奖励生成/领取、返回地图；不调用策略评分。
+"$LIVE_PY" steam/check_live_foundation.py \
+  --runtime "$LIVE_RUNTIME" --out runs/foundation-state-repeat-01.json
+
+# 实际读档、16 条 RNG、两个特殊随机源的后续输出与洗牌。
+"$LIVE_PY" steam/check_live_save.py \
+  --runtime "$LIVE_RUNTIME" --oracle ../ironclad-alignment/oracle \
+  --out runs/foundation-sl-repeat-01
+
+# 冻结源码，单个决策进程跑三局，保留完整动作和状态日志。
+"$LIVE_PY" steam/live_batch.py \
+  --runtime "$LIVE_RUNTIME" --oracle ../ironclad-alignment/oracle \
+  --out runs/foundation-smoke-repeat-01 \
+  --workers 1 --games 3 --first-seed 5100000000 --timeout 1200
+
+# 原版重放完成局的动作；这是重复证据，不增加自然局数。
+"$LIVE_PY" steam/replay_original.py \
+  --source runs/foundation-smoke-repeat-01/5100000000 \
+  --oracle ../ironclad-alignment/oracle --out runs/foundation-replay-repeat-01
+```
+
+`check_live_save.py` 的首战输入来自保存的原版夹具，不调用父网络或价值表。它测试自然状态、注入缓存的 Gaussian 值、未初始化的洗牌源，以及错误恢复请求的隔离；诊断读档不计入自然局。恢复前验证种子、幕数、楼层、算法与 16 条流的字段，恢复失败则回退原 RNG 状态。检查点与原始存档只保留在本地 `runs/`。
+
+`Collections.r` 若尚未初始化，恢复会保留这个事实，而不会为了测试而给游戏补设随机种子。其第一次无种子初始化的未来输出不在可预测保证内；后续输出验证在原版已初始化该源的首战边界进行。
+
+`step-*.json.gz` 保存每条动作前后的完整导出、16 条 RNG 与预测差异；`decision-*.json.gz` 保存冻结策略选择，`plan-*.json` 保存战斗计划。`capture-code.json`、批次 `manifest.json` 和 `original/identity.json` 记录源码、模型、价值表、引擎及本地游戏输入的 SHA-256。异常、中断和正常死亡分别记录。
+
+重放结果分为 `rule_replay_passed` 与 `all_rng_replay_passed`。前者覆盖被测规则状态、奖励、地图、剩余随机池、事件/怪物列表和选择；后者要求两个特殊随机源也相同。`--strict-all-rng` 在任意 RNG 分歧时停止。共享 `MathUtils.random` 的消耗会受帧推进影响；保存了全量状态不等于录制了逐帧视频，也不等于画面能逐帧重建。
+
+接入故障后的同种子续测，可以给 `live_batch.py` 传 `--seeds 5100000002 --replay-prefix runs/live-foundation-smoke-20260928-v2/5100000002`，并使用新输出目录。入口要求同一种子、同一冻结 runtime；从自然涅奥开始执行原版动作，验证保存计划的战斗根状态，逐条核对旧命令的原版规则结果，前缀结束后恢复策略决策。命令、根状态或规则结果不同会报故障，两个共享 RNG 的差异另存日志。该方式用于回放续测，不能增加独立种子数或冒充新样本。
+
+本轮报告见 [基础接入验证](live-original-foundation-20260928.md)。以下保留首战与 RNG 的历史入口。
+
+## 历史首战入口
 
 RNG 检查和首战接入是两个入口。首战入口使用 P300 的 sims32/boss12/reuse 战斗策略，局外为固定诊断输入，不用于计算整局胜率。它们从本机已有安装及采集工具创建独立原版实例，保存响应并退出。每次采集目录必须不存在，旧证据不会被覆盖。
 

@@ -36,6 +36,10 @@ def check(args):
         {"name": "gamblers_brew_empty", "fixture": {"hand": ["Bash", "Strike_R", "Defend_R"],
                                                        "potion": "GamblersBrew"},
          "potion": 0, "multi": []},
+        {"name": "true_grit_winning_confirm", "fixture": {
+            "hand": [{"card":"True Grit", "upgrades":1}, "Slimed", "Slimed"],
+            "relic":"Charon's Ashes", "monster_hp":3},
+         "play":"TRUE_GRIT", "select":"SLIMED"},
     ]
     result = {"status": "running", "scope": "controlled selection fixtures", "cases": [],
               "code_sha256": {str(p.relative_to(ROOT)): sha256(p) for p in
@@ -74,7 +78,7 @@ def check(args):
                 search.actions = deque([int(first.bits), int(second.bits), int(sentinel.bits)])
                 trace = []
                 for _ in range(12):
-                    if len(search.actions) == 1 and view["game"]["screen_type"] == "NONE":
+                    if len(search.actions) == 1 and view["game"]["screen_type"] not in ('GRID','HAND_SELECT'):
                         break
                     action, command = search.next_action(view)
                     before = view

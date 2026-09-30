@@ -7,8 +7,20 @@
 
 namespace py = pybind11;
 using namespace sts;
+#include "live_run_state.h"
 
 PYBIND11_MODULE(live_combat_search, m) {
+    m.def("sync_run", &syncLiveRun);
+    m.def("run_rng", &liveRunRng);
+    m.def("recover_run_after_battle", [](const BattleContext &prediction, GameContext &run, bool won) {
+        // Called only after the real game has ended this battle and the
+        // predicted outcome disagreed. Preserve the disagreement in the log;
+        // rebuild the native continuation, then import the real run resources.
+        BattleContext completed(prediction);
+        completed.outcome=won?Outcome::PLAYER_VICTORY:Outcome::PLAYER_LOSS;
+        completed.exitBattle(run);
+    });
+    m.def("live_catalog", [](){py::dict d;d["events"]=std::vector<std::string>(std::begin(eventIdStrings),std::end(eventIdStrings));d["encounters"]=std::vector<std::string>(std::begin(monsterEncounterStrings),std::end(monsterEncounterStrings));return d;});
     m.def("selection_info", [](const BattleContext &battle) {
         if (battle.inputState != InputState::CARD_SELECT)
             throw std::invalid_argument("battle has no pending card selection");

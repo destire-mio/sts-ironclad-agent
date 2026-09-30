@@ -1,6 +1,6 @@
 {
   "scope": "original numeric decisions projected for live integration replay; no game code or assets",
-  "fixture_sha256": "f8f2d191ec0d53a81bf0d338da0f1c077a0c413c2e7a65ac940ec7f993694671",
+  "fixture_sha256": "7d566359c719b7329ea859b6c3a6fe28d18ae6aa519694c35a885ed37d384028",
   "source_files": {
     "runs/live-first-battle-20260927-v2/result.json": "15e51cd061c68e55114d33e73ea008972d248dab5cf1b177a96af36960601568",
     "runs/live-first-battle-20260927-v2/initial.json": "3c2127892abb7ae3f66b594bc498ab6231a1f13ea01f11cfbae64f769c938e83",
@@ -82,5 +82,11 @@
       "commands": 2,
       "kind": "selection"
     }
-  ]
+  ],
+  "full_run_extension_sources": {
+    "runs/live-selections-regression-20260927-v2/true_grit_winning_confirm.json.gz": "bed53ee40d91088cbbcfa64fd78289a7864628a2a994de5abbe2cc0d8a55625e",
+    "runs/live-dome-regression-20260927-v1/Chosen.json.gz": "7376bc6a87c6ae12720f135322d6991b468fce5bb6cc357fb4885d045a8b9c13",
+    "runs/live-dome-regression-20260927-v1/3_Byrds.json.gz": "3610eb5ce35a6521f50e6244e162f335ccc3c6854f348aa3c57883b0e47f7e15",
+    "runs/live-cohort-20260927-v2/5100000002/step-00606.json.gz": "75ca3963946b07ca9b9bb93b855d190a237d47d1983cb6199ba50f9d2707dc7d"
+  }
 }

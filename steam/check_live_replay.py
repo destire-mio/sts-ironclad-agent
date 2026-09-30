@@ -27,7 +27,7 @@ def replay(runtime, fixture, out):
     for case in cases:
         search = LiveSearch(runtime, ROOT)
         view = case["initial"]
-        if case["kind"] == "selection":
+        if case["kind"] in ("selection","forced_command"):
             search.battle = search.comparator.import_battle(view)
             search.mapper = ActionMapper(search.comparator, search.battle, view)
             search.actions = deque(case["forced_actions"] + [int(search.sts.SearchAction(search.sts.SearchActionType.END_TURN).bits)])
@@ -52,12 +52,14 @@ def replay(runtime, fixture, out):
             else:
                 assert not comparison["differences"], (case["name"], index, comparison["differences"])
             differences.extend(comparison["differences"])
-        if case["kind"] != "selection":
+        if case["kind"] not in ("selection","forced_command"):
             assert search.battle.outcome == search.sts.Outcome.PLAYER_VICTORY
             assert view["game"]["room_phase"] != "COMBAT" and view["game"]["current_hp"] > 0
         else:
-            assert search.battle.input_state == search.sts.InputState.PLAYER_NORMAL
-            assert view["game"]["screen_type"] == "NONE"
+            assert search.battle.input_state == search.sts.InputState.PLAYER_NORMAL or search.battle.outcome==search.sts.Outcome.PLAYER_VICTORY
+            assert view["game"]["screen_type"] not in ('GRID','HAND_SELECT')
+        if 'expected_hp_before_victory_relics' in case:
+            assert search.battle.player.cur_hp==case['expected_hp_before_victory_relics']
         row = {"name": case["name"], "status": "passed", "commands": len(case["steps"]),
                "differences": differences, "plans": search.plans}
         reports.append(row)
