@@ -1,0 +1,14 @@
+{
+  "source": "ironclad-alignment/live/live5/student/3900020013",
+  "seed": 3900020013,
+  "scope": "Unmodified original-game before/after observations for recorded steps 476 through 481; no synthetic states.",
+  "source_result_sha256": "86732cdc3ae0addc99fb798d7362668fa9709ae9532413b921818dd0df348ecc",
+  "source_steps_sha256": "542ae3a8eedafb82ee7f63e1ec0e11fe8bb0d08d5b5054fe7b2d8fb027b4321a",
+  "fixture_sha256": "04a7029b82c6ef3524ae00c7e976b81d9101e7c5e4ad972d1ce9487719c8e50b",
+  "runtime_manifest_sha256": "cf4cfd77a34c1e3a75b4ef5a776abc6c059fd70a381a5d85397fc17b1708a4d7",
+  "capture_code_sha256": "cc3e15a6a5c0de9147fadfbc3383dbc543f1aab770a1d8bfbb452def89d053b8",
+  "original_status": "fault",
+  "original_error": "RuntimeError('missing GameContext continuation')",
+  "original_steps": 482,
+  "original_seconds": 204.67956983303884
+}
