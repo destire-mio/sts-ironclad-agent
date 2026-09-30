@@ -1,0 +1,55 @@
+{
+  "version": "distill3-seeds-v1",
+  "teacher_blocks": {
+    "traj-c42": [
+      3900012000,
+      3900014000
+    ],
+    "traj-c43": [
+      3900018000,
+      3900019000
+    ],
+    "traj-c49": [
+      3900100000,
+      3900104000
+    ],
+    "traj-c50": [
+      3900200000,
+      3900200815
+    ],
+    "traj-c51": [
+      3900300000,
+      3900300282
+    ],
+    "traj-c52": [
+      3900400000,
+      3900400098
+    ]
+  },
+  "dagger_blocks": [
+    [
+      3900500000,
+      3900500600
+    ],
+    [
+      3900501000,
+      3900501600
+    ],
+    [
+      3900502000,
+      3900502600
+    ]
+  ],
+  "development_evaluation": [
+    3900041000,
+    3900042000
+  ],
+  "historical_comparison_only": [
+    3900040000,
+    3900041000
+  ],
+  "split": "teacher seed%10: 0=test, 1=validation, 2..9=train; DAgger allowlist: all train",
+  "final_acceptance": "unknown; no seeds admitted outside these exact allowlists",
+  "extension": "v2 extract/run guards expanded ONLY in v3 copy before collection",
+  "selection": "validation labels only; no online outcomes; fixed model before evaluation"
+}

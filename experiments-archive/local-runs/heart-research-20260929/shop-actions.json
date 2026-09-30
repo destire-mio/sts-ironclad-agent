@@ -1,0 +1,479 @@
+[
+  {
+    "seed": 3900012854,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Offering>, 89)",
+    "candidate_potion": [
+      6,
+      28
+    ]
+  },
+  {
+    "seed": 3900012208,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      34,
+      56
+    ]
+  },
+  {
+    "seed": 3900012020,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      43,
+      46
+    ]
+  },
+  {
+    "seed": 3900012602,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Shockwave>, 41)",
+    "candidate_potion": [
+      34,
+      55
+    ]
+  },
+  {
+    "seed": 3900012408,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      39,
+      54
+    ]
+  },
+  {
+    "seed": 3900012219,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Immolate>, 156)",
+    "candidate_potion": [
+      3,
+      79
+    ]
+  },
+  {
+    "seed": 3900012832,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      43,
+      42
+    ]
+  },
+  {
+    "seed": 3900012210,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      21,
+      113
+    ]
+  },
+  {
+    "seed": 3900012772,
+    "base_kind": "relic",
+    "base_item": [
+      73,
+      172
+    ],
+    "candidate_potion": [
+      43,
+      53
+    ]
+  },
+  {
+    "seed": 3900012029,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      43,
+      56
+    ]
+  },
+  {
+    "seed": 3900012911,
+    "base_kind": "relic",
+    "base_item": [
+      174,
+      85
+    ],
+    "candidate_potion": [
+      29,
+      58
+    ]
+  },
+  {
+    "seed": 3900012255,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Dark Embrace>, 84)",
+    "candidate_potion": [
+      21,
+      110
+    ]
+  },
+  {
+    "seed": 3900012719,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      31,
+      67
+    ]
+  },
+  {
+    "seed": 3900012839,
+    "base_kind": "potion",
+    "base_item": [
+      7,
+      57
+    ],
+    "candidate_potion": [
+      43,
+      53
+    ]
+  },
+  {
+    "seed": 3900012915,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      6,
+      43
+    ]
+  },
+  {
+    "seed": 3900012253,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      34,
+      55
+    ]
+  },
+  {
+    "seed": 3900012665,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      34,
+      42
+    ]
+  },
+  {
+    "seed": 3900012494,
+    "base_kind": "relic",
+    "base_item": [
+      92,
+      81
+    ],
+    "candidate_potion": [
+      43,
+      28
+    ]
+  },
+  {
+    "seed": 3900012737,
+    "base_kind": "potion",
+    "base_item": [
+      12,
+      53
+    ],
+    "candidate_potion": [
+      43,
+      56
+    ]
+  },
+  {
+    "seed": 3900012556,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Shrug It Off>, 26)",
+    "candidate_potion": [
+      31,
+      81
+    ]
+  },
+  {
+    "seed": 3900012421,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      34,
+      54
+    ]
+  },
+  {
+    "seed": 3900012101,
+    "base_kind": "potion",
+    "base_item": [
+      36,
+      54
+    ],
+    "candidate_potion": [
+      43,
+      54
+    ]
+  },
+  {
+    "seed": 3900012703,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Pommel Strike>, 24)",
+    "candidate_potion": [
+      12,
+      53
+    ]
+  },
+  {
+    "seed": 3900012826,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Dark Embrace>, 79)",
+    "candidate_potion": [
+      39,
+      53
+    ]
+  },
+  {
+    "seed": 3900012087,
+    "base_kind": "relic",
+    "base_item": [
+      38,
+      133
+    ],
+    "candidate_potion": [
+      12,
+      45
+    ]
+  },
+  {
+    "seed": 3900012104,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      19,
+      80
+    ]
+  },
+  {
+    "seed": 3900012879,
+    "base_kind": "relic",
+    "base_item": [
+      97,
+      169
+    ],
+    "candidate_potion": [
+      34,
+      53
+    ]
+  },
+  {
+    "seed": 3900012088,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Inflame>, 37)",
+    "candidate_potion": [
+      43,
+      57
+    ]
+  },
+  {
+    "seed": 3900012155,
+    "base_kind": "relic",
+    "base_item": [
+      47,
+      162
+    ],
+    "candidate_potion": [
+      3,
+      80
+    ]
+  },
+  {
+    "seed": 3900012466,
+    "base_kind": "relic",
+    "base_item": [
+      91,
+      131
+    ],
+    "candidate_potion": [
+      3,
+      63
+    ]
+  },
+  {
+    "seed": 3900012869,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      43,
+      56
+    ]
+  },
+  {
+    "seed": 3900012110,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Dark Embrace>, 41)",
+    "candidate_potion": [
+      21,
+      108
+    ]
+  },
+  {
+    "seed": 3900012275,
+    "base_kind": "relic",
+    "base_item": [
+      73,
+      162
+    ],
+    "candidate_potion": [
+      12,
+      57
+    ]
+  },
+  {
+    "seed": 3900012600,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      39,
+      54
+    ]
+  },
+  {
+    "seed": 3900012259,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Dark Embrace>, 40)",
+    "candidate_potion": [
+      14,
+      83
+    ]
+  },
+  {
+    "seed": 3900012346,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      39,
+      57
+    ]
+  },
+  {
+    "seed": 3900012771,
+    "base_kind": "relic",
+    "base_item": [
+      136,
+      126
+    ],
+    "candidate_potion": [
+      30,
+      66
+    ]
+  },
+  {
+    "seed": 3900012161,
+    "base_kind": "relic",
+    "base_item": [
+      44,
+      82
+    ],
+    "candidate_potion": [
+      43,
+      29
+    ]
+  },
+  {
+    "seed": 3900012691,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Pommel Strike>, 24)",
+    "candidate_potion": [
+      6,
+      56
+    ]
+  },
+  {
+    "seed": 3900012518,
+    "base_kind": "relic",
+    "base_item": [
+      138,
+      160
+    ],
+    "candidate_potion": [
+      43,
+      57
+    ]
+  },
+  {
+    "seed": 3900012410,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Shrug It Off>, 26)",
+    "candidate_potion": [
+      12,
+      56
+    ]
+  },
+  {
+    "seed": 3900012123,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Feel No Pain>, 77)",
+    "candidate_potion": [
+      41,
+      56
+    ]
+  },
+  {
+    "seed": 3900012693,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Shrug It Off>, 29)",
+    "candidate_potion": [
+      21,
+      114
+    ]
+  },
+  {
+    "seed": 3900012285,
+    "base_kind": "relic",
+    "base_item": [
+      44,
+      168
+    ],
+    "candidate_potion": [
+      43,
+      55
+    ]
+  },
+  {
+    "seed": 3900012014,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      29,
+      108
+    ]
+  },
+  {
+    "seed": 3900012376,
+    "base_kind": "remove",
+    "base_item": null,
+    "candidate_potion": [
+      12,
+      53
+    ]
+  },
+  {
+    "seed": 3900012884,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Feel No Pain>, 79)",
+    "candidate_potion": [
+      39,
+      53
+    ]
+  },
+  {
+    "seed": 3900012877,
+    "base_kind": "card",
+    "base_item": "(<slaythespire.Card Apotheosis>, 206)",
+    "candidate_potion": [
+      12,
+      54
+    ]
+  }
+]

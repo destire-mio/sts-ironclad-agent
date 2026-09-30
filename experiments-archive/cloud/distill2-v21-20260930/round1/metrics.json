@@ -1,0 +1,64 @@
+{
+  "checkpoint": "~/sts/runs/distill2-v21-20260930/round1/student.pt",
+  "sha256": "cfef09cb55ef98cfe0014627845ea4677173a52c10e0e9106d09257acc2edae1",
+  "parameters": 4299649,
+  "test": {
+    "n": 43934,
+    "accuracy": 0.9163973232576137,
+    "loss": 0.24407868175391872,
+    "macro_accuracy": 0.9173924754068914,
+    "by_type": {
+      "Neow": {
+        "n": 300,
+        "correct": 300,
+        "accuracy": 1.0
+      },
+      "boss_relic": {
+        "n": 478,
+        "correct": 461,
+        "accuracy": 0.9644351464435147
+      },
+      "card_reward": {
+        "n": 18549,
+        "correct": 17076,
+        "accuracy": 0.9205887109817241
+      },
+      "card_select": {
+        "n": 2558,
+        "correct": 1970,
+        "accuracy": 0.7701329163408913
+      },
+      "event": {
+        "n": 2049,
+        "correct": 1914,
+        "accuracy": 0.9341142020497804
+      },
+      "map": {
+        "n": 9298,
+        "correct": 8665,
+        "accuracy": 0.9319208431920843
+      },
+      "other_reward": {
+        "n": 5210,
+        "correct": 5204,
+        "accuracy": 0.9988483685220729
+      },
+      "rest": {
+        "n": 2222,
+        "correct": 2070,
+        "accuracy": 0.9315931593159316
+      },
+      "shop": {
+        "n": 2409,
+        "correct": 1740,
+        "accuracy": 0.7222914072229141
+      },
+      "treasure": {
+        "n": 861,
+        "correct": 861,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "selection_score": 0.859799404167186
+}

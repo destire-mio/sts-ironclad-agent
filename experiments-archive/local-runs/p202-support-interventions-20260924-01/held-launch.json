@@ -1,0 +1,15 @@
+{
+  "pid": 68634,
+  "child_pid": 68647,
+  "pgid": 68647,
+  "command": [
+    "~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+    "-u",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_counterfactual_evaluation.py",
+    "held",
+    "--root",
+    "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01"
+  ],
+  "started_at": 1790237064.015191,
+  "timeout_seconds": 5400
+}

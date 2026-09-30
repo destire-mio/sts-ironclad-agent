@@ -1,0 +1,39 @@
+[
+  {
+    "rule": "search",
+    "variant": "boss6",
+    "n": 96,
+    "base_wins": 52,
+    "candidate_wins": 51,
+    "rescued": 0,
+    "lost": 1,
+    "net": -1,
+    "conditional_delta": -0.010416666666666666,
+    "conservative95": [
+      -0.06463536292869493,
+      0.04448897854414047
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 37.453664760416665,
+    "candidate_cpu": 20.78419914583333,
+    "rescued_seeds": [],
+    "lost_seeds": [
+      3900012594
+    ],
+    "historical_strata": {
+      "True": {
+        "n": 48,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482
+      },
+      "False": {
+        "n": 48,
+        "rescued": 0,
+        "lost": 1,
+        "whole_run_weight": 0.147
+      }
+    },
+    "estimated_whole_run_delta": -0.0030624999999999997
+  }
+]

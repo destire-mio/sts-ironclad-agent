@@ -1,0 +1,44 @@
+{
+  "variant": "pgo-generate-queue",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "<repo-parent>/sts-rl-agent-principles/sim_patch/performance",
+      "-B",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate-queue",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_OSX_ARCHITECTURES=arm64",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+      "-DSTS_SIM_ROOT=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source-queue",
+      "-DSTS_JSON_INCLUDE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json",
+      "-DPython_EXECUTABLE=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python",
+      "-Dpybind11_DIR=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/share/cmake/pybind11",
+      "-DSTS_OPT_LEVEL=3",
+      "-DSTS_CPU=apple-m4",
+      "-DSTS_LTO=ON",
+      "-DSTS_PGO=generate",
+      "-DSTS_PROFILE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/queue-profile.profdata"
+    ],
+    [
+      "cmake",
+      "--build",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate-queue",
+      "--parallel",
+      "2"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate-queue",
+      "--output-on-failure"
+    ]
+  ],
+  "seconds": 26.005115032196045,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.4.2)\nTarget: arm64-apple-darwin25.3.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "cpu": "Apple M4",
+  "binary_sha256": "13aeaf4b291f630f27381583cb2243e9cb2214019ac9152557b809c1b670e862",
+  "runner_sha256": "f6e1e6ffca5591a47e30a130b5a641885db19296d55fd23d2942b997464ca11e",
+  "cmake_sha256": "3050f9dc079a168685ca070e341ebe50793cafe4dbca3007bffa88ae4f063fe9"
+}

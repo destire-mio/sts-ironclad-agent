@@ -1,0 +1,19 @@
+{
+  "engine": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-queue",
+  "engine_sha256": "87d521f51a24b43802abe57052e6efd3c3154998f8d383f2827734233dd4b064",
+  "suite": "validation",
+  "loops": 1,
+  "load_average": [
+    2.509765625,
+    3.2119140625,
+    5.1376953125
+  ],
+  "pid": 67062,
+  "started": 1790280066.560359,
+  "status": "complete",
+  "battles": 48,
+  "cpu_seconds": 10.462743,
+  "wall_seconds": 10.498375959,
+  "total_process_wall_seconds": 13.162445068359375,
+  "all_records_match": true
+}

@@ -1,0 +1,1971 @@
+{
+  "seed": 1184832041,
+  "status": "death",
+  "target": 0.0,
+  "error": null,
+  "floor": 55,
+  "act": 4,
+  "hp": 0,
+  "keys": [
+    true,
+    true,
+    true
+  ],
+  "steps": 222,
+  "seconds": 4.279428458889015,
+  "simulations": 744000,
+  "prefix": [
+    {
+      "kind": "outside",
+      "before": "d07e94116db26acd58c3b6a3471caf0b529a8cf11434e9a9afe4f5e40180c66f",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "aa17ec454b032894090f5828d12160db6abd95921a7e336ea9b9078c7c2d0f33",
+      "action": 2
+    },
+    {
+      "kind": "battle",
+      "before": "8c74cad4581b9d781857230ba65a7da0c2b61660bc734d964be7e418b05102a5",
+      "actions": [
+        0,
+        0,
+        1,
+        -2147483648,
+        1,
+        0,
+        -2147483648,
+        1,
+        3,
+        1
+      ],
+      "simulations": 8000,
+      "turns": 3,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "ec50953894f697a296a2e04d9abf1cb8190f027fce92fc0570608280722df343",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "77aaea5e92ac64952868c15e5cd4d23c9ad35e0d7d77b7557d0866777f32620a",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "61df2eed1ba84f28154a81cba7f46d8e5bd45a2cf45f0befac40802b1c9ef169",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "5305e71610b40ced690f8d06327a5f1c1af5fc4290e855bb5b21b1fd52b3614d",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "2d1204ecbc184b8e8137068e24e31261e92e6dd2f2facf59d737c5f3a6b2ac81",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "9707510fcaeac8bd57635ad7e36c438386adfa93bf8c38565d073ec686f12688",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "a26315ea8c195bb2447deffcdfd8b9f13fdc270d92b8c8f82cef3dad01723163",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "5313c9ed5e64161964f3b9f1e923df00ac559dc0de924a89c1ea4d76d5cd5c5b",
+      "action": 268435456
+    },
+    {
+      "kind": "outside",
+      "before": "9b651ffcb4b7698d520c9811c4bd9f20d8e69e2dedea5b0cdca233b2314b8818",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "b773f1b4756fba64c0cd46b6dea5f526df11a5b5bf519098c7ded6ef9833fcf6",
+      "action": 2
+    },
+    {
+      "kind": "battle",
+      "before": "ef862ee33260d131f74a42c6647982fcde930860d5b1e0ad3b79e15aa7914c0b",
+      "actions": [
+        536870912,
+        65540,
+        65539,
+        -2147483648,
+        4,
+        65539,
+        1
+      ],
+      "simulations": 8000,
+      "turns": 2,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "cca566dc3290b7413896e54233b4dc1e2b12b63a2a804b79979ec599f536f06d",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "54db8e2b658e44943f7a2ec664c994ae6c69f36ca965a721586db3c75c2b79e0",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "42c87fbc2d5b679f0784033c6757ce316f47c8671d7f058bdf8bc1590f1c1131",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "7e847d7e118cd6d5d047a6b1c506dd1c22211d45df084d31eca99e5f566b055d",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "2f3be92346d3bd439ee9ea57aa443c24ece3c7e03d8fe7d0024707111aed4d78",
+      "action": 1
+    },
+    {
+      "kind": "battle",
+      "before": "dad5a97929cc449bfcb16b8de9e731b8c1b7a37987d3d67259fdc7daea0680b2",
+      "actions": [
+        1,
+        3,
+        2,
+        536870912,
+        -2147483648,
+        4,
+        1,
+        1,
+        -2147483648,
+        2,
+        0,
+        -2147483648,
+        2,
+        2,
+        2
+      ],
+      "simulations": 8000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "0ee311c20b040c2f0da6621eae729a2d9399fcd3cd392b62aaec01c162c21511",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "4b0a05b62fcb1c80a0f443b3c88292054b0ac3bdccb7b3673e74cfdf40d1dbf4",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "6249d3e650400fa7659a7b111984bd98e9f97d71897bd8ce681628981feb8ad8",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "dadbf1eb0a35fced8ae92216c7bad93366216359fdfabfa2b0ae3e35a7fe29e0",
+      "action": 1
+    },
+    {
+      "kind": "battle",
+      "before": "827096342648e622c5a10c7193df2554a3cbfcb13971b72355fb1d11f759b263",
+      "actions": [
+        0,
+        1,
+        2,
+        -2147483648,
+        1,
+        0,
+        -2147483648,
+        2,
+        0,
+        -2147483648,
+        0,
+        3
+      ],
+      "simulations": 8000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "1b37eea9875384c1c27e18ce1ae20e242a357db123beade8d0c9239fe00510c1",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "1a0b529fc95f329355bc333544f281db13f54df54928da8cdac95fd3359a1594",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "648e5e04e732e20e28d950126333340da881415d7334312e6eefd1919833beef",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "207e42202d7fec8402017f8cc07ff108ad6386a4309fd484d7017242ebf020c7",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "508a05730339c502a8bc21aeaf28a492be785c7ff726e6876b1111f7bc87e01a",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "23c3d4de96999c48d196bfc0a8af60c0d0585b5fdea83ff52efedbcf4509807d",
+      "action": 13
+    },
+    {
+      "kind": "outside",
+      "before": "d09a861b5170c9ac6ae1c20bcf9bebb37299ea07745886f0b26bcf210e67807b",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "59a0f2eaf93b4facdf235f632062eca2cf5ee74c9ae3bde36d70097659193f78",
+      "actions": [
+        0,
+        0,
+        -2147483648,
+        1,
+        0,
+        -2147483648,
+        4,
+        2,
+        2,
+        -2147483648,
+        1,
+        3,
+        -2147483648,
+        2,
+        0,
+        -2147483648,
+        3,
+        1,
+        -2147483648,
+        0,
+        2,
+        -2147483648,
+        1,
+        3,
+        3
+      ],
+      "simulations": 16000,
+      "turns": 8,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "47bdcfa9e56b3ff76856111f6337e8c6db4d833252020642e57b96014442b05b",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "95e16b4c3508dff3d9aa5a2b199a3e24555ac362f57d619111836a8843e84a08",
+      "action": 268435456
+    },
+    {
+      "kind": "outside",
+      "before": "b82212b959efaee0b5b47b69835240a5468a756018f3e414b85c41cefaad5244",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "18f2d7961e1b5cd323b7476efd0cb1976cc765aaeef143c335ee9657596df783",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "df06ac72fb7afdd66fe61b671f84aba16db442cb43c450fb3266bc6e888920ac",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "297524bae577684d57676d4359128a71b1c264f5eba06513287c4ddc998b7ffb",
+      "action": 1
+    },
+    {
+      "kind": "battle",
+      "before": "3f4534e12aa50633368c083f94ca70c0061a579b089e2963cc00991eda56e204",
+      "actions": [
+        0,
+        0,
+        0,
+        -2147483648,
+        3,
+        0,
+        -2147483648,
+        1,
+        0
+      ],
+      "simulations": 8000,
+      "turns": 3,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "13af46ece5c84fac5784d799be00d3b2ee9d38cd4c35af6ccffea368e62284a2",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "460cebafad0873a158774467bf76f53a196bf23ea636f872b66bdfbe18d556d7",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "d6db49eb49b432aa13376016d67bf33c80e64b22c82dfb9bae74767f966d39ce",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "01027d08b9f5253e3834d97d90c5b499f450c3ca5d2afa3f9db543896f60403a",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "c8145cdebba8c1f3f49fbcab745adc157424fd8b74b86e9465e71627ef193a6a",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "bcfd81665f37fd7f29fb4c3a9974be7d3d40be45b64d98d771e7fb7190e931ac",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "2abb5314343b0b63e6c5905a77fe470a6dd5be669673d698a1c12934d723db0b",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "612271edda6fd65ff5a80b6e9ce36b0a6093fc833d2b00ada964539d23e78025",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "2b30a57488d0bd5b205ad2e2c6c82aa648f8e587aa304c45e85f6837bce2983b",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "bcbcfa0029979aaa88eb8bf59eff51a26451bb5e80da1b4c4cc03c07d60ae4ce",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "8c47000797f0b6fda1f5fc2a57eb877fc8ee5e1135bca88a90cfbc187d540b9d",
+      "actions": [
+        3,
+        5,
+        5,
+        3,
+        -2147483648,
+        0,
+        65540,
+        65537,
+        -2147483648,
+        65536,
+        1,
+        -2147483648,
+        1,
+        2
+      ],
+      "simulations": 8000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "1793b8378b5eba8b88fd01b778e7361d4d5dae20df8b6a15b678789f6c244e20",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "c18d33a23f561dd7f69dca1dbffccdf2e00acfb8755f6850a5e12f0f3fa6a9e9",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "d6675d2609eed53e6e5ac6b8ad3f2c854fa4a363ae2462aadf6e5aca1bacb15c",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "df4549232082c28880889762554fd75938ae4fe1a43344d4c5839795980bbe9c",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "0440f90a33fc941bfb65e7661d8c108b20e1a2b98e4e9932694124c07e577efa",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "30a66ca713826d7f354ef7867a47f8801c43b70b4c7a67caf0eb35e5a5f6b50c",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "6f30406393e10ad8db0de12e694d6c179b924b745705601712ec5febda4b221d",
+      "action": 1
+    },
+    {
+      "kind": "battle",
+      "before": "af99c9392637008e5fde70cbdf2b123d404f7513e185a8fe6c8f9b68ea4e359f",
+      "actions": [
+        3,
+        0,
+        0,
+        -2147483648,
+        2,
+        3
+      ],
+      "simulations": 8000,
+      "turns": 2,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "29a1fcb9a3ea550ad9d2c4e229c41f7d540167a86929c27349ec27e19bdf9381",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "35597df4e524a2adb860bdb74ce127c2a5ae3899321ee5e554b92a267209e35c",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "dcbb377f2853711db06487044469ae7b575656de7aba31697801aee68e5bbbb9",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "7eff4313a40d17e1656ebb7a700a1a0798cd236b67e3e7484917c6dc840a433c",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "3a3192faf01e3fe95a3b4a9d39c871d8263c005f8acbdec5c26a254062593d05",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "b715e8aaf769b0cb7608ae5657132cd7dfb4b1372fd013d86d0dd67f5cce3144",
+      "action": 6
+    },
+    {
+      "kind": "outside",
+      "before": "996027541689bbd20e2ed3174fba3eb7f731d830b5b9aac440dcec29ff34204e",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "67bdeddb3231be124b91d4531c9092dea369b84f0d4eccb32a6a4d1cc1e6885a",
+      "action": 671088640
+    },
+    {
+      "kind": "outside",
+      "before": "00ab293da40282a23dcadc077db72f68d7d6a1edffd2188bcd50ecc18396769a",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "ba620c20639ae1e3f1058557b748fd6aaba5cd2863d92150fffa3c683516d796",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "dd16efa0b41e5dee23ecc42734918a4cdca0f8d8ca8f3c2238a047a18ae20b88",
+      "action": 3
+    },
+    {
+      "kind": "outside",
+      "before": "fd3ce9e8876ed2b2f54bf9279c0b8dafe47ca81c668b8ebe375d36ec4b8686b6",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "67bc06881027d01851f6061b442be22342b7063f29f9802c3dfa469f42235334",
+      "actions": [
+        3,
+        1,
+        0,
+        536870913,
+        1073676288,
+        0,
+        0,
+        -2147483648,
+        0,
+        2,
+        4,
+        0,
+        -2147483648,
+        3,
+        65537,
+        -2147483648,
+        1,
+        2,
+        65536,
+        131074,
+        -2147483648,
+        1,
+        -2147483648,
+        0,
+        131074
+      ],
+      "simulations": 16000,
+      "turns": 6,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "13509f8791005c83b9ee05f62400222f0a7762a465dff9efba59a60269885947",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "5f004273ec5d03ccb85f54a491be3ebed336578ebf009deda0bd116524af9d1d",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "77e6603de62aaa858d71f81028445c33fa40a1fbc89484dd48f85a25136215c7",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "73d4a630920fa52e3c4b65ce1432bceafa71ac2e73cf07d1c59bf094bd57ab49",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "7720cb83108d5b4f62322d040eefaaff415bf5871f151533ae54bdbb543c8f02",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "c656dfe4573c9c4bce06a5b24a70272792b1e42e81fbf2e5e44b36a6466fd44f",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "364d7d45aa294538a2a746bfac0ceb0e4dec73ea692d976ad79409d87cca5be9",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "c3352914ea7ffce913753fe9299107669865af2b7049e26dbfe19ae3dd9c98e1",
+      "actions": [
+        4,
+        1,
+        -2147483648,
+        0,
+        1,
+        0,
+        -2147483648,
+        0,
+        2,
+        -2147483648,
+        3,
+        0,
+        1,
+        2,
+        0,
+        3,
+        -2147483648,
+        3,
+        4,
+        1,
+        -2147483648,
+        0,
+        3,
+        1073741840,
+        2,
+        -2147483648,
+        4,
+        2,
+        2,
+        -2147483648,
+        0,
+        0,
+        2,
+        1,
+        -2147483648,
+        0
+      ],
+      "simulations": 72000,
+      "turns": 9,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "b9d0ed21ca51e8e53db85108506d4397a1445341eeb63d50bbbd4c04e064bc8f",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "33bd2af0e5863aa72fb843212270d5dad79f3fcacf0b52f29a6e2e67de77c9c5",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "ad621a5a16dcff3d678e1fd78643426e2340aae8486698460e8fe598c2fff3b1",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "d3c3dd949c5afd1c87ab8751ef0ed34d1c03b2f5c8b76af8013b90c6fdbbf717",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "7005831cbc8c5df2ba28a45fe7c130c94f463dbe0c97028e8c979874cdb957fa",
+      "action": 3
+    },
+    {
+      "kind": "battle",
+      "before": "5286ed70fa31e2f433aed4c764ec5571cb2b6bc10df4791479f945b937e40c12",
+      "actions": [
+        6,
+        5,
+        4,
+        -2147483648,
+        5,
+        1,
+        2,
+        0,
+        -2147483648,
+        4,
+        0,
+        1073741831,
+        -2147483648,
+        0,
+        3,
+        2,
+        4,
+        3
+      ],
+      "simulations": 16000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "45d6fa911639af5e2cdd27fefbb53f4a97e3ea5b58a69f6a790de8cf569d4b70",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "4edbfe55723171e2c5b91ff032687a7104dd4d20637bb76364a3ed616bd4805b",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "0267a8527c300603580261efb3b03f67d479b722edb0164f1082192c6478f229",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "5cb0d65bcaf9761c7fa467f98a9274412d73e8265f44ad66f1fd48fb34a7626f",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "b7273e818852fed0daeedb2f4fe67b5aeaf94ea7578a1ab35c0800f3c428a8a3",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "7900943fe6c5d6432074d1beac4d6b85a000aa4c7821751a53cccd41dfce1d1d",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "2a4eb102efd80e6897d5a8a0a8352ab20cc694e309ef6510e36f8335dc7e545f",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "7f7d1f714b49b9a81be075d0c29cc743c02e2359646713a81f563f0a1e4c0661",
+      "action": 5
+    },
+    {
+      "kind": "outside",
+      "before": "d6523fffe17087e28ffaf0aa17aa286c62ab73cc3929f26d6d9fe97c6aab5d23",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "ef8bba8c6c0018883e38965aa19cad63db4979cfc66d2d28384ec62859f9ddf2",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "aa1e407521b75268c65bcdf832c44c4ca2e861583675dffe69094f2f736695aa",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "a79cfcbf460adc1c27f5bd0ab65bfc7f4da564d75d82ddcbc92376c2de1254f9",
+      "action": 6
+    },
+    {
+      "kind": "outside",
+      "before": "2a80ab66aa4a45827a39cdde3843a24ce92b409cc175213cb8ef4c45678c5b01",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "b1c9fff1945f450ba769c531914c79a580eeeeb9f9c8911432a0262535b4e8e2",
+      "action": 6
+    },
+    {
+      "kind": "outside",
+      "before": "3c588487ae29721397136eac4dbbe17746501740d76e097c54fe8fa7f1999165",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "4820398060841f3eb1e3ca4853c3b187defe5472b91b70612e03fecff941444f",
+      "action": 6
+    },
+    {
+      "kind": "battle",
+      "before": "4d22f8d54c95e7b681414a45aafce8740a9e4afc9a5778ef36e5b2d20f9d3727",
+      "actions": [
+        3,
+        536870912,
+        -2147483648,
+        5,
+        9,
+        65540,
+        3,
+        131075,
+        1,
+        -2147483648,
+        4,
+        1,
+        196612,
+        2,
+        4,
+        5,
+        196612,
+        3,
+        1,
+        196609,
+        1073741834,
+        -2147483648,
+        1,
+        3,
+        131076,
+        0,
+        196609,
+        196608,
+        -2147483648,
+        3,
+        196613,
+        196608,
+        196608,
+        196610
+      ],
+      "simulations": 24000,
+      "turns": 5,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "f1caf242cb0df96533e7d1b2b5511b7224073861524941d224839dacb47648dc",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "a5f32e93f2311190b8f396898020ff4fc62fc86ed0d094b2bc59b0a2c7163427",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "bf88c76ac0ee00fb82ae7a4af55ed2a56e048e6a7243665f98fe87a2c65fadc5",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "f1318373cea8ee1820585eca4920dbf22ea942d2bc2f99c1e1a5b2f387e09289",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "306e623f69205503e3551956adc4c695bfa1ff3e7bc0efeef2cd21537477e49c",
+      "action": 5
+    },
+    {
+      "kind": "outside",
+      "before": "b8a71f924dfd95ef699a70c67618a5d35eb5bded8d5879c072146742c0d41f38",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "061ca1f1cacdf75fd3dab4071246ab3a1e0bec7b09c3fb3f973f0508b2743e85",
+      "action": 13
+    },
+    {
+      "kind": "outside",
+      "before": "cbe1c2b779d33a19b381c970256789c132613d110d58c3385705d498dd388acb",
+      "action": 4
+    },
+    {
+      "kind": "battle",
+      "before": "aa6a427f308f5cfc65139f7cf07b86beb2502b7cacb272f71093a389c907252c",
+      "actions": [
+        6,
+        5,
+        536870912,
+        2,
+        1073741828,
+        -2147483648,
+        3,
+        3,
+        4,
+        -2147483648,
+        1,
+        2,
+        3,
+        1,
+        -2147483648,
+        4,
+        4,
+        1,
+        2,
+        -2147483648,
+        6,
+        6,
+        4,
+        0,
+        1,
+        2,
+        5,
+        1073741835,
+        1073741828,
+        -2147483648,
+        4,
+        6,
+        1,
+        5,
+        1,
+        1,
+        3
+      ],
+      "simulations": 24000,
+      "turns": 6,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "f3e6fedaa9fa4fd41009d05bae328c4c83b6214a95b5acdbc31d667beb6dcff3",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "c568c98f4f4ffdca3d12e84f8f0578224e0db38f175216f74ef8e7dc1a673374",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "36ee49b87cdc3c5d25501243290ddd771344899f51906580925167d8b65f84f3",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "15847c6c68d8ae1571207ae8eb9899135229e8242c78730671ac475dae14f07c",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "842d4601d30b624229b68131b478a8e29721b412a876bc7cb12e01fdad8e828c",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "153f16a56738b008dff7dc679e493ef2ad78364cff9f6f226ac497bcc634dcd4",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "ea2a7c61c3dfe1a67264d7c810bb0439f310e47ff70691fa9d1dbb7be95432a1",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "1192b1c762c60696ca1ec16c23d663b10cde063a881e577f7894e00a83480e70",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "31952613b24613e389d27a474aaead2b7fe296fa1195c4b8a92cf031247980f1",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "99fb6f7eacf1133c783e14b7b08b235a6b9dd15f67af8867ad2af010f53cc6f1",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "24a71aa64d94ce79e79e5accf38d72ea4e3b73f4a3f57dce2f581429e2f29518",
+      "action": 15
+    },
+    {
+      "kind": "outside",
+      "before": "326109b5eeef971b0c4993e2710efe119de8cf74d3af2b5f0324a4efe7d620f7",
+      "action": 3
+    },
+    {
+      "kind": "outside",
+      "before": "6d36fb76490c06671f26328fbc36be89453576d6b771c8b86ce3aac700567c14",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "7cf0e1b87ae8e03001166a445113d5c0e55dceea316a13e1bc9aa91eefa17c9d",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "5fc2995d276bbf6436147877bdc7ab442c0f3fea46299f52111155a177b8da3e",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "8534c670d20150cd6c55416a6a6654b09c69a2bc1c57c208c767d76e43f6ef88",
+      "action": 18
+    },
+    {
+      "kind": "outside",
+      "before": "129a865f50f9072faf6b92da64123b4c3453f8525ce8472f0409405585b45672",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "e78f2cd9be383fc8a90dcb79f6bca85f882f83a43ed8c7716827494bf92cf8b8",
+      "action": 3
+    },
+    {
+      "kind": "outside",
+      "before": "30a845ceb3e180b935f945f8740d6079a4b6200ed4c1fbfe4e9d4d2157b0eea0",
+      "action": 2
+    },
+    {
+      "kind": "battle",
+      "before": "908575557ae75bbe4d80604898600449720a6b57a7508831200bcec63b21f427",
+      "actions": [
+        0,
+        6,
+        5,
+        -2147483648,
+        65537,
+        4,
+        2,
+        2,
+        -2147483648,
+        6,
+        65538,
+        3,
+        -2147483648,
+        4,
+        5,
+        1073741827,
+        3,
+        -2147483648,
+        3,
+        4,
+        5,
+        3,
+        4,
+        -2147483648
+      ],
+      "simulations": 16000,
+      "turns": 5,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "c8ee165701993c698e1405ae8d1119b3f4f55ba4b5abef266662056533358a30",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "b1c75dbe73a9a7f261906d36ecb56cd32dfd2d62cddc9d752784ab80170bcc12",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "1ae8022ff90e47d3156248796dff3d4edae2e733d04eb917acfe54d6dbde50f9",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "8c3936ca508413ae5d68ffc196386c804c34364e5b67bc1376b755237b7554f2",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "eb232ea7bf86b2dfdbae68f37e1634330cd1e2987bd120d7056c0406f2e77452",
+      "action": 18
+    },
+    {
+      "kind": "outside",
+      "before": "f115bc19ea47c000f66a5e73b8200a24979de3a9597904a1d1e403f403feca51",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "2a588d85d0366a803b7090e32cb682659ccf3adb1b50548dcfcbd175166a7dcb",
+      "actions": [
+        4,
+        5,
+        1,
+        -2147483648,
+        0,
+        131076,
+        1073741827,
+        4,
+        1,
+        6,
+        6,
+        -2147483648,
+        8,
+        6,
+        -2147483648,
+        1,
+        5,
+        3,
+        5,
+        1,
+        6,
+        -2147483648,
+        5,
+        4,
+        1073741835,
+        6,
+        65541,
+        131074,
+        65538,
+        -2147483648,
+        1,
+        65536,
+        0,
+        65536,
+        -2147483648,
+        6,
+        65537,
+        65539,
+        -2147483648,
+        5,
+        2,
+        2,
+        65537,
+        65536,
+        -2147483648,
+        1,
+        8,
+        8,
+        2,
+        65536,
+        -2147483648,
+        2,
+        5,
+        65541,
+        8,
+        65536,
+        65541,
+        4,
+        5,
+        65537
+      ],
+      "simulations": 96000,
+      "turns": 10,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "a9cb801fb0461bea51d56a9c2fa871cb725ce94f77697f251c0b5cc946e3cc94",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "890e3f47222bc6d67c5e76c6e0b8fcbb9da8f0ca170585c7a2bfe5c1e9f95045",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "44269bceb4942fe7305f3b29f2603d7c1a04ebfb74e958d592af041654ffb46f",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "d71923b41222d29b70e225920d838784d6e49555d35fcea1a3e13bcabe5c3ae4",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "899ff0ed8958e6f8098d5465cd22047611baa666f40ed9b56be9c3ea9b724b42",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "3b2cdebefd8b987fc5dfefd7c1307c58d66c8926f6a8a1a627c633373e862f10",
+      "actions": [
+        3,
+        5,
+        4,
+        0,
+        -2147483648,
+        3,
+        3,
+        -2147483648,
+        2,
+        6,
+        6,
+        5,
+        0,
+        -2147483648,
+        1,
+        1,
+        3
+      ],
+      "simulations": 16000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "3b1f54ecb003d73e2fb4349654d70699e57f98504c23390a6bd5a6f7e3c190a9",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "27a4f7b2e40b9010ce022cbf403b227cd9876f2ace1348b566204f523596e589",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "c2eb139ad2d6cf4f3d218a20ec19b6e99923cd74b94e197c0c8813f6cd9ce310",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "1c31da7ea5c7b4e47e5a30ccfe61a825b05f3ab3850320ad651ec5c8a113576a",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "c4705db295069e82dbfa63e1db97d2bb22417f6ba543085be80815f2f95cc701",
+      "actions": [
+        1,
+        4,
+        -2147483648,
+        3,
+        -2147483648,
+        0,
+        1073741828,
+        6,
+        0,
+        4,
+        65537,
+        5,
+        5,
+        -2147483648,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0,
+        65538
+      ],
+      "simulations": 16000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "9da9b3db050dfafe5de4d19976233b4bb08fc089e6a841aa9ad594388b5d3d53",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "bde42e0cac3f07fb13117ce5dc99b0d6d3d1b2a0eabb425dc538f9dd5746d35b",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "32e8d38d9386f283c520faaf5938edf3259a3c6d3765f447ec9c6b54012cc27c",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "40b376c178440e766f68141c7a05cb9335c517860a4efaf2a08b218ee2383c1c",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "e64743f61a8331da16e87eee6408a8b5782a76e0f308f1a9d2d1825d1ce1df24",
+      "actions": [
+        5,
+        1073676288,
+        -2147483648,
+        1,
+        3,
+        0,
+        -2147483648,
+        3,
+        0,
+        0,
+        1,
+        1,
+        3,
+        1,
+        0,
+        -2147483648,
+        0,
+        -2147483648,
+        4,
+        5,
+        3,
+        3,
+        -2147483648,
+        2,
+        3,
+        4,
+        4,
+        3,
+        6
+      ],
+      "simulations": 16000,
+      "turns": 6,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "4942011171145325141ab27b4de595db42e39881a72c937fad5ba3a4be10f15f",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "782a61538a9fbe083e915e73ca71ed9e23160911aff4baba190b5900e39fcf51",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "0a9d9532105bb4513ed16a2d344d55c707492115b994fc3b0cde71e9cf60693b",
+      "action": 5
+    },
+    {
+      "kind": "outside",
+      "before": "40ff6326823783d5d4121c8ba197d691787bb248b69f0b8df8adc7a2f72506f4",
+      "action": 536870913
+    },
+    {
+      "kind": "outside",
+      "before": "a202379f466c91f879ae42545896e16b9e4d7835b84ad2189e65a5df636b3cb7",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "8da657364582e6c0f248861edb061a7e10abc5c34849c41117de52cff848e207",
+      "action": 6
+    },
+    {
+      "kind": "battle",
+      "before": "d3f3fc236bc3bec8bb98b46d9e459358bf444e1e881becb446eb68818f6e327a",
+      "actions": [
+        3,
+        3,
+        0,
+        2,
+        -2147483648,
+        5,
+        1073741828,
+        0,
+        3,
+        3,
+        2,
+        -2147483648,
+        5,
+        3,
+        4,
+        3,
+        -2147483648,
+        4,
+        -2147483648,
+        5,
+        1,
+        -2147483648,
+        1,
+        1,
+        5,
+        1,
+        3,
+        4,
+        4,
+        -2147483648
+      ],
+      "simulations": 24000,
+      "turns": 6,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "c83030cac0bf68b45683e504bde0d82c0b90090538ba1c636fd562f67ce58586",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "4e113d389eefe08ae7ec8cb259f5fd62195f74f47fecfeacd39bcb2aadc07fdc",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "86c1ea4c1cdbe6a53a38a332e225f9b34a6552afe48dd68d8adfbeb5e51f4d60",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "ed9e2bcb9b030cada88d63988ad26d43e5f84ad639651ff4f2d6dd5e15c0397b",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "2cb120109f986ef2f865f5263eead53b9664537c61a6df71b37e82aa0bf450b9",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "c4503b64e1427e217689ff697fe7f186d52cd7a537212768fddb6cf14318817b",
+      "actions": [
+        1,
+        5,
+        1073676288,
+        3,
+        -2147483648,
+        -2147483648,
+        3,
+        4,
+        1,
+        2,
+        0,
+        -2147483648,
+        2,
+        -2147483648,
+        3,
+        2,
+        1,
+        -2147483648,
+        1,
+        0,
+        5,
+        0,
+        2,
+        -2147483648,
+        1,
+        3,
+        5,
+        -2147483648,
+        4,
+        3,
+        2,
+        1,
+        5,
+        5,
+        1073741829,
+        1073741830,
+        3,
+        1
+      ],
+      "simulations": 24000,
+      "turns": 8,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "cf0622744a2929c76ae57bdbcf0279728b3604bd7399219378676cf0e979ae49",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "39b072b11a9be31142db18057d59815251850535d8155823ff5d562f5669f572",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "e6ef49b4c9fa33fa19822a06cc95f5986fb8c1d6a17bf883f086d9837eee5080",
+      "action": 512
+    },
+    {
+      "kind": "outside",
+      "before": "4f1a98157d718458f9b1ce87c67b909f46081a909c607e15e1afb1d235e6cabe",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "4f0235a1223dcc1a62504c030279d56a1b87d692d16ccad68667c5f3af32a479",
+      "action": 5
+    },
+    {
+      "kind": "outside",
+      "before": "fa56d9155d688e106c67407971b8cb0b96a6c48cebda08127b138f6e11e4a0d2",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "2c892653bb24595d82ec93dd347c60b6bc86fd6d9e4a5b5734c8825dc72710f3",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "b6047f9bbd6788101414b1e152a67a24528494ebed494ceca0aee91d553a16c7",
+      "actions": [
+        5,
+        5,
+        4,
+        1,
+        1073676288,
+        0,
+        1073741825,
+        1073741826,
+        -2147483648,
+        3,
+        2,
+        4,
+        0,
+        1073741824,
+        1,
+        1073741825,
+        0,
+        -2147483648,
+        5,
+        2,
+        0,
+        1,
+        0,
+        0,
+        -2147483648,
+        1,
+        1,
+        -2147483648,
+        4,
+        3,
+        3,
+        -2147483648,
+        1,
+        1,
+        3,
+        -2147483648,
+        2,
+        1,
+        4
+      ],
+      "simulations": 24000,
+      "turns": 7,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "165b7c511eca6a15a8ead6dec19407bfdd293ea71877b08ed8fb45d1db435f42",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "b64d95be784fbe8c9676c45b76aa5229dbbc926e553d067f4a36d9850ae11c91",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "70a766f4e45d4e39e93169ed85468514248740e9980cdcfb91c1a9149919a042",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "5737eb0c366095b66447354bb3c8090f70400d7a5116a126f3ef30b8666a489c",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "e24feeeb1c42a7ab73541c382717d0897a7506a6cecc33de220037b74ed03ae3",
+      "action": 6
+    },
+    {
+      "kind": "outside",
+      "before": "b80aaf12f718779a4b8a57f39e72b2bf3be572d5333657075f68841687cd27bc",
+      "action": 0
+    },
+    {
+      "kind": "outside",
+      "before": "234e822370cac69a62de330f03f385b6162b98de6f4e13f824589c76c8465401",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "2d0aa65c742051c58f102189d773996220dda900429118ccc566940b88157f82",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "06a1474d5e9cd67c609078a876cd66015dcd5afcd47f708f31a51cd55fb7ebc3",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "510c0ca172110b62080ed6264e9e667e0bc461c8bba26e7d9b0f09a5d5422b82",
+      "action": 5
+    },
+    {
+      "kind": "outside",
+      "before": "3bfcfb691948d0e976c415ad880de9e0bbdf58954375c820a091fa4621eb9ccf",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "d383a2745f82f2cf87b784c664fd6f67a36889ec1a1d2e978afc9f1ebaee4305",
+      "action": 18
+    },
+    {
+      "kind": "outside",
+      "before": "59c44d87c625bedf325cf016aaf92a403be07976d24029fb7eaa18204d553e34",
+      "action": 6
+    },
+    {
+      "kind": "battle",
+      "before": "35cb0c7dee714e155da131a2f94cc3d62bc580da601a73867e1afaabd190d699",
+      "actions": [
+        2,
+        5,
+        -2147483648,
+        2,
+        3,
+        0,
+        -2147483648,
+        0,
+        5,
+        3,
+        0,
+        2,
+        -2147483648,
+        5,
+        3,
+        2,
+        3,
+        0,
+        -2147483648,
+        2,
+        4,
+        3,
+        4,
+        0,
+        0,
+        2,
+        3,
+        3,
+        -2147483648,
+        3,
+        6,
+        1,
+        4,
+        -2147483648,
+        4,
+        1,
+        3,
+        1,
+        4,
+        2,
+        0,
+        -2147483648,
+        4,
+        3,
+        4,
+        0
+      ],
+      "simulations": 32000,
+      "turns": 8,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "282fbbbd1b5c3acf13bfde4042e51b45fa07b5611f3c26e0197985c808602fbf",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "9b3a319169cc85c9dac7bfe84d8442301e67fc963ae6fcfbfa53bec9abc71f95",
+      "action": 536870912
+    },
+    {
+      "kind": "outside",
+      "before": "a93baa4df08ce562540c73c134483165a75db8a56cf86fdb04cf6fcd266d5f27",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "a0f736bfb32dc9ab5f27d9b0a2e9ee05854a9fcb4c94f2e6ea2316b26c859c38",
+      "action": 6
+    },
+    {
+      "kind": "outside",
+      "before": "9c799386b974da1475dd6ecf49e787914e91b030dc1d0a28f72db3b1bd687bda",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "6549ab2d1f7c47d2aff6bd209191acddf33dd3e03f98c11ad13fe0c3e4e3f440",
+      "action": 10
+    },
+    {
+      "kind": "outside",
+      "before": "349cee64695e46ad97702dbfdd4f5ded7d31a1316fafd5528920fc6d49109dcb",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "e895ce2b23b745cd3d744cea8a30ad147012bed7052db18b43be1e19876ee1a0",
+      "actions": [
+        1,
+        1073741827,
+        1,
+        131072,
+        -2147483648,
+        5,
+        131076,
+        3,
+        6,
+        6,
+        -2147483648,
+        1,
+        4,
+        2,
+        65538,
+        0,
+        1,
+        -2147483648,
+        5,
+        131077
+      ],
+      "simulations": 16000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "e4ab7671f852361bad3a70a338832c110c24e0910f7d0f0ec902d77ef8bbd462",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "6302608895d37ac2e33b2d1f63e0944eabf0a79580012f5097934cc14d26f8b1",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "e889b38ceebf846bb2ebc6d3dbf03402d92e7f01b82fb1d0253210363e70a161",
+      "action": 256
+    },
+    {
+      "kind": "outside",
+      "before": "d2ede0fdeec21063efcedc89313e8916b83f209255832ddd20aa9286c03f1b08",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "d43529b69f208960d341e92a1c37b94aa74888a7980d453d040fbdde71c1d4f3",
+      "action": 5
+    },
+    {
+      "kind": "battle",
+      "before": "9b7d47527369d8c1173f8d2f5ea4ab65cad1883e5458091df03494d22bed2a94",
+      "actions": [
+        1,
+        536870912,
+        3,
+        4,
+        1073741824,
+        3,
+        1,
+        -2147483648,
+        0,
+        0,
+        5,
+        5,
+        5,
+        1073741827,
+        2,
+        -2147483648,
+        5,
+        5,
+        4,
+        5,
+        -2147483648,
+        1,
+        0,
+        2,
+        0,
+        6,
+        6,
+        0,
+        0,
+        5,
+        3
+      ],
+      "simulations": 24000,
+      "turns": 4,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "9149ad1ed42e9ecc540b1561538c2f3affe8d20d4ae6469d0c6094523cafa679",
+      "action": 134217728
+    },
+    {
+      "kind": "outside",
+      "before": "b004c042ceeb6f380891e8030ebcd21a32820fc8561619866c5f019b274448c0",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "11471bf34664d8ef6f9115810e2e26345e00ab0686dc164fdff103def9c1188c",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "b80ccb2e2cd9e826c29407b8f22ce37e4e71cbd7bd8a8210638fc1461ed51b58",
+      "action": 4
+    },
+    {
+      "kind": "outside",
+      "before": "f9e084251777202c0c641a732d9501fbcc93ced970c9b049820e0abaeaac1eb3",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "7556a9499daeee9682ccda7099b415985e8af98df9d84b89d57d19c389c28223",
+      "action": 14
+    },
+    {
+      "kind": "outside",
+      "before": "08fa3632d4cc2419197aa07870ffabc21fdaa871f9f261cfcb1170a657eec2e1",
+      "action": 0
+    },
+    {
+      "kind": "battle",
+      "before": "c53d8d863913ee69d26daed4590c7559ce8bb7f972e4e808b580d20f6aa3f636",
+      "actions": [
+        65542,
+        3,
+        1,
+        0,
+        1,
+        1073676288,
+        -2147483648,
+        65536,
+        4,
+        2,
+        0,
+        -2147483648,
+        1,
+        3,
+        0,
+        3,
+        65537,
+        1073741824,
+        0,
+        -2147483648,
+        5,
+        1,
+        0,
+        4,
+        4,
+        1,
+        2,
+        0,
+        -2147483648,
+        65537,
+        5,
+        2,
+        65540,
+        65540,
+        1073741824,
+        -2147483648,
+        2,
+        65536,
+        65543,
+        3,
+        5,
+        65542,
+        2,
+        -2147483648,
+        3,
+        0,
+        0,
+        2,
+        6,
+        5,
+        1073741826,
+        2,
+        65539,
+        3,
+        -2147483648,
+        2,
+        9
+      ],
+      "simulations": 96000,
+      "turns": 8,
+      "outcome": 1
+    },
+    {
+      "kind": "battle",
+      "before": "1467e92d6962d8fbcad8547831364ff3c1e3963c7149f36b082b82bcbd2c9bfa",
+      "actions": [
+        0,
+        2,
+        4,
+        0,
+        1,
+        -2147483648,
+        1,
+        0,
+        2,
+        2,
+        1,
+        5,
+        3,
+        1,
+        6,
+        3,
+        4,
+        1,
+        3,
+        3,
+        4,
+        4,
+        -2147483648,
+        2,
+        1,
+        2,
+        1,
+        2,
+        5,
+        0,
+        2,
+        6,
+        3,
+        6,
+        7,
+        2,
+        -2147483648,
+        6,
+        4,
+        6,
+        1,
+        1,
+        7,
+        3,
+        2,
+        3,
+        2,
+        5,
+        1073741825,
+        5,
+        0,
+        0,
+        1073741824,
+        5,
+        0,
+        4,
+        2,
+        0,
+        1,
+        2
+      ],
+      "simulations": 96000,
+      "turns": 8,
+      "outcome": 1
+    },
+    {
+      "kind": "outside",
+      "before": "2caa055f191f543730ff18b4d157bcf9815c40f480be2d6e1a47dc1047aa1a81",
+      "action": 3
+    },
+    {
+      "kind": "outside",
+      "before": "1acabc94ed89b75bf66ae0ec7a9592a8817a9a53fcba439071935dd0067617f2",
+      "action": 1
+    },
+    {
+      "kind": "outside",
+      "before": "b909e1819d42a09bcba1c255cdcaba7482ce96cb1e43b55b179ab29950c13c24",
+      "action": 24
+    },
+    {
+      "kind": "outside",
+      "before": "af5d11554a58cd23a300357cacdafbfbeff57e2d7b53193ea2f7b6c62bb4c6ee",
+      "action": 3
+    },
+    {
+      "kind": "outside",
+      "before": "554cee8d97e6d8e8f23df961d885e9c7b8c64f11cd4f21c43c274a40048ef6ca",
+      "action": 2
+    },
+    {
+      "kind": "outside",
+      "before": "02698f02f531e5201ba35f2bbc914f385431a382d7a279d6477b1562e3973d5b",
+      "action": 402653184
+    },
+    {
+      "kind": "outside",
+      "before": "e57397ffc219e26e6e109c07a1d4f3777f5f4098a517ea58b9213c306d8616b1",
+      "action": 805306368
+    },
+    {
+      "kind": "outside",
+      "before": "dc70f0d9160d7744a8de5000198eefec477447e86467636da735751607f6e1c5",
+      "action": 3
+    },
+    {
+      "kind": "battle",
+      "before": "a550048da5da32eb42041dfd651c7011a35e45641e77e0f295a312e1b5b8aebe",
+      "actions": [
+        1,
+        4,
+        0,
+        65536,
+        2,
+        -2147483648,
+        5,
+        65542,
+        5,
+        4,
+        -2147483648
+      ],
+      "simulations": 24000,
+      "turns": 2,
+      "outcome": 2
+    }
+  ],
+  "samples": [],
+  "roots": [],
+  "terminal_fingerprint": "74dab2726ad1e9063daa55e9296368b4850e0b8388736b52acd9cbe9593e44b5"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "seed": 3900012854,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012854-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 231,
+    "stratum": "heart_win",
+    "split": "development"
+  },
+  {
+    "seed": 3900012165,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012165-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 238,
+    "stratum": "heart_win",
+    "split": "development"
+  },
+  {
+    "seed": 3900012547,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012547-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 241,
+    "stratum": "heart_win",
+    "split": "development"
+  },
+  {
+    "seed": 3900012321,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012321-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 231,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012972,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012972-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 222,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012719,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012719-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 223,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012088,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012088-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 222,
+    "stratum": "spear_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012518,
+    "path": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/traj/traj-c38/3900012518-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 222,
+    "stratum": "spear_loss",
+    "split": "development"
+  }
+]

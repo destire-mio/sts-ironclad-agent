@@ -1,0 +1,1 @@
+{"status":"complete","seed":814116210,"arm":"adaptive","group":"surviving","phase":"main","survived":true,"heart":true,"search_calls":2,"suffix_calls":1,"full_replans":1,"rollouts":48000,"transitions":2510358,"updates":48308,"partial_paths":0,"search_seconds":36.983105916995555,"seconds":47.53884499997366}

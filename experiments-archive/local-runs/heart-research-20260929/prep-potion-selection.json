@@ -1,0 +1,8 @@
+{
+  "rule": "potionfirst",
+  "development_N": 24,
+  "rescued": 1,
+  "lost": 2,
+  "decision": "Do not adopt. Complete the predeclared holdout, with no priority edits or state gates chosen from outcomes.",
+  "holdout_read": false
+}

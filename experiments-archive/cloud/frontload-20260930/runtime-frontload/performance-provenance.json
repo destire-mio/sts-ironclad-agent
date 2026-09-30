@@ -1,0 +1,9 @@
+{
+  "variant": "combat4r",
+  "parent_manifest_sha256": "867c0fa45adbb90e301b8ffbdfbd2e969eb56954251d69a406fa5964ad4e8384",
+  "build_sha256": "d8f8fcf4fada45ea43f2dcfa3cce3f9db4c37a5d7ec79d53f44b31b4fe489629",
+  "search": "Combat4q search and budgets retained; victory scoring uses deterministic post-victory HP plus 100 per combat max HP gain; other terms unchanged.",
+  "mechanics": "30 zero-fuzz snapshot patches plus Nemesis A18 threshold.",
+  "potion_replay": "Includes newly persistent endTurnShuffle mode and full Java RNG state.",
+  "whole_run_acceptance": "2000 game acceptance is user-owned."
+}

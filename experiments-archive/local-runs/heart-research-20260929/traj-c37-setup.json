@@ -1,0 +1,10684 @@
+[
+  {
+    "seed": 3900013003,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013001,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013001,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013001,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013000,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013000,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013000,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013000,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013004,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013006,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013006,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013007,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013007,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013007,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013023,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013023,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013013,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013013,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013017,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013017,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013017,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013017,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013018,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013018,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013026,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013026,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013026,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013028,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013028,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013031,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013027,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013027,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013027,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013033,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013033,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013033,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013032,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013034,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013034,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013037,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013038,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013038,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013039,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013039,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013045,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013045,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013046,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013046,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013046,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013049,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013049,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013049,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013056,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013051,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013051,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013058,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013058,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013059,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013059,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013059,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013059,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013060,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013060,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013067,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013064,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013064,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013064,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013068,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013061,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013061,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013070,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013070,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013072,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013072,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013072,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013069,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013069,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013069,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013069,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013073,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013073,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013073,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013073,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013078,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013078,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013081,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013081,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013084,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013084,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013082,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013082,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013090,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013087,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013085,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013085,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013085,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013088,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013088,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013088,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013093,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013093,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013093,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013091,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013091,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013091,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013091,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013094,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013094,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013095,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013095,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013097,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013097,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013096,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013096,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013101,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013101,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013101,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013099,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013099,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013107,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013107,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013103,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013108,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013112,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013114,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013114,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013114,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013116,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013116,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013115,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013115,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013115,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013115,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013115,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013117,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013117,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013117,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013118,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013118,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013121,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013121,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013121,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013121,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013120,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013120,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013120,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013125,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013127,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013126,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013126,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013126,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013129,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013129,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013129,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013132,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013132,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013132,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013133,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013133,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013133,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013134,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013130,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013130,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013138,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013138,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013139,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013139,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013139,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013135,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013135,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013135,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013141,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013141,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013141,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013145,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013145,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013146,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013146,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013142,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013142,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013142,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013144,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013144,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013147,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013147,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013150,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013150,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013148,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013148,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013148,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013151,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013151,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013151,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013153,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013153,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013154,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013154,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013154,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013154,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013155,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013161,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013161,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013158,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013158,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013158,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013163,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013163,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013165,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013165,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013165,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013165,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013165,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013169,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013169,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013169,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013169,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013170,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013170,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013170,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013170,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013171,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013171,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013171,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013171,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013173,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013173,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013173,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013175,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013175,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013175,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013174,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013174,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013174,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013177,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013177,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013177,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013178,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013178,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013181,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013185,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013185,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013183,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013183,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013182,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013182,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013182,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013182,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013182,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013186,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013187,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013187,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013188,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013188,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013188,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013189,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013189,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013189,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013191,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013191,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013190,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013193,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013193,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013192,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013192,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013192,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013194,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013194,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013197,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013197,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013197,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013199,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013199,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013199,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013198,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013198,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013198,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013198,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013200,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013200,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013202,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013204,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013205,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013205,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013205,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013207,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013207,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013207,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013207,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013206,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013206,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013206,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013206,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013212,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013209,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013209,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013209,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013216,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013216,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013216,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013223,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013222,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013222,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013224,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013224,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013230,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013234,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013226,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013226,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013226,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013225,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013225,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013225,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013236,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013236,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013244,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013244,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013242,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013242,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013242,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013245,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013243,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013243,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013243,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013247,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013247,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013247,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013246,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013246,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013246,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013252,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013252,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013252,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013252,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013251,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013251,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013256,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013256,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 10
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 9,
+    "first_play": 9
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 10,
+    "first_play": null
+  },
+  {
+    "seed": 3900013248,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013253,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013254,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013254,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013254,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013262,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013262,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013262,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013259,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013259,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013258,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013258,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013258,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013258,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013258,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013265,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013265,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013265,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013269,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013269,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013269,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013269,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013271,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013271,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013271,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013271,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013272,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013272,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013272,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013272,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": null
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013273,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013276,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013276,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013276,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013274,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013274,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013274,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013274,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013278,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013278,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013278,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013279,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013279,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013279,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013280,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013280,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013280,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013286,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013283,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013283,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013283,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013283,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013287,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013287,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013281,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013290,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013290,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013290,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013290,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013288,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013289,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013289,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013289,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013291,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013291,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013294,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013294,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013294,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013299,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013297,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013297,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013297,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 7,
+    "first_play": null
+  },
+  {
+    "seed": 3900013297,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013297,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013300,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013300,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013300,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013304,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013303,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013303,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013303,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013306,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013306,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013310,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013310,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013307,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013307,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013307,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013319,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013319,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013319,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013314,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013317,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013317,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013317,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013322,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013322,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013322,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013326,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013326,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013326,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013326,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013326,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013325,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013331,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013331,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013331,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013330,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013330,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013334,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013332,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013332,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013332,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013335,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013335,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013335,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013335,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013339,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 8,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013339,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013336,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013336,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013336,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013336,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013336,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013340,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013340,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013342,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013342,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013342,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013346,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013346,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013346,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013345,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013345,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013345,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013343,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013343,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013343,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013343,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013347,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013347,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013347,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013350,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013350,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013350,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013351,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013351,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013353,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013349,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 6,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013362,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013362,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013359,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013359,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013355,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013355,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013361,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013365,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013365,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013364,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013364,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013364,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013364,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013369,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013368,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013368,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013370,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013370,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013370,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013372,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013372,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013372,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013373,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013373,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013376,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013376,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013382,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013377,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013377,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013384,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013384,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013385,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013385,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013385,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013385,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 7,
+    "first_play": null
+  },
+  {
+    "seed": 3900013385,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013386,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013386,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013386,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013386,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013390,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013387,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013392,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013392,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013396,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013396,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013395,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013395,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013395,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013395,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013399,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013399,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013398,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013401,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013401,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013405,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013405,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013405,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013402,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013402,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013402,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013404,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013404,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013404,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013406,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013406,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013406,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013408,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013408,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013410,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013410,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013410,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013410,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013409,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013409,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013411,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013411,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013411,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013411,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013412,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013412,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013412,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013412,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013416,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013414,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013414,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013418,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013418,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013418,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013419,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013419,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013419,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013419,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013421,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013421,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013423,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013423,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013425,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013425,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013424,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013424,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013424,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013424,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013426,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013426,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013426,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013429,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013429,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013429,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013427,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013427,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013434,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013434,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013436,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013436,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013433,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013433,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013433,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013438,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013438,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013438,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013440,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013440,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013440,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013440,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013441,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013441,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013441,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013443,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013443,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013445,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013445,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013445,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013445,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013444,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013444,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013447,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013448,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013448,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013453,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013457,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013457,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013454,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013463,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013463,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013463,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013463,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013462,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013462,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013464,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013464,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013470,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013470,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013470,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013468,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013468,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013468,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013468,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013468,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013469,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013469,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013469,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013469,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013475,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013475,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013477,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013473,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013473,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013473,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013471,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013471,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013471,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013471,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013481,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013478,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013478,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013478,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013479,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013479,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013480,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013480,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013482,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013482,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013482,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013482,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013483,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013483,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013484,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013484,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013486,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013486,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013485,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013492,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013488,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013488,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013487,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013498,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013498,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013494,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013494,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013493,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013493,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013493,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013493,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013496,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013496,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013496,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013505,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013500,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013501,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013501,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013508,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013510,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013510,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013506,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013506,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013511,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013511,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013511,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013512,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013512,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013512,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013512,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013514,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013514,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013516,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013517,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013517,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013517,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013523,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013523,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013523,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013524,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013524,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013524,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013524,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013519,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013519,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013519,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 8,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013522,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013525,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013525,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013530,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 8,
+    "first_play": null
+  },
+  {
+    "seed": 3900013530,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013530,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013529,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013532,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013532,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 8,
+    "first_play": null
+  },
+  {
+    "seed": 3900013532,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013532,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013532,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013536,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013536,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013537,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013537,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013537,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013540,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013540,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013543,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013543,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013542,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013542,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013526,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013526,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013526,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013541,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013541,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013541,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013545,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013545,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013546,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013546,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013546,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013548,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013547,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013547,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013547,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013547,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013550,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013551,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013551,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013553,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013552,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013552,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013552,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013552,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013552,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013554,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013554,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013555,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013555,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013555,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013555,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013558,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013558,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013558,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013557,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013557,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013561,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013559,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013559,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013559,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013564,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013564,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013564,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013564,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013564,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013562,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013562,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013562,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013565,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013565,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013571,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013571,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013571,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013572,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013572,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013573,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013573,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013573,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013573,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013568,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013568,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013568,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013574,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013577,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013577,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013577,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013577,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013578,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013578,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013578,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013578,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013578,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013576,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013576,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013576,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013576,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013576,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013581,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013581,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013581,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013579,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013579,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013583,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013583,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013580,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013580,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013580,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013580,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013586,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013586,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013586,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013587,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013587,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013584,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013584,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013590,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013590,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013588,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013588,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013588,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013585,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013585,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013585,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013585,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013585,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013589,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013589,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013589,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013589,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013593,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013593,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013591,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013595,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013595,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013596,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": null
+  },
+  {
+    "seed": 3900013596,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013596,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013597,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013597,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013597,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013599,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013599,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013599,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013599,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013598,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013598,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013600,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013602,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013602,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013602,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013603,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013603,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013607,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013607,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013608,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013608,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013605,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013605,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013605,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013605,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013615,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013615,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013610,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013610,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013610,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013610,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013612,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013612,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013612,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013613,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013613,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013613,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013619,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013619,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013619,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013617,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013617,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013617,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013616,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013616,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013616,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013621,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013621,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013621,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013621,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013621,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013623,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013623,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013623,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013624,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013624,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013624,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013627,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013631,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013631,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013628,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013628,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013632,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013632,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013629,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013629,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013629,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013629,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013629,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013635,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013635,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013634,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013634,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013634,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013640,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013640,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013642,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013642,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013642,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013641,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013641,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013643,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013643,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013643,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013644,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013644,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013647,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013647,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013647,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013645,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013645,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013645,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013645,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013650,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013650,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013651,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013652,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013652,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013654,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013654,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013653,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013658,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013658,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013658,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013660,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013660,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013666,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013666,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013664,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013664,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013664,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013667,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013667,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013665,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013665,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013665,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013665,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013665,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013669,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013669,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013669,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013673,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013673,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013672,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013672,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013674,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013674,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013674,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013674,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013675,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013675,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013675,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013675,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013676,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013678,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013678,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013678,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013682,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013683,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013677,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013677,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013686,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013686,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013685,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013685,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013685,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013685,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013687,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013687,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013694,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013694,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013690,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013689,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013689,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013689,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013691,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013691,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013695,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013695,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013695,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013695,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013697,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013697,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013696,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013696,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013696,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013698,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013698,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013700,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013700,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013703,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013703,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013705,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013701,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013701,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013701,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013701,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013701,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013707,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013707,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013707,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013711,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013711,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013706,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013713,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013713,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013715,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013710,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013710,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013710,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013710,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013710,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013716,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013718,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013718,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013718,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013721,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013721,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013721,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013719,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013722,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013722,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013722,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013722,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013724,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013724,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013725,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013726,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013726,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013728,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013727,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013727,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 6,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013727,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013727,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013727,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013732,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013732,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013729,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013729,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013729,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013729,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013739,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013739,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013738,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013738,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013738,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013735,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013735,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013735,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013740,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013742,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013742,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013744,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013744,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013743,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013743,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013743,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013750,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013749,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013749,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013748,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013748,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013748,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013753,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013753,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013753,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013751,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013751,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013751,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013757,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013757,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013755,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013755,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013759,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013759,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013759,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013762,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013762,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013762,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013766,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013766,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013767,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013764,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013764,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013761,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013761,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013761,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013761,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013769,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013769,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013769,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013769,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013771,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013771,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013771,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013770,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013770,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013770,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013775,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013774,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013774,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013774,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013774,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013774,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013776,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013776,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013776,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013776,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013778,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013778,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013778,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013779,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013780,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013780,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013780,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013781,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013781,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013783,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013783,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013783,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013783,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013784,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013785,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013785,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013788,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013788,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013792,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013796,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013796,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013796,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013796,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013797,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013797,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013797,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013799,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013799,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013798,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013798,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013800,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013800,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013800,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013800,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013801,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013801,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013801,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013802,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013803,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013804,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013807,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013805,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013805,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013805,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013805,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013809,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013809,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013809,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013808,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013808,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013806,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013811,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013812,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013812,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013812,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013812,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013815,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013815,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013815,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013815,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013816,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013816,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013827,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013819,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013822,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013822,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013822,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013820,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013820,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013820,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013820,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013820,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013828,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013828,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013831,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013829,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013833,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013833,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013839,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013839,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013836,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013836,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013842,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013842,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013842,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013842,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013842,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013840,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013840,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013847,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013843,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013843,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013846,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013846,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013848,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013848,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013849,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013849,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013850,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013850,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013850,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013851,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013853,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013854,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013854,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013854,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 7,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013852,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013856,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 6,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013857,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013857,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013857,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013857,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013862,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013862,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013862,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013862,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013862,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013863,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013858,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013858,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013858,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013866,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013866,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013866,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013866,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013866,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013869,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013869,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013869,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013869,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013871,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013870,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013874,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013874,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013874,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013874,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013875,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013875,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013875,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013876,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013876,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013876,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013876,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013878,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013878,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013883,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013881,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013881,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013884,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013884,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013884,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013889,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013887,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013887,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013887,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013890,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013890,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013888,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013892,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013895,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013895,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013895,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013897,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013897,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013898,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013898,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013901,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013901,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013901,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013901,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013903,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013903,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013903,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013904,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013904,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013906,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013906,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013906,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013906,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013908,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013908,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013909,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013909,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013909,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013909,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013913,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013913,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 6,
+    "first_play": null
+  },
+  {
+    "seed": 3900013913,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013913,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013912,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013912,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013912,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013914,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013914,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013914,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013915,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013915,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013916,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013916,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013916,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013917,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013917,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013917,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013920,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013919,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013919,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013921,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013918,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013923,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013925,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013926,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013926,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013933,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013930,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013930,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013931,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013931,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013931,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013931,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013937,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013937,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013937,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013939,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013939,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013939,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013938,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013938,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013940,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013940,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013940,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013942,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013942,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013943,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013943,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013946,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013946,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013946,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013946,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013945,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013945,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013945,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013945,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013948,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013948,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013948,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013948,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013949,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013952,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013952,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013952,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013951,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013951,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013953,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013953,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013953,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013953,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013953,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013954,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013954,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 4,
+    "first_play": 8
+  },
+  {
+    "seed": 3900013957,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013962,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013958,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013958,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013965,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013971,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013970,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013970,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 4,
+    "first_play": null
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013964,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013969,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013969,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013969,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013974,
+    "win": false,
+    "power": "BARRICADE",
+    "first_visible": 6,
+    "first_play": 7
+  },
+  {
+    "seed": 3900013974,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013973,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013973,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013973,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013973,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 6
+  },
+  {
+    "seed": 3900013977,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013977,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013978,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013978,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013976,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013976,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013982,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": null
+  },
+  {
+    "seed": 3900013979,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013979,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013979,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013981,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013981,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013981,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013983,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013983,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013984,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013984,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013984,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013985,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013985,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013985,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013987,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013988,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013988,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013988,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013988,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013988,
+    "win": true,
+    "power": "EVOLVE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013991,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013991,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013991,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013991,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013992,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": null
+  },
+  {
+    "seed": 3900013989,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013989,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013989,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 1,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013989,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013989,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013990,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013990,
+    "win": true,
+    "power": "BARRICADE",
+    "first_visible": 4,
+    "first_play": 5
+  },
+  {
+    "seed": 3900013990,
+    "win": true,
+    "power": "DEMON_FORM",
+    "first_visible": 7,
+    "first_play": null
+  },
+  {
+    "seed": 3900013990,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013990,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013993,
+    "win": true,
+    "power": "CORRUPTION",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013993,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 1,
+    "first_play": 1
+  },
+  {
+    "seed": 3900013995,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013995,
+    "win": false,
+    "power": "DEMON_FORM",
+    "first_visible": 5,
+    "first_play": null
+  },
+  {
+    "seed": 3900013995,
+    "win": false,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013995,
+    "win": false,
+    "power": "DARK_EMBRACE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013999,
+    "win": false,
+    "power": "CORRUPTION",
+    "first_visible": 3,
+    "first_play": 3
+  },
+  {
+    "seed": 3900013999,
+    "win": false,
+    "power": "EVOLVE",
+    "first_visible": 3,
+    "first_play": null
+  },
+  {
+    "seed": 3900013996,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 4,
+    "first_play": 4
+  },
+  {
+    "seed": 3900013997,
+    "win": true,
+    "power": "FEEL_NO_PAIN",
+    "first_visible": 2,
+    "first_play": 2
+  },
+  {
+    "seed": 3900013997,
+    "win": true,
+    "power": "DARK_EMBRACE",
+    "first_visible": 1,
+    "first_play": 1
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "status": "complete",
+  "phase": "P212 simulator performance",
+  "selected_variant": "pgo",
+  "runtime": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/runtime",
+  "identity": {
+    "engine_sha256": "be7a690df72989c7f45d75c0912e395da9b217ec1cbbc68f271f51cf40dfb9f1",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "runtime_manifest_sha256": "6f7d9f8d845dadd2df32dad2016edf7deb36d700923d09fe775f595810db151a",
+  "selected_compile_configuration": [
+    "-O3",
+    "-mcpu=apple-m4",
+    "ThinLTO on all core units and bindings",
+    "instrumentation PGO on separate families",
+    "-UNDEBUG",
+    "no fast-math"
+  ],
+  "selection_reason": "PGO improves all five paired rounds. Callback moves add no stable gain relative to the same compiler configuration, so the selected source is identical to the E121 archive.",
+  "paired_native_benchmarks": {
+    "roots": 48,
+    "families": 33,
+    "variants": 5,
+    "rounds": 5,
+    "total_resolver_calls": 1200,
+    "all_actions_counts_turns_state_rng_and_outcomes_match": true,
+    "pgo": {
+      "cpu_seconds": {
+        "median_speedup": 1.2955214831120667,
+        "range": [
+          1.2770658322253068,
+          1.2977109080213234
+        ],
+        "rounds": [
+          1.2770658322253068,
+          1.2920501939213742,
+          1.2969640326349254,
+          1.2977109080213234,
+          1.2955214831120667
+        ],
+        "median_total": 10.512508
+      },
+      "wall_seconds": {
+        "median_speedup": 1.2956343000522865,
+        "range": [
+          1.2775722461199537,
+          1.2978033615501052
+        ],
+        "rounds": [
+          1.2775722461199537,
+          1.292455288740329,
+          1.2970446740006694,
+          1.2978033615501052,
+          1.2956343000522865
+        ],
+        "median_total": 10.550846833
+      }
+    },
+    "o3_lto": {
+      "cpu_seconds": {
+        "median_speedup": 1.1113767731320674,
+        "range": [
+          1.1087743328883062,
+          1.1169930378939865
+        ],
+        "rounds": [
+          1.1087743328883062,
+          1.1158019187994965,
+          1.1169930378939865,
+          1.1113767731320674,
+          1.1099579920258393
+        ],
+        "median_total": 12.173028
+      },
+      "wall_seconds": {
+        "median_speedup": 1.1114203970139163,
+        "range": [
+          1.108983511036641,
+          1.1165088282881566
+        ],
+        "rounds": [
+          1.108983511036641,
+          1.1162484604739298,
+          1.1165088282881566,
+          1.1114203970139163,
+          1.1101113879861726
+        ],
+        "median_total": 12.216364253
+      }
+    }
+  },
+  "validation": {
+    "native_and_queue_ctest_passed": 27,
+    "native_and_queue_ctest_total": 27,
+    "optional_queue_patch_sanitizer_cases_passed": 10,
+    "full_policy_natural_regression_families": 8,
+    "full_policy_state_rng_trajectory_and_outcome_equal": true
+  },
+  "budget_probe": {
+    "roots": 48,
+    "families": 33,
+    "old_base_simulations": 8000,
+    "new_base_simulations": 10000,
+    "old_survivors": 41,
+    "new_survivors": 43,
+    "paired": {
+      "rescued": 2,
+      "lost": 0,
+      "both_survived": 41,
+      "both_failed": 5
+    },
+    "wall_time_ratio": 0.9210389150123691,
+    "actual_simulation_ratio": 1.1219081272084805,
+    "faults": 0,
+    "policy_adoption": false
+  },
+  "default_runtime_simulations": 8000,
+  "implementation_repairs": [
+    {
+      "stage": "queue patch preparation",
+      "issue": "Hand-written diff had incorrect hunk counts; source was preserved and diff regenerated before successful build."
+    },
+    {
+      "stage": "full policy verification harness",
+      "issue": "Missing terminal_fingerprint return field; fixed by fingerprinting caller-owned final GameContext. One first attempt outcome was not recorded; retained as unknown rather than counted as a verified result."
+    }
+  ],
+  "next_work": "Search tree reuse with legal executed-prefix/state/RNG identity, then fixed Boss capability and natural-run paired evaluation. Keep whole-policy sample budget separate from native speed tests.",
+  "application_goal": {
+    "status": "paused",
+    "new_goal_request": "rejected because thread has an unfinished goal",
+    "project_execution_goal": "docs/first-principles-plan.md"
+  },
+  "original_goal_complete": false,
+  "unseen_acceptance_games": 0,
+  "limits": [
+    "Benchmark describes native resolver throughput on this M4, excluding Python startup, prefix restoration and NN policy time.",
+    "Historical full-run regression and conditional battle probes do not estimate an improved natural Heart win rate.",
+    "No original-Java global parity claim.",
+    "No commit, push or deployment; historical runtimes and P300 build were not overwritten."
+  ],
+  "evidence": {
+    "manifest.json": "f9f24bb081603411203fa41b9c353f744496f65fa8bf2a50a728546f35cfe20f",
+    "paired-timing/plan.json": "2b90f0859cb5376c1d31c823c23327c6de72655f40358df15872a0328ce03d28",
+    "paired-timing/result.json": "d4127901dae67807c7695b5d1bf308493a8d4cda359d2f4434bd775d22975f7d",
+    "runtime-verification.json": "b0c9beb66a8afad1728bfe8d0bd10fc8c3cd7fe26572d5ec2ed0a0a54d7ad4eb",
+    "runtime-verification-harness-repair.json": "d5141b9fa43daf90487f14d418386b89f6b2ccb2909da3153668455410600498",
+    "queue-sanitizer-result.json": "f3b42d92c583a49eb7ec11828c68ca1076bec0a6f8e1e3b2e1b375d491869a93",
+    "budget-probe/protocol.json": "f66b8d94d8c95a8b2d323861e5a2c457fe6e172f9be74b9b8afd3b6291d2ce61",
+    "budget-probe/result.json": "25a1a476d0bd55ad77732036fa350cf0c8704bf6a19a7f96f1ddc6cfcead673d",
+    "build/pgo/build-report.json": "fab3c45ac6d965d50e0fe7e90418044cadfe1d7764e1c46611b3d3276578cab9"
+  }
+}

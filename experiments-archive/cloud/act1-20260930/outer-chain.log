@@ -1,0 +1,361 @@
+{
+  "elite_low_hp": {
+    "description": "Act1: chosen elite, HP <=40%, no potions; choose visible REST>EVENT>MONSTER>SHOP alternative (legal order ties).",
+    "triggers": 25,
+    "rate": 0.0125,
+    "strata": {
+      "a1_nonboss": {
+        "N": 20,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 3,
+        "n": 3
+      },
+      "heart_win": {
+        "N": 2,
+        "n": 2
+      }
+    }
+  },
+  "flame_weak": {
+    "description": "Act1: chosen burning elite, 40%<HP<80%, no potions, <=1 nonstarter direct attack; choose non-elite REST>EVENT>MONSTER>SHOP.",
+    "triggers": 48,
+    "rate": 0.024,
+    "strata": {
+      "a1_nonboss": {
+        "N": 11,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 21,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 16,
+        "n": 8
+      }
+    }
+  },
+  "rest_before_forced_elite": {
+    "description": "Act1 pre-boss campfire: chosen smith, HP<=75%, every immediate map child is elite; REST if legal, no healing-block relic.",
+    "triggers": 107,
+    "rate": 0.0535,
+    "strata": {
+      "a1_nonboss": {
+        "N": 10,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 37,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 60,
+        "n": 8
+      }
+    }
+  },
+  "adventurer_low_hp": {
+    "description": "Act1 Dead Adventurer: chosen continue at <=50%HP and >25% (existing fix2 covers lower); leave.",
+    "triggers": 38,
+    "rate": 0.019,
+    "strata": {
+      "a1_nonboss": {
+        "N": 13,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 8,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 17,
+        "n": 8
+      }
+    }
+  },
+  "wing_preserve_hp": {
+    "description": "Act1 Golden Wing: chosen pay7HP/remove, no removable curse; take gold if legal else leave.",
+    "triggers": 247,
+    "rate": 0.1235,
+    "strata": {
+      "a1_nonboss": {
+        "N": 25,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 93,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 129,
+        "n": 8
+      }
+    }
+  },
+  "wall_transform": {
+    "description": "Act1 Living Wall: chosen remove, <=1 nonstarter direct attack, no removable curse; transform.",
+    "triggers": 115,
+    "rate": 0.0575,
+    "strata": {
+      "a1_nonboss": {
+        "N": 15,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 36,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 64,
+        "n": 8
+      }
+    }
+  },
+  "early_attack": {
+    "description": "Act1 floor<=5, <=1 nonstarter direct attack: chosen nonattack and not protected core; take one offered attack by frozen priority (no Immolate).",
+    "triggers": 792,
+    "rate": 0.396,
+    "strata": {
+      "a1_nonboss": {
+        "N": 89,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 321,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 382,
+        "n": 8
+      }
+    }
+  },
+  "shop_prepare_elite": {
+    "description": "Act1 shop: policy leaves with empty potions and all immediate children elite; buy one affordable whitelisted potion (fixed priority), then leave.",
+    "triggers": 6,
+    "rate": 0.003,
+    "strata": {
+      "a1_nonboss": {
+        "N": 1,
+        "n": 1
+      },
+      "other_loss": {
+        "N": 3,
+        "n": 3
+      },
+      "heart_win": {
+        "N": 2,
+        "n": 2
+      }
+    }
+  },
+  "neow_common_relic": {
+    "description": "Neow: chosen free remove or upgrade, free common relic is offered; choose common relic.",
+    "triggers": 125,
+    "rate": 0.0625,
+    "strata": {
+      "a1_nonboss": {
+        "N": 17,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 44,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 64,
+        "n": 8
+      }
+    }
+  }
+}
+jobs 187
+{"job": {"id": "elite_low_hp-3900012657-35", "seed": 3900012657, "index": 35, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 5, "after_bits": 3, "after_plan": [3], "floor": 7, "hp": 9, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900013295-50", "seed": 3900013295, "index": 50, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 6, "after_bits": 5, "after_plan": [5], "floor": 9, "hp": 31, "max_hp": 82}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012844-63", "seed": 3900012844, "index": 63, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 3, "after_bits": 4, "after_plan": [4], "floor": 13, "hp": 10, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012178-50", "seed": 3900012178, "index": 50, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 2, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 30, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900013968-48", "seed": 3900013968, "index": 48, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 5, "after_bits": 3, "after_plan": [3], "floor": 10, "hp": 26, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900013648-42", "seed": 3900013648, "index": 42, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 3, "after_bits": 4, "after_plan": [4], "floor": 7, "hp": 29, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012507-46", "seed": 3900012507, "index": 46, "rule": "elite_low_hp", "stratum": "other_loss", "before_bits": 3, "after_bits": 5, "after_plan": [5], "floor": 9, "hp": 30, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012990-46", "seed": 3900012990, "index": 46, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 5, "after_bits": 6, "after_plan": [6], "floor": 10, "hp": 32, "max_hp": 82}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900013241-46", "seed": 3900013241, "index": 46, "rule": "elite_low_hp", "stratum": "other_loss", "before_bits": 3, "after_bits": 5, "after_plan": [5], "floor": 9, "hp": 32, "max_hp": 82}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012841-51", "seed": 3900012841, "index": 51, "rule": "elite_low_hp", "stratum": "heart_win", "before_bits": 5, "after_bits": 6, "after_plan": [6], "floor": 9, "hp": 18, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": true}
+{"job": {"id": "elite_low_hp-3900013957-33", "seed": 3900013957, "index": 33, "rule": "elite_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 29, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012775-22", "seed": 3900012775, "index": 22, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 6, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 56, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012179-41", "seed": 3900012179, "index": 41, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 2, "after_bits": 0, "after_plan": [0], "floor": 9, "hp": 41, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900013887-51", "seed": 3900013887, "index": 51, "rule": "elite_low_hp", "stratum": "heart_win", "before_bits": 4, "after_bits": 5, "after_plan": [5], "floor": 10, "hp": 6, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013389-30", "seed": 3900013389, "index": 30, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 3, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 48, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012743-23", "seed": 3900012743, "index": 23, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 5, "hp": 47, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "elite_low_hp-3900012023-50", "seed": 3900012023, "index": 50, "rule": "elite_low_hp", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 2, "after_plan": [2], "floor": 11, "hp": 17, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013625-24", "seed": 3900013625, "index": 24, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 5, "after_bits": 4, "after_plan": [4], "floor": 6, "hp": 57, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013947-24", "seed": 3900013947, "index": 24, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 1, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 45, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012897-60", "seed": 3900012897, "index": 60, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 11, "hp": 51, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013809-31", "seed": 3900013809, "index": 31, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 6, "hp": 47, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012050-26", "seed": 3900012050, "index": 26, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 49, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013210-27", "seed": 3900013210, "index": 27, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 5, "after_bits": 3, "after_plan": [3], "floor": 6, "hp": 54, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012475-25", "seed": 3900012475, "index": 25, "rule": "flame_weak", "stratum": "a1_nonboss", "before_bits": 5, "after_bits": 4, "after_plan": [4], "floor": 5, "hp": 52, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013655-48", "seed": 3900013655, "index": 48, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 5, "after_bits": 4, "after_plan": [4], "floor": 10, "hp": 33, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": true}
+{"job": {"id": "flame_weak-3900012738-36", "seed": 3900012738, "index": 36, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 56, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012941-35", "seed": 3900012941, "index": 35, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 3, "after_bits": 4, "after_plan": [4], "floor": 7, "hp": 53, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013063-51", "seed": 3900013063, "index": 51, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 5, "after_bits": 6, "after_plan": [6], "floor": 12, "hp": 46, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013910-45", "seed": 3900013910, "index": 45, "rule": "flame_weak", "stratum": "other_loss", "before_bits": 3, "after_bits": 2, "after_plan": [2], "floor": 10, "hp": 54, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012626-57", "seed": 3900012626, "index": 57, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 2, "after_bits": 3, "after_plan": [3], "floor": 11, "hp": 55, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013297-47", "seed": 3900013297, "index": 47, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 2, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 45, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012329-32", "seed": 3900012329, "index": 32, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 1, "after_bits": 2, "after_plan": [2], "floor": 6, "hp": 53, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013532-45", "seed": 3900013532, "index": 45, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 9, "hp": 61, "max_hp": 82}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013421-33", "seed": 3900013421, "index": 33, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 5, "after_bits": 4, "after_plan": [4], "floor": 7, "hp": 45, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013732-27", "seed": 3900013732, "index": 27, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 3, "after_bits": 1, "after_plan": [1], "floor": 6, "hp": 59, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012861-22", "seed": 3900012861, "index": 22, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013221-33", "seed": 3900013221, "index": 33, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 53, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "flame_weak-3900012840-42", "seed": 3900012840, "index": 42, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 4, "after_bits": 3, "after_plan": [3], "floor": 10, "hp": 47, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013320-36", "seed": 3900013320, "index": 36, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 45, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012899-28", "seed": 3900012899, "index": 28, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 55, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013606-27", "seed": 3900013606, "index": 27, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 50, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "flame_weak-3900013501-44", "seed": 3900013501, "index": 44, "rule": "flame_weak", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 9, "hp": 51, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013143-29", "seed": 3900013143, "index": 29, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 48, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013403-35", "seed": 3900013403, "index": 35, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 44, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013044-53", "seed": 3900013044, "index": 53, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 11, "hp": 42, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012848-53", "seed": 3900012848, "index": 53, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 11, "hp": 44, "max_hp": 78}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012456-32", "seed": 3900012456, "index": 32, "rule": "rest_before_forced_elite", "stratum": "a1_nonboss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 56, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013220-35", "seed": 3900013220, "index": 35, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013459-46", "seed": 3900013459, "index": 46, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 10, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013014-44", "seed": 3900013014, "index": 44, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 10, "hp": 54, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012315-26", "seed": 3900012315, "index": 26, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 53, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013704-44", "seed": 3900013704, "index": 44, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 10, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012710-51", "seed": 3900012710, "index": 51, "rule": "rest_before_forced_elite", "stratum": "other_loss", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 12, "hp": 56, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013138-62", "seed": 3900013138, "index": 62, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 13, "hp": 59, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013786-53", "seed": 3900013786, "index": 53, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 12, "hp": 44, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012661-35", "seed": 3900012661, "index": 35, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 56, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013037-46", "seed": 3900013037, "index": 46, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 11, "hp": 44, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013982-31", "seed": 3900013982, "index": 31, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 43, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013198-31", "seed": 3900013198, "index": 31, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 7, "hp": 48, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900012086-24", "seed": 3900012086, "index": 24, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 6, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012924-36", "seed": 3900012924, "index": 36, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 8, "hp": 32, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012570-34", "seed": 3900012570, "index": 34, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 29, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013671-42", "seed": 3900013671, "index": 42, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 34, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "rest_before_forced_elite-3900013230-58", "seed": 3900013230, "index": 58, "rule": "rest_before_forced_elite", "stratum": "heart_win", "before_bits": 1, "after_bits": 0, "after_plan": [0], "floor": 12, "hp": 45, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013279-46", "seed": 3900013279, "index": 46, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 12, "hp": 23, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013882-54", "seed": 3900013882, "index": 54, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 36, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012228-49", "seed": 3900012228, "index": 49, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 28, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012524-66", "seed": 3900012524, "index": 66, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 40, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012766-57", "seed": 3900012766, "index": 57, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 27, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012694-61", "seed": 3900012694, "index": 61, "rule": "adventurer_low_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 13, "hp": 28, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013558-56", "seed": 3900013558, "index": 56, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 13, "hp": 35, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013093-58", "seed": 3900013093, "index": 58, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 12, "hp": 40, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012063-46", "seed": 3900012063, "index": 46, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 30, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013765-57", "seed": 3900013765, "index": 57, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 13, "hp": 24, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012271-36", "seed": 3900012271, "index": 36, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 25, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013650-38", "seed": 3900013650, "index": 38, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 37, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": true}
+{"job": {"id": "adventurer_low_hp-3900013552-59", "seed": 3900013552, "index": 59, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 12, "hp": 29, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013504-47", "seed": 3900013504, "index": 47, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 38, "max_hp": 82}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013292-70", "seed": 3900013292, "index": 70, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 21, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013554-30", "seed": 3900013554, "index": 30, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 8, "hp": 29, "max_hp": 80}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012482-49", "seed": 3900012482, "index": 49, "rule": "adventurer_low_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 31, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012868-53", "seed": 3900012868, "index": 53, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 36, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012831-72", "seed": 3900012831, "index": 72, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 22, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013321-9", "seed": 3900013321, "index": 9, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 59, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900013929-41", "seed": 3900013929, "index": 41, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 8, "hp": 33, "max_hp": 85}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013324-8", "seed": 3900013324, "index": 8, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012503-54", "seed": 3900012503, "index": 54, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 30, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012687-9", "seed": 3900012687, "index": 9, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 65, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012795-8", "seed": 3900012795, "index": 8, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 73, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012714-25", "seed": 3900012714, "index": 25, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 79, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "adventurer_low_hp-3900012377-66", "seed": 3900012377, "index": 66, "rule": "adventurer_low_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 13, "hp": 27, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013511-14", "seed": 3900013511, "index": 14, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 3, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013601-21", "seed": 3900013601, "index": 21, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 67, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013214-8", "seed": 3900013214, "index": 8, "rule": "wing_preserve_hp", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013041-28", "seed": 3900013041, "index": 28, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 38, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": true}
+{"job": {"id": "wing_preserve_hp-3900013319-6", "seed": 3900013319, "index": 6, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 74, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012690-9", "seed": 3900012690, "index": 9, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 61, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012908-24", "seed": 3900012908, "index": 24, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 74, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012393-21", "seed": 3900012393, "index": 21, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 5, "hp": 75, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013709-53", "seed": 3900013709, "index": 53, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 11, "hp": 58, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013686-7", "seed": 3900013686, "index": 7, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 66, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012710-14", "seed": 3900012710, "index": 14, "rule": "wing_preserve_hp", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 64, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013767-36", "seed": 3900013767, "index": 36, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 62, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013023-20", "seed": 3900013023, "index": 20, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 4, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012421-21", "seed": 3900012421, "index": 21, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012220-20", "seed": 3900012220, "index": 20, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 4, "hp": 72, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013924-26", "seed": 3900013924, "index": 26, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 5, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013422-18", "seed": 3900013422, "index": 18, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 71, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013879-19", "seed": 3900013879, "index": 19, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012935-33", "seed": 3900012935, "index": 33, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 49, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012502-33", "seed": 3900012502, "index": 33, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 8, "hp": 41, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012993-48", "seed": 3900012993, "index": 48, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 40, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013541-9", "seed": 3900013541, "index": 9, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 2, "hp": 60, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900012405-65", "seed": 3900012405, "index": 65, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 45, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wing_preserve_hp-3900013755-22", "seed": 3900013755, "index": 22, "rule": "wing_preserve_hp", "stratum": "heart_win", "before_bits": 0, "after_bits": 2, "after_plan": [2], "floor": 5, "hp": 52, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013817-21", "seed": 3900013817, "index": 21, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 5, "hp": 57, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012694-8", "seed": 3900012694, "index": 8, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 62, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012336-43", "seed": 3900012336, "index": 43, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 10, "hp": 62, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": true}
+{"job": {"id": "wall_transform-3900013474-8", "seed": 3900013474, "index": 8, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012477-35", "seed": 3900012477, "index": 35, "rule": "wall_transform", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 36, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012153-52", "seed": 3900012153, "index": 52, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 11, "hp": 21, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012631-8", "seed": 3900012631, "index": 8, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 64, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012557-65", "seed": 3900012557, "index": 65, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 14, "hp": 40, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012182-19", "seed": 3900012182, "index": 19, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012275-11", "seed": 3900012275, "index": 11, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 3, "hp": 51, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012948-63", "seed": 3900012948, "index": 63, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 13, "hp": 46, "max_hp": 80}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013498-39", "seed": 3900013498, "index": 39, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 7, "hp": 60, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013710-19", "seed": 3900013710, "index": 19, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 72, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012238-14", "seed": 3900012238, "index": 14, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 3, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013522-15", "seed": 3900013522, "index": 15, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 4, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900012309-45", "seed": 3900012309, "index": 45, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 8, "hp": 19, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013495-23", "seed": 3900013495, "index": 23, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 256, "after_bits": 0, "after_plan": [0], "floor": 5, "hp": 47, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012603-6", "seed": 3900012603, "index": 6, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 805306368, "after_bits": 0, "after_plan": [0], "floor": 1, "hp": 67, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "early_attack-3900012989-16", "seed": 3900012989, "index": 16, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 256, "after_plan": [256], "floor": 4, "hp": 64, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012794-8", "seed": 3900012794, "index": 8, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 256, "after_bits": 0, "after_plan": [0], "floor": 2, "hp": 64, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013760-19", "seed": 3900013760, "index": 19, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 256, "after_bits": 512, "after_plan": [512], "floor": 4, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013509-12", "seed": 3900013509, "index": 12, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 256, "after_bits": 512, "after_plan": [512], "floor": 2, "hp": 65, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "early_attack-3900013791-19", "seed": 3900013791, "index": 19, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 805306368, "after_bits": 256, "after_plan": [256], "floor": 4, "hp": 64, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "early_attack-3900013042-5", "seed": 3900013042, "index": 5, "rule": "early_attack", "stratum": "a1_nonboss", "before_bits": 256, "after_bits": 0, "after_plan": [0], "floor": 1, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013980-10", "seed": 3900013980, "index": 10, "rule": "wall_transform", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 3, "hp": 60, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012256-23", "seed": 3900012256, "index": 23, "rule": "early_attack", "stratum": "other_loss", "before_bits": 0, "after_bits": 512, "after_plan": [512], "floor": 5, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012577-18", "seed": 3900012577, "index": 18, "rule": "early_attack", "stratum": "other_loss", "before_bits": 512, "after_bits": 0, "after_plan": [0], "floor": 4, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012304-21", "seed": 3900012304, "index": 21, "rule": "early_attack", "stratum": "other_loss", "before_bits": 805306368, "after_bits": 512, "after_plan": [512], "floor": 4, "hp": 73, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "wall_transform-3900013200-8", "seed": 3900013200, "index": 8, "rule": "wall_transform", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 2, "hp": 67, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013737-5", "seed": 3900013737, "index": 5, "rule": "early_attack", "stratum": "other_loss", "before_bits": 0, "after_bits": 256, "after_plan": [256], "floor": 1, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013821-5", "seed": 3900013821, "index": 5, "rule": "early_attack", "stratum": "other_loss", "before_bits": 0, "after_bits": 256, "after_plan": [256], "floor": 1, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012187-1", "seed": 3900012187, "index": 1, "rule": "early_attack", "stratum": "other_loss", "before_bits": 0, "after_bits": 512, "after_plan": [512], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012583-5", "seed": 3900012583, "index": 5, "rule": "early_attack", "stratum": "heart_win", "before_bits": 256, "after_bits": 0, "after_plan": [0], "floor": 1, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012473-4", "seed": 3900012473, "index": 4, "rule": "early_attack", "stratum": "other_loss", "before_bits": 512, "after_bits": 0, "after_plan": [0], "floor": 1, "hp": 67, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012808-4", "seed": 3900012808, "index": 4, "rule": "early_attack", "stratum": "heart_win", "before_bits": 512, "after_bits": 256, "after_plan": [256], "floor": 1, "hp": 74, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013286-17", "seed": 3900013286, "index": 17, "rule": "early_attack", "stratum": "other_loss", "before_bits": 256, "after_bits": 512, "after_plan": [512], "floor": 3, "hp": 75, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013127-22", "seed": 3900013127, "index": 22, "rule": "early_attack", "stratum": "heart_win", "before_bits": 0, "after_bits": 512, "after_plan": [512], "floor": 4, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013537-10", "seed": 3900013537, "index": 10, "rule": "early_attack", "stratum": "heart_win", "before_bits": 256, "after_bits": 0, "after_plan": [0], "floor": 2, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013001-7", "seed": 3900013001, "index": 7, "rule": "early_attack", "stratum": "heart_win", "before_bits": 805306368, "after_bits": 0, "after_plan": [0], "floor": 1, "hp": 67, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900012697-23", "seed": 3900012697, "index": 23, "rule": "shop_prepare_elite", "stratum": "a1_nonboss", "before_bits": 805306368, "after_bits": 402653186, "after_plan": [402653186, 805306368], "floor": 5, "hp": 71, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900013902-57", "seed": 3900013902, "index": 57, "rule": "shop_prepare_elite", "stratum": "other_loss", "before_bits": 805306368, "after_bits": 402653185, "after_plan": [402653185, 805306368], "floor": 12, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900012285-13", "seed": 3900012285, "index": 13, "rule": "early_attack", "stratum": "heart_win", "before_bits": 0, "after_bits": 256, "after_plan": [256], "floor": 3, "hp": 70, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900013668-28", "seed": 3900013668, "index": 28, "rule": "shop_prepare_elite", "stratum": "other_loss", "before_bits": 805306368, "after_bits": 402653186, "after_plan": [402653186, 805306368], "floor": 7, "hp": 75, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013282-16", "seed": 3900013282, "index": 16, "rule": "early_attack", "stratum": "heart_win", "before_bits": 0, "after_bits": 256, "after_plan": [256], "floor": 4, "hp": 58, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "early_attack-3900013207-5", "seed": 3900013207, "index": 5, "rule": "early_attack", "stratum": "heart_win", "before_bits": 0, "after_bits": 512, "after_plan": [512], "floor": 1, "hp": 67, "max_hp": 75}, "error": null, "rescued": false, "lost": true, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013960-0", "seed": 3900013960, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900012369-24", "seed": 3900012369, "index": 24, "rule": "shop_prepare_elite", "stratum": "other_loss", "before_bits": 805306368, "after_bits": 402653185, "after_plan": [402653185, 805306368], "floor": 5, "hp": 75, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012976-0", "seed": 3900012976, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012848-0", "seed": 3900012848, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900012753-64", "seed": 3900012753, "index": 64, "rule": "shop_prepare_elite", "stratum": "heart_win", "before_bits": 805306368, "after_bits": 402653185, "after_plan": [402653185, 805306368], "floor": 12, "hp": 69, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013734-0", "seed": 3900013734, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012502-0", "seed": 3900012502, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013594-0", "seed": 3900013594, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012040-0", "seed": 3900012040, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012127-0", "seed": 3900012127, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "shop_prepare_elite-3900012612-50", "seed": 3900012612, "index": 50, "rule": "shop_prepare_elite", "stratum": "heart_win", "before_bits": 805306368, "after_bits": 402653184, "after_plan": [402653184, 805306368], "floor": 10, "hp": 67, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013220-0", "seed": 3900013220, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013337-0", "seed": 3900013337, "index": 0, "rule": "neow_common_relic", "stratum": "a1_nonboss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": true, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012847-0", "seed": 3900012847, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012345-0", "seed": 3900012345, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012597-0", "seed": 3900012597, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013277-0", "seed": 3900013277, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013504-0", "seed": 3900013504, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": true, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013414-0", "seed": 3900013414, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013621-0", "seed": 3900013621, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013764-0", "seed": 3900013764, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012268-0", "seed": 3900012268, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013985-0", "seed": 3900013985, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012548-0", "seed": 3900012548, "index": 0, "rule": "neow_common_relic", "stratum": "other_loss", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012095-0", "seed": 3900012095, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900012673-0", "seed": 3900012673, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}
+{"job": {"id": "neow_common_relic-3900013646-0", "seed": 3900013646, "index": 0, "rule": "neow_common_relic", "stratum": "heart_win", "before_bits": 0, "after_bits": 1, "after_plan": [1], "floor": 0, "hp": 68, "max_hp": 75}, "error": null, "rescued": false, "lost": false, "act1_rescued": false, "act1_lost": false}

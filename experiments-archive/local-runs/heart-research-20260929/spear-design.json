@@ -1,0 +1,20 @@
+{
+  "hypothesis": "Spear search has80k effective nodes versus960k Heart first round. Increasing Spear budget may improve Heart entryHP, unlike spending additional Heart search on a damaged root.",
+  "predeclared_before_any_spear_search": true,
+  "variants": {
+    "base": "Spear80k,Heart80k,boss_multiplier12",
+    "candidate": "Spear160k,Heart80k,boss_multiplier12"
+  },
+  "population": {
+    "heart_win": 482,
+    "heart_loss": 147,
+    "spear_loss": 22
+  },
+  "sampling": "Within stratum sortSHA256(decimal seed),first8development,next16holdout;only22Spear losses exist,allincluded",
+  "N": 70,
+  "development_N": 24,
+  "holdout_N": 46,
+  "terminal": "Play fixed policy from Spear entry toHeart terminal or earlierdeath;nohealingoracle,notbestofa set",
+  "acceptance": "Report development and heldout separately;sameplatform paired effects weightedbystratumfrequency;do notadd toHeart40/rest90 estimates",
+  "implementation_gate": "Additional opt-in production flag only if weighted terminal gain is positive in both development and heldout;otherwise retain evidence and no stable gain claim. No threshold/parameter tuning after outcomes."
+}

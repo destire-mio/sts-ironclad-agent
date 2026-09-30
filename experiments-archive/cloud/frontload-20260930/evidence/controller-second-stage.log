@@ -1,0 +1,6 @@
+{"event": "controller_continuation", "completed": 100, "pool_workers": 24}
+{"event": "batch_start", "offset": 100, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "batch_complete", "completed": 200}
+{"event": "batch_start", "offset": 200, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "batch_complete", "completed": 300}
+{"event": "batch_start", "offset": 300, "seeds": 100, "capacity": 24, "pool_workers": 24}

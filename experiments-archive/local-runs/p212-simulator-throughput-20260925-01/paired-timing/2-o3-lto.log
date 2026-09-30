@@ -1,0 +1,6 @@
+{"suite": "validation", "iteration": 0, "roots_or_games": 8, "cpu_seconds": 0.713079}
+{"suite": "validation", "iteration": 0, "roots_or_games": 16, "cpu_seconds": 2.713412}
+{"suite": "validation", "iteration": 0, "roots_or_games": 24, "cpu_seconds": 5.051263}
+{"suite": "validation", "iteration": 0, "roots_or_games": 32, "cpu_seconds": 5.906776}
+{"suite": "validation", "iteration": 0, "roots_or_games": 40, "cpu_seconds": 6.544078}
+{"suite": "validation", "iteration": 0, "roots_or_games": 48, "cpu_seconds": 12.125354}

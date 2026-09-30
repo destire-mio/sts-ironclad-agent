@@ -1,0 +1,20 @@
+{
+  "variants": [
+    "baseline",
+    "o3-lto",
+    "o3-lto-queue",
+    "pgo",
+    "pgo-queue"
+  ],
+  "rounds": 5,
+  "workload_sha256": "b7f5ad5967f7ff2c59cc7ac86623cb93380abe0ef4d498a8f4b4159ed3f9216d",
+  "runner_sha256": "d6150fbeb1a35680e63289a9dfc1358e1171dce8f31fbb723e2827d33f03f247",
+  "engines": {
+    "baseline": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "o3-lto": "d47d944094eb9354493b7e0a9c99354ddd06fbd720e0ae13d3ec250f0e15a0da",
+    "o3-lto-queue": "94089856af4c253cf3354ec13d7a8af5b98b657d0fc3fb0ea888c29efb91ab72",
+    "pgo": "be7a690df72989c7f45d75c0912e395da9b217ec1cbbc68f271f51cf40dfb9f1",
+    "pgo-queue": "87d521f51a24b43802abe57052e6efd3c3154998f8d383f2827734233dd4b064"
+  },
+  "order": "Each round rotates which variant runs first; no simultaneous timing jobs"
+}

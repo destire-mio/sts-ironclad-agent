@@ -1,0 +1,113 @@
+{
+  "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+  "baseline_sha256": "dacbee98c67c4d85ebda34cec5ec5164604b14ba667f89ca7512d1cad079b941",
+  "seed_range": [
+    3900002000,
+    3900002299
+  ],
+  "games": 300,
+  "cloud_max_game_processes": 4,
+  "smoke_seeds": [
+    3900002014,
+    3900002018,
+    3900002021,
+    3900002030
+  ],
+  "status": "candidate_smoke_passed_gain_unvalidated",
+  "smoke_results": [
+    {
+      "seed": 3900002014,
+      "coverage_target": "late_metallicize",
+      "status": "death",
+      "error": null,
+      "rule_hits": [
+        {
+          "rule": "late_metallicize",
+          "act": 3,
+          "floor": 45,
+          "before": 2,
+          "after": 3
+        }
+      ],
+      "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+      "enabled_rules": [
+        "late_metallicize",
+        "redundant_armaments",
+        "supported_rage",
+        "third_shrug"
+      ]
+    },
+    {
+      "seed": 3900002018,
+      "coverage_target": "redundant_armaments",
+      "status": "heart_win",
+      "error": null,
+      "rule_hits": [
+        {
+          "rule": "redundant_armaments",
+          "act": 3,
+          "floor": 38,
+          "before": 2,
+          "after": 3
+        }
+      ],
+      "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+      "enabled_rules": [
+        "late_metallicize",
+        "redundant_armaments",
+        "supported_rage",
+        "third_shrug"
+      ]
+    },
+    {
+      "seed": 3900002021,
+      "coverage_target": "third_shrug",
+      "status": "death",
+      "error": null,
+      "rule_hits": [
+        {
+          "rule": "third_shrug",
+          "act": 4,
+          "floor": 55,
+          "before": 1,
+          "after": 3
+        }
+      ],
+      "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+      "enabled_rules": [
+        "late_metallicize",
+        "redundant_armaments",
+        "supported_rage",
+        "third_shrug"
+      ]
+    },
+    {
+      "seed": 3900002030,
+      "coverage_target": "supported_rage",
+      "status": "heart_win",
+      "error": null,
+      "rule_hits": [
+        {
+          "rule": "supported_rage",
+          "act": 3,
+          "floor": 48,
+          "before": 3,
+          "after": 1
+        }
+      ],
+      "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+      "enabled_rules": [
+        "late_metallicize",
+        "redundant_armaments",
+        "supported_rage",
+        "third_shrug"
+      ]
+    }
+  ],
+  "local_behavior_checks": {
+    "test_methods": 9,
+    "status": "passed",
+    "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+    "test_file": "test_rules.py"
+  }
+}

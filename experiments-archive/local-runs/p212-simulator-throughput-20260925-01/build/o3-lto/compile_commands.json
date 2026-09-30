@@ -1,0 +1,200 @@
+[
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Actions.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Actions.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Actions.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Actions.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/BattleContext.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/BattleContext.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/BattleContext.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/BattleContext.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardInstance.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardInstance.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardInstance.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardInstance.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardManager.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardManager.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardManager.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardManager.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardQueue.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardQueue.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardQueue.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/CardQueue.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Monster.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Monster.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Monster.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Monster.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterGroup.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterGroup.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterGroup.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterGroup.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterMoveDamage.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterMoveDamage.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterMoveDamage.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterMoveDamage.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterSpecific.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterSpecific.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterSpecific.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/MonsterSpecific.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Player.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Player.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Player.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/combat/Player.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Card.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Card.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Card.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Card.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/CombatReward.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/CombatReward.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/CombatReward.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/CombatReward.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Deck.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Deck.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Deck.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Deck.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Game.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Game.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Game.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Game.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/GameContext.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/GameContext.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/GameContext.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/GameContext.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Map.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Map.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Map.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Map.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Neow.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Neow.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Neow.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Neow.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/SaveFile.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/SaveFile.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/SaveFile.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/SaveFile.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Shop.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Shop.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Shop.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/game/Shop.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/BattleSimulator.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/BattleSimulator.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/BattleSimulator.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/BattleSimulator.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/ConsoleSimulator.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/ConsoleSimulator.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/ConsoleSimulator.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/ConsoleSimulator.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/PrintHelpers.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/PrintHelpers.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/PrintHelpers.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/PrintHelpers.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/SimHelpers.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/SimHelpers.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/SimHelpers.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/SimHelpers.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/Action.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/Action.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/Action.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/Action.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/BattleScumSearcher2.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/BattleScumSearcher2.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/BattleScumSearcher2.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/BattleScumSearcher2.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ExpertKnowledge.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ExpertKnowledge.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ExpertKnowledge.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ExpertKnowledge.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/GameAction.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/GameAction.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/GameAction.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/GameAction.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ScumSearchAgent2.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ScumSearchAgent2.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ScumSearchAgent2.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/ScumSearchAgent2.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIC -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/SimpleAgent.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/SimpleAgent.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/SimpleAgent.cpp",
+  "output": "CMakeFiles/sts_core.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/src/sim/search/SimpleAgent.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++ -Dslaythespire_EXPORTS -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -isystem /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12 -isystem ~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include -std=gnu++17 -flto=thin -arch arm64 -fPIC -fvisibility=hidden -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/slaythespire.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/slaythespire.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/slaythespire.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/slaythespire.cpp",
+  "output": "CMakeFiles/slaythespire.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/slaythespire.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++ -Dslaythespire_EXPORTS -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -isystem /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12 -isystem ~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/include -std=gnu++17 -flto=thin -arch arm64 -fPIC -fvisibility=hidden -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/slaythespire.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/bindings-util.cpp.o -c <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/bindings-util.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/bindings-util.cpp",
+  "output": "CMakeFiles/slaythespire.dir<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings/bindings-util.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/bindings -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json -std=gnu++17 -flto=thin -arch arm64 -fPIE -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/combat_rules.dir<repo-parent>/sts-rl-agent-principles/sim_patch/tests/combat_rules.cpp.o -c <repo-parent>/sts-rl-agent-principles/sim_patch/tests/combat_rules.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/sim_patch/tests/combat_rules.cpp",
+  "output": "CMakeFiles/combat_rules.dir<repo-parent>/sts-rl-agent-principles/sim_patch/tests/combat_rules.cpp.o"
+},
+{
+  "directory": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "command": "/usr/bin/c++  -I<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source/include -std=gnu++17 -flto=thin -arch arm64 -fPIE -O3 -UNDEBUG -mcpu=apple-m4 -o CMakeFiles/action_queue.dir<repo-parent>/sts-rl-agent-principles/sim_patch/tests/action_queue.cpp.o -c <repo-parent>/sts-rl-agent-principles/sim_patch/tests/action_queue.cpp",
+  "file": "<repo-parent>/sts-rl-agent-principles/sim_patch/tests/action_queue.cpp",
+  "output": "CMakeFiles/action_queue.dir<repo-parent>/sts-rl-agent-principles/sim_patch/tests/action_queue.cpp.o"
+}
+]

@@ -1,0 +1,3042 @@
+[
+  {
+    "seed": 3900012719,
+    "variant": "candidate",
+    "win": true,
+    "root": "b71e1059b3b3f72535589d71b7053b6dbbb70e62cc204ac64c3486e2465b3221",
+    "rng": {
+      "eventRng": {
+        "seed0": 5952323133831410122,
+        "seed1": 13153527803295142008,
+        "counter": 7
+      },
+      "treasureRng": {
+        "seed0": 13787315366724161511,
+        "seed1": 3640529966400131791,
+        "counter": 31
+      },
+      "relicRng": {
+        "seed0": 974056293339409484,
+        "seed1": 18234262869339761272,
+        "counter": 13
+      },
+      "potionRng": {
+        "seed0": 14597358460497036747,
+        "seed1": 4878048057464240614,
+        "counter": 184
+      },
+      "cardRng": {
+        "seed0": 4272566466205260472,
+        "seed1": 4668552378640824538,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 12734172664065515159,
+        "seed1": 4786415646524317218,
+        "counter": 89
+      },
+      "monsterRng": {
+        "seed0": 18217395024333437925,
+        "seed1": 4076532435576231766,
+        "counter": 111
+      },
+      "miscRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 12064629233678940535,
+        "seed1": 18027734504286445390,
+        "counter": 7
+      },
+      "mathUtilRng": {
+        "seed0": 3646296351588143522,
+        "seed1": 8383119552547015035,
+        "counter": 6
+      },
+      "monsterHpRng": {
+        "seed0": 5979208740675136994,
+        "seed1": 16753936078048428148,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 17865469831257224168,
+        "seed1": 5952323133831410122,
+        "counter": 6
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 126,
+      "max_hp": 126,
+      "encounter": "THE_HEART",
+      "deck": 26,
+      "relics": 15,
+      "potions": 1,
+      "gold": 47,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FIRE_BREATHING",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "EVOLVE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SWORD_BOOMERANG",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "APOTHEOSIS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 1,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "HAPPY_FLOWER",
+        "THE_COURIER",
+        "MEAL_TICKET",
+        "PANDORAS_BOX",
+        "DOLLYS_MIRROR",
+        "THE_BOOT",
+        "POTION_BELT",
+        "TINY_CHEST",
+        "RUNIC_DOME",
+        "MATRYOSHKA",
+        "SMILING_MASK",
+        "LETTER_OPENER",
+        "SINGING_BOWL",
+        "PEAR"
+      ],
+      "potion_names": [
+        "FLEX_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 126,
+      "block": 0,
+      "energy": 4,
+      "strength": 0,
+      "hand": [
+        "SPOT_WEAKNESS+",
+        "CLOTHESLINE",
+        "ARMAMENTS+",
+        "FEED",
+        "ASCENDERS_BANE"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": true,
+          "uid": 12,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": false,
+          "uid": 22,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": true,
+          "uid": 16,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEED",
+          "up": false,
+          "uid": 7,
+          "cost": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ASCENDERS_BANE",
+          "up": false,
+          "uid": 0,
+          "cost": -2,
+          "type": "CURSE"
+        }
+      ],
+      "hand_types": [
+        "SKILL",
+        "ATTACK",
+        "SKILL",
+        "ATTACK",
+        "CURSE"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "FLEX_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012719-candidate.json.gz"
+  },
+  {
+    "seed": 3900012494,
+    "variant": "candidate",
+    "win": true,
+    "root": "36ace3501bd4f0758d9c0d70c65f994ac73d79020730254b4778bd248c25ef75",
+    "rng": {
+      "eventRng": {
+        "seed0": 15936559361895249664,
+        "seed1": 377849429728182840,
+        "counter": 9
+      },
+      "treasureRng": {
+        "seed0": 13003707370027092420,
+        "seed1": 15306571814116844261,
+        "counter": 31
+      },
+      "relicRng": {
+        "seed0": 11475300892974786846,
+        "seed1": 393575927292534444,
+        "counter": 13
+      },
+      "potionRng": {
+        "seed0": 8981770530852396375,
+        "seed1": 1514615616946600192,
+        "counter": 143
+      },
+      "cardRng": {
+        "seed0": 7455825361877996736,
+        "seed1": 547810336623156205,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 16667118658145274068,
+        "seed1": 15928444490166312907,
+        "counter": 80
+      },
+      "monsterRng": {
+        "seed0": 5481535615017000297,
+        "seed1": 1120054900974168740,
+        "counter": 104
+      },
+      "miscRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 3072110405815521008,
+        "seed1": 5358688756797604095,
+        "counter": 5
+      },
+      "mathUtilRng": {
+        "seed0": 4595265891101405227,
+        "seed1": 10010037631645744023,
+        "counter": 2
+      },
+      "monsterHpRng": {
+        "seed0": 7017292619024261002,
+        "seed1": 13958835450907380697,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 18372937401783507867,
+        "seed1": 18244478799664590627,
+        "counter": 11
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 85,
+      "max_hp": 85,
+      "encounter": "THE_HEART",
+      "deck": 32,
+      "relics": 19,
+      "potions": 1,
+      "gold": 49,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFERNAL_BLADE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "TWIN_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "OFFERING",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFLAME",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CARNAGE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEAVY_BLADE",
+          "up": 0,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "GREMLIN_HORN",
+        "LANTERN",
+        "OLD_COIN",
+        "FUSION_HAMMER",
+        "KUNAI",
+        "MEMBERSHIP_CARD",
+        "MEAL_TICKET",
+        "PANTOGRAPH",
+        "HAPPY_FLOWER",
+        "SNECKO_EYE",
+        "RED_MASK",
+        "ORICHALCUM",
+        "PRESERVED_INSECT",
+        "ICE_CREAM",
+        "POTION_BELT",
+        "BAG_OF_PREPARATION",
+        "NUNCHAKU",
+        "PEN_NIB"
+      ],
+      "potion_names": [
+        "BLOOD_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 85,
+      "block": 0,
+      "energy": 6,
+      "strength": 0,
+      "hand": [
+        "HEAVY_BLADE",
+        "STRIKE_RED",
+        "HAVOC+",
+        "POMMEL_STRIKE",
+        "ANGER",
+        "FIEND_FIRE",
+        "POWER_THROUGH",
+        "DEFEND_RED",
+        "ARMAMENTS+"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "HEAVY_BLADE",
+          "up": false,
+          "uid": 31,
+          "cost": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": false,
+          "uid": 2,
+          "cost": 3,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": true,
+          "uid": 28,
+          "cost": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": false,
+          "uid": 23,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": false,
+          "uid": 29,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": false,
+          "uid": 26,
+          "cost": 3,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": false,
+          "uid": 22,
+          "cost": 2,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 7,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": true,
+          "uid": 20,
+          "cost": 0,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "ATTACK",
+        "ATTACK",
+        "SKILL",
+        "ATTACK",
+        "ATTACK",
+        "ATTACK",
+        "SKILL",
+        "SKILL",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "BLOOD_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012494-candidate.json.gz"
+  },
+  {
+    "seed": 3900012719,
+    "variant": "base",
+    "win": false,
+    "root": "c2131e97dc91ad139570c41b056555e9a48b04df7e9a44e9df08ae60d2fbea54",
+    "rng": {
+      "eventRng": {
+        "seed0": 5952323133831410122,
+        "seed1": 13153527803295142008,
+        "counter": 7
+      },
+      "treasureRng": {
+        "seed0": 13787315366724161511,
+        "seed1": 3640529966400131791,
+        "counter": 31
+      },
+      "relicRng": {
+        "seed0": 974056293339409484,
+        "seed1": 18234262869339761272,
+        "counter": 13
+      },
+      "potionRng": {
+        "seed0": 14597358460497036747,
+        "seed1": 4878048057464240614,
+        "counter": 184
+      },
+      "cardRng": {
+        "seed0": 4272566466205260472,
+        "seed1": 4668552378640824538,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 12734172664065515159,
+        "seed1": 4786415646524317218,
+        "counter": 89
+      },
+      "monsterRng": {
+        "seed0": 18217395024333437925,
+        "seed1": 4076532435576231766,
+        "counter": 111
+      },
+      "miscRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 212394769949762511,
+        "seed1": 12754077117560352605,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 8338156700741324021,
+        "seed1": 844651049364075871,
+        "counter": 9
+      },
+      "mathUtilRng": {
+        "seed0": 3646296351588143522,
+        "seed1": 8383119552547015035,
+        "counter": 6
+      },
+      "monsterHpRng": {
+        "seed0": 5979208740675136994,
+        "seed1": 16753936078048428148,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 17865469831257224168,
+        "seed1": 5952323133831410122,
+        "counter": 6
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 126,
+      "max_hp": 126,
+      "encounter": "THE_HEART",
+      "deck": 26,
+      "relics": 15,
+      "potions": 1,
+      "gold": 47,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FIRE_BREATHING",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "EVOLVE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SWORD_BOOMERANG",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "APOTHEOSIS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 1,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "HAPPY_FLOWER",
+        "THE_COURIER",
+        "MEAL_TICKET",
+        "PANDORAS_BOX",
+        "DOLLYS_MIRROR",
+        "THE_BOOT",
+        "POTION_BELT",
+        "TINY_CHEST",
+        "RUNIC_DOME",
+        "MATRYOSHKA",
+        "SMILING_MASK",
+        "LETTER_OPENER",
+        "SINGING_BOWL",
+        "PEAR"
+      ],
+      "potion_names": [
+        "FLEX_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 126,
+      "block": 0,
+      "energy": 4,
+      "strength": 0,
+      "hand": [
+        "SPOT_WEAKNESS+",
+        "CLOTHESLINE",
+        "ARMAMENTS+",
+        "FEED",
+        "ASCENDERS_BANE"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": true,
+          "uid": 12,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": false,
+          "uid": 22,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": true,
+          "uid": 16,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEED",
+          "up": false,
+          "uid": 7,
+          "cost": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ASCENDERS_BANE",
+          "up": false,
+          "uid": 0,
+          "cost": -2,
+          "type": "CURSE"
+        }
+      ],
+      "hand_types": [
+        "SKILL",
+        "ATTACK",
+        "SKILL",
+        "ATTACK",
+        "CURSE"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "FLEX_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012719-base.json.gz"
+  },
+  {
+    "seed": 3900012688,
+    "variant": "base",
+    "win": true,
+    "root": "ee890ee665d0127fb5b2209a838f578cc2180296932bc17bdc3ec09cda43ec3f",
+    "rng": {
+      "eventRng": {
+        "seed0": 16949095493502068718,
+        "seed1": 13361015187610716643,
+        "counter": 8
+      },
+      "treasureRng": {
+        "seed0": 16359759926282560063,
+        "seed1": 3926660713559806319,
+        "counter": 32
+      },
+      "relicRng": {
+        "seed0": 17202163541709118192,
+        "seed1": 16116663004164263729,
+        "counter": 11
+      },
+      "potionRng": {
+        "seed0": 8893489013488758602,
+        "seed1": 3965965700067275597,
+        "counter": 100
+      },
+      "cardRng": {
+        "seed0": 11507790596502626623,
+        "seed1": 1459873664595141612,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 3662769590238757724,
+        "seed1": 11045656045144464689,
+        "counter": 64
+      },
+      "monsterRng": {
+        "seed0": 10346105458972098738,
+        "seed1": 11117851660152082505,
+        "counter": 103
+      },
+      "miscRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 2905336452689609199,
+        "seed1": 3265207169296476301,
+        "counter": 17
+      },
+      "mathUtilRng": {
+        "seed0": 486123312447255811,
+        "seed1": 679710077128790362,
+        "counter": 4
+      },
+      "monsterHpRng": {
+        "seed0": 5686255945278500044,
+        "seed1": 184034105485496060,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 16949095493502068718,
+        "seed1": 13361015187610716643,
+        "counter": 8
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 28,
+      "max_hp": 76,
+      "encounter": "THE_HEART",
+      "deck": 36,
+      "relics": 14,
+      "potions": 0,
+      "gold": 62,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "MASTER_OF_STRATEGY",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "EVOLVE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DROPKICK",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "MUMMIFIED_HAND",
+        "LETTER_OPENER",
+        "MARK_OF_PAIN",
+        "RED_SKULL",
+        "MATRYOSHKA",
+        "SOZU",
+        "DARKSTONE_PERIAPT",
+        "SMILING_MASK",
+        "VAJRA",
+        "SINGING_BOWL",
+        "ART_OF_WAR",
+        "THREAD_AND_NEEDLE",
+        "SELF_FORMING_CLAY"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 28,
+      "block": 0,
+      "energy": 5,
+      "strength": 4,
+      "hand": [
+        "REAPER",
+        "DARK_EMBRACE+",
+        "DEFEND_RED",
+        "HAVOC+",
+        "TRUE_GRIT"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "REAPER",
+          "up": false,
+          "uid": 31,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": true,
+          "uid": 15,
+          "cost": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 5,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": true,
+          "uid": 11,
+          "cost": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": false,
+          "uid": 33,
+          "cost": 1,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "ATTACK",
+        "POWER",
+        "SKILL",
+        "SKILL",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012688-base.json.gz"
+  },
+  {
+    "seed": 3900012688,
+    "variant": "candidate",
+    "win": false,
+    "root": "3a4437eda9bcbd6f832c325490aafafa36264eb9fcdf44383d926bf822f28d15",
+    "rng": {
+      "eventRng": {
+        "seed0": 16949095493502068718,
+        "seed1": 13361015187610716643,
+        "counter": 8
+      },
+      "treasureRng": {
+        "seed0": 16359759926282560063,
+        "seed1": 3926660713559806319,
+        "counter": 32
+      },
+      "relicRng": {
+        "seed0": 17202163541709118192,
+        "seed1": 16116663004164263729,
+        "counter": 11
+      },
+      "potionRng": {
+        "seed0": 8893489013488758602,
+        "seed1": 3965965700067275597,
+        "counter": 100
+      },
+      "cardRng": {
+        "seed0": 11507790596502626623,
+        "seed1": 1459873664595141612,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 3662769590238757724,
+        "seed1": 11045656045144464689,
+        "counter": 64
+      },
+      "monsterRng": {
+        "seed0": 10346105458972098738,
+        "seed1": 11117851660152082505,
+        "counter": 103
+      },
+      "miscRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 7010699977960108848,
+        "seed1": 15761747510240757370,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 802357448455493745,
+        "seed1": 12067776262564836700,
+        "counter": 21
+      },
+      "mathUtilRng": {
+        "seed0": 486123312447255811,
+        "seed1": 679710077128790362,
+        "counter": 4
+      },
+      "monsterHpRng": {
+        "seed0": 5686255945278500044,
+        "seed1": 184034105485496060,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 16949095493502068718,
+        "seed1": 13361015187610716643,
+        "counter": 8
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 50,
+      "max_hp": 76,
+      "encounter": "THE_HEART",
+      "deck": 36,
+      "relics": 14,
+      "potions": 0,
+      "gold": 62,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "MASTER_OF_STRATEGY",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "EVOLVE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DROPKICK",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "MUMMIFIED_HAND",
+        "LETTER_OPENER",
+        "MARK_OF_PAIN",
+        "RED_SKULL",
+        "MATRYOSHKA",
+        "SOZU",
+        "DARKSTONE_PERIAPT",
+        "SMILING_MASK",
+        "VAJRA",
+        "SINGING_BOWL",
+        "ART_OF_WAR",
+        "THREAD_AND_NEEDLE",
+        "SELF_FORMING_CLAY"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 50,
+      "block": 0,
+      "energy": 5,
+      "strength": 1,
+      "hand": [
+        "REAPER",
+        "DARK_EMBRACE+",
+        "DEFEND_RED",
+        "HAVOC+",
+        "TRUE_GRIT"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "REAPER",
+          "up": false,
+          "uid": 31,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": true,
+          "uid": 15,
+          "cost": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 5,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": true,
+          "uid": 11,
+          "cost": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": false,
+          "uid": 33,
+          "cost": 1,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "ATTACK",
+        "POWER",
+        "SKILL",
+        "SKILL",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012688-candidate.json.gz"
+  },
+  {
+    "seed": 3900012494,
+    "variant": "base",
+    "win": false,
+    "root": "7b03a0e863ad194832bcf854b1c2a0c6bf2df1f9288f46d5b01e3925997932c6",
+    "rng": {
+      "eventRng": {
+        "seed0": 15936559361895249664,
+        "seed1": 377849429728182840,
+        "counter": 9
+      },
+      "treasureRng": {
+        "seed0": 13003707370027092420,
+        "seed1": 15306571814116844261,
+        "counter": 31
+      },
+      "relicRng": {
+        "seed0": 11475300892974786846,
+        "seed1": 393575927292534444,
+        "counter": 13
+      },
+      "potionRng": {
+        "seed0": 8981770530852396375,
+        "seed1": 1514615616946600192,
+        "counter": 143
+      },
+      "cardRng": {
+        "seed0": 7455825361877996736,
+        "seed1": 547810336623156205,
+        "counter": 771
+      },
+      "merchantRng": {
+        "seed0": 16667118658145274068,
+        "seed1": 15928444490166312907,
+        "counter": 80
+      },
+      "monsterRng": {
+        "seed0": 5481535615017000297,
+        "seed1": 1120054900974168740,
+        "counter": 104
+      },
+      "miscRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 14846673972060178869,
+        "seed1": 10186483275191007705,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 902573285686535286,
+        "seed1": 2335669914274972466,
+        "counter": 9
+      },
+      "mathUtilRng": {
+        "seed0": 4595265891101405227,
+        "seed1": 10010037631645744023,
+        "counter": 2
+      },
+      "monsterHpRng": {
+        "seed0": 7017292619024261002,
+        "seed1": 13958835450907380697,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 18372937401783507867,
+        "seed1": 18244478799664590627,
+        "counter": 11
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 75,
+      "max_hp": 85,
+      "encounter": "THE_HEART",
+      "deck": 32,
+      "relics": 19,
+      "potions": 0,
+      "gold": 49,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFERNAL_BLADE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "TWIN_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "OFFERING",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFLAME",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CARNAGE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEAVY_BLADE",
+          "up": 0,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "GREMLIN_HORN",
+        "LANTERN",
+        "OLD_COIN",
+        "FUSION_HAMMER",
+        "KUNAI",
+        "MEMBERSHIP_CARD",
+        "MEAL_TICKET",
+        "PANTOGRAPH",
+        "HAPPY_FLOWER",
+        "SNECKO_EYE",
+        "RED_MASK",
+        "ORICHALCUM",
+        "PRESERVED_INSECT",
+        "ICE_CREAM",
+        "POTION_BELT",
+        "BAG_OF_PREPARATION",
+        "NUNCHAKU",
+        "PEN_NIB"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 85,
+      "block": 0,
+      "energy": 5,
+      "strength": 0,
+      "hand": [
+        "HEAVY_BLADE",
+        "STRIKE_RED",
+        "HAVOC+",
+        "POMMEL_STRIKE",
+        "ANGER",
+        "FIEND_FIRE",
+        "POWER_THROUGH",
+        "DEFEND_RED",
+        "ARMAMENTS+"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "HEAVY_BLADE",
+          "up": false,
+          "uid": 31,
+          "cost": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": false,
+          "uid": 2,
+          "cost": 3,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": true,
+          "uid": 28,
+          "cost": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": false,
+          "uid": 23,
+          "cost": 2,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": false,
+          "uid": 29,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": false,
+          "uid": 26,
+          "cost": 3,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POWER_THROUGH",
+          "up": false,
+          "uid": 22,
+          "cost": 2,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 7,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": true,
+          "uid": 20,
+          "cost": 0,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "ATTACK",
+        "ATTACK",
+        "SKILL",
+        "ATTACK",
+        "ATTACK",
+        "ATTACK",
+        "SKILL",
+        "SKILL",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012494-base.json.gz"
+  },
+  {
+    "seed": 3900012154,
+    "variant": "candidate",
+    "win": true,
+    "root": "dc4cb03f41c3b95eb85b095c2c914fbbdb039ba20fddad9624f493d969eacc17",
+    "rng": {
+      "eventRng": {
+        "seed0": 3732637124113783132,
+        "seed1": 3894112471505817340,
+        "counter": 11
+      },
+      "treasureRng": {
+        "seed0": 18411106464094218285,
+        "seed1": 15522890906799662037,
+        "counter": 39
+      },
+      "relicRng": {
+        "seed0": 13782252524382729855,
+        "seed1": 3023442271057034979,
+        "counter": 14
+      },
+      "potionRng": {
+        "seed0": 13484078220561989957,
+        "seed1": 13490352821893757609,
+        "counter": 98
+      },
+      "cardRng": {
+        "seed0": 1309748456986399407,
+        "seed1": 15144201370353521500,
+        "counter": 774
+      },
+      "merchantRng": {
+        "seed0": 5012918973005863317,
+        "seed1": 3559674877400765138,
+        "counter": 16
+      },
+      "monsterRng": {
+        "seed0": 2551110796770236236,
+        "seed1": 4955011755429344243,
+        "counter": 95
+      },
+      "miscRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 17005650784129828794,
+        "seed1": 2685367572486484606,
+        "counter": 10
+      },
+      "mathUtilRng": {
+        "seed0": 8417849575232618134,
+        "seed1": 17479633007860386606,
+        "counter": 0
+      },
+      "monsterHpRng": {
+        "seed0": 12317389981985779704,
+        "seed1": 3541566023985819671,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 3732637124113783132,
+        "seed1": 3894112471505817340,
+        "counter": 11
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 84,
+      "max_hp": 92,
+      "encounter": "THE_HEART",
+      "deck": 36,
+      "relics": 16,
+      "potions": 1,
+      "gold": 0,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CORRUPTION",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "TWIN_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BLUDGEON",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "JUGGERNAUT",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "THE_BOOT",
+        "STRAWBERRY",
+        "ECTOPLASM",
+        "MAW_BANK",
+        "UNCEASING_TOP",
+        "PEAR",
+        "OLD_COIN",
+        "SNECKO_EYE",
+        "RED_MASK",
+        "HAPPY_FLOWER",
+        "SHURIKEN",
+        "QUESTION_CARD",
+        "WHETSTONE",
+        "REGAL_PILLOW",
+        "ART_OF_WAR"
+      ],
+      "potion_names": [
+        "SWIFT_POTION",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 84,
+      "block": 0,
+      "energy": 5,
+      "strength": 0,
+      "hand": [
+        "DEFEND_RED",
+        "FLAME_BARRIER",
+        "STRIKE_RED",
+        "SHRUG_IT_OFF",
+        "DEFEND_RED",
+        "REAPER",
+        "SHRUG_IT_OFF"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 6,
+          "cost": 2,
+          "type": "SKILL"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": false,
+          "uid": 32,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": false,
+          "uid": 2,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": false,
+          "uid": 16,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 8,
+          "cost": 3,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": false,
+          "uid": 31,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": false,
+          "uid": 35,
+          "cost": 0,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "SKILL",
+        "SKILL",
+        "ATTACK",
+        "SKILL",
+        "SKILL",
+        "ATTACK",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "SWIFT_POTION",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012154-candidate.json.gz"
+  },
+  {
+    "seed": 3900012154,
+    "variant": "base",
+    "win": false,
+    "root": "ab8c7ea4fa757e4f360f54e121a7fbbddf556a231656cd4e9983f166ca10def4",
+    "rng": {
+      "eventRng": {
+        "seed0": 3732637124113783132,
+        "seed1": 3894112471505817340,
+        "counter": 11
+      },
+      "treasureRng": {
+        "seed0": 18411106464094218285,
+        "seed1": 15522890906799662037,
+        "counter": 39
+      },
+      "relicRng": {
+        "seed0": 13782252524382729855,
+        "seed1": 3023442271057034979,
+        "counter": 14
+      },
+      "potionRng": {
+        "seed0": 13484078220561989957,
+        "seed1": 13490352821893757609,
+        "counter": 98
+      },
+      "cardRng": {
+        "seed0": 1309748456986399407,
+        "seed1": 15144201370353521500,
+        "counter": 774
+      },
+      "merchantRng": {
+        "seed0": 5012918973005863317,
+        "seed1": 3559674877400765138,
+        "counter": 16
+      },
+      "monsterRng": {
+        "seed0": 2551110796770236236,
+        "seed1": 4955011755429344243,
+        "counter": 95
+      },
+      "miscRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "shuffleRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "cardRandomRng": {
+        "seed0": 5008631164115194805,
+        "seed1": 211053184565950103,
+        "counter": 0
+      },
+      "aiRng": {
+        "seed0": 17005650784129828794,
+        "seed1": 2685367572486484606,
+        "counter": 10
+      },
+      "mathUtilRng": {
+        "seed0": 8417849575232618134,
+        "seed1": 17479633007860386606,
+        "counter": 0
+      },
+      "monsterHpRng": {
+        "seed0": 12317389981985779704,
+        "seed1": 3541566023985819671,
+        "counter": 2
+      },
+      "neowRng": {
+        "seed0": 3732637124113783132,
+        "seed1": 3894112471505817340,
+        "counter": 11
+      }
+    },
+    "state": {
+      "floor": 56,
+      "act": 4,
+      "hp": 79,
+      "max_hp": 92,
+      "encounter": "THE_HEART",
+      "deck": 36,
+      "relics": 16,
+      "potions": 1,
+      "gold": 0,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CORRUPTION",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "TWIN_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BLUDGEON",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "JUGGERNAUT",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "THE_BOOT",
+        "STRAWBERRY",
+        "ECTOPLASM",
+        "MAW_BANK",
+        "UNCEASING_TOP",
+        "PEAR",
+        "OLD_COIN",
+        "SNECKO_EYE",
+        "RED_MASK",
+        "HAPPY_FLOWER",
+        "SHURIKEN",
+        "QUESTION_CARD",
+        "WHETSTONE",
+        "REGAL_PILLOW",
+        "ART_OF_WAR"
+      ],
+      "potion_names": [
+        "SWIFT_POTION",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "initial": {
+      "turn": 1,
+      "hp": 79,
+      "block": 0,
+      "energy": 5,
+      "strength": 0,
+      "hand": [
+        "DEFEND_RED",
+        "FLAME_BARRIER",
+        "STRIKE_RED",
+        "SHRUG_IT_OFF",
+        "DEFEND_RED",
+        "REAPER",
+        "SHRUG_IT_OFF"
+      ],
+      "dexterity": 0,
+      "artifact": 0,
+      "player_debuffs": {
+        "WEAK": 0,
+        "FRAIL": 0,
+        "VULNERABLE": 0
+      },
+      "hand_cards": [
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 6,
+          "cost": 2,
+          "type": "SKILL"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": false,
+          "uid": 32,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": false,
+          "uid": 2,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": false,
+          "uid": 16,
+          "cost": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": false,
+          "uid": 8,
+          "cost": 3,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": false,
+          "uid": 31,
+          "cost": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": false,
+          "uid": 35,
+          "cost": 0,
+          "type": "SKILL"
+        }
+      ],
+      "hand_types": [
+        "SKILL",
+        "SKILL",
+        "ATTACK",
+        "SKILL",
+        "SKILL",
+        "ATTACK",
+        "SKILL"
+      ],
+      "monster_hp": 800,
+      "intent": "CORRUPT_HEART_DEBILITATE",
+      "monster_strength": 0,
+      "invincible": 200,
+      "beat": 2,
+      "powers": {
+        "CORRUPTION": 0,
+        "BARRICADE": 0,
+        "DEMON_FORM": 0,
+        "FEEL_NO_PAIN": 0,
+        "DARK_EMBRACE": 0,
+        "EVOLVE": 0,
+        "INTANGIBLE": 0
+      },
+      "potions": [
+        "SWIFT_POTION",
+        "EMPTY_POTION_SLOT"
+      ]
+    },
+    "trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/spear-case-3900012154-base.json.gz"
+  }
+]

@@ -1,0 +1,4 @@
+3900002014 death None [{'rule': 'late_metallicize', 'act': 3, 'floor': 45, 'before': 2, 'after': 3}]
+3900002018 heart_win None [{'rule': 'redundant_armaments', 'act': 3, 'floor': 38, 'before': 2, 'after': 3}]
+3900002021 death None [{'rule': 'third_shrug', 'act': 4, 'floor': 55, 'before': 1, 'after': 3}]
+3900002030 heart_win None [{'rule': 'supported_rage', 'act': 3, 'floor': 48, 'before': 3, 'after': 1}]

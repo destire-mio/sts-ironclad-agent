@@ -1,0 +1,8 @@
+{
+  "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0148.npz",
+  "total": 20,
+  "passed": 20,
+  "decisions": 3591,
+  "candidates": 17457,
+  "errors": []
+}

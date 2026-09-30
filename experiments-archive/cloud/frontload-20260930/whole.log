@@ -1,0 +1,13 @@
+{"event": "controller_continuous", "completed": 400, "pool_workers": 24, "queue_window": 100}
+{"event": "batch_enqueued", "offset": 400, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "batch_enqueued", "offset": 500, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "pairs_complete", "completed": 500}
+{"event": "batch_enqueued", "offset": 600, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "pairs_complete", "completed": 600}
+{"event": "batch_enqueued", "offset": 700, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "pairs_complete", "completed": 700}
+{"event": "batch_enqueued", "offset": 800, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "pairs_complete", "completed": 800}
+{"event": "batch_enqueued", "offset": 900, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "pairs_complete", "completed": 900}
+{"event": "batch_enqueued", "offset": 1000, "seeds": 100, "capacity": 24, "pool_workers": 24}

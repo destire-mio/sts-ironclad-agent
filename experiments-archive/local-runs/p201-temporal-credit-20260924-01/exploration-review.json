@@ -1,0 +1,232 @@
+{
+  "status": "complete",
+  "source": "<repo-parent>/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01",
+  "games": 512,
+  "families": 128,
+  "states": 55473,
+  "stats": {
+    "2": {
+      "states": 3416,
+      "chosen_nonparent": 5,
+      "alternatives": 9620,
+      "rare_alternatives": 7559,
+      "almost_parent": 2041,
+      "parent_probabilities_mean": 0.9970220660322571,
+      "parent_probabilities_median": 0.9999995957960939,
+      "entropy_mean": 0.009766144058257625,
+      "entropy_median": 6.362344318867183e-06
+    },
+    "3": {
+      "states": 7218,
+      "chosen_nonparent": 495,
+      "alternatives": 26166,
+      "rare_alternatives": 14856,
+      "almost_parent": 1058,
+      "parent_probabilities_mean": 0.932461176001117,
+      "parent_probabilities_median": 0.9975601141185457,
+      "entropy_mean": 0.16310167622111205,
+      "entropy_median": 0.017647090475803456
+    },
+    "0": {
+      "states": 11447,
+      "chosen_nonparent": 269,
+      "alternatives": 17573,
+      "rare_alternatives": 8480,
+      "almost_parent": 4600,
+      "parent_probabilities_mean": 0.9765774113550886,
+      "parent_probabilities_median": 0.994440722099757,
+      "entropy_mean": 0.09335903101991515,
+      "entropy_median": 0.03440916306618559
+    },
+    "5": {
+      "states": 9159,
+      "chosen_nonparent": 4,
+      "alternatives": 43272,
+      "rare_alternatives": 42971,
+      "almost_parent": 8858,
+      "parent_probabilities_mean": 0.9995462342416618,
+      "parent_probabilities_median": 1.0,
+      "entropy_mean": 0.0020353190838599097,
+      "entropy_median": 3.291413388445228e-33
+    },
+    "8": {
+      "states": 3921,
+      "chosen_nonparent": 4,
+      "alternatives": 15875,
+      "rare_alternatives": 14879,
+      "almost_parent": 3090,
+      "parent_probabilities_mean": 0.9987299562986571,
+      "parent_probabilities_median": 0.9999999977554139,
+      "entropy_mean": 0.005320493867737853,
+      "entropy_median": 4.707925638605203e-08
+    },
+    "10": {
+      "states": 5377,
+      "chosen_nonparent": 135,
+      "alternatives": 9498,
+      "rare_alternatives": 6987,
+      "almost_parent": 3945,
+      "parent_probabilities_mean": 0.9750162891694971,
+      "parent_probabilities_median": 1.0,
+      "entropy_mean": 0.0611845024660539,
+      "entropy_median": 2.3100030253922074e-16
+    },
+    "11": {
+      "states": 1067,
+      "chosen_nonparent": 160,
+      "alternatives": 10283,
+      "rare_alternatives": 6599,
+      "almost_parent": 32,
+      "parent_probabilities_mean": 0.8690123532172902,
+      "parent_probabilities_median": 0.9470483613841575,
+      "entropy_mean": 0.3336905115560445,
+      "entropy_median": 0.22924480183096368
+    },
+    "14": {
+      "states": 436,
+      "chosen_nonparent": 59,
+      "alternatives": 4228,
+      "rare_alternatives": 2432,
+      "almost_parent": 0,
+      "parent_probabilities_mean": 0.8802220079232447,
+      "parent_probabilities_median": 0.9637090467104319,
+      "entropy_mean": 0.31258974769112957,
+      "entropy_median": 0.17023474879725464
+    },
+    "18": {
+      "states": 3603,
+      "chosen_nonparent": 432,
+      "alternatives": 65487,
+      "rare_alternatives": 40616,
+      "almost_parent": 104,
+      "parent_probabilities_mean": 0.8774432653288279,
+      "parent_probabilities_median": 0.9300692253165123,
+      "entropy_mean": 0.35807523969104577,
+      "entropy_median": 0.3074579014082865
+    },
+    "15": {
+      "states": 689,
+      "chosen_nonparent": 7,
+      "alternatives": 1419,
+      "rare_alternatives": 1092,
+      "almost_parent": 464,
+      "parent_probabilities_mean": 0.9843883108313168,
+      "parent_probabilities_median": 1.0,
+      "entropy_mean": 0.04152571737325461,
+      "entropy_median": 5.554147051281456e-17
+    },
+    "6": {
+      "states": 446,
+      "chosen_nonparent": 0,
+      "alternatives": 2472,
+      "rare_alternatives": 2472,
+      "almost_parent": 446,
+      "parent_probabilities_mean": 0.9999999999218512,
+      "parent_probabilities_median": 0.999999999993302,
+      "entropy_mean": 1.7937526187792256e-09,
+      "entropy_median": 1.7903387344194263e-10
+    },
+    "9": {
+      "states": 2558,
+      "chosen_nonparent": 3,
+      "alternatives": 8931,
+      "rare_alternatives": 8832,
+      "almost_parent": 2475,
+      "parent_probabilities_mean": 0.9985333038751949,
+      "parent_probabilities_median": 1.0,
+      "entropy_mean": 0.004497849148689748,
+      "entropy_median": 6.735407689328697e-23
+    },
+    "1": {
+      "states": 3144,
+      "chosen_nonparent": 47,
+      "alternatives": 7243,
+      "rare_alternatives": 4331,
+      "almost_parent": 300,
+      "parent_probabilities_mean": 0.9857486359714618,
+      "parent_probabilities_median": 0.9948023955886617,
+      "entropy_mean": 0.061378127404806575,
+      "entropy_median": 0.03255886603459799
+    },
+    "20": {
+      "states": 1190,
+      "chosen_nonparent": 0,
+      "alternatives": 1787,
+      "rare_alternatives": 1787,
+      "almost_parent": 1190,
+      "parent_probabilities_mean": 0.9999999999961415,
+      "parent_probabilities_median": 1.0,
+      "entropy_mean": 8.344240529776285e-11,
+      "entropy_median": 9.155588048397774e-17
+    },
+    "7": {
+      "states": 459,
+      "chosen_nonparent": 0,
+      "alternatives": 1147,
+      "rare_alternatives": 1147,
+      "almost_parent": 459,
+      "parent_probabilities_mean": 0.9999999998914355,
+      "parent_probabilities_median": 0.9999999999545932,
+      "entropy_mean": 2.5181159736599988e-09,
+      "entropy_median": 1.1267881507209587e-09
+    },
+    "16": {
+      "states": 611,
+      "chosen_nonparent": 182,
+      "alternatives": 1947,
+      "rare_alternatives": 599,
+      "almost_parent": 85,
+      "parent_probabilities_mean": 0.7166201333046878,
+      "parent_probabilities_median": 0.6873232880184171,
+      "entropy_mean": 0.6580542058088148,
+      "entropy_median": 0.9264921265517554
+    },
+    "12": {
+      "states": 460,
+      "chosen_nonparent": 63,
+      "alternatives": 5792,
+      "rare_alternatives": 3473,
+      "almost_parent": 0,
+      "parent_probabilities_mean": 0.8712952524385307,
+      "parent_probabilities_median": 0.9500075090868909,
+      "entropy_mean": 0.35212866539559085,
+      "entropy_median": 0.2277931792460467
+    },
+    "13": {
+      "states": 68,
+      "chosen_nonparent": 9,
+      "alternatives": 384,
+      "rare_alternatives": 145,
+      "almost_parent": 0,
+      "parent_probabilities_mean": 0.8425555831032455,
+      "parent_probabilities_median": 0.9095051241438772,
+      "entropy_mean": 0.43707828938885124,
+      "entropy_median": 0.3640304028601056
+    },
+    "22": {
+      "states": 108,
+      "chosen_nonparent": 6,
+      "alternatives": 491,
+      "rare_alternatives": 328,
+      "almost_parent": 31,
+      "parent_probabilities_mean": 0.9183849946769392,
+      "parent_probabilities_median": 0.9992656933216841,
+      "entropy_mean": 0.19090372804059744,
+      "entropy_median": 0.006032096950788419
+    },
+    "4": {
+      "states": 96,
+      "chosen_nonparent": 9,
+      "alternatives": 389,
+      "rare_alternatives": 146,
+      "almost_parent": 0,
+      "parent_probabilities_mean": 0.9104786544380254,
+      "parent_probabilities_median": 0.9724401378612209,
+      "entropy_mean": 0.2425796326654561,
+      "entropy_median": 0.14192415741049644
+    }
+  },
+  "new_games": 0,
+  "new_training_updates": 0,
+  "limits": "Observed initial-policy visited menus; alternative probabilities below one in a million indicate low conditional exposure, not counterfactual action benefits. No changed recipe or additional sampling authorized by this metric alone."
+}

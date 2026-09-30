@@ -1,0 +1,21 @@
+{
+  "stage": "student-replay",
+  "started": 1790737822.4318554,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill2-code-v1/distill2_parity.py",
+    "--model",
+    "~/sts/runs/distill2-v21-20260930/frozen/distill2_frozen.pt",
+    "--student-replay",
+    "--teacher-module",
+    "p300_play_v21",
+    "--trajectory-dir",
+    "~/sts/runs/distill2-v21-20260930/paired200.traces/student",
+    "--limit",
+    "200",
+    "--output",
+    "~/sts/runs/distill2-v21-20260930/student-replay-checks"
+  ],
+  "ended": 1790738180.758932,
+  "exit_code": 0
+}

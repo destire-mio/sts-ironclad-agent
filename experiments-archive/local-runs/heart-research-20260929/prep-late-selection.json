@@ -1,0 +1,8 @@
+{
+  "rule": "lateengine",
+  "development_N": 6,
+  "rescued": 0,
+  "lost": 1,
+  "decision": "No adoption: too few offers and no development gain. Retain predeclared holdout for report; do not tune priorities on heldout.",
+  "holdout_read": false
+}

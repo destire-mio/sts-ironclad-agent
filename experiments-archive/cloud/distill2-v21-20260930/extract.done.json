@@ -1,0 +1,21 @@
+{
+  "stage": "extract",
+  "started": 1790705847.2035933,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill2-code-v1/distill2_extract.py",
+    "--trajectory-dirs",
+    "~/sts/runs/traj-c42",
+    "~/sts/runs/traj-c43",
+    "--output",
+    "~/sts/runs/distill2-v21-20260930/data",
+    "--teacher-module",
+    "p300_play_v21",
+    "--arms",
+    "sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4",
+    "--workers",
+    "6"
+  ],
+  "ended": 1790707831.9518623,
+  "exit_code": 0
+}

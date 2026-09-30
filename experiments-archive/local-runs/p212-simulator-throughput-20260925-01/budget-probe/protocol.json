@@ -1,0 +1,30 @@
+{
+  "question": "Does compiler speedup pay for 10000 versus 8000 base simulations on the same real entry states?",
+  "assigned_roots": 48,
+  "selection": "Exactly the recorded P212 timing workload; no result-based filtering.",
+  "arms": [
+    {
+      "label": "baseline-8000",
+      "engine": "original archived runtime",
+      "base_simulations": 8000
+    },
+    {
+      "label": "pgo-10000",
+      "engine": "selected PGO binary",
+      "base_simulations": 10000
+    }
+  ],
+  "boss_multiplier": 3,
+  "reason_for_budget": "25% extra simulations rounds down the measured 29.6% throughput gain. Full-resolver time may not scale linearly because decisions and replans can change.",
+  "metrics": [
+    "paired survival gains/losses",
+    "post-battle HP on joint survivors",
+    "remaining potion counts on joint survivors",
+    "actual simulations",
+    "CPU and wall time",
+    "unresolved faults"
+  ],
+  "verification": "Replay every returned legal action sequence and compare final state and RNG. Baseline must match recorded source.",
+  "interpretation": "Exploratory fixed-state capability/cost probe. Does not select a new full-run policy or estimate Heart win rate. No significance/adoption gate on 48 roots.",
+  "runner_sha256": "a4d20a0a2936da2bbeea8c1c75c1c57d5299a8e4ae3c29a746d15e7d4a69a7db"
+}

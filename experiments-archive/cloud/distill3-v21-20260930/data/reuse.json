@@ -1,0 +1,5 @@
+{
+  "source": "~/sts/runs/distill2-v21-20260930/data",
+  "manifest_sha256": "c8a7cdeb337be561e4dd3da75f225342080e4aba305ded943300091c6b0c2888",
+  "policy": "copy exact audited trajectory groups with identical source hashes, schema and teacher arms"
+}

@@ -1,0 +1,24 @@
+{
+  "stage": "paired200",
+  "started": 1790736424.6484828,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill2-code-v1/distill2_run.py",
+    "--output",
+    "~/sts/runs/distill2-v21-20260930/paired200.jsonl",
+    "--model",
+    "~/sts/runs/distill2-v21-20260930/frozen/distill2_frozen.pt",
+    "--teacher-module",
+    "p300_play_v21",
+    "--arms",
+    "sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4",
+    "--first-seed",
+    "3900040000",
+    "--games",
+    "200",
+    "--workers",
+    "31"
+  ],
+  "ended": 1790737822.120058,
+  "exit_code": 0
+}

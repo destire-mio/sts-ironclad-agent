@@ -1,0 +1,31 @@
+{"event": "controller_continuation", "completed": 100, "pool_workers": 24}
+{"event": "batch_start", "offset": 100, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "batch_complete", "completed": 200}
+{"event": "batch_start", "offset": 200, "seeds": 100, "capacity": 24, "pool_workers": 24}
+{"event": "batch_complete", "completed": 300}
+{"event": "batch_start", "offset": 300, "seeds": 100, "capacity": 24, "pool_workers": 24}
+Traceback (most recent call last):
+  File "~/sts/runs/frontload-20260930/tools/run_remaining.py", line 122, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "~/sts/runs/frontload-20260930/tools/run_remaining.py", line 105, in main
+    admit(pool)
+  File "~/sts/runs/frontload-20260930/tools/run_remaining.py", line 70, in admit
+    capacity=original.reserve_and_affinity(pool,allowed,sampled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/sts/runs/frontload-20260930/tools/run_whole.py", line 73, in reserve_and_affinity
+    processes = process_table()
+                ^^^^^^^^^^^^^^^
+  File "~/sts/runs/frontload-20260930/tools/run_whole.py", line 64, in process_table
+    output = subprocess.check_output(['ps','-eo','pid=,ppid=,pcpu=,args='], text=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/subprocess.py", line 1196, in communicate
+    stdout = self.stdout.read()
+             ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

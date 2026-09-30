@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "~/sts/runs/frontload-20260930/tools/extract_mechanism.py", line 93, in <module>
+    if __name__ == '__main__':main()
+                              ^^^^^^
+  File "~/sts/runs/frontload-20260930/tools/extract_mechanism.py", line 82, in main
+    assert not r['error'], r['error']
+           ^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "~/sts/runs/frontload-20260930/tools/extract_mechanism.py", line 32, in replay_job
+    text = IO.dump(g, True)
+           ^^^^^^^^^^^^^^^^
+RuntimeError: unsupported event continuation
+

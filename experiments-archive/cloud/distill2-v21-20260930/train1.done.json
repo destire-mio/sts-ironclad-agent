@@ -1,0 +1,21 @@
+{
+  "stage": "train1",
+  "started": 1790718838.9337041,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill2-code-v1/distill2_train.py",
+    "--data",
+    "~/sts/runs/distill2-v21-20260930/data",
+    "~/sts/runs/distill2-v21-20260930/dagger1.traces/dagger",
+    "--output",
+    "~/sts/runs/distill2-v21-20260930/round1",
+    "--init",
+    "~/sts/runs/distill2-v21-20260930/bc/student.pt",
+    "--epochs",
+    "20",
+    "--threads",
+    "7"
+  ],
+  "ended": 1790728306.0562935,
+  "exit_code": 0
+}

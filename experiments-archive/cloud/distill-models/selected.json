@@ -1,0 +1,6 @@
+{
+  "model": "wide512",
+  "checkpoint": "scratchpad/distill/models/wide512.pt",
+  "sha256": "7a316cfa9c4bba14d6a2e18735f5b21cac405f090d5f7441e761e5a799c8d365",
+  "criterion": "validation micro accuracy, no online outcomes"
+}

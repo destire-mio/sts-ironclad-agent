@@ -1,0 +1,146 @@
+--- <repo-parent>/sts-rl-agent-principles/runs/p206-entry-resources-20260924-02/frozen-source/heart_entry_resource_probe.py
++++ agent/heart_entry_resource_probe.py
+@@ -17,7 +17,7 @@
+             maximum_prefix_searches=48,preflight_nodes=128)
+ 
+ 
+-def prepare(root, source):
++def prepare(root, source, recovery=None):
+     root.mkdir(parents=True)
+     evidence=E.read(source/'main/artifact-review.json')
+     E.require(evidence['status']=='passed' and evidence['unresolved_faults']==0,'P205 source not verified')
+@@ -31,6 +31,14 @@
+         bound.extend([Path(a['reference']['path']),source/'main/control'/seed/'attempt.json'])
+         for arm in ('sampling','adaptive'):
+             bound.append(source/'main'/arm/seed/'search-1.json.gz')
++    if recovery is not None:
++        E.require(E.read(recovery/'native-record-contract-review.json')['status']=='passed',
++                  'recovery native records have not been verified')
++        E.require(E.sha(recovery/'assignments-private.json')==E.sha(root/'assignments-private.json'),
++                  'recovery assignment differs')
++        bound.extend([recovery/'protocol.json',recovery/'main/result.json',
++                      recovery/'native-record-contract-review.json',recovery/'repair-registration.json'])
++        bound.extend(recovery/'main'/str(a['reference']['seed'])/'counterfactual-attempt.json' for a in assignments)
+     plan=dict(experiment='P206',source=str(source),recipe=RECIPE,
+         hashes={str(p):E.sha(p) for p in bound},
+         question='Separate solver non-discovery from a finite-horizon impossibility certificate, and measure whether entry HP alone is sufficient to change combat outcome under the fixed native MCTS.',
+@@ -44,6 +52,9 @@
+         interpretation='Report all24 paired native outcomes, fatal versus surviving strata, and exact-prefix feasible/closed-dead/unknown separately. A rescued full-HP counterfactual only establishes sufficiency of this artificial resource intervention under this solver; it does not prove a legal earlier healing choice exists or identify a neural policy.',
+         stopping='One horizon and one HP intervention; no horizon/node/HP/solver-budget sweep. If certificates are unknown, retain unknown. Positive diagnostics require tracing a legal earlier decision before any policy proposal.',
+         policy_adoption=False,new_natural_games=0,unseen_acceptance_games=0)
++    if recovery is not None:
++        plan['recovery']=str(recovery)
++        plan['recovery_scope']='Reuse the exact24 saved counterfactual plans after native full-state verification. Fix only replay-contract interpretation: native is_valid accepts equivalent recorded encodings and native reported turns are turn index+1. No new MCTS calls; unchanged HP intervention and exhaustive-prefix recipe.'
+     M.put(root/'protocol.json',plan)
+     print(dict(status='P206_prepared',assigned=len(assignments),recipe=RECIPE),flush=True)
+ 
+@@ -64,6 +75,20 @@
+             return dict(verdict='surviving_prefix',method='existing_native_witness',source=name,
+                         target_turn=target,actions=found['actions'],terminal_signature=A.signature(found['state']))
+     return None
++
++
++def replay_counterfactual(x, seed, prefix, maximum, battle, record, source):
++    """Follow the frozen runtime's native replay contract, then check the GC."""
++    adapter=Q.Native(x.R.sts);final=battle.clone()
++    for bits in record['actions']:
++        adapter.execute(final,bits)  # Native is_valid handles signed/alias records.
++    E.require(int(final.outcome)==record['outcome'] and int(final.turn)+1==record['turns'],
++              'native recorded outcome/turn count differs')
++    replay_gc=x.R.replay(seed,prefix,x.config);replay_gc.cur_hp=maximum
++    final.exit_battle(replay_gc);x.R.clock_input(replay_gc,x.config)
++    expected=record.get('terminal_fingerprint',source['terminal_fingerprint'])
++    E.require(x.R.fingerprint(replay_gc)==expected,'counterfactual terminal game differs')
++    return final,expected
+ 
+ 
+ def worker(job):
+@@ -87,6 +112,9 @@
+         if original_hp==maximum:
+             E.require(A.signature(full)==natural_signature and counter_fingerprint==original_fingerprint,
+                       'full-HP control differs')
++        if 'recovery' in plan:
++            counter=E.read(Path(plan['recovery'])/'main'/str(seed)/'counterfactual-attempt.json')
++        elif original_hp==maximum:
+             counter=dict(original)
+         else:
+             new_resolutions+=1
+@@ -97,21 +125,13 @@
+             counter['terminal_fingerprint']=x.R.fingerprint(counter_gc)
+         M.put(folder/'counterfactual-attempt.json',counter)
+         # Both kinds of returned plans are replayed from their correct state.
+-        final=full.clone()
+-        for bits in counter['actions']:
+-            E.require(adapter.canonical(bits) in adapter.actions(final),'counterfactual action missing from legal menu')
+-            adapter.execute(final,bits)
+-        E.require(int(final.outcome)==counter['outcome'] and int(final.turn)==counter['turns'],
+-                  'counterfactual replay outcome/turn differs')
+-        replay_gc=x.R.replay(seed,prefix,x.config);replay_gc.cur_hp=maximum
+-        final.exit_battle(replay_gc);x.R.clock_input(replay_gc,x.config)
+-        expected=counter.get('terminal_fingerprint',source['terminal_fingerprint'])
+-        E.require(x.R.fingerprint(replay_gc)==expected,'counterfactual terminal game differs')
++        final,expected=replay_counterfactual(x,seed,prefix,maximum,full,counter,source)
+         M.put(folder/'counterfactual-result.json',dict(initial_hp=original_hp,intervened_hp=maximum,
+             root_fingerprint=counter_fingerprint,terminal_fingerprint=expected,
+             root_signature=A.signature(full),terminal_signature=A.signature(final),
+             reused_full_hp_control=original_hp==maximum,alive=adapter.terminal(final)[1],
+-            new_planning_calls=new_resolutions,new_simulations=new_simulations,legal_natural_route=False))
++            new_planning_calls=new_resolutions,new_simulations=new_simulations,
++            legal_natural_route=original_hp==maximum,new_natural_game=False))
+         candidates=[('original_mcts',original['actions'])]
+         for arm in ('sampling','adaptive'):
+             prior=E.read(source_root/'main'/arm/str(seed)/'search-1.json.gz')
+@@ -168,6 +188,17 @@
+     result=dict(status='passed',seed=source['seed'],nodes=len(tree['nodes']),actions=tree['actions_executed'],
+         verdict=tree['verdict'],native_tree_review=audit,positive_witness_actions=len(witness['actions']),
+         new_resolutions=0,new_natural_games=0)
++    if 'recovery' in plan:
++        counts=[]
++        for item in E.read(root/'assignments-private.json'):
++            xx,original,pre,context,_=P.state(Path(plan['source']),item)
++            context.cur_hp=int(context.max_hp)
++            live=xx.R.sts.BattleContext();live.init(context)
++            raw=E.read(Path(plan['recovery'])/'main'/str(item['reference']['seed'])/'counterfactual-attempt.json')
++            replay_counterfactual(xx,original['seed'],pre,int(context.max_hp),live,raw,original)
++            counts.append(len(raw['actions']))
++        result['recovery_plans_replayed']=len(counts)
++        result['recovery_actions_replayed']=sum(counts)
+     M.put(root/'preflight/result.json',result);print(result,flush=True)
+ 
+ 
+@@ -209,7 +240,8 @@
+     parser=argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('command',choices=('prepare','preflight','run'))
+     parser.add_argument('--root',type=Path,required=True);parser.add_argument('--source',type=Path)
++    parser.add_argument('--recovery',type=Path)
+     args=parser.parse_args();root=args.root.resolve()
+-    if args.command=='prepare':prepare(root,args.source.resolve())
++    if args.command=='prepare':prepare(root,args.source.resolve(),args.recovery.resolve() if args.recovery else None)
+     elif args.command=='preflight':preflight(root)
+     else:execute(root)
+--- <repo-parent>/sts-rl-agent-principles/runs/p206-entry-resources-20260924-02/frozen-source/heart_prefix_reachability.py
++++ agent/heart_prefix_reachability.py
+@@ -28,8 +28,11 @@
+         bits = adapter.canonical(bits)
+         if outcome(adapter, state, target_turn) != 'branch':
+             return None
+-        legal = adapter.actions(state)
+-        if bits not in legal:
++        # A recorded native action may use a valid equivalent encoding that the
++        # canonical menu does not emit (e.g. potion-discard target8191 vs6).
++        # Positive witnesses use native legality; negative proofs enumerate and
++        # verify the complete canonical menus below, without omitting any edge.
++        if not adapter.valid(state, bits):
+             return None
+         adapter.execute(state, bits)
+         used.append(bits)
+@@ -182,6 +185,9 @@
+     def actions(self, state):
+         return [int(a.bits) for a in self.sts.get_legal_actions(state)]
+ 
++    def valid(self, state, bits):
++        return self.sts.SearchAction.from_bits(bits & 0xffffffff).is_valid(state)
++
+     def execute(self, state, bits):
+         a = self.sts.SearchAction.from_bits(bits & 0xffffffff)
+         require(a.is_valid(state), 'illegal native prefix action')

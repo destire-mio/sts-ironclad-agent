@@ -1,0 +1,23 @@
+{
+  "phase": "complete",
+  "completed_at_utc": "2026-09-29T08:44:54.898004+00:00",
+  "local_active": "none owned by this research",
+  "cloud_active_research": "none owned by this research",
+  "completed": [
+    "1309 historical Act 4 trajectory replays",
+    "838 primary fixed-root search and preparation results",
+    "877 action audits including diagnostic repeats and cloud portability",
+    "24 cloud natural smoke games across three experimental flags",
+    "4 cloud portability roots x 2 suffixes",
+    "local and cloud opt-in feature delivery, report, render verification, artifact index"
+  ],
+  "remaining": [],
+  "conclusion": "No demonstrated win-rate gain on target cloud; experimental flags require user-run full-game validation",
+  "limits": {
+    "local_workers": 8,
+    "cloud_workers": 4,
+    "artifacts_max_GB": 3,
+    "no_2000_whole_games": true
+  },
+  "scope": "No git commit or push; pre-existing local work preserved; cloud v12/v13/runtime unchanged"
+}

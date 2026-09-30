@@ -1,0 +1,8 @@
+{
+  "time": "2026-09-30T13:24:28.571648",
+  "controller_pid": 3120497,
+  "completed_arms": 800,
+  "started_arms": 800,
+  "action": "SIGINT controller only at completed batch boundary",
+  "worker_signals_sent": 0
+}

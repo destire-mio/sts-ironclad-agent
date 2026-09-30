@@ -1,0 +1,16 @@
+{
+  "feature": "hrest90",
+  "rule": "rest90",
+  "dev": {
+    "n": 36,
+    "rescued": 2,
+    "lost": 4
+  },
+  "holdout": {
+    "n": 37,
+    "rescued": 5,
+    "lost": 1
+  },
+  "decision": "Ship as independent opt-in hypothesis for user-owned whole-run validation, not an accepted stable improvement and not bundled with heart40. Full c38 eligible-root census net +2/1000.",
+  "note": "No rule tuning after heldout. First eight seed-hash-ordered trigger roots used for natural cloud smoke."
+}

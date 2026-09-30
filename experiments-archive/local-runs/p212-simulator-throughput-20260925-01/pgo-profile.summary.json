@@ -1,0 +1,19 @@
+{
+  "engine": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate",
+  "engine_sha256": "596abb14d643e1c5502672eb5c1fef12045b4d4b158e43f63d02cc40ae7847f7",
+  "suite": "profile",
+  "loops": 1,
+  "load_average": [
+    6.1640625,
+    8.52392578125,
+    7.953125
+  ],
+  "pid": 64794,
+  "started": 1790279441.9004521,
+  "status": "complete",
+  "battles": 48,
+  "cpu_seconds": 21.098333,
+  "wall_seconds": 21.197337208,
+  "total_process_wall_seconds": 24.313143730163574,
+  "all_records_match": true
+}

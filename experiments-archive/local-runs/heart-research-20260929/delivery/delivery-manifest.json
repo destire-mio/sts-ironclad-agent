@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-09-29T08:44:54.898004+00:00",
+  "input_manifest": "../manifest.json",
+  "cloud_target": "sts:~/sts/principles/agent/p300_play_v14.py",
+  "cloud_baseline": "p300_play_v12.py frozen in baseline",
+  "features": [
+    "heart40",
+    "hrest90",
+    "spear160"
+  ],
+  "features_default": "off",
+  "production_recommendation": "experimental candidates only; no confirmed target-cloud win-rate improvement",
+  "sources": {
+    "<repo-parent>/sts-rl-agent-principles/agent/p300_play.py": "0fdda09d3c55808b729c68d82ffa39d17ea060e78b23d8bb44729b5ffe8d0fed",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_research.py": "8c01211afb287936d3a7aeda7af5febc266c5bee51ad269cff8e95bd5e79bf02",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_prep_candidate.py": "b9c0526feba9ec318b6173b1232b89f075d05e7d3a406687c7636a4c7724386e",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_research_report.py": "5d86aff62bdeb404d0d54547f73675cd2a7f5d7262cc1d75c302c4411c4d95d6",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_research_finish.py": "a2f942bd3c6968afb591429e94721a1c7f442e6434865d353ee5601aa50f811e",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_smoke.py": "3811736a7ed1bfe432b92a092fb979de844a6049da1879d966b0f12fa28fa3a5",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_spear_report.py": "8d84d08387fa69f76d76ddb3304554add69e25d7d1a388e75fdea40401c3d4d3",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_spear_cases.py": "2390aa3629d44ebb91134f0329b5f338c6dc72302489dca38f49d036f1b1132d",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_final_report.py": "a97193a8a187801b76154dd9344f588dab0622ea1836f06e887b2ed5f2f5477d"
+  },
+  "cloud_delivery_sha256": "a81c7ea691b205d866c1df74547ec62708ac107e775372a7200d1c4b90692cd1",
+  "verification": "verification.json",
+  "artifact_index": "artifact-sha256.json",
+  "index_exclusion": "artifact-sha256.json excludes itself to avoid circular hashing"
+}

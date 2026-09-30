@@ -1,0 +1,1725 @@
+[
+  {
+    "path": "~/sts/runs/traj-c38/3900012964-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012964,
+    "rule": "rest90",
+    "step": 230,
+    "base_action": 1,
+    "candidate_action": 0,
+    "state": {
+      "floor": 53,
+      "act": 4,
+      "hp": 74,
+      "max_hp": 92,
+      "encounter": "DONU_AND_DECA",
+      "deck": 32,
+      "relics": 14,
+      "potions": 0,
+      "gold": 123,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "LIMIT_BREAK",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "COMBUST",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "RUPTURE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "RECKLESS_CHARGE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "PARASITE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "WHIRLWIND",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEAVY_BLADE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 0,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "MEAL_TICKET",
+        "SINGING_BOWL",
+        "ODD_MUSHROOM",
+        "RUNIC_PYRAMID",
+        "MEAT_ON_THE_BONE",
+        "WING_BOOTS",
+        "ANCIENT_TEA_SET",
+        "ASTROLABE",
+        "TUNGSTEN_ROD",
+        "KUNAI",
+        "OLD_COIN",
+        "PANTOGRAPH",
+        "NUNCHAKU"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "REST_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012208-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012208,
+    "rule": "rest90",
+    "step": 231,
+    "base_action": 1,
+    "candidate_action": 0,
+    "state": {
+      "floor": 53,
+      "act": 4,
+      "hp": 84,
+      "max_hp": 95,
+      "encounter": "DONU_AND_DECA",
+      "deck": 32,
+      "relics": 18,
+      "potions": 0,
+      "gold": 434,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "BASH",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "METALLICIZE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BLOOD_FOR_BLOOD",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DUAL_WIELD",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "PERFECTED_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BRUTALITY",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "INFLAME",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 0,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "THE_BOOT",
+        "TINY_CHEST",
+        "WHETSTONE",
+        "PANDORAS_BOX",
+        "BLOOD_VIAL",
+        "STRANGE_SPOON",
+        "BLUE_CANDLE",
+        "WHITE_BEAST_STATUE",
+        "QUESTION_CARD",
+        "CERAMIC_FISH",
+        "ORICHALCUM",
+        "OMAMORI",
+        "SNECKO_EYE",
+        "WAR_PAINT",
+        "TOXIC_EGG",
+        "SUNDIAL",
+        "PEAR"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "REST_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012960-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012960,
+    "rule": "rest90",
+    "step": 227,
+    "base_action": 1,
+    "candidate_action": 0,
+    "state": {
+      "floor": 53,
+      "act": 4,
+      "hp": 95,
+      "max_hp": 106,
+      "encounter": "AWAKENED_ONE",
+      "deck": 30,
+      "relics": 21,
+      "potions": 0,
+      "gold": 65,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "INJURY",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CURSE_OF_THE_BELL",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "OFFERING",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "WARCRY",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 1,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "STRAWBERRY",
+        "BLOODY_IDOL",
+        "PRESERVED_INSECT",
+        "CALLING_BELL",
+        "WAR_PAINT",
+        "MERCURY_HOURGLASS",
+        "MANGO",
+        "AKABEKO",
+        "THE_ABACUS",
+        "JUZU_BRACELET",
+        "THE_BOOT",
+        "SUNDIAL",
+        "PEAR",
+        "WHETSTONE",
+        "RUNIC_DOME",
+        "MATRYOSHKA",
+        "THE_COURIER",
+        "OMAMORI",
+        "BOTTLED_TORNADO",
+        "ART_OF_WAR"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "REST_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012720-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012720,
+    "rule": "rest90",
+    "step": 216,
+    "base_action": 1,
+    "candidate_action": 0,
+    "state": {
+      "floor": 53,
+      "act": 4,
+      "hp": 76,
+      "max_hp": 92,
+      "encounter": "AWAKENED_ONE",
+      "deck": 30,
+      "relics": 12,
+      "potions": 0,
+      "gold": 154,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "COMBUST",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "WARCRY",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFERNAL_BLADE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "CARNAGE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEADBUTT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "WARCRY",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIRE_BREATHING",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "PARASITE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 1,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "CERAMIC_FISH",
+        "ODD_MUSHROOM",
+        "TOXIC_EGG",
+        "RUNIC_CUBE",
+        "DU_VU_DOLL",
+        "BLUE_CANDLE",
+        "ASTROLABE",
+        "THE_ABACUS",
+        "ORICHALCUM",
+        "TOY_ORNITHOPTER",
+        "ART_OF_WAR"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "REST_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012854-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012854,
+    "rule": "potionfirst",
+    "step": 224,
+    "base_action": 2,
+    "candidate_action": 402653185,
+    "state": {
+      "floor": 54,
+      "act": 4,
+      "hp": 34,
+      "max_hp": 37,
+      "encounter": "TIME_EATER",
+      "deck": 37,
+      "relics": 15,
+      "potions": 0,
+      "gold": 210,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "COMBUST",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "APPARITION",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "APPARITION",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "APPARITION",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEAVY_BLADE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "CORRUPTION",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SECOND_WIND",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INTIMIDATE",
+          "up": 0,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "WHETSTONE",
+        "OMAMORI",
+        "MERCURY_HOURGLASS",
+        "SNECKO_EYE",
+        "CENTENNIAL_PUZZLE",
+        "MEMBERSHIP_CARD",
+        "DREAM_CATCHER",
+        "INK_BOTTLE",
+        "MEAT_ON_THE_BONE",
+        "RUNIC_CUBE",
+        "WAR_PAINT",
+        "LIZARD_TAIL",
+        "ANCIENT_TEA_SET",
+        "TUNGSTEN_ROD"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "SHOP_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012208-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012208,
+    "rule": "potionfirst",
+    "step": 234,
+    "base_action": 671088640,
+    "candidate_action": 402653184,
+    "state": {
+      "floor": 54,
+      "act": 4,
+      "hp": 84,
+      "max_hp": 95,
+      "encounter": "DONU_AND_DECA",
+      "deck": 32,
+      "relics": 18,
+      "potions": 0,
+      "gold": 434,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "BASH",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CLOTHESLINE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "METALLICIZE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BLOOD_FOR_BLOOD",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DUAL_WIELD",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "CLASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "PERFECTED_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "OFFERING",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BRUTALITY",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "INFLAME",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "PUMMEL",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DISARM",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BARRICADE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 0,
+          "type": "ATTACK"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "THE_BOOT",
+        "TINY_CHEST",
+        "WHETSTONE",
+        "PANDORAS_BOX",
+        "BLOOD_VIAL",
+        "STRANGE_SPOON",
+        "BLUE_CANDLE",
+        "WHITE_BEAST_STATUE",
+        "QUESTION_CARD",
+        "CERAMIC_FISH",
+        "ORICHALCUM",
+        "OMAMORI",
+        "SNECKO_EYE",
+        "WAR_PAINT",
+        "TOXIC_EGG",
+        "SUNDIAL",
+        "PEAR"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "SHOP_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012020-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012020,
+    "rule": "potionfirst",
+    "step": 231,
+    "base_action": 671088640,
+    "candidate_action": 402653184,
+    "state": {
+      "floor": 54,
+      "act": 4,
+      "hp": 130,
+      "max_hp": 130,
+      "encounter": "AWAKENED_ONE",
+      "deck": 36,
+      "relics": 16,
+      "potions": 1,
+      "gold": 118,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "BASH",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CARNAGE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CORRUPTION",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "ENTRENCH",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLEX",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "GHOSTLY_ARMOR",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "EVOLVE",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SECRET_TECHNIQUE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "RECKLESS_CHARGE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "BATTLE_TRANCE",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "APOTHEOSIS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "IMMOLATE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "TRUE_GRIT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "WARCRY",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "HAVOC",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SHOCKWAVE",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "OFFERING",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "MADNESS",
+          "up": 0,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "THE_COURIER",
+        "PANDORAS_BOX",
+        "LETTER_OPENER",
+        "MUMMIFIED_HAND",
+        "AKABEKO",
+        "POTION_BELT",
+        "WHETSTONE",
+        "CENTENNIAL_PUZZLE",
+        "FUSION_HAMMER",
+        "GINGER",
+        "SINGING_BOWL",
+        "WAR_PAINT",
+        "POCKETWATCH",
+        "SMILING_MASK",
+        "THREAD_AND_NEEDLE"
+      ],
+      "potion_names": [
+        "FAIRY_POTION",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "SHOP_ROOM",
+    "split": "development"
+  },
+  {
+    "path": "~/sts/runs/traj-c38/3900012602-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "seed": 3900012602,
+    "rule": "potionfirst",
+    "step": 219,
+    "base_action": 2,
+    "candidate_action": 402653185,
+    "state": {
+      "floor": 54,
+      "act": 4,
+      "hp": 80,
+      "max_hp": 80,
+      "encounter": "DONU_AND_DECA",
+      "deck": 36,
+      "relics": 10,
+      "potions": 0,
+      "gold": 455,
+      "cards": [
+        {
+          "id": "ASCENDERS_BANE",
+          "up": 0,
+          "type": "CURSE"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "STRIKE_RED",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DEFEND_RED",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BASH",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "INFLAME",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "TWIN_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "CORRUPTION",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "HAVOC",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "DISARM",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "SPOT_WEAKNESS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "HEMOKINESIS",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FIEND_FIRE",
+          "up": 1,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "DARK_EMBRACE",
+          "up": 1,
+          "type": "POWER"
+        },
+        {
+          "id": "REAPER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "HEAVY_BLADE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "SHRUG_IT_OFF",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 1,
+          "type": "SKILL"
+        },
+        {
+          "id": "ANGER",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FLAME_BARRIER",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "JUGGERNAUT",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "BODY_SLAM",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "POMMEL_STRIKE",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "UPPERCUT",
+          "up": 0,
+          "type": "ATTACK"
+        },
+        {
+          "id": "FEEL_NO_PAIN",
+          "up": 0,
+          "type": "POWER"
+        },
+        {
+          "id": "IMPERVIOUS",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "BURNING_PACT",
+          "up": 0,
+          "type": "SKILL"
+        },
+        {
+          "id": "ARMAMENTS",
+          "up": 0,
+          "type": "SKILL"
+        }
+      ],
+      "relic_names": [
+        "BURNING_BLOOD",
+        "TORII",
+        "SELF_FORMING_CLAY",
+        "SLAVERS_COLLAR",
+        "CERAMIC_FISH",
+        "DARKSTONE_PERIAPT",
+        "FUSION_HAMMER",
+        "MEDICAL_KIT",
+        "OLD_COIN",
+        "PRESERVED_INSECT"
+      ],
+      "potion_names": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "keys": [
+        true,
+        true,
+        true
+      ]
+    },
+    "screen": "SHOP_ROOM",
+    "split": "development"
+  }
+]

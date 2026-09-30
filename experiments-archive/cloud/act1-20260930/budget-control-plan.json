@@ -1,0 +1,422 @@
+[
+  {
+    "seed": 3900013876,
+    "index": 60,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012282,
+    "index": 25,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013974,
+    "index": 62,
+    "floor": 14,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012698,
+    "index": 47,
+    "floor": 10,
+    "encounter": "GREMLIN_GANG",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013096,
+    "index": 66,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012941,
+    "index": 27,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012043,
+    "index": 26,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012020,
+    "index": 30,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012018,
+    "index": 38,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012388,
+    "index": 62,
+    "floor": 14,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013490,
+    "index": 21,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012729,
+    "index": 41,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013154,
+    "index": 39,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012841,
+    "index": 73,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013012,
+    "index": 49,
+    "floor": 12,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013038,
+    "index": 62,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013863,
+    "index": 61,
+    "floor": 13,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013094,
+    "index": 45,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013666,
+    "index": 61,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012937,
+    "index": 77,
+    "floor": 14,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013894,
+    "index": 27,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013982,
+    "index": 46,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012500,
+    "index": 50,
+    "floor": 10,
+    "encounter": "LOTS_OF_SLIMES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012525,
+    "index": 56,
+    "floor": 12,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013159,
+    "index": 50,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013955,
+    "index": 26,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013196,
+    "index": 22,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013410,
+    "index": 25,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013887,
+    "index": 61,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013659,
+    "index": 59,
+    "floor": 12,
+    "encounter": "BLUE_SLAVER",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013041,
+    "index": 31,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013170,
+    "index": 50,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013566,
+    "index": 43,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013144,
+    "index": 46,
+    "floor": 10,
+    "encounter": "THREE_LOUSE",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013957,
+    "index": 34,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012210,
+    "index": 54,
+    "floor": 10,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013039,
+    "index": 27,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012108,
+    "index": 31,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013737,
+    "index": 47,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012616,
+    "index": 34,
+    "floor": 8,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013934,
+    "index": 72,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012030,
+    "index": 62,
+    "floor": 13,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012585,
+    "index": 57,
+    "floor": 11,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012175,
+    "index": 27,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012946,
+    "index": 49,
+    "floor": 11,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013479,
+    "index": 65,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013108,
+    "index": 39,
+    "floor": 8,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013421,
+    "index": 34,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013068,
+    "index": 63,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013189,
+    "index": 62,
+    "floor": 12,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012265,
+    "index": 30,
+    "floor": 7,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012800,
+    "index": 44,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012095,
+    "index": 53,
+    "floor": 11,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900013039,
+    "index": 39,
+    "floor": 8,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012608,
+    "index": 49,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012458,
+    "index": 33,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012831,
+    "index": 64,
+    "floor": 13,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012810,
+    "index": 50,
+    "floor": 10,
+    "encounter": "LAGAVULIN",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012583,
+    "index": 37,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  },
+  {
+    "seed": 3900012789,
+    "index": 45,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "matched60control"
+  }
+]

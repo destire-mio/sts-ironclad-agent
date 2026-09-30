@@ -1,0 +1,1 @@
+{"status":"complete","seed":1034927625,"calls":2,"winner_replans":0,"simulations":1208000,"arms":[{"arm":"stock","status":"death","act":3,"floor":50,"hp":0,"simulations":824000},{"arm":"alternative","status":"death","act":2,"floor":33,"hp":0,"simulations":384000}],"heart_gain":0,"seconds":28.22026033292059,"policy_adoption":false,"unseen_acceptance_games":0}

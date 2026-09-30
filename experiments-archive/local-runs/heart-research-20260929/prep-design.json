@@ -1,0 +1,16 @@
+{
+  "eligible": {
+    "potionfirst": 314,
+    "rest100": 192,
+    "rest90": 73,
+    "lateengine": 12
+  },
+  "evaluated": {
+    "rest90": 73,
+    "lateengine": 12,
+    "potionfirst": 48
+  },
+  "selection": "SHA256 decimal seed order within rule; fixed 90 percent rest and potion order; rest/lateengine all, potion first48 (24 dev plus24 holdout)",
+  "cloud_teacher_decisions_audited": 13442,
+  "teacher_decision_mismatches": 0
+}

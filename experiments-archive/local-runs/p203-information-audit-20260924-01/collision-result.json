@@ -1,0 +1,192 @@
+{
+  "rows": 701,
+  "distinct_pair_inputs": 647,
+  "action_indistinguishable": 0,
+  "cross_family_repeated_inputs": 22,
+  "cross_family_conflicting_inputs": 3,
+  "repeated_rows": 76,
+  "conflicting_rows": 17,
+  "conflict_groups": [
+    [
+      {
+        "seed": 646368713,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/646368713/0-3.json.gz"
+      },
+      {
+        "seed": 842565869,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/842565869/0-3.json.gz"
+      },
+      {
+        "seed": 122086031,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/122086031/0-3.json.gz"
+      },
+      {
+        "seed": 794968324,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/794968324/0-3.json.gz"
+      },
+      {
+        "seed": 28326271,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/28326271/0-3.json.gz"
+      },
+      {
+        "seed": 691441164,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 1,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/691441164/0-3.json.gz"
+      },
+      {
+        "seed": 922674563,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/922674563/0-3.json.gz"
+      }
+    ],
+    [
+      {
+        "seed": 889898292,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/889898292/0-3.json.gz"
+      },
+      {
+        "seed": 619970766,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/619970766/0-3.json.gz"
+      },
+      {
+        "seed": 691411604,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/691411604/0-3.json.gz"
+      },
+      {
+        "seed": 358341957,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/358341957/0-3.json.gz"
+      },
+      {
+        "seed": 877997464,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": -1,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/877997464/0-3.json.gz"
+      },
+      {
+        "seed": 1140948835,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/1140948835/0-3.json.gz"
+      },
+      {
+        "seed": 311804071,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/311804071/0-3.json.gz"
+      },
+      {
+        "seed": 1143117334,
+        "index": 0,
+        "action": 3,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/1143117334/0-3.json.gz"
+      }
+    ],
+    [
+      {
+        "seed": 1140948835,
+        "index": 0,
+        "action": 1,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 1,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/1140948835/0-1.json.gz"
+      },
+      {
+        "seed": 1143117334,
+        "index": 0,
+        "action": 1,
+        "kind": 2,
+        "act": 1,
+        "floor": 0,
+        "delta": 0,
+        "record": "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01/collection/1143117334/0-1.json.gz"
+      }
+    ]
+  ],
+  "repeat_kind_counts": {
+    "2": 16,
+    "18": 6
+  },
+  "exact_pair_empirical_residual_sum": 2.232142857142857
+}

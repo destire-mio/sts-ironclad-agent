@@ -1,0 +1,80 @@
+{
+  "source_sha256": "16b02b63215622b8b2888386b0d824106c295f3e92ea6f56ded5b3f8fdae0f0f",
+  "rules": [
+    "neow_common_relic",
+    "elite_low_hp",
+    "flame_weak"
+  ],
+  "positives": 198,
+  "negatives": 100,
+  "rule_counts": {
+    "neow_common_relic": 125,
+    "elite_low_hp": 25,
+    "flame_weak": 48
+  },
+  "logged": [
+    {
+      "rule": "neow_common_relic",
+      "seed": 3900012005,
+      "index": 0,
+      "entry": {
+        "rule": "neow_common_relic",
+        "act": 1,
+        "floor": 0,
+        "hp": 68,
+        "screen": "EVENT_SCREEN",
+        "before": 0,
+        "after": 1
+      },
+      "fixes_off": 0,
+      "fixes_on": 1
+    },
+    {
+      "rule": "elite_low_hp",
+      "seed": 3900012023,
+      "index": 50,
+      "entry": {
+        "rule": "elite_low_hp",
+        "act": 1,
+        "floor": 11,
+        "hp": 17,
+        "screen": "MAP_SCREEN",
+        "before": 1,
+        "after": 2
+      },
+      "fixes_off": 0,
+      "fixes_on": 1
+    },
+    {
+      "rule": "flame_weak",
+      "seed": 3900012033,
+      "index": 23,
+      "entry": {
+        "rule": "flame_weak",
+        "act": 1,
+        "floor": 5,
+        "hp": 37,
+        "screen": "MAP_SCREEN",
+        "before": 2,
+        "after": 3
+      },
+      "fixes_off": 0,
+      "fixes_on": 1
+    }
+  ],
+  "error": null,
+  "loaded_sources": {
+    "p300_common.py": "9d4ad34b98c86d69346816826d3694c51c957163b663e37a129e665bf2e7cfc0",
+    "p300_stage_values.py": "2c45db1a193f1c5ca08e95cf29ac3e2d8c7700523cb8afaa8095d417110e9603",
+    "p300_heart_values.py": "cff115e234a7d25f4ba2d7d2c5f52af5e977ae79ec1fe705dec2a41332a4ea07",
+    "p300_teacher.py": "2c07c79ed60762ba20cfc94072067668a8c8c3a3573be9c3c4eac76a0c789e46",
+    "heart_early_card_scope.py": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+    "p300_play_v21.py": "cff321bed4131427db326837f2a8f00c4b0bfa5ed9ab11dbfe2a96c8c7a8543f",
+    "guide_rules.py": "ed8fa08ac524440eed9cb7af851cc5e389dd83c59294fb575f94edff8c0bc42b",
+    "baixi_rules.py": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+    "p300_play.py": "19e54ce827069418d80e77dd9675d2166dcc353b1a35f2603ed22431eda38764",
+    "p300_fight_data.py": "b04cf44802fdbb1e1ef0d15c3a14523bc0756c48a4e9417514c05351b6cd0728",
+    "p300_anchors.py": "e08c2fe2deb6ef0ad3eec8e592970e02add193d460ae112dd21c1b5b199727c7",
+    "p300_vlate.py": "08dd1a1d08ba94610bcd2d8b9d66a11538a2e24c72a323a7c6d870adce8c63f4"
+  }
+}

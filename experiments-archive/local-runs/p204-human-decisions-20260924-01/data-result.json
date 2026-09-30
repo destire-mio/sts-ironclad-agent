@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "source_runs": 2400,
+  "exclusions": {
+    "build": 241,
+    "character": 1724,
+    "prismatic": 28,
+    "custom_or_seeded": 1
+  },
+  "eligible_runs": 406,
+  "source_statuses": {
+    "bounded_prefix": 251,
+    "rejected_final_mismatch": 52,
+    "full_checked": 103
+  },
+  "stops": {
+    "opaque_relic": 79,
+    "unlogged_bell_curse": 22,
+    "removing_absent_card:Shame": 2,
+    "ambiguous_event_reward_order": 115,
+    "unknown_deck_card": 8,
+    "removing_absent_card:Regret": 2,
+    "removing_absent_card:Injury": 1,
+    "removing_absent_card:Doubt": 2,
+    "opaque_neow_relic": 8,
+    "removing_absent_card:Decay": 3,
+    "unlogged_neow_bell_curse": 1,
+    "removing_absent_card:HandOfGreed": 1,
+    "removing_absent_card:Parasite": 1,
+    "removing_absent_card:Normality": 3,
+    "removing_absent_card:Writhe": 2,
+    "removing_absent_card:Transmutation": 1
+  },
+  "choices": 5509,
+  "families": 342,
+  "by_act": {
+    "1": 3236,
+    "2": 1665,
+    "3": 573,
+    "4": 35
+  },
+  "late_families": 101,
+  "by_role": {
+    "fit": {
+      "families": 231,
+      "choices": 3633
+    },
+    "validation": {
+      "families": 72,
+      "choices": 1173
+    },
+    "held": {
+      "families": 39,
+      "choices": 703
+    }
+  },
+  "gate_passed": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "policy_adoption": false,
+  "hashes": {
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/protocol.json": "9d53fc32319bb9bb8a06ab7626d26ad804d2b9e1461fcdc1ab8786a647fefb85",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/vocabulary.json": "e1786be831df4ff28003ffffa6fbfe1aeaa15c29e73f1066dd3a4cd910c2e450",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/source-audit.json": "bafcb7945c8083dd3ed43e572e5d7b96bf8db1f9d18e49321d0a7dcb31902c75",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/choices.json": "a63e581a89c862bc1dd13a1d74819402e43303ef42d3ae9fb2b281e74795da28"
+  }
+}

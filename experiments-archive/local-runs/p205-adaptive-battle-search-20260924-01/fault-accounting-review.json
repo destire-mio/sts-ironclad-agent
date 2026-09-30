@@ -1,0 +1,56 @@
+{
+  "status": "audited_preflight_faults",
+  "historical_faults": 4,
+  "recorded_search_calls": 4,
+  "recorded_rollouts": 256,
+  "recorded_transitions": 4650,
+  "rows": [
+    {
+      "path": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/preflight/adaptive/1048131969/search-1-progress.json",
+      "sha256": "197e1921416b51beae90b9ed3b47241ce53daf9824c440f47fb54e1886b35bdc",
+      "rollouts": 64,
+      "transitions": 1379,
+      "updates": 72,
+      "partial_paths": 0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/preflight/adaptive/954075157/search-1-progress.json",
+      "sha256": "c416e99f5e2a31ba8dabc94ae4df4af163ccdf5b4953e4b1711aa8c21c7b26c6",
+      "rollouts": 64,
+      "transitions": 944,
+      "updates": 72,
+      "partial_paths": 0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/preflight/sampling/1048131969/search-1-progress.json",
+      "sha256": "398777409f1b10498fb3e2d445ce9954e740bc1f58a1b3a4d3265fe65ddc2c54",
+      "rollouts": 64,
+      "transitions": 1384,
+      "updates": 0,
+      "partial_paths": 0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/preflight/sampling/954075157/search-1-progress.json",
+      "sha256": "8b68594a7dbe5cfda368438aebf27ab769b2ab44905f389fbd872393a45d81a0",
+      "rollouts": 64,
+      "transitions": 943,
+      "updates": 0,
+      "partial_paths": 0
+    }
+  ],
+  "source_mapping": {
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_adaptive_rollouts.py": {
+      "archived": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/frozen-source/heart_adaptive_rollouts.py",
+      "sha256": "6e332d9f4196ddbee13089722ec45e6d6e6c0c7c7477e8c09667b329414eeedc"
+    },
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_adaptive_rollout_probe.py": {
+      "archived": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/frozen-source/heart_adaptive_rollout_probe.py",
+      "sha256": "5a21279666883096384be8df1af781624115808f45d6d8b9410138b47d0fd076"
+    }
+  },
+  "diagnosis": "Repeated signatures without moves and after clone match. One exploratory rollout from the first assigned fatal root changes only BattleContext repr sum, a static process counter declared inline static int sum; all other repr lines, native RNG and exposed counters match.",
+  "diagnostic_search_calls": 1,
+  "diagnostic_rollouts": 1,
+  "diagnostic_transitions": 23,
+  "corrective_scope": "Exclude only the repr sum marker from battle-state comparison. Keep native RNG, all other repr fields, counters and game fingerprints. Preserve all root assignments, algorithm, score, budget and gates. Repaired preparation is a separate attempt; old files remain."
+}

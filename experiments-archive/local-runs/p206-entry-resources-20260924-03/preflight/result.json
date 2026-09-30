@@ -1,0 +1,1 @@
+{"status":"passed","seed":1048131969,"nodes":16,"actions":15,"verdict":"surviving_prefix","native_tree_review":{"nodes":16,"transitions":15,"leaves":{"alive":1,"dead":0,"depth_bound":0,"incomplete":12},"verdict":"surviving_prefix"},"positive_witness_actions":22,"new_resolutions":0,"new_natural_games":0,"recovery_plans_replayed":24,"recovery_actions_replayed":1150}

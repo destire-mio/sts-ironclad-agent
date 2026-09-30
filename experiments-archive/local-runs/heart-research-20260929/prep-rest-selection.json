@@ -1,0 +1,8 @@
+{
+  "rule": "rest90",
+  "development_N": 36,
+  "rescued": 2,
+  "lost": 4,
+  "decision": "Do not adopt. Keep predeclared heldout evaluation for replication; do not fit an HP/upgrade gate to these six discordant seeds.",
+  "holdout_read": false
+}

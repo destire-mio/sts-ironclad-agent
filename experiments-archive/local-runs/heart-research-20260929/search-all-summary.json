@@ -1,0 +1,153 @@
+[
+  {
+    "rule": "search",
+    "variant": "boss6",
+    "n": 144,
+    "base_wins": 78,
+    "candidate_wins": 78,
+    "rescued": 1,
+    "lost": 1,
+    "net": 0,
+    "conditional_delta": 0,
+    "conservative95": [
+      -0.043405702280780445,
+      0.043405702280780445
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 38.86198875,
+    "candidate_cpu": 21.882870534722223,
+    "rescued_seeds": [
+      3900012803
+    ],
+    "lost_seeds": [
+      3900012594
+    ],
+    "historical_strata": {
+      "True": {
+        "n": 72,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482
+      },
+      "False": {
+        "n": 72,
+        "rescued": 1,
+        "lost": 1,
+        "whole_run_weight": 0.147
+      }
+    },
+    "estimated_whole_run_delta": 0.0
+  },
+  {
+    "rule": "search",
+    "variant": "h160",
+    "n": 48,
+    "base_wins": 26,
+    "candidate_wins": 26,
+    "rescued": 0,
+    "lost": 0,
+    "net": 0,
+    "conditional_delta": 0,
+    "conservative95": [
+      -0.0872490535775367,
+      0.0872490535775367
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 41.67863672916666,
+    "candidate_cpu": 92.356823125,
+    "rescued_seeds": [],
+    "lost_seeds": [],
+    "historical_strata": {
+      "True": {
+        "n": 24,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482
+      },
+      "False": {
+        "n": 24,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.147
+      }
+    },
+    "estimated_whole_run_delta": 0.0
+  },
+  {
+    "rule": "search",
+    "variant": "h320",
+    "n": 48,
+    "base_wins": 26,
+    "candidate_wins": 26,
+    "rescued": 0,
+    "lost": 0,
+    "net": 0,
+    "conditional_delta": 0,
+    "conservative95": [
+      -0.0872490535775367,
+      0.0872490535775367
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 41.67863672916666,
+    "candidate_cpu": 178.0228206666667,
+    "rescued_seeds": [],
+    "lost_seeds": [],
+    "historical_strata": {
+      "True": {
+        "n": 24,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482
+      },
+      "False": {
+        "n": 24,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.147
+      }
+    },
+    "estimated_whole_run_delta": 0.0
+  },
+  {
+    "rule": "search",
+    "variant": "rollout3",
+    "n": 48,
+    "base_wins": 26,
+    "candidate_wins": 27,
+    "rescued": 3,
+    "lost": 2,
+    "net": 1,
+    "conditional_delta": 0.020833333333333332,
+    "conservative95": [
+      -0.14873428337085914,
+      0.18559924837215103
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 41.67863672916666,
+    "candidate_cpu": 48.00206075,
+    "rescued_seeds": [
+      3900012719,
+      3900012688,
+      3900012225
+    ],
+    "lost_seeds": [
+      3900012321,
+      3900012494
+    ],
+    "historical_strata": {
+      "True": {
+        "n": 24,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482
+      },
+      "False": {
+        "n": 24,
+        "rescued": 3,
+        "lost": 2,
+        "whole_run_weight": 0.147
+      }
+    },
+    "estimated_whole_run_delta": 0.006124999999999999
+  }
+]

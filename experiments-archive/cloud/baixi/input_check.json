@@ -1,0 +1,10 @@
+{
+  "critical_changed": {},
+  "stage_changed": {},
+  "other_agent_source_changed": {},
+  "runtime_and_source_files_checked": 330,
+  "stage_files_checked": 22,
+  "collector_sha256": "38bdf06214fa01f81e1e5a82990e3b18cdeae321c7ac6ec9a20d843f3dac50f4",
+  "baseline_snapshot_sha256": "a04492039f417ecebf8c0318daf08be68648a6b7759b1352277c14e7bab97c68",
+  "rules_sha256": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f"
+}

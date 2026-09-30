@@ -1,0 +1,70 @@
+--- p300_play_v12.py
++++ p300_play_v14.py
+@@ -583,10 +583,22 @@
+     return [chosen] + sorted(rng.sample(others, min(cap - 1, len(others))))
+ 
+ 
++def heart_rest90(x, gc, actions, descriptors, chosen):
++    """Opt-in campfire hypothesis evaluated by same-root terminal forks."""
++    if int(gc.act) != 4 or gc.screen_state.name != 'REST_ROOM' or gc.cur_hp >= .9 * gc.max_hp:
++        return chosen
++    if {r.id.name for r in gc.relics} & {'MARK_OF_THE_BLOOM', 'COFFEE_DRIPPER'}:
++        return chosen
++    return next((i for i, a in enumerate(actions)
++                 if x.R.kind(descriptors[i]) == x.A.AK_REST and a.idx1 == 0), chosen)
++
++
+ def play(seed, arm, seeds, simulations, record_dir=None, start=None, stop=None):
+     x, parent = runtime()
+     sts, A, config = x.R.sts, x.A, x.config
+     features = set(arm.split('+'))
++    if {'heart40', 'spear160'} & features and (not {'reuse', 'c4q'} <= features or {'refine', 'c4r'} & features):
++        raise ValueError('heart40/spear160 require the reuse+c4q combat policy')
+     boss_multiplier = 12.0 if 'boss12' in features else config['boss_multiplier']
+     boss_multiplier = next((float(f[4:]) for f in features if f.startswith('boss') and f[4:].isdigit()), boss_multiplier)
+     # simsN: base search budget N thousand per decision (production 8).
+@@ -621,6 +633,7 @@
+     fixes = 0
+     fix3 = dict.fromkeys(FIX3_RULES, 0)
+     fix3_log = []
++    heart_rest_overrides = 0
+     route_params, route_cache = None, {}
+     guide2_cache = {}
+     map_forks = 0
+@@ -648,9 +661,13 @@
+                 if 'refine' in features:
+                     result = C.resolve_refining(gc, base_sims, boss_multiplier)
+                 elif 'reuse' in features and 'c4q' in features:
+-                    # combat4q: combat4p with no death-node potion bonus and no no-op potion drinks (needs combat4q runtime)
+-                    result = C.F.resolve_combat4q(gc, 80000 if 'heart2' in features and int(gc.act) == 4 else 40000,
+-                                                  boss_multiplier)
++                    budget = 80000 if 'heart2' in features and int(gc.act) == 4 else 40000
++                    # Fixed Heart-only budget; Shield/Spear retains the heart2 budget.
++                    if 'heart40' in features and gc.encounter.name == 'THE_HEART':
++                        budget = 40000
++                    if 'spear160' in features and gc.encounter.name == 'SHIELD_AND_SPEAR':
++                        budget = 160000
++                    result = C.F.resolve_combat4q(gc, budget, boss_multiplier)
+                 elif 'reuse' in features and 'c4p' in features:
+                     # combat4p: combat4 without potion discards in search (needs combat4p runtime)
+                     result = C.F.resolve_combat4p(gc, 80000 if 'heart2' in features and int(gc.act) == 4 else 40000,
+@@ -1029,6 +1046,10 @@
+                                          hp=int(gc.cur_hp), screen=gc.screen_state.name,
+                                          before=int(actions[chosen].bits), after=int(actions[index].bits)))
+                     chosen = index
++            if 'hrest90' in features and len(actions) > 1:
++                better = heart_rest90(x, gc, actions, descriptors, chosen)
++                heart_rest_overrides += better != chosen
++                chosen = better
+             if prefix is not None:
+                 prefix.append(dict(kind='outside', action=int(actions[chosen].bits), explored=was_explored))
+             actions[chosen].execute(gc)
+@@ -1041,6 +1062,8 @@
+                 explored=explored, hp=int(gc.cur_hp), max_hp=int(gc.max_hp))
+     if 'fix3' in features:
+         row.update(fix3=fix3, fix3_log=fix3_log)
++    if 'hrest90' in features:
++        row['heart_rest_overrides'] = heart_rest_overrides
+     if start is not None:
+         import p300_vlate as V
+         row['end_features'] = [float(v) for v in V.features(gc)] if int(gc.act) >= 3 and not row['error'] else None

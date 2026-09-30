@@ -1,0 +1,15 @@
+{
+  "pid": 59395,
+  "child_pid": 59408,
+  "pgid": 59408,
+  "command": [
+    "~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+    "-u",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_support_interventions.py",
+    "collect",
+    "--root",
+    "<repo-parent>/sts-rl-agent-principles/runs/p202-support-interventions-20260924-01"
+  ],
+  "started_at": 1790235766.99974,
+  "timeout_seconds": 5400
+}

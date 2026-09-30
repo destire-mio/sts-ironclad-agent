@@ -1,0 +1,402 @@
+[
+  {
+    "path": "~/sts/runs/traj-c42/3900013200-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "3d969fdd6a8495ab4374edc79ebd09a72dc820c190f3d0b58b0a60dbf526611c",
+    "status": "passed",
+    "seed": 3900013200,
+    "outside": 211,
+    "teacher_checks": 211,
+    "changed": 0,
+    "battles": 29,
+    "combat_actions": 922,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 17,
+      "max_hp": 87
+    },
+    "before_checks": 0,
+    "final_fingerprint": "310ee37e7a87b0aba00ed3e6aface84949a22a3623cba387da46f633a616f304"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013201-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "e8491083f73c88dcb9e0e1da3bc54c136535f4ec5128e78c69398b3fe814843e",
+    "status": "passed",
+    "seed": 3900013201,
+    "outside": 121,
+    "teacher_checks": 121,
+    "changed": 0,
+    "battles": 15,
+    "combat_actions": 469,
+    "terminal": {
+      "status": "death",
+      "floor": 33,
+      "act": 2,
+      "hp": 0,
+      "max_hp": 80
+    },
+    "before_checks": 0,
+    "final_fingerprint": "247b7f05c73585b8d7f3b9626ab122501159d60be37c6c908416379b25173a27"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013202-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "ac44e1732927c153f6869f1e70eced6a5474fd8c6ee038ee1ba2afce48a99670",
+    "status": "passed",
+    "seed": 3900013202,
+    "outside": 208,
+    "teacher_checks": 208,
+    "changed": 0,
+    "battles": 29,
+    "combat_actions": 871,
+    "terminal": {
+      "status": "death",
+      "floor": 56,
+      "act": 4,
+      "hp": 0,
+      "max_hp": 81
+    },
+    "before_checks": 0,
+    "final_fingerprint": "9785f149adbe89583d55d515763eedcbc333d101f2f43eb6493e756f38ea5551"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013203-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "6317886a5cfa2258ba68d23e612b7b05782c544ffffd693b10dddef680a364f1",
+    "status": "passed",
+    "seed": 3900013203,
+    "outside": 127,
+    "teacher_checks": 127,
+    "changed": 0,
+    "battles": 21,
+    "combat_actions": 505,
+    "terminal": {
+      "status": "death",
+      "floor": 33,
+      "act": 2,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "33c5b3fa49143cb7b25214c7a8b3a3a40c2a55d082e54f81fe9f196250656e29"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013204-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "91392117676a2c2b292faf6516d687fe3e4b68930d5b1050cdccb51910dff2fc",
+    "status": "passed",
+    "seed": 3900013204,
+    "outside": 222,
+    "teacher_checks": 222,
+    "changed": 0,
+    "battles": 32,
+    "combat_actions": 1082,
+    "terminal": {
+      "status": "death",
+      "floor": 56,
+      "act": 4,
+      "hp": 0,
+      "max_hp": 122
+    },
+    "before_checks": 0,
+    "final_fingerprint": "e1ca0c8fce35733cc5fd2063cbf9a5650c0dd355ba999fe910fd3221f77315b9"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013205-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "4a5826732575024ae84f26298fb9bdcd29ede93fc506f10eea1f0c744a617e42",
+    "status": "passed",
+    "seed": 3900013205,
+    "outside": 207,
+    "teacher_checks": 207,
+    "changed": 0,
+    "battles": 30,
+    "combat_actions": 767,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 65,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "ba5841d60d50109d1b7fb550d085b071add5197c2e5934a3d3d2c73e929c11b7"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013206-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "f30a91b9e2e4e8c7a87865b4e1cf56182142ac7d14115640dec6bf6f5e78c58a",
+    "status": "passed",
+    "seed": 3900013206,
+    "outside": 211,
+    "teacher_checks": 211,
+    "changed": 0,
+    "battles": 33,
+    "combat_actions": 1017,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 141,
+      "max_hp": 141
+    },
+    "before_checks": 0,
+    "final_fingerprint": "90dbbf31e7f89aa1157dc0b93959a39be93bb4e75fdeba4bcb79c2581ffed297"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013207-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "e75be169ebe855aa1a6abe80ad9dfedd7811b27250c5be4683a19a0af348002e",
+    "status": "passed",
+    "seed": 3900013207,
+    "outside": 211,
+    "teacher_checks": 211,
+    "changed": 0,
+    "battles": 27,
+    "combat_actions": 598,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 44,
+      "max_hp": 121
+    },
+    "before_checks": 0,
+    "final_fingerprint": "8b5e1e9e429bd5b5b83886eaf2383766b2cdfd03781f660b3134aea1f3a7d755"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013208-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "f8b958344910af6c7782cf5382fc76faac8de170ac798e515f7d828e861ac494",
+    "status": "passed",
+    "seed": 3900013208,
+    "outside": 206,
+    "teacher_checks": 206,
+    "changed": 0,
+    "battles": 30,
+    "combat_actions": 805,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 75,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "7bf1ef7d2d7c38af10aea5b0a94e240be8598dfa8886b71108f880715a97408a"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013209-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "718e8dcb50d8f47e5e683eb080adc08a112ebd098fe67690fd7e9eb12c7e89e4",
+    "status": "passed",
+    "seed": 3900013209,
+    "outside": 209,
+    "teacher_checks": 209,
+    "changed": 0,
+    "battles": 33,
+    "combat_actions": 986,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 59,
+      "max_hp": 59
+    },
+    "before_checks": 0,
+    "final_fingerprint": "98a1d2509928256fcaf991beb5129c889410b5d54181e386397bb4a6c570b666"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013210-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "f2b8f50147166ee29a06815584538f263735192484079f440ab5052041cbd9de",
+    "status": "passed",
+    "seed": 3900013210,
+    "outside": 84,
+    "teacher_checks": 84,
+    "changed": 0,
+    "battles": 13,
+    "combat_actions": 276,
+    "terminal": {
+      "status": "death",
+      "floor": 23,
+      "act": 2,
+      "hp": 0,
+      "max_hp": 52
+    },
+    "before_checks": 0,
+    "final_fingerprint": "13820b85bda3e9ef6a328984d3fbb59e81780166305d85da94a17fe28ebce9ef"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013211-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "485ae3447c1b72907e889f9d1b736a8e33ce0b474874c087cbd318413aa60632",
+    "status": "passed",
+    "seed": 3900013211,
+    "outside": 30,
+    "teacher_checks": 30,
+    "changed": 0,
+    "battles": 5,
+    "combat_actions": 92,
+    "terminal": {
+      "status": "death",
+      "floor": 8,
+      "act": 1,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "a5c57458c21c0fd29ebe9f80b789bc74611f57026f34981655a49da106fc2f11"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013212-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "e163847fca6182adae09090ae82118377ff5e048e0a9739144e485fcaa0c4ea4",
+    "status": "passed",
+    "seed": 3900013212,
+    "outside": 194,
+    "teacher_checks": 194,
+    "changed": 0,
+    "battles": 28,
+    "combat_actions": 789,
+    "terminal": {
+      "status": "death",
+      "floor": 56,
+      "act": 4,
+      "hp": 0,
+      "max_hp": 85
+    },
+    "before_checks": 0,
+    "final_fingerprint": "660e312a6106e340c1af2b5e0d76374810ae05dcc146432f3ba590f397d15464"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013213-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "837502b68e8e71db647cbe7ae42d0bee87dd7105e5fb02e87203c4a161145c26",
+    "status": "passed",
+    "seed": 3900013213,
+    "outside": 182,
+    "teacher_checks": 182,
+    "changed": 0,
+    "battles": 28,
+    "combat_actions": 747,
+    "terminal": {
+      "status": "death",
+      "floor": 50,
+      "act": 3,
+      "hp": 0,
+      "max_hp": 80
+    },
+    "before_checks": 0,
+    "final_fingerprint": "8fcd48fa92f4e0ad8847f9258203c06c5cc161691313c0d38da05361af534c3c"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013214-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "545cdb2ea9bdd5dee693da088f4606b2435b6feaba1f0aa65e56b05930088912",
+    "status": "passed",
+    "seed": 3900013214,
+    "outside": 21,
+    "teacher_checks": 21,
+    "changed": 0,
+    "battles": 3,
+    "combat_actions": 49,
+    "terminal": {
+      "status": "death",
+      "floor": 6,
+      "act": 1,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "66e6330fa35591b2415424adaae303fa009402b6e069f2dfee71dcb3936b7d65"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013215-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "704b810d34ecaf71982d7d2395d5f8314af6951df3fd7f342bc7ec2514779481",
+    "status": "passed",
+    "seed": 3900013215,
+    "outside": 40,
+    "teacher_checks": 40,
+    "changed": 0,
+    "battles": 8,
+    "combat_actions": 163,
+    "terminal": {
+      "status": "death",
+      "floor": 10,
+      "act": 1,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "0bdca5d63db8e0ba9816c445ec603e6e6395581ceb7361f474310cb24d79eb23"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013216-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "21e57bd28dcd754022fed055d087b01ce3ea1aabb3c5ca9a0446107a1583afa4",
+    "status": "passed",
+    "seed": 3900013216,
+    "outside": 212,
+    "teacher_checks": 212,
+    "changed": 0,
+    "battles": 32,
+    "combat_actions": 897,
+    "terminal": {
+      "status": "heart_win",
+      "floor": 57,
+      "act": 4,
+      "hp": 7,
+      "max_hp": 77
+    },
+    "before_checks": 0,
+    "final_fingerprint": "9a69ef31102e7bc4008456c2c93e1e9273dae771f2d537f6cfde369fb6160d73"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013217-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "425b9012cc602c49c1ed6a1505246d21a985f64819c4b8c27a8901899a77c2f2",
+    "status": "passed",
+    "seed": 3900013217,
+    "outside": 85,
+    "teacher_checks": 85,
+    "changed": 0,
+    "battles": 14,
+    "combat_actions": 252,
+    "terminal": {
+      "status": "death",
+      "floor": 24,
+      "act": 2,
+      "hp": 0,
+      "max_hp": 77
+    },
+    "before_checks": 0,
+    "final_fingerprint": "a3992a297f6632b14f898e970ff2d23dc7ed6a93bfff394c1322a45ad3e1cc2b"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013218-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "d03b5c8a4c03450725adf1aeb1000481400c9b481bb757da8f5b16fc0feb58fa",
+    "status": "passed",
+    "seed": 3900013218,
+    "outside": 103,
+    "teacher_checks": 103,
+    "changed": 0,
+    "battles": 13,
+    "combat_actions": 253,
+    "terminal": {
+      "status": "death",
+      "floor": 23,
+      "act": 2,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "0faa031fa18a22da46e7321bd4a79e5d7f96933b6c54203d4d54b46d76a6fd6d"
+  },
+  {
+    "path": "~/sts/runs/traj-c42/3900013219-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4+traj.json.gz",
+    "sha256": "c8705693f4060b5b7ce0a4265d4d0739b71278522ff01815c0fe17c8ee5ca9ef",
+    "status": "passed",
+    "seed": 3900013219,
+    "outside": 215,
+    "teacher_checks": 215,
+    "changed": 0,
+    "battles": 29,
+    "combat_actions": 619,
+    "terminal": {
+      "status": "death",
+      "floor": 56,
+      "act": 4,
+      "hp": 0,
+      "max_hp": 75
+    },
+    "before_checks": 0,
+    "final_fingerprint": "3ef58808dc61a4d18b227a2ed5745798e628fe39df96ce63b6d8024cdeabbd27"
+  }
+]

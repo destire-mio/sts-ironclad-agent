@@ -1,0 +1,173 @@
+{
+  "elite_low_hp": {
+    "description": "Act1: chosen elite, HP <=40%, no potions; choose visible REST>EVENT>MONSTER>SHOP alternative (legal order ties).",
+    "triggers": 25,
+    "rate": 0.0125,
+    "strata": {
+      "a1_nonboss": {
+        "N": 20,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 3,
+        "n": 3
+      },
+      "heart_win": {
+        "N": 2,
+        "n": 2
+      }
+    }
+  },
+  "flame_weak": {
+    "description": "Act1: chosen burning elite, 40%<HP<80%, no potions, <=1 nonstarter direct attack; choose non-elite REST>EVENT>MONSTER>SHOP.",
+    "triggers": 48,
+    "rate": 0.024,
+    "strata": {
+      "a1_nonboss": {
+        "N": 11,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 21,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 16,
+        "n": 8
+      }
+    }
+  },
+  "rest_before_forced_elite": {
+    "description": "Act1 pre-boss campfire: chosen smith, HP<=75%, every immediate map child is elite; REST if legal, no healing-block relic.",
+    "triggers": 107,
+    "rate": 0.0535,
+    "strata": {
+      "a1_nonboss": {
+        "N": 10,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 37,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 60,
+        "n": 8
+      }
+    }
+  },
+  "adventurer_low_hp": {
+    "description": "Act1 Dead Adventurer: chosen continue at <=50%HP and >25% (existing fix2 covers lower); leave.",
+    "triggers": 38,
+    "rate": 0.019,
+    "strata": {
+      "a1_nonboss": {
+        "N": 13,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 8,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 17,
+        "n": 8
+      }
+    }
+  },
+  "wing_preserve_hp": {
+    "description": "Act1 Golden Wing: chosen pay7HP/remove, no removable curse; take gold if legal else leave.",
+    "triggers": 247,
+    "rate": 0.1235,
+    "strata": {
+      "a1_nonboss": {
+        "N": 25,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 93,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 129,
+        "n": 8
+      }
+    }
+  },
+  "wall_transform": {
+    "description": "Act1 Living Wall: chosen remove, <=1 nonstarter direct attack, no removable curse; transform.",
+    "triggers": 115,
+    "rate": 0.0575,
+    "strata": {
+      "a1_nonboss": {
+        "N": 15,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 36,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 64,
+        "n": 8
+      }
+    }
+  },
+  "early_attack": {
+    "description": "Act1 floor<=5, <=1 nonstarter direct attack: chosen nonattack and not protected core; take one offered attack by frozen priority (no Immolate).",
+    "triggers": 792,
+    "rate": 0.396,
+    "strata": {
+      "a1_nonboss": {
+        "N": 89,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 321,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 382,
+        "n": 8
+      }
+    }
+  },
+  "shop_prepare_elite": {
+    "description": "Act1 shop: policy leaves with empty potions and all immediate children elite; buy one affordable whitelisted potion (fixed priority), then leave.",
+    "triggers": 6,
+    "rate": 0.003,
+    "strata": {
+      "a1_nonboss": {
+        "N": 1,
+        "n": 1
+      },
+      "other_loss": {
+        "N": 3,
+        "n": 3
+      },
+      "heart_win": {
+        "N": 2,
+        "n": 2
+      }
+    }
+  },
+  "neow_common_relic": {
+    "description": "Neow: chosen free remove or upgrade, free common relic is offered; choose common relic.",
+    "triggers": 125,
+    "rate": 0.0625,
+    "strata": {
+      "a1_nonboss": {
+        "N": 17,
+        "n": 8
+      },
+      "other_loss": {
+        "N": 44,
+        "n": 8
+      },
+      "heart_win": {
+        "N": 64,
+        "n": 8
+      }
+    }
+  }
+}

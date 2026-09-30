@@ -1,0 +1,47 @@
+--- <repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/frozen-source/heart_adaptive_rollouts.py
++++ <repo-parent>/sts-rl-agent-principles/agent/heart_adaptive_rollouts.py
+@@ -7,6 +7,7 @@
+ from dataclasses import dataclass
+ import math
+ import random
++import re
+ import time
+ 
+ 
+@@ -81,8 +82,16 @@
+     return (0.,-remaining/max(1,maximum),-float(len(monsters)),-float(battle.turn))
+ 
+ 
++def state_repr(text):
++    # BattleContext::sum is an inline static process-wide anti-optimization
++    # counter, not part of a battle. Executing any clone increments it.
++    result,count=re.subn(r', sum: -?\d+, seed:', ', sum: <process_counter>, seed:',text)
++    require(count==1,'unrecognized native battle diagnostic layout')
++    return result
++
++
+ def signature(battle):
+-    return dict(repr=repr(battle),rng=dict(battle.rng_states),outcome=int(battle.outcome),
++    return dict(repr=state_repr(repr(battle)),rng=dict(battle.rng_states),outcome=int(battle.outcome),
+                 turn=int(battle.turn),potions=list(battle.potions),counters=dict(battle.snapshot_counters))
+ 
+ 
+--- <repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/frozen-source/heart_adaptive_rollout_probe.py
++++ <repo-parent>/sts-rl-agent-principles/agent/heart_adaptive_rollout_probe.py
+@@ -174,9 +174,15 @@
+                 rollouts=sum(c['rollouts'] for c in costs),transitions=sum(c['transitions'] for c in costs),updates=sum(c['updates'] for c in costs),
+                 partial_paths=sum(c['partial_paths'] for c in costs),search_seconds=sum(c['seconds'] for c in costs),seconds=time.monotonic()-started)
+     except Exception:
++        partial=[]
++        for i in range(len(costs)+1,search_calls+1):
++            path=folder/f'search-{i}-progress.json'
++            if path.exists():partial.append(E.read(path))
+         report=dict(status='fault',seed=seed,arm=arm,group=assignment['group'],phase=phase,search_calls=search_calls,
+             controls=controls,suffix_calls=suffix_calls,full_replans=full_replans,error=traceback.format_exc(),seconds=time.monotonic()-started,
+-            recorded_rollouts=sum(c['rollouts'] for c in costs),limits='An interrupted search can have unrecorded work; this is not a game loss.')
++            recorded_rollouts=sum(c['rollouts'] for c in costs+partial),
++            transitions=sum(c['transitions'] for c in costs+partial),updates=sum(c['updates'] for c in costs+partial),
++            limits='Includes progress ledgers for unfinished searches; a process crash can leave unrecorded work. This is not a game loss.')
+     M.put(folder/'result.json',report);return report
+ 
+ 

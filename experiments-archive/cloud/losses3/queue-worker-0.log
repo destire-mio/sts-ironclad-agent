@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "~/sts/runs/losses3/queue_worker.py", line 20, in <module>
+    job=json.loads(path.read_text());found=True;start=time.time()
+                   ^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 45: invalid start byte

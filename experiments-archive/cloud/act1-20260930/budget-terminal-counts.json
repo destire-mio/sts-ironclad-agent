@@ -1,0 +1,21 @@
+{
+  "rule": "act1_elite_budget",
+  "condition": "Act 1 elite encounter and HP >= 40% max HP; budget 40000 -> 160000.",
+  "trigger_games": 1990,
+  "trigger_battles": 4191,
+  "strata": {
+    "a1_nonboss": {
+      "N": 192,
+      "n": 32
+    },
+    "other_loss": {
+      "N": 796,
+      "n": 32
+    },
+    "heart_win": {
+      "N": 1002,
+      "n": 32
+    }
+  },
+  "note": "First eligible battle per game; one fixed larger search, reuse prior identical-root 4N actions. Full original suffix is a validated deterministic cache. No terminal-budget result used to select roots."
+}

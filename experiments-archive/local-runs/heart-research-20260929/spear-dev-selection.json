@@ -1,0 +1,60 @@
+{
+  "development": {
+    "rule": "spear160",
+    "variant": "candidate",
+    "n": 24,
+    "base_wins": 9,
+    "candidate_wins": 10,
+    "rescued": 2,
+    "lost": 1,
+    "net": 1,
+    "conditional_delta": 0.041666666666666664,
+    "conservative95": [
+      -0.230845814433839,
+      0.29747300632884227
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 35.9608305,
+    "candidate_cpu": 33.822258125000005,
+    "rescued_seeds": [
+      3900012719,
+      3900012494
+    ],
+    "lost_seeds": [
+      3900012688
+    ],
+    "historical_strata": {
+      "heart_win": {
+        "n": 8,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.482,
+        "delta": 0
+      },
+      "heart_loss": {
+        "n": 8,
+        "rescued": 2,
+        "lost": 1,
+        "whole_run_weight": 0.147,
+        "delta": 0.125
+      },
+      "spear_loss": {
+        "n": 8,
+        "rescued": 0,
+        "lost": 0,
+        "whole_run_weight": 0.022,
+        "delta": 0
+      }
+    },
+    "estimated_whole_run_delta": 0.018375,
+    "projected_cpu_seconds_per_started_run_delta": 0.6726915151250028,
+    "heart_reached": {
+      "base": 17,
+      "candidate": 18
+    },
+    "both_reached_n": 17,
+    "heart_hp_delta_among_both_reached": 2.235294117647059
+  },
+  "decision": "Keep predeclared160k rule unchanged; wait for independent heldout terminal result and audit before production flag",
+  "holdout_read": false
+}

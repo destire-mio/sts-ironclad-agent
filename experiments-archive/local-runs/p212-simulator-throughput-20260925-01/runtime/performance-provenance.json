@@ -1,0 +1,13 @@
+{
+  "parent_runtime": "<repo-parent>/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "parent_manifest_sha256": "920c0eea7f025c583746322f638e4fef62be626b795eff7903bd7baf1fce1e88",
+  "parent_identity": {
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4"
+  },
+  "variant": "pgo",
+  "build_report_sha256": "fab3c45ac6d965d50e0fe7e90418044cadfe1d7764e1c46611b3d3276578cab9",
+  "paired_timing_sha256": "d4127901dae67807c7695b5d1bf308493a8d4cda359d2f4434bd775d22975f7d",
+  "change": "Native performance only; identical parent weights, configuration, simulation budget and Python policy.",
+  "full_policy_verification": "../runtime-verification.json (recorded separately after packaging)"
+}

@@ -1,0 +1,3147 @@
+{
+  "3900012000": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012001": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": true
+  },
+  "3900012002": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012006": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012007": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 92,
+    "terminal_end_sequence": false
+  },
+  "3900012010": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012011": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012012": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012013": {
+    "player_sequence_loss": 38,
+    "end_sequence_loss": 114,
+    "terminal_end_sequence": false
+  },
+  "3900012014": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012016": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 24,
+    "terminal_end_sequence": true
+  },
+  "3900012021": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": true
+  },
+  "3900012019": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012015": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012020": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012022": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012024": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012025": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 121,
+    "terminal_end_sequence": false
+  },
+  "3900012033": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": false
+  },
+  "3900012030": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012034": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": true
+  },
+  "3900012029": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012037": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012036": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": false
+  },
+  "3900012038": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012035": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 60,
+    "terminal_end_sequence": false
+  },
+  "3900012040": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 72,
+    "terminal_end_sequence": true
+  },
+  "3900012045": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012044": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012046": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 81,
+    "terminal_end_sequence": false
+  },
+  "3900012041": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012051": {
+    "player_sequence_loss": 35,
+    "end_sequence_loss": 94,
+    "terminal_end_sequence": false
+  },
+  "3900012054": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012048": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": false
+  },
+  "3900012056": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012057": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012059": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012061": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012062": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012060": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012063": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012065": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": true
+  },
+  "3900012064": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012067": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012066": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012071": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012073": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012069": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 33,
+    "terminal_end_sequence": false
+  },
+  "3900012074": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 27,
+    "terminal_end_sequence": false
+  },
+  "3900012075": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012077": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012078": {
+    "player_sequence_loss": 38,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": true
+  },
+  "3900012079": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": true
+  },
+  "3900012084": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012081": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012085": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 85,
+    "terminal_end_sequence": false
+  },
+  "3900012086": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012087": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012092": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012091": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012093": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012094": {
+    "player_sequence_loss": 50,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": true
+  },
+  "3900012099": {
+    "player_sequence_loss": 49,
+    "end_sequence_loss": 14,
+    "terminal_end_sequence": false
+  },
+  "3900012095": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": false
+  },
+  "3900012101": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": false
+  },
+  "3900012097": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": true
+  },
+  "3900012105": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012106": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012104": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012107": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012108": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012109": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012110": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012111": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012112": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012115": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012113": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012114": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012118": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": false
+  },
+  "3900012120": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": true
+  },
+  "3900012117": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012122": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": true
+  },
+  "3900012119": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": true
+  },
+  "3900012123": {
+    "player_sequence_loss": 55,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012121": {
+    "player_sequence_loss": 37,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012124": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 22,
+    "terminal_end_sequence": false
+  },
+  "3900012125": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 67,
+    "terminal_end_sequence": true
+  },
+  "3900012127": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": true
+  },
+  "3900012126": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 75,
+    "terminal_end_sequence": false
+  },
+  "3900012128": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012130": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012132": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012135": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012134": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012139": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012137": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012138": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012140": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012142": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012148": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012146": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012144": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012150": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": true
+  },
+  "3900012152": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012145": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012151": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012154": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": false
+  },
+  "3900012158": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": true
+  },
+  "3900012156": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012155": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012159": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012160": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012161": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012162": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012165": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012163": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012164": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": false
+  },
+  "3900012166": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012173": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": true
+  },
+  "3900012167": {
+    "player_sequence_loss": 48,
+    "end_sequence_loss": 76,
+    "terminal_end_sequence": false
+  },
+  "3900012170": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 39,
+    "terminal_end_sequence": false
+  },
+  "3900012171": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": true
+  },
+  "3900012177": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012175": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": true
+  },
+  "3900012183": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": false
+  },
+  "3900012181": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012184": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": true
+  },
+  "3900012188": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 66,
+    "terminal_end_sequence": false
+  },
+  "3900012185": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": false
+  },
+  "3900012186": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": false
+  },
+  "3900012190": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 88,
+    "terminal_end_sequence": false
+  },
+  "3900012189": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012192": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": true
+  },
+  "3900012193": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012194": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": true
+  },
+  "3900012195": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012197": {
+    "player_sequence_loss": 39,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012202": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": true
+  },
+  "3900012198": {
+    "player_sequence_loss": 40,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012201": {
+    "player_sequence_loss": 35,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012203": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 69,
+    "terminal_end_sequence": true
+  },
+  "3900012200": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 78,
+    "terminal_end_sequence": true
+  },
+  "3900012206": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": true
+  },
+  "3900012207": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 54,
+    "terminal_end_sequence": false
+  },
+  "3900012208": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012210": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012212": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": true
+  },
+  "3900012215": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012216": {
+    "player_sequence_loss": 47,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012217": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012221": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 29,
+    "terminal_end_sequence": true
+  },
+  "3900012224": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012219": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012220": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012222": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012225": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 14,
+    "terminal_end_sequence": true
+  },
+  "3900012228": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012229": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012226": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012234": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 27,
+    "terminal_end_sequence": false
+  },
+  "3900012233": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": false
+  },
+  "3900012230": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012232": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012238": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012239": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": false
+  },
+  "3900012241": {
+    "player_sequence_loss": 49,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012240": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 29,
+    "terminal_end_sequence": true
+  },
+  "3900012242": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 33,
+    "terminal_end_sequence": false
+  },
+  "3900012244": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": true
+  },
+  "3900012243": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 62,
+    "terminal_end_sequence": false
+  },
+  "3900012246": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012250": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": true
+  },
+  "3900012248": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012249": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 76,
+    "terminal_end_sequence": false
+  },
+  "3900012253": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 93,
+    "terminal_end_sequence": false
+  },
+  "3900012252": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012255": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012258": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012261": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012259": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012262": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012266": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 25,
+    "terminal_end_sequence": false
+  },
+  "3900012264": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": false
+  },
+  "3900012265": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012274": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": false
+  },
+  "3900012272": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012275": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012278": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": true
+  },
+  "3900012282": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": true
+  },
+  "3900012276": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 20,
+    "terminal_end_sequence": false
+  },
+  "3900012279": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012283": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 29,
+    "terminal_end_sequence": true
+  },
+  "3900012284": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": false
+  },
+  "3900012285": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 71,
+    "terminal_end_sequence": true
+  },
+  "3900012288": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": true
+  },
+  "3900012286": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": false
+  },
+  "3900012293": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": true
+  },
+  "3900012289": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012290": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012291": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012295": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 105,
+    "terminal_end_sequence": false
+  },
+  "3900012296": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 24,
+    "terminal_end_sequence": false
+  },
+  "3900012298": {
+    "player_sequence_loss": 43,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012297": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012301": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 9,
+    "terminal_end_sequence": false
+  },
+  "3900012300": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012302": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012305": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012308": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": true
+  },
+  "3900012303": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012309": {
+    "player_sequence_loss": 44,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012318": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 78,
+    "terminal_end_sequence": true
+  },
+  "3900012319": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": true
+  },
+  "3900012310": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012316": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012320": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 83,
+    "terminal_end_sequence": false
+  },
+  "3900012326": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 84,
+    "terminal_end_sequence": false
+  },
+  "3900012321": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 14,
+    "terminal_end_sequence": false
+  },
+  "3900012328": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": true
+  },
+  "3900012325": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 98,
+    "terminal_end_sequence": true
+  },
+  "3900012330": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 54,
+    "terminal_end_sequence": false
+  },
+  "3900012333": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": false
+  },
+  "3900012329": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012331": {
+    "player_sequence_loss": 66,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012334": {
+    "player_sequence_loss": 44,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012335": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012340": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 61,
+    "terminal_end_sequence": false
+  },
+  "3900012341": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 84,
+    "terminal_end_sequence": false
+  },
+  "3900012342": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012343": {
+    "player_sequence_loss": 73,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012345": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": false
+  },
+  "3900012346": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012347": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012352": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012348": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": true
+  },
+  "3900012349": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012358": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": true
+  },
+  "3900012353": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012359": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 57,
+    "terminal_end_sequence": false
+  },
+  "3900012356": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012363": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": true
+  },
+  "3900012360": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012361": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012364": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": false
+  },
+  "3900012365": {
+    "player_sequence_loss": 41,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012367": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": true
+  },
+  "3900012368": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 57,
+    "terminal_end_sequence": false
+  },
+  "3900012369": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 59,
+    "terminal_end_sequence": false
+  },
+  "3900012370": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": true
+  },
+  "3900012371": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012376": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 93,
+    "terminal_end_sequence": false
+  },
+  "3900012374": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012373": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012379": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": true
+  },
+  "3900012378": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": false
+  },
+  "3900012377": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012381": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012383": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 32,
+    "terminal_end_sequence": false
+  },
+  "3900012388": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012387": {
+    "player_sequence_loss": 37,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012390": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012392": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012395": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 22,
+    "terminal_end_sequence": false
+  },
+  "3900012393": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 60,
+    "terminal_end_sequence": false
+  },
+  "3900012399": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012397": {
+    "player_sequence_loss": 41,
+    "end_sequence_loss": 43,
+    "terminal_end_sequence": true
+  },
+  "3900012401": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": true
+  },
+  "3900012400": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": false
+  },
+  "3900012403": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012404": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012405": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 32,
+    "terminal_end_sequence": false
+  },
+  "3900012406": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 70,
+    "terminal_end_sequence": true
+  },
+  "3900012409": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012408": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012410": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 101,
+    "terminal_end_sequence": false
+  },
+  "3900012411": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012415": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": true
+  },
+  "3900012414": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012418": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012413": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012419": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 67,
+    "terminal_end_sequence": false
+  },
+  "3900012421": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012425": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012422": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 72,
+    "terminal_end_sequence": false
+  },
+  "3900012426": {
+    "player_sequence_loss": 41,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": true
+  },
+  "3900012429": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 20,
+    "terminal_end_sequence": false
+  },
+  "3900012430": {
+    "player_sequence_loss": 38,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012434": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012432": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012438": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012444": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012440": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012442": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 52,
+    "terminal_end_sequence": false
+  },
+  "3900012445": {
+    "player_sequence_loss": 39,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012446": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012448": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": true
+  },
+  "3900012447": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012451": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 36,
+    "terminal_end_sequence": false
+  },
+  "3900012454": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012455": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": true
+  },
+  "3900012460": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 86,
+    "terminal_end_sequence": false
+  },
+  "3900012461": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012464": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012463": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012465": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": true
+  },
+  "3900012473": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": true
+  },
+  "3900012466": {
+    "player_sequence_loss": 40,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012472": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": false
+  },
+  "3900012477": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012480": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012479": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012481": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012482": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012483": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 39,
+    "terminal_end_sequence": false
+  },
+  "3900012486": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012490": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012487": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012496": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 33,
+    "terminal_end_sequence": true
+  },
+  "3900012494": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 80,
+    "terminal_end_sequence": false
+  },
+  "3900012500": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 68,
+    "terminal_end_sequence": false
+  },
+  "3900012497": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": false
+  },
+  "3900012502": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": true
+  },
+  "3900012501": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012499": {
+    "player_sequence_loss": 40,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012504": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": false
+  },
+  "3900012506": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 9,
+    "terminal_end_sequence": true
+  },
+  "3900012509": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": false
+  },
+  "3900012505": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": false
+  },
+  "3900012511": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012512": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012514": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": false
+  },
+  "3900012515": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012516": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": false
+  },
+  "3900012519": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": true
+  },
+  "3900012521": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012525": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012527": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012528": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 52,
+    "terminal_end_sequence": false
+  },
+  "3900012529": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": false
+  },
+  "3900012530": {
+    "player_sequence_loss": 76,
+    "end_sequence_loss": 72,
+    "terminal_end_sequence": false
+  },
+  "3900012531": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012533": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012535": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012534": {
+    "player_sequence_loss": 0,
+    "end_sequence_loss": 20,
+    "terminal_end_sequence": false
+  },
+  "3900012539": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012541": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012536": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012542": {
+    "player_sequence_loss": 67,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012544": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 25,
+    "terminal_end_sequence": false
+  },
+  "3900012545": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012547": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 3,
+    "terminal_end_sequence": false
+  },
+  "3900012549": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": true
+  },
+  "3900012546": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012550": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 39,
+    "terminal_end_sequence": true
+  },
+  "3900012548": {
+    "player_sequence_loss": 35,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": true
+  },
+  "3900012553": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": true
+  },
+  "3900012552": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012554": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": false
+  },
+  "3900012556": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012559": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": true
+  },
+  "3900012557": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 59,
+    "terminal_end_sequence": false
+  },
+  "3900012560": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012561": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012563": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012562": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012572": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012565": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012576": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 65,
+    "terminal_end_sequence": true
+  },
+  "3900012578": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 43,
+    "terminal_end_sequence": false
+  },
+  "3900012574": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": false
+  },
+  "3900012581": {
+    "player_sequence_loss": 39,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": false
+  },
+  "3900012580": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012582": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012583": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012584": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 43,
+    "terminal_end_sequence": false
+  },
+  "3900012586": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 73,
+    "terminal_end_sequence": false
+  },
+  "3900012588": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012590": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012587": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": false
+  },
+  "3900012591": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012594": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 33,
+    "terminal_end_sequence": false
+  },
+  "3900012592": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 67,
+    "terminal_end_sequence": false
+  },
+  "3900012593": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": false
+  },
+  "3900012595": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012597": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012596": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012598": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012600": {
+    "player_sequence_loss": 35,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012601": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012599": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012602": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012605": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": true
+  },
+  "3900012609": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": true
+  },
+  "3900012607": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 14,
+    "terminal_end_sequence": false
+  },
+  "3900012608": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 67,
+    "terminal_end_sequence": false
+  },
+  "3900012606": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": true
+  },
+  "3900012611": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 39,
+    "terminal_end_sequence": false
+  },
+  "3900012613": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": false
+  },
+  "3900012615": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": true
+  },
+  "3900012612": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 109,
+    "terminal_end_sequence": true
+  },
+  "3900012620": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 25,
+    "terminal_end_sequence": true
+  },
+  "3900012617": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 87,
+    "terminal_end_sequence": false
+  },
+  "3900012623": {
+    "player_sequence_loss": 48,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012622": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012621": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012624": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012627": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 24,
+    "terminal_end_sequence": false
+  },
+  "3900012628": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": false
+  },
+  "3900012626": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012629": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012631": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 106,
+    "terminal_end_sequence": false
+  },
+  "3900012632": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012636": {
+    "player_sequence_loss": 45,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012633": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012637": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012641": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012638": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 25,
+    "terminal_end_sequence": false
+  },
+  "3900012640": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012643": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012644": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 27,
+    "terminal_end_sequence": false
+  },
+  "3900012646": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 20,
+    "terminal_end_sequence": false
+  },
+  "3900012648": {
+    "player_sequence_loss": 37,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": false
+  },
+  "3900012647": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 59,
+    "terminal_end_sequence": false
+  },
+  "3900012649": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 70,
+    "terminal_end_sequence": false
+  },
+  "3900012650": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012651": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012658": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 26,
+    "terminal_end_sequence": false
+  },
+  "3900012654": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 65,
+    "terminal_end_sequence": false
+  },
+  "3900012652": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012661": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": true
+  },
+  "3900012665": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012668": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 22,
+    "terminal_end_sequence": true
+  },
+  "3900012666": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": false
+  },
+  "3900012671": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 71,
+    "terminal_end_sequence": true
+  },
+  "3900012667": {
+    "player_sequence_loss": 36,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012670": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": true
+  },
+  "3900012672": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 11,
+    "terminal_end_sequence": false
+  },
+  "3900012676": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012677": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 40,
+    "terminal_end_sequence": false
+  },
+  "3900012679": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012673": {
+    "player_sequence_loss": 43,
+    "end_sequence_loss": 43,
+    "terminal_end_sequence": false
+  },
+  "3900012680": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 32,
+    "terminal_end_sequence": true
+  },
+  "3900012681": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012683": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012682": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": true
+  },
+  "3900012688": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012684": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 24,
+    "terminal_end_sequence": true
+  },
+  "3900012689": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012691": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 16,
+    "terminal_end_sequence": false
+  },
+  "3900012692": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 49,
+    "terminal_end_sequence": false
+  },
+  "3900012693": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012696": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012694": {
+    "player_sequence_loss": 39,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012699": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 79,
+    "terminal_end_sequence": false
+  },
+  "3900012701": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012702": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": false
+  },
+  "3900012703": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 52,
+    "terminal_end_sequence": false
+  },
+  "3900012705": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012707": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012708": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012704": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012715": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": true
+  },
+  "3900012712": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 72,
+    "terminal_end_sequence": true
+  },
+  "3900012711": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 31,
+    "terminal_end_sequence": false
+  },
+  "3900012713": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012716": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": false
+  },
+  "3900012717": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": false
+  },
+  "3900012718": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 36,
+    "terminal_end_sequence": false
+  },
+  "3900012720": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": true
+  },
+  "3900012719": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 108,
+    "terminal_end_sequence": true
+  },
+  "3900012724": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 43,
+    "terminal_end_sequence": true
+  },
+  "3900012721": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": true
+  },
+  "3900012722": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012723": {
+    "player_sequence_loss": 32,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012729": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 15,
+    "terminal_end_sequence": false
+  },
+  "3900012733": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012732": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012727": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012740": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012737": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": true
+  },
+  "3900012741": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012739": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012742": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012744": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 91,
+    "terminal_end_sequence": true
+  },
+  "3900012746": {
+    "player_sequence_loss": 23,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": true
+  },
+  "3900012747": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012749": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 80,
+    "terminal_end_sequence": false
+  },
+  "3900012752": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 56,
+    "terminal_end_sequence": true
+  },
+  "3900012753": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012757": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": true
+  },
+  "3900012756": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 32,
+    "terminal_end_sequence": false
+  },
+  "3900012755": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 50,
+    "terminal_end_sequence": false
+  },
+  "3900012760": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": false
+  },
+  "3900012759": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 68,
+    "terminal_end_sequence": false
+  },
+  "3900012761": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012765": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 52,
+    "terminal_end_sequence": false
+  },
+  "3900012762": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": false
+  },
+  "3900012767": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012770": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": true
+  },
+  "3900012771": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": true
+  },
+  "3900012769": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": true
+  },
+  "3900012776": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": true
+  },
+  "3900012773": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": false
+  },
+  "3900012774": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012772": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012777": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012783": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012778": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 66,
+    "terminal_end_sequence": false
+  },
+  "3900012787": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": true
+  },
+  "3900012782": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": true
+  },
+  "3900012786": {
+    "player_sequence_loss": 5,
+    "end_sequence_loss": 36,
+    "terminal_end_sequence": false
+  },
+  "3900012785": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012788": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": false
+  },
+  "3900012789": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012791": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012792": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 69,
+    "terminal_end_sequence": false
+  },
+  "3900012793": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012796": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012800": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012799": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012801": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 55,
+    "terminal_end_sequence": false
+  },
+  "3900012802": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012803": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012804": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012808": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": true
+  },
+  "3900012810": {
+    "player_sequence_loss": 42,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": true
+  },
+  "3900012807": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012805": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012813": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 48,
+    "terminal_end_sequence": false
+  },
+  "3900012816": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 106,
+    "terminal_end_sequence": false
+  },
+  "3900012814": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012818": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": true
+  },
+  "3900012817": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012819": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 61,
+    "terminal_end_sequence": false
+  },
+  "3900012822": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 66,
+    "terminal_end_sequence": false
+  },
+  "3900012820": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": false
+  },
+  "3900012821": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 81,
+    "terminal_end_sequence": false
+  },
+  "3900012829": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 34,
+    "terminal_end_sequence": true
+  },
+  "3900012826": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": true
+  },
+  "3900012828": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012830": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": false
+  },
+  "3900012831": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012832": {
+    "player_sequence_loss": 44,
+    "end_sequence_loss": 65,
+    "terminal_end_sequence": false
+  },
+  "3900012834": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 58,
+    "terminal_end_sequence": true
+  },
+  "3900012838": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012839": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": true
+  },
+  "3900012841": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012840": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 46,
+    "terminal_end_sequence": true
+  },
+  "3900012848": {
+    "player_sequence_loss": 51,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": true
+  },
+  "3900012849": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 69,
+    "terminal_end_sequence": false
+  },
+  "3900012850": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 21,
+    "terminal_end_sequence": false
+  },
+  "3900012853": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 66,
+    "terminal_end_sequence": false
+  },
+  "3900012852": {
+    "player_sequence_loss": 3,
+    "end_sequence_loss": 6,
+    "terminal_end_sequence": false
+  },
+  "3900012854": {
+    "player_sequence_loss": 1,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012856": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 68,
+    "terminal_end_sequence": false
+  },
+  "3900012855": {
+    "player_sequence_loss": 27,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012864": {
+    "player_sequence_loss": 10,
+    "end_sequence_loss": 60,
+    "terminal_end_sequence": false
+  },
+  "3900012858": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012866": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": false
+  },
+  "3900012860": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012868": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 41,
+    "terminal_end_sequence": false
+  },
+  "3900012869": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 47,
+    "terminal_end_sequence": true
+  },
+  "3900012871": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 60,
+    "terminal_end_sequence": false
+  },
+  "3900012874": {
+    "player_sequence_loss": 2,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": false
+  },
+  "3900012877": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 9,
+    "terminal_end_sequence": false
+  },
+  "3900012876": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 54,
+    "terminal_end_sequence": false
+  },
+  "3900012878": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 37,
+    "terminal_end_sequence": true
+  },
+  "3900012879": {
+    "player_sequence_loss": 19,
+    "end_sequence_loss": 30,
+    "terminal_end_sequence": false
+  },
+  "3900012883": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012886": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": true
+  },
+  "3900012884": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012882": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": true
+  },
+  "3900012887": {
+    "player_sequence_loss": 31,
+    "end_sequence_loss": 68,
+    "terminal_end_sequence": false
+  },
+  "3900012890": {
+    "player_sequence_loss": 20,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": true
+  },
+  "3900012896": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 18,
+    "terminal_end_sequence": false
+  },
+  "3900012893": {
+    "player_sequence_loss": 11,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  },
+  "3900012894": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": false
+  },
+  "3900012891": {
+    "player_sequence_loss": 22,
+    "end_sequence_loss": 68,
+    "terminal_end_sequence": false
+  },
+  "3900012898": {
+    "player_sequence_loss": 25,
+    "end_sequence_loss": 52,
+    "terminal_end_sequence": false
+  },
+  "3900012900": {
+    "player_sequence_loss": 29,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": false
+  },
+  "3900012903": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012905": {
+    "player_sequence_loss": 40,
+    "end_sequence_loss": 85,
+    "terminal_end_sequence": false
+  },
+  "3900012909": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 36,
+    "terminal_end_sequence": true
+  },
+  "3900012911": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012906": {
+    "player_sequence_loss": 47,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012912": {
+    "player_sequence_loss": 41,
+    "end_sequence_loss": 64,
+    "terminal_end_sequence": false
+  },
+  "3900012915": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012913": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 12,
+    "terminal_end_sequence": false
+  },
+  "3900012917": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": true
+  },
+  "3900012914": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012916": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 8,
+    "terminal_end_sequence": false
+  },
+  "3900012918": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": false
+  },
+  "3900012928": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 42,
+    "terminal_end_sequence": true
+  },
+  "3900012923": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 35,
+    "terminal_end_sequence": false
+  },
+  "3900012926": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": false
+  },
+  "3900012929": {
+    "player_sequence_loss": 28,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": true
+  },
+  "3900012920": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": true
+  },
+  "3900012930": {
+    "player_sequence_loss": 48,
+    "end_sequence_loss": 33,
+    "terminal_end_sequence": false
+  },
+  "3900012933": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": false
+  },
+  "3900012932": {
+    "player_sequence_loss": 68,
+    "end_sequence_loss": 23,
+    "terminal_end_sequence": true
+  },
+  "3900012940": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 20,
+    "terminal_end_sequence": false
+  },
+  "3900012939": {
+    "player_sequence_loss": 34,
+    "end_sequence_loss": 44,
+    "terminal_end_sequence": false
+  },
+  "3900012937": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 22,
+    "terminal_end_sequence": false
+  },
+  "3900012931": {
+    "player_sequence_loss": 160,
+    "end_sequence_loss": 38,
+    "terminal_end_sequence": false
+  },
+  "3900012943": {
+    "player_sequence_loss": 13,
+    "end_sequence_loss": 19,
+    "terminal_end_sequence": false
+  },
+  "3900012942": {
+    "player_sequence_loss": 46,
+    "end_sequence_loss": 1,
+    "terminal_end_sequence": false
+  },
+  "3900012947": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 69,
+    "terminal_end_sequence": true
+  },
+  "3900012944": {
+    "player_sequence_loss": 30,
+    "end_sequence_loss": 17,
+    "terminal_end_sequence": false
+  },
+  "3900012953": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 53,
+    "terminal_end_sequence": false
+  },
+  "3900012956": {
+    "player_sequence_loss": 12,
+    "end_sequence_loss": 61,
+    "terminal_end_sequence": false
+  },
+  "3900012957": {
+    "player_sequence_loss": 18,
+    "end_sequence_loss": 25,
+    "terminal_end_sequence": false
+  },
+  "3900012961": {
+    "player_sequence_loss": 33,
+    "end_sequence_loss": 5,
+    "terminal_end_sequence": false
+  },
+  "3900012962": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 9,
+    "terminal_end_sequence": false
+  },
+  "3900012966": {
+    "player_sequence_loss": 21,
+    "end_sequence_loss": 67,
+    "terminal_end_sequence": false
+  },
+  "3900012964": {
+    "player_sequence_loss": 16,
+    "end_sequence_loss": 63,
+    "terminal_end_sequence": false
+  },
+  "3900012969": {
+    "player_sequence_loss": 15,
+    "end_sequence_loss": 80,
+    "terminal_end_sequence": false
+  },
+  "3900012970": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 28,
+    "terminal_end_sequence": false
+  },
+  "3900012972": {
+    "player_sequence_loss": 24,
+    "end_sequence_loss": 14,
+    "terminal_end_sequence": false
+  },
+  "3900012973": {
+    "player_sequence_loss": 7,
+    "end_sequence_loss": 0,
+    "terminal_end_sequence": false
+  },
+  "3900012975": {
+    "player_sequence_loss": 4,
+    "end_sequence_loss": 7,
+    "terminal_end_sequence": false
+  },
+  "3900012978": {
+    "player_sequence_loss": 14,
+    "end_sequence_loss": 36,
+    "terminal_end_sequence": false
+  },
+  "3900012974": {
+    "player_sequence_loss": 60,
+    "end_sequence_loss": 9,
+    "terminal_end_sequence": false
+  },
+  "3900012979": {
+    "player_sequence_loss": 17,
+    "end_sequence_loss": 72,
+    "terminal_end_sequence": false
+  },
+  "3900012980": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 51,
+    "terminal_end_sequence": false
+  },
+  "3900012991": {
+    "player_sequence_loss": 9,
+    "end_sequence_loss": 13,
+    "terminal_end_sequence": true
+  },
+  "3900012995": {
+    "player_sequence_loss": 26,
+    "end_sequence_loss": 10,
+    "terminal_end_sequence": true
+  },
+  "3900012982": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 45,
+    "terminal_end_sequence": false
+  },
+  "3900012997": {
+    "player_sequence_loss": 8,
+    "end_sequence_loss": 2,
+    "terminal_end_sequence": false
+  },
+  "3900012999": {
+    "player_sequence_loss": 6,
+    "end_sequence_loss": 4,
+    "terminal_end_sequence": false
+  }
+}

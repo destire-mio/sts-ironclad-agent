@@ -1,0 +1,11 @@
+{
+  "model_sha256": "90b937349181b165a1d3281f03481e92e221c915869627ef6e9fa9e4e094fa2b",
+  "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34",
+  "source": "~/sts/runs/distill2-v21-20260930/round2/student.pt",
+  "teacher_module": "p300_play_v21",
+  "arms": "sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4",
+  "evaluation_seeds": [
+    3900040000,
+    3900041000
+  ]
+}

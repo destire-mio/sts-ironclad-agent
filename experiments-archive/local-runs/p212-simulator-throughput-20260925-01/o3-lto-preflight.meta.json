@@ -1,0 +1,13 @@
+{
+  "engine": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto",
+  "engine_sha256": "d47d944094eb9354493b7e0a9c99354ddd06fbd720e0ae13d3ec250f0e15a0da",
+  "suite": "validation",
+  "loops": 1,
+  "load_average": [
+    9.8251953125,
+    8.57568359375,
+    7.677734375
+  ],
+  "pid": 64035,
+  "started": 1790279229.410929
+}

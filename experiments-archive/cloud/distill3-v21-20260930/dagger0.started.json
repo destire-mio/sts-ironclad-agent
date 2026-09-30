@@ -1,0 +1,21 @@
+{
+  "stage": "dagger0",
+  "started": 1790754815.4759135,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill3-code-v1/distill3_run.py",
+    "--output",
+    "~/sts/runs/distill3-v21-20260930/dagger0.jsonl",
+    "--model",
+    "~/sts/runs/distill3-v21-20260930/warm-start-distill2.pt",
+    "--teacher-module",
+    "p300_play_v21",
+    "--arms",
+    "sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4",
+    "--dagger-seeds",
+    "~/sts/runs/distill3-v21-20260930/dagger0-seeds.json",
+    "--workers",
+    "46",
+    "--no-shadow"
+  ]
+}

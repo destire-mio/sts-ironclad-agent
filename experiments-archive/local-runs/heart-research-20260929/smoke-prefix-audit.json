@@ -1,0 +1,178 @@
+[
+  {
+    "seed": 3900012125,
+    "prefix_actions": 232,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012125-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "2a84ecec413ca723460acc9bcd08612bf7767801b666b32391a460009e1ced57"
+  },
+  {
+    "seed": 3900012162,
+    "prefix_actions": 234,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012162-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "b33ed23203f3f9561d176c6dbc8adda1646e1461e9077009608c0b89c8453172"
+  },
+  {
+    "seed": 3900012302,
+    "prefix_actions": 234,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012302-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "a74be8e4d354851b83d9d75d91e4148e46d0e5ce31e86eba5092321d57b8da55"
+  },
+  {
+    "seed": 3900012319,
+    "prefix_actions": 240,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012319-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "76b44eb64a9c34f552b28a344bfa79c0edcc070e3396851c2328ca41414eaa9e"
+  },
+  {
+    "seed": 3900012341,
+    "prefix_actions": 224,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012341-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "102d156bf8873b06a1f58746a584b610e3bab1275c1ee3f24a3e9f2f8fd54c1e"
+  },
+  {
+    "seed": 3900012671,
+    "prefix_actions": 248,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012671-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "2bb7b29765685e9ce511f24ddf2b1cd30687bb12d1552f20787c97856fbd437d"
+  },
+  {
+    "seed": 3900012839,
+    "prefix_actions": 238,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012839-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "f468481d266d20528219857a550aa5752a13407e7c355784b3ebb1602405397d"
+  },
+  {
+    "seed": 3900012915,
+    "prefix_actions": 242,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012915-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "b08c93ddf841f4c00833b9e6f2c861bb604c542793ac619e66de0592ec75582e"
+  },
+  {
+    "seed": 3900012208,
+    "prefix_actions": 231,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012208-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "57b99d8f42abcb3598e09375805e480ad6ab3e36497d4ce8942ee000365056b2"
+  },
+  {
+    "seed": 3900012216,
+    "prefix_actions": 226,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012216-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "6afed93b0d263dd5d4414d8f8b961ff5e42179d912990957954423db75f34be7"
+  },
+  {
+    "seed": 3900012387,
+    "prefix_actions": 207,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012387-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "cbbde1b40ebdc2eb7b6ac66316d32c06e655eb75ae45244fae3cd2c77ba92e93"
+  },
+  {
+    "seed": 3900012682,
+    "prefix_actions": 212,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012682-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "c7dcf1491dc5dbcd9d4bad53eddf180895abcf5676d8b40bbc6684ebaa7b6815"
+  },
+  {
+    "seed": 3900012720,
+    "prefix_actions": 216,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012720-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "143dadcda3b58c21df1a9036c421936f48d8ec1dc5fb96209a34b34c4fe779f1"
+  },
+  {
+    "seed": 3900012930,
+    "prefix_actions": 229,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012930-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "49198a9aa28b3e04ca294b24d3abcad63a60825fb52d2f41ef0f28b7bd8e7c65"
+  },
+  {
+    "seed": 3900012960,
+    "prefix_actions": 227,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012960-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "985e2d868cb92ef03921f72ecd4c948bccc1419682f0676ecd101e78a6bc3274"
+  },
+  {
+    "seed": 3900012964,
+    "prefix_actions": 230,
+    "prefix_match": true,
+    "feature": "hrest90",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-rest-v14-traj/3900012964-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+hrest90+traj.json.gz",
+    "prefix_sha256": "6a0cd55c635dadf0c9372cbfd9b87535e976a6de29c4e6995ee21cd2c53327d0"
+  }
+]

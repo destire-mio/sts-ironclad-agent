@@ -1,0 +1,147 @@
+{
+  "seed": 3900012947,
+  "root": "186e5666c3ce6e37c9ca5c0c41e2f25b0205a941a8ff26e9a432884dd75338f6",
+  "results": [
+    {
+      "mode": "recorded",
+      "all_recorded_actions_valid": true,
+      "outcome": 2,
+      "turn": 7,
+      "hp": 0,
+      "heart_hp": 280,
+      "rng": {
+        "ai": {
+          "seed0": 16020122098889092363,
+          "seed1": 5903420123586261241,
+          "counter": 9
+        },
+        "card_random": {
+          "seed0": 6672809147642456800,
+          "seed1": 7817857797492548734,
+          "counter": 22
+        },
+        "misc": {
+          "seed0": 9190419245496358455,
+          "seed1": 5844194820060267557,
+          "counter": 0
+        },
+        "monster_hp": {
+          "seed0": 5844194820060267557,
+          "seed1": 16185982999518257643,
+          "counter": 1
+        },
+        "potion": {
+          "seed0": 3946812848933113598,
+          "seed1": 16710151711444490379,
+          "counter": 193
+        },
+        "shuffle": {
+          "seed0": 12497805955078379165,
+          "seed1": 12549401429092788194,
+          "counter": 3
+        }
+      },
+      "potions": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "events": []
+    },
+    {
+      "mode": "omit_t1_speed",
+      "all_recorded_actions_valid": true,
+      "outcome": 2,
+      "turn": 7,
+      "hp": 0,
+      "heart_hp": 280,
+      "rng": {
+        "ai": {
+          "seed0": 16020122098889092363,
+          "seed1": 5903420123586261241,
+          "counter": 9
+        },
+        "card_random": {
+          "seed0": 6672809147642456800,
+          "seed1": 7817857797492548734,
+          "counter": 22
+        },
+        "misc": {
+          "seed0": 9190419245496358455,
+          "seed1": 5844194820060267557,
+          "counter": 0
+        },
+        "monster_hp": {
+          "seed0": 5844194820060267557,
+          "seed1": 16185982999518257643,
+          "counter": 1
+        },
+        "potion": {
+          "seed0": 3946812848933113598,
+          "seed1": 16710151711444490379,
+          "counter": 193
+        },
+        "shuffle": {
+          "seed0": 12497805955078379165,
+          "seed1": 12549401429092788194,
+          "counter": 3
+        }
+      },
+      "potions": [
+        "SPEED_POTION",
+        "EMPTY_POTION_SLOT"
+      ],
+      "events": [
+        "omit original T1 Speed"
+      ]
+    },
+    {
+      "mode": "delay_t1_speed_to_t2",
+      "all_recorded_actions_valid": true,
+      "outcome": 0,
+      "turn": 8,
+      "hp": 6,
+      "heart_hp": 270,
+      "rng": {
+        "ai": {
+          "seed0": 11125845047880176303,
+          "seed1": 7069108166434638554,
+          "counter": 11
+        },
+        "card_random": {
+          "seed0": 6672809147642456800,
+          "seed1": 7817857797492548734,
+          "counter": 22
+        },
+        "misc": {
+          "seed0": 9190419245496358455,
+          "seed1": 5844194820060267557,
+          "counter": 0
+        },
+        "monster_hp": {
+          "seed0": 5844194820060267557,
+          "seed1": 16185982999518257643,
+          "counter": 1
+        },
+        "potion": {
+          "seed0": 3946812848933113598,
+          "seed1": 16710151711444490379,
+          "counter": 193
+        },
+        "shuffle": {
+          "seed0": 12497805955078379165,
+          "seed1": 12549401429092788194,
+          "counter": 3
+        }
+      },
+      "potions": [
+        "EMPTY_POTION_SLOT",
+        "EMPTY_POTION_SLOT"
+      ],
+      "events": [
+        "omit original T1 Speed",
+        "drink delayed Speed at T2 start"
+      ]
+    }
+  ],
+  "scope": "Fixed recorded actions; delay arm may end undecided and is not a win label or deployed search policy."
+}

@@ -1,0 +1,27 @@
+{
+  "experiment": "P204",
+  "recipe": {
+    "build": "2022-12-18",
+    "minimum_families": 200,
+    "minimum_choices": 4000,
+    "minimum_late_families": 40,
+    "minimum_late_choices": 400
+  },
+  "source_url": "https://baalorlord.tv/archive/0/runs.zip",
+  "archive_sha256": "913fa11ac4252dbaf15151b8f1e64f86dbdb7c0f27a7ec6ab9270e169d0dbb53",
+  "runner_sha256": "bd55e3ea6ee60c3523b30485f4cf0d0fd40c5b3ee7c4a8f3968122f1610cbea9",
+  "vocabulary_sha256": "e1786be831df4ff28003ffffa6fbfe1aeaa15c29e73f1066dd3a4cd910c2e450",
+  "runtime": "<repo-parent>/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime",
+  "training_signal": "Human observed card reward choices, including losses; no terminal-return labels.",
+  "scope": "A20 Ironclad, current build, non-daily/non-trial/non-endless/non-seeded, no Prismatic Shard. One archive snapshot; all exclusions counted.",
+  "inputs": "Base card identity counts before the choice, act/floor, offered card identities/upgrades. No seed, win flag, final deck/relics, future encounters, HP/gold snapshots or teacher-chosen menu order.",
+  "uncertainty": "Unknown deck-changing relic or ambiguous event/reward ordering ends the usable prefix. Full reconstructed routes require terminal base-card multiset equality; stopped prefixes retain their explicit limitation. Same-floor shop/campfire choices omitted.",
+  "roles": "SHA256(P204-human:<uint64 seed>) modulo10:0..6 fit,7..8 validation,9 held. Duplicate seed families remain one role. No outcome selection.",
+  "data_gate": "At least200 families,4000 choices,40 families and400 choices in Acts3/4. This is source usability, not action quality or win rate.",
+  "budgets": {
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "policy_adoption": false,
+  "next": "If data admitted, freeze one student and an act-only human-prior control, then test complete natural games with the original engine. Source imitation does not prove superiority to the simulator parent."
+}

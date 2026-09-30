@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "~/sts/runs/frontload-20260930/tools/scope_checks.py", line 77, in <module>
+    if __name__ == '__main__':main()
+                              ^^^^^^
+  File "~/sts/runs/frontload-20260930/tools/scope_checks.py", line 72, in main
+    assert required <= seen, (seen, required-seen)
+           ^^^^^^^^^^^^^^^^
+AssertionError: ({'boss_act3', 'act4_SHIELD_AND_SPEAR', 'boss_act2', 'nonboss_act3', 'boss_act1', 'act4_THE_HEART', 'nonboss_act2'}, {'act4_CORRUPT_HEART'})

@@ -1,0 +1,90 @@
+[
+  {
+    "seed": 3900012125,
+    "prefix_actions": 232,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012125-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "2a84ecec413ca723460acc9bcd08612bf7767801b666b32391a460009e1ced57"
+  },
+  {
+    "seed": 3900012162,
+    "prefix_actions": 234,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012162-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "b33ed23203f3f9561d176c6dbc8adda1646e1461e9077009608c0b89c8453172"
+  },
+  {
+    "seed": 3900012302,
+    "prefix_actions": 234,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012302-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "a74be8e4d354851b83d9d75d91e4148e46d0e5ce31e86eba5092321d57b8da55"
+  },
+  {
+    "seed": 3900012319,
+    "prefix_actions": 240,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012319-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "76b44eb64a9c34f552b28a344bfa79c0edcc070e3396851c2328ca41414eaa9e"
+  },
+  {
+    "seed": 3900012341,
+    "prefix_actions": 224,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012341-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "102d156bf8873b06a1f58746a584b610e3bab1275c1ee3f24a3e9f2f8fd54c1e"
+  },
+  {
+    "seed": 3900012671,
+    "prefix_actions": 248,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012671-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "2bb7b29765685e9ce511f24ddf2b1cd30687bb12d1552f20787c97856fbd437d"
+  },
+  {
+    "seed": 3900012839,
+    "prefix_actions": 238,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012839-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "f468481d266d20528219857a550aa5752a13407e7c355784b3ebb1602405397d"
+  },
+  {
+    "seed": 3900012915,
+    "prefix_actions": 242,
+    "prefix_match": true,
+    "heart_reached": true,
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-v14-traj/3900012915-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+heart40+traj.json.gz",
+    "prefix_sha256": "b08c93ddf841f4c00833b9e6f2c861bb604c542793ac619e66de0592ec75582e"
+  }
+]

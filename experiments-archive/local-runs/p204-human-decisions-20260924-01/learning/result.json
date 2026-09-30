@@ -1,0 +1,224 @@
+{
+  "status": "complete",
+  "models": {
+    "act": {
+      "checkpoint_sha256": "c7f2f6e4d2b42b044c395ece640605e3fc779c917938d3402c7c3d6ed970f709",
+      "updates": 2000,
+      "parameters": 1117,
+      "curve": [
+        {
+          "update": 100,
+          "batch_nll": 1.2528995683555797
+        },
+        {
+          "update": 200,
+          "batch_nll": 1.1094316958479613
+        },
+        {
+          "update": 300,
+          "batch_nll": 1.0207841426659907
+        },
+        {
+          "update": 400,
+          "batch_nll": 0.8564817200418428
+        },
+        {
+          "update": 500,
+          "batch_nll": 0.9172254671132967
+        },
+        {
+          "update": 600,
+          "batch_nll": 0.9330235437286015
+        },
+        {
+          "update": 700,
+          "batch_nll": 0.9909879348547384
+        },
+        {
+          "update": 800,
+          "batch_nll": 0.9219398350746422
+        },
+        {
+          "update": 900,
+          "batch_nll": 0.8846019414757309
+        },
+        {
+          "update": 1000,
+          "batch_nll": 0.818142782391651
+        },
+        {
+          "update": 1100,
+          "batch_nll": 0.8001013417800653
+        },
+        {
+          "update": 1200,
+          "batch_nll": 0.8175604994511029
+        },
+        {
+          "update": 1300,
+          "batch_nll": 0.9830397776356126
+        },
+        {
+          "update": 1400,
+          "batch_nll": 0.8555866612424968
+        },
+        {
+          "update": 1500,
+          "batch_nll": 0.9389261115578744
+        },
+        {
+          "update": 1600,
+          "batch_nll": 0.7765537238866469
+        },
+        {
+          "update": 1700,
+          "batch_nll": 0.875128580500743
+        },
+        {
+          "update": 1800,
+          "batch_nll": 0.8490132521650818
+        },
+        {
+          "update": 1900,
+          "batch_nll": 0.7510986231293826
+        },
+        {
+          "update": 2000,
+          "batch_nll": 0.8057372637144191
+        }
+      ],
+      "metrics": {
+        "fit": {
+          "families": 226,
+          "choices": 2932,
+          "family_nll": 0.9326199335361738,
+          "family_accuracy": 0.605256346553559
+        },
+        "validation": {
+          "families": 71,
+          "choices": 924,
+          "family_nll": 0.9767787706420613,
+          "family_accuracy": 0.596958078142682
+        },
+        "held": {
+          "families": 39,
+          "choices": 542,
+          "family_nll": 0.9123122987944515,
+          "family_accuracy": 0.6376887770481483
+        }
+      }
+    },
+    "deck": {
+      "checkpoint_sha256": "a98acc5a36cb774fe357c7d53c5e250aa848c18787a2598b861db5860154b997",
+      "updates": 2000,
+      "parameters": 139501,
+      "curve": [
+        {
+          "update": 100,
+          "batch_nll": 1.141332198283917
+        },
+        {
+          "update": 200,
+          "batch_nll": 0.9669200927764845
+        },
+        {
+          "update": 300,
+          "batch_nll": 0.8773028645660716
+        },
+        {
+          "update": 400,
+          "batch_nll": 0.7189310783260434
+        },
+        {
+          "update": 500,
+          "batch_nll": 0.7749002458573835
+        },
+        {
+          "update": 600,
+          "batch_nll": 0.7702791773815236
+        },
+        {
+          "update": 700,
+          "batch_nll": 0.7884597690429701
+        },
+        {
+          "update": 800,
+          "batch_nll": 0.7438270232077401
+        },
+        {
+          "update": 900,
+          "batch_nll": 0.7003522331099307
+        },
+        {
+          "update": 1000,
+          "batch_nll": 0.6526551319143498
+        },
+        {
+          "update": 1100,
+          "batch_nll": 0.6244831326296032
+        },
+        {
+          "update": 1200,
+          "batch_nll": 0.5776840748564982
+        },
+        {
+          "update": 1300,
+          "batch_nll": 0.7272433750357497
+        },
+        {
+          "update": 1400,
+          "batch_nll": 0.6473127002050568
+        },
+        {
+          "update": 1500,
+          "batch_nll": 0.6881029383169951
+        },
+        {
+          "update": 1600,
+          "batch_nll": 0.5303395291264864
+        },
+        {
+          "update": 1700,
+          "batch_nll": 0.6062249994985085
+        },
+        {
+          "update": 1800,
+          "batch_nll": 0.6203179615422063
+        },
+        {
+          "update": 1900,
+          "batch_nll": 0.5205203875580473
+        },
+        {
+          "update": 2000,
+          "batch_nll": 0.48287226597892147
+        }
+      ],
+      "metrics": {
+        "fit": {
+          "families": 226,
+          "choices": 2932,
+          "family_nll": 0.6161418376317362,
+          "family_accuracy": 0.7885909123904598
+        },
+        "validation": {
+          "families": 71,
+          "choices": 924,
+          "family_nll": 0.9167424933676038,
+          "family_accuracy": 0.6173868181400758
+        },
+        "held": {
+          "families": 39,
+          "choices": 542,
+          "family_nll": 0.8367859496312919,
+          "family_accuracy": 0.66522319157649
+        }
+      }
+    }
+  },
+  "seconds": 1.9684379589743912,
+  "optimizer_updates": 4000,
+  "new_games": 0,
+  "policy_adoption": false,
+  "limits": "Human decision imitation only; no own-policy win-rate conclusion."
+}

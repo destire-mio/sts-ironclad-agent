@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "assigned_roots": 48,
+  "families": 33,
+  "baseline": {
+    "label": "baseline-8000",
+    "assigned": 48,
+    "completed": 48,
+    "faults": 0,
+    "survived": 41,
+    "cpu_seconds": 13.165578000000009,
+    "wall_seconds": 13.217925665783696,
+    "simulations": 2264000,
+    "engine": "<repo-parent>/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime/engine",
+    "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+    "limits": "Paired historical battle starts, not natural-run performance; every plan legally replayed with matching state/RNG. One timing pass is exploratory."
+  },
+  "candidate": {
+    "label": "pgo-10000",
+    "assigned": 48,
+    "completed": 48,
+    "faults": 0,
+    "survived": 43,
+    "cpu_seconds": 12.126022000000004,
+    "wall_seconds": 12.174223913927563,
+    "simulations": 2540000,
+    "engine": "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/runtime/engine",
+    "engine_sha256": "be7a690df72989c7f45d75c0912e395da9b217ec1cbbc68f271f51cf40dfb9f1",
+    "limits": "Paired historical battle starts, not natural-run performance; every plan legally replayed with matching state/RNG. One timing pass is exploratory."
+  },
+  "paired_survival": {
+    "rescued": 2,
+    "lost": 0,
+    "both_survived": 41,
+    "both_failed": 5
+  },
+  "joint_survivor_hp_change": {
+    "mean": 0.04878048780487805,
+    "total": 2
+  },
+  "joint_survivor_potion_count_change": 0,
+  "actual_simulation_ratio": 1.1219081272084805,
+  "cpu_time_ratio": 0.9210398510418605,
+  "wall_time_ratio": 0.9210389150123691,
+  "action_sequence_changes": 14,
+  "policy_adoption": false,
+  "unseen_acceptance_games": 0,
+  "limits": "One paired historical-state capability/cost probe; includes correlated states from the same family. No natural Heart win-rate or direction-closure claim."
+}

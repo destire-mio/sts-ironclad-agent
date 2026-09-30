@@ -1,0 +1,15 @@
+{
+  "selected": "boss6",
+  "production_feature": "heart40",
+  "equivalence": "Heart: resolve_combat4q(gc,80000,6) and resolve_combat4q(gc,40000,12) both set budget=480000; bossMultiplier and simulations are used only for budget before the search loop",
+  "development": {
+    "N": 48,
+    "rescued": 1,
+    "lost": 0,
+    "cpu_ratio": 0.5777591399876257
+  },
+  "selection_reason": "Same net win gain as combat3, fewer lost roots and lower CPU; 160k/320k gain zero. Selected before any holdout results.",
+  "holdout_N": 96,
+  "holdout_path_sha256": "bee742736da817ffc1a729757238d43fd966deb97c0117b5ca61249d292201fe",
+  "acceptance": "Report paired rescue/loss and holdout effect; no claim of whole-run improvement without user-owned whole-run test."
+}

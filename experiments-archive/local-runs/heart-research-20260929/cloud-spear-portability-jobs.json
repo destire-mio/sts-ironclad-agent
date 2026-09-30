@@ -1,0 +1,30 @@
+[
+  {
+    "seed": 3900012719,
+    "path": "~/sts/runs/traj-c38/3900012719-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 223,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012494,
+    "path": "~/sts/runs/traj-c38/3900012494-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 215,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012688,
+    "path": "~/sts/runs/traj-c38/3900012688-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 228,
+    "stratum": "heart_loss",
+    "split": "development"
+  },
+  {
+    "seed": 3900012154,
+    "path": "~/sts/runs/traj-c38/3900012154-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+traj.json.gz",
+    "step": 231,
+    "stratum": "heart_loss",
+    "split": "holdout"
+  }
+]

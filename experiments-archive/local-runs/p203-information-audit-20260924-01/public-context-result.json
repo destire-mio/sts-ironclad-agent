@@ -1,0 +1,451 @@
+{
+  "status": "complete",
+  "groups": [
+    [
+      {
+        "seed": 646368713,
+        "delta": 0,
+        "boss": "MonsterEncounter.THE_GUARDIAN",
+        "map_digest": "c8a81582b3653d47b40de6191b62dd07ce98fc7f1852a43d7217badff55f2923",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 842565869,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "e8140b595a9165115828e93abcb29fb5c83f35d6ebc79147dd06dec9851e3a30",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            17,
+            3
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 122086031,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "851baeedb4ce63526dc54c120c55ff59e2395d48776726a1ca1fb966a4fac77a",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 794968324,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "3259941f6e8d79fc78e4203efe078e77e1eafc136820b2e21445f6d7c161ff4e",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 28326271,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "d41ec75112c8d91cedf984f84c9a32409789ddf2daad96864448c50332d00ef8",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 691441164,
+        "delta": 1,
+        "boss": "MonsterEncounter.THE_GUARDIAN",
+        "map_digest": "84cf87ff11ec8c601fc7c706f6b0f838113c1e6e3753c2436a1ebbe5e0218482",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 922674563,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "41831861a493555686cc271172ec5dfc817f367acca5bf31515ac883a934f339",
+        "pair_digest": "c6cef02c9ff19f4d48849bb8a08b89d2e80da2bd5ce4e9bece24467360274fe0",
+        "neow_options": [
+          [
+            3,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 889898292,
+        "delta": 0,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "01fb69b3d60b211ab9eaddb80d831047214878a7ddfe2c1906302f0d92771b6d",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            14,
+            5
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 619970766,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "193d9e2d267d3db4c5c7fce11aa1cc5831bf38624825a34d6f393b88efb71542",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 691411604,
+        "delta": 0,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "ade86afc3adb52983b61eb57699ced2db68de11485dfc627efb0f209db37afd5",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            17,
+            5
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 358341957,
+        "delta": 0,
+        "boss": "MonsterEncounter.HEXAGHOST",
+        "map_digest": "375163748160acf1e5943b3d885902d4090067f75d77dae0086e616b800f1a8b",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            16,
+            3
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 877997464,
+        "delta": -1,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "4713226737506950a87eddf162d5f7363591aa06bc5749a49916f5d0e1056a12",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 1140948835,
+        "delta": 0,
+        "boss": "MonsterEncounter.THE_GUARDIAN",
+        "map_digest": "194b5164d32c3925661697574ed79511cb62c795a53580d920cea3448dbba35d",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 311804071,
+        "delta": 0,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "da21285e6429edfc3861af4ee5da01f01d5cca4c35b90d2a370452851dbb07b1",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 1143117334,
+        "delta": 0,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "a92a60d4e7beefbdbb0755ad57351fbe6327d5f9b3e9c14e903db4c97c9e8602",
+        "pair_digest": "277029ec3ae7e5b3271b9f332fa3af6e5fddfea03eb42b9ad72027e789f894be",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 1140948835,
+        "delta": 1,
+        "boss": "MonsterEncounter.THE_GUARDIAN",
+        "map_digest": "194b5164d32c3925661697574ed79511cb62c795a53580d920cea3448dbba35d",
+        "pair_digest": "f9e7a6ac15d7655674a55ae5a0d8029720e30273a44e8e55ddf36050682a189a",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 1143117334,
+        "delta": 0,
+        "boss": "MonsterEncounter.SLIME_BOSS",
+        "map_digest": "a92a60d4e7beefbdbb0755ad57351fbe6327d5f9b3e9c14e903db4c97c9e8602",
+        "pair_digest": "f9e7a6ac15d7655674a55ae5a0d8029720e30273a44e8e55ddf36050682a189a",
+        "neow_options": [
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            18,
+            6
+          ]
+        ]
+      }
+    ]
+  ],
+  "boss_sensitivity": {
+    "original_boss": "MonsterEncounter.THE_GUARDIAN",
+    "substituted_boss": "MonsterEncounter.SLIME_BOSS",
+    "observation_changed_columns": [
+      65,
+      67
+    ],
+    "network_features_equal": true,
+    "base_scores_equal": true,
+    "parent_choice_equal": true,
+    "limit": "Synthetic public-field sensitivity check only. No game continuation, return label, training example or evaluation score produced from modified state."
+  },
+  "new_games": 0,
+  "new_training_updates": 0,
+  "limits": "Natural input equality and code blindness do not identify whether label variation is caused by omitted public map/boss versus hidden future randomness, nor quantify possible policy improvement."
+}

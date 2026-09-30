@@ -1,0 +1,10 @@
+{
+  "shard": "~/sts/runs/distill3-v21-20260930/data/shard-0004.npz",
+  "total": 20,
+  "passed": 20,
+  "decisions": 3474,
+  "candidates": 16598,
+  "errors": [],
+  "reused_from": "~/sts/runs/distill2-v21-20260930/data/shard-0004.npz",
+  "source_sha256": "1f0010911d3ca33958a72c748c44c63a1b9e9baf215e98a69e3278b293696f6e"
+}

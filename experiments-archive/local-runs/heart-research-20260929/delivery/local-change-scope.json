@@ -1,0 +1,14 @@
+{
+  "ours": [
+    "c4q dispatch matching v12",
+    "heart40 fixed Heart budget and mode guard",
+    "heart_rest90 helper and hrest90 hook/counter",
+    "spear160 fixed Shield and Spear budget"
+  ],
+  "preserved_other_work": [
+    "pre-existing large p300_play.py changes",
+    "c4r dispatch appeared during this session; not part of this research delivery",
+    "local resume-on-error behavior"
+  ],
+  "cloud_delivery": "Generated from frozen v12, excluding local unrelated changes"
+}

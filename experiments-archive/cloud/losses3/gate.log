@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "~/sts/runs/losses3/collect.py", line 9, in <module>
+    import p300_play_v9 as P
+  File "~/sts/runs/losses3/source/p300_play_v9.py", line 342, in <module>
+    RELIC_U = json.loads((Path(__file__).with_name('relic_u.json')).read_text())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '~/sts/runs/losses3/source/relic_u.json'

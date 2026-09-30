@@ -1,0 +1,42 @@
+{
+  "path": "~/sts/principles/agent/p300_play_v22.py",
+  "source_sha256": "16b02b63215622b8b2888386b0d824106c295f3e92ea6f56ded5b3f8fdae0f0f",
+  "dependency_checks": {
+    "~/sts/principles/agent/p300_common.py": "9d4ad34b98c86d69346816826d3694c51c957163b663e37a129e665bf2e7cfc0",
+    "~/sts/principles/agent/p300_stage_values.py": "2c45db1a193f1c5ca08e95cf29ac3e2d8c7700523cb8afaa8095d417110e9603",
+    "~/sts/principles/agent/p300_heart_values.py": "cff115e234a7d25f4ba2d7d2c5f52af5e977ae79ec1fe705dec2a41332a4ea07",
+    "~/sts/principles/agent/p300_teacher.py": "2c07c79ed60762ba20cfc94072067668a8c8c3a3573be9c3c4eac76a0c789e46",
+    "~/sts/principles/agent/heart_early_card_scope.py": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+    "~/sts/principles/agent/p300_play_v21.py": "cff321bed4131427db326837f2a8f00c4b0bfa5ed9ab11dbfe2a96c8c7a8543f",
+    "~/sts/principles/agent/guide_rules.py": "ed8fa08ac524440eed9cb7af851cc5e389dd83c59294fb575f94edff8c0bc42b",
+    "~/sts/principles/agent/baixi_rules.py": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+    "~/sts/principles/agent/p300_play.py": "19e54ce827069418d80e77dd9675d2166dcc353b1a35f2603ed22431eda38764",
+    "~/sts/principles/agent/p300_fight_data.py": "b04cf44802fdbb1e1ef0d15c3a14523bc0756c48a4e9417514c05351b6cd0728",
+    "~/sts/principles/agent/p300_anchors.py": "e08c2fe2deb6ef0ad3eec8e592970e02add193d460ae112dd21c1b5b199727c7",
+    "~/sts/principles/agent/p300_vlate.py": "08dd1a1d08ba94610bcd2d8b9d66a11538a2e24c72a323a7c6d870adce8c63f4",
+    "~/sts/principles/agent/relic_u.json": "04795b012e5bf320c8437e79e3466349a9839f13f451efe7b8a2f63d4691e3ab",
+    "~/sts/combat4r/runtime-delivery/engine/fightsim.cpython-312-aarch64-linux-gnu.so": "6af19da2d74bace20764cc0eb8d957cdb6178e86943f6fe1ff4b47de92e18989",
+    "~/sts/combat4r/runtime-delivery/engine/slaythespire.cpython-312-aarch64-linux-gnu.so": "405c24d42256eb224ce1f5b5eed4d633f369eb0023a47d53c39787021d37f515",
+    "~/sts/combat4r/runtime-delivery/model.pt": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+    "~/sts/combat4r/runtime-delivery/config.json": "a546c4a07323272b2c73486b25d16f639595d6a104dde10f29ca96a2d3d29e0d",
+    "~/sts/principles/runs/p300-fight-decomposition/d6-elite1.jsonl": "65f4d6bd8271d44e4fa91c8f0c61cd33840fb30563dc0ec83e37ad0cac123e1f",
+    "~/sts/principles/runs/p300-fight-decomposition/d8-act1hall-natural.jsonl": "8ada3ab3c952efb64682142f3bf4654877a886d0eedd2bfb065bed7b1e89a7b4",
+    "~/sts/principles/runs/p300-fight-decomposition/d6-elite3.jsonl": "2bc2fdfa4b04b8664d109e8410e3d86736142a082195453305155053de4525f5",
+    "~/sts/principles/runs/p300-fight-decomposition/d5-act2boss.jsonl": "175c98fbf5eaafd045cab87eaf7bf699fe0067c3ff3bcf54df9217049be18588",
+    "~/sts/principles/runs/p300-fight-decomposition/d4-heart-values.jsonl": "42cda76330a11f6aa2fff7e98a80951baff627f722f7f64876c95e542a488493",
+    "~/sts/principles/runs/p300-fight-decomposition/d8-act1boss-natural.jsonl": "f35881461eaa8f9e688b660b0ddff6890e3fb5f6abfe993cb9783c2ea6b8e12d",
+    "~/sts/principles/runs/p300-fight-decomposition/d6-shield_spear.jsonl": "16d589bb4e5edd5014180e29309dfeeea9f1d417623d57961be0379db1cc769b",
+    "~/sts/principles/runs/p300-fight-decomposition/d6-elite2.jsonl": "e7e04d26530db6d90d28d0ddf5b88cd0cab5c3babb3499f14529e59e3171b5cf",
+    "~/sts/principles/runs/p300-fight-decomposition/d8-elite1-natural.jsonl": "667462b3efc72356038b5d429198cb5e47c4fa566a5a7210be440ba383ad6539",
+    "~/sts/principles/runs/p300-fight-decomposition/d5-act3boss1.jsonl": "c777cde0ec2e5e63fc246b3549f578611f0bc2ce92872f2842108a5dfcdd4f6a",
+    "~/sts/principles/runs/p300-fight-decomposition/d7-act1hall.jsonl": "7bf06c16b010618e4708d546e4e83e3a8d4f39648569204d0de4074463dc6513",
+    "~/sts/principles/runs/p300-fight-decomposition/d7-act1boss.jsonl": "4f85837010ddcfecb8cb9aa5f07e9e35556144fce69874d028b4394ba574d987"
+  },
+  "rules": [
+    "neow_common_relic",
+    "elite_low_hp",
+    "flame_weak"
+  ],
+  "stage_tables_match": true,
+  "error": null
+}

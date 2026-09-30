@@ -1,0 +1,17 @@
+{
+  "status": "same_assignment_observer_repair",
+  "history": "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01",
+  "original_faults": 4,
+  "original_rollouts": 256,
+  "diagnostic_rollouts": 1,
+  "additional_preflight_max_searches": 8,
+  "additional_preflight_max_rollouts": 512,
+  "game_rules_and_search_recipe_unchanged": true,
+  "hashes": {
+    "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/protocol.json": "6087c929e8e6c5533c22cc01867805ea77056102772341a8ef76b62c0877060f",
+    "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/preflight/result.json": "b8cc9400b153d89fc6f624fd25c5e29c8ad4d6c1fdede7286d097ddf5609e45b",
+    "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-01/fault-accounting-review.json": "1a1175f8b2b24eb695c3149bb7c76a3e6849054f45431fb2f456d84e2dcf1e94",
+    "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-02/protocol.json": "8c78fb60f25fb0cc56c08ed9ea1f08378d4d432308d4c86c9f8e6ca45fcee90a",
+    "<repo-parent>/sts-rl-agent-principles/runs/p205-adaptive-battle-search-20260924-02/repair.patch": "e1bdb5a1762fa68d4fef2d372aef396888b4f65443214f5df994345339e0c2f4"
+  }
+}

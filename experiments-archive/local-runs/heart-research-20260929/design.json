@@ -1,0 +1,44 @@
+{
+  "cohort": "c38",
+  "N": 1000,
+  "heart": 629,
+  "heart_wins": 482,
+  "heart_losses": 147,
+  "dev_n": 48,
+  "holdout_n": 96,
+  "selection": "within recorded win/loss strata sort SHA256(decimal seed); first24 development, next48 holdout",
+  "variants": {
+    "base": [
+      80000,
+      12
+    ],
+    "h160": [
+      160000,
+      12
+    ],
+    "h320": [
+      320000,
+      12
+    ],
+    "boss6": [
+      80000,
+      6
+    ],
+    "rollout3": [
+      80000,
+      12
+    ]
+  },
+  "runtime": "../sts-rl-agent-combat4q/runtime-delivery",
+  "one_search_per_variant_root": true,
+  "max_local_workers": 8,
+  "max_cloud_workers": 4,
+  "acceptance": "holdout paired net gain; whole-run 2000 acceptance remains user-owned",
+  "rollout3_caveat": "Existing combat3 entry changes ordering mixture, budget continuation and potion treatment together; this arm cannot isolate ordering alone.",
+  "platform_caveat": "Linux baseline matches two historical action traces; macOS baseline differs with identical starting state/RNG. All effect estimates use same-platform base versus candidate.",
+  "development_visible_state_gates": {
+    "low160": "THE_HEART and pre-battle HP/max_HP < 0.8: 160000x12; otherwise 80000x12",
+    "low320": "THE_HEART and pre-battle HP/max_HP < 0.8: 320000x12; otherwise 80000x12"
+  },
+  "gate_rationale": "HP separation in trajectory profile; added during development before gated-effect calculation. Heldout seeds remain untouched. Counterfactual rows may be reused only when the resulting action policy/budget is identical."
+}

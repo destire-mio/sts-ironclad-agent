@@ -1,0 +1,50 @@
+{
+  "runner_sha256": "13b30dddd3ad5c2a3d61393e516448d662eb8cb5362b5a535cb9a624bb534766",
+  "recipe": {
+    "acts": [
+      1,
+      2
+    ],
+    "updates": 2000,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "gradient_norm": 1.0,
+    "seed": 20260924204,
+    "minimum_option_exposure": 5,
+    "training_seconds": 1200
+  },
+  "hashes": {
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_human_decisions.py": "bd55e3ea6ee60c3523b30485f4cf0d0fd40c5b3ee7c4a8f3968122f1610cbea9",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_human_admission.py": "4fa958d829fe87f6f7d5bfdf73ed3ccd6f13a9065922777b7d5751bbdfbf79b1",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/protocol.json": "9d53fc32319bb9bb8a06ab7626d26ad804d2b9e1461fcdc1ab8786a647fefb85",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/vocabulary.json": "e1786be831df4ff28003ffffa6fbfe1aeaa15c29e73f1066dd3a4cd910c2e450",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/admission/result.json": "edce788d8040b68d59d776c54e47a71c3ab66193280aa55fbb886161f864643f",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/admission/choices.json": "192284a12cfe9e3c2ec5d63d3658399c6a3b5d94af43830d32960a0e8218b425",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/learning/supported-options.json": "6bcbf47cf2ca10e60d70ab27b4955d7f5f0569914d1cc7c87efe27bc9a84a0b3",
+    "<repo-parent>/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/roles-private.json": "ed5da4fb028604bcf788f4b0b37b7e0a449ce21ec1ac0ccd02b6ca467de3785e"
+  },
+  "revised_scope": "All-act source gate remains failed:375 late choices versus400 required. Restrict this prospective student to Acts1/2, with4398 early choices; no lowering of the original all-act gate or later takeover. This change precedes all training and candidate outcomes.",
+  "models": {
+    "act": "Linear act-conditioned card and skip preferences; shared offered-upgrade coefficient.",
+    "deck": "Same human supervision and optimizer, adding base-card inventory by candidate interaction and current floor. A linear neural score, no manual card ranks or larger-network scan."
+  },
+  "objective": "Uniform fit family then uniform recorded choice cross-entropy. All eligible human wins and losses included; final checkpoint only.",
+  "execution": "At Acts1/2 single-card-reward menus only, when parent would take/skip a card and all options have>=5 fit exposures. Score visible offered cards and no-card; no-card chooses Singing Bowl if available, else skip. Other states use frozen parent. Exact ties retain parent when available.",
+  "comparison": "Both frozen models receive one full natural-game comparison on the same128 historical E191 evaluation families against the20-win parent. The act arm controls whether deck conditioning adds value beyond expert card preferences.",
+  "games": {
+    "arms": 2,
+    "families": 128,
+    "winner_replans_max": 256,
+    "parent_controls": 2,
+    "preflight_max": 4,
+    "total_max": 518,
+    "workers": 8,
+    "seconds": 5400
+  },
+  "gate": "Each arm needs net>=8/128 versus parent and exact paired two-sided p<.025, zero unresolved faults and every win replanned. If both pass, choose higher wins, tie prefer act-only. No threshold, model or checkpoint sweep.",
+  "human_metrics": "Report fit/validation/held family-macro likelihood and choice match after model freeze, not policy win rate. These metrics neither select checkpoints nor open new budget.",
+  "evaluation_roles": "<repo-parent>/sts-rl-agent-pr/runs/heart-e191-whole-policy-gradient-20260924-01/roles-private.json",
+  "policy_adoption": false,
+  "unseen_acceptance_games": 0
+}

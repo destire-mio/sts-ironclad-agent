@@ -1,0 +1,46 @@
+{
+  "status": "reviewed",
+  "choices": 4773,
+  "families": 336,
+  "censored_choices": 736,
+  "censored_reasons": {
+    "relic:Omamori": 229,
+    "relic:Cursed Key": 304,
+    "relic:Necronomicon": 55,
+    "encounter:Writhing Mass": 71,
+    "relic:Tiny House": 34,
+    "relic:DollysMirror": 43
+  },
+  "by_act": {
+    "1": 3104,
+    "2": 1294,
+    "3": 359,
+    "4": 16
+  },
+  "late_families": 67,
+  "by_role": {
+    "fit": {
+      "families": 226,
+      "choices": 3193
+    },
+    "validation": {
+      "families": 71,
+      "choices": 1004
+    },
+    "held": {
+      "families": 39,
+      "choices": 576
+    }
+  },
+  "gate_passed": false,
+  "original_attempt_retained": true,
+  "new_games": 0,
+  "optimizer_updates": 0,
+  "limits": "Conservative base-card ledger, not original-game action replay. Owned upgrades/misc, exact reward-time resources, map and relic features are not reconstructed or supplied.",
+  "hashes": {
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/admission/protocol.json": "6ee662cb94bbfc0a035b4a6361821343fb9a8fb497ff207b971cbf66c1031abc",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/admission/choices.json": "192284a12cfe9e3c2ec5d63d3658399c6a3b5d94af43830d32960a0e8218b425",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/admission/censored.json": "50394d7ea914bf5a6e64c5dd681f27710730a75b05a45a2c3645b8cf68d30b9d",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/data-result.json": "d0ed2dac9d8230b6ac65272964a4b0f4ac90b88c1c6097f25976760a113cca08"
+  }
+}

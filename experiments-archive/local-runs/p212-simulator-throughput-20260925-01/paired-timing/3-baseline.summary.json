@@ -1,0 +1,19 @@
+{
+  "engine": "<repo-parent>/sts-rl-agent-pr/runs/heart-e143-continuous-transitions-20260922-01/runtime/engine",
+  "engine_sha256": "2474227122164379f8158ade2835d623e9b66670998eee910ce213fa86a3833d",
+  "suite": "validation",
+  "loops": 1,
+  "load_average": [
+    2.57763671875,
+    3.060546875,
+    4.91455078125
+  ],
+  "pid": 67121,
+  "started": 1790280139.964573,
+  "status": "complete",
+  "battles": 48,
+  "cpu_seconds": 13.555687,
+  "wall_seconds": 13.605258576,
+  "total_process_wall_seconds": 16.439316987991333,
+  "all_records_match": true
+}

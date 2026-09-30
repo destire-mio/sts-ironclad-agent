@@ -1,0 +1,505 @@
+{
+  "frame_start": 3900012000,
+  "frame_end_exclusive": 3900012225,
+  "frame_n": 225,
+  "targets": {
+    "a1": 8,
+    "a2": 10,
+    "a3boss": 12,
+    "a3other": 4,
+    "spear": 4,
+    "heart": 12,
+    "win": 10
+  },
+  "selection": "lowest SHA256 losses3-fixed-20260929:seed within stratum, completed contiguous frame",
+  "samples": [
+    {
+      "seed": 3900012002,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012068,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012178,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012204,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012191,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012050,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012141,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012070,
+      "stratum": "a1",
+      "population": 19,
+      "sample_n": 8,
+      "weight": 2.375
+    },
+    {
+      "seed": 3900012213,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012207,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012157,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012149,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012195,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012003,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012027,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012004,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012209,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012043,
+      "stratum": "a2",
+      "population": 28,
+      "sample_n": 10,
+      "weight": 2.8
+    },
+    {
+      "seed": 3900012063,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012182,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012083,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012069,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012024,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012034,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012025,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012009,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012049,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012021,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012127,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012014,
+      "stratum": "a3boss",
+      "population": 25,
+      "sample_n": 12,
+      "weight": 2.0833333333333335
+    },
+    {
+      "seed": 3900012214,
+      "stratum": "a3other",
+      "population": 6,
+      "sample_n": 4,
+      "weight": 1.5
+    },
+    {
+      "seed": 3900012212,
+      "stratum": "a3other",
+      "population": 6,
+      "sample_n": 4,
+      "weight": 1.5
+    },
+    {
+      "seed": 3900012116,
+      "stratum": "a3other",
+      "population": 6,
+      "sample_n": 4,
+      "weight": 1.5
+    },
+    {
+      "seed": 3900012005,
+      "stratum": "a3other",
+      "population": 6,
+      "sample_n": 4,
+      "weight": 1.5
+    },
+    {
+      "seed": 3900012202,
+      "stratum": "spear",
+      "population": 7,
+      "sample_n": 4,
+      "weight": 1.75
+    },
+    {
+      "seed": 3900012187,
+      "stratum": "spear",
+      "population": 7,
+      "sample_n": 4,
+      "weight": 1.75
+    },
+    {
+      "seed": 3900012218,
+      "stratum": "spear",
+      "population": 7,
+      "sample_n": 4,
+      "weight": 1.75
+    },
+    {
+      "seed": 3900012084,
+      "stratum": "spear",
+      "population": 7,
+      "sample_n": 4,
+      "weight": 1.75
+    },
+    {
+      "seed": 3900012137,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012126,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012203,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012121,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012150,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012201,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012047,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012130,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012099,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012078,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012169,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012107,
+      "stratum": "heart",
+      "population": 36,
+      "sample_n": 12,
+      "weight": 3.0
+    },
+    {
+      "seed": 3900012194,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012192,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012199,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012222,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012142,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012007,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012139,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012040,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012161,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    },
+    {
+      "seed": 3900012110,
+      "stratum": "win",
+      "population": 104,
+      "sample_n": 10,
+      "weight": 10.4
+    }
+  ],
+  "seeds": [
+    3900012002,
+    3900012068,
+    3900012178,
+    3900012204,
+    3900012191,
+    3900012050,
+    3900012141,
+    3900012070,
+    3900012213,
+    3900012207,
+    3900012157,
+    3900012149,
+    3900012195,
+    3900012003,
+    3900012027,
+    3900012004,
+    3900012209,
+    3900012043,
+    3900012063,
+    3900012182,
+    3900012083,
+    3900012069,
+    3900012024,
+    3900012034,
+    3900012025,
+    3900012009,
+    3900012049,
+    3900012021,
+    3900012127,
+    3900012014,
+    3900012214,
+    3900012212,
+    3900012116,
+    3900012005,
+    3900012202,
+    3900012187,
+    3900012218,
+    3900012084,
+    3900012137,
+    3900012126,
+    3900012203,
+    3900012121,
+    3900012150,
+    3900012201,
+    3900012047,
+    3900012130,
+    3900012099,
+    3900012078,
+    3900012169,
+    3900012107,
+    3900012194,
+    3900012192,
+    3900012199,
+    3900012222,
+    3900012142,
+    3900012007,
+    3900012139,
+    3900012040,
+    3900012161,
+    3900012110
+  ],
+  "gate": [
+    3900012002,
+    3900012063,
+    3900012137,
+    3900012194
+  ]
+}

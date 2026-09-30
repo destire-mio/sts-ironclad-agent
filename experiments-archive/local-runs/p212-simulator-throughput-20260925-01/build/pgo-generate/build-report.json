@@ -1,0 +1,44 @@
+{
+  "variant": "pgo-generate",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "<repo-parent>/sts-rl-agent-principles/sim_patch/performance",
+      "-B",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_OSX_ARCHITECTURES=arm64",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+      "-DSTS_SIM_ROOT=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source",
+      "-DSTS_JSON_INCLUDE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json",
+      "-DPython_EXECUTABLE=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python",
+      "-Dpybind11_DIR=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/share/cmake/pybind11",
+      "-DSTS_OPT_LEVEL=3",
+      "-DSTS_CPU=apple-m4",
+      "-DSTS_LTO=ON",
+      "-DSTS_PGO=generate",
+      "-DSTS_PROFILE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/profile.profdata"
+    ],
+    [
+      "cmake",
+      "--build",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate",
+      "--parallel",
+      "2"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-generate",
+      "--output-on-failure"
+    ]
+  ],
+  "seconds": 87.23860812187195,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.4.2)\nTarget: arm64-apple-darwin25.3.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "cpu": "Apple M4",
+  "binary_sha256": "596abb14d643e1c5502672eb5c1fef12045b4d4b158e43f63d02cc40ae7847f7",
+  "runner_sha256": "54996e5af6918b2c7dd78f6174cc3f7cfbc2b0d3e7c1902db5e8bcc2b7232a2e",
+  "cmake_sha256": "35dcd2d0360ac563b0a5cacd62ac548e4521165090b0285e132579536b6ede69"
+}

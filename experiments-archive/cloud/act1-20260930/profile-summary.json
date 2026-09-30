@@ -1,0 +1,619 @@
+{
+  "n": 2000,
+  "heart_wins": 1002,
+  "a1_nonboss": 201,
+  "a1_boss": 34,
+  "encounters": [
+    {
+      "room": "ELITE",
+      "encounter": "GREMLIN_NOB",
+      "deaths": 59,
+      "entries": 1459,
+      "fatal_hp_mean": 35.69491525423729,
+      "fatal_flame": 39,
+      "zero_output": 13,
+      "no_potion": 36
+    },
+    {
+      "room": "ELITE",
+      "encounter": "LAGAVULIN",
+      "deaths": 43,
+      "entries": 1338,
+      "fatal_hp_mean": 43.116279069767444,
+      "fatal_flame": 31,
+      "zero_output": 16,
+      "no_potion": 30
+    },
+    {
+      "room": "ELITE",
+      "encounter": "THREE_SENTRIES",
+      "deaths": 49,
+      "entries": 1400,
+      "fatal_hp_mean": 36,
+      "fatal_flame": 39,
+      "zero_output": 11,
+      "no_potion": 37
+    },
+    {
+      "room": "EVENT",
+      "encounter": "GREMLIN_NOB",
+      "deaths": 3,
+      "entries": 42,
+      "fatal_hp_mean": 25.333333333333332,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 3
+    },
+    {
+      "room": "EVENT",
+      "encounter": "LAGAVULIN_EVENT",
+      "deaths": 12,
+      "entries": 56,
+      "fatal_hp_mean": 35,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 7
+    },
+    {
+      "room": "EVENT",
+      "encounter": "MUSHROOMS_EVENT",
+      "deaths": 1,
+      "entries": 127,
+      "fatal_hp_mean": 22,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 1
+    },
+    {
+      "room": "EVENT",
+      "encounter": "THREE_SENTRIES",
+      "deaths": 1,
+      "entries": 43,
+      "fatal_hp_mean": 20,
+      "fatal_flame": 0,
+      "zero_output": 1,
+      "no_potion": 0
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "BLUE_SLAVER",
+      "deaths": 1,
+      "entries": 826,
+      "fatal_hp_mean": 7,
+      "fatal_flame": 0,
+      "zero_output": 1,
+      "no_potion": 1
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "EXORDIUM_THUGS",
+      "deaths": 8,
+      "entries": 622,
+      "fatal_hp_mean": 16.375,
+      "fatal_flame": 0,
+      "zero_output": 1,
+      "no_potion": 5
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "EXORDIUM_WILDLIFE",
+      "deaths": 6,
+      "entries": 653,
+      "fatal_hp_mean": 15.666666666666666,
+      "fatal_flame": 0,
+      "zero_output": 1,
+      "no_potion": 5
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "GREMLIN_GANG",
+      "deaths": 4,
+      "entries": 464,
+      "fatal_hp_mean": 22,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 3
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "JAW_WORM",
+      "deaths": 1,
+      "entries": 1495,
+      "fatal_hp_mean": 12,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 1
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "LARGE_SLIME",
+      "deaths": 1,
+      "entries": 767,
+      "fatal_hp_mean": 21,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 1
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "LOOTER",
+      "deaths": 1,
+      "entries": 805,
+      "fatal_hp_mean": 7,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 1
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "LOTS_OF_SLIMES",
+      "deaths": 3,
+      "entries": 440,
+      "fatal_hp_mean": 9.333333333333334,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 2
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "THREE_LOUSE",
+      "deaths": 7,
+      "entries": 782,
+      "fatal_hp_mean": 10.714285714285714,
+      "fatal_flame": 0,
+      "zero_output": 0,
+      "no_potion": 7
+    },
+    {
+      "room": "MONSTER",
+      "encounter": "TWO_FUNGI_BEASTS",
+      "deaths": 1,
+      "entries": 794,
+      "fatal_hp_mean": 11,
+      "fatal_flame": 0,
+      "zero_output": 1,
+      "no_potion": 1
+    }
+  ],
+  "floor": {
+    "5": 1,
+    "6": 43,
+    "7": 15,
+    "8": 42,
+    "10": 39,
+    "11": 25,
+    "12": 14,
+    "13": 8,
+    "14": 14
+  },
+  "hp_bands": {
+    "21-40": 79,
+    "1-20": 54,
+    "41-60": 47,
+    ">60": 21
+  },
+  "output": {
+    "1": 84,
+    "0": 45,
+    "2": 47,
+    "3": 15,
+    "4": 8,
+    "5": 2
+  },
+  "prior_elites": {
+    "2": 38,
+    "1": 97,
+    "0": 63,
+    "3": 3
+  },
+  "prior_rests": {
+    "1": 82,
+    "2": 10,
+    "0": 107,
+    "3": 2
+  },
+  "prior_shops": {
+    "1": 56,
+    "0": 144,
+    "2": 1
+  },
+  "flame": 109,
+  "potions": {
+    "0": 141,
+    "1": 60
+  },
+  "deck_sizes": {
+    "17": 30,
+    "16": 35,
+    "14": 35,
+    "13": 21,
+    "15": 31,
+    "20": 5,
+    "10": 4,
+    "19": 10,
+    "18": 16,
+    "12": 11,
+    "11": 3
+  },
+  "relics": [
+    [
+      "BURNING_BLOOD",
+      201
+    ],
+    [
+      "GOLDEN_IDOL",
+      32
+    ],
+    [
+      "ANCIENT_TEA_SET",
+      10
+    ],
+    [
+      "FROZEN_EGG",
+      9
+    ],
+    [
+      "BLOOD_VIAL",
+      9
+    ],
+    [
+      "MEAL_TICKET",
+      8
+    ],
+    [
+      "BAG_OF_MARBLES",
+      6
+    ],
+    [
+      "NUNCHAKU",
+      5
+    ],
+    [
+      "STRAWBERRY",
+      5
+    ],
+    [
+      "TOXIC_EGG",
+      5
+    ],
+    [
+      "INK_BOTTLE",
+      5
+    ],
+    [
+      "UNCEASING_TOP",
+      5
+    ],
+    [
+      "OMAMORI",
+      5
+    ],
+    [
+      "MAW_BANK",
+      5
+    ],
+    [
+      "ODDLY_SMOOTH_STONE",
+      5
+    ],
+    [
+      "PANTOGRAPH",
+      5
+    ],
+    [
+      "SHOVEL",
+      4
+    ],
+    [
+      "ANCHOR",
+      4
+    ],
+    [
+      "REGAL_PILLOW",
+      4
+    ],
+    [
+      "DARKSTONE_PERIAPT",
+      4
+    ],
+    [
+      "QUESTION_CARD",
+      4
+    ],
+    [
+      "THE_BOOT",
+      4
+    ],
+    [
+      "WHITE_BEAST_STATUE",
+      4
+    ],
+    [
+      "WHETSTONE",
+      4
+    ],
+    [
+      "JUZU_BRACELET",
+      4
+    ],
+    [
+      "DREAM_CATCHER",
+      4
+    ],
+    [
+      "AKABEKO",
+      4
+    ],
+    [
+      "LANTERN",
+      4
+    ],
+    [
+      "BLUE_CANDLE",
+      3
+    ],
+    [
+      "STRIKE_DUMMY",
+      3
+    ],
+    [
+      "MAGIC_FLOWER",
+      3
+    ],
+    [
+      "CERAMIC_FISH",
+      3
+    ],
+    [
+      "WING_BOOTS",
+      3
+    ],
+    [
+      "MOLTEN_EGG",
+      3
+    ],
+    [
+      "LETTER_OPENER",
+      3
+    ],
+    [
+      "BOTTLED_LIGHTNING",
+      3
+    ],
+    [
+      "VAJRA",
+      3
+    ],
+    [
+      "SHURIKEN",
+      3
+    ],
+    [
+      "ETERNAL_FEATHER",
+      3
+    ],
+    [
+      "BOTTLED_FLAME",
+      3
+    ],
+    [
+      "ODD_MUSHROOM",
+      3
+    ],
+    [
+      "ART_OF_WAR",
+      3
+    ],
+    [
+      "CALIPERS",
+      3
+    ],
+    [
+      "PEN_NIB",
+      3
+    ],
+    [
+      "SMILING_MASK",
+      3
+    ],
+    [
+      "TURNIP",
+      3
+    ],
+    [
+      "PAPER_PHROG",
+      3
+    ],
+    [
+      "MERCURY_HOURGLASS",
+      2
+    ],
+    [
+      "ORICHALCUM",
+      2
+    ],
+    [
+      "KUNAI",
+      2
+    ],
+    [
+      "FOSSILIZED_HELIX",
+      2
+    ],
+    [
+      "TINY_CHEST",
+      2
+    ],
+    [
+      "GREMLIN_HORN",
+      2
+    ],
+    [
+      "SUNDIAL",
+      2
+    ],
+    [
+      "GINGER",
+      2
+    ],
+    [
+      "INCENSE_BURNER",
+      2
+    ],
+    [
+      "MUMMIFIED_HAND",
+      2
+    ],
+    [
+      "DU_VU_DOLL",
+      2
+    ],
+    [
+      "TORII",
+      2
+    ],
+    [
+      "POTION_BELT",
+      2
+    ],
+    [
+      "TOY_ORNITHOPTER",
+      2
+    ],
+    [
+      "CENTENNIAL_PUZZLE",
+      2
+    ],
+    [
+      "HAPPY_FLOWER",
+      2
+    ],
+    [
+      "RED_SKULL",
+      2
+    ],
+    [
+      "BIRD_FACED_URN",
+      2
+    ],
+    [
+      "PEAR",
+      2
+    ],
+    [
+      "HORN_CLEAT",
+      2
+    ],
+    [
+      "SELF_FORMING_CLAY",
+      2
+    ],
+    [
+      "ORNAMENTAL_FAN",
+      2
+    ],
+    [
+      "SINGING_BOWL",
+      2
+    ],
+    [
+      "MEAT_ON_THE_BONE",
+      2
+    ],
+    [
+      "PEACE_PIPE",
+      2
+    ],
+    [
+      "BOTTLED_TORNADO",
+      2
+    ],
+    [
+      "SPIRIT_POOP",
+      1
+    ],
+    [
+      "HAND_DRILL",
+      1
+    ],
+    [
+      "TUNGSTEN_ROD",
+      1
+    ],
+    [
+      "BRONZE_SCALES",
+      1
+    ],
+    [
+      "OLD_COIN",
+      1
+    ],
+    [
+      "MATRYOSHKA",
+      1
+    ],
+    [
+      "CHAMPION_BELT",
+      1
+    ],
+    [
+      "SLING_OF_COURAGE",
+      1
+    ],
+    [
+      "PRESERVED_INSECT",
+      1
+    ],
+    [
+      "POCKETWATCH",
+      1
+    ],
+    [
+      "CHARONS_ASHES",
+      1
+    ]
+  ],
+  "neow": [
+    {
+      "bonus": 0,
+      "n": 335,
+      "deaths": 32,
+      "rate": 0.0955223880597015
+    },
+    {
+      "bonus": 1,
+      "n": 334,
+      "deaths": 34,
+      "rate": 0.10179640718562874
+    },
+    {
+      "bonus": 2,
+      "n": 335,
+      "deaths": 51,
+      "rate": 0.15223880597014924
+    },
+    {
+      "bonus": 3,
+      "n": 340,
+      "deaths": 27,
+      "rate": 0.07941176470588235
+    },
+    {
+      "bonus": 4,
+      "n": 331,
+      "deaths": 24,
+      "rate": 0.07250755287009064
+    },
+    {
+      "bonus": 5,
+      "n": 325,
+      "deaths": 33,
+      "rate": 0.10153846153846154
+    }
+  ],
+  "matched": {
+    "n": 201,
+    "within5": 176,
+    "equal": 135
+  }
+}

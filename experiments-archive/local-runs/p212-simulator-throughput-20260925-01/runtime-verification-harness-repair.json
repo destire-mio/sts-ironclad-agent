@@ -1,0 +1,7 @@
+{
+  "failed_attempts": 1,
+  "failure": "Verification caller expected rollout to return terminal_fingerprint; runtime returns final mutable GameContext instead. KeyError occurred after first rollout.",
+  "repair": "Pass caller-owned GameContext, apply the registered external clock input, compute the canonical terminal fingerprint. Persist subsequent full rollout attempts.",
+  "engine_or_policy_changed": false,
+  "native_outcome_of_failed_harness_attempt": "not recorded; not counted as a loss or a verified game"
+}

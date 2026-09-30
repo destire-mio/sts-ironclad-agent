@@ -1,0 +1,11 @@
+{"stage": "paired800", "started": 1790746052.1776597, "command": ["~/sts/venv/bin/python", "~/sts/runs/distill2-code-v1/distill2_run.py", "--output", "~/sts/runs/distill2-v21-20260930/paired800.jsonl", "--model", "~/sts/runs/distill2-v21-20260930/frozen/distill2_frozen.pt", "--teacher-module", "p300_play_v21", "--arms", "sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4r+heart2+fix2+baixi+eliteseek+fix3+spear320+cardadj+fix4", "--first-seed", "3900040200", "--games", "800", "--workers", "31"]}
+Traceback (most recent call last):
+  File "~/sts/runs/distill2-code-v1/distill2_pipeline.py", line 102, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "~/sts/runs/distill2-code-v1/distill2_pipeline.py", line 95, in main
+    stage('paired800','distill2_run.py','--output',rest,'--model',destination,*common,
+  File "~/sts/runs/distill2-code-v1/distill2_pipeline.py", line 55, in stage
+    if result.returncode:raise RuntimeError('stage failed; no automatic retry: '+name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: stage failed; no automatic retry: paired800

@@ -1,0 +1,35 @@
+{
+  "runner_sha256": "4fa958d829fe87f6f7d5bfdf73ed3ccd6f13a9065922777b7d5751bbdfbf79b1",
+  "hazards": [
+    "Astrolabe",
+    "Calling Bell",
+    "Cursed Key",
+    "DollysMirror",
+    "Empty Cage",
+    "Necronomicon",
+    "Omamori",
+    "Pandora's Box",
+    "PrismaticShard",
+    "Tiny House"
+  ],
+  "hashes": {
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/data-result.json": "d0ed2dac9d8230b6ac65272964a4b0f4ac90b88c1c6097f25976760a113cca08",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/source-audit.json": "bafcb7945c8083dd3ed43e572e5d7b96bf8db1f9d18e49321d0a7dcb31902c75",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/choices.json": "a63e581a89c862bc1dd13a1d74819402e43303ef42d3ae9fb2b281e74795da28",
+    "<repo-parent>/sts-rl-agent-principles/runs/p204-human-decisions-20260924-01/source/baalorlord-profile0-runs.zip": "913fa11ac4252dbaf15151b8f1e64f86dbdb7c0f27a7ec6ab9270e169d0dbb53",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_human_decisions.py": "bd55e3ea6ee60c3523b30485f4cf0d0fd40c5b3ee7c4a8f3968122f1610cbea9"
+  },
+  "reason": "Observed removal of unrecorded Shame after Cursed Key and Omamori: the old stopping point occurs after deck uncertainty begins. Repair input admission before training; original files retained.",
+  "rule": "Censor choices at/after the first opaque relic acquisition from Neow/reward/event/shop/boss logs or a Writhing Mass encounter. No game outcome is used. Retain original failed-terminal exclusions and family roles.",
+  "budgets": {
+    "new_games": 0,
+    "optimizer_updates": 0
+  },
+  "data_gate": {
+    "build": "2022-12-18",
+    "minimum_families": 200,
+    "minimum_choices": 4000,
+    "minimum_late_families": 40,
+    "minimum_late_choices": 400
+  }
+}

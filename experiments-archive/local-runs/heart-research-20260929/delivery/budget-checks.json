@@ -1,0 +1,81 @@
+[
+  {
+    "flags": [],
+    "act": 4,
+    "encounter": "THE_HEART",
+    "budget": 80000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "heart40"
+    ],
+    "act": 4,
+    "encounter": "THE_HEART",
+    "budget": 40000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "spear160"
+    ],
+    "act": 4,
+    "encounter": "THE_HEART",
+    "budget": 80000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [],
+    "act": 4,
+    "encounter": "SHIELD_AND_SPEAR",
+    "budget": 80000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "heart40"
+    ],
+    "act": 4,
+    "encounter": "SHIELD_AND_SPEAR",
+    "budget": 80000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "spear160"
+    ],
+    "act": 4,
+    "encounter": "SHIELD_AND_SPEAR",
+    "budget": 160000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "heart40",
+      "spear160"
+    ],
+    "act": 4,
+    "encounter": "THE_HEART",
+    "budget": 40000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "heart40",
+      "spear160"
+    ],
+    "act": 4,
+    "encounter": "SHIELD_AND_SPEAR",
+    "budget": 160000,
+    "boss_multiplier": 12
+  },
+  {
+    "flags": [
+      "spear160"
+    ],
+    "act": 3,
+    "encounter": "AWAKENED_ONE",
+    "budget": 40000,
+    "boss_multiplier": 12
+  }
+]

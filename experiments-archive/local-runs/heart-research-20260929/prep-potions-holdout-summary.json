@@ -1,0 +1,25 @@
+[
+  {
+    "rule": "potionfirst",
+    "variant": "candidate",
+    "n": 24,
+    "base_wins": 21,
+    "candidate_wins": 19,
+    "rescued": 0,
+    "lost": 2,
+    "net": -2,
+    "conditional_delta": -0.08333333333333333,
+    "conservative95": [
+      -0.297996984929369,
+      0.15979836208274956
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 31.054514208333313,
+    "candidate_cpu": 34.28951300000003,
+    "rescued_seeds": [],
+    "lost_seeds": [
+      3900012087,
+      3900012879
+    ]
+  }
+]

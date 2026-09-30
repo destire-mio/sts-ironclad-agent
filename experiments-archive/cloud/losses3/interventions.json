@@ -1,0 +1,137 @@
+[
+  {
+    "id": "vampires_zero_strikes_2195",
+    "seed": 3900012195,
+    "index": 90,
+    "kind": "vampires",
+    "option": 2,
+    "reason": "No starter strikes remain; skip paying 27 max HP for five added Bites in a 21-card deck. Observed state only; no alternate seeds."
+  },
+  {
+    "id": "falling_preserve_2083",
+    "seed": 3900012083,
+    "index": 156,
+    "kind": "falling_preserve",
+    "reason": "Protect sole Corruption+ with 11 skills and Feel No Pain. Choose a nonengine offered card by frozen removal-score ranking."
+  },
+  {
+    "id": "second_wind_upgrade_2137",
+    "seed": 3900012137,
+    "index": 205,
+    "kind": "upgrade",
+    "item": "SECOND_WIND",
+    "reason": "Last campfire, Corruption+, 16 skills, no Feel No Pain: test scaling block upgrade instead of Immolate before Act4."
+  },
+  {
+    "id": "second_wind_upgrade_2063",
+    "seed": 3900012063,
+    "index": 211,
+    "kind": "upgrade",
+    "item": "SECOND_WIND",
+    "reason": "Last Act3 campfire, 31/78 HP, 18 skills and Barricade+/Dark Embrace+: test block upgrade instead of Offering."
+  },
+  {
+    "id": "sozu_sustain_2034",
+    "seed": 3900012034,
+    "index": 138,
+    "kind": "relic",
+    "item": "SLAVERS_COLLAR",
+    "reason": "Coffee Dripper plus Toy Ornithopter: select offered energy relic Slavers Collar instead of Sozu, preserving future potion healing. One fixed alternative."
+  },
+  {
+    "id": "snecko_pyramid_2212",
+    "seed": 3900012212,
+    "index": 142,
+    "kind": "relic",
+    "item": "FUSION_HAMMER",
+    "reason": "Already owns Runic Pyramid and Armaments+; choose offered Fusion Hammer rather than Snecko Eye. Avoid persistent randomized high costs, retain an energy relic."
+  },
+  {
+    "id": "vampires_zero_strikes_2025",
+    "seed": 3900012025,
+    "index": 95,
+    "kind": "vampires",
+    "option": 2,
+    "reason": "Second observed zero-strike case, 22-card deck; decline 25 max HP cost and five added Bites. Applies the same predeclared rule, not a new alternate chosen by outcome."
+  },
+  {
+    "id": "falling_second_wind_2126",
+    "seed": 3900012126,
+    "index": 210,
+    "kind": "falling",
+    "option": 2,
+    "reason": "Preserve sole Second Wind with Feel No Pain+; remove offered Anger, retaining fixed original policy thereafter."
+  },
+  {
+    "id": "falling_second_wind_2212",
+    "seed": 3900012212,
+    "index": 174,
+    "kind": "falling",
+    "option": 1,
+    "reason": "Pyramid plus Snecko: preserve sole hand-clearing Second Wind; remove offered Combust. Independent from relic alternative, no combined intervention."
+  },
+  {
+    "id": "falling_power_through_2069",
+    "seed": 3900012069,
+    "index": 177,
+    "kind": "falling",
+    "option": 2,
+    "reason": "Apply existing removal preference at Falling: remove offered starter Strike rather than Power Through+."
+  },
+  {
+    "id": "critical_hp_event_3900012068",
+    "seed": 3900012068,
+    "index": 34,
+    "kind": "route",
+    "option": 0,
+    "reason": "All sample triggers: HP <=15 and <=20%, parent selects MONSTER with EVENT offered, green key already held. Take the leftmost offered EVENT once; no knowledge of hidden event content."
+  },
+  {
+    "id": "critical_hp_event_3900012207",
+    "seed": 3900012207,
+    "index": 103,
+    "kind": "route",
+    "option": 5,
+    "reason": "All sample triggers: HP <=15 and <=20%, parent selects MONSTER with EVENT offered, green key already held. Take the leftmost offered EVENT once; no knowledge of hidden event content."
+  },
+  {
+    "id": "act4_empty_potion_shop_3900012201",
+    "seed": 3900012201,
+    "index": 217,
+    "kind": "shop",
+    "item": "16",
+    "reason": "All sample cases: Act4 shop, empty potion inventory, affordable combat potion and chosen leave, no Sozu. Buy one potion using predeclared priority Block > Duplication > Energy > Dexterity > Weak > Strength > Swift > Ancient > Flex > Attack > Power > Colorless > Explosive. Continue original policy; no alternative-potion outcome selection."
+  },
+  {
+    "id": "act4_empty_potion_shop_3900012007",
+    "seed": 3900012007,
+    "index": 216,
+    "kind": "shop",
+    "item": "3",
+    "reason": "All sample cases: Act4 shop, empty potion inventory, affordable combat potion and chosen leave, no Sozu. Buy one potion using predeclared priority Block > Duplication > Energy > Dexterity > Weak > Strength > Swift > Ancient > Flex > Attack > Power > Colorless > Explosive. Continue original policy; no alternative-potion outcome selection."
+  },
+  {
+    "id": "act4_empty_potion_shop_3900012040",
+    "seed": 3900012040,
+    "index": 225,
+    "kind": "shop",
+    "item": "41",
+    "reason": "All sample cases: Act4 shop, empty potion inventory, affordable combat potion and chosen leave, no Sozu. Buy one potion using predeclared priority Block > Duplication > Energy > Dexterity > Weak > Strength > Swift > Ancient > Flex > Attack > Power > Colorless > Explosive. Continue original policy; no alternative-potion outcome selection."
+  },
+  {
+    "id": "guide_second_wind_2218",
+    "seed": 3900012218,
+    "index": 177,
+    "kind": "card",
+    "item": "SECOND_WIND+",
+    "reason": "Act3, 27 cards, Feel No Pain and Power Through+, burn=0, 12 skills versus 11 attacks. Guide replaces parent Second Wind+ with Pommel Strike+; test retaining the parent action once, without changing later policy or search budget."
+  },
+  {
+    "id": "low_hp_rest_3127",
+    "seed": 3900013127,
+    "index": 186,
+    "kind": "route",
+    "item": "REST",
+    "reason": "Extra whole-cohort metadata case, outside frozen 60. F40 10/75 HP, no Coffee Dripper or Mark of the Bloom, REST versus unknown EVENT. Choose REST on visible HP and healing availability; never inspect event outcome to route. Single fixed continuation."
+  }
+]

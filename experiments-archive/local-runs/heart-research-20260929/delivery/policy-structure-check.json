@@ -1,0 +1,7 @@
+{
+  "final_without_spear160_matches_rest_smoked_revision_AST_after_inactive_guard_normalization": true,
+  "flags_disabled_matches_v12_AST_after_budget_expression_normalization": true,
+  "local_cloud_c4q_branch_AST_match": true,
+  "budget_scenarios": 9,
+  "rest_helper_matches_73_tested_roots": "action-audit.jsonl"
+}

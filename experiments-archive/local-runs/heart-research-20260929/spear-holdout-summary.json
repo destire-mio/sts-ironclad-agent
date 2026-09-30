@@ -1,0 +1,53 @@
+{
+  "rule": "spear160",
+  "variant": "candidate",
+  "n": 46,
+  "base_wins": 17,
+  "candidate_wins": 18,
+  "rescued": 1,
+  "lost": 0,
+  "net": 1,
+  "conditional_delta": 0.021739130434782608,
+  "conservative95": [
+    -0.09059137431393272,
+    0.13087350984839058
+  ],
+  "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+  "base_cpu": 25.805396652173915,
+  "candidate_cpu": 26.027024847826087,
+  "rescued_seeds": [
+    3900012154
+  ],
+  "lost_seeds": [],
+  "historical_strata": {
+    "heart_win": {
+      "n": 16,
+      "rescued": 0,
+      "lost": 0,
+      "whole_run_weight": 0.482,
+      "delta": 0
+    },
+    "heart_loss": {
+      "n": 16,
+      "rescued": 1,
+      "lost": 0,
+      "whole_run_weight": 0.147,
+      "delta": 0.0625
+    },
+    "spear_loss": {
+      "n": 14,
+      "rescued": 0,
+      "lost": 0,
+      "whole_run_weight": 0.022,
+      "delta": 0
+    }
+  },
+  "estimated_whole_run_delta": 0.0091875,
+  "projected_cpu_seconds_per_started_run_delta": 1.279948391339286,
+  "heart_reached": {
+    "base": 32,
+    "candidate": 33
+  },
+  "both_reached_n": 32,
+  "heart_hp_delta_among_both_reached": 0.875
+}

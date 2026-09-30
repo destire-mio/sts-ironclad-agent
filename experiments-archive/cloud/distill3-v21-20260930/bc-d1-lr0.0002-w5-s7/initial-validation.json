@@ -1,0 +1,58 @@
+{
+  "n": 126586,
+  "accuracy": 0.9134027459592688,
+  "loss": 0.2690288997090527,
+  "macro_accuracy": 0.9160458041995099,
+  "by_type": {
+    "Neow": {
+      "n": 817,
+      "correct": 817,
+      "accuracy": 1.0
+    },
+    "boss_relic": {
+      "n": 1389,
+      "correct": 1350,
+      "accuracy": 0.9719222462203023
+    },
+    "card_reward": {
+      "n": 53247,
+      "correct": 48862,
+      "accuracy": 0.9176479426070953
+    },
+    "card_select": {
+      "n": 7431,
+      "correct": 5650,
+      "accuracy": 0.7603283541918988
+    },
+    "event": {
+      "n": 6197,
+      "correct": 5755,
+      "accuracy": 0.9286751654026142
+    },
+    "map": {
+      "n": 26647,
+      "correct": 24764,
+      "accuracy": 0.9293353848463242
+    },
+    "other_reward": {
+      "n": 14800,
+      "correct": 14777,
+      "accuracy": 0.9984459459459459
+    },
+    "rest": {
+      "n": 6518,
+      "correct": 6170,
+      "accuracy": 0.9466093893832463
+    },
+    "shop": {
+      "n": 7046,
+      "correct": 4985,
+      "accuracy": 0.7074936133976725
+    },
+    "treasure": {
+      "n": 2494,
+      "correct": 2494,
+      "accuracy": 1.0
+    }
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "rule": "potionfirst",
+    "variant": "candidate",
+    "n": 4,
+    "base_wins": 4,
+    "candidate_wins": 4,
+    "rescued": 0,
+    "lost": 0,
+    "net": 0,
+    "conditional_delta": 0,
+    "conservative95": [
+      -0.665629847511789,
+      0.665629847511789
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 29.457639105,
+    "candidate_cpu": 31.83830802,
+    "rescued_seeds": [],
+    "lost_seeds": []
+  },
+  {
+    "rule": "rest90",
+    "variant": "candidate",
+    "n": 4,
+    "base_wins": 2,
+    "candidate_wins": 2,
+    "rescued": 0,
+    "lost": 0,
+    "net": 0,
+    "conditional_delta": 0,
+    "conservative95": [
+      -0.665629847511789,
+      0.665629847511789
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 13.461523555,
+    "candidate_cpu": 22.357359025,
+    "rescued_seeds": [],
+    "lost_seeds": []
+  }
+]

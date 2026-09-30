@@ -1,0 +1,30 @@
+[
+  {
+    "rule": "rest90",
+    "variant": "candidate",
+    "n": 37,
+    "base_wins": 18,
+    "candidate_wins": 22,
+    "rescued": 5,
+    "lost": 1,
+    "net": 4,
+    "conditional_delta": 0.10810810810810811,
+    "conservative95": [
+      -0.12246137508499066,
+      0.30981813401386177
+    ],
+    "interval_method": "Bonferroni difference of 97.5% Clopper-Pearson intervals for rescue and loss; avoids zero-width intervals when no discordance is observed",
+    "base_cpu": 32.964963324324316,
+    "candidate_cpu": 38.36206094594594,
+    "rescued_seeds": [
+      3900012559,
+      3900012269,
+      3900012909,
+      3900012648,
+      3900012723
+    ],
+    "lost_seeds": [
+      3900012557
+    ]
+  }
+]

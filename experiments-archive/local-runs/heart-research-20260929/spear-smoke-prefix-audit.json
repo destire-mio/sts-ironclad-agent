@@ -1,0 +1,90 @@
+[
+  {
+    "seed": 3900012088,
+    "prefix_actions": 222,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012088-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "13153a8bf639b471bb61f3b29c23fb7a6ced22215417ef051e853010cce338fb"
+  },
+  {
+    "seed": 3900012165,
+    "prefix_actions": 238,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012165-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "967b390839adfe18db17f144a9d83c1c0d160d1ad1842c04096b644bceb0dd94"
+  },
+  {
+    "seed": 3900012321,
+    "prefix_actions": 231,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012321-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "e2ef608d1957ec4d0634268ba0f555d0c24865ef5525656ed3220ab06ef5f68b"
+  },
+  {
+    "seed": 3900012518,
+    "prefix_actions": 222,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012518-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "14b46551c2f9db6c57913464e9d04e82b6281ea1eae7eea760539747fbcafc3e"
+  },
+  {
+    "seed": 3900012547,
+    "prefix_actions": 241,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012547-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "f2c99d813e69dd81ddc77e823d67f3361644edb379754d14d2003a1d08dbebfc"
+  },
+  {
+    "seed": 3900012719,
+    "prefix_actions": 223,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012719-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "9a886b3fc29172272ad6066b6d4428405353d3fb8de33087d599e0f324ffdf22"
+  },
+  {
+    "seed": 3900012854,
+    "prefix_actions": 231,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": true,
+    "candidate_win": true,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012854-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "eebca6dee93c18528372c3cdcfed0939fff9559e088e160f087b2a62b21cfa28"
+  },
+  {
+    "seed": 3900012972,
+    "prefix_actions": 222,
+    "prefix_match": true,
+    "feature": "spear160",
+    "base_win": false,
+    "candidate_win": false,
+    "error": null,
+    "natural_trace": "<repo-parent>/sts-rl-agent-principles/runs/heart-research-20260929/cloud-smoke-spear-v14-traj/3900012972-sims32+boss12+rest+reuse+svsel+svcard+portal+evsafe+focus+relicu+fix+guide+c4q+heart2+fix2+baixi+eliteseek+fix3+spear160+traj.json.gz",
+    "prefix_sha256": "7dd1edca089ba2bcb90c1f7517c78edb05e90e63d4760e549491e33df496b8f3"
+  }
+]

@@ -1,0 +1,1202 @@
+[
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0003.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3156,
+    "candidates": 15525,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0004.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3474,
+    "candidates": 16598,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0002.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3502,
+    "candidates": 17088,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0000.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3682,
+    "candidates": 18220,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0001.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3864,
+    "candidates": 19759,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0005.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3799,
+    "candidates": 18717,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0008.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3392,
+    "candidates": 17117,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0009.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3429,
+    "candidates": 16714,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0006.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3988,
+    "candidates": 19979,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0007.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3772,
+    "candidates": 19102,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0010.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3245,
+    "candidates": 15445,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0011.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3608,
+    "candidates": 17956,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0012.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3634,
+    "candidates": 17720,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0014.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3683,
+    "candidates": 18032,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0013.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3854,
+    "candidates": 19577,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0016.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3662,
+    "candidates": 17841,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0015.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3536,
+    "candidates": 17814,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0017.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3388,
+    "candidates": 16353,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0018.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3518,
+    "candidates": 17336,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0019.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3268,
+    "candidates": 15626,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0021.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2715,
+    "candidates": 13387,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0020.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3693,
+    "candidates": 17706,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0022.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3158,
+    "candidates": 15440,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0023.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3254,
+    "candidates": 15716,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0024.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3430,
+    "candidates": 16587,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0025.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3442,
+    "candidates": 16768,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0026.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3109,
+    "candidates": 15200,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0027.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3532,
+    "candidates": 17681,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0028.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3080,
+    "candidates": 14993,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0030.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3485,
+    "candidates": 16804,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0032.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3600,
+    "candidates": 17690,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0034.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3023,
+    "candidates": 14143,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0029.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 4157,
+    "candidates": 21517,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0031.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3950,
+    "candidates": 19868,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0033.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3458,
+    "candidates": 16424,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0035.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3626,
+    "candidates": 17594,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0038.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3164,
+    "candidates": 15005,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0039.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3136,
+    "candidates": 15514,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0036.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3463,
+    "candidates": 16873,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0037.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3397,
+    "candidates": 16723,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0040.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3996,
+    "candidates": 19493,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0042.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2813,
+    "candidates": 13427,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0041.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3158,
+    "candidates": 15914,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0043.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3204,
+    "candidates": 15716,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0044.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3278,
+    "candidates": 16808,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0045.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3706,
+    "candidates": 17966,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0046.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2949,
+    "candidates": 15013,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0047.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2873,
+    "candidates": 13841,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0049.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2805,
+    "candidates": 13236,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0048.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3414,
+    "candidates": 16628,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0050.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3399,
+    "candidates": 16190,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0052.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3375,
+    "candidates": 16273,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0051.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3644,
+    "candidates": 18071,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0053.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3221,
+    "candidates": 15436,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0054.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3428,
+    "candidates": 17352,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0055.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3625,
+    "candidates": 17868,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0058.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3107,
+    "candidates": 14439,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0056.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3603,
+    "candidates": 18637,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0057.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3504,
+    "candidates": 17167,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0060.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3099,
+    "candidates": 14901,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0059.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3759,
+    "candidates": 18282,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0061.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3101,
+    "candidates": 15161,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0063.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3121,
+    "candidates": 14631,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0062.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3159,
+    "candidates": 15615,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0064.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3659,
+    "candidates": 17217,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0066.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3045,
+    "candidates": 14941,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0065.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3430,
+    "candidates": 16920,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0067.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3478,
+    "candidates": 17539,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0068.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3650,
+    "candidates": 17698,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0069.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3451,
+    "candidates": 16292,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0070.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3207,
+    "candidates": 15747,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0071.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3355,
+    "candidates": 16136,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0072.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3288,
+    "candidates": 15795,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0073.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3396,
+    "candidates": 16009,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0074.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3557,
+    "candidates": 18147,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0076.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3358,
+    "candidates": 16952,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0075.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3715,
+    "candidates": 18298,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0077.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3628,
+    "candidates": 17429,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0078.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3574,
+    "candidates": 16869,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0079.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3230,
+    "candidates": 15618,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0080.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3267,
+    "candidates": 16539,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0081.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3323,
+    "candidates": 15718,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0082.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3541,
+    "candidates": 17281,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0084.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3343,
+    "candidates": 16143,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0083.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3348,
+    "candidates": 16716,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0085.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3816,
+    "candidates": 18406,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0086.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3659,
+    "candidates": 17872,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0088.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3349,
+    "candidates": 16884,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0087.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3584,
+    "candidates": 17643,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0090.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3550,
+    "candidates": 17423,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0089.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3578,
+    "candidates": 17932,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0091.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3204,
+    "candidates": 14567,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0093.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3259,
+    "candidates": 15773,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0094.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3648,
+    "candidates": 17882,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0092.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3816,
+    "candidates": 18909,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0095.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3486,
+    "candidates": 16641,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0097.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3360,
+    "candidates": 16133,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0096.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3700,
+    "candidates": 18327,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0098.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3441,
+    "candidates": 17145,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0100.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3275,
+    "candidates": 16053,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0099.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3908,
+    "candidates": 19665,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0101.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3223,
+    "candidates": 16770,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0102.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3445,
+    "candidates": 17050,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0103.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3766,
+    "candidates": 18686,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0104.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3077,
+    "candidates": 15325,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0105.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3357,
+    "candidates": 16212,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0106.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3386,
+    "candidates": 16704,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0108.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3484,
+    "candidates": 16703,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0107.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3671,
+    "candidates": 17405,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0110.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3095,
+    "candidates": 14949,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0109.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3765,
+    "candidates": 18540,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0111.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3502,
+    "candidates": 17333,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0112.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3113,
+    "candidates": 15337,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0113.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3174,
+    "candidates": 15693,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0114.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3290,
+    "candidates": 15953,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0115.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3335,
+    "candidates": 16746,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0117.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3037,
+    "candidates": 14776,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0116.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3811,
+    "candidates": 18645,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0118.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3702,
+    "candidates": 18149,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0119.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3210,
+    "candidates": 15595,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0120.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3352,
+    "candidates": 16405,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0121.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3568,
+    "candidates": 17383,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0122.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3424,
+    "candidates": 16220,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0123.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3663,
+    "candidates": 17332,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0124.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3416,
+    "candidates": 16800,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0126.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3291,
+    "candidates": 16082,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0125.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3754,
+    "candidates": 18702,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0127.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3521,
+    "candidates": 16459,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0128.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3841,
+    "candidates": 18942,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0129.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3446,
+    "candidates": 16403,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0130.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3305,
+    "candidates": 16248,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0131.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 2949,
+    "candidates": 14793,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0132.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3646,
+    "candidates": 17766,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0133.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3675,
+    "candidates": 17993,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0135.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3476,
+    "candidates": 17298,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0134.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 4023,
+    "candidates": 19491,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0136.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3616,
+    "candidates": 18139,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0137.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3746,
+    "candidates": 18339,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0138.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3211,
+    "candidates": 15362,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0139.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3811,
+    "candidates": 19224,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0140.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3154,
+    "candidates": 15055,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0141.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3358,
+    "candidates": 16564,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0144.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3039,
+    "candidates": 14549,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0142.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3783,
+    "candidates": 17369,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0143.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3645,
+    "candidates": 18109,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0146.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3475,
+    "candidates": 17239,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0145.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3640,
+    "candidates": 18673,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0147.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3748,
+    "candidates": 18322,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0148.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3591,
+    "candidates": 17457,
+    "errors": []
+  },
+  {
+    "shard": "~/sts/runs/distill2-v21-20260930/data/shard-0149.npz",
+    "total": 20,
+    "passed": 20,
+    "decisions": 3961,
+    "candidates": 19612,
+    "errors": []
+  }
+]

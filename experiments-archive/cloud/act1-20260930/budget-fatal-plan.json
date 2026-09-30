@@ -1,0 +1,1409 @@
+[
+  {
+    "seed": 3900012002,
+    "index": 66,
+    "floor": 14,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012023,
+    "index": 51,
+    "floor": 12,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012040,
+    "index": 51,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012050,
+    "index": 27,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012062,
+    "index": 18,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012066,
+    "index": 41,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012068,
+    "index": 35,
+    "floor": 8,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012070,
+    "index": 19,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012072,
+    "index": 59,
+    "floor": 13,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012097,
+    "index": 62,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012098,
+    "index": 54,
+    "floor": 12,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012100,
+    "index": 35,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012141,
+    "index": 33,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012178,
+    "index": 51,
+    "floor": 11,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012179,
+    "index": 42,
+    "floor": 10,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012180,
+    "index": 47,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012195,
+    "index": 45,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012197,
+    "index": 54,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012204,
+    "index": 37,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012228,
+    "index": 50,
+    "floor": 11,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012247,
+    "index": 19,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012270,
+    "index": 36,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012294,
+    "index": 58,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012306,
+    "index": 58,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012330,
+    "index": 61,
+    "floor": 14,
+    "encounter": "GREMLIN_GANG",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012357,
+    "index": 54,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012366,
+    "index": 40,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012375,
+    "index": 42,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012396,
+    "index": 23,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012398,
+    "index": 24,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012407,
+    "index": 55,
+    "floor": 11,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012422,
+    "index": 60,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012433,
+    "index": 36,
+    "floor": 8,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012435,
+    "index": 32,
+    "floor": 7,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012439,
+    "index": 28,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012441,
+    "index": 33,
+    "floor": 7,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012449,
+    "index": 42,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012453,
+    "index": 49,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012456,
+    "index": 46,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012459,
+    "index": 53,
+    "floor": 11,
+    "encounter": "GREMLIN_GANG",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012475,
+    "index": 40,
+    "floor": 8,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012477,
+    "index": 48,
+    "floor": 10,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012492,
+    "index": 34,
+    "floor": 8,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012498,
+    "index": 60,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012502,
+    "index": 42,
+    "floor": 11,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012503,
+    "index": 63,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012508,
+    "index": 56,
+    "floor": 11,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012520,
+    "index": 42,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012532,
+    "index": 23,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012538,
+    "index": 34,
+    "floor": 7,
+    "encounter": "LARGE_SLIME",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012570,
+    "index": 37,
+    "floor": 7,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012571,
+    "index": 35,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012573,
+    "index": 26,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012575,
+    "index": 27,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012603,
+    "index": 44,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012610,
+    "index": 51,
+    "floor": 10,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012645,
+    "index": 32,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012657,
+    "index": 36,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012674,
+    "index": 28,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012678,
+    "index": 49,
+    "floor": 11,
+    "encounter": "LOOTER",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012686,
+    "index": 54,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012687,
+    "index": 30,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012694,
+    "index": 64,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012697,
+    "index": 37,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012709,
+    "index": 32,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012714,
+    "index": 36,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012725,
+    "index": 40,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012734,
+    "index": 31,
+    "floor": 7,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012743,
+    "index": 24,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012746,
+    "index": 54,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012754,
+    "index": 50,
+    "floor": 11,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012762,
+    "index": 47,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012766,
+    "index": 60,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012768,
+    "index": 51,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012775,
+    "index": 23,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012784,
+    "index": 27,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012794,
+    "index": 46,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012795,
+    "index": 28,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012798,
+    "index": 65,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012825,
+    "index": 38,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012827,
+    "index": 19,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012838,
+    "index": 30,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012844,
+    "index": 64,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012845,
+    "index": 47,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012848,
+    "index": 67,
+    "floor": 14,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012861,
+    "index": 25,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012862,
+    "index": 28,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012863,
+    "index": 62,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012880,
+    "index": 25,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012892,
+    "index": 29,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012899,
+    "index": 31,
+    "floor": 7,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012902,
+    "index": 22,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012924,
+    "index": 38,
+    "floor": 8,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012925,
+    "index": 25,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012927,
+    "index": 29,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012935,
+    "index": 43,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012938,
+    "index": 54,
+    "floor": 11,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012940,
+    "index": 57,
+    "floor": 12,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012945,
+    "index": 45,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012954,
+    "index": 35,
+    "floor": 8,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012955,
+    "index": 28,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012967,
+    "index": 19,
+    "floor": 5,
+    "encounter": "JAW_WORM",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012976,
+    "index": 59,
+    "floor": 13,
+    "encounter": "GREMLIN_GANG",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012989,
+    "index": 24,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012990,
+    "index": 47,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012992,
+    "index": 29,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900012993,
+    "index": 62,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013015,
+    "index": 42,
+    "floor": 10,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013030,
+    "index": 58,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013042,
+    "index": 34,
+    "floor": 7,
+    "encounter": "GREMLIN_GANG",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013057,
+    "index": 23,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013074,
+    "index": 28,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013077,
+    "index": 48,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013083,
+    "index": 22,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013089,
+    "index": 24,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013092,
+    "index": 45,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013098,
+    "index": 62,
+    "floor": 13,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013110,
+    "index": 57,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013123,
+    "index": 42,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013128,
+    "index": 52,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013140,
+    "index": 32,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013143,
+    "index": 32,
+    "floor": 7,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013157,
+    "index": 23,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013160,
+    "index": 30,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013166,
+    "index": 27,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013167,
+    "index": 49,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013211,
+    "index": 34,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013214,
+    "index": 23,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013215,
+    "index": 47,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013221,
+    "index": 60,
+    "floor": 13,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013223,
+    "index": 31,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013229,
+    "index": 49,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013235,
+    "index": 63,
+    "floor": 13,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013249,
+    "index": 20,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013250,
+    "index": 59,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013255,
+    "index": 27,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013268,
+    "index": 44,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013270,
+    "index": 23,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013279,
+    "index": 47,
+    "floor": 12,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013295,
+    "index": 51,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013305,
+    "index": 58,
+    "floor": 11,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013315,
+    "index": 48,
+    "floor": 10,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013320,
+    "index": 51,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013321,
+    "index": 38,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013324,
+    "index": 23,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013337,
+    "index": 27,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013338,
+    "index": 49,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013352,
+    "index": 34,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013366,
+    "index": 59,
+    "floor": 12,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013381,
+    "index": 56,
+    "floor": 11,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013389,
+    "index": 31,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013400,
+    "index": 54,
+    "floor": 12,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013401,
+    "index": 51,
+    "floor": 10,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013412,
+    "index": 47,
+    "floor": 11,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013417,
+    "index": 22,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013422,
+    "index": 32,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013439,
+    "index": 42,
+    "floor": 10,
+    "encounter": "LOTS_OF_SLIMES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013449,
+    "index": 39,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013467,
+    "index": 50,
+    "floor": 11,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013489,
+    "index": 61,
+    "floor": 14,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013495,
+    "index": 34,
+    "floor": 7,
+    "encounter": "MUSHROOMS_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013509,
+    "index": 58,
+    "floor": 12,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013528,
+    "index": 37,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013539,
+    "index": 46,
+    "floor": 10,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013549,
+    "index": 41,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013570,
+    "index": 24,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013580,
+    "index": 30,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013582,
+    "index": 24,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013585,
+    "index": 32,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013594,
+    "index": 24,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013601,
+    "index": 33,
+    "floor": 8,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013606,
+    "index": 45,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013611,
+    "index": 42,
+    "floor": 10,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013625,
+    "index": 32,
+    "floor": 8,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013648,
+    "index": 43,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013670,
+    "index": 29,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013671,
+    "index": 44,
+    "floor": 10,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013680,
+    "index": 24,
+    "floor": 6,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013681,
+    "index": 49,
+    "floor": 11,
+    "encounter": "EXORDIUM_WILDLIFE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013684,
+    "index": 37,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013692,
+    "index": 38,
+    "floor": 8,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013734,
+    "index": 46,
+    "floor": 10,
+    "encounter": "EXORDIUM_THUGS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013747,
+    "index": 49,
+    "floor": 11,
+    "encounter": "BLUE_SLAVER",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013760,
+    "index": 51,
+    "floor": 10,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013772,
+    "index": 67,
+    "floor": 14,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013791,
+    "index": 28,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013809,
+    "index": 32,
+    "floor": 7,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013810,
+    "index": 19,
+    "floor": 6,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013824,
+    "index": 46,
+    "floor": 11,
+    "encounter": "THREE_LOUSE",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013832,
+    "index": 55,
+    "floor": 11,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013860,
+    "index": 42,
+    "floor": 10,
+    "encounter": "LOTS_OF_SLIMES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013868,
+    "index": 42,
+    "floor": 10,
+    "encounter": "THREE_SENTRIES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013872,
+    "index": 38,
+    "floor": 8,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013879,
+    "index": 53,
+    "floor": 10,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013882,
+    "index": 55,
+    "floor": 11,
+    "encounter": "LAGAVULIN_EVENT",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013899,
+    "index": 29,
+    "floor": 6,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013905,
+    "index": 43,
+    "floor": 8,
+    "encounter": "LOTS_OF_SLIMES",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013924,
+    "index": 52,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013941,
+    "index": 31,
+    "floor": 8,
+    "encounter": "LAGAVULIN",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013960,
+    "index": 34,
+    "floor": 8,
+    "encounter": "TWO_FUNGI_BEASTS",
+    "sample": "all201fatal"
+  },
+  {
+    "seed": 3900013968,
+    "index": 49,
+    "floor": 11,
+    "encounter": "GREMLIN_NOB",
+    "sample": "all201fatal"
+  }
+]

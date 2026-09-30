@@ -1,0 +1,294 @@
+{
+  "args": {
+    "output": "~/sts/runs/distill3-v21-20260930",
+    "workers": 30,
+    "threads": 7,
+    "epochs": 8,
+    "extract_workers": 7
+  },
+  "identity": {
+    "runtime": "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery",
+    "runtime_identity": {
+      "engine_sha256": "405c24d42256eb224ce1f5b5eed4d633f369eb0023a47d53c39787021d37f515",
+      "fightsim_sha256": "6af19da2d74bace20764cc0eb8d957cdb6178e86943f6fe1ff4b47de92e18989",
+      "model_sha256": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+      "policy": "combat4r-mechanics-feed-and-victory-hp",
+      "revision": "victory-hp-20260929",
+      "candidate_entry": "resolve_combat4r",
+      "baseline_entry": "resolve_combat4q",
+      "default_entry": "resolve_reusing"
+    },
+    "config": {
+      "acceptance_seconds": 3600,
+      "arch": [
+        192
+      ],
+      "ascension": 20,
+      "batch_groups": 64,
+      "bootstrap_epochs": 6,
+      "bootstrap_eval_seeds": 16,
+      "bootstrap_train_seeds": 96,
+      "bootstrap_validation_seeds": 24,
+      "boss_multiplier": 3.0,
+      "branch_timeout": 600,
+      "broad_samples_per_epoch": 12000,
+      "character": "IRONCLAD",
+      "checkpoint_every_updates": 1000,
+      "complete_training_budget": true,
+      "curriculum_epochs": 24,
+      "development_seconds": 3600,
+      "episode_seconds": 300,
+      "evaluation_interval": 2,
+      "extension_seed_rng": 2026091402,
+      "feature_version": "public_flame_v2",
+      "final_test_seeds": 500,
+      "fresh_acceptance_count": 512,
+      "full_data_epochs": 2,
+      "guided_epochs": 8,
+      "heart_epochs": 8,
+      "improved_per_ordinary": 0.176,
+      "improved_samples_per_epoch": 2112,
+      "improvement_repeats": 32,
+      "improvement_weight": 8.0,
+      "learning_rate": 3e-05,
+      "max_root_actions": 32,
+      "max_steps": 800,
+      "min_mixed_train_roots": 8,
+      "min_mixed_train_seeds": 4,
+      "min_mixed_validation_roots": 2,
+      "min_mixed_validation_seeds": 2,
+      "minimum_train_wins": 1,
+      "minimum_validation_wins": 2,
+      "model_seed": 1401,
+      "model_type": "card_context_residual",
+      "name": "ironclad-a20-total-data-full-passes",
+      "natural_eval_seeds": 64,
+      "policy_epochs": 8,
+      "policy_start_floor": 0,
+      "prefix_timeout": 360,
+      "prior_strength": 3.0,
+      "prismatic_shard": false,
+      "refresh_development_baseline": true,
+      "root_min_floor": 25,
+      "roots_per_seed": 12,
+      "scan_chunk": 256,
+      "seconds_per_floor": 45,
+      "seed_rng": 2026091401,
+      "shard_size": 4096,
+      "simulations": 8000,
+      "success_per_ordinary": 0.486,
+      "success_repeats": 6,
+      "success_roots_per_seed": 8,
+      "success_samples_per_epoch": 5832,
+      "target": "HEART",
+      "torch_threads": 1,
+      "train_seeds": 37423,
+      "validation_natural_count": 128,
+      "validation_probe_seeds": [
+        584157710,
+        839714347
+      ],
+      "validation_seeds": 2048,
+      "verified_development": true,
+      "wall_seconds": 1800,
+      "weight_decay": 1e-05,
+      "workers": 8,
+      "transform_preview_frames": 1,
+      "transform_frame_delta_seconds": 0.016666666666666666
+    },
+    "sources": {
+      "~/sts/runs/distill3-code-v1/distill3_analyze.py": "37e6af463a3fa4633bc6b7e1e64447a2f222b4b053c19e9f0d2d0ba0920eb257",
+      "~/sts/runs/distill3-code-v1/distill3_base.py": "957aa49f389b56df1ccc182f45394c14d983cd34a5743e4c8f5b945c24c3d76b",
+      "~/sts/runs/distill3-code-v1/distill3_data.py": "e7291a5300cec4d2ecda4d82513866e2a96a55b73fab9f92f60605cefdc1c2b8",
+      "~/sts/runs/distill3-code-v1/distill3_extract.py": "fa6b47c708071c0c74463dd5941c490f70d8fcb4e88f083fe6187041b376a85c",
+      "~/sts/runs/distill3-code-v1/distill3_features.py": "a755b8a2ab2ee3d7ec1f6378230eaf2c86da9672b42e02daa33c61c9493290d7",
+      "~/sts/runs/distill3-code-v1/distill3_model.py": "10a7fb07712051782cffca9608986ddcb27cac4d4e255658523a315960167744",
+      "~/sts/runs/distill3-code-v1/distill3_parity.py": "4662e128581701440d9c9f0a4a18af65eb789bfe834781cf906f7fc1bd526bb8",
+      "~/sts/runs/distill3-code-v1/distill3_pipeline.py": "df63c51d474ad486b42ee2e39d42ddcd8c58d6d8fc84ed580a31396d882dba63",
+      "~/sts/runs/distill3-code-v1/distill3_pipeline_fast.py": "9df59f2c1ad40858382640af891eac90eed7acb7c4ad97644d1bf29ab38d51d9",
+      "~/sts/runs/distill3-code-v1/distill3_provenance.py": "fb04b2d3bea35c7c2006726819b4e00dd24ed19be92ed4bbaee9df6584224012",
+      "~/sts/runs/distill3-code-v1/distill3_report.py": "aad3d74123900f77cbb4b802630594d247fd188a662515946973e054a713bcec",
+      "~/sts/runs/distill3-code-v1/distill3_run.py": "953f3aa4b33e4d00da1f531ed5c9600d00066d4e8596c26793cf5263cbfe05cb",
+      "~/sts/runs/distill3-code-v1/distill3_seeds.py": "5e4554de9a1a1b7fc4b87438331e94387055f092cd2de63c0ccbec1b5b26b3e3",
+      "~/sts/runs/distill3-code-v1/distill3_teacher.py": "0ebc1322aa4b48c7325f4c459131fcc70e2dd3f8228a327a42a837c2bc62d701",
+      "~/sts/runs/distill3-code-v1/distill3_train.py": "b651f177e29501d623d294874d47388ef11000c566f773fb210750f2773b851f",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/config.json": "a546c4a07323272b2c73486b25d16f639595d6a104dde10f29ca96a2d3d29e0d",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/engine/fightsim.cpython-312-aarch64-linux-gnu.so": "6af19da2d74bace20764cc0eb8d957cdb6178e86943f6fe1ff4b47de92e18989",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/engine/slaythespire.cpython-312-aarch64-linux-gnu.so": "405c24d42256eb224ce1f5b5eed4d633f369eb0023a47d53c39787021d37f515",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_boss_relic_audit.py": "cdc55e3d11e3a9f2245bb4a049e10e858e7b5a67cb66496b625069c587be5f02",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_boss_relic_bandit.py": "33519bf505dd9d69d9e16ebf5317fd74dc2162faa90fe6a766348b32d479a40a",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_branch_pilot.py": "d4b1d6fb833d7b370aa902003ff8c13f0430ccbefab91a373e960f385791e568",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_branch_training.py": "645f3fcaa9a508a7e7a9889884ccce17208b89a81fc17c0f54047558c89be229",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_combat_development.py": "de091a5333cc2d798918551a4c95d53d55ef6290eab4bba8332ffd69928242b4",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_contextual_relic.py": "c5b22388db381fe3304bbc03278f1cc7d5dfffc43f27b17efa744cf9cebe4f06",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_early_card_learning.py": "29c3a1dd0c54c359c9c8f6a1da29f7196ee5f9c764680af3a780fe50c61179f2",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_early_card_scope.py": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_play_selected.py": "0e26953c8a294649f9ebeae52dc5e7f69b4f273ab525874b692ce5651568ad58",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_development.py": "7d7bc8d494526cb1b0839412ff1f10560eb60d32f382321e92e28ee33fe4fd46",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_experiment.py": "15a0152feab5af3d203fdb22965086b5e2e7b423fc4cc7779e74fab38899ddcc",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_model.py": "22f7e9589b53fd7ce7eaa06d2edeb8d209461f7dbb1f3e36e106e6097c4351e7",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_pilot.py": "1ab7c6f179c8d6316cfce575f224b096ec3853f4a722471c9612cc5ca66490b3",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_readout.py": "f9ac10ce019186791bd0f3d888a8c3684e8652860e10f5829a85c425ab02451c",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_readout_training.py": "898ce665e9a319945776a66dc92ed57587ada993f848d46a2814fd7410583a47",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_relic_card_training.py": "8278ac78a00439ee8a37da3aba3d0138c635c608b278214e2ff075326653eb37",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/heart_selected_refresh.py": "9e9922acc858ebefbb712f616acaeacb380e94103cfdbb966b3c9572264f9147",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/model.pt": "cbeac10f84c7f719ec48405ceecd663442e76b66a92234f1b090e2cfc2acfef4",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/armG_train.py": "582ebb743571fb3bce500d59d84bd79a26e7eb957eba01222f8d408fd892e8f7",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_acceptance.py": "e4ff07222a7b21bfef888205f541348337f44bcdf30a5bf43cebca979cd9f81a",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_boss_relic_model.py": "304dafc5bca32604e26c696a6540c09b12fe3f3aad34c7884fcc84e0ccabb3e5",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_guided.py": "438bc8244048a7c5dd911ad786c02722790c83ed46f47c8abcd475daf415c791",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_runtime.py": "0c424dc8e1f3912b954954088724935d2ad767f43ef0019244bce02732d874a5",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_stream_train.py": "e90c997518d934177c0235239ec0cecbc0b0562984b4b2b2c085ecd16cb6842c",
+      "~/sts/runs/distill3-v21-20260930/source/combat4r/runtime-delivery/source/heart_train.py": "acfc19a3545489e82f391141954f3f95ae327b221555e75de53e5a123ef820df",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/baixi_rules.py": "2efad170b75da9e4ec3175f6da69553336a01650c436deb4ba0f512e244d5f4f",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/guide_rules.py": "ed8fa08ac524440eed9cb7af851cc5e389dd83c59294fb575f94edff8c0bc42b",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/guide_rules2.py": "676099eabc4ca015e39ab1112d33543836ffb054034f45e439c66669560a5b9e",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/heart_early_card_scope.py": "925b1a63053a96bf66d71ef8b6f8d6cf7c924cb82a3264c60d10a22440032d13",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/p300_common.py": "9d4ad34b98c86d69346816826d3694c51c957163b663e37a129e665bf2e7cfc0",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/p300_play_v21.py": "cff321bed4131427db326837f2a8f00c4b0bfa5ed9ab11dbfe2a96c8c7a8543f",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/p300_stage_values.py": "2c45db1a193f1c5ca08e95cf29ac3e2d8c7700523cb8afaa8095d417110e9603",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/p300_teacher.py": "2c07c79ed60762ba20cfc94072067668a8c8c3a3573be9c3c4eac76a0c789e46",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/relic_u.json": "04795b012e5bf320c8437e79e3466349a9839f13f451efe7b8a2f63d4691e3ab",
+      "~/sts/runs/distill3-v21-20260930/source/principles/agent/route_rules.py": "90e40ec8a16b28f2a0d8c156c4c98760d9c8d7a90bef145c86e5ee73b42b023f",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d4-heart-values.jsonl": "42cda76330a11f6aa2fff7e98a80951baff627f722f7f64876c95e542a488493",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d5-act2boss.jsonl": "175c98fbf5eaafd045cab87eaf7bf699fe0067c3ff3bcf54df9217049be18588",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d5-act3boss1.jsonl": "c777cde0ec2e5e63fc246b3549f578611f0bc2ce92872f2842108a5dfcdd4f6a",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d6-elite1.jsonl": "65f4d6bd8271d44e4fa91c8f0c61cd33840fb30563dc0ec83e37ad0cac123e1f",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d6-elite2.jsonl": "e7e04d26530db6d90d28d0ddf5b88cd0cab5c3babb3499f14529e59e3171b5cf",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d6-elite3.jsonl": "2bc2fdfa4b04b8664d109e8410e3d86736142a082195453305155053de4525f5",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d6-shield_spear.jsonl": "16d589bb4e5edd5014180e29309dfeeea9f1d417623d57961be0379db1cc769b",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d7-act1boss.jsonl": "4f85837010ddcfecb8cb9aa5f07e9e35556144fce69874d028b4394ba574d987",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d7-act1boss.jsonl.manifest.json": "a72087545975e471ee691be593008a8dc2156b038fdfebed76f0e92466a83232",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d7-act1hall.jsonl": "7bf06c16b010618e4708d546e4e83e3a8d4f39648569204d0de4074463dc6513",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d7-act1hall.jsonl.manifest.json": "07bbbea8eb1f6da3726275ec44f5958927ab178a253bcabfb8d93c9d3c15178e",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-act1boss-natural.jsonl": "f35881461eaa8f9e688b660b0ddff6890e3fb5f6abfe993cb9783c2ea6b8e12d",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-act1boss-natural.jsonl.manifest.json": "28c6db2d1cc7e657d4ddf12c228a5964443977be6ec37174b2e5a43422a22f04",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-act1hall-natural.jsonl": "8ada3ab3c952efb64682142f3bf4654877a886d0eedd2bfb065bed7b1e89a7b4",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-act1hall-natural.jsonl.manifest.json": "99473a6471fcac86adca13d7e54e721cced142a3ccecdc28f2c56cb6123d9b4e",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-elite1-natural.jsonl": "667462b3efc72356038b5d429198cb5e47c4fa566a5a7210be440ba383ad6539",
+      "~/sts/runs/distill3-v21-20260930/source/principles/runs/p300-fight-decomposition/d8-elite1-natural.jsonl.manifest.json": "72a57499a74b23084333fdff09913cdc70dd491118541bb568283f0f8cf76a66"
+    }
+  },
+  "seed_declaration": {
+    "version": "distill3-seeds-v1",
+    "teacher_blocks": {
+      "traj-c42": [
+        3900012000,
+        3900014000
+      ],
+      "traj-c43": [
+        3900018000,
+        3900019000
+      ],
+      "traj-c49": [
+        3900100000,
+        3900104000
+      ],
+      "traj-c50": [
+        3900200000,
+        3900200815
+      ],
+      "traj-c51": [
+        3900300000,
+        3900300282
+      ],
+      "traj-c52": [
+        3900400000,
+        3900400098
+      ]
+    },
+    "dagger_blocks": [
+      [
+        3900500000,
+        3900500600
+      ],
+      [
+        3900501000,
+        3900501600
+      ],
+      [
+        3900502000,
+        3900502600
+      ]
+    ],
+    "development_evaluation": [
+      3900041000,
+      3900042000
+    ],
+    "historical_comparison_only": [
+      3900040000,
+      3900041000
+    ],
+    "split": "teacher seed%10: 0=test, 1=validation, 2..9=train; DAgger allowlist: all train",
+    "final_acceptance": "unknown; no seeds admitted outside these exact allowlists",
+    "extension": "v2 extract/run guards expanded ONLY in v3 copy before collection",
+    "selection": "validation labels only; no online outcomes; fixed model before evaluation"
+  },
+  "warm_start_sha256": "90b937349181b165a1d3281f03481e92e221c915869627ef6e9fa9e4e094fa2b",
+  "variants": [
+    {
+      "width": 384,
+      "depth": 1,
+      "lr": 0.0002,
+      "target_weight": 5
+    },
+    {
+      "width": 384,
+      "depth": 1,
+      "lr": 0.0002,
+      "target_weight": 8
+    },
+    {
+      "width": 384,
+      "depth": 1,
+      "lr": 0.0004,
+      "target_weight": 5
+    },
+    {
+      "width": 384,
+      "depth": 1,
+      "lr": 0.0004,
+      "target_weight": 8
+    },
+    {
+      "width": 384,
+      "depth": 2,
+      "lr": 0.0002,
+      "target_weight": 5
+    },
+    {
+      "width": 384,
+      "depth": 2,
+      "lr": 0.0002,
+      "target_weight": 8
+    },
+    {
+      "width": 384,
+      "depth": 2,
+      "lr": 0.0004,
+      "target_weight": 5
+    },
+    {
+      "width": 384,
+      "depth": 2,
+      "lr": 0.0004,
+      "target_weight": 8
+    }
+  ],
+  "seed": 20260930,
+  "weights": {
+    "shop": 5,
+    "card_select": 5,
+    "card_reward": 5,
+    "other": 1
+  },
+  "lr": 0.0002,
+  "batch_size": 512,
+  "round_epochs": 4,
+  "parallel_bc": true,
+  "patience": 2,
+  "selection": "validation only, including unchanged warm start; no test/online selection",
+  "final": "one frozen NN; no ensemble",
+  "evaluation": "fixed 200 then remaining 800, no tuning after first outcome",
+  "source_snapshot_sha256": "996fbccf534f114e987f1b0af1a1012e8f5884d529abf39d33b3aa6aded55225"
+}

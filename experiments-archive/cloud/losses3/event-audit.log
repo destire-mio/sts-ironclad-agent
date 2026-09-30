@@ -1,0 +1,1605 @@
+[
+  {
+    "seed": 3900012024,
+    "index": 179,
+    "floor": 39,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "SPOT_WEAKNESS+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "SPOT_WEAKNESS+"
+        ],
+        "hp_after": 63
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "INFLAME+"
+        ],
+        "hp_after": 63
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "BODY_SLAM+"
+        ],
+        "hp_after": 63
+      }
+    ]
+  },
+  {
+    "seed": 3900012025,
+    "index": 95,
+    "floor": 20,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 20,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 74,
+      "max_hp": 82,
+      "gold": 428,
+      "deck": [
+        "ASCENDERS_BANE",
+        "BASH",
+        "INFERNAL_BLADE",
+        "FLAME_BARRIER",
+        "ANGER",
+        "HEMOKINESIS",
+        "SHRUG_IT_OFF",
+        "HAVOC+",
+        "TRUE_GRIT",
+        "SHRUG_IT_OFF",
+        "BURNING_PACT+",
+        "SHRUG_IT_OFF",
+        "FEED",
+        "RAMPAGE",
+        "ENTRENCH",
+        "IRON_WAVE",
+        "SPOT_WEAKNESS",
+        "INFLAME",
+        "REAPER",
+        "IMMOLATE",
+        "GHOSTLY_ARMOR",
+        "COMBUST"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "FOSSILIZED_HELIX",
+        "SINGING_BOWL",
+        "PANDORAS_BOX"
+      ],
+      "potions": [
+        "21",
+        "1"
+      ],
+      "potion_count": 1,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 6,
+      "y": 2,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "COLLECTOR",
+      "encounter": "SPHERIC_GUARDIAN",
+      "remove_cost": 0,
+      "shop_removes": 0,
+      "features": {
+        "n": 22,
+        "attack": 8,
+        "block": 8,
+        "aoe": 3,
+        "draw": 4,
+        "scale": 4,
+        "upgraded": 2,
+        "upgrade_levels": 2,
+        "starter": 0,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 57,
+      "max_hp": 57,
+      "gold": 428,
+      "potion_count": 1,
+      "potions": [
+        "21",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 20,
+      "act": 2
+    },
+    "removed": [],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012040,
+    "index": 91,
+    "floor": 20,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 20,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 81,
+      "max_hp": 87,
+      "gold": 4,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "SPOT_WEAKNESS+",
+        "POMMEL_STRIKE+",
+        "GHOSTLY_ARMOR",
+        "SHRUG_IT_OFF",
+        "CORRUPTION",
+        "SEVER_SOUL+",
+        "DUAL_WIELD+",
+        "FLAME_BARRIER+"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "GOLDEN_IDOL",
+        "NUNCHAKU",
+        "ANCHOR",
+        "LETTER_OPENER",
+        "ASTROLABE",
+        "SLING_OF_COURAGE",
+        "STRAWBERRY"
+      ],
+      "potions": [
+        "1",
+        "1"
+      ],
+      "potion_count": 0,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 0,
+      "y": 2,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "CHAMP",
+      "encounter": "TWO_THIEVES",
+      "remove_cost": -1,
+      "shop_removes": 1,
+      "features": {
+        "n": 15,
+        "attack": 4,
+        "block": 7,
+        "aoe": 0,
+        "draw": 2,
+        "scale": 1,
+        "upgraded": 5,
+        "upgrade_levels": 5,
+        "starter": 5,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 60,
+      "max_hp": 60,
+      "gold": 4,
+      "potion_count": 0,
+      "potions": [
+        "1",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 20,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012047,
+    "index": 76,
+    "floor": 21,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 21,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 78,
+      "max_hp": 82,
+      "gold": 53,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED+",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH+",
+        "CORRUPTION+",
+        "ARMAMENTS+",
+        "SHRUG_IT_OFF+",
+        "RECKLESS_CHARGE",
+        "BATTLE_TRANCE",
+        "INFLAME",
+        "OFFERING",
+        "HAVOC",
+        "WRITHE"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "ODDLY_SMOOTH_STONE",
+        "CHEMICAL_X",
+        "SOZU",
+        "POTION_BELT",
+        "STRAWBERRY"
+      ],
+      "potions": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "potion_count": 0,
+      "potion_capacity": 4,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 1,
+      "y": 3,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "CHAMP",
+      "encounter": "SPHERIC_GUARDIAN",
+      "remove_cost": 75,
+      "shop_removes": 0,
+      "features": {
+        "n": 18,
+        "attack": 5,
+        "block": 5,
+        "aoe": 0,
+        "draw": 3,
+        "scale": 1,
+        "upgraded": 5,
+        "upgrade_levels": 5,
+        "starter": 7,
+        "curses": 1
+      }
+    },
+    "after": {
+      "hp": 57,
+      "max_hp": 57,
+      "gold": 53,
+      "potion_count": 0,
+      "potions": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 21,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED+"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012069,
+    "index": 177,
+    "floor": 41,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "POWER_THROUGH+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "POWER_THROUGH+"
+        ],
+        "hp_after": 94
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "STRIKE_RED"
+        ],
+        "hp_after": 94
+      }
+    ]
+  },
+  {
+    "seed": 3900012083,
+    "index": 91,
+    "floor": 20,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 20,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 75,
+      "max_hp": 75,
+      "gold": 32,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "BATTLE_TRANCE+",
+        "HEMOKINESIS+",
+        "HEADBUTT",
+        "POWER_THROUGH",
+        "TWIN_STRIKE",
+        "SHOCKWAVE+",
+        "BODY_SLAM+",
+        "GHOSTLY_ARMOR+",
+        "BURNING_PACT+",
+        "ANGER",
+        "REAPER",
+        "DISARM+"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "MEAL_TICKET",
+        "TOXIC_EGG",
+        "LANTERN",
+        "COFFEE_DRIPPER",
+        "SUNDIAL"
+      ],
+      "potions": [
+        "1",
+        "1"
+      ],
+      "potion_count": 0,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 2,
+      "y": 2,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "AUTOMATON",
+      "encounter": "SHELL_PARASITE",
+      "remove_cost": -1,
+      "shop_removes": 1,
+      "features": {
+        "n": 22,
+        "attack": 11,
+        "block": 8,
+        "aoe": 2,
+        "draw": 2,
+        "scale": 0,
+        "upgraded": 7,
+        "upgrade_levels": 7,
+        "starter": 8,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 52,
+      "max_hp": 52,
+      "gold": 32,
+      "potion_count": 0,
+      "potions": [
+        "1",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 20,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012083,
+    "index": 156,
+    "floor": 36,
+    "kind": "falling",
+    "chosen": {
+      "bits": 1,
+      "i": 1,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "CORRUPTION+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "GHOSTLY_ARMOR+"
+        ],
+        "hp_after": 64
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "CORRUPTION+"
+        ],
+        "hp_after": 64
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "BITE"
+        ],
+        "hp_after": 64
+      }
+    ]
+  },
+  {
+    "seed": 3900012084,
+    "index": 83,
+    "floor": 19,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 19,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 75,
+      "max_hp": 75,
+      "gold": 107,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH+",
+        "HEADBUTT",
+        "TRUE_GRIT+",
+        "FLAME_BARRIER",
+        "DISARM",
+        "POWER_THROUGH",
+        "SHRUG_IT_OFF",
+        "SPOT_WEAKNESS",
+        "CORRUPTION"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "MUMMIFIED_HAND",
+        "ORICHALCUM",
+        "GINGER",
+        "LANTERN",
+        "ODD_MUSHROOM",
+        "COFFEE_DRIPPER"
+      ],
+      "potions": [
+        "1",
+        "1"
+      ],
+      "potion_count": 0,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 4,
+      "y": 1,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "AUTOMATON",
+      "encounter": "CHOSEN",
+      "remove_cost": 100,
+      "shop_removes": 1,
+      "features": {
+        "n": 17,
+        "attack": 5,
+        "block": 9,
+        "aoe": 0,
+        "draw": 1,
+        "scale": 1,
+        "upgraded": 2,
+        "upgrade_levels": 2,
+        "starter": 7,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 52,
+      "max_hp": 52,
+      "gold": 107,
+      "potion_count": 0,
+      "potions": [
+        "1",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 19,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012107,
+    "index": 100,
+    "floor": 20,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 20,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 1,
+      "hp": 75,
+      "max_hp": 77,
+      "gold": 0,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "ARMAMENTS",
+        "TWIN_STRIKE",
+        "BODY_SLAM",
+        "BODY_SLAM",
+        "SHOCKWAVE",
+        "SPOT_WEAKNESS",
+        "TRUE_GRIT",
+        "SHRUG_IT_OFF",
+        "POWER_THROUGH",
+        "IMPERVIOUS",
+        "HEADBUTT",
+        "HAVOC",
+        "FIEND_FIRE",
+        "CORRUPTION+",
+        "ANGER+",
+        "SWORD_BOOMERANG+",
+        "POMMEL_STRIKE"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "SINGING_BOWL",
+        "VAJRA",
+        "MEAL_TICKET",
+        "ASTROLABE"
+      ],
+      "potions": [
+        "23",
+        "1"
+      ],
+      "potion_count": 1,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 0,
+      "y": 2,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "AUTOMATON",
+      "encounter": "THREE_BYRDS",
+      "remove_cost": -1,
+      "shop_removes": 1,
+      "features": {
+        "n": 24,
+        "attack": 10,
+        "block": 9,
+        "aoe": 1,
+        "draw": 2,
+        "scale": 1,
+        "upgraded": 3,
+        "upgrade_levels": 3,
+        "starter": 5,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 53,
+      "max_hp": 53,
+      "gold": 0,
+      "potion_count": 1,
+      "potions": [
+        "23",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 20,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012110,
+    "index": 85,
+    "floor": 19,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 19,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 75,
+      "max_hp": 75,
+      "gold": 119,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH+",
+        "SHRUG_IT_OFF",
+        "HAVOC+",
+        "POMMEL_STRIKE+",
+        "OFFERING",
+        "SHOCKWAVE",
+        "SECOND_WIND",
+        "DARK_EMBRACE",
+        "COMBUST",
+        "MASTER_OF_STRATEGY",
+        "HEMOKINESIS",
+        "REAPER",
+        "METALLICIZE+"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "LIZARD_TAIL",
+        "TINY_CHEST",
+        "SLAVERS_COLLAR"
+      ],
+      "potions": [
+        "1",
+        "1"
+      ],
+      "potion_count": 0,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 6,
+      "y": 1,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "COLLECTOR",
+      "encounter": "CHOSEN",
+      "remove_cost": 75,
+      "shop_removes": 0,
+      "features": {
+        "n": 22,
+        "attack": 8,
+        "block": 8,
+        "aoe": 3,
+        "draw": 5,
+        "scale": 1,
+        "upgraded": 4,
+        "upgrade_levels": 4,
+        "starter": 8,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 52,
+      "max_hp": 52,
+      "gold": 119,
+      "potion_count": 0,
+      "potions": [
+        "1",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 19,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012121,
+    "index": 197,
+    "floor": 44,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "DUAL_WIELD"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "DUAL_WIELD"
+        ],
+        "hp_after": 37
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "COMBUST"
+        ],
+        "hp_after": 37
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "PERFECTED_STRIKE"
+        ],
+        "hp_after": 37
+      }
+    ]
+  },
+  {
+    "seed": 3900012126,
+    "index": 210,
+    "floor": 48,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 4
+    },
+    "removed": [
+      "SECOND_WIND"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "SECOND_WIND"
+        ],
+        "hp_after": 100
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "FEEL_NO_PAIN+"
+        ],
+        "hp_after": 100
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "ANGER"
+        ],
+        "hp_after": 100
+      }
+    ]
+  },
+  {
+    "seed": 3900012127,
+    "index": 193,
+    "floor": 46,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "DEFEND_RED"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "DEFEND_RED"
+        ],
+        "hp_after": 75
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "METALLICIZE"
+        ],
+        "hp_after": 75
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "BASH+"
+        ],
+        "hp_after": 75
+      }
+    ]
+  },
+  {
+    "seed": 3900012130,
+    "index": 157,
+    "floor": 36,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "FLEX"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "FLEX"
+        ],
+        "hp_after": 77
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "INFLAME"
+        ],
+        "hp_after": 77
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "STRIKE_RED"
+        ],
+        "hp_after": 77
+      }
+    ]
+  },
+  {
+    "seed": 3900012142,
+    "index": 174,
+    "floor": 41,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 1
+    },
+    "removed": [
+      "BATTLE_TRANCE+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "BATTLE_TRANCE+"
+        ],
+        "hp_after": 93
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "FEEL_NO_PAIN"
+        ],
+        "hp_after": 93
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "UPPERCUT"
+        ],
+        "hp_after": 93
+      }
+    ]
+  },
+  {
+    "seed": 3900012169,
+    "index": 124,
+    "floor": 31,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 31,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 17,
+      "max_hp": 37,
+      "gold": 111,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "DEMON_FORM",
+        "HEADBUTT",
+        "BATTLE_TRANCE",
+        "SECOND_WIND",
+        "POMMEL_STRIKE+",
+        "INFERNAL_BLADE",
+        "HEMOKINESIS",
+        "ARMAMENTS",
+        "CORRUPTION+",
+        "DARK_EMBRACE+",
+        "COMBUST",
+        "WRITHE",
+        "FEEL_NO_PAIN+",
+        "APPARITION",
+        "APPARITION",
+        "APPARITION",
+        "METALLICIZE"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "BLUE_CANDLE",
+        "DU_VU_DOLL",
+        "RED_SKULL",
+        "ODD_MUSHROOM",
+        "COFFEE_DRIPPER",
+        "CLOCKWORK_SOUVENIR",
+        "NUNCHAKU",
+        "TOY_ORNITHOPTER",
+        "REGAL_PILLOW"
+      ],
+      "potions": [
+        "42",
+        "1"
+      ],
+      "potion_count": 1,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 1,
+      "y": 13,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "CHAMP",
+      "encounter": "SLAVERS",
+      "remove_cost": 100,
+      "shop_removes": 1,
+      "features": {
+        "n": 26,
+        "attack": 7,
+        "block": 7,
+        "aoe": 1,
+        "draw": 3,
+        "scale": 3,
+        "upgraded": 4,
+        "upgrade_levels": 4,
+        "starter": 7,
+        "curses": 1
+      }
+    },
+    "after": {
+      "hp": 17,
+      "max_hp": 25,
+      "gold": 111,
+      "potion_count": 1,
+      "potions": [
+        "42",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 31,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED",
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012182,
+    "index": 119,
+    "floor": 28,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 28,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 4,
+      "event_phase": 0,
+      "hp": 34,
+      "max_hp": 75,
+      "gold": 224,
+      "deck": [
+        "ASCENDERS_BANE",
+        "STRIKE_RED",
+        "STRIKE_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "COMBUST",
+        "TRUE_GRIT",
+        "TRUE_GRIT",
+        "BATTLE_TRANCE",
+        "INJURY",
+        "FIEND_FIRE",
+        "POMMEL_STRIKE",
+        "UPPERCUT",
+        "IMMOLATE",
+        "HAVOC",
+        "SHRUG_IT_OFF",
+        "FEEL_NO_PAIN",
+        "SHRUG_IT_OFF",
+        "HEADBUTT",
+        "CORRUPTION"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "BLOOD_VIAL",
+        "MAW_BANK",
+        "GOLDEN_IDOL",
+        "ORNAMENTAL_FAN",
+        "RUNIC_CUBE",
+        "TORII",
+        "BLUE_CANDLE",
+        "VAJRA"
+      ],
+      "potions": [
+        "16",
+        "1"
+      ],
+      "potion_count": 1,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 4,
+      "y": 10,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "AUTOMATON",
+      "encounter": "BOOK_OF_STABBING",
+      "remove_cost": 100,
+      "shop_removes": 1,
+      "features": {
+        "n": 23,
+        "attack": 8,
+        "block": 9,
+        "aoe": 2,
+        "draw": 4,
+        "scale": 1,
+        "upgraded": 0,
+        "upgrade_levels": 0,
+        "starter": 6,
+        "curses": 1
+      }
+    },
+    "after": {
+      "hp": 34,
+      "max_hp": 75,
+      "gold": 224,
+      "potion_count": 1,
+      "potions": [
+        "16",
+        "1"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 28,
+      "act": 2
+    },
+    "removed": [
+      "STRIKE_RED",
+      "STRIKE_RED"
+    ],
+    "added": [
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE",
+      "BITE"
+    ]
+  },
+  {
+    "seed": 3900012194,
+    "index": 172,
+    "floor": 41,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 4
+    },
+    "removed": [
+      "HAVOC+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "HAVOC+"
+        ],
+        "hp_after": 75
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "FEEL_NO_PAIN"
+        ],
+        "hp_after": 75
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "POMMEL_STRIKE"
+        ],
+        "hp_after": 75
+      }
+    ]
+  },
+  {
+    "seed": 3900012195,
+    "index": 90,
+    "floor": 20,
+    "kind": "vampires",
+    "before": {
+      "act": 2,
+      "floor": 20,
+      "screen": "EVENT_SCREEN",
+      "room": "EVENT",
+      "event": "Vampires",
+      "event_data": 0,
+      "event_phase": 0,
+      "hp": 89,
+      "max_hp": 89,
+      "gold": 153,
+      "deck": [
+        "ASCENDERS_BANE",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "DEFEND_RED",
+        "BASH",
+        "SECOND_WIND",
+        "SHRUG_IT_OFF",
+        "ARMAMENTS+",
+        "GHOSTLY_ARMOR",
+        "IRON_WAVE+",
+        "HEMOKINESIS+",
+        "BLUDGEON+",
+        "EVOLVE",
+        "DISARM",
+        "SHRUG_IT_OFF",
+        "IMPERVIOUS",
+        "EVOLVE+",
+        "CARNAGE+",
+        "HEADBUTT+",
+        "JAX"
+      ],
+      "relics": [
+        "BURNING_BLOOD",
+        "FOSSILIZED_HELIX",
+        "MOLTEN_EGG",
+        "MANGO",
+        "ASTROLABE"
+      ],
+      "potions": [
+        "1",
+        "21"
+      ],
+      "potion_count": 1,
+      "potion_capacity": 2,
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "x": 1,
+      "y": 2,
+      "burning": [
+        -1,
+        -1,
+        -1
+      ],
+      "boss": "AUTOMATON",
+      "encounter": "CHOSEN",
+      "remove_cost": -1,
+      "shop_removes": 1,
+      "features": {
+        "n": 21,
+        "attack": 6,
+        "block": 11,
+        "aoe": 0,
+        "draw": 4,
+        "scale": 0,
+        "upgraded": 7,
+        "upgrade_levels": 7,
+        "starter": 4,
+        "curses": 0
+      }
+    },
+    "after": {
+      "hp": 62,
+      "max_hp": 62,
+      "gold": 153,
+      "potion_count": 1,
+      "potions": [
+        "1",
+        "21"
+      ],
+      "keys": [
+        false,
+        true,
+        true
+      ],
+      "screen": "MAP_SCREEN",
+      "floor": 20,
+      "act": 2
+    },
+    "removed": [],
+    "added": [
+      "BITE+",
+      "BITE+",
+      "BITE+",
+      "BITE+",
+      "BITE+"
+    ]
+  },
+  {
+    "seed": 3900012212,
+    "index": 174,
+    "floor": 41,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "SECOND_WIND"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "SECOND_WIND"
+        ],
+        "hp_after": 80
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "COMBUST"
+        ],
+        "hp_after": 80
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "HEMOKINESIS"
+        ],
+        "hp_after": 80
+      }
+    ]
+  },
+  {
+    "seed": 3900012218,
+    "index": 167,
+    "floor": 39,
+    "kind": "falling",
+    "chosen": {
+      "bits": 0,
+      "i": 0,
+      "j": 0,
+      "kind": "EVENT",
+      "item": "Falling",
+      "phase": 0,
+      "data": 0
+    },
+    "removed": [
+      "FLAME_BARRIER+"
+    ],
+    "options": [
+      {
+        "bits": 0,
+        "idx": 0,
+        "removed": [
+          "FLAME_BARRIER+"
+        ],
+        "hp_after": 74
+      },
+      {
+        "bits": 1,
+        "idx": 1,
+        "removed": [
+          "FEEL_NO_PAIN"
+        ],
+        "hp_after": 74
+      },
+      {
+        "bits": 2,
+        "idx": 2,
+        "removed": [
+          "HEADBUTT"
+        ],
+        "hp_after": 74
+      }
+    ]
+  }
+]

@@ -111,7 +111,9 @@ Where to look:
 | `agent/heart_*.py`, `p300_stage_values.py` | Heart research, per-stage value tables |
 | `sim_patch/` | simulator patches, alignment and original-game parity checker |
 | `tests/` | regression tests (need the built `slaythespire` module and PyTorch) |
-| `docs/` | status, experiment records, lessons learned |
+| `docs/` | status, experiment records, lessons learned; `docs/reports/` holds the long project reports |
+| `experiments-archive/` | reports and results from P200–P212 and cloud runs c5–c52 (see its README) |
+| `combat_engine/` | combat engine source snapshot used by the teacher |
 
 Evaluation rule used throughout: fixed seeds only, no reseeding or retrying, and unseen seeds for
 any acceptance number.

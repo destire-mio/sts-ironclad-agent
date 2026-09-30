@@ -1,0 +1,167 @@
+{
+  "expected": 1000,
+  "arms": {
+    "student": {
+      "received": 1000,
+      "complete": 982,
+      "wins": 493,
+      "winrate": 0.5020366598778004,
+      "faults": [
+        3900040710,
+        3900040715,
+        3900040717,
+        3900040711,
+        3900040713,
+        3900040719,
+        3900040722,
+        3900040718,
+        3900040720,
+        3900040724,
+        3900040725,
+        3900040723,
+        3900040727,
+        3900040729,
+        3900040730,
+        3900040732,
+        3900040733,
+        3900040731
+      ],
+      "missing": [],
+      "assigned_winrate_bounds": [
+        0.493,
+        0.511
+      ]
+    },
+    "teacher": {
+      "received": 1000,
+      "complete": 987,
+      "wins": 540,
+      "winrate": 0.547112462006079,
+      "faults": [
+        3900040710,
+        3900040711,
+        3900040718,
+        3900040719,
+        3900040721,
+        3900040723,
+        3900040726,
+        3900040724,
+        3900040729,
+        3900040732,
+        3900040733,
+        3900040731,
+        3900040725
+      ],
+      "missing": [],
+      "assigned_winrate_bounds": [
+        0.54,
+        0.553
+      ]
+    }
+  },
+  "paired": {
+    "n": 980,
+    "difference": -0.04591836734693878,
+    "bootstrap95": [
+      -0.08163265306122448,
+      -0.01020408163265306
+    ],
+    "lost": 180,
+    "gained": 135
+  },
+  "agreement_by_type": {
+    "Neow": {
+      "n": 980,
+      "correct": 980,
+      "accuracy": 1.0
+    },
+    "card_select": {
+      "n": 9061,
+      "correct": 6818,
+      "accuracy": 0.752455578854431
+    },
+    "map": {
+      "n": 31161,
+      "correct": 28871,
+      "accuracy": 0.9265107024806649
+    },
+    "card_reward": {
+      "n": 61840,
+      "correct": 56716,
+      "accuracy": 0.9171410090556275
+    },
+    "event": {
+      "n": 7446,
+      "correct": 6848,
+      "accuracy": 0.9196884233145313
+    },
+    "other_reward": {
+      "n": 17396,
+      "correct": 17356,
+      "accuracy": 0.9977006208323752
+    },
+    "shop": {
+      "n": 8118,
+      "correct": 5831,
+      "accuracy": 0.718280364621828
+    },
+    "rest": {
+      "n": 7662,
+      "correct": 7172,
+      "accuracy": 0.9360480292351866
+    },
+    "treasure": {
+      "n": 2945,
+      "correct": 2945,
+      "accuracy": 1.0
+    },
+    "boss_relic": {
+      "n": 1642,
+      "correct": 1591,
+      "accuracy": 0.9689403166869671
+    }
+  },
+  "lost_run_disagreements_by_type": {
+    "Neow": {
+      "n": 180,
+      "disagree": 0
+    },
+    "card_select": {
+      "n": 1400,
+      "disagree": 336
+    },
+    "map": {
+      "n": 4781,
+      "disagree": 390
+    },
+    "card_reward": {
+      "n": 9795,
+      "disagree": 809
+    },
+    "other_reward": {
+      "n": 2683,
+      "disagree": 8
+    },
+    "event": {
+      "n": 1259,
+      "disagree": 136
+    },
+    "shop": {
+      "n": 1133,
+      "disagree": 296
+    },
+    "rest": {
+      "n": 1163,
+      "disagree": 72
+    },
+    "treasure": {
+      "n": 475,
+      "disagree": 0
+    },
+    "boss_relic": {
+      "n": 259,
+      "disagree": 12
+    }
+  },
+  "interpretation": "Shadow teacher at student states; first disagreement is a location, not proof of cause. No outcome-dependent seed replacement."
+}

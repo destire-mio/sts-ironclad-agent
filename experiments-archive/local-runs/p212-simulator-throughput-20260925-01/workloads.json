@@ -1,0 +1,1618 @@
+{
+  "suites": {
+    "profile": [
+      {
+        "index": 160,
+        "before": "065cf309397d48e0fca63e7051d8b02eea39379a35f38e4e54655a1b1e51b728",
+        "act": 3,
+        "floor": 38,
+        "encounter": "JAW_WORM_HORDE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/49032176.json.gz",
+          "seed": 49032176,
+          "sha256": "42a48bca181c7851427b04f2a0e08b4fdeb8750b4d45c2d446312b7e7094a147",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 202,
+        "before": "2322c3c9b333b256c7fb75bb53181bd05a21bea852c85a940630a57bba2cdfdd",
+        "act": 3,
+        "floor": 48,
+        "encounter": "MAW",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/401777426.json.gz",
+          "seed": 401777426,
+          "sha256": "5e687920187ab0c02ecaf5b442a564568d826cc7b2aadc206dcc0a2a0c6f576e",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 139,
+        "before": "4b8873f13b69faece326803525a2f6525136887fcd59f48ea95e1d946f2b8356",
+        "act": 3,
+        "floor": 36,
+        "encounter": "MYSTERIOUS_SPHERE_EVENT",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/734524642.json.gz",
+          "seed": 734524642,
+          "sha256": "99e37ade847c620996dd9a4cd1b87d437f0a682f9de7112be96b3aa924e76e98",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 187,
+        "before": "d0fcc15e57f0cab43e246550055644119fb24196213b8cfb13453ce67bc47d71",
+        "act": 3,
+        "floor": 44,
+        "encounter": "GIANT_HEAD",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/815587325.json.gz",
+          "seed": 815587325,
+          "sha256": "2511feae50997d257540303cb06f8b17882cbc00fe5d1a9891a24ba8314d8447",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 149,
+        "before": "8417d2e9b5286d898caeaece0bfd2fd203903b65f2ac037f833d21ea29d6c151",
+        "act": 3,
+        "floor": 37,
+        "encounter": "THREE_DARKLINGS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1019597896.json.gz",
+          "seed": 1019597896,
+          "sha256": "dd46c4df59108a90ed2dc93c594e1c09327f2ace58641ccb2e72497e4526f42e",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 105,
+        "before": "44af0b5ebe80471c6640ae252ccb79363ee0d54ff88492d010032c282bb0f03d",
+        "act": 2,
+        "floor": 23,
+        "encounter": "SLAVERS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/371838484.json.gz",
+          "seed": 371838484,
+          "sha256": "4790c3d026220ef83050c5e83700f693b34a49e9939583733f455ab90e8ba71b",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 158,
+        "before": "0ef4f5251b951b002005ad8a4c8e859816500a147456c8ad852c934e62b0cdc3",
+        "act": 3,
+        "floor": 37,
+        "encounter": "ORB_WALKER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/19678871.json.gz",
+          "seed": 19678871,
+          "sha256": "852c893d411c08a0d77e6d11084ef7cf0f47d787ef7c4dab94774147efde3479",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 96,
+        "before": "127da2c82228af947877bb60ec634f89567313f0aeab8b770d4cafa27c8cf04c",
+        "act": 2,
+        "floor": 24,
+        "encounter": "BOOK_OF_STABBING",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/107194360.json.gz",
+          "seed": 107194360,
+          "sha256": "369c615b82e7d11d0d297657b867162073cb3ece8ae0a3a04a952b1990726644",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 112,
+        "before": "ece8e208ace87c8c293acd177f56ed0f64563bb1aa7d406d2690dbd80d11eb50",
+        "act": 2,
+        "floor": 27,
+        "encounter": "COLOSSEUM_EVENT_SLAVERS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/504917099.json.gz",
+          "seed": 504917099,
+          "sha256": "abe8795ac9a9e6fa0c62d8ba4d673fc6720a5a1f2dd9c1ebef86740eaa3cb2e5",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 132,
+        "before": "851d22fe65d665a109b7588ed6918cfb5b924dc8fb4077ef7ad36f8d953c45f9",
+        "act": 2,
+        "floor": 30,
+        "encounter": "SNAKE_PLANT",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1196819962.json.gz",
+          "seed": 1196819962,
+          "sha256": "a6cc0a3ef29d21b4b1282ecba96cb695d8e8c2ce2a100427dde7d9630c65e5ed",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 186,
+        "before": "9c634c2b2b42895656b45bc3191f987b01344b6e29aee8a0499f5f20a66725f6",
+        "act": 3,
+        "floor": 45,
+        "encounter": "FOUR_SHAPES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1204215379.json.gz",
+          "seed": 1204215379,
+          "sha256": "5ee469116a23153ec7598b6e3230ac4e69dad4788de3b3a8988ad96bd5a1313c",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 246,
+        "before": "536975456cac3bfc5b598ff3670cbcd892e89d3727bd44f2be9ea51c0295d4ed",
+        "act": 4,
+        "floor": 55,
+        "encounter": "SHIELD_AND_SPEAR",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/115457281.json.gz",
+          "seed": 115457281,
+          "sha256": "44f71c66edf23857a128394c3a86e7fd34775b6d73e65be0ddd81721fc369365",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 105,
+        "before": "728dd72702a2de7cc21cf440ff8b9193e53cb78ce99b63c7d3acc2eb20d9f04a",
+        "act": 2,
+        "floor": 24,
+        "encounter": "GREMLIN_LEADER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/328583282.json.gz",
+          "seed": 328583282,
+          "sha256": "4561a9ddceec51e97bddf5db42400f71250c17e228634c1795fe83481b3bf9f3",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 33,
+        "before": "5ef4a1ace0f73c04b7fa97933d47d7fe9440cfce071a58e877faf9d48d0dbe58",
+        "act": 1,
+        "floor": 7,
+        "encounter": "RED_SLAVER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/919331573.json.gz",
+          "seed": 919331573,
+          "sha256": "bcb1989b641ebf0e4181afc93e7deeaf675c58e667beb0054cd9051e62e6ddfc",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 79,
+        "before": "fce6edcf74483ddd718a44626572f0e3afe9c4cadb884558fd29d4dbfb3a9e5b",
+        "act": 2,
+        "floor": 18,
+        "encounter": "CHOSEN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/726017433.json.gz",
+          "seed": 726017433,
+          "sha256": "e8f8d6b9cf18d6041867a1b1cfd65d8c294b4cdac9baada3a812dda58601acff",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 115,
+        "before": "b774cc49e80f0a896a517946e9074cdfa0c4e9b5f2b531f2a9b2f83ca82fc5dd",
+        "act": 2,
+        "floor": 27,
+        "encounter": "CENTURION_AND_HEALER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/303373924.json.gz",
+          "seed": 303373924,
+          "sha256": "0ba0f3e8daeae6868b30196ba0f99d74b169fda1a3d94f8bfb51c001d60d15d1",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 80,
+        "before": "aa38523277e2b5b05d392a243101c9160d955c8360f6285b1340b8d8e608ed83",
+        "act": 1,
+        "floor": 16,
+        "encounter": "THE_GUARDIAN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/396494274.json.gz",
+          "seed": 396494274,
+          "sha256": "d468936e20c79f9bc2c848e1a3ae3b23b4d0b3dbd0826675fe5647c1f30c6179",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 145,
+        "before": "95a22d537ab2595aae068e5261e9a69e18cec6554717540e88f18da079c7d627",
+        "act": 2,
+        "floor": 33,
+        "encounter": "CHAMP",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/840598906.json.gz",
+          "seed": 840598906,
+          "sha256": "1cdbc49fbc654ff0eb0a30a4cf961ea2800755dabbd7b2508148d0a87fe19a89",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 3,
+        "before": "f3374bc082e134fffd8f2497e8edcaee03efa2fa19455cc0fa49dfb3ca204882",
+        "act": 1,
+        "floor": 1,
+        "encounter": "JAW_WORM",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/752192906.json.gz",
+          "seed": 752192906,
+          "sha256": "1b3e2829dec15a239ceff1b3f76cc5b31aac7e433c9ad6ac648ae11116abd7dd",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 62,
+        "before": "dbd03b1b402a9dbd28c5dc9a826694f16b30f5f3882d60d7c88b0b1a7dd8fb80",
+        "act": 1,
+        "floor": 14,
+        "encounter": "LOTS_OF_SLIMES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/783404632.json.gz",
+          "seed": 783404632,
+          "sha256": "fad3361bb70e51fd3f8c54525ceb82b7425962a2e47cbd3665adbe83247a3d26",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 168,
+        "before": "6c2033ad9a8f8c75d0d78c9baf7ede755f6ab13ac8b861c930fe3f16fae69ad5",
+        "act": 3,
+        "floor": 41,
+        "encounter": "NEMESIS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/790798799.json.gz",
+          "seed": 790798799,
+          "sha256": "ba9d3fbd3166a100c17b4308420470fe402997bb9ee4543d9fbca52ea8fe5ab9",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 59,
+        "before": "967d07155caa8ba24809aed43f2a702f6e1a322ffd688e1b61b6579acb9586c5",
+        "act": 1,
+        "floor": 12,
+        "encounter": "LARGE_SLIME",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1112987956.json.gz",
+          "seed": 1112987956,
+          "sha256": "999bdcbb7ada90c1a17c9f0bcf9d570b4e966f92320885adffc58ee1ba6b5486",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 199,
+        "before": "96c7bddc3cb27ae9cd550bc028c3dcc812167c557e2d0de91c0d12e8788d7739",
+        "act": 3,
+        "floor": 46,
+        "encounter": "THE_GUARDIAN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1140948835.json.gz",
+          "seed": 1140948835,
+          "sha256": "35407cdd2e2bcd91df71656230b53089a66f8634d35659eea2ab0e8fae3359c0",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 9,
+        "before": "6d1a5f47d340dbcb5ae2b90458030dce409accde941cd4a769ec535735ae84a5",
+        "act": 1,
+        "floor": 2,
+        "encounter": "SMALL_SLIMES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/978473943.json.gz",
+          "seed": 978473943,
+          "sha256": "a780460ce97e0ece911c4a8188b426eef8de22d1bfdb84f4a4d032d1c44209e1",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 139,
+        "before": "0e4cf9cf2fa263282c2faaf4135fb7550761aa298762ba9bc34a7431a69c6fe6",
+        "act": 2,
+        "floor": 33,
+        "encounter": "AUTOMATON",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/122086031.json.gz",
+          "seed": 122086031,
+          "sha256": "88f6b7d0e2e26e90dea8c3ead7758f000d187224726215b91dfac2556ca5f5e1",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 20,
+        "before": "99582c58f902dfdfa08fa2bd4c7e9e65c5efa9cf8a886906d2e184b1a22927cb",
+        "act": 1,
+        "floor": 5,
+        "encounter": "CULTIST",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/95055296.json.gz",
+          "seed": 95055296,
+          "sha256": "1c580a97952fe3046aba6c873bb076dc62ef9bcabb9b63fdbfdb35ee8181620d",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 209,
+        "before": "70aac7c0e0833e2d102fa66cc5c2d8e452ae8f7ab98323ce4f87bc801d6fc3a9",
+        "act": 3,
+        "floor": 51,
+        "encounter": "TIME_EATER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/870227479.json.gz",
+          "seed": 870227479,
+          "sha256": "90a5e830d35c1fed26905c4ff017c59bb83bc258948144316e907f30d3f93a3f",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 213,
+        "before": "2226a50c47bd890dceb34b9e4f7631171d754ee2476fb791c5eec71bbd1df609",
+        "act": 3,
+        "floor": 50,
+        "encounter": "AWAKENED_ONE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/583881803.json.gz",
+          "seed": 583881803,
+          "sha256": "582373020da20577ea1b14486967ead71cd9428ddb8cbabc5b84120aca07396a",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 25,
+        "before": "63ef3ec4eccfbdcbb655b81dd7aafaec3f8b329c14be604d9f284e2ce072ede0",
+        "act": 1,
+        "floor": 6,
+        "encounter": "GREMLIN_NOB",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/588791052.json.gz",
+          "seed": 588791052,
+          "sha256": "a034ca4a8acfcba1bd798f3e8edb14445772562d82c7a17104b7ce28982c9c3a",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 21,
+        "before": "ec6cb4244b34d589da9b47d01481712dca7726e30837fc2aeac2d8c4f4feef02",
+        "act": 1,
+        "floor": 5,
+        "encounter": "THREE_LOUSE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/424982123.json.gz",
+          "seed": 424982123,
+          "sha256": "54c3d889f04224dfe054f078b9abc4fc8790d66363c68802cf231175b76593a0",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 74,
+        "before": "6b67e5766524171ff4edeb6ffe7140b8fc676965c5912c69ac4b26db00079e5c",
+        "act": 1,
+        "floor": 16,
+        "encounter": "HEXAGHOST",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/669997003.json.gz",
+          "seed": 669997003,
+          "sha256": "23b51c93c9b39b295d2af3a1e01e497f4ef4b7b6a53680c938cf606d99030f80",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 62,
+        "before": "15b8297cb21c635de2819e2d8621098101eb9bbac1b184a768517a02fb92c45b",
+        "act": 1,
+        "floor": 12,
+        "encounter": "GREMLIN_GANG",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/264287379.json.gz",
+          "seed": 264287379,
+          "sha256": "55d91692e3d57822849063771e78fc7c14ca0150d563803483121f5046ff81bc",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 96,
+        "before": "ee9d3b66bdcdfa22f33702a06e74f856097d24ec3a9e642d6fbf3327da3c1f46",
+        "act": 2,
+        "floor": 22,
+        "encounter": "SENTRY_AND_SPHERE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1140948835.json.gz",
+          "seed": 1140948835,
+          "sha256": "35407cdd2e2bcd91df71656230b53089a66f8634d35659eea2ab0e8fae3359c0",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 192,
+        "before": "3acc6d3bbcdd41d91d0e0598d883dbb48739d70f2ee701db51f738f2c188b3a6",
+        "act": 3,
+        "floor": 44,
+        "encounter": "SPHERE_AND_TWO_SHAPES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/276479146.json.gz",
+          "seed": 276479146,
+          "sha256": "87ac9edf59680c6590c5c2ab14c759205205c76da1abb1f5543d1bd971c54d3c",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 90,
+        "before": "ce2f91a72b3732a7da58522934d58a054aba75581685e88795f9164b8b70ceb2",
+        "act": 2,
+        "floor": 21,
+        "encounter": "TWO_THIEVES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/702691221.json.gz",
+          "seed": 702691221,
+          "sha256": "f63ddf593657b99452df68f623d263690f5cba39b4ab558a4a2f1da42d854d32",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 36,
+        "before": "52ab5ce6a52678f5ffac189c608a641aa748151b4533aecfd78c5507402f4978",
+        "act": 1,
+        "floor": 7,
+        "encounter": "MUSHROOMS_EVENT",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/34777850.json.gz",
+          "seed": 34777850,
+          "sha256": "da67406a05a8c938a1f6a10e5572dbeb13051a18843a1a220ed3afccb62961a8",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 140,
+        "before": "d535444aca04aa5401f55c06780fef663430a2b4b638f9332eb07d5a5756db2d",
+        "act": 2,
+        "floor": 31,
+        "encounter": "CULTIST_AND_CHOSEN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/495087194.json.gz",
+          "seed": 495087194,
+          "sha256": "7b9b018434e829bccc6627c811f1c8b7c4c546a22e63fbb05b4e7e9d149a8bf0",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 234,
+        "before": "e2ad41e7ffe64cdda258bb543ba370f3d7353348db7deeaed96e7811f0ad189b",
+        "act": 4,
+        "floor": 56,
+        "encounter": "THE_HEART",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/978473943.json.gz",
+          "seed": 978473943,
+          "sha256": "a780460ce97e0ece911c4a8188b426eef8de22d1bfdb84f4a4d032d1c44209e1",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 62,
+        "before": "39ca895a0501d9242e03d9aed80092ed128b04b64de0aaf2fbafe68a5a6847a0",
+        "act": 1,
+        "floor": 14,
+        "encounter": "LAGAVULIN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/473124241.json.gz",
+          "seed": 473124241,
+          "sha256": "5bb10be9fdceb0cd7ef967f5ec251ee9f10066f43548c62575c9edd2390cb05d",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 42,
+        "before": "e7c47c94442e54c8820edff8c9ae362aa71c9f6b91d5585bdb190587ed16f6d7",
+        "act": 1,
+        "floor": 10,
+        "encounter": "EXORDIUM_WILDLIFE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/197605420.json.gz",
+          "seed": 197605420,
+          "sha256": "44ad0707b20635d89e8074546d6f51b3d074c115257df4be3f1309f2749c8e90",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 171,
+        "before": "e3c2100dedb43db96bdc94a3bec38fdee78caa17eac289ef41c927ca762054b4",
+        "act": 3,
+        "floor": 38,
+        "encounter": "WRITHING_MASS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/324758636.json.gz",
+          "seed": 324758636,
+          "sha256": "103c7b0938282188c28a9fa4a28a239ac9ed3654ec2a170de2564ff282ce60b5",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 80,
+        "before": "ec4bf3bd69987b6a2fc137c91720475a212b123d23d17340fef4ac002e8d6a50",
+        "act": 2,
+        "floor": 18,
+        "encounter": "THREE_BYRDS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/169815773.json.gz",
+          "seed": 169815773,
+          "sha256": "015033dea5cb3599e489b1d6bbdb93b5d3d37c0eac1deb2ca3b27917ea6d67d7",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 73,
+        "before": "5a15bbfd4102a5f11fd44f4675940826b1e63038b78e3e55ab3f1335992e22b2",
+        "act": 1,
+        "floor": 16,
+        "encounter": "SLIME_BOSS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1092424021.json.gz",
+          "seed": 1092424021,
+          "sha256": "a49f19fefe719046f6a87f8ef04a9f706dbfffc9ffcdd98fea46337d7d51460f",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 36,
+        "before": "193ab83895928c2af19b81e86c110935202e83b66fd0c59665c9d205b1efdabe",
+        "act": 1,
+        "floor": 7,
+        "encounter": "TWO_FUNGI_BEASTS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/506780225.json.gz",
+          "seed": 506780225,
+          "sha256": "c6c313e5e9ada71a4223b059abcda1c561fae073e602248f8862e5c0a0ab7393",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 136,
+        "before": "c9cfa27f519c52e48ce4b74a3899ce9b1c9f6daf9d73ab4502fa9164f020409c",
+        "act": 2,
+        "floor": 28,
+        "encounter": "SNECKO",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/170167346.json.gz",
+          "seed": 170167346,
+          "sha256": "d4bce343c3c7072b081d6908f87fc4c76c941a8d97f624d5da563cdd195eba65",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 23,
+        "before": "0dd97fd2abb9e0757d7abac4ac66d60cf8b834700287964042392a81e62d82e3",
+        "act": 1,
+        "floor": 5,
+        "encounter": "EXORDIUM_THUGS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/506780225.json.gz",
+          "seed": 506780225,
+          "sha256": "c6c313e5e9ada71a4223b059abcda1c561fae073e602248f8862e5c0a0ab7393",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 72,
+        "before": "372719fdbe826a57d5d8f668c1101d2ed34d7d0aaea9b8dc69718268ea488f3e",
+        "act": 2,
+        "floor": 18,
+        "encounter": "SHELL_PARASITE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/386185524.json.gz",
+          "seed": 386185524,
+          "sha256": "fbec9f031e7870e3dcffa84e17d5742598d57aaa447fe50f2a359bf6e3c5ba50",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 198,
+        "before": "b7ce01862b91cade522f2f2b91d9cce87383346c3f75954cb0590d1a1ee78434",
+        "act": 3,
+        "floor": 44,
+        "encounter": "REPTOMANCER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/636372818.json.gz",
+          "seed": 636372818,
+          "sha256": "02b670b2b4a4227a4b78dbdaeab50ce1b07570e68e7b10ae0cb48ea9ab0f4eec",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      }
+    ],
+    "validation": [
+      {
+        "index": 31,
+        "before": "47b0a4737436392ac3c7d8922a32f5ee3ad8a6eef8ffb700300e08d8b482431d",
+        "act": 1,
+        "floor": 7,
+        "encounter": "GREMLIN_NOB",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/524199296.json.gz",
+          "seed": 524199296,
+          "sha256": "8dfeb3699b40a09cc96b08a40a7167d20c4d89acef08d7c00d3bfcc479dccb7a",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 201,
+        "before": "74f3ca13bc9f5c9215ff07d1f27d901a02b65ae350a0328f3d00e37a3d2769b3",
+        "act": 3,
+        "floor": 47,
+        "encounter": "WRITHING_MASS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/256366241.json.gz",
+          "seed": 256366241,
+          "sha256": "869bd5158363e28c145e49b2b056f6ce371fc7cf98bde7d55d265f2b375e254b",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 198,
+        "before": "9b57fea3dbc1ca2bb61abcbb864b14ef68cbf5eb95d17cc4339b1835ca6e6243",
+        "act": 3,
+        "floor": 45,
+        "encounter": "GIANT_HEAD",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1200258950.json.gz",
+          "seed": 1200258950,
+          "sha256": "34658fb533f1d6656a3b702199b26160d7c952bbe7a1b37c7db103b2ae5f0372",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 105,
+        "before": "5ef68e462dd7025f10c435daed38d5b5946e53faef3347025d5e03009d1d764a",
+        "act": 2,
+        "floor": 24,
+        "encounter": "BOOK_OF_STABBING",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1069906756.json.gz",
+          "seed": 1069906756,
+          "sha256": "2b3a351aadbe44e148ee0df94c23bc0e8b61467eb34b262bbcffe044089d5046",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 8,
+        "before": "0723b47cb896f14faca37c9177821349e0f09ed36d567c7968cc0beab71ee2bc",
+        "act": 1,
+        "floor": 2,
+        "encounter": "JAW_WORM",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/818101182.json.gz",
+          "seed": 818101182,
+          "sha256": "b2799616fbadd923a48a1ca4a8462521c0f32b91561cca4de6912167a295457e",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 43,
+        "before": "de6e229042e6b1bb722730f330b89d96f2be8dce82f88c5b783d45140a94ea72",
+        "act": 1,
+        "floor": 10,
+        "encounter": "LOOTER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/224487777.json.gz",
+          "seed": 224487777,
+          "sha256": "b6d91635749b457b0e13e7743b7bca89f94f14a0c6ff5f6198838f2bc4ef4e4b",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 4,
+        "before": "bf7d1a26f4e13dc56c852c3749e96c3182d951bd7d24d031344ce0d25dd0dd46",
+        "act": 1,
+        "floor": 1,
+        "encounter": "CULTIST",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/337109825.json.gz",
+          "seed": 337109825,
+          "sha256": "04d3714dad09c4ecd7d50f4605ed357dfdd08313ab0820fcdf256ba7ea8ce55a",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 79,
+        "before": "4b282e3188791a3c89f5e4e64a0252a6f8068575c0f2016bbc1cfa630bc264c3",
+        "act": 2,
+        "floor": 18,
+        "encounter": "CHOSEN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/199820147.json.gz",
+          "seed": 199820147,
+          "sha256": "8b56bcc81d2ce8383fe1d7a478858dcb7820852f410a4f8af21c6ed081b6909b",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 41,
+        "before": "1f5c2d54ca461256337b4ef14f2323652e6f50007bdbf2309e205c8bc57ca4ac",
+        "act": 1,
+        "floor": 8,
+        "encounter": "TWO_FUNGI_BEASTS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/333021166.json.gz",
+          "seed": 333021166,
+          "sha256": "6f6c0fe2752290258aea4e4633f8ae41db1963d0e0631c20ec7fd337739bbb6b",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 71,
+        "before": "cb03f7fe8abd8ea53ddb4c960d189790f4d0dd27bbe70e2d7c5b7618b6f03571",
+        "act": 1,
+        "floor": 16,
+        "encounter": "SLIME_BOSS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/691411604.json.gz",
+          "seed": 691411604,
+          "sha256": "33fabe40aaf65e8d400f11b33245390b3ec1cd8442a28ac296bbd54f8971c5f1",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 76,
+        "before": "1c30df2d50ed7c403caf15bd84b14cefe3d3a505de23e285c701c9c4b8fd1c05",
+        "act": 2,
+        "floor": 18,
+        "encounter": "THREE_BYRDS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1051769677.json.gz",
+          "seed": 1051769677,
+          "sha256": "2915b392ed320bff5572a4a6285769d24917f0e3596430c890af934bada36b66",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 202,
+        "before": "4657f71275cd82c154e7532ba2561bda935c99fc941a3b493dc018e1cf34b17d",
+        "act": 3,
+        "floor": 47,
+        "encounter": "MYSTERIOUS_SPHERE_EVENT",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/717674154.json.gz",
+          "seed": 717674154,
+          "sha256": "04c5bbd3657c48d2f26d2e037e015cd8be5b02ea158a0cd105864db58436d83f",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 24,
+        "before": "fbd2a29746f0b5694c8d4c77996400b6dfed4294176c86a42da0a022060456c8",
+        "act": 1,
+        "floor": 5,
+        "encounter": "EXORDIUM_WILDLIFE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/799685797.json.gz",
+          "seed": 799685797,
+          "sha256": "8fe3826366b1e5d140e427465ff9e7f90113693b30f49b9945384d24992f89b3",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 78,
+        "before": "45c5300ab69ab8f60b354dc4933760cd6bd06d92f2cf3039206173fd64f88a5d",
+        "act": 2,
+        "floor": 20,
+        "encounter": "SHELL_PARASITE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1188522414.json.gz",
+          "seed": 1188522414,
+          "sha256": "bc18230672f43bfcb19729b15611ee5d7741c6034c55a657e690eb34d5c9568e",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 70,
+        "before": "2ac4f16932748b0f9f112408ae069b99266619a5afe14c0ff97df1389e549bcd",
+        "act": 1,
+        "floor": 16,
+        "encounter": "HEXAGHOST",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/747201813.json.gz",
+          "seed": 747201813,
+          "sha256": "6f6c5f82a30d50641fc67160648a3ec6a21b9927eee3cf5b4dac92282cd5caff",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 46,
+        "before": "969b189dc6cfbc2507ebb77d9d6e98387385675f6a72fd0391f16950ce966037",
+        "act": 1,
+        "floor": 10,
+        "encounter": "LARGE_SLIME",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/371972469.json.gz",
+          "seed": 371972469,
+          "sha256": "01a89c176f9df5186ad99fd13967b045b68a2b8a07d98288c783a592b041a46e",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 30,
+        "before": "fbc8e91ee5c3e12fec6ff66f8d0b2862dc1082eb05511514c86c6ce74a5b3ec6",
+        "act": 1,
+        "floor": 7,
+        "encounter": "THREE_SENTRIES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/304980135.json.gz",
+          "seed": 304980135,
+          "sha256": "a668c43859022e16a72fe2258449eee61a6d3eaaa11e791410589cfce55457fa",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 184,
+        "before": "cb0996fdc161de51f7a1f78f38787c7d436e43d429c5e17ca5f73f3c62c4d406",
+        "act": 3,
+        "floor": 42,
+        "encounter": "REPTOMANCER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1064239120.json.gz",
+          "seed": 1064239120,
+          "sha256": "e68f4b35e813dd460d80a4eec21d40763bbf2119af049ba40d0736629bfa39ba",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 122,
+        "before": "309915466728bff859fb7e51d06cb8de4a04d72974b2a2996fc95bb011b422be",
+        "act": 2,
+        "floor": 25,
+        "encounter": "SLAVERS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/314393163.json.gz",
+          "seed": 314393163,
+          "sha256": "75e108fed013d2b795f6d86e6b749a7fd900551d068bfa61983e14ac3eb08606",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 236,
+        "before": "87867ffac9712412be198884e7830c5ee6d5a5ff83a08b3834bf9d65a54fbe2b",
+        "act": 4,
+        "floor": 56,
+        "encounter": "THE_HEART",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/333021166.json.gz",
+          "seed": 333021166,
+          "sha256": "6f6c0fe2752290258aea4e4633f8ae41db1963d0e0631c20ec7fd337739bbb6b",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 151,
+        "before": "6ba2c60ab5b29644994760da4f117db9401925605bd22fe2a2ed83891ee145bf",
+        "act": 2,
+        "floor": 33,
+        "encounter": "AUTOMATON",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/44625143.json.gz",
+          "seed": 44625143,
+          "sha256": "e90d999ffa01158b8c85b234a1e12a0583fd2bf1745c3e6279d26c8c1868f4f0",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 128,
+        "before": "b08091d8119dec4229dcc8ca3b09d9b7d6c784c0c885e130279c4d3f68f14947",
+        "act": 2,
+        "floor": 29,
+        "encounter": "GREMLIN_LEADER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/533274167.json.gz",
+          "seed": 533274167,
+          "sha256": "b0d9889f4c1b1fd69f0cde039b35fe92fc3de90040da0dff1cc974cbc0905fcc",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 213,
+        "before": "2eeae3f07d9b1f2e6ebe533c05abafef8560d6abae87a59f6b1b8a86dc3a8add",
+        "act": 3,
+        "floor": 51,
+        "encounter": "AWAKENED_ONE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/799685797.json.gz",
+          "seed": 799685797,
+          "sha256": "8fe3826366b1e5d140e427465ff9e7f90113693b30f49b9945384d24992f89b3",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 172,
+        "before": "ac58f404ebf944c3476ccb80d801fc856de8fcf339572d4e3a5f0f897a00699c",
+        "act": 3,
+        "floor": 39,
+        "encounter": "SPHERE_AND_TWO_SHAPES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/533274167.json.gz",
+          "seed": 533274167,
+          "sha256": "b0d9889f4c1b1fd69f0cde039b35fe92fc3de90040da0dff1cc974cbc0905fcc",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 9,
+        "before": "a6295409c19627969b6067fe04ed45f52407770db241bf083f080ff912e6d975",
+        "act": 1,
+        "floor": 2,
+        "encounter": "TWO_LOUSE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1133667073.json.gz",
+          "seed": 1133667073,
+          "sha256": "60d19f42db9920ca0dd5577c959782593ddf3fd7a8db79d93d6c3d6d586038f9",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 70,
+        "before": "c2c0ce6567d519f353db953e0037cfb7f3c2dfd9a448fcb664259755262cc4fe",
+        "act": 1,
+        "floor": 16,
+        "encounter": "THE_GUARDIAN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1069906756.json.gz",
+          "seed": 1069906756,
+          "sha256": "2b3a351aadbe44e148ee0df94c23bc0e8b61467eb34b262bbcffe044089d5046",
+          "split": "fit",
+          "status": "heart_win",
+          "act": 4,
+          "target": 1.0
+        }
+      },
+      {
+        "index": 107,
+        "before": "269fdbd89829ef1526bb7ffc564569c7ca6bb28080789cd4611961ad5e9fc430",
+        "act": 2,
+        "floor": 21,
+        "encounter": "CENTURION_AND_HEALER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/818101182.json.gz",
+          "seed": 818101182,
+          "sha256": "b2799616fbadd923a48a1ca4a8462521c0f32b91561cca4de6912167a295457e",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 136,
+        "before": "f43dc39b12efa8caa8e52a1cab444da4e54d5ae8a7dabef0f2a76f0857058e31",
+        "act": 2,
+        "floor": 31,
+        "encounter": "SNECKO",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/799685797.json.gz",
+          "seed": 799685797,
+          "sha256": "8fe3826366b1e5d140e427465ff9e7f90113693b30f49b9945384d24992f89b3",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 154,
+        "before": "ea4a23e0f066de4335d3a0813cbce05a83ee62075faee8852d6b9e099c956303",
+        "act": 2,
+        "floor": 30,
+        "encounter": "CHOSEN_AND_BYRDS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1024694201.json.gz",
+          "seed": 1024694201,
+          "sha256": "cdd9f39278eb44f85d8a58fb4fae7cc9d14ef9988e650fa6101bae4f2b1c7312",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 175,
+        "before": "b6047f9bbd6788101414b1e152a67a24528494ebed494ceca0aee91d553a16c7",
+        "act": 3,
+        "floor": 42,
+        "encounter": "NEMESIS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1184832041.json.gz",
+          "seed": 1184832041,
+          "sha256": "9754f1b540604a2f19e814421bfcfbad2bf59916a5af034e790956e2e5176391",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 124,
+        "before": "5fdc70d45c9fe385dc1b3a1941719104f828ac1330e58b72355aeb537245f551",
+        "act": 2,
+        "floor": 28,
+        "encounter": "COLOSSEUM_EVENT_SLAVERS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/591922778.json.gz",
+          "seed": 591922778,
+          "sha256": "3d05a704d7dddac09f6338cd37bbd076fda23a08418c81aafd057c1187bcda1d",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 4,
+        "before": "f14ad6276dfcfcad43885605f78b4690e75c1f1e7849c33dd42fe5150786aa7b",
+        "act": 1,
+        "floor": 1,
+        "encounter": "SMALL_SLIMES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1073430632.json.gz",
+          "seed": 1073430632,
+          "sha256": "2b6fa00d0489d47d845beb8826498d4d11235a26cae121d4a74dc256f08d0ac9",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 132,
+        "before": "3b1b9be891a88e4f4faf01fef278121af5e3b74e232d75f1069f9934342f50ab",
+        "act": 2,
+        "floor": 31,
+        "encounter": "SNAKE_PLANT",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/717674154.json.gz",
+          "seed": 717674154,
+          "sha256": "04c5bbd3657c48d2f26d2e037e015cd8be5b02ea158a0cd105864db58436d83f",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 105,
+        "before": "d4ce36091eef31fdeb2c888829ee986470c754b5360a41f4a6c028791ac070cb",
+        "act": 2,
+        "floor": 25,
+        "encounter": "SPHERIC_GUARDIAN",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1071247907.json.gz",
+          "seed": 1071247907,
+          "sha256": "1cdaad37b881eaa39935028bc815d0a5390e4f8177b65d16212ecdb526643576",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 102,
+        "before": "3ea404312d063b0daf1a6878826dd4c849afa04df972cd4b6bdd594a0c876cec",
+        "act": 2,
+        "floor": 20,
+        "encounter": "SHELLED_PARASITE_AND_FUNGI",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/818101182.json.gz",
+          "seed": 818101182,
+          "sha256": "b2799616fbadd923a48a1ca4a8462521c0f32b91561cca4de6912167a295457e",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 161,
+        "before": "c8b81a5f1e912608b161d97c458194075db3fd666272140280f84eb75940c6bc",
+        "act": 3,
+        "floor": 38,
+        "encounter": "THREE_SHAPES",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1073430632.json.gz",
+          "seed": 1073430632,
+          "sha256": "2b6fa00d0489d47d845beb8826498d4d11235a26cae121d4a74dc256f08d0ac9",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 168,
+        "before": "9e49527f101eb1e4a9599dae8d8e418b9b4a8defea77d571a56a101a3ff5d98d",
+        "act": 3,
+        "floor": 41,
+        "encounter": "ORB_WALKER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/430232393.json.gz",
+          "seed": 430232393,
+          "sha256": "d326dbb7505e7b40b10a31fb67dc2d26b74db7c1a1c4f5207f3c6d6ab478bcb6",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 190,
+        "before": "fb232a850fee4d328435b76f12c3a9af8af28a482ddba20e506c3f297d199070",
+        "act": 3,
+        "floor": 46,
+        "encounter": "MAW",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/12856833.json.gz",
+          "seed": 12856833,
+          "sha256": "b77be9f7ec19eee3282f17f85facf0cbdab30f08f53a96977a0c97bee30ae523",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 19,
+        "before": "27c04f0e35806fd17df37d5540f409f67f2c1f86f0e07b9f44fc3bddbde1adc5",
+        "act": 1,
+        "floor": 4,
+        "encounter": "BLUE_SLAVER",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1051769677.json.gz",
+          "seed": 1051769677,
+          "sha256": "2915b392ed320bff5572a4a6285769d24917f0e3596430c890af934bada36b66",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 60,
+        "before": "1a05f729dc6cbe4712643970cae7562c4287696f795f9d33736e05779ccb29cc",
+        "act": 1,
+        "floor": 14,
+        "encounter": "EXORDIUM_THUGS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/306746476.json.gz",
+          "seed": 306746476,
+          "sha256": "83c055fd34bd5d42e7ae377702bc42f5873d6c00c3b67ab4662d475c0116054b",
+          "split": "fit",
+          "status": "death",
+          "act": 1,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 95,
+        "before": "db625640b356f5168df096e99f5c8859c4c15284e421897c151bc26ef8e6d644",
+        "act": 2,
+        "floor": 22,
+        "encounter": "SENTRY_AND_SPHERE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/747201813.json.gz",
+          "seed": 747201813,
+          "sha256": "6f6c5f82a30d50641fc67160648a3ec6a21b9927eee3cf5b4dac92282cd5caff",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 33,
+        "before": "c85c06ae0177960d73a91111e6a32eb2bf1abfd4858fcdea0ed882d86176844d",
+        "act": 1,
+        "floor": 8,
+        "encounter": "THREE_LOUSE",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/12856833.json.gz",
+          "seed": 12856833,
+          "sha256": "b77be9f7ec19eee3282f17f85facf0cbdab30f08f53a96977a0c97bee30ae523",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 123,
+        "before": "e88b42eeae263494bf2e7477cb0f24c829e65f0f09f46ba698e54944ba33eaaa",
+        "act": 2,
+        "floor": 30,
+        "encounter": "THREE_CULTIST",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1133667073.json.gz",
+          "seed": 1133667073,
+          "sha256": "60d19f42db9920ca0dd5577c959782593ddf3fd7a8db79d93d6c3d6d586038f9",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 140,
+        "before": "984bd4b5be40a9c6db6cc932cf965bd801a1095fa6aa20ae44a61abe2044cd96",
+        "act": 3,
+        "floor": 35,
+        "encounter": "THREE_DARKLINGS",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/521981240.json.gz",
+          "seed": 521981240,
+          "sha256": "ecbb27acfc5d56d193c828bf6a88a5df5ac549f1a703ff7860f9b0bd51a3b647",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 240,
+        "before": "afb19f9836679178a97210271b759cb0d3cf421dc02cc0805514dedda09228d8",
+        "act": 4,
+        "floor": 55,
+        "encounter": "SHIELD_AND_SPEAR",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/632465645.json.gz",
+          "seed": 632465645,
+          "sha256": "af96efb51e548dfa11abc08233ba567f1bc8496dd0f79d45b0f50adff878c4ba",
+          "split": "fit",
+          "status": "death",
+          "act": 4,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 63,
+        "before": "89377211f3294d005af78b5f34613f44109968be3e3fa54f1ef82fc4a897c2d1",
+        "act": 1,
+        "floor": 14,
+        "encounter": "GREMLIN_GANG",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/717674154.json.gz",
+          "seed": 717674154,
+          "sha256": "04c5bbd3657c48d2f26d2e037e015cd8be5b02ea158a0cd105864db58436d83f",
+          "split": "fit",
+          "status": "death",
+          "act": 3,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 148,
+        "before": "3d8a47638247c57d9c225e747f952ed476aca31d48b1318d9230b3fb59956eb3",
+        "act": 2,
+        "floor": 33,
+        "encounter": "COLLECTOR",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1101631790.json.gz",
+          "seed": 1101631790,
+          "sha256": "eae6619928e4ded02da7b16236a9f0604a92ae4f2d145c23133644d6c4e7e238",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      },
+      {
+        "index": 139,
+        "before": "174ae458e49e0660f4233b8c515c44c441c7af0f154795ab8142de72b0e286e1",
+        "act": 2,
+        "floor": 33,
+        "encounter": "CHAMP",
+        "reference": {
+          "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/199820147.json.gz",
+          "seed": 199820147,
+          "sha256": "8b56bcc81d2ce8383fe1d7a478858dcb7820852f410a4f8af21c6ed081b6909b",
+          "split": "fit",
+          "status": "death",
+          "act": 2,
+          "target": 0.0
+        }
+      }
+    ]
+  },
+  "full": [
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/626628342.json.gz",
+      "seed": 626628342,
+      "sha256": "76e5c49f971dcfd60396bcc57c59168e137211920ba5d433b8412dfa75b300b0",
+      "split": "fit",
+      "status": "death",
+      "act": 3,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/992872007.json.gz",
+      "seed": 992872007,
+      "sha256": "71110fe35ed0c1ca94b3f8d66fc7cfe7d9135908f9ea2b28c0014851a6244dac",
+      "split": "fit",
+      "status": "death",
+      "act": 1,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/1184832041.json.gz",
+      "seed": 1184832041,
+      "sha256": "9754f1b540604a2f19e814421bfcfbad2bf59916a5af034e790956e2e5176391",
+      "split": "fit",
+      "status": "death",
+      "act": 4,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/337109825.json.gz",
+      "seed": 337109825,
+      "sha256": "04d3714dad09c4ecd7d50f4605ed357dfdd08313ab0820fcdf256ba7ea8ce55a",
+      "split": "fit",
+      "status": "death",
+      "act": 2,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/256366241.json.gz",
+      "seed": 256366241,
+      "sha256": "869bd5158363e28c145e49b2b056f6ce371fc7cf98bde7d55d265f2b375e254b",
+      "split": "fit",
+      "status": "death",
+      "act": 3,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/632465645.json.gz",
+      "seed": 632465645,
+      "sha256": "af96efb51e548dfa11abc08233ba567f1bc8496dd0f79d45b0f50adff878c4ba",
+      "split": "fit",
+      "status": "death",
+      "act": 4,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/374622679.json.gz",
+      "seed": 374622679,
+      "sha256": "9626b9db940ff7798cf250134d5c2570aa0c7e7cac7ff23582e69aad7d68eaa7",
+      "split": "fit",
+      "status": "death",
+      "act": 3,
+      "target": 0.0
+    },
+    {
+      "path": "<repo-parent>/sts-rl-agent-pr/runs/heart-e121-scale-source-refresh-20260920-01/natural/episodes/245449890.json.gz",
+      "seed": 245449890,
+      "sha256": "c3dbc358131bee7a7e9c0efc20fc2aa6478f4da816f6382dee6d3e6ad4dc33c1",
+      "split": "fit",
+      "status": "heart_win",
+      "act": 4,
+      "target": 1.0
+    }
+  ]
+}

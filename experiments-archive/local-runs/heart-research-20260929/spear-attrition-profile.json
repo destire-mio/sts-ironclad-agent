@@ -1,0 +1,16 @@
+[
+  {
+    "heart_win": true,
+    "n": 482,
+    "spear_entry_hp_mean": 78.49170124481327,
+    "spear_exit_hp_mean": 73.29875518672199,
+    "net_hp_spent_mean": 5.1929460580912865
+  },
+  {
+    "heart_win": false,
+    "n": 147,
+    "spear_entry_hp_mean": 75.37414965986395,
+    "spear_exit_hp_mean": 48.21768707482993,
+    "net_hp_spent_mean": 27.156462585034014
+  }
+]

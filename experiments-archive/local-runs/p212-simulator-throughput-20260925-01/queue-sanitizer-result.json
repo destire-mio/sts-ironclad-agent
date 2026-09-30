@@ -1,0 +1,62 @@
+[
+  {
+    "case": "normal_wrap",
+    "returncode": 0,
+    "stdout": "normal_wrap: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "growth_back",
+    "returncode": 0,
+    "stdout": "growth_back: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "growth_front",
+    "returncode": 0,
+    "stdout": "growth_front: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "growth_wrapped",
+    "returncode": 0,
+    "stdout": "growth_wrapped: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "growth_copy",
+    "returncode": 0,
+    "stdout": "growth_copy: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "victory_wrapped",
+    "returncode": 0,
+    "stdout": "victory_wrapped: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "clear_reuse",
+    "returncode": 0,
+    "stdout": "clear_reuse: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "executing_callback_grows_queue",
+    "returncode": 0,
+    "stdout": "executing_callback_grows_queue: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "heap_callback_survives_reuse",
+    "returncode": 0,
+    "stdout": "heap_callback_survives_reuse: PASS\n",
+    "stderr": ""
+  },
+  {
+    "case": "heap_copy_isolation",
+    "returncode": 0,
+    "stdout": "heap_copy_isolation: PASS\n",
+    "stderr": ""
+  }
+]

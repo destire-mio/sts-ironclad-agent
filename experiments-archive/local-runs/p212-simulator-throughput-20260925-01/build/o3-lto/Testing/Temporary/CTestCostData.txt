@@ -1,0 +1,26 @@
+combat_blood_normal 1 0.978506
+combat_blood_bark 1 0.00423654
+combat_blood_rounding 1 0.00396346
+combat_blood_cap 1 0.00420196
+combat_iron_wave_base 1 0.00389825
+combat_iron_wave_dex 1 0.00418096
+combat_iron_wave_frail 1 0.00415671
+combat_iron_wave_negative_dex 1 0.00473596
+combat_cardless_poison 1 0.00910175
+combat_cardless_fire 1 0.00605175
+combat_cardless_death 1 0.00372112
+combat_poison_with_cards 1 0.00542887
+combat_poison_block 1 0.0049685
+combat_poison_intangible 1 0.00366892
+combat_poison_expiration 1 0.0038225
+combat_poison_artifact 1 0.00410746
+combat_poison_targets 1 0.00378383
+queue_normal_wrap 1 0.549047
+queue_growth_back 1 0.00468917
+queue_growth_front 1 0.00440142
+queue_growth_wrapped 1 0.00444092
+queue_growth_copy 1 0.00361637
+queue_victory_wrapped 1 0.00360729
+queue_clear_reuse 1 0.00412121
+queue_executing_callback_grows_queue 1 0.00400929
+---

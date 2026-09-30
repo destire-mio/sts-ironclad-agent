@@ -1,0 +1,42 @@
+[
+  {
+    "threads": 1,
+    "sparse": false,
+    "seconds_per_full_batch": 0.28669085975125197
+  },
+  {
+    "threads": 1,
+    "sparse": true,
+    "seconds_per_full_batch": 0.1870552382490132
+  },
+  {
+    "threads": 2,
+    "sparse": false,
+    "seconds_per_full_batch": 0.2827550400499604
+  },
+  {
+    "threads": 2,
+    "sparse": true,
+    "seconds_per_full_batch": 0.15742269540060078
+  },
+  {
+    "threads": 4,
+    "sparse": false,
+    "seconds_per_full_batch": 0.2784572949502035
+  },
+  {
+    "threads": 4,
+    "sparse": true,
+    "seconds_per_full_batch": 0.14137851999985288
+  },
+  {
+    "threads": 7,
+    "sparse": false,
+    "seconds_per_full_batch": 0.27688343085028466
+  },
+  {
+    "threads": 7,
+    "sparse": true,
+    "seconds_per_full_batch": 0.13459839249990183
+  }
+]

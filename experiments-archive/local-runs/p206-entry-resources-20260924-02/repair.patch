@@ -1,0 +1,32 @@
+--- <repo-parent>/sts-rl-agent-principles/runs/p206-entry-resources-20260924-01/frozen-source/heart_entry_resource_probe.py
++++ agent/heart_entry_resource_probe.py
+@@ -99,7 +99,7 @@
+         # Both kinds of returned plans are replayed from their correct state.
+         final=full.clone()
+         for bits in counter['actions']:
+-            E.require(bits in adapter.actions(final),'counterfactual action missing from legal menu')
++            E.require(adapter.canonical(bits) in adapter.actions(final),'counterfactual action missing from legal menu')
+             adapter.execute(final,bits)
+         E.require(int(final.outcome)==counter['outcome'] and int(final.turn)==counter['turns'],
+                   'counterfactual replay outcome/turn differs')
+--- <repo-parent>/sts-rl-agent-principles/runs/p206-entry-resources-20260924-01/frozen-source/heart_prefix_reachability.py
++++ agent/heart_prefix_reachability.py
+@@ -25,6 +25,7 @@
+     if outcome(adapter, state, target_turn) == 'alive':
+         return dict(actions=used, state=state)
+     for bits in actions:
++        bits = adapter.canonical(bits)
+         if outcome(adapter, state, target_turn) != 'branch':
+             return None
+         legal = adapter.actions(state)
+@@ -158,6 +159,10 @@
+         self.sts = sts
+ 
+     @staticmethod
++    def canonical(bits):
++        return int(bits) & 0xffffffff
++
++    @staticmethod
+     def clone(state):
+         return state.clone()
+ 

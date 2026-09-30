@@ -1,0 +1,34 @@
+{
+  "traj-c38": {
+    "True": {
+      "n": 482,
+      "turn2_n": 482,
+      "turn2_status_curse_mean": 1.0809128630705394,
+      "turn2_atleast3": 38,
+      "turn2_hand_size": 6.512448132780083
+    },
+    "False": {
+      "n": 147,
+      "turn2_n": 147,
+      "turn2_status_curse_mean": 1.0068027210884354,
+      "turn2_atleast3": 9,
+      "turn2_hand_size": 6.35374149659864
+    }
+  },
+  "traj-c37": {
+    "True": {
+      "n": 459,
+      "turn2_n": 459,
+      "turn2_status_curse_mean": 1.0130718954248366,
+      "turn2_atleast3": 30,
+      "turn2_hand_size": 6.492374727668845
+    },
+    "False": {
+      "n": 171,
+      "turn2_n": 171,
+      "turn2_status_curse_mean": 0.8421052631578947,
+      "turn2_atleast3": 7,
+      "turn2_hand_size": 6.064327485380117
+    }
+  }
+}

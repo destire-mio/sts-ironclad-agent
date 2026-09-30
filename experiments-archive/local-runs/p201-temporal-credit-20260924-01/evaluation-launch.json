@@ -1,0 +1,15 @@
+{
+  "pid": 51106,
+  "child_pid": 51118,
+  "pgid": 51118,
+  "command": [
+    "~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python3.12",
+    "-u",
+    "<repo-parent>/sts-rl-agent-principles/agent/heart_temporal_credit.py",
+    "evaluate",
+    "--root",
+    "<repo-parent>/sts-rl-agent-principles/runs/p201-temporal-credit-20260924-01"
+  ],
+  "started_at": 1790234569.1154408,
+  "timeout_seconds": 5400
+}

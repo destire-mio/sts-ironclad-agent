@@ -1,0 +1,13 @@
+{
+  "stage": "analyze200",
+  "started": 1790737822.1351316,
+  "command": [
+    "~/sts/venv/bin/python",
+    "~/sts/runs/distill2-code-v1/distill2_analyze.py",
+    "~/sts/runs/distill2-v21-20260930/paired200.jsonl",
+    "--output",
+    "~/sts/runs/distill2-v21-20260930/paired200-analysis.json"
+  ],
+  "ended": 1790737822.416882,
+  "exit_code": 0
+}

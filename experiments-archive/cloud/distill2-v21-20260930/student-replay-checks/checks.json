@@ -1,0 +1,11 @@
+{
+  "decisions": 34449,
+  "candidates": 167035,
+  "feature_dim": 11195,
+  "train_inference_float32_bits": "equal",
+  "hidden_prefix_invariance": "passed",
+  "parent_warm_start": "not_requested",
+  "teacher_isolation_checks": 0,
+  "student_action_replay": true,
+  "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34"
+}

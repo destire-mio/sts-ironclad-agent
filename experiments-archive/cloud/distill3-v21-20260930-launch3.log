@@ -1,0 +1,28 @@
+15:45:55 up 2 days, 15:11,  0 users,  load average: 8.30, 28.22, 45.07
+Traceback (most recent call last):
+  File "~/sts/runs/distill3-code-v1/distill3_pipeline_fast.py", line 145, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "~/sts/runs/distill3-code-v1/distill3_pipeline_fast.py", line 95, in main
+    trained=list(ex.map(train_variant,variants))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "~/.local/share/uv/python/cpython-3.12.14-linux-aarch64-gnu/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/sts/runs/distill3-code-v1/distill3_pipeline_fast.py", line 91, in train_variant
+    stage(name,'distill3_train.py','--data',data,'--init',warm,'--output',modeldir,'--depth',depth,
+  File "~/sts/runs/distill3-code-v1/distill3_pipeline_fast.py", line 59, in stage
+    if not a.resume:raise RuntimeError('explicit --resume required for '+name)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: explicit --resume required for bc-d1-lr0.0002-w5

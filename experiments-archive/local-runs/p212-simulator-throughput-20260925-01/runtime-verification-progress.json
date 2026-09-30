@@ -1,0 +1,85 @@
+{
+  "reports": [
+    {
+      "seed": 626628342,
+      "status": "death",
+      "seconds": 3.9735541669651866,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 784000,
+      "error": null
+    },
+    {
+      "seed": 992872007,
+      "status": "death",
+      "seconds": 0.3568564159795642,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 96000,
+      "error": null
+    },
+    {
+      "seed": 1184832041,
+      "status": "death",
+      "seconds": 4.280964000034146,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 744000,
+      "error": null
+    },
+    {
+      "seed": 337109825,
+      "status": "death",
+      "seconds": 1.269817166030407,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 248000,
+      "error": null
+    },
+    {
+      "seed": 256366241,
+      "status": "death",
+      "seconds": 5.425914166029543,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 944000,
+      "error": null
+    },
+    {
+      "seed": 632465645,
+      "status": "death",
+      "seconds": 5.324824666022323,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 752000,
+      "error": null
+    },
+    {
+      "seed": 374622679,
+      "status": "death",
+      "seconds": 2.3938319579465315,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 488000,
+      "error": null
+    },
+    {
+      "seed": 245449890,
+      "status": "heart_win",
+      "seconds": 5.896760707953945,
+      "same_prefix": true,
+      "same_terminal": true,
+      "same_outcome": true,
+      "simulations": 904000,
+      "error": null
+    }
+  ],
+  "assigned": 8
+}

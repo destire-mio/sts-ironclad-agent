@@ -1,0 +1,14 @@
+[
+  {
+    "type": "FirstBossRelicPolicy",
+    "module": "heart_boss_relic_model",
+    "source": "    def choose(self, gc, observation, actions, descriptors):\n        baseline = self.base.choose(gc, observation, actions, descriptors)\n        if not eligible(gc, descriptors, baseline):\n            return baseline\n        candidates = [i for i, d in enumerate(descriptors) if option_id(d) is not None]\n        identifiers = [option_id(descriptors[i]) for i in candidates]\n        if not set(identifiers) <= self.support:\n            selected = baseline\n        else:\n            # Ties prefer the original action, then the original legal order.\n            selected = max(candidates, key=lambda i: (float(self.relic_scores[option_id(descriptors[i])]), i == baseline, -i))\n        return selected\n",
+    "prior_strength": null
+  },
+  {
+    "type": "CardContextScorer",
+    "module": "heart_guided",
+    "source": "    def choose(self, gc, observation, actions, descriptors):\n        teacher=R.heuristic_choice(gc,actions,descriptors)\n        logits=self.score(H.torch.tensor(observation),descriptors)\n        return int(self.with_prior(logits,teacher).argmax())\n",
+    "prior_strength": 3.0
+  }
+]

@@ -1,0 +1,1 @@
+{"type": "probe", "job": {"id": "critical_hp_event_3900012068", "seed": 3900012068, "index": 34, "kind": "route", "option": 0, "reason": "All sample triggers: HP <=15 and <=20%, parent selects MONSTER with EVENT offered, green key already held. Take the leftmost offered EVENT once; no knowledge of hidden event content."}}

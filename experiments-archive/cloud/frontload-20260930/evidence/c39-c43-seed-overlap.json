@@ -1,0 +1,10 @@
+{
+  "c39_unique_seeds": 1000,
+  "c43_unique_seeds": 1000,
+  "overlap": 1000,
+  "c43_range": [
+    3900018000,
+    3900018999
+  ],
+  "c43_subset_of_c39": true
+}

@@ -1,0 +1,49 @@
+{
+  "variant": "pgo-queue",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "<repo-parent>/sts-rl-agent-principles/sim_patch/performance",
+      "-B",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-queue",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_OSX_ARCHITECTURES=arm64",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+      "-DSTS_SIM_ROOT=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/source-queue",
+      "-DSTS_JSON_INCLUDE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/json",
+      "-DPython_EXECUTABLE=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/bin/python",
+      "-Dpybind11_DIR=~/Documents/Codex/2026-09-10/new-chat-2/outputs/spire-lab/.venv/lib/python3.12/site-packages/pybind11/share/cmake/pybind11",
+      "-DSTS_OPT_LEVEL=3",
+      "-DSTS_CPU=apple-m4",
+      "-DSTS_LTO=ON",
+      "-DSTS_PGO=use",
+      "-DSTS_PROFILE=<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/queue-profile.profdata"
+    ],
+    [
+      "cmake",
+      "--build",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-queue",
+      "--parallel",
+      "3"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/pgo-queue",
+      "--output-on-failure"
+    ]
+  ],
+  "seconds": 15.908172845840454,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.4.2)\nTarget: arm64-apple-darwin25.3.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "cpu": "Apple M4",
+  "binary_sha256": "87d521f51a24b43802abe57052e6efd3c3154998f8d383f2827734233dd4b064",
+  "build_inputs": {
+    "agent/heart_simulator_performance.py": "d6150fbeb1a35680e63289a9dfc1358e1171dce8f31fbb723e2827d33f03f247",
+    "sim_patch/performance/CMakeLists.txt": "3050f9dc079a168685ca070e341ebe50793cafe4dbca3007bffa88ae4f063fe9",
+    "sim_patch/tests/action_queue.cpp": "eb83d224eab1bddb1c4ecaa0f6f75ce7bd45e51f16a4563a986034e45778e915",
+    "sim_patch/tests/combat_rules.cpp": "594e7165355a36c903c82c291bc20e09457aac5aaba51b99d0311d8a5473ce2f"
+  },
+  "profile_sha256": "7a6ddda421130374d9da938602f3835f6f7186aa62b82cc738340d07fd34e1f7"
+}

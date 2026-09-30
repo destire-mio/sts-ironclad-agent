@@ -1,0 +1,435 @@
+Start testing: Sep 25 03:51 CST
+----------------------------------------------------------
+1/27 Testing: combat_blood_normal
+1/27 Test: combat_blood_normal
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "blood_normal"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_blood_normal" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS blood_normal
+<end of output>
+Test time =   0.91 sec
+----------------------------------------------------------
+Test Passed.
+"combat_blood_normal" end time: Sep 25 03:51 CST
+"combat_blood_normal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/27 Testing: combat_blood_bark
+2/27 Test: combat_blood_bark
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "blood_bark"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_blood_bark" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS blood_bark
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"combat_blood_bark" end time: Sep 25 03:51 CST
+"combat_blood_bark" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/27 Testing: combat_blood_rounding
+3/27 Test: combat_blood_rounding
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "blood_rounding"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_blood_rounding" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS blood_rounding
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_blood_rounding" end time: Sep 25 03:51 CST
+"combat_blood_rounding" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/27 Testing: combat_blood_cap
+4/27 Test: combat_blood_cap
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "blood_cap"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_blood_cap" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS blood_cap
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_blood_cap" end time: Sep 25 03:51 CST
+"combat_blood_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/27 Testing: combat_iron_wave_base
+5/27 Test: combat_iron_wave_base
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "iron_wave_base"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_iron_wave_base" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS iron_wave_base
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_iron_wave_base" end time: Sep 25 03:51 CST
+"combat_iron_wave_base" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/27 Testing: combat_iron_wave_dex
+6/27 Test: combat_iron_wave_dex
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "iron_wave_dex"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_iron_wave_dex" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS iron_wave_dex
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_iron_wave_dex" end time: Sep 25 03:51 CST
+"combat_iron_wave_dex" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/27 Testing: combat_iron_wave_frail
+7/27 Test: combat_iron_wave_frail
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "iron_wave_frail"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_iron_wave_frail" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS iron_wave_frail
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_iron_wave_frail" end time: Sep 25 03:51 CST
+"combat_iron_wave_frail" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/27 Testing: combat_iron_wave_negative_dex
+8/27 Test: combat_iron_wave_negative_dex
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "iron_wave_negative_dex"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_iron_wave_negative_dex" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS iron_wave_negative_dex
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_iron_wave_negative_dex" end time: Sep 25 03:51 CST
+"combat_iron_wave_negative_dex" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/27 Testing: combat_cardless_poison
+9/27 Test: combat_cardless_poison
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "cardless_poison"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_cardless_poison" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS cardless_poison
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_cardless_poison" end time: Sep 25 03:51 CST
+"combat_cardless_poison" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/27 Testing: combat_cardless_fire
+10/27 Test: combat_cardless_fire
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "cardless_fire"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_cardless_fire" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS cardless_fire
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_cardless_fire" end time: Sep 25 03:51 CST
+"combat_cardless_fire" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/27 Testing: combat_cardless_death
+11/27 Test: combat_cardless_death
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "cardless_death"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_cardless_death" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS cardless_death
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_cardless_death" end time: Sep 25 03:51 CST
+"combat_cardless_death" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/27 Testing: combat_poison_with_cards
+12/27 Test: combat_poison_with_cards
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_with_cards"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_with_cards" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_with_cards
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_with_cards" end time: Sep 25 03:51 CST
+"combat_poison_with_cards" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/27 Testing: combat_poison_block
+13/27 Test: combat_poison_block
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_block"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_block" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_block
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_block" end time: Sep 25 03:51 CST
+"combat_poison_block" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/27 Testing: combat_poison_intangible
+14/27 Test: combat_poison_intangible
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_intangible"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_intangible" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_intangible
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_intangible" end time: Sep 25 03:51 CST
+"combat_poison_intangible" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/27 Testing: combat_poison_expiration
+15/27 Test: combat_poison_expiration
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_expiration"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_expiration" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_expiration
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_expiration" end time: Sep 25 03:51 CST
+"combat_poison_expiration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/27 Testing: combat_poison_artifact
+16/27 Test: combat_poison_artifact
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_artifact"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_artifact" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_artifact
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_artifact" end time: Sep 25 03:51 CST
+"combat_poison_artifact" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/27 Testing: combat_poison_targets
+17/27 Test: combat_poison_targets
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/combat_rules" "poison_targets"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"combat_poison_targets" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+PASS poison_targets
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"combat_poison_targets" end time: Sep 25 03:51 CST
+"combat_poison_targets" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/27 Testing: queue_normal_wrap
+18/27 Test: queue_normal_wrap
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "normal_wrap"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_normal_wrap" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+normal_wrap: PASS
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"queue_normal_wrap" end time: Sep 25 03:51 CST
+"queue_normal_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/27 Testing: queue_growth_back
+19/27 Test: queue_growth_back
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "growth_back"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_growth_back" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+growth_back: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_growth_back" end time: Sep 25 03:51 CST
+"queue_growth_back" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/27 Testing: queue_growth_front
+20/27 Test: queue_growth_front
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "growth_front"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_growth_front" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+growth_front: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_growth_front" end time: Sep 25 03:51 CST
+"queue_growth_front" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/27 Testing: queue_growth_wrapped
+21/27 Test: queue_growth_wrapped
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "growth_wrapped"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_growth_wrapped" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+growth_wrapped: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_growth_wrapped" end time: Sep 25 03:51 CST
+"queue_growth_wrapped" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/27 Testing: queue_growth_copy
+22/27 Test: queue_growth_copy
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "growth_copy"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_growth_copy" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+growth_copy: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_growth_copy" end time: Sep 25 03:51 CST
+"queue_growth_copy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/27 Testing: queue_victory_wrapped
+23/27 Test: queue_victory_wrapped
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "victory_wrapped"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_victory_wrapped" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+victory_wrapped: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_victory_wrapped" end time: Sep 25 03:51 CST
+"queue_victory_wrapped" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/27 Testing: queue_clear_reuse
+24/27 Test: queue_clear_reuse
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "clear_reuse"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_clear_reuse" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+clear_reuse: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_clear_reuse" end time: Sep 25 03:51 CST
+"queue_clear_reuse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/27 Testing: queue_executing_callback_grows_queue
+25/27 Test: queue_executing_callback_grows_queue
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "executing_callback_grows_queue"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_executing_callback_grows_queue" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+executing_callback_grows_queue: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_executing_callback_grows_queue" end time: Sep 25 03:51 CST
+"queue_executing_callback_grows_queue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/27 Testing: queue_heap_callback_survives_reuse
+26/27 Test: queue_heap_callback_survives_reuse
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "heap_callback_survives_reuse"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_heap_callback_survives_reuse" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+heap_callback_survives_reuse: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_heap_callback_survives_reuse" end time: Sep 25 03:51 CST
+"queue_heap_callback_survives_reuse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/27 Testing: queue_heap_copy_isolation
+27/27 Test: queue_heap_copy_isolation
+Command: "<repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue/action_queue" "heap_copy_isolation"
+Directory: <repo-parent>/sts-rl-agent-principles/runs/p212-simulator-throughput-20260925-01/build/o3-lto-queue
+"queue_heap_copy_isolation" start time: Sep 25 03:51 CST
+Output:
+----------------------------------------------------------
+heap_copy_isolation: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"queue_heap_copy_isolation" end time: Sep 25 03:51 CST
+"queue_heap_copy_isolation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 25 03:51 CST
