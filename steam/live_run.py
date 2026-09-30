@@ -26,6 +26,12 @@ def transport(view, policy):
     g=view['game'];screen=g['screen_type'];available=view['available_commands']
     if screen=='EVENT':
         event=g['screen_state']['event_id'];fields=view['live_run']['event_fields'];phase=fields.get('screen',fields.get('curScreen'))
+        # Native resolves the Wheel on the first click. Java still needs Spin,
+        # Prize and Leave clicks, even when native is already on REWARDS.
+        # Replaying those as event actions rerolls the Wheel and can consume
+        # the continuation needed to leave the real relic reward screen.
+        if event=='Wheel of Change' and (fields.get('startSpin') or phase in ('COMPLETE','LEAVE')):
+            return 'choose 0'
         if (event in ('Falling','SensoryStone','Designer','Colosseum') and phase=='INTRO') or (event=='Knowing Skull' and phase=='INTRO_1'):
             return 'choose 0'
         if event=='Nest' and view['live_run']['event_fields'].get('screenNum')==0:return 'choose 0'
