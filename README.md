@@ -85,9 +85,10 @@ scripts/run_student.sh 4 4       # same, with the distilled student network deci
 count. A game takes roughly a minute on one core. Runs resume if you repeat the command. Use a seed block
 that has not been used for tuning if you want an honest number (the development block is 3900012000+).
 
-Verified on the last cleanup: a fresh build played seed 3900012000 to the Heart (floor 56) in 45 s
-with no engine fault; the cloud teacher reached the same floor on that seed. Long-run win rates were
-not re-measured with this build.
+Caveat: a fresh build does not reproduce the cloud games move for move. It plays complete games without engine
+faults (seed 3900012000: 45 s to the Heart, lost there), but on seed 3900040000 the cloud student and teacher both won
+while this build's student lost. The delivery build used PGO/LTO and other compiler flags that this CMake build does not
+(see `combat_engine/combat4r/report.md`). Treat win rates from this build as unmeasured until you re-run a large block.
 
 The student driver played seed 3900040000 to the Heart (floor 56) in one test game with no engine fault; that
 is a smoke test, not an evaluation. The original-game runner is in [`live_original/`](live_original/PORTING.md) (as it was run,
