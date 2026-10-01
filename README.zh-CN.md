@@ -15,7 +15,8 @@
 
 基于 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed)，延续自
 [Jialeiv/sts-rl-agent](https://github.com/Jialeiv/sts-rl-agent)。目标是让铁甲战士在进阶 20 下拿齐三把钥匙并击败心脏，
-局外的每个选择都来自一个冻结网络，只有战斗搜索保留传统算法。
+局外的每个选择都来自一个冻结网络，只有战斗搜索保留传统算法。纯模拟器子集已单独发布为
+[sts-ironclad-simulator](https://github.com/destire-mio/sts-ironclad-simulator)。
 
 ## 结果
 

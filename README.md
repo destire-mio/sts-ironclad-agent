@@ -16,7 +16,8 @@ English | [中文](README.zh-CN.md)
 Built on [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed), continued from
 [Jialeiv/sts-rl-agent](https://github.com/Jialeiv/sts-rl-agent). The goal is an Ironclad that wins
 Ascension 20 with all three keys and the Heart, where every out-of-combat choice comes from one
-frozen network and only combat search stays classical.
+frozen network and only combat search stays classical. The simulator-only subset is published
+separately as [sts-ironclad-simulator](https://github.com/destire-mio/sts-ironclad-simulator).
 
 ## Results
 
