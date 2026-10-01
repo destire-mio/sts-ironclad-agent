@@ -1,0 +1,4343 @@
+{
+  "scope": "原版 Java 第三版蒸馏学生（局外决策=冻结NN，战斗搜索保留），A20 铁甲心脏；开发评估，不是锁定验收块。",
+  "policy": "student",
+  "teacher_calls": 0,
+  "runtime": "live5（live4 runtime/search + distill3 student 适配）",
+  "model_sha256": "6b4c56eb0ff3c9820e5968bffe42df488951d76cf4c48cd15d4eb947bd63d83d",
+  "seeds": {
+    "first": 3900020000,
+    "last": 3900020505,
+    "target": 500,
+    "attempted": 507
+  },
+  "results": {
+    "terminal": 473,
+    "wins": 231,
+    "losses": 242,
+    "winrate": 0.4884,
+    "bootstrap95": [
+      0.444,
+      0.5349
+    ],
+    "bootstrap_method": "20000 resamples, seed 20260930"
+  },
+  "p300_reference": {
+    "winrate": 0.512,
+    "note": "第三版 P300 模拟器开发块 3900041000–，与本轮种子块不同；跨块描述性对比"
+  },
+  "comparison": {
+    "diff_pp": -2.4,
+    "ci_covers_512": true
+  },
+  "faults": {
+    "count": 34,
+    "by_type": {
+      "ValueError('unmapped original queued action: ApplyPowerAction')": 10,
+      "RuntimeError('missing GameContext continuation')": 6,
+      "ValueError('multi-card selection lacks its original confirmation')": 6,
+      "ValueError('unmapped original queued action: GainEnergyAction')": 4,
+      "ValueError('snapshot monster count exceeds simulator capacity')": 2,
+      "ValueError('unmapped original queued action: ')": 2,
+      "TimeoutError('command')": 1,
+      "ValueError('only battle-start queues are supported')": 1,
+      "KeyError('VictoryRoom')": 1,
+      "IndexError('list index out of range')": 1
+    },
+    "seeds": [
+      3900020013,
+      3900020025,
+      3900020029,
+      3900020031,
+      3900020042,
+      3900020048,
+      3900020058,
+      3900020059,
+      3900020070,
+      3900020093,
+      3900020100,
+      3900020136,
+      3900020142,
+      3900020158,
+      3900020167,
+      3900020192,
+      3900020222,
+      3900020293,
+      3900020344,
+      3900020364,
+      3900020369,
+      3900020375,
+      3900020377,
+      3900020398,
+      3900020402,
+      3900020414,
+      3900020429,
+      3900020433,
+      3900020438,
+      3900020441,
+      3900020457,
+      3900020489,
+      3900020503,
+      3900020506
+    ],
+    "note": "桥接导入器缺口为主，单列不计胜负"
+  },
+  "runs": [
+    {
+      "seed": 3900020000,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1341,
+      "seconds": 400.0,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020001,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 625,
+      "seconds": 379.8,
+      "decisions": 134
+    },
+    {
+      "seed": 3900020002,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1081,
+      "seconds": 424.3,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020003,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 880,
+      "seconds": 327.8,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020004,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 433,
+      "seconds": 332.5,
+      "decisions": 107
+    },
+    {
+      "seed": 3900020005,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 780,
+      "seconds": 663.2,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020006,
+      "status": "loss",
+      "floor": 11,
+      "act": 1,
+      "steps": 219,
+      "seconds": 240.5,
+      "decisions": 50
+    },
+    {
+      "seed": 3900020007,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1043,
+      "seconds": 725.0,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020008,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1214,
+      "seconds": 941.4,
+      "decisions": 222
+    },
+    {
+      "seed": 3900020009,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1077,
+      "seconds": 872.5,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020010,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1320,
+      "seconds": 831.1,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020011,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 279,
+      "seconds": 328.7,
+      "decisions": 58
+    },
+    {
+      "seed": 3900020012,
+      "status": "loss",
+      "floor": 8,
+      "act": 1,
+      "steps": 212,
+      "seconds": 141.7,
+      "decisions": 32
+    },
+    {
+      "seed": 3900020014,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1147,
+      "seconds": 602.0,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020015,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1051,
+      "seconds": 636.9,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020016,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 541,
+      "seconds": 346.2,
+      "decisions": 124
+    },
+    {
+      "seed": 3900020017,
+      "status": "loss",
+      "floor": 22,
+      "act": 2,
+      "steps": 358,
+      "seconds": 178.2,
+      "decisions": 81
+    },
+    {
+      "seed": 3900020018,
+      "status": "loss",
+      "floor": 11,
+      "act": 1,
+      "steps": 149,
+      "seconds": 104.6,
+      "decisions": 48
+    },
+    {
+      "seed": 3900020019,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 955,
+      "seconds": 955.8,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020020,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1088,
+      "seconds": 1058.9,
+      "decisions": 242
+    },
+    {
+      "seed": 3900020021,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1047,
+      "seconds": 1245.8,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020022,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 425,
+      "seconds": 402.4,
+      "decisions": 93
+    },
+    {
+      "seed": 3900020023,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1218,
+      "seconds": 1132.3,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020024,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 251,
+      "seconds": 394.0,
+      "decisions": 60
+    },
+    {
+      "seed": 3900020026,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 904,
+      "seconds": 837.0,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020027,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1206,
+      "seconds": 948.1,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020028,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 960,
+      "seconds": 785.8,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020030,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 810,
+      "seconds": 857.5,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020032,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 350,
+      "seconds": 165.4,
+      "decisions": 84
+    },
+    {
+      "seed": 3900020033,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 994,
+      "seconds": 569.7,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020034,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1149,
+      "seconds": 565.2,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020035,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 974,
+      "seconds": 575.1,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020036,
+      "status": "loss",
+      "floor": 14,
+      "act": 1,
+      "steps": 251,
+      "seconds": 165.5,
+      "decisions": 65
+    },
+    {
+      "seed": 3900020037,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 121,
+      "seconds": 137.5,
+      "decisions": 24
+    },
+    {
+      "seed": 3900020038,
+      "status": "loss",
+      "floor": 8,
+      "act": 1,
+      "steps": 168,
+      "seconds": 143.3,
+      "decisions": 32
+    },
+    {
+      "seed": 3900020039,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1225,
+      "seconds": 731.3,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020040,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 899,
+      "seconds": 503.7,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020041,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1066,
+      "seconds": 543.7,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020043,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1054,
+      "seconds": 540.4,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020044,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1150,
+      "seconds": 539.7,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020045,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1010,
+      "seconds": 583.2,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020046,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1017,
+      "seconds": 498.2,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020047,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1215,
+      "seconds": 597.7,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020049,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 993,
+      "seconds": 755.1,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020050,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1035,
+      "seconds": 471.9,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020051,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1261,
+      "seconds": 694.7,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020052,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 880,
+      "seconds": 456.8,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020053,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1062,
+      "seconds": 571.9,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020054,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1268,
+      "seconds": 788.1,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020055,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 974,
+      "seconds": 604.6,
+      "decisions": 185
+    },
+    {
+      "seed": 3900020056,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1030,
+      "seconds": 864.1,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020057,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 467,
+      "seconds": 185.1,
+      "decisions": 83
+    },
+    {
+      "seed": 3900020060,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 905,
+      "seconds": 1818.7,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020061,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 492,
+      "seconds": 483.7,
+      "decisions": 131
+    },
+    {
+      "seed": 3900020062,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 781,
+      "seconds": 1322.8,
+      "decisions": 187
+    },
+    {
+      "seed": 3900020063,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 341,
+      "seconds": 307.3,
+      "decisions": 90
+    },
+    {
+      "seed": 3900020064,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1391,
+      "seconds": 2140.3,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020065,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1193,
+      "seconds": 1958.0,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020066,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1118,
+      "seconds": 1807.0,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020067,
+      "status": "loss",
+      "floor": 30,
+      "act": 2,
+      "steps": 591,
+      "seconds": 1011.6,
+      "decisions": 105
+    },
+    {
+      "seed": 3900020068,
+      "status": "loss",
+      "floor": 27,
+      "act": 2,
+      "steps": 438,
+      "seconds": 821.1,
+      "decisions": 107
+    },
+    {
+      "seed": 3900020069,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 84,
+      "seconds": 291.0,
+      "decisions": 20
+    },
+    {
+      "seed": 3900020071,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 967,
+      "seconds": 1328.9,
+      "decisions": 221
+    },
+    {
+      "seed": 3900020072,
+      "status": "loss",
+      "floor": 13,
+      "act": 1,
+      "steps": 194,
+      "seconds": 507.7,
+      "decisions": 52
+    },
+    {
+      "seed": 3900020073,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 1432,
+      "seconds": 1805.6,
+      "decisions": 181
+    },
+    {
+      "seed": 3900020074,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1095,
+      "seconds": 2306.3,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020075,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1221,
+      "seconds": 2663.3,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020076,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1099,
+      "seconds": 1053.7,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020077,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1351,
+      "seconds": 975.6,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020078,
+      "status": "loss",
+      "floor": 22,
+      "act": 2,
+      "steps": 370,
+      "seconds": 361.7,
+      "decisions": 83
+    },
+    {
+      "seed": 3900020079,
+      "status": "loss",
+      "floor": 48,
+      "act": 4,
+      "steps": 973,
+      "seconds": 734.5,
+      "decisions": 169
+    },
+    {
+      "seed": 3900020080,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1194,
+      "seconds": 720.9,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020081,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 97,
+      "seconds": 98.6,
+      "decisions": 17
+    },
+    {
+      "seed": 3900020082,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1060,
+      "seconds": 362.8,
+      "decisions": 223
+    },
+    {
+      "seed": 3900020083,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1228,
+      "seconds": 427.5,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020084,
+      "status": "loss",
+      "floor": 8,
+      "act": 1,
+      "steps": 180,
+      "seconds": 73.2,
+      "decisions": 32
+    },
+    {
+      "seed": 3900020085,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1105,
+      "seconds": 433.1,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020086,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 374,
+      "seconds": 116.0,
+      "decisions": 84
+    },
+    {
+      "seed": 3900020087,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 198,
+      "seconds": 78.8,
+      "decisions": 46
+    },
+    {
+      "seed": 3900020088,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1000,
+      "seconds": 390.9,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020089,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 89,
+      "seconds": 87.5,
+      "decisions": 19
+    },
+    {
+      "seed": 3900020090,
+      "status": "loss",
+      "floor": 55,
+      "act": 4,
+      "steps": 1081,
+      "seconds": 369.7,
+      "decisions": 188
+    },
+    {
+      "seed": 3900020091,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1209,
+      "seconds": 773.1,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020092,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1182,
+      "seconds": 434.4,
+      "decisions": 189
+    },
+    {
+      "seed": 3900020094,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1071,
+      "seconds": 477.0,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020095,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 499,
+      "seconds": 137.0,
+      "decisions": 96
+    },
+    {
+      "seed": 3900020096,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1184,
+      "seconds": 414.1,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020097,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 415,
+      "seconds": 131.4,
+      "decisions": 85
+    },
+    {
+      "seed": 3900020098,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 384,
+      "seconds": 137.5,
+      "decisions": 92
+    },
+    {
+      "seed": 3900020099,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1441,
+      "seconds": 689.1,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020101,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1368,
+      "seconds": 600.6,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020102,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 476,
+      "seconds": 148.9,
+      "decisions": 104
+    },
+    {
+      "seed": 3900020103,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1140,
+      "seconds": 398.2,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020104,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1338,
+      "seconds": 508.5,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020105,
+      "status": "loss",
+      "floor": 8,
+      "act": 1,
+      "steps": 141,
+      "seconds": 59.7,
+      "decisions": 32
+    },
+    {
+      "seed": 3900020106,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1382,
+      "seconds": 641.9,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020107,
+      "status": "loss",
+      "floor": 30,
+      "act": 2,
+      "steps": 429,
+      "seconds": 158.8,
+      "decisions": 115
+    },
+    {
+      "seed": 3900020108,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 684,
+      "seconds": 266.4,
+      "decisions": 184
+    },
+    {
+      "seed": 3900020109,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 377,
+      "seconds": 151.6,
+      "decisions": 98
+    },
+    {
+      "seed": 3900020110,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1046,
+      "seconds": 472.5,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020111,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 971,
+      "seconds": 414.3,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020112,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1092,
+      "seconds": 391.8,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020113,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1171,
+      "seconds": 419.6,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020114,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 334,
+      "seconds": 126.2,
+      "decisions": 81
+    },
+    {
+      "seed": 3900020115,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1284,
+      "seconds": 595.6,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020116,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1053,
+      "seconds": 1550.3,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020117,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1180,
+      "seconds": 423.4,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020118,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 913,
+      "seconds": 304.4,
+      "decisions": 182
+    },
+    {
+      "seed": 3900020119,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1498,
+      "seconds": 689.3,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020120,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1106,
+      "seconds": 391.7,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020121,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 538,
+      "seconds": 220.0,
+      "decisions": 115
+    },
+    {
+      "seed": 3900020122,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1374,
+      "seconds": 567.2,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020123,
+      "status": "loss",
+      "floor": 55,
+      "act": 4,
+      "steps": 913,
+      "seconds": 308.2,
+      "decisions": 190
+    },
+    {
+      "seed": 3900020124,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 790,
+      "seconds": 248.6,
+      "decisions": 193
+    },
+    {
+      "seed": 3900020125,
+      "status": "loss",
+      "floor": 48,
+      "act": 3,
+      "steps": 1135,
+      "seconds": 330.9,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020126,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1131,
+      "seconds": 495.0,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020127,
+      "status": "loss",
+      "floor": 7,
+      "act": 1,
+      "steps": 147,
+      "seconds": 69.0,
+      "decisions": 31
+    },
+    {
+      "seed": 3900020128,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1140,
+      "seconds": 511.5,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020129,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 995,
+      "seconds": 442.5,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020130,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 356,
+      "seconds": 108.8,
+      "decisions": 87
+    },
+    {
+      "seed": 3900020131,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 268,
+      "seconds": 167.7,
+      "decisions": 56
+    },
+    {
+      "seed": 3900020132,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1020,
+      "seconds": 394.7,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020133,
+      "status": "loss",
+      "floor": 36,
+      "act": 3,
+      "steps": 628,
+      "seconds": 216.3,
+      "decisions": 145
+    },
+    {
+      "seed": 3900020134,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 157,
+      "seconds": 74.5,
+      "decisions": 43
+    },
+    {
+      "seed": 3900020135,
+      "status": "loss",
+      "floor": 45,
+      "act": 3,
+      "steps": 786,
+      "seconds": 220.4,
+      "decisions": 168
+    },
+    {
+      "seed": 3900020137,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 978,
+      "seconds": 351.1,
+      "decisions": 219
+    },
+    {
+      "seed": 3900020138,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 70,
+      "seconds": 55.0,
+      "decisions": 20
+    },
+    {
+      "seed": 3900020139,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1642,
+      "seconds": 769.8,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020140,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1033,
+      "seconds": 373.9,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020141,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1434,
+      "seconds": 545.2,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020143,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1077,
+      "seconds": 1079.9,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020144,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1186,
+      "seconds": 471.0,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020145,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 926,
+      "seconds": 336.0,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020146,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1163,
+      "seconds": 430.5,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020147,
+      "status": "loss",
+      "floor": 22,
+      "act": 2,
+      "steps": 401,
+      "seconds": 124.1,
+      "decisions": 89
+    },
+    {
+      "seed": 3900020148,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 799,
+      "seconds": 227.0,
+      "decisions": 179
+    },
+    {
+      "seed": 3900020149,
+      "status": "loss",
+      "floor": 41,
+      "act": 3,
+      "steps": 637,
+      "seconds": 171.0,
+      "decisions": 150
+    },
+    {
+      "seed": 3900020150,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1001,
+      "seconds": 308.7,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020151,
+      "status": "loss",
+      "floor": 21,
+      "act": 2,
+      "steps": 346,
+      "seconds": 117.9,
+      "decisions": 86
+    },
+    {
+      "seed": 3900020152,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 103,
+      "seconds": 74.9,
+      "decisions": 22
+    },
+    {
+      "seed": 3900020153,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1151,
+      "seconds": 523.6,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020154,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1247,
+      "seconds": 522.5,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020155,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1088,
+      "seconds": 343.6,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020156,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 443,
+      "seconds": 139.2,
+      "decisions": 93
+    },
+    {
+      "seed": 3900020157,
+      "status": "loss",
+      "floor": 27,
+      "act": 2,
+      "steps": 460,
+      "seconds": 134.4,
+      "decisions": 105
+    },
+    {
+      "seed": 3900020159,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 991,
+      "seconds": 315.8,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020160,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1117,
+      "seconds": 445.4,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020161,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 801,
+      "seconds": 327.3,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020162,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1252,
+      "seconds": 1736.0,
+      "decisions": 227
+    },
+    {
+      "seed": 3900020163,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1024,
+      "seconds": 371.7,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020164,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 886,
+      "seconds": 243.6,
+      "decisions": 193
+    },
+    {
+      "seed": 3900020165,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1085,
+      "seconds": 464.7,
+      "decisions": 193
+    },
+    {
+      "seed": 3900020166,
+      "status": "loss",
+      "floor": 29,
+      "act": 2,
+      "steps": 391,
+      "seconds": 130.6,
+      "decisions": 113
+    },
+    {
+      "seed": 3900020168,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 729,
+      "seconds": 377.4,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020169,
+      "status": "loss",
+      "floor": 27,
+      "act": 2,
+      "steps": 398,
+      "seconds": 128.0,
+      "decisions": 103
+    },
+    {
+      "seed": 3900020170,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1181,
+      "seconds": 376.8,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020171,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 649,
+      "seconds": 241.4,
+      "decisions": 128
+    },
+    {
+      "seed": 3900020172,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 747,
+      "seconds": 266.2,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020173,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 206,
+      "seconds": 79.1,
+      "decisions": 48
+    },
+    {
+      "seed": 3900020174,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 922,
+      "seconds": 684.5,
+      "decisions": 223
+    },
+    {
+      "seed": 3900020175,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 258,
+      "seconds": 118.6,
+      "decisions": 65
+    },
+    {
+      "seed": 3900020176,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1268,
+      "seconds": 491.2,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020177,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1240,
+      "seconds": 465.3,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020178,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1066,
+      "seconds": 401.4,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020179,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1080,
+      "seconds": 421.6,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020180,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1354,
+      "seconds": 2034.2,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020181,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1057,
+      "seconds": 369.4,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020182,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1768,
+      "seconds": 735.1,
+      "decisions": 223
+    },
+    {
+      "seed": 3900020183,
+      "status": "loss",
+      "floor": 7,
+      "act": 1,
+      "steps": 105,
+      "seconds": 50.1,
+      "decisions": 28
+    },
+    {
+      "seed": 3900020184,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 454,
+      "seconds": 156.7,
+      "decisions": 94
+    },
+    {
+      "seed": 3900020185,
+      "status": "loss",
+      "floor": 44,
+      "act": 3,
+      "steps": 963,
+      "seconds": 281.5,
+      "decisions": 174
+    },
+    {
+      "seed": 3900020186,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1056,
+      "seconds": 309.0,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020187,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1095,
+      "seconds": 444.5,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020188,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 222,
+      "seconds": 98.0,
+      "decisions": 49
+    },
+    {
+      "seed": 3900020189,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 930,
+      "seconds": 315.4,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020190,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1141,
+      "seconds": 1250.6,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020191,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1117,
+      "seconds": 489.7,
+      "decisions": 219
+    },
+    {
+      "seed": 3900020193,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1329,
+      "seconds": 2399.9,
+      "decisions": 224
+    },
+    {
+      "seed": 3900020194,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1138,
+      "seconds": 380.5,
+      "decisions": 224
+    },
+    {
+      "seed": 3900020195,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1390,
+      "seconds": 480.1,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020196,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 122,
+      "seconds": 79.2,
+      "decisions": 22
+    },
+    {
+      "seed": 3900020197,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1145,
+      "seconds": 360.0,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020198,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1079,
+      "seconds": 298.6,
+      "decisions": 196
+    },
+    {
+      "seed": 3900020199,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 926,
+      "seconds": 401.7,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020200,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 933,
+      "seconds": 411.4,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020201,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 871,
+      "seconds": 232.0,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020202,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 397,
+      "seconds": 123.4,
+      "decisions": 95
+    },
+    {
+      "seed": 3900020203,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 969,
+      "seconds": 307.7,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020204,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 153,
+      "seconds": 58.4,
+      "decisions": 51
+    },
+    {
+      "seed": 3900020205,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1092,
+      "seconds": 357.8,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020206,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 717,
+      "seconds": 316.0,
+      "decisions": 141
+    },
+    {
+      "seed": 3900020207,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1172,
+      "seconds": 513.4,
+      "decisions": 226
+    },
+    {
+      "seed": 3900020208,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1297,
+      "seconds": 501.2,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020209,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1155,
+      "seconds": 382.8,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020210,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1039,
+      "seconds": 338.2,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020211,
+      "status": "loss",
+      "floor": 27,
+      "act": 2,
+      "steps": 470,
+      "seconds": 138.0,
+      "decisions": 106
+    },
+    {
+      "seed": 3900020212,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 992,
+      "seconds": 385.2,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020213,
+      "status": "loss",
+      "floor": 14,
+      "act": 1,
+      "steps": 230,
+      "seconds": 89.9,
+      "decisions": 60
+    },
+    {
+      "seed": 3900020214,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1018,
+      "seconds": 434.4,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020215,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 936,
+      "seconds": 518.0,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020216,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 356,
+      "seconds": 140.7,
+      "decisions": 89
+    },
+    {
+      "seed": 3900020217,
+      "status": "loss",
+      "floor": 28,
+      "act": 2,
+      "steps": 417,
+      "seconds": 155.1,
+      "decisions": 101
+    },
+    {
+      "seed": 3900020218,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1070,
+      "seconds": 490.1,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020219,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 920,
+      "seconds": 365.2,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020220,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1068,
+      "seconds": 403.4,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020221,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1350,
+      "seconds": 592.7,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020223,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1043,
+      "seconds": 401.7,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020224,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1236,
+      "seconds": 414.8,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020225,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 904,
+      "seconds": 376.0,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020226,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 395,
+      "seconds": 126.3,
+      "decisions": 79
+    },
+    {
+      "seed": 3900020227,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 351,
+      "seconds": 113.0,
+      "decisions": 92
+    },
+    {
+      "seed": 3900020228,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1076,
+      "seconds": 352.6,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020229,
+      "status": "loss",
+      "floor": 41,
+      "act": 3,
+      "steps": 795,
+      "seconds": 217.8,
+      "decisions": 160
+    },
+    {
+      "seed": 3900020230,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 374,
+      "seconds": 117.2,
+      "decisions": 92
+    },
+    {
+      "seed": 3900020231,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1177,
+      "seconds": 1173.3,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020232,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1630,
+      "seconds": 677.8,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020233,
+      "status": "loss",
+      "floor": 39,
+      "act": 3,
+      "steps": 735,
+      "seconds": 236.8,
+      "decisions": 148
+    },
+    {
+      "seed": 3900020234,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1250,
+      "seconds": 583.4,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020235,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 122,
+      "seconds": 82.8,
+      "decisions": 20
+    },
+    {
+      "seed": 3900020236,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1492,
+      "seconds": 857.8,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020237,
+      "status": "loss",
+      "floor": 44,
+      "act": 3,
+      "steps": 666,
+      "seconds": 201.3,
+      "decisions": 157
+    },
+    {
+      "seed": 3900020238,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1100,
+      "seconds": 405.9,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020239,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1396,
+      "seconds": 504.2,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020240,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 115,
+      "seconds": 64.4,
+      "decisions": 21
+    },
+    {
+      "seed": 3900020241,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1135,
+      "seconds": 364.1,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020242,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1306,
+      "seconds": 434.7,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020243,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 994,
+      "seconds": 265.0,
+      "decisions": 177
+    },
+    {
+      "seed": 3900020244,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1023,
+      "seconds": 396.4,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020245,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 600,
+      "seconds": 210.6,
+      "decisions": 139
+    },
+    {
+      "seed": 3900020246,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1138,
+      "seconds": 552.6,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020247,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 546,
+      "seconds": 200.2,
+      "decisions": 135
+    },
+    {
+      "seed": 3900020248,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1018,
+      "seconds": 368.5,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020249,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1311,
+      "seconds": 464.5,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020250,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 377,
+      "seconds": 127.9,
+      "decisions": 96
+    },
+    {
+      "seed": 3900020251,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1044,
+      "seconds": 376.0,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020252,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1216,
+      "seconds": 382.3,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020253,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1044,
+      "seconds": 362.3,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020254,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 819,
+      "seconds": 389.7,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020255,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 989,
+      "seconds": 396.6,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020256,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1241,
+      "seconds": 527.0,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020257,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1053,
+      "seconds": 427.8,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020258,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1196,
+      "seconds": 544.7,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020259,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 514,
+      "seconds": 198.9,
+      "decisions": 131
+    },
+    {
+      "seed": 3900020260,
+      "status": "loss",
+      "floor": 41,
+      "act": 3,
+      "steps": 666,
+      "seconds": 241.6,
+      "decisions": 149
+    },
+    {
+      "seed": 3900020261,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1129,
+      "seconds": 558.7,
+      "decisions": 222
+    },
+    {
+      "seed": 3900020262,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 342,
+      "seconds": 186.3,
+      "decisions": 63
+    },
+    {
+      "seed": 3900020263,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 881,
+      "seconds": 356.6,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020264,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1268,
+      "seconds": 450.0,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020265,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1256,
+      "seconds": 489.8,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020266,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 83,
+      "seconds": 65.7,
+      "decisions": 19
+    },
+    {
+      "seed": 3900020267,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1129,
+      "seconds": 421.3,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020268,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 911,
+      "seconds": 379.9,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020269,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 194,
+      "seconds": 83.8,
+      "decisions": 56
+    },
+    {
+      "seed": 3900020270,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1019,
+      "seconds": 373.0,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020271,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 401,
+      "seconds": 124.3,
+      "decisions": 86
+    },
+    {
+      "seed": 3900020272,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1007,
+      "seconds": 340.2,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020273,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1567,
+      "seconds": 587.3,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020274,
+      "status": "loss",
+      "floor": 21,
+      "act": 2,
+      "steps": 338,
+      "seconds": 108.4,
+      "decisions": 82
+    },
+    {
+      "seed": 3900020275,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1193,
+      "seconds": 509.2,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020276,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1425,
+      "seconds": 625.8,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020277,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1226,
+      "seconds": 440.8,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020278,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 439,
+      "seconds": 148.4,
+      "decisions": 89
+    },
+    {
+      "seed": 3900020279,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1312,
+      "seconds": 540.9,
+      "decisions": 219
+    },
+    {
+      "seed": 3900020280,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 958,
+      "seconds": 359.0,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020281,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 158,
+      "seconds": 90.1,
+      "decisions": 37
+    },
+    {
+      "seed": 3900020282,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1238,
+      "seconds": 390.6,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020283,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1285,
+      "seconds": 2772.5,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020284,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 442,
+      "seconds": 125.5,
+      "decisions": 97
+    },
+    {
+      "seed": 3900020285,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1339,
+      "seconds": 656.0,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020286,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1090,
+      "seconds": 558.4,
+      "decisions": 187
+    },
+    {
+      "seed": 3900020287,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1071,
+      "seconds": 407.5,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020288,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 985,
+      "seconds": 338.8,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020289,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1091,
+      "seconds": 532.6,
+      "decisions": 202
+    },
+    {
+      "seed": 3900020290,
+      "status": "loss",
+      "floor": 21,
+      "act": 2,
+      "steps": 297,
+      "seconds": 101.4,
+      "decisions": 73
+    },
+    {
+      "seed": 3900020291,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 410,
+      "seconds": 128.6,
+      "decisions": 88
+    },
+    {
+      "seed": 3900020292,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1037,
+      "seconds": 338.2,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020294,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1058,
+      "seconds": 343.5,
+      "decisions": 202
+    },
+    {
+      "seed": 3900020295,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 993,
+      "seconds": 413.4,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020296,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 432,
+      "seconds": 121.6,
+      "decisions": 93
+    },
+    {
+      "seed": 3900020297,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1378,
+      "seconds": 513.4,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020298,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 710,
+      "seconds": 502.0,
+      "decisions": 125
+    },
+    {
+      "seed": 3900020299,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1244,
+      "seconds": 390.4,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020300,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1101,
+      "seconds": 2096.4,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020301,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1377,
+      "seconds": 458.4,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020302,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1116,
+      "seconds": 390.4,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020303,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 995,
+      "seconds": 386.0,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020304,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1064,
+      "seconds": 345.1,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020305,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1071,
+      "seconds": 425.8,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020306,
+      "status": "loss",
+      "floor": 55,
+      "act": 4,
+      "steps": 872,
+      "seconds": 274.1,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020307,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1408,
+      "seconds": 762.0,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020308,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1118,
+      "seconds": 427.9,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020309,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 972,
+      "seconds": 330.3,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020310,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1020,
+      "seconds": 408.8,
+      "decisions": 233
+    },
+    {
+      "seed": 3900020311,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1064,
+      "seconds": 301.5,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020312,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 254,
+      "seconds": 79.6,
+      "decisions": 48
+    },
+    {
+      "seed": 3900020313,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1152,
+      "seconds": 374.9,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020314,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1028,
+      "seconds": 408.0,
+      "decisions": 176
+    },
+    {
+      "seed": 3900020315,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1408,
+      "seconds": 489.4,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020316,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1340,
+      "seconds": 613.5,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020317,
+      "status": "loss",
+      "floor": 28,
+      "act": 2,
+      "steps": 432,
+      "seconds": 123.0,
+      "decisions": 106
+    },
+    {
+      "seed": 3900020318,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 374,
+      "seconds": 108.7,
+      "decisions": 94
+    },
+    {
+      "seed": 3900020319,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 888,
+      "seconds": 298.1,
+      "decisions": 196
+    },
+    {
+      "seed": 3900020320,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 514,
+      "seconds": 161.0,
+      "decisions": 113
+    },
+    {
+      "seed": 3900020321,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 266,
+      "seconds": 136.8,
+      "decisions": 62
+    },
+    {
+      "seed": 3900020322,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 958,
+      "seconds": 425.0,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020323,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1024,
+      "seconds": 368.3,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020324,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1115,
+      "seconds": 460.4,
+      "decisions": 196
+    },
+    {
+      "seed": 3900020325,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1112,
+      "seconds": 364.9,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020326,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1192,
+      "seconds": 540.3,
+      "decisions": 234
+    },
+    {
+      "seed": 3900020327,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1307,
+      "seconds": 576.4,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020328,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 258,
+      "seconds": 87.8,
+      "decisions": 42
+    },
+    {
+      "seed": 3900020329,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1137,
+      "seconds": 377.8,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020330,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1163,
+      "seconds": 319.1,
+      "decisions": 189
+    },
+    {
+      "seed": 3900020331,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1103,
+      "seconds": 504.1,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020332,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1387,
+      "seconds": 588.4,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020333,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 104,
+      "seconds": 62.3,
+      "decisions": 22
+    },
+    {
+      "seed": 3900020334,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 490,
+      "seconds": 144.2,
+      "decisions": 94
+    },
+    {
+      "seed": 3900020335,
+      "status": "loss",
+      "floor": 40,
+      "act": 3,
+      "steps": 672,
+      "seconds": 178.0,
+      "decisions": 144
+    },
+    {
+      "seed": 3900020336,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 642,
+      "seconds": 215.4,
+      "decisions": 135
+    },
+    {
+      "seed": 3900020337,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1099,
+      "seconds": 419.2,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020338,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1247,
+      "seconds": 481.5,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020339,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 376,
+      "seconds": 133.9,
+      "decisions": 94
+    },
+    {
+      "seed": 3900020340,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 530,
+      "seconds": 174.7,
+      "decisions": 99
+    },
+    {
+      "seed": 3900020341,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1046,
+      "seconds": 361.1,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020342,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1009,
+      "seconds": 846.8,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020343,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 944,
+      "seconds": 297.8,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020345,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1186,
+      "seconds": 387.4,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020346,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 964,
+      "seconds": 279.9,
+      "decisions": 187
+    },
+    {
+      "seed": 3900020347,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 924,
+      "seconds": 379.1,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020348,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1291,
+      "seconds": 579.8,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020349,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 617,
+      "seconds": 176.9,
+      "decisions": 91
+    },
+    {
+      "seed": 3900020350,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 616,
+      "seconds": 157.4,
+      "decisions": 131
+    },
+    {
+      "seed": 3900020351,
+      "status": "loss",
+      "floor": 11,
+      "act": 1,
+      "steps": 173,
+      "seconds": 74.6,
+      "decisions": 39
+    },
+    {
+      "seed": 3900020352,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1139,
+      "seconds": 377.0,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020353,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1147,
+      "seconds": 594.6,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020354,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1076,
+      "seconds": 419.3,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020355,
+      "status": "loss",
+      "floor": 36,
+      "act": 3,
+      "steps": 586,
+      "seconds": 183.8,
+      "decisions": 134
+    },
+    {
+      "seed": 3900020356,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 964,
+      "seconds": 284.0,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020357,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1001,
+      "seconds": 327.8,
+      "decisions": 189
+    },
+    {
+      "seed": 3900020358,
+      "status": "loss",
+      "floor": 49,
+      "act": 4,
+      "steps": 1061,
+      "seconds": 338.6,
+      "decisions": 184
+    },
+    {
+      "seed": 3900020359,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1061,
+      "seconds": 398.9,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020360,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1104,
+      "seconds": 586.5,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020361,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 203,
+      "seconds": 93.4,
+      "decisions": 44
+    },
+    {
+      "seed": 3900020362,
+      "status": "loss",
+      "floor": 42,
+      "act": 3,
+      "steps": 818,
+      "seconds": 281.6,
+      "decisions": 171
+    },
+    {
+      "seed": 3900020363,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 996,
+      "seconds": 553.8,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020365,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1139,
+      "seconds": 414.4,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020366,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1187,
+      "seconds": 354.8,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020367,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1103,
+      "seconds": 401.9,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020368,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 183,
+      "seconds": 76.0,
+      "decisions": 51
+    },
+    {
+      "seed": 3900020370,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1058,
+      "seconds": 317.4,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020371,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1297,
+      "seconds": 567.7,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020372,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 365,
+      "seconds": 107.7,
+      "decisions": 86
+    },
+    {
+      "seed": 3900020373,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1205,
+      "seconds": 444.9,
+      "decisions": 202
+    },
+    {
+      "seed": 3900020374,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1128,
+      "seconds": 443.3,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020376,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1170,
+      "seconds": 367.8,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020378,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 265,
+      "seconds": 140.1,
+      "decisions": 63
+    },
+    {
+      "seed": 3900020379,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1378,
+      "seconds": 2497.2,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020380,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1132,
+      "seconds": 571.0,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020381,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1037,
+      "seconds": 667.4,
+      "decisions": 220
+    },
+    {
+      "seed": 3900020382,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 964,
+      "seconds": 387.0,
+      "decisions": 188
+    },
+    {
+      "seed": 3900020383,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1226,
+      "seconds": 470.5,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020384,
+      "status": "win",
+      "floor": 49,
+      "act": 4,
+      "steps": 956,
+      "seconds": 332.2,
+      "decisions": 172
+    },
+    {
+      "seed": 3900020385,
+      "status": "win",
+      "floor": 54,
+      "act": 4,
+      "steps": 907,
+      "seconds": 1236.1,
+      "decisions": 190
+    },
+    {
+      "seed": 3900020386,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 882,
+      "seconds": 322.9,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020387,
+      "status": "loss",
+      "floor": 46,
+      "act": 3,
+      "steps": 950,
+      "seconds": 279.7,
+      "decisions": 173
+    },
+    {
+      "seed": 3900020388,
+      "status": "win",
+      "floor": 56,
+      "act": 4,
+      "steps": 1319,
+      "seconds": 465.9,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020389,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 246,
+      "seconds": 94.2,
+      "decisions": 42
+    },
+    {
+      "seed": 3900020390,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1009,
+      "seconds": 378.1,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020391,
+      "status": "loss",
+      "floor": 27,
+      "act": 2,
+      "steps": 407,
+      "seconds": 122.7,
+      "decisions": 108
+    },
+    {
+      "seed": 3900020392,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 575,
+      "seconds": 180.6,
+      "decisions": 130
+    },
+    {
+      "seed": 3900020393,
+      "status": "loss",
+      "floor": 7,
+      "act": 1,
+      "steps": 118,
+      "seconds": 60.7,
+      "decisions": 27
+    },
+    {
+      "seed": 3900020394,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 954,
+      "seconds": 420.2,
+      "decisions": 209
+    },
+    {
+      "seed": 3900020395,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1297,
+      "seconds": 476.2,
+      "decisions": 218
+    },
+    {
+      "seed": 3900020396,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 1040,
+      "seconds": 436.3,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020397,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1262,
+      "seconds": 451.9,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020399,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1098,
+      "seconds": 413.1,
+      "decisions": 208
+    },
+    {
+      "seed": 3900020400,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1306,
+      "seconds": 940.8,
+      "decisions": 219
+    },
+    {
+      "seed": 3900020401,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 876,
+      "seconds": 235.6,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020403,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1445,
+      "seconds": 600.0,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020404,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 365,
+      "seconds": 117.4,
+      "decisions": 106
+    },
+    {
+      "seed": 3900020405,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 967,
+      "seconds": 453.6,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020406,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1132,
+      "seconds": 360.0,
+      "decisions": 181
+    },
+    {
+      "seed": 3900020407,
+      "status": "loss",
+      "floor": 42,
+      "act": 3,
+      "steps": 779,
+      "seconds": 203.4,
+      "decisions": 155
+    },
+    {
+      "seed": 3900020408,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 963,
+      "seconds": 336.0,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020409,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1469,
+      "seconds": 445.7,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020410,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1079,
+      "seconds": 467.8,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020411,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 975,
+      "seconds": 375.3,
+      "decisions": 187
+    },
+    {
+      "seed": 3900020412,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 367,
+      "seconds": 136.9,
+      "decisions": 83
+    },
+    {
+      "seed": 3900020413,
+      "status": "loss",
+      "floor": 14,
+      "act": 1,
+      "steps": 229,
+      "seconds": 88.4,
+      "decisions": 57
+    },
+    {
+      "seed": 3900020415,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1028,
+      "seconds": 455.7,
+      "decisions": 202
+    },
+    {
+      "seed": 3900020416,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1562,
+      "seconds": 714.5,
+      "decisions": 219
+    },
+    {
+      "seed": 3900020417,
+      "status": "loss",
+      "floor": 55,
+      "act": 4,
+      "steps": 1019,
+      "seconds": 311.1,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020418,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1125,
+      "seconds": 2200.1,
+      "decisions": 202
+    },
+    {
+      "seed": 3900020419,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1215,
+      "seconds": 530.8,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020420,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 451,
+      "seconds": 131.8,
+      "decisions": 99
+    },
+    {
+      "seed": 3900020421,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1352,
+      "seconds": 444.6,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020422,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1017,
+      "seconds": 355.0,
+      "decisions": 215
+    },
+    {
+      "seed": 3900020423,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 901,
+      "seconds": 295.8,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020424,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 971,
+      "seconds": 291.2,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020425,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1235,
+      "seconds": 1118.8,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020426,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1094,
+      "seconds": 528.2,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020427,
+      "status": "loss",
+      "floor": 46,
+      "act": 3,
+      "steps": 768,
+      "seconds": 221.6,
+      "decisions": 167
+    },
+    {
+      "seed": 3900020428,
+      "status": "loss",
+      "floor": 20,
+      "act": 2,
+      "steps": 353,
+      "seconds": 116.3,
+      "decisions": 80
+    },
+    {
+      "seed": 3900020430,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1209,
+      "seconds": 354.0,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020431,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 895,
+      "seconds": 292.9,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020432,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 953,
+      "seconds": 319.0,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020434,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 73,
+      "seconds": 53.4,
+      "decisions": 26
+    },
+    {
+      "seed": 3900020435,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 783,
+      "seconds": 197.5,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020436,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 988,
+      "seconds": 358.0,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020437,
+      "status": "loss",
+      "floor": 7,
+      "act": 1,
+      "steps": 188,
+      "seconds": 72.4,
+      "decisions": 26
+    },
+    {
+      "seed": 3900020439,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1095,
+      "seconds": 366.5,
+      "decisions": 195
+    },
+    {
+      "seed": 3900020440,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1054,
+      "seconds": 2515.7,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020442,
+      "status": "loss",
+      "floor": 55,
+      "act": 4,
+      "steps": 1040,
+      "seconds": 318.2,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020443,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1079,
+      "seconds": 464.1,
+      "decisions": 194
+    },
+    {
+      "seed": 3900020444,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 386,
+      "seconds": 114.4,
+      "decisions": 90
+    },
+    {
+      "seed": 3900020445,
+      "status": "loss",
+      "floor": 10,
+      "act": 1,
+      "steps": 166,
+      "seconds": 66.8,
+      "decisions": 42
+    },
+    {
+      "seed": 3900020446,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 350,
+      "seconds": 145.9,
+      "decisions": 63
+    },
+    {
+      "seed": 3900020447,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1442,
+      "seconds": 732.8,
+      "decisions": 224
+    },
+    {
+      "seed": 3900020448,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1295,
+      "seconds": 508.1,
+      "decisions": 216
+    },
+    {
+      "seed": 3900020449,
+      "status": "loss",
+      "floor": 33,
+      "act": 2,
+      "steps": 603,
+      "seconds": 201.4,
+      "decisions": 123
+    },
+    {
+      "seed": 3900020450,
+      "status": "loss",
+      "floor": 29,
+      "act": 2,
+      "steps": 542,
+      "seconds": 168.2,
+      "decisions": 119
+    },
+    {
+      "seed": 3900020451,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1016,
+      "seconds": 469.2,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020452,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1033,
+      "seconds": 356.1,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020453,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1104,
+      "seconds": 337.3,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020454,
+      "status": "loss",
+      "floor": 50,
+      "act": 3,
+      "steps": 1191,
+      "seconds": 536.8,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020455,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1083,
+      "seconds": 377.6,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020456,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1253,
+      "seconds": 1727.9,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020458,
+      "status": "loss",
+      "floor": 51,
+      "act": 3,
+      "steps": 1123,
+      "seconds": 352.6,
+      "decisions": 184
+    },
+    {
+      "seed": 3900020459,
+      "status": "loss",
+      "floor": 20,
+      "act": 2,
+      "steps": 337,
+      "seconds": 112.3,
+      "decisions": 77
+    },
+    {
+      "seed": 3900020460,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1226,
+      "seconds": 459.8,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020461,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1284,
+      "seconds": 570.7,
+      "decisions": 198
+    },
+    {
+      "seed": 3900020462,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1200,
+      "seconds": 437.5,
+      "decisions": 212
+    },
+    {
+      "seed": 3900020463,
+      "status": "loss",
+      "floor": 12,
+      "act": 1,
+      "steps": 209,
+      "seconds": 78.6,
+      "decisions": 50
+    },
+    {
+      "seed": 3900020464,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1241,
+      "seconds": 1709.4,
+      "decisions": 197
+    },
+    {
+      "seed": 3900020465,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1035,
+      "seconds": 346.7,
+      "decisions": 191
+    },
+    {
+      "seed": 3900020466,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1255,
+      "seconds": 403.2,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020467,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1081,
+      "seconds": 340.2,
+      "decisions": 203
+    },
+    {
+      "seed": 3900020468,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1438,
+      "seconds": 571.7,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020469,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1113,
+      "seconds": 372.0,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020470,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1019,
+      "seconds": 325.4,
+      "decisions": 204
+    },
+    {
+      "seed": 3900020471,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1208,
+      "seconds": 414.0,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020472,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1049,
+      "seconds": 500.2,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020473,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1143,
+      "seconds": 362.9,
+      "decisions": 201
+    },
+    {
+      "seed": 3900020474,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1074,
+      "seconds": 496.4,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020475,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1115,
+      "seconds": 472.1,
+      "decisions": 213
+    },
+    {
+      "seed": 3900020476,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1285,
+      "seconds": 474.4,
+      "decisions": 200
+    },
+    {
+      "seed": 3900020477,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1054,
+      "seconds": 420.3,
+      "decisions": 211
+    },
+    {
+      "seed": 3900020478,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1178,
+      "seconds": 404.7,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020479,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1203,
+      "seconds": 378.4,
+      "decisions": 207
+    },
+    {
+      "seed": 3900020480,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1043,
+      "seconds": 371.2,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020481,
+      "status": "loss",
+      "floor": 23,
+      "act": 2,
+      "steps": 535,
+      "seconds": 149.3,
+      "decisions": 96
+    },
+    {
+      "seed": 3900020482,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1086,
+      "seconds": 424.3,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020483,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1096,
+      "seconds": 401.5,
+      "decisions": 217
+    },
+    {
+      "seed": 3900020484,
+      "status": "loss",
+      "floor": 7,
+      "act": 1,
+      "steps": 119,
+      "seconds": 63.8,
+      "decisions": 24
+    },
+    {
+      "seed": 3900020485,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 951,
+      "seconds": 376.6,
+      "decisions": 192
+    },
+    {
+      "seed": 3900020486,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1164,
+      "seconds": 568.1,
+      "decisions": 210
+    },
+    {
+      "seed": 3900020487,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 75,
+      "seconds": 62.2,
+      "decisions": 20
+    },
+    {
+      "seed": 3900020488,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1109,
+      "seconds": 470.3,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020490,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1398,
+      "seconds": 674.4,
+      "decisions": 214
+    },
+    {
+      "seed": 3900020491,
+      "status": "loss",
+      "floor": 24,
+      "act": 2,
+      "steps": 316,
+      "seconds": 130.5,
+      "decisions": 83
+    },
+    {
+      "seed": 3900020492,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1185,
+      "seconds": 496.5,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020493,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 1132,
+      "seconds": 359.8,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020494,
+      "status": "loss",
+      "floor": 56,
+      "act": 4,
+      "steps": 929,
+      "seconds": 303.1,
+      "decisions": 206
+    },
+    {
+      "seed": 3900020495,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1202,
+      "seconds": 398.9,
+      "decisions": 222
+    },
+    {
+      "seed": 3900020496,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1221,
+      "seconds": 506.6,
+      "decisions": 244
+    },
+    {
+      "seed": 3900020497,
+      "status": "loss",
+      "floor": 6,
+      "act": 1,
+      "steps": 88,
+      "seconds": 50.7,
+      "decisions": 25
+    },
+    {
+      "seed": 3900020498,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 252,
+      "seconds": 122.8,
+      "decisions": 51
+    },
+    {
+      "seed": 3900020499,
+      "status": "loss",
+      "floor": 16,
+      "act": 1,
+      "steps": 281,
+      "seconds": 132.6,
+      "decisions": 68
+    },
+    {
+      "seed": 3900020500,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1120,
+      "seconds": 434.5,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020501,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1107,
+      "seconds": 494.8,
+      "decisions": 199
+    },
+    {
+      "seed": 3900020502,
+      "status": "loss",
+      "floor": 42,
+      "act": 3,
+      "steps": 771,
+      "seconds": 226.9,
+      "decisions": 139
+    },
+    {
+      "seed": 3900020504,
+      "status": "win",
+      "floor": 57,
+      "act": 4,
+      "steps": 1185,
+      "seconds": 344.6,
+      "decisions": 205
+    },
+    {
+      "seed": 3900020505,
+      "status": "loss",
+      "floor": 25,
+      "act": 2,
+      "steps": 532,
+      "seconds": 139.4,
+      "decisions": 98
+    }
+  ]
+}
