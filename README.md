@@ -21,8 +21,18 @@ frozen network and only combat search is allowed to stay classical.
 | P300 teacher | fresh block | 1,000 | **49.5%** |
 | Distilled student network ([`student/`](student/README.md)) | dev block 3900040000+ | 1,000 | 50.2% (teacher 54.7% on the same seeds) |
 
-All numbers are simulator measurements on fixed seeds, not original-game win rates. The final
-1,024-unseen-seed acceptance of the distilled student network has not been run yet; its 50.2% is a development-block number.
+All numbers in the table are simulator measurements on fixed seeds, not original-game win rates. The
+final 1,024-unseen-seed acceptance of the distilled student network has not been run yet; its 50.2% is a development-block number.
+
+### Original-game validation (first run)
+
+The third distilled student network was also run in the real game (A20 Ironclad, Heart, combat search
+retained) on a fresh 500-seed block (`3900020000+`): 473 terminal games, **48.8% Heart win rate**,
+95% bootstrap interval **[44.4%, 53.5%]**. The interval covers the simulator's development-block
+estimate, so this run gives no evidence that the simulator number is inflated. It is a single
+cross-block comparison, not the locked 1,024-unseen-seed acceptance, and 34 bridge-fault games are
+kept out of the win/loss denominator. Report and per-game data:
+[`docs/live-original-distill3-student-20261001.md`](docs/live-original-distill3-student-20261001.md).
 
 Where the remaining losses come from (3,000 games, death rate among games reaching each stage):
 
@@ -48,7 +58,10 @@ and 31% below 50%. More search budget does not help. Details and rejected experi
 The simulator carries patches ([`sim_patch/`](sim_patch/README.md)) and a checker that replays scenarios
 in the real game ([`sim_patch/parity/`](sim_patch/parity/README.md)). Nine investigation rounds found and
 repaired dozens of rule differences, but consistency is still **`INCOMPLETE`**: the simulator win rates above
-do not establish the original-game win rate. A live bridge to the real game is kept on the
+do not establish the original-game win rate. A first real-game validation now exists (500 seeds,
+48.8% vs the simulator's development-block estimate) and is consistent within its confidence
+interval, but the bridge still faults on several queued-action cases, so full consistency is not
+established. A live bridge to the real game is kept on the
 `live-original-bridge` branch.
 
 ## Repository map
