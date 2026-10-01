@@ -38,9 +38,6 @@ Where the losses come from (simulator, 3,000 games; death rate among games reach
 |---:|---:|---:|---:|---:|---:|---:|---:|
 | 9.1% | 1.9% | 10.3% | 5.1% | 4.3% | 9.3% | 3.7% | 21.3% |
 
-The Heart fight is decided mainly by the deck and entry HP (90% win at ≥75% HP, 31% below 50%); more
-search budget does not help. Details and rejected experiments: [`docs/status-2026-09-30.md`](docs/status-2026-09-30.md).
-
 ## How it works
 
 1. **Decision layer** — map, card rewards, shops, campfires, events and relics are chosen by one frozen network distilled from the teacher.
