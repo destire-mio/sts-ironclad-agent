@@ -113,6 +113,8 @@ public class CombatStatePatch {
                 relicState.put("orange_pellets_mask", mask);
             }
         }
+        result.put("cards_drawn", SearchCounters.cardsDrawn);
+        result.put("energy_wasted", SearchCounters.energyWasted);
         result.put("relic_combat_state", relicState);
         List<Map<String, Object>> rows = (List<Map<String, Object>>) result.get("monsters");
         String[] fields = {"dmgThreshold", "isOpen", "thornsCount", "usedMegaDebuff", "stolenGold", "orbActiveCount", "numTurns", "currentCharge", "debuffTurnCount", "isOut", "biteDamage", "nipDmg", "stabCount", "idleCount", "asleep", "usedEntangle", "forgeTimes", "thresholdReached", "usedHaste", "usedStasis", "scytheCooldown"};

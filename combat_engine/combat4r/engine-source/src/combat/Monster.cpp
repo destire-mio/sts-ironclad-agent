@@ -296,9 +296,24 @@ void Monster::die(BattleContext &bc) {
         setMove(MonsterMoveId::AWAKENED_ONE_REBIRTH);
         bc.cardQueue.clear();
 
-    } else if (bc.monsters.areMonstersBasicallyDead() || hasStatus<MS::MINION_LEADER>()) {
+    } else if (bc.monsters.areMonstersBasicallyDead()) {
 //            bc.cleanCardQueue(); // todo should this really return like this?
         bc.outcome = Outcome::PLAYER_VICTORY;
+        return;
+    } else if (hasStatus<MS::MINION_LEADER>()) {
+        // Java appends minion EscapeActions behind the card's queued effects.
+        // A killing Headbutt must finish its picker before the fight ends.
+        bc.addToBot(Action{[](BattleContext &next) {
+            for (int i=0;i<next.monsters.monsterCount;++i) {
+                auto &minion=next.monsters.arr[i];
+                if (minion.isAlive() && minion.hasStatus<MS::MINION>()) {
+                    minion.isEscapingB=true;
+                    --next.monsters.monstersAlive;
+                }
+            }
+            next.outcome=Outcome::PLAYER_VICTORY;
+            next.checkCombat();
+        }, false});
         return;
     }
 

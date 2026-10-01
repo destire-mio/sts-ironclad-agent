@@ -6,7 +6,7 @@
 Needs: cmake, a C++17 compiler, and `pybind11` importable by this Python (pip install pybind11).
 The Python used here must be the one that will run the teacher (the modules are ABI-specific).
 
-Steps: 1) cmake-build `slaythespire` and `fightsim` into <runtime>/engine,
+Steps: 1) cmake-build `slaythespire`, `fightsim` and `live_combat_search` into <runtime>/engine,
 2) write identity.json (hashes of the fresh engine and the parent network),
 3) write manifest.json (hashes of every runtime file; the teacher refuses to start if one changes).
 """
@@ -48,10 +48,12 @@ def main():
 
     engine = sorted((runtime / 'engine').glob('slaythespire*'))
     fightsim = sorted((runtime / 'engine').glob('fightsim*'))
-    if not engine or not fightsim:
+    live_search = sorted((runtime / 'engine').glob('live_combat_search*'))
+    if not engine or not fightsim or not live_search:
         sys.exit('build finished but engine modules were not found in ' + str(runtime / 'engine'))
     identity = {
         'engine_sha256': sha(engine[0]), 'fightsim_sha256': sha(fightsim[0]),
+        'live_combat_search_sha256': sha(live_search[0]),
         'model_sha256': sha(runtime / 'model.pt'),
         'policy': 'combat4r-mechanics-feed-victory-hp-and-thief-gold', 'revision': 'thief-gold-20261001',
         'candidate_entry': 'resolve_combat4r', 'baseline_entry': 'resolve_combat4q',
@@ -62,10 +64,20 @@ def main():
     frozen = {}
     for path in sorted(runtime.rglob('*')):
         rel = path.relative_to(runtime)
-        if (path.is_file() and rel.name != 'manifest.json' and '__pycache__' not in rel.parts
+        if (path.is_file() and rel.name not in {'manifest.json', 'live-manifest.json'} and '__pycache__' not in rel.parts
                 and path.suffix in {'.py', '.json', '.pt', '.so', '.md', '.dylib', '.pyd'}):
             frozen[str(rel)] = sha(path)
     (runtime / 'manifest.json').write_text(json.dumps({'frozen_files': frozen}, indent=2))
+    live_path = runtime / 'live-manifest.json'
+    live_manifest = json.loads(live_path.read_text()) if live_path.exists() else {}
+    live_manifest['engine_files'] = {path.name: sha(path) for path in (engine[0], fightsim[0], live_search[0])}
+    live_manifest.setdefault('scope', 'current source build; BattleContext entry uses the P300 reuse defaults')
+    # A full live bundle may already bind outside-policy sources. Preserve
+    # those fields and refresh its inputs after writing the inner manifest.
+    runtime_files = set(live_manifest.get('runtime_files', frozen)) | {'identity.json', 'manifest.json'}
+    live_manifest['runtime_files'] = {name: sha(runtime / name) for name in sorted(runtime_files)
+                                      if name != 'live-manifest.json'}
+    live_path.write_text(json.dumps(live_manifest, indent=2))
     print(f'runtime ready: {runtime} ({len(frozen)} files hashed)')
 
 

@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.19)
 project(sts_ironclad_engine LANGUAGES CXX)
 
-# Builds the two Python modules the teacher needs, from the combat4r snapshot:
+# Builds the teacher and original-game Python entries from the combat4r snapshot:
 #   slaythespire  - simulator core + bindings
 #   fightsim      - fight simulation / search driver (combat4r/agent/fightsim.cpp)
-# Both are written to ${STS_RUNTIME_DIR}/engine (default: <repo>/runtime/engine).
+#   live_combat_search - original-game state/queue import + BattleContext search
+# All are written to ${STS_RUNTIME_DIR}/engine (default: <repo>/runtime/engine).
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -33,10 +34,14 @@ pybind11_add_module(fightsim ${AGENT}/fightsim.cpp)
 target_include_directories(fightsim PRIVATE ${AGENT})
 target_link_libraries(fightsim PRIVATE sts_core)
 
+pybind11_add_module(live_combat_search ../steam/native/live_combat_search.cpp)
+target_include_directories(live_combat_search PRIVATE ${AGENT})
+target_link_libraries(live_combat_search PRIVATE sts_core)
+
 if(NOT STS_RUNTIME_DIR)
   set(STS_RUNTIME_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../runtime)
 endif()
-set_target_properties(slaythespire fightsim PROPERTIES
+set_target_properties(slaythespire fightsim live_combat_search PROPERTIES
   LIBRARY_OUTPUT_DIRECTORY ${STS_RUNTIME_DIR}/engine)
 
 include(CTest)

@@ -85,7 +85,7 @@ class Comparator:
                 "cost": int(card.cost_for_turn), "base_cost": int(card.base_cost),
                 "free_to_play_once": bool(card.free_to_play_once), "special_data": int(card.special_data)}
 
-    def import_battle(self, view: dict):
+    def import_battle(self, view: dict, *, require_search_state=False):
         game = copy.deepcopy(view["game"])
         game["combat_state"]["rngs"] = {k: view["rng"][name] for k, name in RNG_NAMES.items()}
         snapshot = self.bridge.build_snapshot(game)
@@ -93,7 +93,18 @@ class Comparator:
         # audit record. Use them only at the initial import, never during replay.
         for name, (value, _) in self.health_flags(view).items():
             snapshot["player"][name] = value
-        return self.sts.BattleContext.from_snapshot(snapshot, int(snapshot["seed"]))
+        battle = self.sts.BattleContext.from_snapshot(snapshot, int(snapshot["seed"]))
+        combat = game["combat_state"]
+        counters = ("cards_drawn", "energy_wasted")
+        if require_search_state or any(key in combat for key in counters):
+            if not all(key in combat for key in counters):
+                raise CoverageGap("live search requires original cards_drawn and energy_wasted")
+            native = importlib.import_module("live_combat_search")
+            native.import_search_state(battle, {
+                **{key: combat[key] for key in counters},
+                "relics": [int(relic["id"]) for relic in snapshot["relics"]],
+            })
+        return battle
 
     @staticmethod
     def health_flags(view: dict) -> dict:
@@ -176,8 +187,13 @@ class Comparator:
             return {"differences": diff, "gaps": [], "observed_match": not diff,
                     "expected": {"outcome": "PLAYER_LOSS"}, "actual": {"outcome": battle.outcome.name}}
         if "combat_state" not in game:
-            return {"differences": [], "gaps": [{"kind": "battle_exit_requires_run_context"}],
-                    "observed_match": False, "field_audit": observation.audit()}
+            hp = observation.consume("/game/current_hp")
+            expected = "PLAYER_VICTORY" if hp > 0 else "PLAYER_LOSS"
+            diff = differences(expected, battle.outcome.name, "/outcome")
+            return {"differences": diff, "expected": {"outcome": expected},
+                    "actual": {"outcome": battle.outcome.name},
+                    "gaps": [{"kind": "battle_exit_requires_run_context"}],
+                    "observed_match": not diff, "field_audit": observation.audit()}
         combat = game["combat_state"]
         if battle.outcome != S.Outcome.UNDECIDED:
             return {"differences": differences("UNDECIDED", battle.outcome.name, "/outcome"),
@@ -240,6 +256,15 @@ class Comparator:
         for index in range(len(game["potions"])):
             observation.consume(f"/game/potions/{index}/id")
         expected["rng"] = {name: rng_bits(observation.consume("/rng/" + raw)) for name, raw in RNG_NAMES.items()}
+        counters = ("cards_drawn", "energy_wasted")
+        if all(key in combat for key in counters):
+            native = importlib.import_module("live_combat_search")
+            score_state = native.search_state(battle)
+            for key in counters:
+                expected[key] = observation.consume("/game/combat_state/" + key)
+                actual[key] = score_state[key]
+        else:
+            gaps.append({"kind": "missing_search_score_observation"})
         wanted_counters = dict(combat.get("relic_combat_state", {}))
         for key in list(wanted_counters):
             if key not in actual["relic_counters"]:

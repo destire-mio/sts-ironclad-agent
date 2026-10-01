@@ -1,5 +1,7 @@
 # Original-game runner: status and what to adapt
 
+当前 importer 修复位于 [`steam/`](../steam/) 与配套核心源码，见 [修复报告](../docs/original-importer-repairs-2026-10-01.md)。本目录保留采集时的脚本副本；采用修复时需要新建运行包，编译匹配扩展并刷新源码和运行包哈希。
+
 These are the scripts Codex used to run the teacher and the student inside the real Slay the Spire
 (`run.sh` -> `live4/cli.py`), copied as they were run, with local absolute paths replaced by placeholders.
 The README in this directory is the original runbook (Chinese).

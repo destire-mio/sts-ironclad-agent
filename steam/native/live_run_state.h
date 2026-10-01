@@ -10,6 +10,12 @@ static void syncLiveRun(sts::GameContext &g, const py::dict &d) {
  SET("screen",screenState,ScreenState)
  if(d.contains("event"))g.curEvent=static_cast<Event>(d["event"].cast<int>());
  SET("room",curRoom,Room) SET("last_room",lastRoom,Room)
+ if(d.contains("reward_return")) {
+  const auto destination=d["reward_return"].cast<ScreenState>();
+  if(g.screenState!=ScreenState::REWARDS || g.curRoom!=Room::EVENT || destination!=ScreenState::MAP_SCREEN)
+   throw std::invalid_argument("unsupported original reward continuation");
+  g.regainControlAction=[destination](GameContext &x){x.screenState=destination;x.regainControlAction=nullptr;};
+ }
  SET("boss",boss,MonsterEncounter) SET("second_boss",secondBoss,MonsterEncounter)
  SET("hp",curHp,int) SET("max_hp",maxHp,int) SET("gold",gold,int)
  SET("act",act,int) SET("floor",floorNum,int) SET("x",curMapNodeX,int) SET("y",curMapNodeY,int)

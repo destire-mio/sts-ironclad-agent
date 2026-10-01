@@ -30,6 +30,17 @@ def transport(view, policy):
         # Prize and Leave clicks, even when native is already on REWARDS.
         # Replaying those as event actions rerolls the Wheel and can consume
         # the continuation needed to leave the real relic reward screen.
+        # The portal rule has already entered the native boss battle. Java
+        # still has its descriptive Leave click before opening that battle.
+        if event=='SecretPortal' and phase in ('ACCEPT','LEAVE'):
+            return 'choose 0'
+        # Spire Heart belongs to Java's Act-3 transition, not its event choices.
+        # Native afterBattle has already decided Act 4 from the three keys.
+        if event=='Spire Heart' and view['live_run']['room']=='VictoryRoom':
+            options=[o for o in g['screen_state']['options'] if not o['disabled']]
+            if len(options)!=1:
+                raise ValueError('Spire Heart transition requires one original acknowledgement')
+            return 'choose '+str(options[0]['choice_index'])
         if event=='Wheel of Change' and (fields.get('startSpin') or phase in ('COMPLETE','LEAVE')):
             return 'choose 0'
         if (event in ('Falling','SensoryStone','Designer','Colosseum') and phase=='INTRO') or (event=='Knowing Skull' and phase=='INTRO_1'):
@@ -53,7 +64,7 @@ def transport(view, policy):
 
 def run(args):
     args.out.mkdir(parents=True,exist_ok=False)
-    files=[*ROOT.joinpath('steam').glob('live_*.py'),ROOT/'steam/steam_mcts.py',ROOT/'steam/rng_contract.py',ROOT/'steam/replay_original.py',
+    files=[*ROOT.joinpath('steam').glob('live_*.py'),ROOT/'steam/steam_mcts.py',ROOT/'steam/selection_import.py',ROOT/'steam/rng_contract.py',ROOT/'steam/replay_original.py',
            *ROOT.joinpath('steam/native').glob('*'),*ROOT.joinpath('sim_patch/parity').glob('*.py'),
            *ROOT.joinpath('sim_patch/parity/java').glob('*.java'),
            *ROOT.joinpath('steam/state_export_mod/src/steamstateexport').glob('*.java')]

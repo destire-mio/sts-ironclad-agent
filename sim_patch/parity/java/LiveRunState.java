@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.map.*;
 import com.megacrit.cardcrawl.neow.*;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rewards.*;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.shop.ShopScreen;
@@ -26,6 +28,13 @@ public final class LiveRunState {
  }
  static JsonObject card(AbstractCard c){JsonObject o=OutsideProbe.card(c);o.addProperty("uuid",c.uuid.toString());return o;}
  static JsonArray cards(Iterable<AbstractCard> cs){JsonArray a=new JsonArray();for(AbstractCard c:cs)a.add(card(c));return a;}
+ static JsonObject creature(AbstractCreature c) {
+  JsonObject out=new JsonObject();
+  if(c==AbstractDungeon.player){out.addProperty("kind","player");return out;}
+  int index=AbstractDungeon.getMonsters().monsters.indexOf(c);
+  if(index<0)throw new IllegalArgumentException("queued creature is absent from original monster slots");
+  out.addProperty("kind","monster");out.addProperty("index",index);out.addProperty("id",((AbstractMonster)c).id);return out;
+ }
  static JsonArray rewards(List<RewardItem> rs){JsonArray a=new JsonArray();for(RewardItem r:rs){JsonObject o=new JsonObject();o.addProperty("type",r.type.name());o.addProperty("done",r.isDone);if(r.relic!=null)o.addProperty("relic",r.relic.relicId);if(r.potion!=null)o.addProperty("potion",r.potion.ID);if(r.cards!=null)o.add("cards",cards(r.cards));o.addProperty("gold",r.goldAmt+r.bonusGold);a.add(o);}return a;}
  static JsonObject simpleFields(Object obj)throws Exception {
   JsonObject out=new JsonObject();if(obj==null)return out;
@@ -33,9 +42,12 @@ public final class LiveRunState {
    if((Modifier.isStatic(f.getModifiers())&&Modifier.isFinal(f.getModifiers()))||out.has(f.getName()))continue;f.setAccessible(true);Object v=f.get(obj);
    if(v==null)continue;
    if(v instanceof Number||v instanceof Boolean||v instanceof String)out.add(f.getName(),AlignmentProbe.JSON.toJsonTree(v));
+   else if(v instanceof int[])out.add(f.getName(),AlignmentProbe.JSON.toJsonTree(v));
    else if(v instanceof Enum)out.addProperty(f.getName(),v.toString());
    else if(v instanceof AbstractCard)out.add(f.getName(),card((AbstractCard)v));
    else if(v instanceof AbstractRelic)out.addProperty(f.getName(),((AbstractRelic)v).relicId);
+   else if(v instanceof AbstractPower)out.add(f.getName(),simpleFields(v));
+   else if(v instanceof AbstractCreature)out.add(f.getName(),creature((AbstractCreature)v));
    else if(v instanceof AbstractPotion){JsonObject p=new JsonObject();p.addProperty("id",((AbstractPotion)v).ID);p.addProperty("slot",((AbstractPotion)v).slot);out.add(f.getName(),p);}
    else if(v instanceof Iterable){JsonArray a=new JsonArray();boolean supported=true;for(Object x:(Iterable<?>)v){if(x instanceof String||x instanceof Number||x instanceof Boolean)a.add(AlignmentProbe.JSON.toJsonTree(x));else if(x instanceof AbstractCard)a.add(card((AbstractCard)x));else {supported=false;break;}}if(supported)out.add(f.getName(),a);}
   }return out;
@@ -50,7 +62,10 @@ public final class LiveRunState {
   out.add("deck",cards(AbstractDungeon.player.masterDeck.group));
   out.add("rewards",rewards(AbstractDungeon.combatRewardScreen.rewards));
   out.add("room_rewards",rewards(AbstractDungeon.getCurrRoom().rewards));
-  Object event=AbstractDungeon.getCurrRoom().event;out.add("event_fields",simpleFields(event));
+  Object event=AbstractDungeon.getCurrRoom().event;out.add("event_fields",simpleFields(event));if(event!=null)out.addProperty("event_class",event.getClass().getSimpleName());
+  JsonArray queue=new JsonArray();for(Object a:AbstractDungeon.actionManager.actions){JsonObject q=simpleFields(a);q.addProperty("class",a.getClass().getSimpleName());q.addProperty("class_full",a.getClass().getName());queue.add(q);}out.add("pending_actions",queue);
+  if(AbstractDungeon.actionManager.currentAction!=null){JsonObject a=simpleFields(AbstractDungeon.actionManager.currentAction);a.addProperty("class",AbstractDungeon.actionManager.currentAction.getClass().getSimpleName());out.add("current_action",a);}
+
   if(event instanceof NeowEvent){JsonArray a=new JsonArray();for(Object obj:(Iterable<?>)field(event,"rewards")){NeowReward r=(NeowReward)obj;JsonObject v=new JsonObject();v.addProperty("bonus",r.type.name());v.addProperty("drawback",r.drawback.name());a.add(v);}out.add("neow",a);}
   if(AbstractDungeon.screen==AbstractDungeon.CurrentScreen.GRID){
    out.add("grid_fields",simpleFields(AbstractDungeon.gridSelectScreen));

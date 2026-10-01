@@ -50,8 +50,9 @@ Where the losses come from (simulator, 3,000 games; death rate among games reach
 The simulator carries patches ([`sim_patch/`](sim_patch/README.md)) and a real-game parity checker
 ([`sim_patch/parity/`](sim_patch/parity/README.md)). Consistency is still **`INCOMPLETE`** — the
 bridge faults on some queued-action cases — so it is not a move-for-move reproduction, but the first
-original-game run above agrees with the simulator within its interval. The live bridge to the real
-game is kept on the `live-original-bridge` branch.
+original-game run above agrees with the simulator within its interval. Current bridge fixes are on `main`; see the
+[importer repair report and validation scope](docs/original-importer-repairs-2026-10-01.md).
+The `live-original-bridge` branch retains the historical integration baseline.
 
 ## Repository map
 

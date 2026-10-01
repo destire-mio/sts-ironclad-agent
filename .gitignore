@@ -48,6 +48,7 @@ CMakeCache.txt
 runtime/engine/
 runtime/identity.json
 runtime/manifest.json
+runtime/live-manifest.json
 
 # macOS resource-fork junk
 ._*

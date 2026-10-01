@@ -469,7 +469,7 @@ def canonical_monsters(monsters, convert=monster_snapshot):
                 if len(children) != 2:
                     raise ValueError("split slime snapshot requires both child positions")
                 return [convert(m) for _, m in children], [i for i, _ in children]
-    reptomancer = next(((index, m) for index, m in indexed if monster_key(m)=="REPTOMANCER"), None)
+    reptomancer = next(((index, m) for index, m in enumerate(monsters) if monster_key(m)=="REPTOMANCER"), None)
     if reptomancer:
         snapshots = [dead_monster("DAGGER", "DAGGER_STAB") for _ in range(5)];target_map=[-1]*5
         snapshots[2]=convert(reptomancer[1]);target_map[2]=reptomancer[0]
@@ -480,7 +480,7 @@ def canonical_monsters(monsters, convert=monster_snapshot):
             dest=[4,1,3,0][slot];snapshots[dest]=convert(m);target_map[dest]=index
         return snapshots,target_map
 
-    automaton = next(((index, m) for index, m in indexed if monster_key(m)=="BRONZE_AUTOMATON"), None)
+    automaton = next(((index, m) for index, m in enumerate(monsters) if monster_key(m)=="BRONZE_AUTOMATON"), None)
     if automaton:
         snapshots = [dead_monster("BRONZE_ORB", "BRONZE_ORB_BEAM") for _ in range(3)];target_map=[-1]*3
         snapshots[1]=convert(automaton[1]);target_map[1]=automaton[0]
@@ -490,7 +490,7 @@ def canonical_monsters(monsters, convert=monster_snapshot):
             snapshots[dest]=convert(m);target_map[dest]=index
         return snapshots,target_map
 
-    collector = next(((index, m) for index, m in indexed if monster_key(m)=="THE_COLLECTOR"), None)
+    collector = next(((index, m) for index, m in enumerate(monsters) if monster_key(m)=="THE_COLLECTOR"), None)
     if collector:
         snapshots=[dead_monster("TORCH_HEAD","TORCH_HEAD_TACKLE") for _ in range(3)];target_map=[-1]*3
         snapshots[2]=convert(collector[1]);target_map[2]=collector[0]
@@ -506,7 +506,7 @@ def canonical_monsters(monsters, convert=monster_snapshot):
             if not m.get("is_gone"):snapshots[dest]=convert(m);target_map[dest]=index
         return snapshots,target_map
 
-    leader = next(((index, m) for index, m in indexed if monster_key(m)=="GREMLIN_LEADER"), None)
+    leader = next(((index, m) for index, m in enumerate(monsters) if monster_key(m)=="GREMLIN_LEADER"), None)
     if leader:
         snapshots=[dead_monster("MAD_GREMLIN","MAD_GREMLIN_SCRATCH") for _ in range(4)];target_map=[-1]*4
         snapshots[3]=convert(leader[1]);target_map[3]=leader[0]
@@ -529,6 +529,9 @@ def canonical_monsters(monsters, convert=monster_snapshot):
 
 
 def encounter_id(monsters):
+    # Static shape groups retain dead slots; the search score uses this encounter.
+    if len(monsters) in (3, 4) and all(monster_key(m) in {"SPIKER", "EXPLODER", "REPULSOR"} for m in monsters):
+        return int(sts.MonsterEncounter.THREE_SHAPES if len(monsters) == 3 else sts.MonsterEncounter.FOUR_SHAPES)
     if any(monster_key(m) in {"SPIRE_SHIELD", "SPIRE_SPEAR"} for m in monsters):
         return int(sts.MonsterEncounter.SHIELD_AND_SPEAR)
     for monster in monsters:

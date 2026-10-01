@@ -1,5 +1,7 @@
 # 原版接入运行入口
 
+当前导入器修复的源码、三扩展构建和回归入口见 [2026-10-01 修复报告](original-importer-repairs-2026-10-01.md)。下面的 arena 复制构建命令属于历史版本；当前修复使用仓库 CMake 编译配套扩展。
+
 工作目录：`/Users/destire/Documents/ChatGPT/sljt/sts-rl-agent-live-original`。
 
 ## 2026-09-28：基础检查与三局通路验证

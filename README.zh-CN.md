@@ -48,7 +48,7 @@
 
 模拟器带有补丁（[`sim_patch/`](sim_patch/README.md)）和一个在真实游戏里重放的原版一致性检查器
 （[`sim_patch/parity/`](sim_patch/parity/README.md)）。一致性仍是 **`INCOMPLETE`**——桥接在一批排队动作上还会故障，
-因此不是逐动作复现；但上面首次原版运行的胜率与模拟器在区间内一致。与真实游戏的在线对接保存在 `live-original-bridge` 分支。
+因此不是逐动作复现；但上面首次原版运行的胜率与模拟器在区间内一致。当前桥接修复源码位于 `main`，见 [原版导入器修复与验证范围](docs/original-importer-repairs-2026-10-01.md)。`live-original-bridge` 分支保留历史接入基线。
 
 ## 目录
 

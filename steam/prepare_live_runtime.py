@@ -39,10 +39,14 @@ def prepare(arena: Path, out: Path, p300: Path | None = None) -> dict:
     for file in native.iterdir():
         shutil.copy2(file, out / "build-source" / file.name)
         source_files.append(file)
+    reuse_header = ROOT / "combat_engine/combat4r/agent/combat_search_reuse.h"
+    shutil.copy2(reuse_header, out / "build-source/combat_search_reuse.h")
+    source_files.append(reuse_header)
     binary = out / "engine" / ("live_combat_search" + suffix)
     command = ["/usr/bin/c++", "-std=c++17", "-O3", "-UNDEBUG", "-mcpu=apple-m4",
                "-arch", "arm64", "-fPIC", "-fvisibility=hidden", "-bundle",
                "-undefined", "dynamic_lookup", "-flto=full",
+               "-I" + str(out / "build-source"),
                "-I" + str(out / "build-source/include"), "-I" + pybind11.get_include(),
                "-I" + sysconfig.get_paths()["include"],
                str(out / "build-source/live_combat_search.cpp"),

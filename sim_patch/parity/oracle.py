@@ -12,6 +12,7 @@ from pathlib import Path
 import shutil
 import signal
 import subprocess
+import time
 import zipfile
 
 from .core import sha256, write_json
@@ -48,6 +49,19 @@ def configure_reference(instance: Path, profile: str) -> dict:
             temporary.unlink(missing_ok=True)
         change.update(removed_classes=sorted(required), after_sha256=sha256(jar))
     return change
+
+
+def wait_for_start_ready(observe, timeout_seconds):
+    """A mailbox response can precede the main menu; wait for its Start command."""
+    deadline = time.monotonic() + timeout_seconds
+    while True:
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError("original main menu did not expose start")
+        view = observe(timeout_seconds=remaining)
+        if 'start' in view.get('available_commands', []):
+            return view
+        time.sleep(min(0.05, max(0, deadline - time.monotonic())))
 
 
 class Original:
@@ -232,7 +246,7 @@ class Original:
                 signal.signal(sig, self._interrupted)
             write_json(directory / "launch.json", Q.launch(instance))
             self.probe = Q.Probe(instance)
-            self.call("observe", timeout_seconds=self.startup_timeout_seconds)
+            wait_for_start_ready(lambda **kw: self.call("observe", **kw), self.startup_timeout_seconds)
             return self
         except BaseException:
             self.close()

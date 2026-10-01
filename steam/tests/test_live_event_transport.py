@@ -92,15 +92,19 @@ class WheelNativeReplayTests(unittest.TestCase):
         p.shop_purchase = None
         return p
 
-    def test_recorded_old_classification_reproduces_the_fault(self):
+    def test_replaying_ui_as_rules_changes_original_resources(self):
         p = self.policy()
+        resource_differences = []
         for row in self.rows[:-1]:
             if row['kind'] == 'outside':
                 p.sync(row['before'])
                 p.sts.GameAction(row['action_bits']).execute(p.gc)
-        p.sync(self.rows[-1]['before'])
-        with self.assertRaisesRegex(RuntimeError, 'missing GameContext continuation'):
-            p.sts.GameAction(self.rows[-1]['action_bits']).execute(p.gc)
+                if row['index'] in (477, 478):
+                    resource_differences.extend(d for d in p.compare(row['after'], row['before'])['differences']
+                        if d['path'].startswith(('/run/deck', '/run/rng/miscRng', '/run/gold', '/run/hp')))
+        # Reward continuation import can repair the later callback; it must
+        # not hide the extra random result produced by these earlier UI clicks.
+        self.assertTrue(resource_differences)
 
     def test_captured_reward_chain_keeps_resources_rng_and_continuation(self):
         p = self.policy()

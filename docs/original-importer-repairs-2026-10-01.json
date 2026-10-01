@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-01",
+  "repository": "https://github.com/destire-mio/sts-ironclad-agent",
+  "code_base_commit": "e5e14a2c9cbd5c3757eadb237377c715ab11e560",
+  "publication_upstream_commit": "94fda7b09678ded58551f366cb96f038f6055666",
+  "scope": "Finite importer repair, captured-state regression and controlled original scenes; no natural full-run acceptance",
+  "classified_fault_counts": {
+    "ApplyPowerAction": 10,
+    "GainEnergyAction": 4,
+    "multi_card_confirmation": 6,
+    "GameContext_continuation": 6,
+    "monster_capacity": 2,
+    "battle_start_queue_only": 1,
+    "IndexError": 1,
+    "VictoryRoom_KeyError": 1,
+    "startup_command_timeout": 1
+  },
+  "additional_review_faults": {
+    "RedSkull_anonymous_action": 2
+  },
+  "archived_fault_count": 34,
+  "fixture": {
+    "path": "steam/tests/fixtures/importer-repairs-original.json.gz",
+    "sha256": "3d2bfc6575fdb7a9cd5e196915fb1a68b7215f5226544029a862262297b51b4a",
+    "sources_path": "steam/tests/fixtures/importer-repairs-original-sources.json",
+    "sources_sha256": "53b648fcfc7a7c60bfeb361a4ac228c367b011eeb231e365d3055e64e69a36ba",
+    "controlled_cases": 30
+  },
+  "source_files_sha256": {
+    "combat_engine/CMakeLists.txt": "f7ff7f10c82cd927e297030b73b40c5dc69ad181b702d9b06930a4b17830fc80",
+    "combat_engine/combat4r/agent/combat_search_reuse.h": "bdcc3f8c95a97f5f24aab96fa34709d5efa8b7de37d815d93f144fee891c278a",
+    "combat_engine/combat4r/engine-source/src/combat/Actions.cpp": "b448ee91b4b2261fda135a1cd8f839fcff069a2fbc6202683c292e34d601e643",
+    "combat_engine/combat4r/engine-source/src/combat/Monster.cpp": "46cf9dc4a44e1e92e8f8c2fd2c292f3767cd7da556a48ba8d285591c6a0d2a76",
+    "combat_engine/combat4r/engine-source/src/game/Map.cpp": "76cba25eba2dbfab3bb67399080dae738d7b8a7334599d727eb091b9b9e3b866",
+    "scripts/assemble_runtime.py": "6194e34da4ad0b989d07a2192a7fe41f85635a0ed568f431e160530e75e79258",
+    "sim_patch/parity/adapter.py": "d8bc6c36e58ca0d348b3e77afa8263c840bd359da7d111609b02ada1004caa4a",
+    "sim_patch/parity/java/LiveRunState.java": "855981e314d9a847f970c53675d994d9391ff9fbd0e6d168e691212ef7017b0a",
+    "sim_patch/parity/oracle.py": "6c1c103235d43277eb69c15e666c4e162755768329ec2775dccb22b8dc4df7f8",
+    "steam/live_policy.py": "424598a54e3b60059b58019731bbfc12590b642da8485072eb06944da5a18ba8",
+    "steam/live_run.py": "cf9977889b8ba2c9bdd515669f05de3d5193fc9829493601dea525976479f447",
+    "steam/live_search.py": "d40099602a54c06c1d0f7c1c0d0ac3b624943e91ba6e1e5f311b11e430c2c503",
+    "steam/native/live_combat_search.cpp": "a36263804702c7aedf56cd85bae163c874d51c1f585262c535f0541f5c7fdabf",
+    "steam/native/live_run_state.h": "c5461c37a48d3ed2652a122b8debfaa4899aef37094dec3d5631f6f7b65d2b6a",
+    "steam/prepare_live_runtime.py": "4e35e0ac7109077a8add6071bdaea71c42379e9bca00c18fe8c592de848d1859",
+    "steam/selection_import.py": "e4ac4c6e9b7b6a16c05e26a905c148e5c7ce97f107e7f5657e25121d522db30f",
+    "steam/state_export_mod/src/steamstateexport/CombatStatePatch.java": "fd2e5caa963ad160fe18b6d58bbbcec0e8510741e9c0fac48a2a81ee1c56d618",
+    "steam/state_export_mod/src/steamstateexport/SearchCounters.java": "d58c2337ef71a9bf498499d82a26a1bc267a57bb520d5d9cbebc42d9530073ab",
+    "steam/steam_mcts.py": "08c72b8a2c554b13c737823544e1075807a3b7975d27006b0f401ccad8e7e81b",
+    "steam/tests/test_importer_repairs.py": "b0bdd74bec3da2dbc9c6a685d7c9416b46334229f72fc1ded9abb80854402897",
+    "steam/tests/test_live_event_transport.py": "89958ef3b70356ac695df05d78ad28170590ea50cc2dea7bfe7a12cec78d1562"
+  },
+  "validation": {
+    "environment": {
+      "python": "3.12.13",
+      "system": "Darwin",
+      "machine": "arm64",
+      "manifest_hashes": "matched",
+      "three_extensions": "matched",
+      "native_only_bundle_diagnostic": "passed",
+      "fixture_hash": "matched",
+      "compiled_original_copied_sources": "matched",
+      "repository_java_sources_matched": 14,
+      "documentation_links": "matched"
+    },
+    "build": {
+      "command": "python scripts/assemble_runtime.py --jobs 3",
+      "status": "passed",
+      "loaded_targets": [
+        "slaythespire",
+        "fightsim",
+        "live_combat_search"
+      ],
+      "engine_sha256": {
+        "slaythespire.cpython-312-darwin.so": "7360d79eb37764d34c834bfb674360796b77a7928d3be67330149ff5e646c40e",
+        "fightsim.cpython-312-darwin.so": "73266b41a98849bc6ea4afa04e0cbebf7df79deeaedaf0c57562290d60f9d31b",
+        "live_combat_search.cpython-312-darwin.so": "6f5dfe44dc51d54e2a247b15cb833dfb9f24aa6133dcb8f681903de9cd97c75e"
+      },
+      "binary_publication": false
+    },
+    "python_regressions": {
+      "command": "LIVE_TEST_ENGINE=\"$PWD/runtime/engine\" STS_LIGHTSPEED_BUILD=\"$PWD/runtime/engine\" python -m pytest -q tests steam/tests -rs",
+      "status": "passed",
+      "passed": 211,
+      "skipped": 7,
+      "subtests_passed": 58,
+      "scope": [
+        "tests/",
+        "steam/tests/"
+      ],
+      "skip_reasons": [
+        "SKIPPED [1] tests/test_fullrun_ppo.py:13: needs .runtime/runtime.json from scripts/bootstrap_fullrun.py",
+        "SKIPPED [1] tests/test_heart_branch_pilot.py:5: needs recorded history not shipped with the repository: runs/heart-training-set-evaluation-20260915-01/config.json",
+        "SKIPPED [1] tests/test_heart_branch_training.py:5: needs recorded history not shipped with the repository: runs/heart-branch-pilot-20260916-01/roots.json.gz",
+        "SKIPPED [1] tests/test_heart_contextual_relic.py:5: needs recorded history not shipped with the repository: runtime/episodes/1706559026.json.gz",
+        "SKIPPED [1] tests/test_heart_early_card_scope_native.py:65: requires the frozen local E121 runtime and audited source",
+        "SKIPPED [1] tests/test_heart_early_card_scope_native.py:42: requires the frozen local E121 runtime and audited source",
+        "SKIPPED [1] tests/test_heart_early_card_scope_native.py:87: requires the frozen local E121 runtime and audited source"
+      ],
+      "required_local_trajectory_sha256": {
+        "runs/p211-online-actor-critic-20260924-01/episodes/fit/monte_carlo/round-0/0-0/first-attempt.json.gz": "3fc259a5ee44eea66bbf1721227fa6f30782d9a14ea1391e080b1dc72111ba99",
+        "runs/p211-online-actor-critic-20260924-01/episodes/fit/monte_carlo/round-0/100-1/first-attempt.json.gz": "6ad01324f7806d64e35499333340dd32048d94f4293510d4266d1fd64e39b707"
+      }
+    },
+    "bridge_regressions": {
+      "command": "LIVE_TEST_ENGINE=\"$PWD/runtime/engine\" python -m pytest -q steam/tests",
+      "status": "passed",
+      "passed": 95,
+      "subtests_passed": 31
+    },
+    "ctest": {
+      "command": "ctest --test-dir build/engine --output-on-failure",
+      "status": "passed",
+      "passed": 2,
+      "tests": [
+        "thief_value",
+        "victory_hp"
+      ]
+    },
+    "controlled_original": {
+      "scope": "Controlled original scenes against current repository sources; no natural full runs",
+      "cases": [
+        {
+          "name": "startup_ready_seed_3900020070",
+          "status": "passed"
+        },
+        {
+          "name": "red_skull_healthy",
+          "status": "passed"
+        },
+        {
+          "name": "red_skull_bloodied",
+          "status": "passed"
+        },
+        {
+          "name": "red_skull_bloodied_vajra",
+          "status": "passed"
+        },
+        {
+          "name": "red_skull_before_toolbox",
+          "status": "passed"
+        },
+        {
+          "name": "secret_portal_ack",
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "cleanup_remaining": []
+    },
+    "controlled_original_identity": {
+      "original_game_sha256": "dd60a613a6178e08f1a57bcb8d5747e33c21fd49e743b88d76e9d74042803b2a",
+      "compiled_probe_sha256": "b51ba950e9834e6c743dc745cb583f2087c3061afdb18b7d591ce39154ee8c6b",
+      "runtime_scope": "isolated modded Java logic runtime; not a vanilla-game equivalence proof; fixed logical frames",
+      "reference_profile": {
+        "profile": "installed",
+        "removed_classes": []
+      },
+      "runtime_mods": {
+        "mods/AcceptanceProbe.jar": "9ae163dfe5b8bdb2b7d910955d6b8ebcf88e9fe4bab3a2adc0e7fadeece07a4e",
+        "mods/AlignmentProbe.jar": "b51ba950e9834e6c743dc745cb583f2087c3061afdb18b7d591ce39154ee8c6b",
+        "mods/BaseMod.jar": "c3353c10e64c621b723e9fd7d0502dfa796f828b101b68513594a5f5ef83fbaf",
+        "mods/CommunicationMod.jar": "12b99249eccfd5245ddb0b6b7575e1a1dfba0ce0ed6fad5bd5bbd4a303897ef5",
+        "mods/SpireLabLogic.jar": "01daae5ebe6d8a159e4bb70e198e464134672d3766b652b1bad3ac24ae1e92d0",
+        "mods/SpireLabObserver.jar": "b15aee50e4fd0cabf6aa2605a2e72d31523f5b343502618517109e81f58d9517"
+      },
+      "copied_sources": {
+        "EventEntryProbe.java": "0776525c8697e7b03261b5092d154d206ca1662e3f085ede2e35872f739dd1f3",
+        "ColosseumProbe.java": "701eeb6694e8f5e30d59e89a9d67e0d22312cb9148a33047f059106b33e293b6",
+        "SaveProbe.java": "8180e8d897eaa0580582a94cd0bae7de1a3a3f20f55791a5635fbd27d72336d1",
+        "LiveSaveState.java": "d337a11f1488277d9e396c6aab152a2792342b30228ff5b1609b9a33385bd3cd",
+        "ShopContinuationProbe.java": "6336dbf2bcce14af1ab8225975feff98e73eda751ecddc7875bc74a8d34db68f",
+        "RuleProbe.java": "15ca4409cfa4bccab7b7c6ae9394d61c9f153427b43b5fc6b261246173307a0d",
+        "ParityAudit.java": "59632b7d073f063c7f27ce74a77c21a3e589d3624ae24d2c6ca323219d39dd57",
+        "AlignmentProbe.java": "84215c97cf8f1e5c183e4f19774f4b650db969317520c2a433d560c8c6bd47e0",
+        "TreasureProbe.java": "5ab7e109a3f68681e661205bec55796fda255506f518f80da698d7865a60363b",
+        "RelicAcquireProbe.java": "fc2d9deb781fb02cf193524d87bad68104d6585ebc9ff5b494c13755d9e2993e",
+        "OutsideProbe.java": "9b0a0d68fc6fc4299c4aa1dbef3fd3b698f0e0dcdd42d4a8a17916fb37effaa5",
+        "EventRewardsProbe.java": "f8fd3d82d121ab3b867094cd49a4d501db263a38b622b65a68d88d38644e1e44",
+        "FullRngProbe.java": "e75c03e8b1e157ec7edd205c7aea8dad8cec7d18168733f3c6c9670dc9979fd3",
+        "LiveRunState.java": "855981e314d9a847f970c53675d994d9391ff9fbd0e6d168e691212ef7017b0a",
+        "steamstateexport/CombatStatePatch.java": "fd2e5caa963ad160fe18b6d58bbbcec0e8510741e9c0fac48a2a81ee1c56d618",
+        "steamstateexport/FullRngState.java": "14a440f827a9561856289ed8e9a515e4fd33216282ff00d27eec85dfff1df20d",
+        "steamstateexport/GameRngPatch.java": "027c50f53949df616f4e5eeb7f6b0532a0b7801af782b7a2b60a3dfbb604b09d",
+        "steamstateexport/SearchCounters.java": "d58c2337ef71a9bf498499d82a26a1bc267a57bb520d5d9cbebc42d9530073ab"
+      }
+    }
+  },
+  "limits": [
+    "Ten archived ApplyPowerAction observations lack power and creature identities and remain explicit rejections; fresh captures require the new exporter.",
+    "Mid-battle queues do not have general import support. The saved Headbutt cases retain their intended continuation without re-importing that queue.",
+    "Comparator observation gaps remain reported, including selection continuation, unobserved original fields and shared RNG coverage.",
+    "Source-built native runtime needs the existing frozen P300 bundle for complete outside-policy execution.",
+    "The seven skipped tests require unshipped experiment runtimes or recorded history; two local P211 trajectories used by the batch test are not published.",
+    "The six new original checks use an isolated modded Java logical runtime; this is not vanilla-game equivalence or natural whole-run acceptance.",
+    "No model weights were changed, no old evaluation records were rewritten and no live3/live5/live6 running process was switched to this source build.",
+    "No original-game win-rate gain or unused-seed adoption result is established by this repair."
+  ]
+}

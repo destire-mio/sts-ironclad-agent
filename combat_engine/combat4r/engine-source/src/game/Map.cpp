@@ -131,7 +131,7 @@ void MapNode::addParent(int parent) {
     parents[parentCount++] = parent;
 }
 
-inline void MapNode::addEdge(int edge) {
+void MapNode::addEdge(int edge) {
     int cur = 0;
     while (true) {
         if (cur == edgeCount) {

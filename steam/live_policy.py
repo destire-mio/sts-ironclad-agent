@@ -30,6 +30,8 @@ class LivePolicy:
         self.search, self.sts, self.native = search, search.sts, search.native
         runtime = search.runtime
         manifest = json.loads((runtime / 'live-manifest.json').read_text())
+        if 'p300_inputs' not in manifest:
+            raise ValueError('outside policy requires the frozen P300 bundle; this runtime contains the native bridge only')
         for relative, expected in manifest['runtime_files'].items():
             if sha256(runtime / relative) != expected:
                 raise ValueError('frozen parent input changed: ' + relative)
@@ -77,11 +79,9 @@ class LivePolicy:
         return self.sts.potion_id_from_name('EMPTY_POTION_SLOT' if name == 'Potion Slot' else name)
 
     def relic_counter(self, raw):
-        # Java's default UI sentinel is -1; the frozen policy was trained on
-        # native zero for relics without a counter. Preserve stateful sentinels.
-        name=self.relic(raw['id']).name
-        if raw['counter']==-1 and name not in {'ANCIENT_TEA_SET','LIZARD_TAIL','MAW_BANK'}:
-            return 0
+        # The frozen core obtains stateless relics with data=-1 and restores
+        # saved counters verbatim. Keep this sentinel and the used/remaining
+        # values; substituting zero changes the model's observed input.
         return raw['counter']
 
     def encounter(self, name):
@@ -110,14 +110,14 @@ class LivePolicy:
     def sync(self, view):
         g, r, S = view['game'], view['live_run'], self.sts
         self.gc.outcome=S.GameOutcome.UNDECIDED
-        screen = g['screen_type']
+        screen = 'NONE' if g.get('room_phase')=='COMBAT' else g['screen_type']
         screens = {'EVENT':'EVENT_SCREEN', 'MAP':'MAP_SCREEN', 'REST':'REST_ROOM', 'SHOP_SCREEN':'SHOP_ROOM',
                    'COMBAT_REWARD':'REWARDS', 'CARD_REWARD':'REWARDS', 'BOSS_REWARD':'BOSS_RELIC_REWARDS',
                    'CHEST':'TREASURE_ROOM', 'GRID':'CARD_SELECT', 'NONE':'BATTLE'}
         if screen not in screens: raise ValueError('unhandled original policy screen: ' + screen)
         rooms = {'NeowRoom':'INVALID', 'MonsterRoom':'MONSTER', 'MonsterRoomElite':'ELITE',
                  'MonsterRoomBoss':'BOSS', 'RestRoom':'REST', 'ShopRoom':'SHOP', 'EventRoom':'EVENT',
-                 'TreasureRoom':'TREASURE', 'TreasureRoomBoss':'BOSS_TREASURE', 'TrueVictoryRoom':'BOSS'}
+                 'TreasureRoom':'TREASURE', 'TreasureRoomBoss':'BOSS_TREASURE', 'TrueVictoryRoom':'BOSS', 'VictoryRoom':'BOSS'}
         rng = {k:rng_bits(v) for k,v in view['rng'].items() if k != 'mapRng'}
         for name, target in [('NeowEvent.rng','neowRng'), ('MathUtils.random','mathUtilRng')]:
             raw = g['full_rng_state']['streams'][name]
@@ -193,6 +193,12 @@ class LivePolicy:
             if screen == 'CARD_REWARD' and not rows:
                 rows = [dict(type='CARD',cards=g['screen_state']['cards'])]
             changes['rewards']=self.rewards(rows)
+            # The original can roll an event reward different from native's
+            # prediction. Import its return target as well as its contents.
+            event = r.get('event_fields', {})
+            if r['room']=='EventRoom' and (event.get('screen')=='LEAVE' or
+                    (event.get('screen')=='FAIL' and 'encounterChance' in event and 'numRewards' in event)):
+                changes['reward_return']=S.ScreenState.MAP_SCREEN
         if screen == 'BOSS_REWARD':
             changes['boss_relics']=[self.relic(v['id']) for v in g['screen_state']['relics']]
         if screen == 'GRID':
@@ -287,6 +293,8 @@ class LivePolicy:
                 i={0:1,1:0,2:2 if view['live_run']['event_fields']['hasVial'] else 1}[i]
             # Native options keep their physical button index; CommunicationMod
             # numbers only enabled buttons. Disabled entries remain in options.
+            if not 0 <= i < len(s['options']):
+                raise ValueError('native event action has no original button: ' + str(i))
             option=s['options'][i]
             if option['disabled']:raise ValueError('native event action is disabled in the original')
             return ['choose '+str(option['choice_index'])]

@@ -30,6 +30,7 @@ class LiveSearch:
         self.mapper = None
         self.pending_multi = None
         self.plans = 0
+        self.planned_roots = set()
 
     def replan(self, view, recorded_plan=None):
         # Discard all state from the stale plan before importing the authority.
@@ -37,16 +38,25 @@ class LiveSearch:
         self.battle = None
         self.mapper = None
         self.pending_multi = None
-        if view["game"].get("screen_type") != "NONE":
-            raise ValueError("pending Java selection/queue cannot be reconstructed; preserve it as an integration fault")
         errors = validate(view, require_oracle=True)
         if errors:
             raise ValueError("original RNG export incomplete: " + repr(errors))
-        battle = self.comparator.import_battle(view)
+        battle = self.comparator.import_battle(view, require_search_state=True)
+        selection = None
+        if view["game"]["screen_type"] != "NONE":
+            from steam.selection_import import start_selection
+            selection = start_selection(self.comparator, view)
+            self.native.import_start_selection(battle, selection)
         comparison = self.comparator.compare_battle(view, battle)
         if comparison["differences"]:
             raise ValueError("import does not reproduce original: " + repr(comparison["differences"]))
         before = self.comparator.clone_fingerprint(battle)
+        from sim_patch.parity.core import digest
+        root_key = digest(dict(fingerprint=before,search_state=dict(self.native.search_state(battle)),
+                              selection=json.loads(json.dumps(selection,default=int)), floor=view['game']['floor']))
+        if root_key in self.planned_roots:
+            raise ValueError('same actual state was already planned; refusing repeat search')
+        self.planned_roots.add(root_key)
         started = time.monotonic()
         if recorded_plan is None:
             plan = dict(self.native.plan_reusing(battle, self.simulations, self.boss_multiplier))
@@ -61,7 +71,8 @@ class LiveSearch:
         self.mapper = ActionMapper(self.comparator, battle, view)
         self.actions.extend(plan["actions"])
         self.plans += 1
-        return {**plan, "seconds": time.monotonic() - started, "import_comparison": comparison}
+        return {**plan, "root_key": root_key, "search_state": dict(self.native.search_state(battle)), "seconds": time.monotonic() - started, "import_comparison": comparison,
+                "start_selection": (json.loads(json.dumps(selection,default=int)) if selection else None), "base_simulations": self.simulations}
 
     def next_action(self, view):
         if not self.actions or self.battle is None:
