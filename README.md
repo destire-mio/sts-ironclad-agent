@@ -73,6 +73,7 @@ The `live-original-bridge` branch retains the historical integration baseline.
 | `experiments-archive/` | reports and results from P200-P212 and cloud runs c5-c52 |
 | `scripts/` | `setup.sh`, `run_teacher.sh`, `assemble_runtime.py` |
 | `tests/` | regression tests (need the built `slaythespire` module and PyTorch) |
+| `video/` | animation source for the project introduction video (12 segments, 1080p; see [`video/README.md`](video/README.md)) |
 
 ## Related repositories
 

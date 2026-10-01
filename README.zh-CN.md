@@ -69,6 +69,7 @@
 | `experiments-archive/` | P200-P212 与云端 c5-c52 的报告和结果 |
 | `scripts/` | `setup.sh`、`run_teacher.sh`、`assemble_runtime.py` |
 | `tests/` | 回归测试（需要编译好的 `slaythespire` 模块和 PyTorch） |
+| `video/` | 项目介绍视频的动画源码（12 段，1080p；见 [`video/README.md`](video/README.md)） |
 
 ## 相关仓库
 
