@@ -69,10 +69,16 @@ The `live-original-bridge` branch retains the historical integration baseline.
 | `data/` | stage value tables the teacher reads |
 | `sim_patch/` | simulator patches, native alignment tests, original-game parity checker |
 | `steam/` | real-game state export and live search |
-| `docs/` | [status](docs/status-2026-09-30.md), [history](docs/history.md), experiment records |
+| `docs/` | [documentation index](docs/README.md): status, history, original-game reports, experiment records |
 | `experiments-archive/` | reports and results from P200-P212 and cloud runs c5-c52 |
 | `scripts/` | `setup.sh`, `run_teacher.sh`, `assemble_runtime.py` |
 | `tests/` | regression tests (need the built `slaythespire` module and PyTorch) |
+
+## Related repositories
+
+- [sts-ironclad-simulator](https://github.com/destire-mio/sts-ironclad-simulator) — simulator-only package: `sts_lightspeed` engine, patches, runtime, teacher/student drivers.
+- [sts-search-advisor](https://github.com/destire-mio/sts-search-advisor) — experimental in-combat turn advisor (Java mod + native search server).
+- The historical original-game integration baseline lives on the `live-original-bridge` branch.
 
 ## Quick start
 

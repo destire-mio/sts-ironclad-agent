@@ -65,10 +65,16 @@
 | `data/` | 老师读取的阶段价值表 |
 | `sim_patch/` | 模拟器补丁、原生对齐测试、原版一致性检查器 |
 | `steam/` | 真实游戏状态导出与在线搜索 |
-| `docs/` | [当前状态](docs/status-2026-09-30.md)、[历史记录](docs/history.zh-CN.md)、实验记录 |
+| `docs/` | [文档索引](docs/README.md)：状态、历史、原版报告、实验记录 |
 | `experiments-archive/` | P200-P212 与云端 c5-c52 的报告和结果 |
 | `scripts/` | `setup.sh`、`run_teacher.sh`、`assemble_runtime.py` |
 | `tests/` | 回归测试（需要编译好的 `slaythespire` 模块和 PyTorch） |
+
+## 相关仓库
+
+- [sts-ironclad-simulator](https://github.com/destire-mio/sts-ironclad-simulator) —— 纯模拟器包：`sts_lightspeed` 引擎、补丁、运行包、老师/学生驱动。
+- [sts-search-advisor](https://github.com/destire-mio/sts-search-advisor) —— 实验性的战斗回合顾问（Java mod + 原生搜索服务）。
+- 历史原版接入基线保留在 `live-original-bridge` 分支。
 
 ## 快速开始
 
