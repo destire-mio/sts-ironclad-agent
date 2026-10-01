@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STS AI 动画预览</title>
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-sc/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-sc/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-sc/700.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-sc/900.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-serif-sc/700.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-serif-sc/900.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/600.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/700.css">
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; background: #05060b; color: #ddd8ea; font-family: "Noto Sans SC", sans-serif; }
+  body.render { overflow: hidden; }
+  body.render #ui { display: none; }
+  body.render canvas { position: fixed; left: 0; top: 0; width: 1920px; height: 1080px; }
+  #stage { display: flex; justify-content: center; padding: 16px 16px 8px; }
+  #stage canvas { width: min(100%, calc((100vh - 170px) * 16 / 9)); aspect-ratio: 16 / 9; height: auto; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,.6); background: #000; }
+  #ui { max-width: 1400px; margin: 0 auto; padding: 0 16px 24px; }
+  #scenes { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+  #scenes button { background: #15142a; color: #cfc9e6; border: 1px solid #2c2a4a; border-radius: 999px; padding: 6px 12px; font: 500 13px "Noto Sans SC", sans-serif; cursor: pointer; }
+  #scenes button.on { background: #f4c561; color: #1a1408; border-color: #f4c561; }
+  #bar { display: flex; align-items: center; gap: 12px; }
+  #bar button { background: #22203d; color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; font: 600 13px "JetBrains Mono", monospace; cursor: pointer; }
+  #scrub { flex: 1; accent-color: #f4c561; }
+  #time { font: 500 13px "JetBrains Mono", monospace; min-width: 120px; text-align: right; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="c" width="1920" height="1080"></canvas></div>
+<div id="ui">
+  <div id="scenes"></div>
+  <div id="bar">
+    <button id="play">播放</button>
+    <button id="back">-1f</button>
+    <button id="fwd">+1f</button>
+    <input id="scrub" type="range" min="0" max="1000" value="0">
+    <span id="time">0.00 / 0.00</span>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
