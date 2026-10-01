@@ -651,13 +651,46 @@ double search::BattleScumSearcher2::evaluateEndState4q(const BattleContext &bc) 
     return evaluatePotionEndState(bc, survived ? bc.potionCount * 4 : 0);
 }
 
+static double escapedThiefPenaltyHp(const BattleContext &bc, int victoryHp) {
+    if (bc.player.hasRelic<RelicId::ECTOPLASM>() || victoryHp <= 0) return 0;
+
+    bool hasThief = false;
+    bool allEscaped = true;
+    int lostGold = 0;
+    for (int i = 0; i < bc.monsters.monsterCount; ++i) {
+        const auto &monster = bc.monsters.arr[i];
+        if (monster.id == MonsterId::INVALID) continue;
+        allEscaped &= monster.isEscaping();
+        if (monster.id != MonsterId::LOOTER && monster.id != MonsterId::MUGGER) continue;
+        hasThief = true;
+        // An escape intent alone is not an escape: killing it first returns its gold.
+        if (monster.isEscaping() && monster.curHp > 0) lostGold += std::max(0, monster.miscInfo);
+    }
+    if (!hasThief) return 0;
+
+    // Normal gold is rolled from [10, 20] unless every monster escaped. Use its
+    // base mean, not a future reward roll or modifiers absent from this state.
+    // Card rewards survive escape; potion odds depend on run state absent from
+    // BattleContext and are not estimated here.
+    if (allEscaped) lostGold += 15;
+    if (lostGold == 0) return 0;
+
+    // Ten gold starts at one HP of value. Diminishing value keeps the entire
+    // penalty below 10% of post-victory HP, so low-health survival dominates.
+    // Unlike a hard cap, this remains strictly increasing in lost gold: partial
+    // recovery must still improve otherwise equal plans, even at low HP.
+    const double goldHp = lostGold / 10.0;
+    return goldHp * victoryHp / (victoryHp + 10.0 * goldHp);
+}
+
 double search::BattleScumSearcher2::evaluateEndState4r(const BattleContext &bc, int initialMaxHp) {
     if (bc.outcome != Outcome::PLAYER_VICTORY) return evaluateEndState4q(bc);
     const auto hp = bc.victoryHpRelics.project(bc.player.curHp, bc.player.maxHp);
-    // Replace only the HP term; keep the existing Feed, potion and turn values.
+    // Keep the existing Feed, potion and turn values, then account for escaped gold.
     // The projection cannot create rewards, enter another room or consume RNG.
     return evaluateEndState4q(bc) + 100.0 * (hp.curHp - bc.player.curHp)
-        + 100.0 * std::max(0, bc.player.maxHp - initialMaxHp);
+        + 100.0 * std::max(0, bc.player.maxHp - initialMaxHp)
+        - 100.0 * escapedThiefPenaltyHp(bc, hp.curHp);
 }
 
 struct LayerStruct {

@@ -53,7 +53,7 @@ def main():
     identity = {
         'engine_sha256': sha(engine[0]), 'fightsim_sha256': sha(fightsim[0]),
         'model_sha256': sha(runtime / 'model.pt'),
-        'policy': 'combat4r-mechanics-feed-and-victory-hp', 'revision': 'victory-hp-20260929',
+        'policy': 'combat4r-mechanics-feed-victory-hp-and-thief-gold', 'revision': 'thief-gold-20261001',
         'candidate_entry': 'resolve_combat4r', 'baseline_entry': 'resolve_combat4q',
         'default_entry': 'resolve_reusing',
         'note': 'written by scripts/assemble_runtime.py for a locally built engine',

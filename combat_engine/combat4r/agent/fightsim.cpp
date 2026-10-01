@@ -356,7 +356,7 @@ PYBIND11_MODULE(fightsim, m) {
         battle.exitBattle(gc);
         return out;
     }, py::arg("game"), py::arg("simulations") = 40000, py::arg("boss_multiplier") = 12.0,
-       "Combat4q plus repaired rules, actual victory HP and one HP equivalent per combat max HP gain.");
+       "Combat4q plus repaired rules, victory HP, max HP gain and health-bounded escaped-thief gold value.");
 
     m.def("simulate", [](const GameContext &gc, int encounter, int simulations, double bossMultiplier,
                          std::uint64_t rngSeed, int hp) {

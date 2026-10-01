@@ -38,3 +38,13 @@ if(NOT STS_RUNTIME_DIR)
 endif()
 set_target_properties(slaythespire fightsim PROPERTIES
   LIBRARY_OUTPUT_DIRECTORY ${STS_RUNTIME_DIR}/engine)
+
+include(CTest)
+if(BUILD_TESTING)
+  add_executable(thief_value_test tests/thief_value_test.cpp)
+  target_link_libraries(thief_value_test PRIVATE sts_core)
+  add_test(NAME thief_value COMMAND thief_value_test)
+  add_executable(victory_hp_test combat4r/tools/victory_hp_contract.cpp)
+  target_link_libraries(victory_hp_test PRIVATE sts_core)
+  add_test(NAME victory_hp COMMAND victory_hp_test)
+endif()
