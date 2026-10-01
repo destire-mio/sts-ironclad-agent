@@ -18,6 +18,7 @@ static Action queuedPower(const py::dict &a) {
         if(power=="Buffer")return Actions::BuffPlayer<PS::BUFFER>(amount);
         if(power=="Intangible")return Actions::BuffPlayer<PS::INTANGIBLE>(amount);
         if(power=="Artifact")return Actions::BuffPlayer<PS::ARTIFACT>(amount);
+        if(power=="Pen Nib")return Actions::BuffPlayer<PS::PEN_NIB>(amount);
         if(power=="Strength")return amount<0?Actions::DebuffPlayer<PS::STRENGTH>(amount,sourceMonster):Actions::BuffPlayer<PS::STRENGTH>(amount);
         if(power=="Dexterity")return amount<0?Actions::DebuffPlayer<PS::DEXTERITY>(amount,sourceMonster):Actions::BuffPlayer<PS::DEXTERITY>(amount);
         if(power=="LoseStrength")return Actions::DebuffPlayer<PS::LOSE_STRENGTH>(amount,sourceMonster);

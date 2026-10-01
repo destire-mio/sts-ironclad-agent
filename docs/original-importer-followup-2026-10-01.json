@@ -1,0 +1,604 @@
+{
+  "scope": "follow-up original importer repair and bounded review; excluded from unused-seed acceptance",
+  "source_base": "58288b51684d53c4efe05f944656d58fab8c5067",
+  "source_files_sha256": {
+    "combat_engine/CMakeLists.txt": "e9fb0634b6cbe28778e6e2ae84afdcc2d38fb7f6b64e907b5ad0e072fe2c7c8f",
+    "combat_engine/combat4r/engine-source/src/combat/BattleContext.cpp": "1f652a44617d7c41c421effcd6b5cc7644acc2eb2765f09b4b796d50565abb45",
+    "combat_engine/tests/pen_nib_test.cpp": "d6e93c113419609259a2cccf952678c04113367a67ac93204368584e60362ad2",
+    "sim_patch/parity/adapter.py": "09916b5e097fd1eb1c457e5680c046cfdd17e0e7aa81251ff0d762619cbcb2a8",
+    "steam/native/live_combat_search.cpp": "af5a2b97f1a3ca4a399ec534233078cd7b8345fe7e7d9a254ac9e27343ad7b24",
+    "steam/selection_import.py": "c2e3dcf36e1bfba53450fa227d9f446dcefa2053f80bf438a71a1d373b14229c",
+    "steam/check_startup_power_followup.py": "9dccf17ddf6bce5acbf41f68575f867cccaf061de5faa9821fed0d1dbca7feed",
+    "steam/tests/test_importer_repairs.py": "09f892837c6efa8af776fa4d68e9ede60b0161a3c502902042bef1ec4a898890",
+    "steam/tests/test_importer_followup.py": "ea78f93fb148dcb74a4ebe4f74d02f5647edb7413cd09cd3b5b8b5f44b4cc993"
+  },
+  "fixture_files_sha256": {
+    "steam/tests/fixtures/importer-followup-original.json.gz": "3e25f766a548ea5667a038ffc290e5c6e40998bf8ad0b06ea8b0efad8cbfd096",
+    "steam/tests/fixtures/importer-followup-original.sources.json": "b00b971f5ff8c4c6f866d10993095710b261c7cbb785c6d9e25b29892f521726"
+  },
+  "findings": [
+    {
+      "trigger": "Toolbox paused with queued RedSkull$1",
+      "root_cause": "live6 frozen Python, native and Java sources predate the published anonymous callback repair",
+      "change": "derive live7 without mutating old runtime; import full class, private flags and callback"
+    },
+    {
+      "trigger": "3900020344 floor 25 startup Toolbox; Pen Nib counter 9",
+      "root_cause": "missing queued player power mapping",
+      "change": "add the original Pen Nib power action"
+    },
+    {
+      "trigger": "first attack from original counter 9; first attack from 8",
+      "root_cause": "native battle initialization uses -1 for 9, snapshot uses 9; compare omits relic counter",
+      "change": "original 0..9 counter in all battle paths and independent original relic counter comparison"
+    }
+  ],
+  "checks": {
+    "python": {
+      "status": "passed",
+      "command": "LIVE_TEST_ENGINE=runtime/engine STS_LIGHTSPEED_BUILD=runtime/engine python -m pytest -q tests steam/tests -rs",
+      "passed": 226,
+      "skipped": 7,
+      "subtests_passed": 58,
+      "log_path": "/tmp/importer-followup-tests-final.log",
+      "log_sha256": "5ec5bf16c64c6c47f8236a3e09cb67eedc51bfb60ec785ea163bc7ed850bc71f",
+      "limitations": "7 checks require unshipped historical runtimes or captures; fightsim batch inputs are existing local P211 trajectories"
+    },
+    "ctest": {
+      "status": "passed",
+      "passed": 3,
+      "total": 3,
+      "pen_nib_native_starts": 10,
+      "attacks": 220,
+      "battle_exits": 10
+    },
+    "public_original": {
+      "scope": "controlled startup choices plus attacks and end turns; no natural runs",
+      "cases": [
+        {
+          "name": "pen_nib",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_before_toolbox",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_counter_eight",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_vigor",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "vigor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "vigor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns_before_picker",
+          "queue": [],
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    "baseline_original_counter_failures": {
+      "scope": "controlled startup choices plus attacks and end turns; no natural runs",
+      "cases": [
+        {
+          "name": "pen_nib",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "failed",
+          "error": "AssertionError([{'path': '/relic_counters/pen_nib', 'original': 0, 'simulator': 10}])"
+        },
+        {
+          "name": "pen_nib_before_toolbox",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "failed",
+          "error": "AssertionError([{'path': '/relic_counters/pen_nib', 'original': 0, 'simulator': 10}])"
+        },
+        {
+          "name": "pen_nib_counter_eight",
+          "queue": [],
+          "status": "failed",
+          "error": "AssertionError([{'path': '/relic_counters/pen_nib', 'original': 9, 'simulator': -1}])"
+        },
+        {
+          "name": "pen_nib_vigor",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "failed",
+          "error": "AssertionError([{'path': '/relic_counters/pen_nib', 'original': 0, 'simulator': 10}])"
+        },
+        {
+          "name": "vigor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "vigor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns_before_picker",
+          "queue": [],
+          "status": "passed"
+        }
+      ],
+      "status": "failed"
+    },
+    "live7_replay": {
+      "status": "passed",
+      "passed": 91,
+      "log_sha256": "b65f0d13c5c8afd96a643f4aa1f66b0b0eee9f7b29de865f6ec690340a38c667"
+    },
+    "live7_original": {
+      "scope": "controlled startup choices plus attacks and end turns; no natural runs",
+      "cases": [
+        {
+          "name": "pen_nib",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_before_toolbox",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_counter_eight",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "pen_nib_vigor",
+          "queue": [
+            {
+              "kind": "power",
+              "owner": "player",
+              "target": -1,
+              "power": "Pen Nib",
+              "amount": 1,
+              "source_monster": false
+            }
+          ],
+          "status": "passed"
+        },
+        {
+          "name": "vigor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "vigor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "plated_armor_before_picker",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns",
+          "queue": [],
+          "status": "passed"
+        },
+        {
+          "name": "thorns_before_picker",
+          "queue": [],
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    "student": {
+      "scope": "one saved original root; offline decision; no natural run",
+      "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34",
+      "teacher_calls": 0,
+      "decisions": 1,
+      "feature_check": "bitwise_equal_to_training_Dataset.batch",
+      "command": [
+        "choose 0"
+      ],
+      "model_sha256": "6b4c56eb0ff3c9820e5968bffe42df488951d76cf4c48cd15d4eb947bd63d83d",
+      "runtime_manifest_sha256": "54181dd81a77bacba306f42699d47f0204ff9e3a1e69725ea301d076dfbf11f8"
+    },
+    "neow_inputs": {
+      "status": "passed",
+      "seed": 5100000000,
+      "scope": "same saved original Neow and same-seed native observation",
+      "dimensions": 6843,
+      "differing_fields": 0,
+      "relics": {
+        "BURNING_BLOOD": -1
+      }
+    },
+    "delivery": {
+      "status": "passed",
+      "delivery_manifest_sha256": "91e937237b6c7a548bbca0c2e14693203b8d26e36b0b5f6faa16a0c65a0c97e6",
+      "frozen_sources": 172,
+      "runtime_files": 383,
+      "engines": 3,
+      "parent_inputs": 32,
+      "live3_frozen_files": 90,
+      "live5_frozen_files": 15,
+      "live6_frozen_files": 168,
+      "cleanup_instances": 1,
+      "scope": "source/runtime hashes, Python syntax, owned fixture cleanup; no natural evaluation"
+    },
+    "diagnostic_sources": {
+      "status": "passed",
+      "rows": [
+        {
+          "seed": 3900020344,
+          "captured_sources_matched": 29,
+          "original_export_matched": true,
+          "cleanup_remaining": 0
+        },
+        {
+          "seed": 3900020136,
+          "captured_sources_matched": 29,
+          "original_export_matched": true,
+          "cleanup_remaining": 0
+        },
+        {
+          "seed": 3900020377,
+          "captured_sources_matched": 29,
+          "original_export_matched": true,
+          "cleanup_remaining": 0
+        }
+      ]
+    }
+  },
+  "local_delivery": {
+    "path": "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7",
+    "runtime_manifest_sha256": "54181dd81a77bacba306f42699d47f0204ff9e3a1e69725ea301d076dfbf11f8",
+    "delivery_manifest_sha256": "91e937237b6c7a548bbca0c2e14693203b8d26e36b0b5f6faa16a0c65a0c97e6",
+    "parent": {
+      "parent": "live6",
+      "legacy_bridge": "live3",
+      "scope": "Red Skull anonymous callback and Pen Nib queue/counter repair; same-seed diagnosis excluded from acceptance",
+      "parent_runtime_manifest_sha256": "6941346aca252140768e1da51a98af24cd6cefe315313dbcb1b68f9ef9d165e5",
+      "parent_delivery_manifest_sha256": "3485dfc24a52bdd549cf55681b7fd959326d078ddc216dfe2ef7d729fd3aecd6",
+      "fault_seeds": [
+        3900020136,
+        3900020377,
+        3900020344
+      ],
+      "student_model_sha256": "6b4c56eb0ff3c9820e5968bffe42df488951d76cf4c48cd15d4eb947bd63d83d",
+      "policy": "same live6 C4r reuse flags, score, simulations and P300 inputs"
+    },
+    "native_engines": {
+      "fightsim.cpython-312-darwin.so": "d2bfaa7a74c79687be2baaac8bf01ddcba4901fbe50f89092323518c55380f9e",
+      "live_combat_search.cpython-312-darwin.so": "2d58a1f9880d165def91b044ee85ea3f51041c7e211a873d4475196d572944de",
+      "slaythespire.cpython-312-darwin.so": "12866f3701c2eb7f480ec2f344bc8d69d6393201878abcf602184a2b5ade5542"
+    },
+    "unchanged_p300_files": true,
+    "unchanged_parent_model": true,
+    "unchanged_c4r_search_header": true,
+    "same_search_flags": "true,true,true,true,true",
+    "budgets": {
+      "normal": 40000,
+      "heart": 80000,
+      "shield_spear": 320000
+    }
+  },
+  "diagnostic_replays": {
+    "scope": "three original-authoritative same-seed natural replays for fault diagnosis; excluded from unused-seed evaluation",
+    "results": [
+      {
+        "seed": 3900020136,
+        "status": "win",
+        "error": null,
+        "floor": 57,
+        "act": 4,
+        "hp": 26,
+        "seconds": 139.8838429999887,
+        "completed_natural_runs": 1,
+        "student_features": {
+          "decisions": 200,
+          "candidates": 993,
+          "dimensions": 11195,
+          "digest": "d1ed06db385af5184f184c8bd39853081494a47a2671d7e45acc475794998744",
+          "bitwise_equal": true,
+          "teacher_calls": 0,
+          "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34"
+        },
+        "divergences": 32
+      },
+      {
+        "seed": 3900020377,
+        "status": "win",
+        "error": null,
+        "floor": 57,
+        "act": 4,
+        "hp": 40,
+        "seconds": 186.11712862504646,
+        "completed_natural_runs": 1,
+        "student_features": {
+          "decisions": 198,
+          "candidates": 828,
+          "dimensions": 11195,
+          "digest": "a9d74aceb2e3b109ee4bb7f4537374aca1732826abb74e2a4914ed71e9a6590c",
+          "bitwise_equal": true,
+          "teacher_calls": 0,
+          "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34"
+        },
+        "divergences": 45
+      },
+      {
+        "seed": 3900020344,
+        "status": "loss",
+        "error": null,
+        "floor": 56,
+        "act": 4,
+        "hp": 0,
+        "seconds": 253.3790949159884,
+        "completed_natural_runs": 1,
+        "student_features": {
+          "decisions": 186,
+          "candidates": 811,
+          "dimensions": 11195,
+          "digest": "3a272e61cd15fdbb561f11abc351572f2e14c557d8ca32651ce53b7e08733900",
+          "bitwise_equal": true,
+          "teacher_calls": 0,
+          "schema_id": "31c15b49f3131c57cf59a427a798e1274f558c52a22fce68618676459bf05f34"
+        },
+        "divergences": 38
+      }
+    ]
+  },
+  "diagnostic_fault_boundaries": [
+    {
+      "seed": 3900020136,
+      "floor": 44,
+      "hp": 56,
+      "command": "choose 2",
+      "plan": 24,
+      "queue": {
+        "task": "TOOLBOX",
+        "cards": [
+          113,
+          64,
+          352
+        ],
+        "queue": [
+          {
+            "kind": "draw",
+            "amount": 7
+          },
+          {
+            "kind": "red_skull"
+          },
+          {
+            "kind": "block",
+            "amount": 10
+          }
+        ]
+      },
+      "import_differences": [],
+      "post_choice_differences": [],
+      "post_choice_match": true,
+      "finished_battle": "won",
+      "terminal": "win",
+      "final_floor": 57,
+      "one_search_per_battle": true,
+      "battle_count": 30,
+      "combat_imports": 30,
+      "resynchronizations": 0
+    },
+    {
+      "seed": 3900020377,
+      "floor": 48,
+      "hp": 79,
+      "command": "choose 2",
+      "plan": 25,
+      "queue": {
+        "task": "TOOLBOX",
+        "cards": [
+          242,
+          150,
+          100
+        ],
+        "queue": [
+          {
+            "kind": "draw",
+            "amount": 5
+          },
+          {
+            "kind": "red_skull"
+          }
+        ]
+      },
+      "import_differences": [],
+      "post_choice_differences": [],
+      "post_choice_match": true,
+      "finished_battle": "won",
+      "terminal": "win",
+      "final_floor": 57,
+      "one_search_per_battle": false,
+      "battle_count": 29,
+      "combat_imports": 30,
+      "resynchronizations": 2
+    },
+    {
+      "seed": 3900020344,
+      "floor": 25,
+      "hp": 37,
+      "command": "choose 0",
+      "plan": 16,
+      "queue": {
+        "task": "TOOLBOX",
+        "cards": [
+          344,
+          212,
+          188
+        ],
+        "queue": [
+          {
+            "kind": "draw",
+            "amount": 5
+          },
+          {
+            "kind": "power",
+            "owner": "player",
+            "target": -1,
+            "power": "Pen Nib",
+            "amount": 1,
+            "source_monster": false
+          }
+        ]
+      },
+      "import_differences": [],
+      "post_choice_differences": [],
+      "post_choice_match": true,
+      "finished_battle": "won",
+      "terminal": "loss",
+      "final_floor": 56,
+      "one_search_per_battle": false,
+      "battle_count": 30,
+      "combat_imports": 32,
+      "resynchronizations": 3
+    }
+  ],
+  "diagnostic_files_sha256": {
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020136/result.json": "2f5dadb0e20cd18f102fbbcebbb18b587ab067e8d29172f58cf46e1bab0f7d47",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020136/capture-code.json": "e9237513fd1746ad0f5410667f2f23348a7eac9d4f12a1045cabc9099707446f",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020136/original/identity.json": "3feee6e9015defb5702212c281e88de54a940c55c67026de5b934d388415fbe9",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020136/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020377/result.json": "56d6b15a966b88b965579ff962a99ff9d72c402c7f6afcf9e1727cb199008d13",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020377/capture-code.json": "e9237513fd1746ad0f5410667f2f23348a7eac9d4f12a1045cabc9099707446f",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020377/original/identity.json": "6948f1bce1ba06d67d9a71f7647035ea4e9964fd0919553e8ec0ddacd6adc677",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020377/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020344/result.json": "0a35714e84a1d726333c4b2c5d8a3aa8ddc1011b585426a8ef7acbd8bbbfb0ae",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020344/capture-code.json": "e9237513fd1746ad0f5410667f2f23348a7eac9d4f12a1045cabc9099707446f",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020344/original/identity.json": "d60d0286584a5ad17fdb4687beb554606b86de095f881c48ad839e2f7cada92c",
+    "/Users/destire/Documents/ChatGPT/sljt/ironclad-alignment/live/live7/diagnostic-faults/3900020344/original/cleanup.json": "b17c185983b9d236e0580202d27605a3df32e00e85963a51b2864d445e9793f6"
+  },
+  "limits": [
+    "Fault-selected same-seed replays are diagnostic, not unused-seed acceptance.",
+    "No proof of whole-run bitwise original/simulator parity; recorded divergences are preserved: 32,45,38.",
+    "Two diagnostic runs made extra planning calls on new states; these runs cannot satisfy strict one-entry-per-battle acceptance.",
+    "No generic mid-battle queued-action or unknown-power support.",
+    "Old live3, live5 and live6 frozen files and evaluation ledgers are unchanged."
+  ]
+}

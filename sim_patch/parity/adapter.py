@@ -266,6 +266,11 @@ class Comparator:
         else:
             gaps.append({"kind": "missing_search_score_observation"})
         wanted_counters = dict(combat.get("relic_combat_state", {}))
+        # The base original export exposes this persistent counter on the
+        # relic, even when the optional combat counter export omits it.
+        for index, relic in enumerate(game.get("relics", [])):
+            if relic["id"] == "Pen Nib":
+                wanted_counters["pen_nib"] = observation.consume(f"/game/relics/{index}/counter")
         for key in list(wanted_counters):
             if key not in actual["relic_counters"]:
                 gaps.append({"kind": "unmapped_simulator_field", "path": "/relic_counters/" + key})

@@ -52,6 +52,8 @@ The simulator carries patches ([`sim_patch/`](sim_patch/README.md)) and a real-g
 bridge faults on some queued-action cases — so it is not a move-for-move reproduction, but the first
 original-game run above agrees with the simulator within its interval. Current bridge fixes are on `main`; see the
 [importer repair report and validation scope](docs/original-importer-repairs-2026-10-01.md).
+The [follow-up review](docs/original-importer-followup-2026-10-01.md) covers the frozen-runtime mismatch,
+Pen Nib queue/counter repairs, and three diagnostic replays.
 The `live-original-bridge` branch retains the historical integration baseline.
 
 ## Repository map

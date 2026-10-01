@@ -50,6 +50,8 @@
 （[`sim_patch/parity/`](sim_patch/parity/README.md)）。一致性仍是 **`INCOMPLETE`**——桥接在一批排队动作上还会故障，
 因此不是逐动作复现；但上面首次原版运行的胜率与模拟器在区间内一致。当前桥接修复源码位于 `main`，见 [原版导入器修复与验证范围](docs/original-importer-repairs-2026-10-01.md)。`live-original-bridge` 分支保留历史接入基线。
 
+[后续复审](docs/original-importer-followup-2026-10-01.md) 记录冻结运行包版本差异、钢笔尖队列与计数修复，以及三个故障种子的诊断重跑。
+
 ## 目录
 
 | 路径 | 内容 |

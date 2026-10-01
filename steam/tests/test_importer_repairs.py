@@ -33,7 +33,7 @@ def bridge():
     if not engine:
         pytest.skip('set LIVE_TEST_ENGINE to the source-built bridge engine')
     from sim_patch.parity.adapter import Comparator
-    sys.path.insert(0, str(ROOT / 'agent'))
+    sys.path[:0] = [str(ROOT / 'agent'), str(Path(engine).parent / 'p300/agent')]
     comparator = Comparator(Path(engine), ROOT)
     return SimpleNamespace(comparator=comparator, sts=comparator.sts,
                            native=importlib.import_module('live_combat_search'))
@@ -275,7 +275,7 @@ def test_comparison_detects_a_dropped_original_queue_effect(bridge, name, kind):
 
 def test_search_plans_an_observed_start_selection_once(bridge):
     from steam.live_search import LiveSearch
-    search = LiveSearch(ROOT / 'runtime', ROOT, simulations=64)
+    search = LiveSearch(Path(os.environ['LIVE_TEST_ENGINE']).parent, ROOT, simulations=64)
     view = CONTROLLED['toolbox_buffer']['before']
     plan = search.replan(view)
     assert plan['actions'] and plan['start_selection']['task'] == 'TOOLBOX'

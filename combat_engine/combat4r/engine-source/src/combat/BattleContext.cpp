@@ -209,11 +209,9 @@ void BattleContext::initRelics(const GameContext &gc, int extraOpeningDraw) {
                 break;
 
             case R::PEN_NIB:
+                p.penNibCounter = r.data;
                 if (r.data == 9) {
                     p.buff<PS::PEN_NIB>(1);
-                    p.penNibCounter = -1;
-                } else {
-                    p.penNibCounter = r.data;
                 }
                 break;
 
@@ -598,12 +596,7 @@ void BattleContext::updateRelicsOnExit(GameContext &g) const {
                 break;
 
             case RelicId::PEN_NIB:
-                // possible bug
-                if (player.penNibCounter == -1) {
-                    r.data = 9;
-                } else {
-                    r.data = player.penNibCounter;
-                }
+                r.data = player.penNibCounter;
                 break;
 
             case RelicId::SUNDIAL:
@@ -1873,9 +1866,11 @@ void BattleContext::onUseCardRelics() {
                 }
                 break;
             case R::PEN_NIB:
-                if (attack && ++p.penNibCounter == 9) {
-                    addToBot(Actions::BuffPlayer<PS::PEN_NIB>(1));
-                    p.penNibCounter = -1;
+                if (attack) {
+                    // Keep the original 0..9 counter in both native starts and
+                    // imported battles; 9 doubles the next attack, then wraps.
+                    if (++p.penNibCounter == 10) p.penNibCounter = 0;
+                    else if (p.penNibCounter == 9) addToBot(Actions::BuffPlayer<PS::PEN_NIB>(1));
                 }
                 break;
             case R::DUALITY:

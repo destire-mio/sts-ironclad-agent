@@ -48,7 +48,8 @@ def queued_power(comparator, view, action):
         raise ValueError('unsupported queued power target: ' + str(owner))
     # Startup relic powers have explicit equivalents. Refuse unknown powers;
     # mapping their visible amount alone would omit callbacks and artifact.
-    player = {'Buffer', 'Intangible', 'Strength', 'Dexterity', 'Artifact', 'LoseStrength', 'Weak', 'Vulnerable', 'Frail', 'No Draw'}
+    player = {'Buffer', 'Intangible', 'Strength', 'Dexterity', 'Artifact', 'LoseStrength', 'Weak', 'Vulnerable', 'Frail', 'No Draw',
+              'Pen Nib'}
     monster = {'Strength', 'Weak', 'Vulnerable', 'Poison', 'Artifact'}
     identifier = {'Weakened':'Weak', 'IntangiblePlayer':'Intangible'}.get(power.get('ID'), power.get('ID'))
     if identifier not in (player if owner == 'player' else monster):
