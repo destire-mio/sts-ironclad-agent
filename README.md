@@ -26,9 +26,10 @@ separately as [sts-ironclad-simulator](https://github.com/destire-mio/sts-ironcl
 | Simulator | P300 teacher (`agent/p300_play_v21.py`) | development block | 2,000 | 50.1% | — |
 | Simulator | P300 teacher | fresh block | 1,000 | 49.5% | — |
 | Simulator | distilled student ([`student/`](student/README.md)) | development block 3900040000+ | 1,000 | 50.2% | — |
-| **Original game** | **distilled student (v3)** | fresh block 3900020000+ | 473 | **48.8%** | [44.4, 53.5] |
+| **Original game** | **distilled student (v3)** | fresh block 3900020000+ | 501 | **50.1%** | [45.7, 54.5] |
 
 - **Simulator** = fixed-seed simulation. **Original game** = real Java, A20 against the Heart, combat search retained, one frozen network for out-of-combat choices, faults listed separately.
+- The original-game number is the first pass (473 games) plus a rerun of its 34 bridge-faulted seeds on a repaired importer (28 terminal, 6 still faults); the repair changes only the bridge, not the policy.
 - The original-game interval covers the simulator estimate, so this run gives **no evidence that the simulator number is inflated**.
 - Evaluation rule: fixed seeds, no reseeding, no retrying, no repeated search on one decision. The locked 1,024-unseen-seed acceptance has not been run.
 - Original-game report and per-game data: [`docs/live-original-distill3-student-20261001.md`](docs/live-original-distill3-student-20261001.md).
