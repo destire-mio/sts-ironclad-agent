@@ -26,13 +26,19 @@ final 1,024-unseen-seed acceptance of the distilled student network has not been
 
 ### Original-game validation (first run)
 
-The third distilled student network was also run in the real game (A20 Ironclad, Heart, combat search
-retained) on a fresh 500-seed block (`3900020000+`): 473 terminal games, **48.8% Heart win rate**,
-95% bootstrap interval **[44.4%, 53.5%]**. The interval covers the simulator's development-block
-estimate, so this run gives no evidence that the simulator number is inflated. It is a single
-cross-block comparison, not the locked 1,024-unseen-seed acceptance, and 34 bridge-fault games are
-kept out of the win/loss denominator. Report and per-game data:
-[`docs/live-original-distill3-student-20261001.md`](docs/live-original-distill3-student-20261001.md).
+The third distilled student network was also run in the real game — A20 Ironclad against the Heart,
+combat search retained, one frozen network for every out-of-combat choice, and the same evaluation
+rule (fixed seeds, no reseeding, no retrying, faults listed separately).
+
+| Game | Seeds | Terminal games | Heart win rate | 95% bootstrap interval |
+|---|---|---:|---:|---:|
+| Real game (original Java, A20 vs Heart) | fresh block `3900020000+` | 473 | **48.8%** | [44.4%, 53.5%] |
+
+The interval covers the simulator's development-block estimate, so this run gives **no evidence that
+the simulator number is inflated**. It is a single cross-block comparison, not the locked
+1,024-unseen-seed acceptance; 34 bridge-fault games are kept out of the win/loss denominator.
+
+Report and per-game data: [`docs/live-original-distill3-student-20261001.md`](docs/live-original-distill3-student-20261001.md).
 
 Where the remaining losses come from (3,000 games, death rate among games reaching each stage):
 
