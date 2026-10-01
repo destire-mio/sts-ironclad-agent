@@ -6,6 +6,11 @@
 
 [English](README.md) | 中文
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![Heart win rate ~50%](https://img.shields.io/badge/%E5%BF%83%E8%84%8F%E8%83%9C%E7%8E%87-~50%25-green.svg)](#结果)
+[![Simulator parity: incomplete](https://img.shields.io/badge/%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%80%E8%87%B4%E6%80%A7-INCOMPLETE-red.svg)](#模拟器与原版游戏)
+
 </div>
 
 基于 [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed)，延续自

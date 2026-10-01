@@ -6,6 +6,11 @@
 
 English | [中文](README.zh-CN.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![Heart win rate ~50%](https://img.shields.io/badge/Heart%20win%20rate-~50%25-green.svg)](#results)
+[![Simulator parity: incomplete](https://img.shields.io/badge/simulator%20parity-incomplete-red.svg)](#simulator-vs-original-game)
+
 </div>
 
 Built on [sts_lightspeed](https://github.com/gamerpuppy/sts_lightspeed), continued from
